@@ -28,13 +28,18 @@ IPAによる年次のシラバス改定や追補版発表に対応するため�
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `docs/014-syllabus-update-changelog-governance`
 
-1. **シラバス追従運用プロセスの策定**:
-   - `project-docs/processes/syllabus_update_process.md` を作成。IPA公式Webサイトからの最新PDF取得、差分スクリプトによる比較、既存学習ドキュメントへのインパクト影響調査手順を明記。
-2. **`CHANGELOG.md` の導入**:
-   - Keep a Changelog 形式でリポジトリ直下に `CHANGELOG.md` を追加し、これまでの主要なリリース（シラバス2.1対応、追補4.0対応、エージェント取り込み等）を記録。
+1. **シラバス改定追従手順書 `project-docs/processes/syllabus_update_process.md` の策定**:
+   - **ステップ 1 (情報収集)**: IPA公式Webサイト（年2回の定期確認）から新版シラバスPDFおよび変更箇所表示版を取得し `references/` へ格納。
+   - **ステップ 2 (差分解析)**: スクリプト等を用いて大分類・中分類・小分類・用語例の追加・削除差分を特定。
+   - **ステップ 3 (ドキュメント更新)**: `docs/syllabus_detail.md` または `docs/syllabus_tsuiho_detail.md` を更新。
+   - **ステップ 4 (影響調査)**: `docs/` 配下の既存学習ドキュメントへの影響を調査し修整Issueを起票。
+
+2. **`CHANGELOG.md` の作成**:
+   - Keep a Changelog 基準に従い、リポジトリルートに `CHANGELOG.md` を配置。
+   - これまでの実施内容（v1.0.0: IPAシラバス2.1準拠、v1.1.0: 追補版4.0詳細作成、v1.2.0: エージェント定義取り込み）を記載。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `project-docs/processes/syllabus_update_process.md` が作成され、改定追従手順が明確であること
-- [ ] `CHANGELOG.md` が配置され、これまでの変更履歴が記録されていること
+- [ ] `project-docs/processes/syllabus_update_process.md` が作成され、4ステップの追従手順が明確に記述されていること
+- [ ] リポジトリ直下に `CHANGELOG.md` が追加され、これまでの変更履歴が記録されていること

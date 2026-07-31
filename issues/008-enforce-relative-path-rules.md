@@ -28,15 +28,40 @@ ID: 008
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `refactor/008-enforce-relative-path-rules`
 
-1. **相対パスルールの明確化 (`project-docs/writing_guide.md`)**:
-   - `file:///` や `/workspace/` などの絶対パス記法を禁止し、リポジトリ相対パスまたは完全相対パス (`../`, `./`) を使うルールを追加。
-2. **自動検出Pythonスクリプト `scripts/check_relative_paths.py` の作成**:
-   - `docs/`, `project-docs/`, `issues/`, `README.md` 内の全 `.md` ファイルを走査し、絶対パス（`file:///` 等）が含まれていた場合に該当ファイル名と行番号を表示して非ゼロで終了するチェック処理を実装。
-3. **既存パスの動作検証**:
-   - スクリプトを実行し、現在のリポジトリ全体でエラーが0件であることを自動テストする。
+1. **`project-docs/writing_guide.md` の改訂**:
+   - リンク記述において `file:///workspace/` や `file:///root/` などの絶対パス指定を厳禁とする規約を追加。
+   - 正しい相対パス形式（例: `../references/syllabus_sc_ver2_1.pdf` または `../../docs/syllabus_detail.md`）の標準例を提示。
+
+2. **相対パス自動チェック処理 `scripts/check_relative_paths.py` の実装**:
+   ```python
+   import re
+   import sys
+   from pathlib import Path
+
+   # 検出対象パターン
+   ABSOLUTE_PATTERNS = [
+       re.compile(r'file:///'),
+       re.compile(r'/workspace/registered-Information-security-specialist-examination'),
+       re.compile(r'/root/\.gemini/')
+   ]
+
+   def scan_file(filepath):
+       violations = []
+       with open(filepath, 'r', encoding='utf-8') as f:
+           for idx, line in enumerate(f, 1):
+               for pat in ABSOLUTE_PATTERNS:
+                   if pat.search(line):
+                       violations.append((idx, line.strip()))
+       return violations
+   ```
+   - エラーが見つかった場合、ファイル名・行番号・違反内容を出力し、ステータス `1` で終了。
+
+3. **自動テストの実行**:
+   - `python3 scripts/check_relative_paths.py` を実行し、全リポジトリで違反が0件であることを確認。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `scripts/check_relative_paths.py` が作成され、全 `.md` ファイルをエラーなしで走査完了すること
-- [ ] `writing_guide.md` に絶対パス禁止・相対パス強制が規約として明記されること
+- [ ] `scripts/check_relative_paths.py` が実装され、実行した際に正常終了 (Exit code 0) すること
+- [ ] `project-docs/writing_guide.md` に絶対パス禁止・相対パス指定ルールが記載されていること
+- [ ] リポジトリ内のすべての `.md` ファイルに絶対パスが含まれていないこと

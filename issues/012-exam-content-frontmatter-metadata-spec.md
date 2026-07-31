@@ -21,31 +21,39 @@ ID: 012
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
 - [ ] [project-docs/writing_guide.md](../project-docs/writing_guide.md)
-- [ ] `docs/**/*.md`
+- [ ] `docs/template_article.md`
 
 ---
 
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `feat/012-exam-content-frontmatter-metadata-spec`
 
-1. **標準 YAML Frontmatter スキーマの定義**:
+1. **標準 YAML Frontmatter スキーマの規定**:
    ```yaml
    ---
-   title: "ドキュメントタイトル"
-   syllabus_code: "3-5" # シラバス小項目番号
-   exam_type: ["A-2", "B"] # 対象試験種別
-   difficulty: "Advanced" # Basic, Intermediate, Advanced
-   tags: ["TLS", "IPsec", "午後記述頻出"] # 検索用キーワードタグ
+   title: "記事の正式タイトル"
+   syllabus_code: "3-1" # シラバス小項目番号 (Ver.2.1 または 追補版)
+   exam_type:
+     - "A-2" # 科目A-2 (四肢択一知識)
+     - "B"   # 科目B (午後実務記述分析)
+   difficulty: "Advanced" # Basic / Intermediate / Advanced
+   tags:
+     - "暗号方式"
+     - "GCM"
+     - "午後記述頻出"
    last_updated: "2026-07-31"
+   author: "Database Specialist Agent"
    ---
    ```
-2. **`writing_guide.md` の改訂**:
-   - 上記スキーマを全学習コンテンツの必須テンプレートとして明記。
-3. **サンプル記事の作成**:
-   - 仕様に従ったサンプルドキュメントを作成して動作検証。
+
+2. **`project-docs/writing_guide.md` への組み込み**:
+   - 「第2章：記事メタデータ標準仕様」を追加し、Frontmatter の必須/任意フィールドを解説。
+
+3. **サンプル記事 `docs/template_article.md` の作成**:
+   - 仕様に基づく雛形記事を作成。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `writing_guide.md` に Frontmatter の必須スキーマ仕様が明記されること
-- [ ] サンプル学習コンテンツに正しくメタデータが組み込まれ、パース可能であること
+- [ ] `project-docs/writing_guide.md` に YAML Frontmatter 仕様が定義されていること
+- [ ] テンプレート記事 `docs/template_article.md` が作成され、パース可能であること

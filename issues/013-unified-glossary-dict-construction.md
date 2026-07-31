@@ -22,24 +22,34 @@ IPA公式シラバス（Ver.2.1 および 科目A-2追補版）に登場する�
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
 - [ ] [docs/glossary.md](../docs/glossary.md)
-- [ ] [docs/index.md](../docs/index.md)
 - [ ] [docs/syllabus.md](../docs/syllabus.md)
+- [ ] [docs/index.md](../docs/index.md)
 
 ---
 
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `feat/013-unified-glossary-dict-construction`
 
-1. **シラバス全用語例の抽出スクリプト作成**:
-   - `docs/syllabus_detail.md` および `docs/syllabus_tsuiho_detail.md` から全用語例（数千語）を抽出。
-2. **用語辞書 `docs/glossary.md` の構造化**:
-   - **アルファベット順 / 五十音順** の見出しを設置。
-   - 用語名、略称、日本語訳、概要説明、および登場するシラバス小項目番号（例: `3-1`, `追補 13-1`）へのアンカーリンクを自動生成。
+1. **シラバス全用語例の抽出解析**:
+   - `docs/syllabus_detail.md` (Ver.2.1) および `docs/syllabus_tsuiho_detail.md` (追補版) の「用語例」セクションから主要な用語・略語を全抽出。
+
+2. **総合用語辞書 `docs/glossary.md` の作成**:
+   - **構成**:
+     - `# 情報処理安全確保支援士試験 総合用語辞書 (Glossary)`
+     - アルファベット（A〜Z）および 50 音順の見出しインデックス
+   - **エントリーフォーマット**:
+     ```markdown
+     ### GCM (Galois/Counter Mode)
+     - **概要**: 共通鍵暗号の暗号利用モードの一種。暗号化と改ざん検知メッセージ認証コード(MAC)の生成を同時に行う認証付き暗号 (AEAD) 方式。
+     - **関連シラバス項目**: [3-1 暗号技術](syllabus_detail.md#3-1-暗号技術)
+     ```
+
 3. **目次追加**:
-   - `docs/index.md` および `docs/syllabus.md` に用語辞書への案内リンクを追加。
+   - `docs/index.md` および `docs/syllabus.md` に用語辞書へのナビゲーションリンクを追加。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `docs/glossary.md` が新規作成され、主要なセキュリティ専門用語・略語がシラバスリンク付きでインデックス化されること
-- [ ] 目次ドキュメントから正常にリンクアクセスできること
+- [ ] `docs/glossary.md` が作成され、主要な専門用語・略語がシラバス参照リンク付きで登録されること
+- [ ] 目次ドキュメントから `docs/glossary.md` へのハイパーリンクが機能すること
+- [ ] 相対パスで正しくシラバス各項目へ相互移動できること

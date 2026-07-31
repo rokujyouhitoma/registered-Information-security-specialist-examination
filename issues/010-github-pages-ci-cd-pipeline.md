@@ -20,25 +20,40 @@ ID: 010
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
+- [ ] `mkdocs.yml`
 - [ ] `.github/workflows/deploy.yml`
 - [ ] `.github/workflows/link-check.yml`
-- [ ] `mkdocs.yml`
 
 ---
 
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `feat/010-github-pages-ci-cd-pipeline`
 
-1. **`mkdocs.yml` の作成・設定**:
-   - サイト名: 情報処理安全確保支援士試験 対策ドキュメント
-   - テーマ: `material` または標準 `mkdocs`
-   - ナビゲーション構成: `docs/index.md`, `docs/syllabus.md`, `docs/syllabus_detail.md`, `docs/syllabus_tsuiho_detail.md`, `docs/exam_overview.md` をインデックス化。
-2. **GitHub Actions ワークフローの構築**:
-   - `.github/workflows/deploy.yml`: `main` プッシュ時に MkDocs をビルドし `gh-pages` ブランチへ自動デプロイ。
-   - `.github/workflows/link-check.yml`: PR作成時およびプッシュ時に `lychee` 等でリンク切れをテスト。
+1. **`mkdocs.yml` の設計**:
+   - `site_name`: 情報処理安全確保支援士試験 対策ドキュメント
+   - `theme`: `name: material` (または `mkdocs`)
+   - `nav`:
+     - ホーム: `index.md`
+     - シラバス概要: `syllabus.md`
+     - 公式シラバスVer.2.1詳細: `syllabus_detail.md`
+     - シラバス追補版Ver.4.0詳細: `syllabus_tsuiho_detail.md`
+     - 試験概要: `exam_overview.md`
+
+2. **GitHub Actions デプロイパイプライン `.github/workflows/deploy.yml`**:
+   - トリガー: `main` ブランチへの push
+   - ステップ:
+     1. リポジトリ checkout
+     2. Python 3.x セットアップ
+     3. `mkdocs-material` インストール
+     4. `mkdocs gh-deploy --force` の実行
+
+3. **デッドリンク検知パイプライン `.github/workflows/link-check.yml`**:
+   - トリガー: Pull Request 作成時・更新時
+   - ステップ: `lychee-action` を利用して Markdown ファイル内のデッドリンクを自動検証。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `mkdocs.yml` がリポジトリ直下に配置され、`mkdocs build` が成功すること
-- [ ] `.github/workflows/deploy.yml` および `link-check.yml` が定義されること
+- [ ] `mkdocs.yml` がリポジトリ直下に存在し、ローカルでのビルド (`python3 -m mkdocs build`) が正常完了すること
+- [ ] `.github/workflows/deploy.yml` および `link-check.yml` が正しく構成されていること
+- [ ] GitHub Actions の構文エラーがないこと

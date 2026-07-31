@@ -28,14 +28,22 @@ Issue 作成時の ID 重複や手動追記の手間を解消するため、`iss
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `feat/009-issue-tracking-automation-rules`
 
-1. **台帳自動更新スクリプト `scripts/sync_issues_ledger.py` の作成**:
-   - `issues/*.md` および `issues/closed/*.md` をスキャンし、各ファイルの Frontmatter（`ID`, `種別`, `優先度`, `ステータス`）および 1 行目のタイトルを抽出。
-   - `Open` / `In Progress` のアクティブ Issue と `Closed` の完了済み Issue に自動選別し、[issues/README.md](../issues/README.md) を自動フォーマット更新する。
-2. **採番重複チェック機能の導入**:
-   - IDの重複やフォーマット違反がある場合は警告・エラーを発生させる。
+1. **Issue 台帳自動同期スクリプト `scripts/sync_issues_ledger.py` の開発**:
+   - **機能仕様**:
+     - `issues/`（アクティブ）および `issues/closed/`（完了済み）をスキャン。
+     - 各ファイルの YAML Frontmatter（`ID`, `種別`, `優先度`, `ステータス`）および `# ` タイトル行を抽出。
+     - 重複する ID が検知された場合はエラーを出力して中断。
+     - ID 順（001, 002, 003...）に並び替え、[issues/README.md](../issues/README.md) の「1. アクティブ Issue 一覧」「2. 完了済み Issue 一覧」を完全フォーマット再生する。
+   - **入力検証ルール**:
+     - ID が 3 桁の数字 (`001`, `002` 等) であること。
+     - ファイル名が `<ID>-<title>.md` 形式に一致すること。
+
+2. **実行方法とスクリプトのテスト**:
+   - `python3 scripts/sync_issues_ledger.py` を実行し、`issues/README.md` が差分なく正しく出力されることを検証。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `scripts/sync_issues_ledger.py` を実行すると `issues/README.md` が正常に同期・生成されること
-- [ ] 重複 ID や不正 Frontmatter に対する検出・警告機能が正常に動作すること
+- [ ] `scripts/sync_issues_ledger.py` が作成され、`issues/README.md` の全テーブルを自動生成できること
+- [ ] ID の重複やファイル名のフォーマット不正を自動検知して判定エラーを出せること
+- [ ] スクリプトの実行により台帳データの整合性が 100% 保持されること

@@ -28,14 +28,21 @@ IPA公式PDFなどの一次情報（`references/`）の保管・命名規則を�
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `docs/011-reference-data-asset-management-rules`
 
-1. **`references/README.md` の整備**:
-   - IPA公式PDF（シラバス、過去問、採点講評等）の格納ルール、命名フォーマット（`syllabus_<exam>_ver<X_Y>.pdf`）、ライセンス・著作権留意事項を明記。
-2. **スクラッチスクリプト・中間データの整理規約**:
-   - `scratch/` に一時生成した `.txt`, `.py` などのスクラッチファイルの取り扱い規約を作成。
-   - `.gitignore` に一時生成物の除外ルールを反映。
+1. **`references/README.md` の改訂**:
+   - **保管対象基準**: IPA公式PDF、CRYPTRECリスト、NIST SP 800等の公式一次情報に限定。
+   - **命名規約**: `syllabus_<shiken>_ver<major>_<minor>.pdf` (例: `syllabus_sc_ver2_1.pdf`)。
+   - **著作権・引用注記**: 商業利用や改変に関する注意事項を記載。
+
+2. **スクラッチスクリプト & 一時データ管理規約**:
+   - PDF解析スクリプトや分析用中間ファイル（`.txt`, `.py`）は、作業中のみ `scratch/` または artifacts 内で利用。
+   - **`.gitignore` の更新**:
+     - `scratch/*`
+     - `*.tmp`
+     - `*.pdftotext.txt`
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `references/README.md` に一次情報の保管規約と命名ルールが追記されること
-- [ ] `.gitignore` が更新され、一次検証用の中間ファイルが Git 汚染を起こさない仕様になっていること
+- [ ] `references/README.md` が作成され、保管規約・命名規則が明記されていること
+- [ ] `.gitignore` に一時ファイル・スクラッチデータの除外設定が追記されていること
+- [ ] リポジトリ直下に不要な一時生成スクリプトが残存していないこと
