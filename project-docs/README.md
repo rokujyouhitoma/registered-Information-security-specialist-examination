@@ -9,6 +9,7 @@
 
 ## 📄 ドキュメント一覧
 
+- **[requirements/REQ-01-user_requirements.md](requirements/REQ-01-user_requirements.md)**: ユーザー要求定義書 (ターゲットユーザー、ユースケース、要求定義)
 - **[workflow_guide.md](workflow_guide.md)**: Gitブランチ戦略、コミット規約、Issue運用フロー
 - **[writing_guide.md](writing_guide.md)**: ドキュメント執筆・フォーマットガイドライン
 
