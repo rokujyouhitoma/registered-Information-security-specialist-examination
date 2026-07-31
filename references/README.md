@@ -64,3 +64,16 @@
 - **解答例**: `answer_am1.pdf`, `answer_am2.pdf`, `answer_pm1.pdf`, `answer_pm2.pdf`
 - **採点講評**: `comment.pdf` / `*_cmnt.pdf`
 
+---
+
+## 📑 4. Open Knowledge Format (OKF) 構造化ナレッジライブラリ (`references/okf/`)
+
+一次資料（PDF等）をAIエージェントおよび人間が検索・参照しやすいように、YAMLフロントマター（メタデータ）付き構造化Markdownとして標準化したライブラリ群です。
+
+| OKFドキュメントパス | 分類・原典タイトル | 対応一次資料 (原本PDF/TXT) |
+|---|---|---|
+| [okf/syllabus_sc_ver2_1.md](okf/syllabus_sc_ver2_1.md) | シラバス Ver.2.1 | [syllabus_sc_ver2_1.pdf](syllabus_sc_ver2_1.pdf) |
+| [okf/syllabus_sc_am2_tsuiho4_0.md](okf/syllabus_sc_am2_tsuiho4_0.md) | シラバス 追補版(科目A-2) Ver.4.0 | [syllabus_sc_am2_tsuiho4_0.pdf](syllabus_sc_am2_tsuiho4_0.pdf) |
+| [okf/itss_v3_2011_level1_2_skill.md](okf/itss_v3_2011_level1_2_skill.md) | ITSS V3 2011 レベル1-2 スキル定義 | [itss_v3_2011_level1_2_skill.pdf](itss_v3_2011_level1_2_skill.pdf) |
+| [okf/past_exams/2024_haru/am2.md](okf/past_exams/2024_haru/am2.md) | 令和6年春期 午前II 過去問OKF | [past_exams/2024_haru/](past_exams/2024_haru/) |
+
