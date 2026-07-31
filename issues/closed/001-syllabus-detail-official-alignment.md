@@ -14,13 +14,13 @@ IPA公式の「情報処理安全確保支援士試験 シラバス Ver.2.1」�
 
 ## 2. トレーサビリティ / Traceability
 - 関連資料: 
-  - IPA 情報処理安全確保支援士試験 シラバス Ver.2.1 ([references/syllabus_sc_ver2_1.pdf](file:///workspace/registered-Information-security-specialist-examination/references/syllabus_sc_ver2_1.pdf))
+  - IPA 情報処理安全確保支援士試験 シラバス Ver.2.1 ([references/syllabus_sc_ver2_1.pdf](../../references/syllabus_sc_ver2_1.pdf))
 
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
-- [x] [docs/syllabus_detail.md](file:///workspace/registered-Information-security-specialist-examination/docs/syllabus_detail.md)
-- [x] [docs/syllabus.md](file:///workspace/registered-Information-security-specialist-examination/docs/syllabus.md)
+- [x] [docs/syllabus_detail.md](../../docs/syllabus_detail.md)
+- [x] [docs/syllabus.md](../../docs/syllabus.md)
 
 ---
 
