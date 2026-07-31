@@ -2,7 +2,7 @@
 ID: 011
 種別: Documentation
 優先度: Low
-ステータス: Open
+ステータス: In Progress
 ---
 
 # [FEAT/ENH] 一次情報 (references/*) および検証スクリプトの管理規約策定 (ID: 011)
@@ -28,12 +28,14 @@ IPA公式PDFなどの一次情報（`references/`）の保管・命名規則を�
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `docs/011-reference-data-asset-management-rules`
 
-1. **命名・バージョン管理規約**:
-   - IPA公式資料PDF等のファイル名フォーマットを定義。
-2. **スクラッチ整理規約**:
-   - `scratch/` に保存すべき一時ファイルと `.gitignore` の除外設定を明確化。
+1. **`references/README.md` の整備**:
+   - IPA公式PDF（シラバス、過去問、採点講評等）の格納ルール、命名フォーマット（`syllabus_<exam>_ver<X_Y>.pdf`）、ライセンス・著作権留意事項を明記。
+2. **スクラッチスクリプト・中間データの整理規約**:
+   - `scratch/` に一時生成した `.txt`, `.py` などのスクラッチファイルの取り扱い規約を作成。
+   - `.gitignore` に一時生成物の除外ルールを反映。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] [references/README.md](../references/README.md) に管理規約が記載されること
+- [ ] `references/README.md` に一次情報の保管規約と命名ルールが追記されること
+- [ ] `.gitignore` が更新され、一次検証用の中間ファイルが Git 汚染を起こさない仕様になっていること

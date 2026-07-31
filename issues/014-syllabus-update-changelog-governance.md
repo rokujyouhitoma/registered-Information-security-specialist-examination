@@ -2,7 +2,7 @@
 ID: 014
 種別: Process
 優先度: Low
-ステータス: Open
+ステータス: In Progress
 ---
 
 # [FEAT/ENH] IPAシラバス改定追従プロセス & 変更履歴 (Changelog) の運用 (ID: 014)
@@ -28,12 +28,13 @@ IPAによる年次のシラバス改定や追補版発表に対応するため�
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `docs/014-syllabus-update-changelog-governance`
 
-1. **シラバス更新プロセスの策定**:
-   - IPAの差分発表（PDF）の比較手順、検証スクリプトの運用、既存記事の修正ワークフローを記述。
-2. **CHANGELOGの運用開始**:
-   - リポジトリ直下に `CHANGELOG.md` を作成し、バージョニング・更新履歴の記録を開始。
+1. **シラバス追従運用プロセスの策定**:
+   - `project-docs/processes/syllabus_update_process.md` を作成。IPA公式Webサイトからの最新PDF取得、差分スクリプトによる比較、既存学習ドキュメントへのインパクト影響調査手順を明記。
+2. **`CHANGELOG.md` の導入**:
+   - Keep a Changelog 形式でリポジトリ直下に `CHANGELOG.md` を追加し、これまでの主要なリリース（シラバス2.1対応、追補4.0対応、エージェント取り込み等）を記録。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `project-docs/processes/syllabus_update_process.md` および `CHANGELOG.md` が導入されること
+- [ ] `project-docs/processes/syllabus_update_process.md` が作成され、改定追従手順が明確であること
+- [ ] `CHANGELOG.md` が配置され、これまでの変更履歴が記録されていること

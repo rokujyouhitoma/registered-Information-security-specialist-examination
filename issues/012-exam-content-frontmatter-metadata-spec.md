@@ -2,7 +2,7 @@
 ID: 012
 種別: Feature
 優先度: Medium
-ステータス: Open
+ステータス: In Progress
 ---
 
 # [FEAT/ENH] 試験種別 (科目A/科目B)・難易度メタデータ (Frontmatter) の定義 (ID: 012)
@@ -28,12 +28,24 @@ ID: 012
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `feat/012-exam-content-frontmatter-metadata-spec`
 
-1. **Frontmatter スキーマの策定**:
-   - `title`, `syllabus_code`, `exam_type` (`A-2`, `B`), `difficulty`, `tags` の定義フォーマットを作成。
-2. **ガイドライン追記**:
-   - `writing_guide.md` に標準 Frontmatter テンプレートを記載。
+1. **標準 YAML Frontmatter スキーマの定義**:
+   ```yaml
+   ---
+   title: "ドキュメントタイトル"
+   syllabus_code: "3-5" # シラバス小項目番号
+   exam_type: ["A-2", "B"] # 対象試験種別
+   difficulty: "Advanced" # Basic, Intermediate, Advanced
+   tags: ["TLS", "IPsec", "午後記述頻出"] # 検索用キーワードタグ
+   last_updated: "2026-07-31"
+   ---
+   ```
+2. **`writing_guide.md` の改訂**:
+   - 上記スキーマを全学習コンテンツの必須テンプレートとして明記。
+3. **サンプル記事の作成**:
+   - 仕様に従ったサンプルドキュメントを作成して動作検証。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `writing_guide.md` に Frontmatter 仕様が定義され、サンプル記事が作成されること
+- [ ] `writing_guide.md` に Frontmatter の必須スキーマ仕様が明記されること
+- [ ] サンプル学習コンテンツに正しくメタデータが組み込まれ、パース可能であること

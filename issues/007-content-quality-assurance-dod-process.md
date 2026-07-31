@@ -2,7 +2,7 @@
 ID: 007
 種別: Feature
 優先度: High
-ステータス: Open
+ステータス: In Progress
 ---
 
 # [FEAT/ENH] 記事・問題コンテンツの品質保証プロセス (DoD) の策定 (ID: 007)
@@ -28,12 +28,17 @@ ID: 007
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `docs/007-content-quality-assurance-dod-process`
 
-1. **DoD基準の定義**:
-   - IPA公式用語適合、一次情報参照、コード/ログ例の動作確認、相対パスチェック項目の規定。
-2. **レビューガイドライン化**:
-   - `writing_guide.md` への追記および品質チェックリスト作成。
+1. **品質保証チェック項目の策定 (`project-docs/quality_assurance_checklist.md`)**:
+   - **用語整合性**: IPAシラバスVer.2.1および追補版Ver.4.0の公式表記と100%一致しているか
+   - **一次情報参照**: CRYPTREC暗号リスト、NIST SP 800、IPA公式ガイドラインの出典が明記されているか
+   - **午後記述対策**: 模範解答で用いられる重要キーワード・専門フレーズが強調 (`**` や引用ブロック) されているか
+   - **パス記法**: ローカル絶対パス (`file:///workspace/...`) がなく、相対パスで記述されているか
+2. **執筆ガイドへの組み込み**:
+   - `project-docs/writing_guide.md` に「品質保証・チェックリスト運用規定」のセクションを追加。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] ドキュメント公開用QAチェックリストが作成され、執筆ガイドに組込まれること
+- [ ] `project-docs/quality_assurance_checklist.md` が作成され、項目チェックリストが定義されること
+- [ ] `project-docs/writing_guide.md` にチェックリストの適用フローが明記されること
+- [ ] 各チェック項目に手動・自動の検証手段が指定されていること

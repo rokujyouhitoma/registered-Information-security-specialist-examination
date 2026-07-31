@@ -2,7 +2,7 @@
 ID: 009
 種別: Feature
 優先度: Medium
-ステータス: Open
+ステータス: In Progress
 ---
 
 # [FEAT/ENH] Issue 採番・追跡・自動化ルールの強化 (ID: 009)
@@ -28,10 +28,14 @@ Issue 作成時の ID 重複や手動追記の手間を解消するため、`iss
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `feat/009-issue-tracking-automation-rules`
 
-1. **台帳自動更新スクリプトの作成**:
-   - `issues/` および `issues/closed/` 内のメタデータ（Frontmatter）を読み取り、`issues/README.md` を再生成・同期する Python スクリプトを作成。
+1. **台帳自動更新スクリプト `scripts/sync_issues_ledger.py` の作成**:
+   - `issues/*.md` および `issues/closed/*.md` をスキャンし、各ファイルの Frontmatter（`ID`, `種別`, `優先度`, `ステータス`）および 1 行目のタイトルを抽出。
+   - `Open` / `In Progress` のアクティブ Issue と `Closed` の完了済み Issue に自動選別し、[issues/README.md](../issues/README.md) を自動フォーマット更新する。
+2. **採番重複チェック機能の導入**:
+   - IDの重複やフォーマット違反がある場合は警告・エラーを発生させる。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `scripts/sync_issues_ledger.py` により `issues/README.md` が正常に自動同期できること
+- [ ] `scripts/sync_issues_ledger.py` を実行すると `issues/README.md` が正常に同期・生成されること
+- [ ] 重複 ID や不正 Frontmatter に対する検出・警告機能が正常に動作すること
