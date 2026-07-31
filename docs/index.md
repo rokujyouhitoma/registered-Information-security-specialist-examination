@@ -4,6 +4,7 @@
 
 - 📋 [情報処理安全確保支援士試験 概要](exam_overview.md) (IPA公式情報)
 - 📜 [シラバス資料一覧](syllabus.md) (PDF資料・URL一覧)
+- 🗂 [シラバス詳細（大分類・中分類・小分類・目標・内容）](syllabus_detail.md)
 
 ---
 
