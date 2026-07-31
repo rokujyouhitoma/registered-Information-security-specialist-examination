@@ -18,6 +18,7 @@
 | 012 | Feature | [試験種別 (科目A/科目B)・難易度メタデータ (Frontmatter) の定義](012-exam-content-frontmatter-metadata-spec.md) | Medium | In Progress | [012-exam-content-frontmatter-metadata-spec.md](012-exam-content-frontmatter-metadata-spec.md) |
 | 013 | Feature | [全用語・略語を一元管理する用語辞書 (docs/glossary.md) の構築](013-unified-glossary-dict-construction.md) | High | In Progress | [013-unified-glossary-dict-construction.md](013-unified-glossary-dict-construction.md) |
 | 014 | Process | [IPAシラバス改定追従プロセス & 変更履歴 (Changelog) の運用](014-syllabus-update-changelog-governance.md) | Low | In Progress | [014-syllabus-update-changelog-governance.md](014-syllabus-update-changelog-governance.md) |
+| 016 | Feature | [歴代SC試験（情報処理安全確保支援士・情報セキュリティスペシャリスト）過去問題・解答例・採点講評 (/references/*) の収集・保存](016-import-past-sc-exam-questions-answers-comments.md) | High | Open | [016-import-past-sc-exam-questions-answers-comments.md](016-import-past-sc-exam-questions-answers-comments.md) |
 
 ---
 
