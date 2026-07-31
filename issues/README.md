@@ -8,7 +8,16 @@
 
 | ID | 種別 | タイトル | 優先度 | ステータス | 担当・リンク |
 |---|---|---|---|---|---|
-<!-- 新しいIssueを作成したら、ここに追記してください -->
+| 005 | Feature | [コンテンツ制作ロードマップ & WBS の定義](005-content-production-roadmap-wbs.md) | High | Open | [005-content-production-roadmap-wbs.md](005-content-production-roadmap-wbs.md) |
+| 006 | Feature | [マルチエージェント役割分担 (RACIマトリックス) の明文化](006-multi-agent-raci-roles-definition.md) | High | Open | [006-multi-agent-raci-roles-definition.md](006-multi-agent-raci-roles-definition.md) |
+| 007 | Feature | [記事・問題コンテンツの品質保証プロセス (DoD) の策定](007-content-quality-assurance-dod-process.md) | High | Open | [007-content-quality-assurance-dod-process.md](007-content-quality-assurance-dod-process.md) |
+| 008 | Refactor | [絶対パス排除と相対パス表記ルールの厳格化](008-enforce-relative-path-rules.md) | Medium | Open | [008-enforce-relative-path-rules.md](008-enforce-relative-path-rules.md) |
+| 009 | Feature | [Issue 採番・追跡・自動化ルールの強化](009-issue-tracking-automation-rules.md) | Medium | Open | [009-issue-tracking-automation-rules.md](009-issue-tracking-automation-rules.md) |
+| 010 | Feature | [GitHub Pages 自動デプロイ & リンク切れ検証 CI の構築](010-github-pages-ci-cd-pipeline.md) | Medium | Open | [010-github-pages-ci-cd-pipeline.md](010-github-pages-ci-cd-pipeline.md) |
+| 011 | Documentation | [一次情報 (references/*) および検証スクリプトの管理規約策定](011-reference-data-asset-management-rules.md) | Low | Open | [011-reference-data-asset-management-rules.md](011-reference-data-asset-management-rules.md) |
+| 012 | Feature | [試験種別 (科目A/科目B)・難易度メタデータ (Frontmatter) の定義](012-exam-content-frontmatter-metadata-spec.md) | Medium | Open | [012-exam-content-frontmatter-metadata-spec.md](012-exam-content-frontmatter-metadata-spec.md) |
+| 013 | Feature | [全用語・略語を一元管理する用語辞書 (docs/glossary.md) の構築](013-unified-glossary-dict-construction.md) | High | Open | [013-unified-glossary-dict-construction.md](013-unified-glossary-dict-construction.md) |
+| 014 | Process | [IPAシラバス改定追従プロセス & 変更履歴 (Changelog) の運用](014-syllabus-update-changelog-governance.md) | Low | Open | [014-syllabus-update-changelog-governance.md](014-syllabus-update-changelog-governance.md) |
 
 ---
 
