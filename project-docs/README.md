@@ -9,6 +9,7 @@
 
 ## 📄 ドキュメント一覧
 
+- **[management_improvement_plan.md](management_improvement_plan.md)**: プロジェクト管理・運用改善提案書 (PM視点による10の改善・定義項目)
 - **[requirements/REQ-01-user_requirements.md](requirements/REQ-01-user_requirements.md)**: ユーザー要求定義書 (ターゲットユーザー、ユースケース、要求定義)
 - **[processes/MNG-01-document_ledger.md](processes/MNG-01-document_ledger.md)**: 文書管理台帳・文書管理規約 (全文書のメタデータ、すみ分け、トレーサビリティ)
 - **[workflow_guide.md](workflow_guide.md)**: Gitブランチ戦略、コミット規約、Issue運用フロー
