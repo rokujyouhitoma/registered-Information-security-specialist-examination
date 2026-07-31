@@ -6,5 +6,8 @@
 
 ## 📁 ディレクトリ構成
 
-- **`docs/`**: 学習ドキュメント（Markdown）
-- **`references/`**: 参考文献・関連資料
+- **`docs/`**: 🌟 最終成果物・Web公開用学習ドキュメント (GitHub Pages)
+- **`project-docs/`**: 🛠 プロジェクト運用・内部ドキュメント
+- **`references/`**: 📑 参考文献・一次情報データ (PDF等)
+- **`issues/`**: 📋 課題・学習タスク管理・Issue台帳
+- **`.agents/`**: 🤖 AI Agent 用スキル設定
