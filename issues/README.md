@@ -18,7 +18,6 @@
 | 012 | Feature | [試験種別 (科目A/科目B)・難易度メタデータ (Frontmatter) の定義](012-exam-content-frontmatter-metadata-spec.md) | Medium | In Progress | [012-exam-content-frontmatter-metadata-spec.md](012-exam-content-frontmatter-metadata-spec.md) |
 | 013 | Feature | [全用語・略語を一元管理する用語辞書 (docs/glossary.md) の構築](013-unified-glossary-dict-construction.md) | High | In Progress | [013-unified-glossary-dict-construction.md](013-unified-glossary-dict-construction.md) |
 | 014 | Process | [IPAシラバス改定追従プロセス & 変更履歴 (Changelog) の運用](014-syllabus-update-changelog-governance.md) | Low | In Progress | [014-syllabus-update-changelog-governance.md](014-syllabus-update-changelog-governance.md) |
-| 015 | Feature | [ITスキル標準V3 2011 (ITSS) 関連資料 (/references/*) の取り込み](015-import-itss-v3-2011-reference-documents.md) | High | In Progress | [015-import-itss-v3-2011-reference-documents.md](015-import-itss-v3-2011-reference-documents.md) |
 
 ---
 
@@ -30,3 +29,4 @@
 | 002 | Feature | [IPA公式シラバス資料 (/references/*) の収集・取り込み](closed/002-import-official-syllabus-references.md) | 2026-07-31 | docs(syllabus): IPA公式シラバス資料の取り込み |
 | 003 | Feature | [docs/syllabus_detail.md IPA公式シラバスVer.2.1完全準拠化](closed/003-syllabus-detail-official-alignment.md) | 2026-07-31 | docs(syllabus): IPA公式シラバスVer.2.1および追補版Ver.4.0への完全準拠化 |
 | 004 | Feature | [docs/syllabus_tsuiho_detail.md IPA公式シラバス追補版Ver.4.0詳細ドキュメント作成](closed/004-syllabus-tsuiho-detail-creation.md) | 2026-07-31 | docs(syllabus): シラバス追補版詳細ドキュメントの新規作成 |
+| 015 | Feature | [ITスキル標準V3 2011 (ITSS) 関連資料 (/references/*) の取り込み](closed/015-import-itss-v3-2011-reference-documents.md) | 2026-07-31 | docs(references): ITスキル標準V3 2011 (ITSS) 関連資料の取り込み (ID: 015) |
