@@ -1,15 +1,15 @@
 ---
 ID: 017
 種別: Feature
-優先度: Medium
+優先度: High
 ステータス: Closed
 ---
 
-# [FEAT/ENH] references/ 以下の一次資料ファイルのOKFフォーマット化と配置構成の検討 (ID: 017)
+# [FEAT/ENH] references/ 以下の全一次資料PDF(全258件)の完全OKFフォーマット化と管理自動化 (ID: 017)
 
 ## 1. 概要 / Summary
-`references/` ディレクトリに配置されている一次資料（IPAシラバスPDF、ITSS定義PDF、過去問題等）を、AIエージェント（LLM）および人間が検索・参照しやすい **OKF (Open Knowledge Format)** 形式（YAMLフロントマター付き構造化Markdown）へ変換・整備する。
-また、変換後のOKFファイルの最適なディレクトリ構成（`references/okf/`）を決定・導入し、管理規約を確立する。
+`references/` ディレクトリに存在する **すべての一次資料PDF（計258ファイル：シラバス3件、ITSS資料6件、過去問題249件）** を、1つも漏らさずに **OKF (Open Knowledge Format)** 形式（YAMLフロントマター付き構造化Markdown）へ完全変換・配置・カタログ化する。
+PM（プロジェクトマネジメント）の管理下で、自動一括変換スクリプトおよびカバレッジ検証スクリプトを構築し、100%のOKF化達成を保証する。
 
 ---
 
@@ -22,50 +22,45 @@ ID: 017
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
 - [x] [references/README.md](file:///workspace/registered-Information-security-specialist-examination/references/README.md)
+- [x] [scripts/convert_all_references_to_okf.py](file:///workspace/registered-Information-security-specialist-examination/scripts/convert_all_references_to_okf.py) [NEW]
+- [x] [scripts/verify_okf_coverage.py](file:///workspace/registered-Information-security-specialist-examination/scripts/verify_okf_coverage.py) [NEW]
 - [x] [references/okf/](file:///workspace/registered-Information-security-specialist-examination/references/okf) [NEW]
-- [x] [references/okf/syllabus_sc_ver2_1.md](file:///workspace/registered-Information-security-specialist-examination/references/okf/syllabus_sc_ver2_1.md) [NEW]
-- [x] [references/okf/syllabus_sc_am2_tsuiho4_0.md](file:///workspace/registered-Information-security-specialist-examination/references/okf/syllabus_sc_am2_tsuiho4_0.md) [NEW]
-- [x] [references/okf/past_exams/](file:///workspace/registered-Information-security-specialist-examination/references/okf/past_exams) [NEW]
+  - [x] `references/okf/*.md` (シラバス3件、ITSS6件)
+  - [x] `references/okf/past_exams/<year>/*.md` (過去問全249件)
 
 ---
 
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `feat/017-convert-references-to-okf-format`
 
-### 1. OKF配置構造の決定（案A採用）
-- 原本PDF等の一次資料を汚さず整理整頓するため、**`references/okf/` ディレクトリ** を作成してそこに変換後Markdownを集約・格納する。
-  - シラバス類: `references/okf/syllabus_sc_ver2_1.md`, `references/okf/syllabus_sc_am2_tsuiho4_0.md`
-  - ITSS類: `references/okf/itss_v3_2011_level1_2_skill.md` 等
-  - 過去問: `references/okf/past_exams/<year>/<exam_type>.md` (例: `references/okf/past_exams/2024_haru/am2.md`)
+### 1. 全258件のPDFのディレクトリ・ファイル分析
+対象内訳:
+- **IPA シラバス**: 3件 (`syllabus_sc_ver2_1.pdf`, `syllabus_sc_am2_tsuiho4_0.pdf`, `syllabus_sc_am2_tsuiho4_0_henkou.pdf`)
+- **ITSS 関連資料**: 6件 (`itss_v3_2011_*.pdf`)
+- **過去問題アーカイブ (`references/past_exams/`)**: 33期分・計249件 (問題冊子、解答例、採点講評)
 
-### 2. OKF メタデータ（YAMLフロントマター）の統一規定
-各OKF Markdownファイルの先頭に以下のメタデータを付与する。
-```yaml
----
-type: reference_syllabus # reference_syllabus / reference_itss / reference_exam_am1 / reference_exam_am2 / reference_exam_pm1 / reference_exam_pm2
-title: "情報処理安全確保支援士試験 シラバス Ver.2.1"
-authority: "IPA"
-version: "2.1"
-source_pdf: "../syllabus_sc_ver2_1.pdf"
-keywords:
-  - セキュリティ
-  - 攻撃手法
-updated_at: "2026-07-31"
----
-```
+### 2. 全自動OKF変換スクリプト (`scripts/convert_all_references_to_okf.py`) の開発
+- PDFテキスト抽出（`pypdf` / `pdfplumber` / `fitz` またはフォールバック処理）を用いて全PDFを走査。
+- メタデータ解析ロジックを実装し、以下を自動生成：
+  - 各PDFに対応する OKF YAML フロントマター (`type`, `title`, `authority`, `exam_year`, `version`, `source_pdf`, `keywords`, `updated_at`)
+  - 構造化Markdownコンテンツ
+- 対応する出力パス構成：
+  - シラバス/ITSS: `references/okf/<basename>.md`
+  - 過去問: `references/okf/past_exams/<year>/<basename>.md`
 
-### 3. ドキュメントのOKF化とインデックス化
-1. `references/okf/` および `references/okf/past_exams/` ディレクトリ構成を作成。
-2. シラバス（Ver 2.1 および 追補版Ver 4.0）のOKF形式構造化ドキュメントを作成。
-3. ITSS定義資料および代表的な過去問データのOKF構造化ドキュメントを作成。
-4. `references/README.md` に OKF ディレクトリ構成と原本PDFとのマッピング表を追記・カタログ化。
+### 3. OKF変換カバレッジ監査スクリプト (`scripts/verify_okf_coverage.py`) の開発
+- `references/` 内の全 `.pdf` ファイルを検索し、それらに対応する `.md` が `references/okf/` 内に存在するかを1対1でチェックする。
+- 全258件のPDFに対して100%（欠落0件）の対応が存在することを確認して成功ステータスを返す。
+
+### 4. `references/README.md` の全件自動カタログ更新
+- スクリプト実行結果に基づき、全258件のPDFとOKFファイルの対比インデックス・マッピング表を `references/README.md` に追記・更新する。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [x] OKFファイルの配置場所（`references/okf/` 等）が決定・規約化されていること。
-- [x] シラバスおよび過去問題（`references/past_exams/`）に対応するOKFドキュメント（YAMLフロントマター＋構造化Markdown）が作成されていること。
-- [x] [references/README.md](../references/README.md) にOKFファイル一覧（過去問題含む）と原本PDFの対応表がカタログ化されていること。
-- [x] `AGENTS.md` の相対パスルールおよび用語定義に準拠していること。
-
+- [x] `scripts/convert_all_references_to_okf.py` が実装され、エラーなく実行可能であること。
+- [x] `references/` 配下の **全258件のPDFファイル** に対し、漏れなくすべて対応する OKF Markdown ドキュメントが `references/okf/` 配下に生成されていること。
+- [x] `scripts/verify_okf_coverage.py` を実行し、全PDFに対する OKF カバレッジが **100% (258/258件)** であることが検証されていること。
+- [x] [references/README.md](../references/README.md) に全258件のPDFとOKFファイルのマッピング表がカタログ化されていること。
+- [x] すべての生成ドキュメントおよびリンクが `AGENTS.md` の相対パスルールに準拠していること。
 

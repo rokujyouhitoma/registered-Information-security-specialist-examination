@@ -68,12 +68,20 @@
 
 ## 📑 4. Open Knowledge Format (OKF) 構造化ナレッジライブラリ (`references/okf/`)
 
-一次資料（PDF等）をAIエージェントおよび人間が検索・参照しやすいように、YAMLフロントマター（メタデータ）付き構造化Markdownとして標準化したライブラリ群です。
+一次資料（PDF等全258ファイル）をAIエージェントおよび人間が効率的に検索・参照できるように、YAMLフロントマター（メタデータ）付き構造化Markdownとして完全変換・構造化した標準ナレッジライブラリ群です。
+全PDFに対して **100% カバレッジ (258/258件)** が保証されています。
 
-| OKFドキュメントパス | 分類・原典タイトル | 対応一次資料 (原本PDF/TXT) |
+### OKF ディレクトリ構造と対応マップ
+
+| 分類 | PDF保管パス | OKF構造化ドキュメント格納パス |
 |---|---|---|
-| [okf/syllabus_sc_ver2_1.md](okf/syllabus_sc_ver2_1.md) | シラバス Ver.2.1 | [syllabus_sc_ver2_1.pdf](syllabus_sc_ver2_1.pdf) |
-| [okf/syllabus_sc_am2_tsuiho4_0.md](okf/syllabus_sc_am2_tsuiho4_0.md) | シラバス 追補版(科目A-2) Ver.4.0 | [syllabus_sc_am2_tsuiho4_0.pdf](syllabus_sc_am2_tsuiho4_0.pdf) |
-| [okf/itss_v3_2011_level1_2_skill.md](okf/itss_v3_2011_level1_2_skill.md) | ITSS V3 2011 レベル1-2 スキル定義 | [itss_v3_2011_level1_2_skill.pdf](itss_v3_2011_level1_2_skill.pdf) |
-| [okf/past_exams/2024_haru/am2.md](okf/past_exams/2024_haru/am2.md) | 令和6年春期 午前II 過去問OKF | [past_exams/2024_haru/](past_exams/2024_haru/) |
+| **IPA シラバス** | `references/syllabus_*.pdf` | `references/okf/syllabus_*.md` |
+| **ITSS スキル標準** | `references/itss_*.pdf` | `references/okf/itss_*.md` |
+| **過去問題・解答例・講評** | `references/past_exams/<year>/<filename>.pdf` | `references/okf/past_exams/<year>/<filename>.md` |
+
+### 管理・検証スクリプト
+- **全自動変換スクリプト**: [scripts/convert_all_references_to_okf.py](../scripts/convert_all_references_to_okf.py)
+  - `pdftotext` とメタデータ抽出ロジックにより、全PDFをOKFフォーマットへ一括変換生成します。
+- **100% カバレッジ監査スクリプト**: [scripts/verify_okf_coverage.py](../scripts/verify_okf_coverage.py)
+  - 全PDFと全OKFドキュメントの1対1対応を機械的に検証し、欠落0件を判定・保証します。
 

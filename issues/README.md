@@ -31,5 +31,7 @@
 | 004 | Feature | [docs/syllabus_tsuiho_detail.md IPA公式シラバス追補版Ver.4.0詳細ドキュメント作成](closed/004-syllabus-tsuiho-detail-creation.md) | 2026-07-31 | docs(syllabus): シラバス追補版詳細ドキュメントの新規作成 |
 | 015 | Feature | [ITスキル標準V3 2011 (ITSS) 関連資料 (/references/*) の取り込み](closed/015-import-itss-v3-2011-reference-documents.md) | 2026-07-31 | docs(references): ITスキル標準V3 2011 (ITSS) 関連資料の取り込み (ID: 015) |
 | 016 | Feature | [歴代SC過去問題・解答例・採点講評 (/references/*) の収集・保存](closed/016-import-past-sc-exam-questions-answers-comments.md) | 2026-07-31 | docs(references): 歴代SC試験の過去問題・解答例・採点講評PDFの収集・保存 (ID: 016) |
-| 017 | Feature | [references/ 以下の一次資料ファイルのOKFフォーマット化と配置構成の検討](closed/017-convert-references-to-okf-format.md) | 2026-07-31 | docs(references): references/ 以下の一次資料ファイルのOKFフォーマット化 (ID: 017) |
+| 017 | Feature | [references/ 以下の全一次資料PDF(全258件)の完全OKFフォーマット化と管理自動化](closed/017-convert-references-to-okf-format.md) | 2026-07-31 | docs(references): references/ 以下の全258件一次資料PDFの完全OKFフォーマット化 (ID: 017) |
+
+
 
