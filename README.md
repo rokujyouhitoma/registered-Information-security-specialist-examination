@@ -1,0 +1,1 @@
+# registered-Information-security-specialist-examination
