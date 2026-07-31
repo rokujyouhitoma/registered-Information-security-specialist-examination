@@ -2,7 +2,7 @@
 ID: 015
 種別: Feature
 優先度: High
-ステータス: Open
+ステータス: In Progress
 ---
 
 # [FEAT/ENH] ITスキル標準V3 2011 (ITSS) 関連資料 (/references/*) の取り込み (ID: 015)
@@ -32,24 +32,31 @@ IPAが公開している「ITスキル標準V3 2011 (ITSS)」のITスペシャ�
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `docs/015-import-itss-v3-2011-reference-documents`
 
-1. **指定URLからのPDF自動ダウンロード**:
-   - スクリプトまたは `curl` を利用し、以下のIPA公式URLから全6個のPDFファイルを安全に取得する。
-     - `https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000024949.pdf` -> `references/itss_v3_2011_it_specialist_career.pdf`
-     - `https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000024951.pdf` -> `references/itss_v3_2011_it_specialist_skill.pdf`
-     - `https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000024953.pdf` -> `references/itss_v3_2011_it_specialist_training_roadmap.pdf`
-     - `https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000024956.pdf` -> `references/itss_v3_2011_it_specialist_training_matrix.pdf`
-     - `https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000025035.pdf` -> `references/itss_v3_2011_level1_2_career.pdf`
-     - `https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000025037.pdf` -> `references/itss_v3_2011_level1_2_skill.pdf`
+1. **Python自動取得処理の実装**:
+   - `urllib.request` を用い、ユーザーエージェントヘッダーを付与して各PDFを取得するスクリプトを実行。
+     ```python
+     import urllib.request
+     import os
 
-2. **ファイル存在検証と整合性チェック**:
-   - ダウンロードした全6ファイルがバイト数ゼロでなく、PDFヘッダー (`%PDF-`) を持つ正当なファイルであることを検証。
+     URL_MAP = {
+         "https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000024949.pdf": "references/itss_v3_2011_it_specialist_career.pdf",
+         "https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000024951.pdf": "references/itss_v3_2011_it_specialist_skill.pdf",
+         "https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000024953.pdf": "references/itss_v3_2011_it_specialist_training_roadmap.pdf",
+         "https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000024956.pdf": "references/itss_v3_2011_it_specialist_training_matrix.pdf",
+         "https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000025035.pdf": "references/itss_v3_2011_level1_2_career.pdf",
+         "https://www.ipa.go.jp/jinzai/skill-standard/plus-it-ui/itss/ps6vr70000004x60-att/000025037.pdf": "references/itss_v3_2011_level1_2_skill.pdf"
+     }
+     ```
 
-3. **台帳ドキュメント `references/README.md` の更新**:
-   - `references/README.md` の資料一覧テーブルに、今回取り込んだITSS V3 2011資料6件のファイル名、原典URL、概要説明を追加。
+2. **PDF整合性検証**:
+   - 各ファイルの先頭 4 バイトが `%PDF` であることを確認し、転送エラーや HTML エラーページ取得を検出。
+
+3. **[references/README.md](../references/README.md) の改訂**:
+   - 取得した 6 ファイルの概要、原典 URL、更新日付、サイズを一覧表として登録。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] 指定された全6個のITSS PDFファイルが `references/` にダウンロードされ、破損なく格納されていること
-- [ ] [references/README.md](../references/README.md) に取得済み資料一覧と原典リンクが追記されていること
-- [ ] リポジトリ内にローカル絶対パスが含まれていないこと
+- [ ] 全 6 ファイルが `references/` 配下に格納され、ファイル先頭のマジックナンバー `%PDF` 検証を通過すること
+- [ ] [references/README.md](../references/README.md) に 6 ファイルの名称・説明・URLが正しく追加されること
+- [ ] ドキュメント内にローカル絶対パス（`file:///` 等）が含まれていないこと
