@@ -1,11 +1,11 @@
 ---
-ID: 001
+ID: 002
 種別: Feature
 優先度: High
 ステータス: Closed
 ---
 
-# [FEAT/ENH] docs/syllabus_detail.md IPA公式シラバスVer.2.1完全準拠化 (ID: 001)
+# [FEAT/ENH] docs/syllabus_detail.md IPA公式シラバスVer.2.1完全準拠化 (ID: 002)
 
 ## 1. 概要 / Summary
 IPA公式の「情報処理安全確保支援士試験 シラバス Ver.2.1」に基づき、大項目（大分類）・小項目（小分類）の番号および正式名称、概要、要求される知識、要求される技能、キーワード例を公式PDFと1対1で100%完全一致させる改修およびドキュメント整備を行う。
@@ -25,7 +25,7 @@ IPA公式の「情報処理安全確保支援士試験 シラバス Ver.2.1」�
 ---
 
 ## 4. 実装方針 / Implementation Plan
-Target Branch: `docs/001-syllabus-detail-official-alignment`
+Target Branch: `docs/002-syllabus-detail-official-alignment`
 
 1. **公式PDFと現状の比較分析**:
    - `references/syllabus_sc_ver2_1.pdf` から全4つの大項目および全29個の小項目テキストを抽出。
