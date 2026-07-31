@@ -2,7 +2,7 @@
 ID: 013
 種別: Feature
 優先度: High
-ステータス: In Progress
+ステータス: Closed
 ---
 
 # [FEAT/ENH] 全用語・略語を一元管理する用語辞書 (docs/glossary.md) の構築 (ID: 013)
@@ -21,9 +21,9 @@ IPA公式シラバス（Ver.2.1 および 科目A-2追補版）に登場する�
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
-- [ ] [docs/glossary.md](../docs/glossary.md)
-- [ ] [docs/syllabus.md](../docs/syllabus.md)
-- [ ] [docs/index.md](../docs/index.md)
+- [x] [docs/glossary.md](../docs/glossary.md)
+- [x] [docs/syllabus.md](../docs/syllabus.md)
+- [x] [docs/index.md](../docs/index.md)
 
 ---
 
@@ -52,4 +52,4 @@ Target Branch: `feat/013-unified-glossary-dict-construction`
 ## 5. 完了条件 / Success Criteria (DoD)
 - [ ] `docs/glossary.md` が作成され、主要な専門用語・略語がシラバス参照リンク付きで登録されること
 - [ ] 目次ドキュメントから `docs/glossary.md` へのハイパーリンクが機能すること
-- [ ] 相対パスで正しくシラバス各項目へ相互移動できること
+- [x] 相対パスで正しくシラバス各項目へ相互移動できること

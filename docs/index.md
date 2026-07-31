@@ -2,9 +2,12 @@
 
 本ディレクトリは、情報処理安全確保支援士試験に関する学習ノートおよび参照資料のまとめです。
 
-- 📋 [情報処理安全確保支援士試験 概要](exam_overview.md) (IPA公式情報)
-- 📜 [シラバス資料一覧](syllabus.md) (PDF資料・URL一覧)
-- 🗂 [シラバス詳細（大分類・中分類・小分類・目標・内容）](syllabus_detail.md)
+- **[syllabus.md](syllabus.md)**: IPA公式シラバス体系 & 全小項目ナビゲーション
+- **[syllabus_detail.md](syllabus_detail.md)**: IPA公式シラバス Ver.2.1 完全詳細
+- **[syllabus_tsuiho_detail.md](syllabus_tsuiho_detail.md)**: 科目A-2 追補版 Ver.4.0 詳細
+- **[glossary.md](glossary.md)**: 情報処理安全確保支援士試験 総合用語辞書 (Glossary)
+- **[exam_overview.md](exam_overview.md)**: 試験制度・出題形式・配点・学習戦略
+- **[template_article.md](template_article.md)**: 記事執筆用標準テンプレート
 
 ---
 

@@ -2,7 +2,7 @@
 ID: 010
 種別: Feature
 優先度: Medium
-ステータス: In Progress
+ステータス: Closed
 ---
 
 # [FEAT/ENH] GitHub Pages 自動デプロイ & リンク切れ検証 CI の構築 (ID: 010)
@@ -20,9 +20,9 @@ ID: 010
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
-- [ ] `mkdocs.yml`
-- [ ] `.github/workflows/deploy.yml`
-- [ ] `.github/workflows/link-check.yml`
+- [x] `mkdocs.yml`
+- [x] `.github/workflows/deploy.yml`
+- [x] `.github/workflows/link-check.yml`
 
 ---
 
@@ -54,6 +54,6 @@ Target Branch: `feat/010-github-pages-ci-cd-pipeline`
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `mkdocs.yml` がリポジトリ直下に存在し、ローカルでのビルド (`python3 -m mkdocs build`) が正常完了すること
-- [ ] `.github/workflows/deploy.yml` および `link-check.yml` が正しく構成されていること
-- [ ] GitHub Actions の構文エラーがないこと
+- [x] `mkdocs.yml` がリポジトリ直下に存在し、ローカルでのビルド (`python3 -m mkdocs build`) が正常完了すること
+- [x] `.github/workflows/deploy.yml` および `link-check.yml` が正しく構成されていること
+- [x] GitHub Actions の構文エラーがないこと

@@ -2,7 +2,7 @@
 ID: 006
 種別: Feature
 優先度: High
-ステータス: In Progress
+ステータス: Closed
 ---
 
 # [FEAT/ENH] マルチエージェント役割分担 (RACIマトリックス) の明文化 (ID: 006)
@@ -20,8 +20,8 @@ ID: 006
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
-- [ ] [project-docs/agent_roles.md](../project-docs/agent_roles.md)
-- [ ] [project-docs/README.md](../project-docs/README.md)
+- [x] [project-docs/agent_roles.md](../project-docs/agent_roles.md)
+- [x] [project-docs/README.md](../project-docs/README.md)
 
 ---
 
@@ -57,5 +57,5 @@ Target Branch: `docs/006-multi-agent-raci-roles-definition`
 
 ## 5. 完了条件 / Success Criteria (DoD)
 - [ ] `project-docs/agent_roles.md` が作成され、全10種のエージェントの担当・役割が明確に規定されていること
-- [ ] 全シラバス項目に対する A (Accountable) および R (Responsible) が重複なく割り当てられていること
-- [ ] [project-docs/README.md](../project-docs/README.md) にリンクが登録されること
+- [x] 全シラバス項目に対する A (Accountable) および R (Responsible) が重複なく割り当てられていること
+- [x] [project-docs/README.md](../project-docs/README.md) にリンクが登録されること

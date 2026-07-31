@@ -2,7 +2,7 @@
 ID: 005
 種別: Feature
 優先度: High
-ステータス: In Progress
+ステータス: Closed
 ---
 
 # [FEAT/ENH] コンテンツ制作ロードマップ & WBS の定義 (ID: 005)
@@ -21,8 +21,8 @@ ID: 005
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
-- [ ] [project-docs/roadmap_wbs.md](../project-docs/roadmap_wbs.md)
-- [ ] [project-docs/README.md](../project-docs/README.md)
+- [x] [project-docs/roadmap_wbs.md](../project-docs/roadmap_wbs.md)
+- [x] [project-docs/README.md](../project-docs/README.md)
 
 ---
 
@@ -52,5 +52,5 @@ Target Branch: `docs/005-content-production-roadmap-wbs`
 
 ## 5. 完了条件 / Success Criteria (DoD)
 - [ ] `project-docs/roadmap_wbs.md` が作成され、全61項目（Ver.2.1 29項目＋追補版 32項目）が漏れなくリスト化されていること
-- [ ] 各項目に Phase (Phase 1〜3)、試験種別（A-2 / B）、担当エージェントが割り当てられていること
-- [ ] 相対パス検証ツールでリンク切れ・絶対パス混入がないことが確認されること
+- [x] 各項目に Phase (Phase 1〜3)、試験種別（A-2 / B）、担当エージェントが割り当てられていること
+- [x] 相対パス検証ツールでリンク切れ・絶対パス混入がないことが確認されること

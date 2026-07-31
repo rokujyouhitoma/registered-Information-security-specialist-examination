@@ -21,10 +21,10 @@ PM（プロジェクトマネジメント）の管理下で、自動一括変換
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
-- [x] [references/README.md](file:///workspace/registered-Information-security-specialist-examination/references/README.md)
-- [x] [scripts/convert_all_references_to_okf.py](file:///workspace/registered-Information-security-specialist-examination/scripts/convert_all_references_to_okf.py) [NEW]
-- [x] [scripts/verify_okf_coverage.py](file:///workspace/registered-Information-security-specialist-examination/scripts/verify_okf_coverage.py) [NEW]
-- [x] [references/okf/](file:///workspace/registered-Information-security-specialist-examination/references/okf) [NEW]
+- [x] [references/README.md](../../references/README.md)
+- [x] [scripts/convert_all_references_to_okf.py](../../scripts/convert_all_references_to_okf.py) [NEW]
+- [x] [scripts/verify_okf_coverage.py](../../scripts/verify_okf_coverage.py) [NEW]
+- [x] [references/okf/](../../references/okf) [NEW]
   - [x] `references/okf/*.md` (シラバス3件、ITSS6件)
   - [x] `references/okf/past_exams/<year>/*.md` (過去問全249件)
 

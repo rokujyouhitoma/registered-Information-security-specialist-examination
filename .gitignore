@@ -3,7 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Environment
+# Environment & Scratch / Temporary Files
 .venv/
 env/
 venv/
+scratch/
+*.tmp
+*.pdftotext.txt
+

@@ -1,0 +1,53 @@
+site_name: 情報処理安全確保支援士試験 対策ドキュメント & ナレッジベース
+site_description: IPA情報処理安全確保支援士試験 (SC) のシラバスVer.2.1および科目A-2追補版Ver.4.0に準拠した総合学習資料
+site_author: Deepmind Antigravity Security Team
+
+theme:
+  name: material
+  language: ja
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードへ切り替え
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードへ切り替え
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+
+nav:
+  - ホーム: index.md
+  - シラバス体系:
+      - シラバス概要: syllabus.md
+      - 公式シラバス Ver.2.1 詳細: syllabus_detail.md
+      - 科目A-2 追補版 Ver.4.0 詳細: syllabus_tsuiho_detail.md
+  - 試験対策ガイド:
+      - 試験概要: exam_overview.md

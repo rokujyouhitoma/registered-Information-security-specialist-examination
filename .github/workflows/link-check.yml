@@ -1,0 +1,24 @@
+name: Markdown Link Check CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Relative Path Check Script
+        run: |
+          python3 scripts/check_relative_paths.py
+
+      - name: Lychee Broken Link Checker
+        uses: lycheeverse/lychee-action@v1.9.0
+        with:
+          args: --verbose --no-progress './docs/**/*.md' './project-docs/**/*.md' './issues/**/*.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

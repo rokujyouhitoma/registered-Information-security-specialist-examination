@@ -2,7 +2,7 @@
 ID: 009
 種別: Feature
 優先度: Medium
-ステータス: In Progress
+ステータス: Closed
 ---
 
 # [FEAT/ENH] Issue 採番・追跡・自動化ルールの強化 (ID: 009)
@@ -20,8 +20,8 @@ Issue 作成時の ID 重複や手動追記の手間を解消するため、`iss
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
-- [ ] [issues/README.md](../issues/README.md)
-- [ ] `scripts/sync_issues_ledger.py`
+- [x] [issues/README.md](../issues/README.md)
+- [x] `scripts/sync_issues_ledger.py`
 
 ---
 
@@ -44,6 +44,6 @@ Target Branch: `feat/009-issue-tracking-automation-rules`
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `scripts/sync_issues_ledger.py` が作成され、`issues/README.md` の全テーブルを自動生成できること
-- [ ] ID の重複やファイル名のフォーマット不正を自動検知して判定エラーを出せること
-- [ ] スクリプトの実行により台帳データの整合性が 100% 保持されること
+- [x] `scripts/sync_issues_ledger.py` が作成され、`issues/README.md` の全テーブルを自動生成できること
+- [x] ID の重複やファイル名のフォーマット不正を自動検知して判定エラーを出せること
+- [x] スクリプトの実行により台帳データの整合性が 100% 保持されること

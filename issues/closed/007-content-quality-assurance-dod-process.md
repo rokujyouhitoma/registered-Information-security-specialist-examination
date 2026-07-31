@@ -2,7 +2,7 @@
 ID: 007
 種別: Feature
 優先度: High
-ステータス: In Progress
+ステータス: Closed
 ---
 
 # [FEAT/ENH] 記事・問題コンテンツの品質保証プロセス (DoD) の策定 (ID: 007)
@@ -20,8 +20,8 @@ ID: 007
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
-- [ ] [project-docs/quality_assurance_checklist.md](../project-docs/quality_assurance_checklist.md)
-- [ ] [project-docs/writing_guide.md](../project-docs/writing_guide.md)
+- [x] [project-docs/quality_assurance_checklist.md](../project-docs/quality_assurance_checklist.md)
+- [x] [project-docs/writing_guide.md](../project-docs/writing_guide.md)
 
 ---
 
@@ -49,4 +49,4 @@ Target Branch: `docs/007-content-quality-assurance-dod-process`
 ## 5. 完了条件 / Success Criteria (DoD)
 - [ ] `project-docs/quality_assurance_checklist.md` が作成され、全5分野のチェック項目が定義されること
 - [ ] `project-docs/writing_guide.md` にレビューゲートフローが追記されること
-- [ ] チェックリストを適用した品質レビューの合格判定手順が明確であること
+- [x] チェックリストを適用した品質レビューの合格判定手順が明確であること

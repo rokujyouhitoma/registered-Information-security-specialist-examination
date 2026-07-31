@@ -2,7 +2,7 @@
 ID: 012
 種別: Feature
 優先度: Medium
-ステータス: In Progress
+ステータス: Closed
 ---
 
 # [FEAT/ENH] 試験種別 (科目A/科目B)・難易度メタデータ (Frontmatter) の定義 (ID: 012)
@@ -20,8 +20,8 @@ ID: 012
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
-- [ ] [project-docs/writing_guide.md](../project-docs/writing_guide.md)
-- [ ] `docs/template_article.md`
+- [x] [project-docs/writing_guide.md](../project-docs/writing_guide.md)
+- [x] `docs/template_article.md`
 
 ---
 
@@ -55,5 +55,5 @@ Target Branch: `feat/012-exam-content-frontmatter-metadata-spec`
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [ ] `project-docs/writing_guide.md` に YAML Frontmatter 仕様が定義されていること
-- [ ] テンプレート記事 `docs/template_article.md` が作成され、パース可能であること
+- [x] `project-docs/writing_guide.md` に YAML Frontmatter 仕様が定義されていること
+- [x] テンプレート記事 `docs/template_article.md` が作成され、パース可能であること
