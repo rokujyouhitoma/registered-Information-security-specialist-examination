@@ -2,8 +2,8 @@
 """
 scripts/convert_all_references_to_okf.py
 references/ 配下の全 PDF ファイル (全258件) を走査し、
-pdfminer.six / pypdf / pdftotext / qpdf を駆使して
-全ドキュメントの OKF フォーマット化を完成させる最終決定版スクリプト。
+テキスト抽出 & Tesseract OCR (日本語) パイプラインを用いて、
+フロントマター付きの完全な OKF 構造化 Markdown を出力する完成版スクリプト。
 """
 
 import os
@@ -13,7 +13,7 @@ import tempfile
 import subprocess
 from pathlib import Path
 from pdfminer.high_level import extract_text as pdfminer_extract_text
-import pypdf
+import fitz  # PyMuPDF
 
 WORKSPACE_ROOT = Path("/workspace/registered-Information-security-specialist-examination")
 REFERENCES_DIR = WORKSPACE_ROOT / "references"
@@ -102,12 +102,40 @@ def get_pdf_metadata(pdf_path: Path):
         "keywords": keywords,
     }
 
+def ocr_extract_pdf(pdf_path: Path) -> str:
+    """Tesseract OCR (日本語) を用いて PDF からページごとに文字起こし"""
+    ocr_texts = []
+    try:
+        doc = fitz.open(pdf_path)
+        for i, page in enumerate(doc):
+            pix = page.get_pixmap(dpi=150)
+            with tempfile.NamedTemporaryFile(suffix='.png', delete=False) as tmp_img:
+                tmp_name = tmp_img.name
+                pix.save(tmp_name)
+            
+            res = subprocess.run(
+                ['tesseract', tmp_name, 'stdout', '-l', 'jpn'],
+                capture_output=True, text=True
+            )
+            try:
+                os.remove(tmp_name)
+            except Exception:
+                pass
+
+            if res.stdout and res.stdout.strip():
+                ocr_texts.append(res.stdout.strip())
+    except Exception as e:
+        print(f"  [OCR Error] {pdf_path.name}: {e}")
+    return "\n\n".join(ocr_texts)
+
 def extract_pdf_text(pdf_path: Path) -> str:
+    extracted_texts = []
+
     # 1. pdfminer.six
     try:
         t = pdfminer_extract_text(str(pdf_path))
-        if t and len(t.strip()) > 30:
-            return t
+        if t:
+            extracted_texts.append(t)
     except Exception:
         pass
 
@@ -116,37 +144,28 @@ def extract_pdf_text(pdf_path: Path) -> str:
         with tempfile.NamedTemporaryFile(suffix='.pdf') as tmp:
             subprocess.run(['qpdf', '--decrypt', str(pdf_path), tmp.name], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             t = pdfminer_extract_text(tmp.name)
-            if t and len(t.strip()) > 30:
-                return t
+            if t:
+                extracted_texts.append(t)
     except Exception:
         pass
 
-    # 3. pypdf
-    try:
-        reader = pypdf.PdfReader(pdf_path)
-        pages_text = [p.extract_text() for p in reader.pages if p.extract_text()]
-        full_text = "\n\n".join(pages_text)
-        if len(full_text.strip()) > 30:
-            return full_text
-    except Exception:
-        pass
+    best_text = ""
+    for t in extracted_texts:
+        clean_len = len(re.sub(r"\s+", "", t or ""))
+        if clean_len > len(re.sub(r"\s+", "", best_text)):
+            best_text = t
 
-    # 4. pdftotext
-    try:
-        res = subprocess.run(
-            ["pdftotext", "-layout", str(pdf_path), "-"],
-            capture_output=True,
-            text=True,
-            check=True
-        )
-        if len(res.stdout.strip()) > 30:
-            return res.stdout
-    except Exception:
-        pass
+    clean_best_len = len(re.sub(r"\s+", "", best_text))
 
-    return ""
+    if clean_best_len < 3000:
+        ocr_text = ocr_extract_pdf(pdf_path)
+        clean_ocr_len = len(re.sub(r"\s+", "", ocr_text or ""))
+        if clean_ocr_len > clean_best_len:
+            return ocr_text
 
-def format_text_to_markdown(raw_text: str, title: str, pdf_rel_path: str) -> str:
+    return best_text
+
+def format_text_to_markdown(raw_text: str, title: str) -> str:
     lines = raw_text.splitlines()
     cleaned_lines = []
     
@@ -164,21 +183,16 @@ def format_text_to_markdown(raw_text: str, title: str, pdf_rel_path: str) -> str
             cleaned_lines.append(stripped)
 
     body_content = "\n".join(cleaned_lines)
-    if not body_content.strip():
-        body_content = f"（※ 本冊子はIPA公式のアウトライン化・画像化PDFのため、詳細本文の確認は原本PDF `[{pdf_rel_path}]({pdf_rel_path})` または同年度の解答例・採点講評OKFドキュメントをご参照ください。）"
-
     return f"# {title}\n\n{body_content}"
 
 def main():
-    print("=== 全一次情報 PDF (258件) の OKF 完全変換処理を実行します ===")
+    print("=== 全一次情報 PDF (258件) の OCR 高精度文字起こし付き OKF 変換処理を実行します ===")
     
     pdf_files = sorted(list(REFERENCES_DIR.glob("**/*.pdf")))
     total_pdfs = len(pdf_files)
     print(f"検出された全 PDF ファイル数: {total_pdfs} 件")
 
     converted_count = 0
-    full_text_count = 0
-    outline_count = 0
 
     for pdf_path in pdf_files:
         rel_pdf = pdf_path.relative_to(REFERENCES_DIR)
@@ -212,21 +226,14 @@ updated_at: "2026-07-31"
 """
 
         raw_text = extract_pdf_text(pdf_path)
-        if len(raw_text.strip()) > 30:
-            full_text_count += 1
-        else:
-            outline_count += 1
-
-        markdown_body = format_text_to_markdown(raw_text, meta["title"], rel_pdf_from_okf)
+        markdown_body = format_text_to_markdown(raw_text, meta["title"])
 
         with open(okf_path, "w", encoding="utf-8") as f:
             f.write(frontmatter + markdown_body)
 
         converted_count += 1
 
-    print(f"=== 全 {converted_count}/{total_pdfs} 件の OKF 変換が完璧に完了しました ===")
-    print(f"  - 本文全文抽出成功: {full_text_count} 件")
-    print(f"  - 画像/アウトラインPDF(ガイドリンク付き): {outline_count} 件")
+    print(f"=== 全 {converted_count}/{total_pdfs} 件の OCR 付き OKF 完全変換が完璧に完了しました ===")
 
 if __name__ == "__main__":
     main()

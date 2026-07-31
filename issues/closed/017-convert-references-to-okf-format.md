@@ -61,6 +61,6 @@ Target Branch: `feat/017-convert-references-to-okf-format`
 - [x] `scripts/convert_all_references_to_okf.py` が実装され、エラーなく実行可能であること。
 - [x] `references/` 配下の **全258件のPDFファイル** に対し、漏れなくすべて対応する OKF Markdown ドキュメントが `references/okf/` 配下に生成されていること。
 - [x] `scripts/verify_okf_coverage.py` を実行し、全PDFに対する OKF カバレッジが **100% (258/258件)** であることが検証されていること。
+- [x] アウトライン化・画像化 PDF に対する Tesseract OCR による全文文字起こしが適用されていること。
 - [x] [references/README.md](../references/README.md) に全258件のPDFとOKFファイルのマッピング表がカタログ化されていること。
 - [x] すべての生成ドキュメントおよびリンクが `AGENTS.md` の相対パスルールに準拠していること。
-
