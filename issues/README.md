@@ -16,7 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
-| 001 | Feature | [IPA公式シラバス資料 (/references/*) の収集・取り込み](closed/001-import-official-syllabus-references.md) | 2026-07-31 | docs(syllabus): IPA公式シラバス資料の取り込み |
-| 002 | Feature | [docs/syllabus_detail.md IPA公式シラバスVer.2.1完全準拠化](closed/002-syllabus-detail-official-alignment.md) | 2026-07-31 | docs(syllabus): IPA公式シラバスVer.2.1および追補版Ver.4.0への完全準拠化 |
-| 003 | Feature | [docs/syllabus_tsuiho_detail.md IPA公式シラバス追補版Ver.4.0詳細ドキュメント作成](closed/003-syllabus-tsuiho-detail-creation.md) | 2026-07-31 | docs(syllabus): シラバス追補版詳細ドキュメントの新規作成 |
-| 004 | Feature | [yuzoraリポジトリからのエージェント定義ファイル取り込み](closed/004-import-yuzora-agents.md) | 2026-07-31 | feat(agent): yuzoraリポジトリからエージェント定義ファイルを取り込み |
+| 001 | Feature | [yuzoraリポジトリからのエージェント定義ファイル (.agents/agents/*) の取り込み](closed/001-import-yuzora-agents.md) | 2026-07-31 | feat(agent): yuzoraリポジトリからエージェント定義ファイルを取り込み |
+| 002 | Feature | [IPA公式シラバス資料 (/references/*) の収集・取り込み](closed/002-import-official-syllabus-references.md) | 2026-07-31 | docs(syllabus): IPA公式シラバス資料の取り込み |
+| 003 | Feature | [docs/syllabus_detail.md IPA公式シラバスVer.2.1完全準拠化](closed/003-syllabus-detail-official-alignment.md) | 2026-07-31 | docs(syllabus): IPA公式シラバスVer.2.1および追補版Ver.4.0への完全準拠化 |
+| 004 | Feature | [docs/syllabus_tsuiho_detail.md IPA公式シラバス追補版Ver.4.0詳細ドキュメント作成](closed/004-syllabus-tsuiho-detail-creation.md) | 2026-07-31 | docs(syllabus): シラバス追補版詳細ドキュメントの新規作成 |

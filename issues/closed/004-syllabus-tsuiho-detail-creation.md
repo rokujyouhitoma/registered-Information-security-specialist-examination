@@ -1,11 +1,11 @@
 ---
-ID: 003
+ID: 004
 種別: Feature
 優先度: High
 ステータス: Closed
 ---
 
-# [FEAT/ENH] docs/syllabus_tsuiho_detail.md IPA公式シラバス追補版Ver.4.0詳細ドキュメント作成 (ID: 003)
+# [FEAT/ENH] docs/syllabus_tsuiho_detail.md IPA公式シラバス追補版Ver.4.0詳細ドキュメント作成 (ID: 004)
 
 ## 1. 概要 / Summary
 IPA公式の「情報処理安全確保支援士試験 シラバス 追補版 (科目A-2) Ver.4.0」の全項目（体系カテゴリ、大分類、中分類、小分類、細目番号 `(1)`, `(2)`, `①`, `②`...、学習目標、理解すべき内容、および全用語例）を、公式PDFと1対1で番号レベルまで完全一致させた詳細ドキュメント [docs/syllabus_tsuiho_detail.md](../../docs/syllabus_tsuiho_detail.md) を新規作成する。
@@ -25,7 +25,7 @@ IPA公式の「情報処理安全確保支援士試験 シラバス 追補版 (�
 ---
 
 ## 4. 実装方針 / Implementation Plan
-Target Branch: `docs/003-syllabus-tsuiho-detail-creation`
+Target Branch: `docs/004-syllabus-tsuiho-detail-creation`
 
 1. **追補版BOK体系の構造解析**:
    - `references/syllabus_sc_am2_tsuiho4_0.pdf` から共通キャリア・スキルフレームワーク（BOK体系）の大分類（3, 4, 6）、中分類（9, 10, 11, 12, 13, 15, 16）、全32小項目、細目番号、目標、解説、用語例を解析・抽出。

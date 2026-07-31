@@ -1,11 +1,11 @@
 ---
-ID: 004
+ID: 001
 種別: Feature
 優先度: High
 ステータス: Closed
 ---
 
-# [FEAT/ENH] yuzoraリポジトリからのエージェント定義ファイル取り込み (ID: 004)
+# [FEAT/ENH] yuzoraリポジトリからのエージェント定義ファイル (.agents/agents/*) の取り込み (ID: 001)
 
 ## 1. 概要 / Summary
 GitHubリポジトリ `https://github.com/rokujyouhitoma/yuzora` の `.agents/agents/` から、データベーススペシャリストやネットワークスペシャリストなどの全10種のエージェント定義ファイルを取得し、本プロジェクトの `.agents/agents/` ディレクトリ配下に格納する。
@@ -33,7 +33,7 @@ GitHubリポジトリ `https://github.com/rokujyouhitoma/yuzora` の `.agents/ag
 ---
 
 ## 4. 実装方針 / Implementation Plan
-Target Branch: `feat/004-import-yuzora-agents`
+Target Branch: `feat/001-import-yuzora-agents`
 
 1. **エージェント一覧の取得**:
    - GitHub API / Tree API を用いて `rokujyouhitoma/yuzora` の `.agents/agents/` 内の全エージェントを検出。
