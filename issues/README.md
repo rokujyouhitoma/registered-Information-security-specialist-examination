@@ -6,9 +6,7 @@
 
 ## 1. アクティブ Issue 一覧
 
-| ID | 種別 | タイトル | 優先度 | ステータス | 担当・リンク |
-|---|---|---|---|---|---|
-| 019 | Feature | [用語辞書 (docs/glossary/*) における全専門用語の解説内容の拡充と重要用語 (ST/SA等) のページ分割体系化](019-expand-glossary-detailed-explanations.md) | Medium | In Progress | [019-expand-glossary-detailed-explanations.md](019-expand-glossary-detailed-explanations.md) |
+*現在アクティブな Issue はありません。*
 
 ---
 
@@ -16,6 +14,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 019 | Feature | [用語辞書 (docs/glossary/*) における全専門用語の解説内容の拡充と重要用語 (ST/SA等) のページ分割体系化](closed/019-expand-glossary-detailed-explanations.md) | 2026-08-01 | [019-expand-glossary-detailed-explanations.md](closed/019-expand-glossary-detailed-explanations.md) |
 | 018 | Feature | [シラバス全用語例の用語辞書 (docs/glossary.md) 完全登録・相互ハイパーリンク化と分割運用](closed/018-comprehensive-glossary-terms-linking-split.md) | 2026-08-01 | [018-comprehensive-glossary-terms-linking-split.md](closed/018-comprehensive-glossary-terms-linking-split.md) |
 | 014 | Process | [IPAシラバス改定追従プロセス & 変更履歴 (Changelog) の運用](closed/014-syllabus-update-changelog-governance.md) | 2026-08-01 | [014-syllabus-update-changelog-governance.md](closed/014-syllabus-update-changelog-governance.md) |
 | 011 | Documentation | [一次情報 (references/*) および検証スクリプトの管理規約策定](closed/011-reference-data-asset-management-rules.md) | 2026-08-01 | [011-reference-data-asset-management-rules.md](closed/011-reference-data-asset-management-rules.md) |

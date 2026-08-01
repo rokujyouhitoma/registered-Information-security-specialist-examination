@@ -2,7 +2,7 @@
 ID: 019
 種別: Feature
 優先度: Medium
-ステータス: In Progress
+ステータス: Closed
 ---
 
 # [FEAT/ENH] 用語辞書 (docs/glossary/*) における全専門用語の解説内容の拡充と重要用語 (ST/SA等) のページ分割体系化 (ID: 019)

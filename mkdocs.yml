@@ -53,5 +53,11 @@ nav:
       - 用語インデックス: glossary/index.md
       - シラバスVer.2.1 用語辞書: glossary/syllabus_ver2_1.md
       - 追補版Ver.4.0 用語辞書: glossary/syllabus_tsuiho_ver4_0.md
+      - 重要技術・アーキテクチャ詳細解説 (ST/SA):
+          - ゼロトラスト・アーキテクチャ: glossary/terms/zero-trust.md
+          - TLS 1.3 トランスポート層セキュリティ: glossary/terms/tls1_3.md
+          - 公開鍵インフラストラクチャ (PKI): glossary/terms/pki.md
+          - OAuth 2.0 & OpenID Connect: glossary/terms/oauth2-oidc.md
+          - 送信ドメイン認証 (SPF/DKIM/DMARC): glossary/terms/email-security.md
   - 試験対策ガイド:
       - 試験概要: exam_overview.md
