@@ -27,6 +27,15 @@
 
 ---
 
+## 📑 3. セキュリティ標準・ガイドライン参考資料 (NIST SP 800 / CRYPTREC)
+
+| ファイル名 | 分類・原典タイトル | タイプ | 公式URL / 原典 |
+|---|---|---|---|
+| [`nist_sp800_207_zero_trust_summary.md`](nist_sp800_207_zero_trust_summary.md) | NIST SP 800-207 ゼロトラスト・アーキテクチャ 要約参照ガイド | Markdown | [NIST CSRC (SP 800-207)](https://csrc.nist.gov/publications/detail/sp/800-207/final) |
+| [`cryptrec_ciphers_list_2025.md`](cryptrec_ciphers_list_2025.md) | CRYPTREC 電子政府推奨暗号リスト 要約参照ガイド | Markdown | [CRYPTREC公式](https://www.cryptrec.go.jp/list.html) |
+
+---
+
 ## 📌 一次情報資料の管理規約 (Governance & Guidelines)
 
 ### 1. 保管対象基準 (Primary Source Selection Criteria)
