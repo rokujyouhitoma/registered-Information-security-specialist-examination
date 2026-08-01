@@ -9,5 +9,6 @@ env/
 venv/
 scratch/
 *.tmp
+*.log
 *.pdftotext.txt
 

@@ -27,11 +27,38 @@
 
 ---
 
-## 📌 管理方針・利用規約
-1. **一時ファイル・スクラッチ**:
-   - PDF解析用スクリプトや一時テキストデータは `scratch/` ディレクトリで処理し、`references/` に不要な中間ファイルを蓄積しないこと。
-2. **相対パス参照**:
-   - リポジトリ内から本資料を参照する場合は、`references/<filename>.pdf` や `references/past_exams/<folder>/<filename>.pdf` の相対パスを使用すること。
+## 📌 一次情報資料の管理規約 (Governance & Guidelines)
+
+### 1. 保管対象基準 (Primary Source Selection Criteria)
+本 `references/` ディレクトリに保管する資料は、以下の公的・公式な一次情報源から取得した資料に限定します：
+- **IPA（独立行政法人情報処理推進機構）公式資料**:
+  - 情報処理安全確保支援士（SC）および情報セキュリティスペシャリスト試験のシラバス・追補版・試験要綱。
+  - 歴代試験（平成21年〜令和7年）の過去問題冊子・解答例・採点講評PDF。
+  - ITスキル標準 V3 2011（ITSS）の職種別キャリア編・スキル編・研修ロードマップ等。
+- **公認セキュリティ基準・評価リスト**:
+  - CRYPTREC（電子政府推奨暗号リスト）、NIST SP 800 シリーズ等の公認標準ガイドライン。
+
+### 2. ファイル命名規約 (Naming Conventions)
+すべての保管ファイルは、以下のルールに沿って英数小文字とアンダースコア (`_`) で命名してください：
+- **シラバス資料**: `syllabus_<shiken>_ver<major>_<minor>.pdf` （例: `syllabus_sc_ver2_1.pdf`）
+- **追補版資料**: `syllabus_<shiken>_<am|pm>_tsuiho<ver>.pdf` （例: `syllabus_sc_am2_tsuiho4_0.pdf`）
+- **ITSS 資料**: `itss_v3_2011_<scope>_<type>.pdf` （例: `itss_v3_2011_it_specialist_career.pdf`）
+- **過去問資料アーカイブ (`references/past_exams/<year>_<haru|aki>/`)**:
+  - 問題冊子: `question_am1.pdf` (午前Ⅰ), `question_am2.pdf` (午前Ⅱ), `question_pm1.pdf` (午後Ⅰ/科目B), `question_pm2.pdf` (午後Ⅱ)
+  - 解答例: `answer_am1.pdf`, `answer_am2.pdf`, `answer_pm1.pdf`, `answer_pm2.pdf`
+  - 採点講評: `comment.pdf` または `*_cmnt.pdf`
+- **OKF 構造化ドキュメント (`references/okf/`)**:
+  - 原典PDFのパス・ファイル名と1対1に対応する `.md` ファイル（例: `references/okf/past_exams/2024_haru/question_am2.md`）
+
+### 3. 著作権・引用注記 (Copyright & Citation Notes)
+- **著作権の保持**: 本ディレクトリに収録されている PDF 資料の著作権は、独立行政法人情報処理推進機構（IPA）または各発行機関に帰属します。
+- **利用目的**: 本リポジトリ内の各種学習コンテンツおよびナレッジの作成・検証・精度向上のための非営利研究・学習目的としてのみ利用します。
+- **相対パス参照の強制**: `docs/` や `project-docs/` 等から本文書・資料を参照する際は、必ず環境非依存の相対パス（例: `[シラバス](../references/syllabus_sc_ver2_1.pdf)`）でリンクしてください。絶対パス (`file:///...`) の使用は厳禁です。
+
+### 4. スクラッチスクリプト & 一時データ管理規約 (Scratch & Temp File Governance)
+- **中間生成物の非混入**: PDF解析、テキスト抽出、一時検証等に使用する使い捨てスクリプトや中間テキストファイル（`.txt`, `.tmp`, `.log`）は、本ディレクトリやリポジトリ直下に直接保存・コミットしないでください。
+- **一時作業場所の利用**: 一時的な処理スクリプトや検証用データは `scratch/` ディレクトリまたはエージェントの artifacts 領域内で作業を行ってください。
+- **Git 除外規則**: `scratch/*`, `*.tmp`, `*.log`, `*.pdftotext.txt` は `.gitignore` により自動的に無効化され、Git リポジトリへの誤混入が防がれています。
 
 ---
 
