@@ -6,7 +6,7 @@ author: "Information Security Specialist Agent"
 
 # 情報処理安全確保支援士試験 科目A-2 追補版Ver.4.0 用語辞書
 
-本辞書は、科目A-2 追補版 Ver.4.0 (全32小項目) に登場するすべての「用語例・キーワード」（全 2488 件）を 100% 完全網羅抽出し、定義およびシラバス本文への双方向参照リンクを整理したナレッジベースです。
+本辞書は、科目A-2 追補版 Ver.4.0 (全32小項目) に登場するすべての「用語例・キーワード」（全 2488 件）を 100% 完全網羅抽出し、不要スペースを除去・正規化した定義およびシラバス本文への双方向参照リンクを整理したナレッジベースです。
 
 ---
 
@@ -24,16 +24,16 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。可用性（Availability） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティの目的と考え方](../syllabus_tsuiho_detail.md)
 
-#### <a id="真正-性-（-authenticity-）"></a>真正 性 （ Authenticity ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。真正 性 （ Authenticity ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="真正性（authenticity）"></a>真正性（Authenticity）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。真正性（Authenticity） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティの目的と考え方](../syllabus_tsuiho_detail.md)
 
-#### <a id="責任-追跡-性-（-accountability-）"></a>責任 追跡 性 （ Accountability ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。責任 追跡 性 （ Accountability ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="責任追跡性（accountability）"></a>責任追跡性（Accountability）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。責任追跡性（Accountability） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティの目的と考え方](../syllabus_tsuiho_detail.md)
 
-#### <a id="否認-防止-（-nonrepudiation）"></a>否認 防止 （ NonRepudiation）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。否認 防止 （ NonRepudiation） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="否認防止（nonrepudiation）"></a>否認防止（NonRepudiation）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。否認防止（NonRepudiation） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティの目的と考え方](../syllabus_tsuiho_detail.md)
 
 #### <a id="信頼性（reliability）"></a>信頼性（Reliability）
@@ -44,8 +44,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。多層防御 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティの目的と考え方](../syllabus_tsuiho_detail.md)
 
-#### <a id="セキュリティバイデザイン-（セキュアバイデザイン）"></a>セキュリティバイデザイン （セキュアバイデザイン）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。セキュリティバイデザイン （セキュアバイデザイン） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="セキュリティバイデザイン（セキュアバイデザイン）"></a>セキュリティバイデザイン（セキュアバイデザイン）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。セキュリティバイデザイン（セキュアバイデザイン） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティの目的と考え方](../syllabus_tsuiho_detail.md)
 
 #### <a id="プライバシーバイデザイン"></a>プライバシーバイデザイン
@@ -412,8 +412,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。MITRE ATT&CK に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）攻撃者の種類，攻撃の動機](../syllabus_tsuiho_detail.md)
 
-#### <a id="mitre-capec-（-common-attack-pattern-enumeration-and-classification）"></a>MITRE CAPEC （ Common Attack Pattern Enumeration and Classification）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。MITRE CAPEC （ Common Attack Pattern Enumeration and Classification） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="mitre-capec（common-attack-pattern-enumeration-and-classification）"></a>MITRE CAPEC（Common Attack Pattern Enumeration and Classification）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。MITRE CAPEC（Common Attack Pattern Enumeration and Classification） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）攻撃者の種類，攻撃の動機](../syllabus_tsuiho_detail.md)
 
 #### <a id="辞書攻撃"></a>・辞書攻撃
@@ -432,8 +432,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。レインボーテーブル攻撃 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="パスワードリスト攻撃（クレデンシャルスタッフィング）-クロスサイトスクリプティング（反射型"></a>パスワードリスト攻撃（クレデンシャルスタッフィング） ・クロスサイトスクリプティング（反射型
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。パスワードリスト攻撃（クレデンシャルスタッフィング） ・クロスサイトスクリプティング（反射型 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="パスワードリスト攻撃（クレデンシャルスタッフィング）クロスサイトスクリプティング（反射型"></a>パスワードリスト攻撃（クレデンシャルスタッフィング）・クロスサイトスクリプティング（反射型
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。パスワードリスト攻撃（クレデンシャルスタッフィング）・クロスサイトスクリプティング（反射型 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="格納型"></a>格納型
@@ -476,8 +476,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。バッファオーバーフロー に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="オープンリダイレクトの悪用-中間者（man-in-the-middle）攻撃"></a>オープンリダイレクトの悪用 ・中間者（Man-in-the-middle）攻撃
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。オープンリダイレクトの悪用 ・中間者（Man-in-the-middle）攻撃 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="オープンリダイレクトの悪用中間者（man-in-the-middle）攻撃"></a>オープンリダイレクトの悪用・中間者（Man-in-the-middle）攻撃
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。オープンリダイレクトの悪用・中間者（Man-in-the-middle）攻撃 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="mitb（man-in-the-browser）攻撃"></a>MITB（Man-in-the-browser）攻撃
@@ -504,8 +504,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。セッションハイジャック に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="セッション-idの-固定化（session-fixation）攻撃"></a>セッション IDの 固定化（Session Fixation）攻撃
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。セッション IDの 固定化（Session Fixation）攻撃 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="セッション-idの固定化（session-fixation）攻撃"></a>セッション IDの固定化（Session Fixation）攻撃
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。セッション IDの固定化（Session Fixation）攻撃 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="リプレイ攻撃"></a>リプレイ攻撃
@@ -516,8 +516,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ドメインフロンティング攻撃 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="多要素認証疲労攻撃（multi-factor-authentication-fatigue-attack）-dos（denial-of-serviceサービス妨害）攻撃"></a>多要素認証疲労攻撃（Multi-Factor Authentication Fatigue Attack） ・DoS（Denial of Service：サービス妨害）攻撃
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。多要素認証疲労攻撃（Multi-Factor Authentication Fatigue Attack） ・DoS（Denial of Service：サービス妨害）攻撃 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="多要素認証疲労攻撃（multi-factor-authentication-fatigue-attack）dos（denial-of-serviceサービス妨害）攻撃"></a>多要素認証疲労攻撃（Multi-Factor Authentication Fatigue Attack）・DoS（Denial of Service：サービス妨害）攻撃
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。多要素認証疲労攻撃（Multi-Factor Authentication Fatigue Attack）・DoS（Denial of Service：サービス妨害）攻撃 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="ddos攻撃（マルチベクトル型ほか）"></a>DDoS攻撃（マルチベクトル型ほか）
@@ -540,12 +540,12 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。リフレクション攻撃 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="dns水-責め攻撃（ランダムサブドメイン攻撃）"></a>DNS水 責め攻撃（ランダムサブドメイン攻撃）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。DNS水 責め攻撃（ランダムサブドメイン攻撃） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="dns水責め攻撃（ランダムサブドメイン攻撃）"></a>DNS水責め攻撃（ランダムサブドメイン攻撃）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。DNS水責め攻撃（ランダムサブドメイン攻撃） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="クリプトジャッキング-標的型攻撃（apt（advanced-persistent-threat）"></a>クリプトジャッキング ・標的型攻撃（APT（Advanced Persistent Threat）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。クリプトジャッキング ・標的型攻撃（APT（Advanced Persistent Threat） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="クリプトジャッキング標的型攻撃（apt（advanced-persistent-threat）"></a>クリプトジャッキング・標的型攻撃（APT（Advanced Persistent Threat）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。クリプトジャッキング・標的型攻撃（APT（Advanced Persistent Threat） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="水飲み場型攻撃"></a>水飲み場型攻撃
@@ -556,8 +556,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。やり取り型攻撃ほか） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="seoポイズニング-ゼロデイ攻撃"></a>SEOポイズニング ・ゼロデイ攻撃
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SEOポイズニング ・ゼロデイ攻撃 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="seoポイズニングゼロデイ攻撃"></a>SEOポイズニング・ゼロデイ攻撃
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SEOポイズニング・ゼロデイ攻撃 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="サイドチャネル攻撃（テンペスト攻撃"></a>サイドチャネル攻撃（テンペスト攻撃
@@ -588,8 +588,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。オープンリゾルバの悪用ほか） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="バージョンロールバック攻撃-aiを悪用した攻撃（標的型攻撃フィッシングなりすましの巧妙化"></a>バージョンロールバック攻撃 ・AIを悪用した攻撃（標的型攻撃・フィッシング・なりすましの巧妙化
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。バージョンロールバック攻撃 ・AIを悪用した攻撃（標的型攻撃・フィッシング・なりすましの巧妙化 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="バージョンロールバック攻撃aiを悪用した攻撃（標的型攻撃フィッシングなりすましの巧妙化"></a>バージョンロールバック攻撃・AIを悪用した攻撃（標的型攻撃・フィッシング・なりすましの巧妙化
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。バージョンロールバック攻撃・AIを悪用した攻撃（標的型攻撃・フィッシング・なりすましの巧妙化 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="マルウェア（バリアント（亜種））の生成"></a>マルウェア（バリアント（亜種））の生成
@@ -620,8 +620,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。モデルインバージョン攻撃 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="メンバーシップ推測攻撃-攻撃の準備（フットプリンティング"></a>メンバーシップ推測攻撃 ・攻撃の準備（フットプリンティング
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。メンバーシップ推測攻撃 ・攻撃の準備（フットプリンティング に関する基本概念・技術仕様・運用管理標準。
+#### <a id="メンバーシップ推測攻撃攻撃の準備（フットプリンティング"></a>メンバーシップ推測攻撃・攻撃の準備（フットプリンティング
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。メンバーシップ推測攻撃・攻撃の準備（フットプリンティング に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）攻撃手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="ポートスキャンほか）"></a>ポートスキャンほか）
@@ -648,8 +648,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。復号（復号鍵） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="共通鍵暗号だ-方式（共通鍵）"></a>共通鍵暗号だ 方式（共通鍵）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。共通鍵暗号だ 方式（共通鍵） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="共通鍵暗号だ方式（共通鍵）"></a>共通鍵暗号だ方式（共通鍵）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。共通鍵暗号だ方式（共通鍵） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
 #### <a id="公開鍵暗号方式（公開鍵"></a>公開鍵暗号方式（公開鍵
@@ -664,20 +664,20 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。RSA暗号 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="楕円曲線暗号-（-ecdsa-）"></a>楕円曲線暗号 （ ECDSA ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。楕円曲線暗号 （ ECDSA ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="楕円曲線暗号（ecdsa）"></a>楕円曲線暗号（ECDSA）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。楕円曲線暗号（ECDSA） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="鍵共-有"></a>鍵共 有
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。鍵共 有 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="鍵共有"></a>鍵共有
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。鍵共有 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="diffie-hellman-（-dh-）-鍵共-有方-式"></a>Diffie-Hellman （ DH ） 鍵共 有方 式
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Diffie-Hellman （ DH ） 鍵共 有方 式 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="diffie-hellman（dh）鍵共有方式"></a>Diffie-Hellman（DH）鍵共有方式
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Diffie-Hellman（DH）鍵共有方式 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="前方-秘匿-性-（-pfs--perfect-forward-secrecy）"></a>前方 秘匿 性 （ PFS ： Perfect Forward Secrecy）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。前方 秘匿 性 （ PFS ： Perfect Forward Secrecy） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="前方秘匿性（pfs--perfect-forward-secrecy）"></a>前方秘匿性（PFS ： Perfect Forward Secrecy）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。前方秘匿性（PFS ： Perfect Forward Secrecy） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
 #### <a id="ハイブリッド暗号"></a>ハイブリッド暗号
@@ -712,8 +712,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。耐量子暗号（PQC（Post Quantum Cryptography：耐量子計算機暗号）ほか） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="ハッシュ関数（sha-256-（sha-2）"></a>ハッシュ関数（SHA-256 （SHA-2）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ハッシュ関数（SHA-256 （SHA-2） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ハッシュ関数（sha-256（sha-2）"></a>ハッシュ関数（SHA-256（SHA-2）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ハッシュ関数（SHA-256（SHA-2） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
 #### <a id="sha-3"></a>SHA-3
@@ -740,8 +740,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Camelliaほか） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="暗号利用モ-ード（cbc"></a>暗号利用モ ード（CBC
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。暗号利用モ ード（CBC に関する基本概念・技術仕様・運用管理標準。
+#### <a id="暗号利用モード（cbc"></a>暗号利用モード（CBC
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。暗号利用モード（CBC に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
 #### <a id="ctrほか）"></a>CTRほか）
@@ -876,8 +876,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。チャレンジレスポンス認証 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="リスクベ-ース認証"></a>リスクベ ース認証
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。リスクベ ース認証 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="リスクベース認証"></a>リスクベース認証
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。リスクベース認証 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
 #### <a id="コードサイニング"></a>コードサイニング
@@ -1048,64 +1048,64 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。中間 CA証明書 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="サーバ証明-書"></a>サーバ証明 書
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サーバ証明 書 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="サーバ証明書"></a>サーバ証明書
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サーバ証明書 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="クラ-イア-ント-証明-書"></a>クラ イア ント 証明 書
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。クラ イア ント 証明 書 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="クライアント証明書"></a>クライアント証明書
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。クライアント証明書 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="コ-ー-ドサ-イニ-ング-証明-書"></a>コ ー ドサ イニ ング 証明 書
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。コ ー ドサ イニ ング 証明 書 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="コードサイニング証明書"></a>コードサイニング証明書
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。コードサイニング証明書 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="crl-（-certificate-revocation-list証明書失効リスト）"></a>CRL （ Certificate Revocation List：証明書失効リスト）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CRL （ Certificate Revocation List：証明書失効リスト） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="crl（certificate-revocation-list証明書失効リスト）"></a>CRL（Certificate Revocation List：証明書失効リスト）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CRL（Certificate Revocation List：証明書失効リスト） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
 #### <a id="ocsp"></a>OCSP
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。OCSP に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="ca（certification-authority認証-局-）"></a>CA（Certification Authority：認証 局 ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CA（Certification Authority：認証 局 ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ca（certification-authority認証局）"></a>CA（Certification Authority：認証局）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CA（Certification Authority：認証局） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="va-（-validation-authority-）"></a>VA （ Validation Authority ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。VA （ Validation Authority ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="va（validation-authority）"></a>VA（Validation Authority）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。VA（Validation Authority） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="gpki-（-government-public-key-infrastructure政府認証基盤）"></a>GPKI （ Government Public Key Infrastructure：政府認証基盤）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。GPKI （ Government Public Key Infrastructure：政府認証基盤） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="gpki（government-public-key-infrastructure政府認証基盤）"></a>GPKI（Government Public Key Infrastructure：政府認証基盤）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。GPKI（Government Public Key Infrastructure：政府認証基盤） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="bca（bridge-certification-authorityブリッ-ジ認-証局-）"></a>BCA（Bridge Certification Authority：ブリッ ジ認 証局 ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。BCA（Bridge Certification Authority：ブリッ ジ認 証局 ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="bca（bridge-certification-authorityブリッジ認証局）"></a>BCA（Bridge Certification Authority：ブリッジ認証局）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。BCA（Bridge Certification Authority：ブリッジ認証局） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
 #### <a id="itu-t-x509"></a>ITU-T X.509
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ITU-T X.509 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="証明-書パ-ス検-証"></a>証明 書パ ス検 証
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。証明 書パ ス検 証 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="証明書パス検証"></a>証明書パス検証
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。証明書パス検証 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="サブ-ジェ-クト"></a>サブ ジェ クト
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サブ ジェ クト に関する基本概念・技術仕様・運用管理標準。
+#### <a id="サブジェクト"></a>サブジェクト
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サブジェクト に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="cp-cps-（certificate-policy-certification-practice-statement）"></a>CP/CPS （Certificate Policy/Certification Practice Statement）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CP/CPS （Certificate Policy/Certification Practice Statement） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="cp-cps（certificate-policy-certification-practice-statement）"></a>CP/CPS（Certificate Policy/Certification Practice Statement）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CP/CPS（Certificate Policy/Certification Practice Statement） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="caa（certificate-authority-authorization-）"></a>CAA（Certificate Authority Authorization ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CAA（Certificate Authority Authorization ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="caa（certificate-authority-authorization）"></a>CAA（Certificate Authority Authorization）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CAA（Certificate Authority Authorization） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="証明-書自-動発-行-（-scep--simple-certificate-enrollment-protocol"></a>証明 書自 動発 行 （ SCEP ： Simple Certificate Enrollment Protocol
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。証明 書自 動発 行 （ SCEP ： Simple Certificate Enrollment Protocol に関する基本概念・技術仕様・運用管理標準。
+#### <a id="証明書自動発行（scep--simple-certificate-enrollment-protocol"></a>証明書自動発行（SCEP ： Simple Certificate Enrollment Protocol
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。証明書自動発行（SCEP ： Simple Certificate Enrollment Protocol に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する技術](../syllabus_tsuiho_detail.md)
 
 #### <a id="acmeautomatic-certificate-management-environment)"></a>ACME：Automatic Certificate Management Environment)
@@ -1120,8 +1120,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。情報セキュリティポリシーに基づく情報の管理 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ管理](../syllabus_tsuiho_detail.md)
 
-#### <a id="リスクマネジメント-（jis-q-31000）"></a>リスクマネジメント （JIS Q 31000）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。リスクマネジメント （JIS Q 31000） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="リスクマネジメント（jis-q-31000）"></a>リスクマネジメント（JIS Q 31000）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。リスクマネジメント（JIS Q 31000） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ管理](../syllabus_tsuiho_detail.md)
 
 #### <a id="監視"></a>監視
@@ -1568,8 +1568,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。PSIRT に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）情報セキュリティ組織・機関](../syllabus_tsuiho_detail.md)
 
-#### <a id="soc-（security-operation-center）-）"></a>SOC （Security Operation Center） ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SOC （Security Operation Center） ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="soc（security-operation-center））"></a>SOC（Security Operation Center））
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SOC（Security Operation Center）） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）情報セキュリティ組織・機関](../syllabus_tsuiho_detail.md)
 
 #### <a id="組織への設置が推奨されている窓口（abuse-ドメイン名"></a>組織への設置が推奨されている窓口（abuse@ ドメイン名
@@ -1584,8 +1584,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。security@ドメイン名） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）情報セキュリティ組織・機関](../syllabus_tsuiho_detail.md)
 
-#### <a id="エシカルハッカー-サイバーセキュリティ戦略本部"></a>エシカルハッカー ・サイバーセキュリティ戦略本部
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。エシカルハッカー ・サイバーセキュリティ戦略本部 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="エシカルハッカーサイバーセキュリティ戦略本部"></a>エシカルハッカー・サイバーセキュリティ戦略本部
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。エシカルハッカー・サイバーセキュリティ戦略本部 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）情報セキュリティ組織・機関](../syllabus_tsuiho_detail.md)
 
 #### <a id="内閣サイバーセキュリティセンター（nisc）"></a>内閣サイバーセキュリティセンター（NISC）
@@ -1624,8 +1624,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サイバーレスキュー隊（J-CRAT） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）情報セキュリティ組織・機関](../syllabus_tsuiho_detail.md)
 
-#### <a id="trusted-web推進協議会-コンピュータ不正アクセス届出制度"></a>Trusted Web推進協議会 ・コンピュータ不正アクセス届出制度
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Trusted Web推進協議会 ・コンピュータ不正アクセス届出制度 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="trusted-web推進協議会コンピュータ不正アクセス届出制度"></a>Trusted Web推進協議会・コンピュータ不正アクセス届出制度
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Trusted Web推進協議会・コンピュータ不正アクセス届出制度 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）情報セキュリティ組織・機関](../syllabus_tsuiho_detail.md)
 
 #### <a id="コンピュータウイルス届出制度"></a>コンピュータウイルス届出制度
@@ -1656,8 +1656,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ソフトウェア製品開発者の脆弱性開示（ISO/IEC 29147） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）情報セキュリティ組織・機関](../syllabus_tsuiho_detail.md)
 
-#### <a id="脆弱性情報取扱手順-（iso-iec-30111）"></a>脆弱性情報取扱手順 （ISO/IEC 30111）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。脆弱性情報取扱手順 （ISO/IEC 30111） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="脆弱性情報取扱手順（iso-iec-30111）"></a>脆弱性情報取扱手順（ISO/IEC 30111）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。脆弱性情報取扱手順（ISO/IEC 30111） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）情報セキュリティ組織・機関](../syllabus_tsuiho_detail.md)
 
 #### <a id="notice"></a>NOTICE
@@ -1668,8 +1668,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SECURITY ACTION に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）情報セキュリティ組織・機関](../syllabus_tsuiho_detail.md)
 
-#### <a id="情報セキュリティ早期警戒パー-トナーシップ"></a>情報セキュリティ早期警戒パー トナーシップ
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。情報セキュリティ早期警戒パー トナーシップ に関する基本概念・技術仕様・運用管理標準。
+#### <a id="情報セキュリティ早期警戒パートナーシップ"></a>情報セキュリティ早期警戒パートナーシップ
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。情報セキュリティ早期警戒パートナーシップ に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）情報セキュリティ組織・機関](../syllabus_tsuiho_detail.md)
 
 #### <a id="isac（information-sharing-and-analysis-centerセキュリティ情報共有組織）"></a>ISAC（Information Sharing and Analysis Center：セキュリティ情報共有組織）
@@ -1704,8 +1704,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IoTセキュリティガイドライン に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する基準](../syllabus_tsuiho_detail.md)
 
-#### <a id="サイバ-ーフィジカルセキュリティ対策フレームワーク"></a>サイバ ー・フィジカル・セキュリティ対策フレームワーク
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サイバ ー・フィジカル・セキュリティ対策フレームワーク に関する基本概念・技術仕様・運用管理標準。
+#### <a id="サイバーフィジカルセキュリティ対策フレームワーク"></a>サイバー・フィジカル・セキュリティ対策フレームワーク
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サイバー・フィジカル・セキュリティ対策フレームワーク に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する基準](../syllabus_tsuiho_detail.md)
 
 #### <a id="金融機関等コンピュータシステムの安全対策基準解説書"></a>金融機関等コンピュータシステムの安全対策基準・解説書
@@ -1716,8 +1716,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。PCI DSS に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する基準](../syllabus_tsuiho_detail.md)
 
-#### <a id="サイバーセキュリティフレームワー-ク（csf）"></a>サイバーセキュリティフレームワー ク（CSF）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サイバーセキュリティフレームワー ク（CSF） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="サイバーセキュリティフレームワーク（csf）"></a>サイバーセキュリティフレームワーク（CSF）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サイバーセキュリティフレームワーク（CSF） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）情報セキュリティに関する基準](../syllabus_tsuiho_detail.md)
 
 #### <a id="nist-sp-800シリーズ"></a>NIST SP 800シリーズ
@@ -1740,12 +1740,12 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。保証レベル に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）セキュリティ評価基準](../syllabus_tsuiho_detail.md)
 
-#### <a id="jcmvp-（暗号モジュール試験及び認証制度）"></a>JCMVP （暗号モジュール試験及び認証制度）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。JCMVP （暗号モジュール試験及び認証制度） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="jcmvp（暗号モジュール試験及び認証制度）"></a>JCMVP（暗号モジュール試験及び認証制度）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。JCMVP（暗号モジュール試験及び認証制度） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）セキュリティ評価基準](../syllabus_tsuiho_detail.md)
 
-#### <a id="暗号モジュールのセキュリティ要求事項-（fips-140）"></a>暗号モジュールのセキュリティ要求事項 （FIPS 140）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。暗号モジュールのセキュリティ要求事項 （FIPS 140） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="暗号モジュールのセキュリティ要求事項（fips-140）"></a>暗号モジュールのセキュリティ要求事項（FIPS 140）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。暗号モジュールのセキュリティ要求事項（FIPS 140） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）セキュリティ評価基準](../syllabus_tsuiho_detail.md)
 
 #### <a id="耐タンパ性"></a>耐タンパ性
@@ -1764,12 +1764,12 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ISO/IEC 15408） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ISO/IEC 15408，ISO/IEC 18045](../syllabus_tsuiho_detail.md)
 
-#### <a id="pp（protection-profile--プロ-テク-ショ-ンプ-ロフ-ァイ-ル-）"></a>PP（Protection Profile ： プロ テク ショ ンプ ロフ ァイ ル ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。PP（Protection Profile ： プロ テク ショ ンプ ロフ ァイ ル ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="pp（protection-profile--プロテクションプロファイル）"></a>PP（Protection Profile ： プロテクションプロファイル）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。PP（Protection Profile ： プロテクションプロファイル） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ISO/IEC 15408，ISO/IEC 18045](../syllabus_tsuiho_detail.md)
 
-#### <a id="cem-（-common-methodology-for-information-technology-security-evaluation共通評価方法"></a>CEM （ Common Methodology for Information Technology Security Evaluation：共通評価方法
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CEM （ Common Methodology for Information Technology Security Evaluation：共通評価方法 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="cem（common-methodology-for-information-technology-security-evaluation共通評価方法"></a>CEM（Common Methodology for Information Technology Security Evaluation：共通評価方法
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CEM（Common Methodology for Information Technology Security Evaluation：共通評価方法 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ISO/IEC 15408，ISO/IEC 18045](../syllabus_tsuiho_detail.md)
 
 #### <a id="iso-iec-18045）"></a>ISO/IEC 18045）
@@ -1800,16 +1800,16 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。重要インフラのサイバーセキュリティを向上させるためのフレームワーク に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）制御システムのセキュリティ評価](../syllabus_tsuiho_detail.md)
 
-#### <a id="jvn-（-japan-vulnerability-notes-）"></a>JVN （ Japan Vulnerability Notes ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。JVN （ Japan Vulnerability Notes ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="jvn（japan-vulnerability-notes）"></a>JVN（Japan Vulnerability Notes）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。JVN（Japan Vulnerability Notes） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）脆弱性評価](../syllabus_tsuiho_detail.md)
 
-#### <a id="cvss-（-common-vulnerability-scoring-system--共通-脆弱-性評-価シ-ステ-ム-）"></a>CVSS （ Common Vulnerability Scoring System ： 共通 脆弱 性評 価シ ステ ム ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CVSS （ Common Vulnerability Scoring System ： 共通 脆弱 性評 価シ ステ ム ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="cvss（common-vulnerability-scoring-system--共通脆弱性評価システム）"></a>CVSS（Common Vulnerability Scoring System ： 共通脆弱性評価システム）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CVSS（Common Vulnerability Scoring System ： 共通脆弱性評価システム） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）脆弱性評価](../syllabus_tsuiho_detail.md)
 
-#### <a id="cve-（-common-vulnerabilities-and-exposures共通脆弱性識別子）"></a>CVE （ Common Vulnerabilities and Exposures：共通脆弱性識別子）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CVE （ Common Vulnerabilities and Exposures：共通脆弱性識別子） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="cve（common-vulnerabilities-and-exposures共通脆弱性識別子）"></a>CVE（Common Vulnerabilities and Exposures：共通脆弱性識別子）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CVE（Common Vulnerabilities and Exposures：共通脆弱性識別子） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）脆弱性評価](../syllabus_tsuiho_detail.md)
 
 #### <a id="cwe（common-weakness-enumeration共通脆弱性タイプ一覧）"></a>CWE（Common Weakness Enumeration：共通脆弱性タイプ一覧）
@@ -1844,16 +1844,16 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。TAXII（Trusted Automated eXchange of Indicator Information：検知指標情報自動交換手順） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（5）セキュリティ情報共有技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="stix（structured-threat-information-expression脅威情報構造-化記-述形-式-）"></a>STIX（Structured Threat Information eXpression：脅威情報構造 化記 述形 式 ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。STIX（Structured Threat Information eXpression：脅威情報構造 化記 述形 式 ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="stix（structured-threat-information-expression脅威情報構造化記述形式）"></a>STIX（Structured Threat Information eXpression：脅威情報構造化記述形式）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。STIX（Structured Threat Information eXpression：脅威情報構造化記述形式） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（5）セキュリティ情報共有技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="tlp-（-traffic-light-protocol-）"></a>TLP （ Traffic Light Protocol ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。TLP （ Traffic Light Protocol ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="tlp（traffic-light-protocol）"></a>TLP（Traffic Light Protocol）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。TLP（Traffic Light Protocol） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（5）セキュリティ情報共有技術](../syllabus_tsuiho_detail.md)
 
-#### <a id="ioc-（-indicator-of-compromise）"></a>IoC （ Indicator of Compromise）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IoC （ Indicator of Compromise） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ioc（indicator-of-compromise）"></a>IoC（Indicator of Compromise）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IoC（Indicator of Compromise） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（5）セキュリティ情報共有技術](../syllabus_tsuiho_detail.md)
 
 #### <a id="脅威インテリジェンス（osintなど）の利用"></a>脅威インテリジェンス（OSINTなど）の利用
@@ -1880,16 +1880,16 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。情報セキュリティ訓練（標的型メールに関する訓練 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="レッド-チ-ー-ム演-習ほ-か-）"></a>レッド チ ー ム演 習ほ か ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。レッド チ ー ム演 習ほ か ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="レッドチーム演習ほか）"></a>レッドチーム演習ほか）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。レッドチーム演習ほか） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="認証-情報-の割-当て-及び-管理"></a>認証 情報 の割 当て 及び 管理
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。認証 情報 の割 当て 及び 管理 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="認証情報の割当て及び管理"></a>認証情報の割当て及び管理
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。認証情報の割当て及び管理 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="uba-（-user-behavior-analytics）"></a>UBA （ User Behavior Analytics）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。UBA （ User Behavior Analytics） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="uba（user-behavior-analytics）"></a>UBA（User Behavior Analytics）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。UBA（User Behavior Analytics） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
 #### <a id="ueba（user-and-entity-behavior-analytics）"></a>UEBA（User and Entity Behavior Analytics）
@@ -1968,8 +1968,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。秘匿化 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="匿名化の手法-（項目削除-レコード削除-セル削除"></a>匿名化の手法 （項目削除／レコード削除／セル削除
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。匿名化の手法 （項目削除／レコード削除／セル削除 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="匿名化の手法（項目削除-レコード削除-セル削除"></a>匿名化の手法（項目削除／レコード削除／セル削除
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。匿名化の手法（項目削除／レコード削除／セル削除 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
 #### <a id="トップ（ボトム）コーディングなどの一般的な手法のほか"></a>トップ（ボトム）コーディングなどの一般的な手法のほか
@@ -2024,8 +2024,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。侵入防止 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="dmz-（非武装地帯）"></a>DMZ （非武装地帯）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。DMZ （非武装地帯） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="dmz（非武装地帯）"></a>DMZ（非武装地帯）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。DMZ（非武装地帯） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
 #### <a id="検疫ネットワーク"></a>検疫ネットワーク
@@ -2076,16 +2076,16 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SED（Self Encrypting Drive：自己暗号化ドライブ） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="tnc（trusted-network-communications高信頼ネットワー-ク）-）"></a>TNC（Trusted Network Communications：高信頼ネットワー ク） ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。TNC（Trusted Network Communications：高信頼ネットワー ク） ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="tnc（trusted-network-communications高信頼ネットワーク））"></a>TNC（Trusted Network Communications：高信頼ネットワーク））
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。TNC（Trusted Network Communications：高信頼ネットワーク）） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
 #### <a id="セキュアブート（uefiunified-extensible-firmware-interface）"></a>セキュアブート（UEFI：Unified Extensible Firmware Interface）
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。セキュアブート（UEFI：Unified Extensible Firmware Interface） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="デー-タマスキング"></a>デー タマスキング
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。デー タマスキング に関する基本概念・技術仕様・運用管理標準。
+#### <a id="データマスキング"></a>データマスキング
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。データマスキング に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
 #### <a id="暗号化消去（cecryptographic-erase）"></a>暗号化消去（CE：Cryptographic Erase）
@@ -2132,40 +2132,40 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ゼロトラストアーキテクチャ に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="脅威ハンティング（threat-hunting）-セキュリティ製品サービス-マル-ウェ-ア対-策ソ-フト"></a>脅威ハンティング（Threat Hunting） 〔セキュリティ製品・サービス〕 マル ウェ ア対 策ソ フト
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。脅威ハンティング（Threat Hunting） 〔セキュリティ製品・サービス〕 マル ウェ ア対 策ソ フト に関する基本概念・技術仕様・運用管理標準。
+#### <a id="脅威ハンティング（threat-hunting）セキュリティ製品サービス-マルウェア対策ソフト"></a>脅威ハンティング（Threat Hunting）〔セキュリティ製品・サービス〕 マルウェア対策ソフト
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。脅威ハンティング（Threat Hunting）〔セキュリティ製品・サービス〕 マルウェア対策ソフト に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="edr-（-endpoint-detection-and-response-）"></a>EDR （ Endpoint Detection and Response ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。EDR （ Endpoint Detection and Response ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="edr（endpoint-detection-and-response）"></a>EDR（Endpoint Detection and Response）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。EDR（Endpoint Detection and Response） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="xdr-（extended-detection-and-response）"></a>XDR （Extended Detection and Response）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。XDR （Extended Detection and Response） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="xdr（extended-detection-and-response）"></a>XDR（Extended Detection and Response）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。XDR（Extended Detection and Response） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
 #### <a id="mdr（managed-detection-and-response）"></a>MDR（Managed Detection and Response）
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。MDR（Managed Detection and Response） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="dlp-（-data-loss-prevention-）"></a>DLP （ Data Loss Prevention ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。DLP （ Data Loss Prevention ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="dlp（data-loss-prevention）"></a>DLP（Data Loss Prevention）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。DLP（Data Loss Prevention） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="siem-（-security-information-and-event-management-）"></a>SIEM （ Security Information and Event Management ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SIEM （ Security Information and Event Management ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="siem（security-information-and-event-management）"></a>SIEM（Security Information and Event Management）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SIEM（Security Information and Event Management） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="ファ-イア-ウォ-ー-ル"></a>ファ イア ウォ ー ル
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ファ イア ウォ ー ル に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ファイアウォール"></a>ファイアウォール
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ファイアウォール に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="waf-（-web-application-firewall-）"></a>WAF （ Web Application Firewall ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。WAF （ Web Application Firewall ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="waf（web-application-firewall）"></a>WAF（Web Application Firewall）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。WAF（Web Application Firewall） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="rasp-（runtime-application-self-protection）"></a>RASP （Runtime Application Self-Protection）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。RASP （Runtime Application Self-Protection） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="rasp（runtime-application-self-protection）"></a>RASP（Runtime Application Self-Protection）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。RASP（Runtime Application Self-Protection） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
 #### <a id="ids（intrusion-detection-system-侵入検知システム）"></a>IDS（Intrusion Detection System： 侵入検知システム）
@@ -2232,8 +2232,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SASE（Secure Access Service Edge） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
-#### <a id="webア-イソレーション"></a>Webア イソレーション
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Webア イソレーション に関する基本概念・技術仕様・運用管理標準。
+#### <a id="webアイソレーション"></a>Webアイソレーション
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Webアイソレーション に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）情報セキュリティ対策の種類](../syllabus_tsuiho_detail.md)
 
 #### <a id="soar（security-orchestration"></a>SOAR（Security Orchestration
@@ -2496,8 +2496,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ステートフルパケットフィルタリング に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）ネットワークセキュリティ](../syllabus_tsuiho_detail.md)
 
-#### <a id="macアドレス-（media-access-control-address）フィルタリング"></a>MACアドレス （Media Access Control address）フィルタリング
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。MACアドレス （Media Access Control address）フィルタリング に関する基本概念・技術仕様・運用管理標準。
+#### <a id="macアドレス（media-access-control-address）フィルタリング"></a>MACアドレス（Media Access Control address）フィルタリング
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。MACアドレス（Media Access Control address）フィルタリング に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）ネットワークセキュリティ](../syllabus_tsuiho_detail.md)
 
 #### <a id="アプリケーションゲートウェイ方式"></a>アプリケーションゲートウェイ方式
@@ -2516,8 +2516,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。NAT に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）ネットワークセキュリティ](../syllabus_tsuiho_detail.md)
 
-#### <a id="ipマスカレード-（napt）"></a>IPマスカレード （NAPT）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IPマスカレード （NAPT） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ipマスカレード（napt）"></a>IPマスカレード（NAPT）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IPマスカレード（NAPT） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）ネットワークセキュリティ](../syllabus_tsuiho_detail.md)
 
 #### <a id="認証-vlan"></a>認証 VLAN
@@ -2580,8 +2580,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。セキュアプログラミング に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）アプリケーションセキュリティ](../syllabus_tsuiho_detail.md)
 
-#### <a id="脆弱性検査技術-（ソースコード静的検査（saststatic-application-security-testing）"></a>脆弱性検査技術 （ソースコード静的検査（SAST：Static Application Security Testing）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。脆弱性検査技術 （ソースコード静的検査（SAST：Static Application Security Testing） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="脆弱性検査技術（ソースコード静的検査（saststatic-application-security-testing）"></a>脆弱性検査技術（ソースコード静的検査（SAST：Static Application Security Testing）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。脆弱性検査技術（ソースコード静的検査（SAST：Static Application Security Testing） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）アプリケーションセキュリティ](../syllabus_tsuiho_detail.md)
 
 #### <a id="プログラムの動的検査（dastdynamic-application-security-testing）"></a>プログラムの動的検査（DAST：Dynamic Application Security Testing）
@@ -2708,10 +2708,6 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IoT開発におけるセキュリティ設計の手引き に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）IoTシステムの設計・開発におけるセキュリティ](../syllabus_tsuiho_detail.md)
 
-#### <a id="iotセ-キュリティガイドライン"></a>IoTセ キュリティガイドライン
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IoTセ キュリティガイドライン に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（8）IoTシステムの設計・開発におけるセキュリティ](../syllabus_tsuiho_detail.md)
-
 #### <a id="ネットワーク社会"></a>ネットワーク社会
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ネットワーク社会 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）通信ネットワークの役割](../syllabus_tsuiho_detail.md)
@@ -2720,20 +2716,20 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ICT（Information and Communication Technology：情報通信技術） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）通信ネットワークの役割](../syllabus_tsuiho_detail.md)
 
-#### <a id="イン-タ-ー-ネットサ-ー-ビス-プロ-バイ-ダ（-isp-）"></a>イン タ ー ネットサ ー ビス プロ バイ ダ（ ISP ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。イン タ ー ネットサ ー ビス プロ バイ ダ（ ISP ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="インターネットサービスプロバイダ（isp）"></a>インターネットサービスプロバイダ（ISP）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。インターネットサービスプロバイダ（ISP） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ネットワークの種類と特徴](../syllabus_tsuiho_detail.md)
 
-#### <a id="従量-制"></a>従量 制
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。従量 制 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="従量制"></a>従量制
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。従量制 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ネットワークの種類と特徴](../syllabus_tsuiho_detail.md)
 
-#### <a id="月額固定-料金"></a>月額固定 料金
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。月額固定 料金 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="月額固定料金"></a>月額固定料金
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。月額固定料金 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ネットワークの種類と特徴](../syllabus_tsuiho_detail.md)
 
-#### <a id="idf-（intermediate-distribution-frame）"></a>IDF （Intermediate Distribution Frame）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IDF （Intermediate Distribution Frame） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="idf（intermediate-distribution-frame）"></a>IDF（Intermediate Distribution Frame）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IDF（Intermediate Distribution Frame） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ネットワークの種類と特徴](../syllabus_tsuiho_detail.md)
 
 #### <a id="mdf（main-distribution-frame）"></a>MDF（Main Distribution Frame）
@@ -2914,10 +2910,6 @@ author: "Information Security Specialist Agent"
 
 #### <a id="セキュリティプロトコル"></a>セキュリティプロトコル
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。セキュリティプロトコル に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（7）インターネット技術](../syllabus_tsuiho_detail.md)
-
-#### <a id="ファイアウォール"></a>ファイアウォール
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ファイアウォール に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）インターネット技術](../syllabus_tsuiho_detail.md)
 
 #### <a id="ポイントツーポイント（2地点間接続）"></a>ポイントツーポイント（2地点間接続）
@@ -3268,12 +3260,12 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IGMP に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）プロトコルとインタフェース](../syllabus_tsuiho_detail.md)
 
-#### <a id="cidr（classless-inter-domain-routing-）"></a>CIDR（Classless Inter Domain Routing ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CIDR（Classless Inter Domain Routing ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="cidr（classless-inter-domain-routing）"></a>CIDR（Classless Inter Domain Routing）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CIDR（Classless Inter Domain Routing） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）プロトコルとインタフェース](../syllabus_tsuiho_detail.md)
 
-#### <a id="ipv4-ipv6共-存技-術-（-ipv4-ipv6ト-ラン-スレ-ー-ショ-ン"></a>IPv4/IPv6共 存技 術 （ IPv4/IPv6ト ラン スレ ー ショ ン
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IPv4/IPv6共 存技 術 （ IPv4/IPv6ト ラン スレ ー ショ ン に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ipv4-ipv6共存技術（ipv4-ipv6トランスレーション"></a>IPv4/IPv6共存技術（IPv4/IPv6トランスレーション
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IPv4/IPv6共存技術（IPv4/IPv6トランスレーション に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）プロトコルとインタフェース](../syllabus_tsuiho_detail.md)
 
 #### <a id="ipv4-ipv6デュアルスタック"></a>IPv4/IPv6デュアルスタック
@@ -3484,8 +3476,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IPFIX（Internet Protocol Flow Information Export） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ネットワーク運用管理ツール](../syllabus_tsuiho_detail.md)
 
-#### <a id="パケットアナライザー-（tcpdump"></a>パケットアナライザー （tcpdump
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。パケットアナライザー （tcpdump に関する基本概念・技術仕様・運用管理標準。
+#### <a id="パケットアナライザー（tcpdump"></a>パケットアナライザー（tcpdump
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。パケットアナライザー（tcpdump に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ネットワーク運用管理ツール](../syllabus_tsuiho_detail.md)
 
 #### <a id="wiresharkほか）"></a>Wiresharkほか）
@@ -3616,8 +3608,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。パッシブモード に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）インターネット](../syllabus_tsuiho_detail.md)
 
-#### <a id="tftp-（trivial-file-transfer-protocol）"></a>TFTP （Trivial File Transfer Protocol）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。TFTP （Trivial File Transfer Protocol） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="tftp（trivial-file-transfer-protocol）"></a>TFTP（Trivial File Transfer Protocol）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。TFTP（Trivial File Transfer Protocol） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）インターネット](../syllabus_tsuiho_detail.md)
 
 #### <a id="全文検索型"></a>全文検索型
@@ -3732,8 +3724,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ローカル 5G に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）モバイルシステム](../syllabus_tsuiho_detail.md)
 
-#### <a id="sa-（stand-alone）方式"></a>SA （Stand Alone）方式
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SA （Stand Alone）方式 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="sa（stand-alone）方式"></a>SA（Stand Alone）方式
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SA（Stand Alone）方式 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）モバイルシステム](../syllabus_tsuiho_detail.md)
 
 #### <a id="nsa（non-stand-alone）方式"></a>NSA（Non-Stand Alone）方式
@@ -3860,8 +3852,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。カテゴリ M に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）モバイルシステム](../syllabus_tsuiho_detail.md)
 
-#### <a id="iotエリアネットワーク-（補足）-技術レベル-3の中分類の知識の幅と深さは応用情報技術者試験（ap）と同等です-以下は-apシラバスの内容をそのまま掲載しています"></a>IoTエリアネットワーク （補足） 「技術レベル 3」の中分類の知識の幅と深さは応用情報技術者試験（AP）と同等です。 以下は APシラバスの内容をそのまま掲載しています。
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IoTエリアネットワーク （補足） 「技術レベル 3」の中分類の知識の幅と深さは応用情報技術者試験（AP）と同等です。 以下は APシラバスの内容をそのまま掲載しています。 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="iotエリアネットワーク（補足）技術レベル-3の中分類の知識の幅と深さは応用情報技術者試験（ap）と同等です-以下は-apシラバスの内容をそのまま掲載しています"></a>IoTエリアネットワーク（補足）「技術レベル 3」の中分類の知識の幅と深さは応用情報技術者試験（AP）と同等です。 以下は APシラバスの内容をそのまま掲載しています。
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IoTエリアネットワーク（補足）「技術レベル 3」の中分類の知識の幅と深さは応用情報技術者試験（AP）と同等です。 以下は APシラバスの内容をそのまま掲載しています。 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）モバイルシステム](../syllabus_tsuiho_detail.md)
 
 #### <a id="rdb（relational-database関係データベース）"></a>RDB（Relational Database：関係データベース）
@@ -3872,16 +3864,16 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。構造型データベース に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）データベース](../syllabus_tsuiho_detail.md)
 
-#### <a id="hdb-（hierarchical-database階層型データベース）"></a>HDB （Hierarchical Database：階層型データベース）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。HDB （Hierarchical Database：階層型データベース） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="hdb（hierarchical-database階層型データベース）"></a>HDB（Hierarchical Database：階層型データベース）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。HDB（Hierarchical Database：階層型データベース） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）データベース](../syllabus_tsuiho_detail.md)
 
 #### <a id="ndb（network-database網型データベース）"></a>NDB（Network Database：網型データベース）
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。NDB（Network Database：網型データベース） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）データベース](../syllabus_tsuiho_detail.md)
 
-#### <a id="oodb（object-oriented-databaseオブジェクト指向データベー-ス）"></a>OODB（Object Oriented Database：オブジェクト指向データベー ス）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。OODB（Object Oriented Database：オブジェクト指向データベー ス） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="oodb（object-oriented-databaseオブジェクト指向データベース）"></a>OODB（Object Oriented Database：オブジェクト指向データベース）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。OODB（Object Oriented Database：オブジェクト指向データベース） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）データベース](../syllabus_tsuiho_detail.md)
 
 #### <a id="xmlデータベース"></a>XMLデータベース
@@ -4036,8 +4028,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SQLiteほか） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）データベース管理システム](../syllabus_tsuiho_detail.md)
 
-#### <a id="nosqlデータベース-（apache-cassandra"></a>NoSQLデータベース （Apache Cassandra
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。NoSQLデータベース （Apache Cassandra に関する基本概念・技術仕様・運用管理標準。
+#### <a id="nosqlデータベース（apache-cassandra"></a>NoSQLデータベース（Apache Cassandra
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。NoSQLデータベース（Apache Cassandra に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）データベース管理システム](../syllabus_tsuiho_detail.md)
 
 #### <a id="apache-couchdb"></a>Apache CouchDB
@@ -4132,8 +4124,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。索引 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）データベースの設計](../syllabus_tsuiho_detail.md)
 
-#### <a id="フィールド-（項目）"></a>フィールド （項目）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。フィールド （項目） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="フィールド（項目）"></a>フィールド（項目）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。フィールド（項目） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）データベースの設計](../syllabus_tsuiho_detail.md)
 
 #### <a id="レコード"></a>レコード
@@ -4224,8 +4216,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。存在制約 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）データベースの作成手順](../syllabus_tsuiho_detail.md)
 
-#### <a id="インバー-テッドファイル"></a>インバー テッドファイル
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。インバー テッドファイル に関する基本概念・技術仕様・運用管理標準。
+#### <a id="インバーテッドファイル"></a>インバーテッドファイル
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。インバーテッドファイル に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）データベースの作成手順](../syllabus_tsuiho_detail.md)
 
 #### <a id="データベースの運用保守"></a>データベースの運用・保守
@@ -4300,8 +4292,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CASCADE に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）データベース言語](../syllabus_tsuiho_detail.md)
 
-#### <a id="trigger-（b）データ操作言語（select文）-要求されるデータを選択するために"></a>TRIGGER （b）データ操作言語（SELECT文） 要求されるデータを選択するために
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。TRIGGER （b）データ操作言語（SELECT文） 要求されるデータを選択するために に関する基本概念・技術仕様・運用管理標準。
+#### <a id="trigger（b）データ操作言語（select文）要求されるデータを選択するために"></a>TRIGGER（b）データ操作言語（SELECT文）要求されるデータを選択するために
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。TRIGGER（b）データ操作言語（SELECT文）要求されるデータを選択するために に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）データベース言語](../syllabus_tsuiho_detail.md)
 
 #### <a id="select文による問合せの方法"></a>SELECT文による問合せの方法
@@ -4356,8 +4348,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。相関副問合せ に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）データベース言語](../syllabus_tsuiho_detail.md)
 
-#### <a id="ウィンドウ関数-（c）その他のデータ操作言語-insert文"></a>ウィンドウ関数 （c）その他のデータ操作言語 INSERT文
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ウィンドウ関数 （c）その他のデータ操作言語 INSERT文 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ウィンドウ関数（c）その他のデータ操作言語-insert文"></a>ウィンドウ関数（c）その他のデータ操作言語 INSERT文
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ウィンドウ関数（c）その他のデータ操作言語 INSERT文 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）データベース言語](../syllabus_tsuiho_detail.md)
 
 #### <a id="update文"></a>UPDATE文
@@ -4368,8 +4360,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。DELETE文 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）データベース言語](../syllabus_tsuiho_detail.md)
 
-#### <a id="grant文などの-sql文を理解する-（d）埋込み-sqlカーソル操作"></a>GRANT文などの SQL文を理解する。 （d）埋込み SQLカーソル操作
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。GRANT文などの SQL文を理解する。 （d）埋込み SQLカーソル操作 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="grant文などの-sql文を理解する（d）埋込み-sqlカーソル操作"></a>GRANT文などの SQL文を理解する。（d）埋込み SQLカーソル操作
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。GRANT文などの SQL文を理解する。（d）埋込み SQLカーソル操作 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）データベース言語](../syllabus_tsuiho_detail.md)
 
 #### <a id="非カーソル操作"></a>非カーソル操作
@@ -4512,8 +4504,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。フォワードリカバリ（ロールフォワード） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）障害回復](../syllabus_tsuiho_detail.md)
 
-#### <a id="バックワードリカバリ-（ロールバック）"></a>バックワードリカバリ （ロールバック）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。バックワードリカバリ （ロールバック） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="バックワードリカバリ（ロールバック）"></a>バックワードリカバリ（ロールバック）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。バックワードリカバリ（ロールバック） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）障害回復](../syllabus_tsuiho_detail.md)
 
 #### <a id="シャドウページ法"></a>シャドウページ法
@@ -4584,8 +4576,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ETL（Extract/Transform/Load） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）データベースの応用](../syllabus_tsuiho_detail.md)
 
-#### <a id="elt-（extract-load-transform）"></a>ELT （Extract/Load/Transform）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ELT （Extract/Load/Transform） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="elt（extract-load-transform）"></a>ELT（Extract/Load/Transform）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ELT（Extract/Load/Transform） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）データベースの応用](../syllabus_tsuiho_detail.md)
 
 #### <a id="データクレンジング"></a>データクレンジング
@@ -4720,8 +4712,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。リファレンスデータベース に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）データ資源管理](../syllabus_tsuiho_detail.md)
 
-#### <a id="データベースサー-ビス"></a>データベースサー ビス
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。データベースサー ビス に関する基本概念・技術仕様・運用管理標準。
+#### <a id="データベースサービス"></a>データベースサービス
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。データベースサービス に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）データ資源管理](../syllabus_tsuiho_detail.md)
 
 #### <a id="構造化データ"></a>構造化データ
@@ -4748,8 +4740,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。大規模データセットのクエリエンジン（Apache Hive に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）データ資源管理](../syllabus_tsuiho_detail.md)
 
-#### <a id="prestoほ-か）"></a>Prestoほ か）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Prestoほ か） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="prestoほか）"></a>Prestoほか）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Prestoほか） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）データ資源管理](../syllabus_tsuiho_detail.md)
 
 #### <a id="利用の状況"></a>利用の状況
@@ -4908,8 +4900,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。レビュー参加者 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）システム要件の評価及びレビュー](../syllabus_tsuiho_detail.md)
 
-#### <a id="レビュ-ー方式"></a>レビュ ー方式
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。レビュ ー方式 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="レビュー方式"></a>レビュー方式
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。レビュー方式 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）システム要件の評価及びレビュー](../syllabus_tsuiho_detail.md)
 
 #### <a id="アシュアランスケース"></a>アシュアランスケース
@@ -5084,16 +5076,16 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。システムへの攻撃にさらされる境界面の最小化及び防御） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）ソフトウェアの境界及び要件の定義](../syllabus_tsuiho_detail.md)
 
-#### <a id="設計特性-（アベイラビリティ"></a>設計特性 （アベイラビリティ
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。設計特性 （アベイラビリティ に関する基本概念・技術仕様・運用管理標準。
+#### <a id="設計特性（アベイラビリティ"></a>設計特性（アベイラビリティ
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。設計特性（アベイラビリティ に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）ソフトウェアの境界及び要件の定義](../syllabus_tsuiho_detail.md)
 
 #### <a id="障害許容性（耐故障性）"></a>障害許容性（耐故障性）
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。障害許容性（耐故障性） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）ソフトウェアの境界及び要件の定義](../syllabus_tsuiho_detail.md)
 
-#### <a id="復元性（resilience）-）"></a>復元性（resilience） ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。復元性（resilience） ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="復元性（resilience））"></a>復元性（resilience））
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。復元性（resilience）） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）ソフトウェアの境界及び要件の定義](../syllabus_tsuiho_detail.md)
 
 #### <a id="無矛盾性"></a>無矛盾性
@@ -5130,10 +5122,6 @@ author: "Information Security Specialist Agent"
 
 #### <a id="ソフトウェアシステムの実現可能性"></a>ソフトウェアシステムの実現可能性
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ソフトウェアシステムの実現可能性 に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（7）ソフトウェア要件の評価及びレビュー](../syllabus_tsuiho_detail.md)
-
-#### <a id="レビュー方式"></a>レビュー方式
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。レビュー方式 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（7）ソフトウェア要件の評価及びレビュー](../syllabus_tsuiho_detail.md)
 
 #### <a id="ヒアリング計画"></a>ヒアリング計画
@@ -5240,10 +5228,6 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。アクティビティ図 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）業務分析や要件定義に用いられる手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="ユースケ-ース図"></a>ユースケ ース図
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ユースケ ース図 に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（8）業務分析や要件定義に用いられる手法](../syllabus_tsuiho_detail.md)
-
 #### <a id="ステートマシン図"></a>ステートマシン図
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ステートマシン図 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）業務分析や要件定義に用いられる手法](../syllabus_tsuiho_detail.md)
@@ -5272,8 +5256,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。分析と設計の役割分担 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）業務分析や要件定義に用いられる手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="エー-ジェント指向"></a>エー ジェント指向
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。エー ジェント指向 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="エージェント指向"></a>エージェント指向
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。エージェント指向 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（8）業務分析や要件定義に用いられる手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="モデル"></a>モデル
@@ -5372,8 +5356,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サービスメッシュ に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）システム設計](../syllabus_tsuiho_detail.md)
 
-#### <a id="サ-ーキットブレーカー"></a>サ ーキットブレーカー
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サ ーキットブレーカー に関する基本概念・技術仕様・運用管理標準。
+#### <a id="サーキットブレーカー"></a>サーキットブレーカー
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サーキットブレーカー に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）システム設計](../syllabus_tsuiho_detail.md)
 
 #### <a id="サーバレスアーキテクチャ"></a>サーバレスアーキテクチャ
@@ -5396,10 +5380,6 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。擬似コード に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）システム設計](../syllabus_tsuiho_detail.md)
 
-#### <a id="ユースケ-ース"></a>ユースケ ース
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ユースケ ース に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（2）システム設計](../syllabus_tsuiho_detail.md)
-
 #### <a id="利用者の役割及び特権のマトリックス"></a>利用者の役割及び特権のマトリックス
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。利用者の役割及び特権のマトリックス に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）システム設計](../syllabus_tsuiho_detail.md)
@@ -5416,8 +5396,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。手順 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）システム設計](../syllabus_tsuiho_detail.md)
 
-#### <a id="nosqlデ-ータベース"></a>NoSQLデ ータベース
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。NoSQLデ ータベース に関する基本概念・技術仕様・運用管理標準。
+#### <a id="nosqlデータベース"></a>NoSQLデータベース
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。NoSQLデータベース に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）システム設計](../syllabus_tsuiho_detail.md)
 
 #### <a id="テスト要求事項"></a>テスト要求事項
@@ -5430,10 +5410,6 @@ author: "Information Security Specialist Agent"
 
 #### <a id="ソフトウェア要素の実現可能性"></a>ソフトウェア要素の実現可能性
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ソフトウェア要素の実現可能性 に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（4）アーキテクチャ及びシステム要素の評価及びレビュー](../syllabus_tsuiho_detail.md)
-
-#### <a id="レビュー-参加者"></a>レビュー 参加者
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。レビュー 参加者 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）アーキテクチャ及びシステム要素の評価及びレビュー](../syllabus_tsuiho_detail.md)
 
 #### <a id="クリーンアーキテクチャ"></a>クリーンアーキテクチャ
@@ -5514,10 +5490,6 @@ author: "Information Security Specialist Agent"
 
 #### <a id="インタフェース項目"></a>インタフェース項目
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。インタフェース項目 に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（6）ソフトウェア設計](../syllabus_tsuiho_detail.md)
-
-#### <a id="ユーザーインタフェ-ース"></a>ユーザーインタフェ ース
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ユーザーインタフェ ース に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）ソフトウェア設計](../syllabus_tsuiho_detail.md)
 
 #### <a id="画面構成"></a>画面構成
@@ -5636,8 +5608,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。階層 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（9）ソフトウェア設計手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="複合設計-（b）構造化設計の手法構造化設計で用いられる手法として"></a>複合設計 （b）構造化設計の手法構造化設計で用いられる手法として
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。複合設計 （b）構造化設計の手法構造化設計で用いられる手法として に関する基本概念・技術仕様・運用管理標準。
+#### <a id="複合設計（b）構造化設計の手法構造化設計で用いられる手法として"></a>複合設計（b）構造化設計の手法構造化設計で用いられる手法として
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。複合設計（b）構造化設計の手法構造化設計で用いられる手法として に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（9）ソフトウェア設計手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="流れ図"></a>流れ図
@@ -5692,8 +5664,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ジャクソン法 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（9）ソフトウェア設計手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="ワーニエ法-（c）プログラムの構造化設計プログラムの構造化設計の目的"></a>ワーニエ法 （c）プログラムの構造化設計プログラムの構造化設計の目的
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ワーニエ法 （c）プログラムの構造化設計プログラムの構造化設計の目的 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ワーニエ法（c）プログラムの構造化設計プログラムの構造化設計の目的"></a>ワーニエ法（c）プログラムの構造化設計プログラムの構造化設計の目的
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ワーニエ法（c）プログラムの構造化設計プログラムの構造化設計の目的 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（9）ソフトウェア設計手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="基本的な考え方"></a>基本的な考え方
@@ -5916,12 +5888,12 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。DSD（Design Structure Diagram） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（11）モジュールの設計](../syllabus_tsuiho_detail.md)
 
-#### <a id="spd-（-structured-programming-diagrams-）"></a>SPD （ Structured Programming Diagrams ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SPD （ Structured Programming Diagrams ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="spd（structured-programming-diagrams）"></a>SPD（Structured Programming Diagrams）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SPD（Structured Programming Diagrams） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（11）モジュールの設計](../syllabus_tsuiho_detail.md)
 
-#### <a id="hcp-（-hierarchical-and-compact-description）チャート"></a>HCP （ Hierarchical and Compact description）チャート
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。HCP （ Hierarchical and Compact description）チャート に関する基本概念・技術仕様・運用管理標準。
+#### <a id="hcp（hierarchical-and-compact-description）チャート"></a>HCP（Hierarchical and Compact description）チャート
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。HCP（Hierarchical and Compact description）チャート に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（11）モジュールの設計](../syllabus_tsuiho_detail.md)
 
 #### <a id="pad（problem-analysis-diagram）"></a>PAD（Problem Analysis Diagram）
@@ -5940,8 +5912,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。論理構造図 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（11）モジュールの設計](../syllabus_tsuiho_detail.md)
 
-#### <a id="プログラミングテ-ーブル"></a>プログラミングテ ーブル
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。プログラミングテ ーブル に関する基本概念・技術仕様・運用管理標準。
+#### <a id="プログラミングテーブル"></a>プログラミングテーブル
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。プログラミングテーブル に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（11）モジュールの設計](../syllabus_tsuiho_detail.md)
 
 #### <a id="コンポーネントウェア"></a>コンポーネントウェア
@@ -6000,8 +5972,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。利用者マニュアルレビュー に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（15）レビュー](../syllabus_tsuiho_detail.md)
 
-#### <a id="ピアレビュ-ー"></a>ピアレビュ ー
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ピアレビュ ー に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ピアレビュー"></a>ピアレビュー
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ピアレビュー に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（15）レビュー](../syllabus_tsuiho_detail.md)
 
 #### <a id="デザインレビュー"></a>デザインレビュー
@@ -6020,8 +5992,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。文書化手法 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（15）レビュー](../syllabus_tsuiho_detail.md)
 
-#### <a id="ウォー-クスルー"></a>ウォー クスルー
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ウォー クスルー に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ウォークスルー"></a>ウォークスルー
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ウォークスルー に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（15）レビュー](../syllabus_tsuiho_detail.md)
 
 #### <a id="共同レビュー"></a>共同レビュー
@@ -6120,8 +6092,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。アルゴリズム に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ソフトウェアユニットの作成](../syllabus_tsuiho_detail.md)
 
-#### <a id="デ-ータ処理"></a>デ ータ処理
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。デ ータ処理 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="データ処理"></a>データ処理
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。データ処理 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ソフトウェアユニットの作成](../syllabus_tsuiho_detail.md)
 
 #### <a id="データベース"></a>データベース
@@ -6214,10 +6186,6 @@ author: "Information Security Specialist Agent"
 
 #### <a id="ピアコードレビュー"></a>ピアコードレビュー
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ピアコードレビュー に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（6）コードレビュー](../syllabus_tsuiho_detail.md)
-
-#### <a id="ウォークスル-ー"></a>ウォークスル ー
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ウォークスル ー に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）コードレビュー](../syllabus_tsuiho_detail.md)
 
 #### <a id="サイクロマティック複雑度"></a>サイクロマティック複雑度
@@ -6580,8 +6548,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。導入作業 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）導入](../syllabus_tsuiho_detail.md)
 
-#### <a id="リプレー-ス"></a>リプレー ス
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。リプレー ス に関する基本概念・技術仕様・運用管理標準。
+#### <a id="リプレース"></a>リプレース
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。リプレース に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）導入](../syllabus_tsuiho_detail.md)
 
 #### <a id="並行稼働対応"></a>並行稼働対応
@@ -6828,8 +6796,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。自演による実証 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）妥当性確認テスト](../syllabus_tsuiho_detail.md)
 
-#### <a id="シミュレ-ーション"></a>シミュレ ーション
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。シミュレ ーション に関する基本概念・技術仕様・運用管理標準。
+#### <a id="シミュレーション"></a>シミュレーション
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。シミュレーション に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（6）妥当性確認テスト](../syllabus_tsuiho_detail.md)
 
 #### <a id="保守手順"></a>保守手順
@@ -7072,8 +7040,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。リーンソフトウェア開発 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="ユーザー-機能駆動開発（fdd）"></a>ユーザー 機能駆動開発（FDD）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ユーザー 機能駆動開発（FDD） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ユーザー機能駆動開発（fdd）"></a>ユーザー機能駆動開発（FDD）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ユーザー機能駆動開発（FDD） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="テスト駆動開発（tdd）"></a>テスト駆動開発（TDD）
@@ -7128,8 +7096,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Try） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="継続的インテグレー-ション（ci））"></a>継続的インテグレー ション（CI））
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。継続的インテグレー ション（CI）） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="継続的インテグレーション（ci））"></a>継続的インテグレーション（CI））
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。継続的インテグレーション（CI）） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="継続的デリバリー（cd）"></a>継続的デリバリー（CD）
@@ -7148,8 +7116,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Scrum of Scrums） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="da（disciplined-agile）-（b）xp（エクストリームプログラミング）の特徴-xp（エクストリームプログラミング）の特徴を理解する"></a>DA（Disciplined Agile） （b）XP（エクストリームプログラミング）の特徴 XP（エクストリームプログラミング）の特徴を理解する。
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。DA（Disciplined Agile） （b）XP（エクストリームプログラミング）の特徴 XP（エクストリームプログラミング）の特徴を理解する。 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="da（disciplined-agile）（b）xp（エクストリームプログラミング）の特徴-xp（エクストリームプログラミング）の特徴を理解する"></a>DA（Disciplined Agile）（b）XP（エクストリームプログラミング）の特徴 XP（エクストリームプログラミング）の特徴を理解する。
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。DA（Disciplined Agile）（b）XP（エクストリームプログラミング）の特徴 XP（エクストリームプログラミング）の特徴を理解する。 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="五つの価値（コミュニケーション"></a>五つの価値（コミュニケーション
@@ -7204,8 +7172,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。顧客のプラクティス に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="イテレーション-（c）スクラムの特徴スクラムの特徴を理解する"></a>イテレーション （c）スクラムの特徴スクラムの特徴を理解する。
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。イテレーション （c）スクラムの特徴スクラムの特徴を理解する。 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="イテレーション（c）スクラムの特徴スクラムの特徴を理解する"></a>イテレーション（c）スクラムの特徴スクラムの特徴を理解する。
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。イテレーション（c）スクラムの特徴スクラムの特徴を理解する。 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="スクラムチーム（プロダクトオーナー"></a>スクラムチーム（プロダクトオーナー
@@ -7264,8 +7232,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Measurement（測定） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="sharing（共有）-）"></a>Sharing（共有） ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Sharing（共有） ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="sharing（共有））"></a>Sharing（共有））
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。Sharing（共有）） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="sre（site-reliability-engineering-サイト信頼性エンジニアリング）"></a>SRE（Site Reliability Engineering： サイト信頼性エンジニアリング）
@@ -7292,8 +7260,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。変更障害率 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="平均修復時間（mttr）-）"></a>平均修復時間（MTTR） ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。平均修復時間（MTTR） ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="平均修復時間（mttr））"></a>平均修復時間（MTTR））
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。平均修復時間（MTTR）） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="オブザーバビリティ（可観測性）"></a>オブザーバビリティ（可観測性）
@@ -7348,8 +7316,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。クローズドシステム部品 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
-#### <a id="オープンシステム部品-（b）部品設計の基準部品の利用用途に応じた"></a>オープンシステム部品 （b）部品設計の基準部品の利用用途に応じた
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。オープンシステム部品 （b）部品設計の基準部品の利用用途に応じた に関する基本概念・技術仕様・運用管理標準。
+#### <a id="オープンシステム部品（b）部品設計の基準部品の利用用途に応じた"></a>オープンシステム部品（b）部品設計の基準部品の利用用途に応じた
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。オープンシステム部品（b）部品設計の基準部品の利用用途に応じた に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）ソフトウェア開発手法](../syllabus_tsuiho_detail.md)
 
 #### <a id="設計基準の目的"></a>設計基準の目的
@@ -7596,8 +7564,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ソフトウェアライセンス に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）開発環境構築](../syllabus_tsuiho_detail.md)
 
-#### <a id="scm（source-code-managementソースコ-ード管理）"></a>SCM（Source Code Management：ソースコ ード管理）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SCM（Source Code Management：ソースコ ード管理） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="scm（source-code-managementソースコード管理）"></a>SCM（Source Code Management：ソースコード管理）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。SCM（Source Code Management：ソースコード管理） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）開発環境構築](../syllabus_tsuiho_detail.md)
 
 #### <a id="ステージング環境"></a>ステージング環境
@@ -7680,8 +7648,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サービスマネジメント に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）サービスマネジメントの目的と考え方](../syllabus_tsuiho_detail.md)
 
-#### <a id="サ-ービスライフサイクルの段階（計画立案"></a>サ ービスライフサイクルの段階（計画立案
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サ ービスライフサイクルの段階（計画立案 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="サービスライフサイクルの段階（計画立案"></a>サービスライフサイクルの段階（計画立案
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サービスライフサイクルの段階（計画立案 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）サービスマネジメントの目的と考え方](../syllabus_tsuiho_detail.md)
 
 #### <a id="設計"></a>設計
@@ -7816,8 +7784,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。サービスカタログ に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）サービスカタログ管理](../syllabus_tsuiho_detail.md)
 
-#### <a id="資産管理（itアセットマネジメント（itamit-asset-management）-）"></a>資産管理（ITアセットマネジメント（ITAM：IT asset management） ）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。資産管理（ITアセットマネジメント（ITAM：IT asset management） ） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="資産管理（itアセットマネジメント（itamit-asset-management））"></a>資産管理（ITアセットマネジメント（ITAM：IT asset management））
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。資産管理（ITアセットマネジメント（ITAM：IT asset management）） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）資産管理](../syllabus_tsuiho_detail.md)
 
 #### <a id="ソフトウェアアセットマネジメント（sam）"></a>ソフトウェアアセットマネジメント（SAM）
@@ -7828,8 +7796,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ライセンスマネジメント に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）資産管理](../syllabus_tsuiho_detail.md)
 
-#### <a id="jis-x-0164シリー-ズ"></a>JIS X 0164シリー ズ
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。JIS X 0164シリー ズ に関する基本概念・技術仕様・運用管理標準。
+#### <a id="jis-x-0164シリーズ"></a>JIS X 0164シリーズ
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。JIS X 0164シリーズ に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（4）資産管理](../syllabus_tsuiho_detail.md)
 
 #### <a id="構成管理"></a>構成管理
@@ -7844,8 +7812,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。構成情報 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（5）構成管理](../syllabus_tsuiho_detail.md)
 
-#### <a id="文書化された構成情報（例構成管理デ-ータベース（cmdb））"></a>文書化された構成情報（例：構成管理デ ータベース（CMDB））
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。文書化された構成情報（例：構成管理デ ータベース（CMDB）） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="文書化された構成情報（例構成管理データベース（cmdb））"></a>文書化された構成情報（例：構成管理データベース（CMDB））
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。文書化された構成情報（例：構成管理データベース（CMDB）） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（5）構成管理](../syllabus_tsuiho_detail.md)
 
 #### <a id="版（バージョン）"></a>版（バージョン）
@@ -7992,8 +7960,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。容量・能力管理 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（11）容量・能力管理](../syllabus_tsuiho_detail.md)
 
-#### <a id="しきい-（閾）値"></a>しきい （閾）値
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。しきい （閾）値 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="しきい（閾）値"></a>しきい（閾）値
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。しきい（閾）値 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（11）容量・能力管理](../syllabus_tsuiho_detail.md)
 
 #### <a id="管理指標（cpu使用率"></a>管理指標（CPU使用率
@@ -8008,8 +7976,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ディスク使用率 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（11）容量・能力管理](../syllabus_tsuiho_detail.md)
 
-#### <a id="ネットワー-ク使用率ほか）"></a>ネットワー ク使用率ほか）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ネットワー ク使用率ほか） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="ネットワーク使用率ほか）"></a>ネットワーク使用率ほか）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。ネットワーク使用率ほか） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（11）容量・能力管理](../syllabus_tsuiho_detail.md)
 
 #### <a id="変更管理"></a>変更管理
@@ -8400,10 +8368,6 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。利用者の管理 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）システム運用管理](../syllabus_tsuiho_detail.md)
 
-#### <a id="コールドスタ-ート"></a>コールドスタ ート
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。コールドスタ ート に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（1）システム運用管理](../syllabus_tsuiho_detail.md)
-
 #### <a id="aiops"></a>AIOps
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。AIOps に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）システム運用管理](../syllabus_tsuiho_detail.md)
@@ -8460,8 +8424,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。コールセンター に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）サービスデスク](../syllabus_tsuiho_detail.md)
 
-#### <a id="cti-（computer-telephony-integration）"></a>CTI （Computer Telephony Integration）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CTI （Computer Telephony Integration） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="cti（computer-telephony-integration）"></a>CTI（Computer Telephony Integration）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CTI（Computer Telephony Integration） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）サービスデスク](../syllabus_tsuiho_detail.md)
 
 #### <a id="faq"></a>FAQ
@@ -8496,8 +8460,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。中央サービスデスク に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）サービスデスク](../syllabus_tsuiho_detail.md)
 
-#### <a id="フォロ-ーザサン）"></a>フォロ ー・ザ・サン）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。フォロ ー・ザ・サン） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="フォローザサン）"></a>フォロー・ザ・サン）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。フォロー・ザ・サン） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）サービスデスク](../syllabus_tsuiho_detail.md)
 
 #### <a id="aiの活用（チャットボットなど）"></a>AIの活用（チャットボットなど）
@@ -8860,8 +8824,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。内部監査基準 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（5）システム監査の実施（予備調査，本調査，評価，結論）](../syllabus_tsuiho_detail.md)
 
-#### <a id="専門職的実施の国際フレームワ-ーク（ippf）"></a>専門職的実施の国際フレームワ ーク（IPPF）
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。専門職的実施の国際フレームワ ーク（IPPF） に関する基本概念・技術仕様・運用管理標準。
+#### <a id="専門職的実施の国際フレームワーク（ippf）"></a>専門職的実施の国際フレームワーク（IPPF）
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。専門職的実施の国際フレームワーク（IPPF） に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（5）システム監査の実施（予備調査，本調査，評価，結論）](../syllabus_tsuiho_detail.md)
 
 #### <a id="システム監査報告書"></a>システム監査報告書
@@ -9096,8 +9060,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。コンプライアンス に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）内部統制](../syllabus_tsuiho_detail.md)
 
-#### <a id="coso-（committee-of-sponsoring-organizations-of-the-treadway-commission）フレ-ームワーク"></a>COSO （Committee of Sponsoring Organizations of the Treadway Commission）フレ ームワーク
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。COSO （Committee of Sponsoring Organizations of the Treadway Commission）フレ ームワーク に関する基本概念・技術仕様・運用管理標準。
+#### <a id="coso（committee-of-sponsoring-organizations-of-the-treadway-commission）フレームワーク"></a>COSO（Committee of Sponsoring Organizations of the Treadway Commission）フレームワーク
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。COSO（Committee of Sponsoring Organizations of the Treadway Commission）フレームワーク に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（1）内部統制](../syllabus_tsuiho_detail.md)
 
 #### <a id="erm（全社的リスクマネジメント）"></a>ERM（全社的リスクマネジメント）
@@ -9120,8 +9084,8 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。IT統制 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ITガバナンス](../syllabus_tsuiho_detail.md)
 
-#### <a id="デー-タガバナンス"></a>デー タガバナンス
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。デー タガバナンス に関する基本概念・技術仕様・運用管理標準。
+#### <a id="データガバナンス"></a>データガバナンス
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。データガバナンス に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ITガバナンス](../syllabus_tsuiho_detail.md)
 
 #### <a id="コーポレートガバナンス"></a>コーポレートガバナンス
@@ -9140,19 +9104,11 @@ author: "Information Security Specialist Agent"
 - **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。成熟度モデル に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（2）ITガバナンス](../syllabus_tsuiho_detail.md)
 
-#### <a id="会社-法"></a>会社 法
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。会社 法 に関する基本概念・技術仕様・運用管理標準。
+#### <a id="コンプライアンス監査"></a>コンプライアンス監査
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。コンプライアンス監査 に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）法令遵守状況の評価・改善](../syllabus_tsuiho_detail.md)
 
-#### <a id="金融-商品-取引-法"></a>金融 商品 取引 法
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。金融 商品 取引 法 に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（3）法令遵守状況の評価・改善](../syllabus_tsuiho_detail.md)
-
-#### <a id="コン-プラ-イア-ンス-監査"></a>コン プラ イア ンス 監査
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。コン プラ イア ンス 監査 に関する基本概念・技術仕様・運用管理標準。
-- **シラバス参照**: [（3）法令遵守状況の評価・改善](../syllabus_tsuiho_detail.md)
-
-#### <a id="csa-（-control-self-assessment統制自己評価）-情報処理安全確保支援士試験シラバス追補版（科目-a-2）-ver40独立行政法人情報処理推進機構-113-8663東京都文京区本駒込-2-28-8文京グリーンコートセンターオフィス-15階-tel03-5978-7600（代表）-ホームページhttps-wwwipagojp-shiken-"></a>CSA （ Control Self Assessment：統制自己評価） 情報処理安全確保支援士試験シラバス追補版（科目 A-2） Ver.4.0独立行政法人情報処理推進機構 〒113-8663東京都文京区本駒込 2-28-8文京グリーンコートセンターオフィス 15階 TEL：03-5978-7600（代表） ホームページ：https://www.ipa.go.jp/shiken/
-- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CSA （ Control Self Assessment：統制自己評価） 情報処理安全確保支援士試験シラバス追補版（科目 A-2） Ver.4.0独立行政法人情報処理推進機構 〒113-8663東京都文京区本駒込 2-28-8文京グリーンコートセンターオフィス 15階 TEL：03-5978-7600（代表） ホームページ：https://www.ipa.go.jp/shiken/ に関する基本概念・技術仕様・運用管理標準。
+#### <a id="csa（control-self-assessment統制自己評価）情報処理安全確保支援士試験シラバス追補版（科目-a-2）ver40独立行政法人情報処理推進機構-113-8663東京都文京区本駒込-2-28-8文京グリーンコートセンターオフィス-15階-tel03-5978-7600（代表）ホームページhttps-wwwipagojp-shiken-"></a>CSA（Control Self Assessment：統制自己評価）情報処理安全確保支援士試験シラバス追補版（科目 A-2）Ver.4.0独立行政法人情報処理推進機構 〒113-8663東京都文京区本駒込 2-28-8文京グリーンコートセンターオフィス 15階 TEL：03-5978-7600（代表）ホームページ：https://www.ipa.go.jp/shiken/
+- **概要**: IPA公式シラバスおよび試験要綱に規定された重要セキュリティ専門用語。CSA（Control Self Assessment：統制自己評価）情報処理安全確保支援士試験シラバス追補版（科目 A-2）Ver.4.0独立行政法人情報処理推進機構 〒113-8663東京都文京区本駒込 2-28-8文京グリーンコートセンターオフィス 15階 TEL：03-5978-7600（代表）ホームページ：https://www.ipa.go.jp/shiken/ に関する基本概念・技術仕様・運用管理標準。
 - **シラバス参照**: [（3）法令遵守状況の評価・改善](../syllabus_tsuiho_detail.md)
 

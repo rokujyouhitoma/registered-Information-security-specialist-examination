@@ -36,7 +36,7 @@ graph TD
   - 法令，規制，契約，情報セキュリティに関する動向などによって生じる要求事項を踏まえて情報セキュリティ方針を具体化する能力
   - 経営者とコミュニケーションする能力
 - **用語例・キーワード (全網羅)**:
-  [`情報セキュリティガバナンス`](glossary/syllabus_ver2_1.md#情報セキュリティガバナンス), [`ITガバナンス`](glossary/syllabus_ver2_1.md#itガバナンス), [`ISMS (JIS Q 27001 / ISO/IEC 27001)`](glossary/syllabus_ver2_1.md#isms-(jis-q-27001-iso-iec-27001)), [`BCMS (JIS Q 22301 / ISO 22301)`](glossary/syllabus_ver2_1.md#bcms-(jis-q-22301-iso-22301)), [`情報セキュリティ方針`](glossary/syllabus_ver2_1.md#情報セキュリティ方針), [`基本方針`](glossary/syllabus_ver2_1.md#基本方針), [`対策基準`](glossary/syllabus_ver2_1.md#対策基準), [`実施手順`](glossary/syllabus_ver2_1.md#実施手順), [`組織マネジメント`](glossary/syllabus_ver2_1.md#組織マネジメント), [`利害関係者 (ステークホルダー) 要求事項`](glossary/syllabus_ver2_1.md#利害関係者-(ステークホルダー)-要求事項), [`経営戦略`](glossary/syllabus_ver2_1.md#経営戦略), [`事業戦略`](glossary/syllabus_ver2_1.md#事業戦略), [`コンプライアンス`](glossary/syllabus_ver2_1.md#コンプライアンス)
+  [`情報セキュリティガバナンス`](glossary/syllabus_ver2_1.md#情報セキュリティガバナンス), [`ITガバナンス`](glossary/syllabus_ver2_1.md#itガバナンス), [`ISMS(JIS Q 27001 / ISO/IEC 27001)`](glossary/syllabus_ver2_1.md#isms(jis-q-27001-iso-iec-27001)), [`BCMS(JIS Q 22301 / ISO 22301)`](glossary/syllabus_ver2_1.md#bcms(jis-q-22301-iso-22301)), [`情報セキュリティ方針`](glossary/syllabus_ver2_1.md#情報セキュリティ方針), [`基本方針`](glossary/syllabus_ver2_1.md#基本方針), [`対策基準`](glossary/syllabus_ver2_1.md#対策基準), [`実施手順`](glossary/syllabus_ver2_1.md#実施手順), [`組織マネジメント`](glossary/syllabus_ver2_1.md#組織マネジメント), [`利害関係者(ステークホルダー)要求事項`](glossary/syllabus_ver2_1.md#利害関係者(ステークホルダー)要求事項), [`経営戦略`](glossary/syllabus_ver2_1.md#経営戦略), [`事業戦略`](glossary/syllabus_ver2_1.md#事業戦略), [`コンプライアンス`](glossary/syllabus_ver2_1.md#コンプライアンス)
 
 ### 1-2 情報セキュリティリスクアセスメント
 - **大項目**: 1. 情報セキュリティマネジメントの推進又は支援に関すること
@@ -55,7 +55,7 @@ graph TD
   - 情報資産とリスクを関連付けて整理する能力
   - リスクを優先順位付けする能力
 - **用語例・キーワード (全網羅)**:
-  [`機密性 (Confidentiality)`](glossary/syllabus_ver2_1.md#機密性-(confidentiality)), [`完全性 (Integrity)`](glossary/syllabus_ver2_1.md#完全性-(integrity)), [`可用性 (Availability)`](glossary/syllabus_ver2_1.md#可用性-(availability)), [`真正性 (Authenticity)`](glossary/syllabus_ver2_1.md#真正性-(authenticity)), [`責任追跡性 (Accountability)`](glossary/syllabus_ver2_1.md#責任追跡性-(accountability)), [`否認防止 (Non-repudiation)`](glossary/syllabus_ver2_1.md#否認防止-(non-repudiation)), [`信頼性 (Reliability)`](glossary/syllabus_ver2_1.md#信頼性-(reliability)), [`リスク基準`](glossary/syllabus_ver2_1.md#リスク基準), [`リスク源`](glossary/syllabus_ver2_1.md#リスク源), [`脆弱性 (Vulnerability)`](glossary/syllabus_ver2_1.md#脆弱性-(vulnerability)), [`脅威 (Threat)`](glossary/syllabus_ver2_1.md#脅威-(threat)), [`情報セキュリティリスクアセスメント`](glossary/syllabus_ver2_1.md#情報セキュリティリスクアセスメント), [`リスク特定`](glossary/syllabus_ver2_1.md#リスク特定), [`リスク分析`](glossary/syllabus_ver2_1.md#リスク分析), [`リスク評価`](glossary/syllabus_ver2_1.md#リスク評価), [`STRIDE分析`](glossary/syllabus_ver2_1.md#stride分析), [`アタックツリー分析 (ATA)`](glossary/syllabus_ver2_1.md#アタックツリー分析-(ata)), [`リスクマトリクス`](glossary/syllabus_ver2_1.md#リスクマトリクス), [`資産損失評価`](glossary/syllabus_ver2_1.md#資産損失評価)
+  [`機密性(Confidentiality)`](glossary/syllabus_ver2_1.md#機密性(confidentiality)), [`完全性(Integrity)`](glossary/syllabus_ver2_1.md#完全性(integrity)), [`可用性(Availability)`](glossary/syllabus_ver2_1.md#可用性(availability)), [`真正性(Authenticity)`](glossary/syllabus_ver2_1.md#真正性(authenticity)), [`責任追跡性(Accountability)`](glossary/syllabus_ver2_1.md#責任追跡性(accountability)), [`否認防止(Non-repudiation)`](glossary/syllabus_ver2_1.md#否認防止(non-repudiation)), [`信頼性(Reliability)`](glossary/syllabus_ver2_1.md#信頼性(reliability)), [`リスク基準`](glossary/syllabus_ver2_1.md#リスク基準), [`リスク源`](glossary/syllabus_ver2_1.md#リスク源), [`脆弱性(Vulnerability)`](glossary/syllabus_ver2_1.md#脆弱性(vulnerability)), [`脅威(Threat)`](glossary/syllabus_ver2_1.md#脅威(threat)), [`情報セキュリティリスクアセスメント`](glossary/syllabus_ver2_1.md#情報セキュリティリスクアセスメント), [`リスク特定`](glossary/syllabus_ver2_1.md#リスク特定), [`リスク分析`](glossary/syllabus_ver2_1.md#リスク分析), [`リスク評価`](glossary/syllabus_ver2_1.md#リスク評価), [`STRIDE分析`](glossary/syllabus_ver2_1.md#stride分析), [`アタックツリー分析(ATA)`](glossary/syllabus_ver2_1.md#アタックツリー分析(ata)), [`リスクマトリクス`](glossary/syllabus_ver2_1.md#リスクマトリクス), [`資産損失評価`](glossary/syllabus_ver2_1.md#資産損失評価)
 
 ### 1-3 情報セキュリティリスク対応
 - **大項目**: 1. 情報セキュリティマネジメントの推進又は支援に関すること
@@ -71,7 +71,7 @@ graph TD
   - リスク対応の実施に適切な管理策を選定する能力
   - 情報セキュリティリスク対応計画を作成し，残留リスクと併せて説明する能力
 - **用語例・キーワード (全網羅)**:
-  [`リスク対応 (Risk Treatment)`](glossary/syllabus_ver2_1.md#リスク対応-(risk-treatment)), [`リスク低減 (Risk Reduction)`](glossary/syllabus_ver2_1.md#リスク低減-(risk-reduction)), [`リスク回避 (Risk Avoidance)`](glossary/syllabus_ver2_1.md#リスク回避-(risk-avoidance)), [`リスク共有 (Risk Sharing)`](glossary/syllabus_ver2_1.md#リスク共有-(risk-sharing)), [`リスク保有 (Risk Acceptance)`](glossary/syllabus_ver2_1.md#リスク保有-(risk-acceptance)), [`管理策 (Security Controls)`](glossary/syllabus_ver2_1.md#管理策-(security-controls)), [`残留リスク (Residual Risk)`](glossary/syllabus_ver2_1.md#残留リスク-(residual-risk)), [`リスク対応計画`](glossary/syllabus_ver2_1.md#リスク対応計画), [`サイバー保険`](glossary/syllabus_ver2_1.md#サイバー保険), [`費用対効果分析`](glossary/syllabus_ver2_1.md#費用対効果分析)
+  [`リスク対応(Risk Treatment)`](glossary/syllabus_ver2_1.md#リスク対応(risk-treatment)), [`リスク低減(Risk Reduction)`](glossary/syllabus_ver2_1.md#リスク低減(risk-reduction)), [`リスク回避(Risk Avoidance)`](glossary/syllabus_ver2_1.md#リスク回避(risk-avoidance)), [`リスク共有(Risk Sharing)`](glossary/syllabus_ver2_1.md#リスク共有(risk-sharing)), [`リスク保有(Risk Acceptance)`](glossary/syllabus_ver2_1.md#リスク保有(risk-acceptance)), [`管理策(Security Controls)`](glossary/syllabus_ver2_1.md#管理策(security-controls)), [`残留リスク(Residual Risk)`](glossary/syllabus_ver2_1.md#残留リスク(residual-risk)), [`リスク対応計画`](glossary/syllabus_ver2_1.md#リスク対応計画), [`サイバー保険`](glossary/syllabus_ver2_1.md#サイバー保険), [`費用対効果分析`](glossary/syllabus_ver2_1.md#費用対効果分析)
 
 ### 1-4 情報セキュリティ諸規程の策定
 - **大項目**: 1. 情報セキュリティマネジメントの推進又は支援に関すること
@@ -88,7 +88,7 @@ graph TD
   - 検討した事項及びその必要性を説明する能力
   - 法令，規制，規格の変化やITの動向を踏まえて情報セキュリティ諸規程をレビューする能力
 - **用語例・キーワード (全網羅)**:
-  [`JIS Q 27001 (ISO/IEC 27001)`](glossary/syllabus_ver2_1.md#jis-q-27001-(iso-iec-27001)), [`JIS Q 27002 (ISO/IEC 27002)`](glossary/syllabus_ver2_1.md#jis-q-27002-(iso-iec-27002)), [`適用宣言書 (SoA)`](glossary/syllabus_ver2_1.md#適用宣言書-(soa)), [`情報セキュリティ諸規程`](glossary/syllabus_ver2_1.md#情報セキュリティ諸規程), [`事業継続計画 (BCP)`](glossary/syllabus_ver2_1.md#事業継続計画-(bcp)), [`事業継続マネジメント (BCM)`](glossary/syllabus_ver2_1.md#事業継続マネジメント-(bcm)), [`要塞化 (ハードニング)`](glossary/syllabus_ver2_1.md#要塞化-(ハードニング)), [`クラウドセキュリティ`](glossary/syllabus_ver2_1.md#クラウドセキュリティ), [`AI/生成AIセキュリティ`](glossary/syllabus_ver2_1.md#ai-生成aiセキュリティ), [`IoTセキュリティ`](glossary/syllabus_ver2_1.md#iotセキュリティ), [`モバイルセキュリティ`](glossary/syllabus_ver2_1.md#モバイルセキュリティ)
+  [`JIS Q 27001(ISO/IEC 27001)`](glossary/syllabus_ver2_1.md#jis-q-27001(iso-iec-27001)), [`JIS Q 27002(ISO/IEC 27002)`](glossary/syllabus_ver2_1.md#jis-q-27002(iso-iec-27002)), [`適用宣言書(SoA)`](glossary/syllabus_ver2_1.md#適用宣言書(soa)), [`情報セキュリティ諸規程`](glossary/syllabus_ver2_1.md#情報セキュリティ諸規程), [`事業継続計画(BCP)`](glossary/syllabus_ver2_1.md#事業継続計画(bcp)), [`事業継続マネジメント(BCM)`](glossary/syllabus_ver2_1.md#事業継続マネジメント(bcm)), [`要塞化(ハードニング)`](glossary/syllabus_ver2_1.md#要塞化(ハードニング)), [`クラウドセキュリティ`](glossary/syllabus_ver2_1.md#クラウドセキュリティ), [`AI/生成AIセキュリティ`](glossary/syllabus_ver2_1.md#ai-生成aiセキュリティ), [`IoTセキュリティ`](glossary/syllabus_ver2_1.md#iotセキュリティ), [`モバイルセキュリティ`](glossary/syllabus_ver2_1.md#モバイルセキュリティ)
 
 ### 1-5 情報セキュリティ監査
 - **大項目**: 1. 情報セキュリティマネジメントの推進又は支援に関すること
@@ -126,7 +126,7 @@ graph TD
   - 収集した情報を整理し，関係者に伝達する能力
   - 収集した情報に関して，組織内への影響などを評価する能力
 - **用語例・キーワード (全網羅)**:
-  [`JIS`](glossary/syllabus_ver2_1.md#jis), [`ISO/IEC`](glossary/syllabus_ver2_1.md#iso-iec), [`IEEE`](glossary/syllabus_ver2_1.md#ieee), [`NIST (SP 800シリーズ)`](glossary/syllabus_ver2_1.md#nist-(sp-800シリーズ)), [`CPSF (サイバー・フィジカル・セキュリティフレームワーク)`](glossary/syllabus_ver2_1.md#cpsf-(サイバーフィジカルセキュリティフレームワーク)), [`攻撃手口分析`](glossary/syllabus_ver2_1.md#攻撃手口分析), [`サイバーキルチェーン (Cyber Kill Chain)`](glossary/syllabus_ver2_1.md#サイバーキルチェーン-(cyber-kill-chain)), [`MITRE ATT&CK`](glossary/syllabus_ver2_1.md#mitre-attck), [`脅威インテリジェンス (Threat Intelligence)`](glossary/syllabus_ver2_1.md#脅威インテリジェンス-(threat-intelligence)), [`OSINT (Open Source Intelligence)`](glossary/syllabus_ver2_1.md#osint-(open-source-intelligence)), [`情報収集・信頼性評価`](glossary/syllabus_ver2_1.md#情報収集信頼性評価), [`コンプライアンス課題`](glossary/syllabus_ver2_1.md#コンプライアンス課題)
+  [`JIS`](glossary/syllabus_ver2_1.md#jis), [`ISO/IEC`](glossary/syllabus_ver2_1.md#iso-iec), [`IEEE`](glossary/syllabus_ver2_1.md#ieee), [`NIST(SP 800シリーズ)`](glossary/syllabus_ver2_1.md#nist(sp-800シリーズ)), [`CPSF(サイバー・フィジカル・セキュリティフレームワーク)`](glossary/syllabus_ver2_1.md#cpsf(サイバーフィジカルセキュリティフレームワーク)), [`攻撃手口分析`](glossary/syllabus_ver2_1.md#攻撃手口分析), [`サイバーキルチェーン(Cyber Kill Chain)`](glossary/syllabus_ver2_1.md#サイバーキルチェーン(cyber-kill-chain)), [`MITRE ATT&CK`](glossary/syllabus_ver2_1.md#mitre-attck), [`脅威インテリジェンス(Threat Intelligence)`](glossary/syllabus_ver2_1.md#脅威インテリジェンス(threat-intelligence)), [`OSINT(Open Source Intelligence)`](glossary/syllabus_ver2_1.md#osint(open-source-intelligence)), [`情報収集・信頼性評価`](glossary/syllabus_ver2_1.md#情報収集信頼性評価), [`コンプライアンス課題`](glossary/syllabus_ver2_1.md#コンプライアンス課題)
 
 ### 1-7 関係者とのコミュニケーション
 - **大項目**: 1. 情報セキュリティマネジメントの推進又は支援に関すること
@@ -145,7 +145,7 @@ graph TD
   - 連絡窓口として，組織内外の情報連携を行う能力
   - ISAC，他のCSIRTなどと情報共有する，及び共有された情報を活用する能力
 - **用語例・キーワード (全網羅)**:
-  [`JPCERT/CC`](glossary/syllabus_ver2_1.md#jpcert-cc), [`NISC (内閣サイバーセキュリティセンター)`](glossary/syllabus_ver2_1.md#nisc-(内閣サイバーセキュリティセンター)), [`IPA (情報処理推進機構)`](glossary/syllabus_ver2_1.md#ipa-(情報処理推進機構)), [`J-CSIP (サイバー情報共有イニシアティブ)`](glossary/syllabus_ver2_1.md#j-csip-(サイバー情報共有イニシアティブ)), [`J-CRAT (サイバーレスキュー隊)`](glossary/syllabus_ver2_1.md#j-crat-(サイバーレスキュー隊)), [`情報セキュリティ早期警戒パートナーシップ`](glossary/syllabus_ver2_1.md#情報セキュリティ早期警戒パートナーシップ), [`ISAC (Information Sharing and Analysis Center)`](glossary/syllabus_ver2_1.md#isac-(information-sharing-and-analysis-center)), [`CSIRT間情報共有`](glossary/syllabus_ver2_1.md#csirt間情報共有), [`ステークホルダーコミュニケーション`](glossary/syllabus_ver2_1.md#ステークホルダーコミュニケーション), [`エスカレーション`](glossary/syllabus_ver2_1.md#エスカレーション)
+  [`JPCERT/CC`](glossary/syllabus_ver2_1.md#jpcert-cc), [`NISC(内閣サイバーセキュリティセンター)`](glossary/syllabus_ver2_1.md#nisc(内閣サイバーセキュリティセンター)), [`IPA(情報処理推進機構)`](glossary/syllabus_ver2_1.md#ipa(情報処理推進機構)), [`J-CSIP(サイバー情報共有イニシアティブ)`](glossary/syllabus_ver2_1.md#j-csip(サイバー情報共有イニシアティブ)), [`J-CRAT(サイバーレスキュー隊)`](glossary/syllabus_ver2_1.md#j-crat(サイバーレスキュー隊)), [`情報セキュリティ早期警戒パートナーシップ`](glossary/syllabus_ver2_1.md#情報セキュリティ早期警戒パートナーシップ), [`ISAC(Information Sharing and Analysis Center)`](glossary/syllabus_ver2_1.md#isac(information-sharing-and-analysis-center)), [`CSIRT間情報共有`](glossary/syllabus_ver2_1.md#csirt間情報共有), [`ステークホルダーコミュニケーション`](glossary/syllabus_ver2_1.md#ステークホルダーコミュニケーション), [`エスカレーション`](glossary/syllabus_ver2_1.md#エスカレーション)
 
 ---
 
@@ -166,7 +166,7 @@ graph TD
   - 脅威分析 Result からセキュリティ要件を定義する能力
   - 仕様書をレビューする能力
 - **用語例・キーワード (全網羅)**:
-  [`セキュリティバイデザイン (Security by Design)`](glossary/syllabus_ver2_1.md#セキュリティバイデザイン-(security-by-design)), [`プライバシーバイデザイン (Privacy by Design)`](glossary/syllabus_ver2_1.md#プライバシーバイデザイン-(privacy-by-design)), [`セキュリティ要件定義`](glossary/syllabus_ver2_1.md#セキュリティ要件定義), [`機能要件 / 非機能要件`](glossary/syllabus_ver2_1.md#機能要件-非機能要件), [`SQuaRE (ISO/IEC 25000シリーズ)`](glossary/syllabus_ver2_1.md#square-(iso-iec-25000シリーズ)), [`脅威分析・モデリング`](glossary/syllabus_ver2_1.md#脅威分析モデリング), [`要件定義書レビュー`](glossary/syllabus_ver2_1.md#要件定義書レビュー)
+  [`セキュリティバイデザイン(Security by Design)`](glossary/syllabus_ver2_1.md#セキュリティバイデザイン(security-by-design)), [`プライバシーバイデザイン(Privacy by Design)`](glossary/syllabus_ver2_1.md#プライバシーバイデザイン(privacy-by-design)), [`セキュリティ要件定義`](glossary/syllabus_ver2_1.md#セキュリティ要件定義), [`機能要件 / 非機能要件`](glossary/syllabus_ver2_1.md#機能要件-非機能要件), [`SQuaRE(ISO/IEC 25000シリーズ)`](glossary/syllabus_ver2_1.md#square(iso-iec-25000シリーズ)), [`脅威分析・モデリング`](glossary/syllabus_ver2_1.md#脅威分析モデリング), [`要件定義書レビュー`](glossary/syllabus_ver2_1.md#要件定義書レビュー)
 
 ### 2-2 製品・サービスのセキュアな導入
 - **大項目**: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること
@@ -186,7 +186,7 @@ graph TD
   - 調達した製品・サービスにセキュアな設定を行う能力
   - 各製品・サービスを組み合わせたシステム全体のセキュリティバランス，運用の実現性を検証する能力
 - **用語例・キーワード (全網羅)**:
-  [`要塞化 (ハードニング / Hardening)`](glossary/syllabus_ver2_1.md#要塞化-(ハードニング-hardening)), [`セキュリティ投資対効果 (ROSI)`](glossary/syllabus_ver2_1.md#セキュリティ投資対効果-(rosi)), [`製品・サービス選定基準`](glossary/syllabus_ver2_1.md#製品サービス選定基準), [`ネットワーク機器セキュリティ設定`](glossary/syllabus_ver2_1.md#ネットワーク機器セキュリティ設定), [`サーバー要塞化`](glossary/syllabus_ver2_1.md#サーバー要塞化), [`設定手順書レビュー`](glossary/syllabus_ver2_1.md#設定手順書レビュー), [`セキュリティバランス検証`](glossary/syllabus_ver2_1.md#セキュリティバランス検証)
+  [`要塞化(ハードニング / Hardening)`](glossary/syllabus_ver2_1.md#要塞化(ハードニング-hardening)), [`セキュリティ投資対効果(ROSI)`](glossary/syllabus_ver2_1.md#セキュリティ投資対効果(rosi)), [`製品・サービス選定基準`](glossary/syllabus_ver2_1.md#製品サービス選定基準), [`ネットワーク機器セキュリティ設定`](glossary/syllabus_ver2_1.md#ネットワーク機器セキュリティ設定), [`サーバー要塞化`](glossary/syllabus_ver2_1.md#サーバー要塞化), [`設定手順書レビュー`](glossary/syllabus_ver2_1.md#設定手順書レビュー), [`セキュリティバランス検証`](glossary/syllabus_ver2_1.md#セキュリティバランス検証)
 
 ### 2-3 アーキテクチャの設計（セキュリティの観点）
 - **大項目**: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること
@@ -202,7 +202,7 @@ graph TD
   - アーキテクチャの設計書をレビューする能力
   - システム及びネットワークのアーキテクチャ，インタフェース，利用する各技術がセキュアであるかどうかを評価する能力
 - **用語例・キーワード (全網羅)**:
-  [`フェールセーフ`](glossary/syllabus_ver2_1.md#フェールセーフ), [`フェールソフト`](glossary/syllabus_ver2_1.md#フェールソフト), [`最小権限の原則`](glossary/syllabus_ver2_1.md#最小権限の原則), [`境界防御`](glossary/syllabus_ver2_1.md#境界防御), [`多層防御 (Defense in Depth)`](glossary/syllabus_ver2_1.md#多層防御-(defense-in-depth)), [`仮想化・コンテナセキュリティ`](glossary/syllabus_ver2_1.md#仮想化コンテナセキュリティ), [`ネットワークセグメンテーション`](glossary/syllabus_ver2_1.md#ネットワークセグメンテーション), [`アーキテクチャ設計書レビュー`](glossary/syllabus_ver2_1.md#アーキテクチャ設計書レビュー)
+  [`フェールセーフ`](glossary/syllabus_ver2_1.md#フェールセーフ), [`フェールソフト`](glossary/syllabus_ver2_1.md#フェールソフト), [`最小権限の原則`](glossary/syllabus_ver2_1.md#最小権限の原則), [`境界防御`](glossary/syllabus_ver2_1.md#境界防御), [`多層防御(Defense in Depth)`](glossary/syllabus_ver2_1.md#多層防御(defense-in-depth)), [`仮想化・コンテナセキュリティ`](glossary/syllabus_ver2_1.md#仮想化コンテナセキュリティ), [`ネットワークセグメンテーション`](glossary/syllabus_ver2_1.md#ネットワークセグメンテーション), [`アーキテクチャ設計書レビュー`](glossary/syllabus_ver2_1.md#アーキテクチャ設計書レビュー)
 
 ### 2-4 セキュリティ機能の設計
 - **大項目**: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること
@@ -216,7 +216,7 @@ graph TD
   - セキュリティ機能の設計書，テスト計画書をレビューする能力
   - 要件を満たすセキュリティ機能を設計する能力
 - **用語例・キーワード (全網羅)**:
-  [`認証 (Authentication)`](glossary/syllabus_ver2_1.md#認証-(authentication)), [`アクセス制御 (Access Control)`](glossary/syllabus_ver2_1.md#アクセス制御-(access-control)), [`暗号機能 (Encryption)`](glossary/syllabus_ver2_1.md#暗号機能-(encryption)), [`ログ出力機能 (Logging)`](glossary/syllabus_ver2_1.md#ログ出力機能-(logging)), [`セキュリティフレームワーク`](glossary/syllabus_ver2_1.md#セキュリティフレームワーク), [`セキュリティ機能設計書レビュー`](glossary/syllabus_ver2_1.md#セキュリティ機能設計書レビュー), [`テスト計画書レビュー`](glossary/syllabus_ver2_1.md#テスト計画書レビュー)
+  [`認証(Authentication)`](glossary/syllabus_ver2_1.md#認証(authentication)), [`アクセス制御(Access Control)`](glossary/syllabus_ver2_1.md#アクセス制御(access-control)), [`暗号機能(Encryption)`](glossary/syllabus_ver2_1.md#暗号機能(encryption)), [`ログ出力機能(Logging)`](glossary/syllabus_ver2_1.md#ログ出力機能(logging)), [`セキュリティフレームワーク`](glossary/syllabus_ver2_1.md#セキュリティフレームワーク), [`セキュリティ機能設計書レビュー`](glossary/syllabus_ver2_1.md#セキュリティ機能設計書レビュー), [`テスト計画書レビュー`](glossary/syllabus_ver2_1.md#テスト計画書レビュー)
 
 ### 2-5 セキュアプログラミング
 - **大項目**: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること
@@ -232,7 +232,7 @@ graph TD
   - ソフトウェア実装について，セキュアプログラミングの原則，実践規範と照らしてレビューする能力
   - コーディング標準に沿ったセキュアプログラミングを実践する能力
 - **用語例・キーワード (全網羅)**:
-  [`XSS (Cross-Site Scripting)`](glossary/syllabus_ver2_1.md#xss-(cross-site-scripting)), [`SQLインジェクション`](glossary/syllabus_ver2_1.md#sqlインジェクション), [`CSRF (Cross-Site Request Forgery)`](glossary/syllabus_ver2_1.md#csrf-(cross-site-request-forgery)), [`OSコマンドインジェクション`](glossary/syllabus_ver2_1.md#osコマンドインジェクション), [`ディレクトリトラバーサル`](glossary/syllabus_ver2_1.md#ディレクトリトラバーサル), [`バッファオーバーフロー`](glossary/syllabus_ver2_1.md#バッファオーバーフロー), [`Cookie属性 (Secure`](glossary/syllabus_ver2_1.md#cookie属性-(secure), [`HttpOnly`](glossary/syllabus_ver2_1.md#httponly), [`SameSite)`](glossary/syllabus_ver2_1.md#samesite)), [`セッション固定攻撃対策`](glossary/syllabus_ver2_1.md#セッション固定攻撃対策), [`入力バリデーション`](glossary/syllabus_ver2_1.md#入力バリデーション), [`出力エスケープ`](glossary/syllabus_ver2_1.md#出力エスケープ)
+  [`XSS(Cross-Site Scripting)`](glossary/syllabus_ver2_1.md#xss(cross-site-scripting)), [`SQLインジェクション`](glossary/syllabus_ver2_1.md#sqlインジェクション), [`CSRF(Cross-Site Request Forgery)`](glossary/syllabus_ver2_1.md#csrf(cross-site-request-forgery)), [`OSコマンドインジェクション`](glossary/syllabus_ver2_1.md#osコマンドインジェクション), [`ディレクトリトラバーサル`](glossary/syllabus_ver2_1.md#ディレクトリトラバーサル), [`バッファオーバーフロー`](glossary/syllabus_ver2_1.md#バッファオーバーフロー), [`Cookie属性(Secure`](glossary/syllabus_ver2_1.md#cookie属性(secure), [`HttpOnly`](glossary/syllabus_ver2_1.md#httponly), [`SameSite)`](glossary/syllabus_ver2_1.md#samesite)), [`セッション固定攻撃対策`](glossary/syllabus_ver2_1.md#セッション固定攻撃対策), [`入力バリデーション`](glossary/syllabus_ver2_1.md#入力バリデーション), [`出力エスケープ`](glossary/syllabus_ver2_1.md#出力エスケープ)
 
 ### 2-6 セキュリティテスト
 - **大項目**: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること
@@ -250,7 +250,7 @@ graph TD
   - 手動テストとツールによる自動テストを組み合わせ，効果的かつ効率的なテストを計画する能力
   - テストで検出したエラーを識別し，修正，解消する能力
 - **用語例・キーワード (全網羅)**:
-  [`ソースコード静的検査 (SAST)`](glossary/syllabus_ver2_1.md#ソースコード静的検査-(sast)), [`プログラム動的検査 (DAST)`](glossary/syllabus_ver2_1.md#プログラム動的検査-(dast)), [`ファジング (Fuzzing)`](glossary/syllabus_ver2_1.md#ファジング-(fuzzing)), [`脆弱性診断`](glossary/syllabus_ver2_1.md#脆弱性診断), [`ペネトレーションテスト`](glossary/syllabus_ver2_1.md#ペネトレーションテスト), [`脆弱性検査ツール`](glossary/syllabus_ver2_1.md#脆弱性検査ツール), [`エラー識別・修正`](glossary/syllabus_ver2_1.md#エラー識別修正)
+  [`ソースコード静的検査(SAST)`](glossary/syllabus_ver2_1.md#ソースコード静的検査(sast)), [`プログラム動的検査(DAST)`](glossary/syllabus_ver2_1.md#プログラム動的検査(dast)), [`ファジング(Fuzzing)`](glossary/syllabus_ver2_1.md#ファジング(fuzzing)), [`脆弱性診断`](glossary/syllabus_ver2_1.md#脆弱性診断), [`ペネトレーションテスト`](glossary/syllabus_ver2_1.md#ペネトレーションテスト), [`脆弱性検査ツール`](glossary/syllabus_ver2_1.md#脆弱性検査ツール), [`エラー識別・修正`](glossary/syllabus_ver2_1.md#エラー識別修正)
 
 ### 2-7 運用・保守（セキュリティの観点）
 - **大項目**: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること
@@ -266,7 +266,7 @@ graph TD
   - 運用・保守の関連文書（作業計画書，作業手順書，利用者向けのマニュアルなど）を，セキュリティの観点からレビューする能力
   - 運用担当者の能力水準の目標に合わせて教育・訓練を計画する能力
 - **用語例・キーワード (全網羅)**:
-  [`サービスマネジメント`](glossary/syllabus_ver2_1.md#サービスマネジメント), [`ITSMS (JIS Q 20000)`](glossary/syllabus_ver2_1.md#itsms-(jis-q-20000)), [`SLA (Service Level Agreement)`](glossary/syllabus_ver2_1.md#sla-(service-level-agreement)), [`変更管理`](glossary/syllabus_ver2_1.md#変更管理), [`障害管理`](glossary/syllabus_ver2_1.md#障害管理), [`リリース管理`](glossary/syllabus_ver2_1.md#リリース管理), [`特権ID管理`](glossary/syllabus_ver2_1.md#特権id管理), [`ログ監視・改ざん防止`](glossary/syllabus_ver2_1.md#ログ監視改ざん防止)
+  [`サービスマネジメント`](glossary/syllabus_ver2_1.md#サービスマネジメント), [`ITSMS(JIS Q 20000)`](glossary/syllabus_ver2_1.md#itsms(jis-q-20000)), [`SLA(Service Level Agreement)`](glossary/syllabus_ver2_1.md#sla(service-level-agreement)), [`変更管理`](glossary/syllabus_ver2_1.md#変更管理), [`障害管理`](glossary/syllabus_ver2_1.md#障害管理), [`リリース管理`](glossary/syllabus_ver2_1.md#リリース管理), [`特権ID管理`](glossary/syllabus_ver2_1.md#特権id管理), [`ログ監視・改ざん防止`](glossary/syllabus_ver2_1.md#ログ監視改ざん防止)
 
 ### 2-8 開発環境のセキュリティ
 - **大項目**: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること
@@ -280,7 +280,7 @@ graph TD
   - 開発対象のソフトウェアの仕様書，ソースコード，開発環境の構成を把握し，リスクを分析する能力
   - 開発環境のセキュリティ対策（アクセス制御，漏洩防止，検証環境隔離）を設計・評価する能力
 - **用語例・キーワード (全網羅)**:
-  [`開発プロセスセキュリティ`](glossary/syllabus_ver2_1.md#開発プロセスセキュリティ), [`バージョン管理 (Git等)`](glossary/syllabus_ver2_1.md#バージョン管理-(git等)), [`構成管理`](glossary/syllabus_ver2_1.md#構成管理), [`CI/CDパイプラインセキュリティ`](glossary/syllabus_ver2_1.md#ci-cdパイプラインセキュリティ), [`リポジトリ保護`](glossary/syllabus_ver2_1.md#リポジトリ保護), [`テスト環境隔離`](glossary/syllabus_ver2_1.md#テスト環境隔離), [`ソースコード漏洩防止`](glossary/syllabus_ver2_1.md#ソースコード漏洩防止)
+  [`開発プロセスセキュリティ`](glossary/syllabus_ver2_1.md#開発プロセスセキュリティ), [`バージョン管理(Git等)`](glossary/syllabus_ver2_1.md#バージョン管理(git等)), [`構成管理`](glossary/syllabus_ver2_1.md#構成管理), [`CI/CDパイプラインセキュリティ`](glossary/syllabus_ver2_1.md#ci-cdパイプラインセキュリティ), [`リポジトリ保護`](glossary/syllabus_ver2_1.md#リポジトリ保護), [`テスト環境隔離`](glossary/syllabus_ver2_1.md#テスト環境隔離), [`ソースコード漏洩防止`](glossary/syllabus_ver2_1.md#ソースコード漏洩防止)
 
 ---
 
@@ -305,7 +305,7 @@ graph TD
   - 適切な暗号技術を選択する能力
   - 鍵管理の仕組みを設計する能力
 - **用語例・キーワード (全網羅)**:
-  [`共通鍵暗号 (AES)`](glossary/syllabus_ver2_1.md#共通鍵暗号-(aes)), [`公開鍵暗号 (RSA`](glossary/syllabus_ver2_1.md#公開鍵暗号-(rsa), [`ECC)`](glossary/syllabus_ver2_1.md#ecc)), [`ハイブリッド暗号`](glossary/syllabus_ver2_1.md#ハイブリッド暗号), [`暗号利用モード (ECB`](glossary/syllabus_ver2_1.md#暗号利用モード-(ecb), [`CBC`](glossary/syllabus_ver2_1.md#cbc), [`CTR`](glossary/syllabus_ver2_1.md#ctr), [`GCM)`](glossary/syllabus_ver2_1.md#gcm)), [`認証付き暗号 (AEAD)`](glossary/syllabus_ver2_1.md#認証付き暗号-(aead)), [`ハッシュ関数 (SHA-2/3)`](glossary/syllabus_ver2_1.md#ハッシュ関数-(sha-2-3)), [`HMAC`](glossary/syllabus_ver2_1.md#hmac), [`デジタル署名`](glossary/syllabus_ver2_1.md#デジタル署名), [`PKI (公開鍵基盤)`](glossary/syllabus_ver2_1.md#pki-(公開鍵基盤)), [`鍵管理`](glossary/syllabus_ver2_1.md#鍵管理), [`CRYPTREC暗号リスト`](glossary/syllabus_ver2_1.md#cryptrec暗号リスト), [`HSM / TPM`](glossary/syllabus_ver2_1.md#hsm-tpm), [`PFS (Perfect Forward Secrecy)`](glossary/syllabus_ver2_1.md#pfs-(perfect-forward-secrecy))
+  [`共通鍵暗号(AES)`](glossary/syllabus_ver2_1.md#共通鍵暗号(aes)), [`公開鍵暗号(RSA`](glossary/syllabus_ver2_1.md#公開鍵暗号(rsa), [`ECC)`](glossary/syllabus_ver2_1.md#ecc)), [`ハイブリッド暗号`](glossary/syllabus_ver2_1.md#ハイブリッド暗号), [`暗号利用モード(ECB`](glossary/syllabus_ver2_1.md#暗号利用モード(ecb), [`CBC`](glossary/syllabus_ver2_1.md#cbc), [`CTR`](glossary/syllabus_ver2_1.md#ctr), [`GCM)`](glossary/syllabus_ver2_1.md#gcm)), [`認証付き暗号(AEAD)`](glossary/syllabus_ver2_1.md#認証付き暗号(aead)), [`ハッシュ関数(SHA-2/3)`](glossary/syllabus_ver2_1.md#ハッシュ関数(sha-2-3)), [`HMAC`](glossary/syllabus_ver2_1.md#hmac), [`デジタル署名`](glossary/syllabus_ver2_1.md#デジタル署名), [`PKI(公開鍵基盤)`](glossary/syllabus_ver2_1.md#pki(公開鍵基盤)), [`鍵管理`](glossary/syllabus_ver2_1.md#鍵管理), [`CRYPTREC暗号リスト`](glossary/syllabus_ver2_1.md#cryptrec暗号リスト), [`HSM / TPM`](glossary/syllabus_ver2_1.md#hsm-tpm), [`PFS(Perfect Forward Secrecy)`](glossary/syllabus_ver2_1.md#pfs(perfect-forward-secrecy))
 
 ### 3-2 マルウェア対策
 - **大項目**: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること
@@ -321,7 +321,7 @@ graph TD
   - 情報システム，ネットワーク構成及びその利用方法に応じたマルウェア対策を設計する能力
   - マルウェア対策ソフトを効果的に適用し，マルウェアからの保護の有効性を高める能力
 - **用語例・キーワード (全網羅)**:
-  [`EPP (Endpoint Protection Platform)`](glossary/syllabus_ver2_1.md#epp-(endpoint-protection-platform)), [`EDR (Endpoint Detection and Response)`](glossary/syllabus_ver2_1.md#edr-(endpoint-detection-and-response)), [`サンドボックス`](glossary/syllabus_ver2_1.md#サンドボックス), [`静的解析 / 動的解析`](glossary/syllabus_ver2_1.md#静的解析-動的解析), [`ランサムウェア`](glossary/syllabus_ver2_1.md#ランサムウェア), [`RAT (Remote Access Trojan)`](glossary/syllabus_ver2_1.md#rat-(remote-access-trojan)), [`ボットネット`](glossary/syllabus_ver2_1.md#ボットネット), [`IOC (Indicator of Compromise)`](glossary/syllabus_ver2_1.md#ioc-(indicator-of-compromise)), [`ファイルレスマルウェア`](glossary/syllabus_ver2_1.md#ファイルレスマルウェア), [`マルウェア無害化`](glossary/syllabus_ver2_1.md#マルウェア無害化)
+  [`EPP(Endpoint Protection Platform)`](glossary/syllabus_ver2_1.md#epp(endpoint-protection-platform)), [`EDR(Endpoint Detection and Response)`](glossary/syllabus_ver2_1.md#edr(endpoint-detection-and-response)), [`サンドボックス`](glossary/syllabus_ver2_1.md#サンドボックス), [`静的解析 / 動的解析`](glossary/syllabus_ver2_1.md#静的解析-動的解析), [`ランサムウェア`](glossary/syllabus_ver2_1.md#ランサムウェア), [`RAT(Remote Access Trojan)`](glossary/syllabus_ver2_1.md#rat(remote-access-trojan)), [`ボットネット`](glossary/syllabus_ver2_1.md#ボットネット), [`IOC(Indicator of Compromise)`](glossary/syllabus_ver2_1.md#ioc(indicator-of-compromise)), [`ファイルレスマルウェア`](glossary/syllabus_ver2_1.md#ファイルレスマルウェア), [`マルウェア無害化`](glossary/syllabus_ver2_1.md#マルウェア無害化)
 
 ### 3-3 バックアップ及び復旧
 - **大項目**: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること
@@ -360,7 +360,7 @@ graph TD
   - セキュリティ監視及びログ分析における脅威インテリジェンスの利用を設計する能力
   - ログのモニタリング及びレビューにおいて情報セキュリティインシデントの疑いがある事象を検知した場合の対応を設計する能力
 - **用語例・キーワード (全網羅)**:
-  [`SOC (Security Operations Center)`](glossary/syllabus_ver2_1.md#soc-(security-operations-center)), [`SIEM (Security Information and Event Management)`](glossary/syllabus_ver2_1.md#siem-(security-information-and-event-management)), [`SOAR`](glossary/syllabus_ver2_1.md#soar), [`相関分析`](glossary/syllabus_ver2_1.md#相関分析), [`NTP (時刻同期)`](glossary/syllabus_ver2_1.md#ntp-(時刻同期)), [`STIX / TAXII`](glossary/syllabus_ver2_1.md#stix-taxii), [`ログ保管・保護`](glossary/syllabus_ver2_1.md#ログ保管保護)
+  [`SOC(Security Operations Center)`](glossary/syllabus_ver2_1.md#soc(security-operations-center)), [`SIEM(Security Information and Event Management)`](glossary/syllabus_ver2_1.md#siem(security-information-and-event-management)), [`SOAR`](glossary/syllabus_ver2_1.md#soar), [`相関分析`](glossary/syllabus_ver2_1.md#相関分析), [`NTP(時刻同期)`](glossary/syllabus_ver2_1.md#ntp(時刻同期)), [`STIX / TAXII`](glossary/syllabus_ver2_1.md#stix-taxii), [`ログ保管・保護`](glossary/syllabus_ver2_1.md#ログ保管保護)
 
 ### 3-5 ネットワーク及び機器のセキュリティ管理
 - **大項目**: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること
@@ -380,7 +380,7 @@ graph TD
   - ネットワークの物理的又は論理的な分割を設計する能力
   - 利用するネットワークサービスのセキュリティ（認証，暗号化，ネットワーク接続管理など），サービスレベルなどの妥当性を確認する能力
 - **用語例・キーワード (全網羅)**:
-  [`TLS 1.3`](glossary/syllabus_ver2_1.md#tls-13), [`IPsec`](glossary/syllabus_ver2_1.md#ipsec), [`DNSSEC`](glossary/syllabus_ver2_1.md#dnssec), [`SPF / DKIM / DMARC`](glossary/syllabus_ver2_1.md#spf-dkim-dmarc), [`ファイアウォール`](glossary/syllabus_ver2_1.md#ファイアウォール), [`WAF`](glossary/syllabus_ver2_1.md#waf), [`IDS / IPS`](glossary/syllabus_ver2_1.md#ids-ips), [`プロキシ`](glossary/syllabus_ver2_1.md#プロキシ), [`無線LANセキュリティ (WPA3等)`](glossary/syllabus_ver2_1.md#無線lanセキュリティ-(wpa3等))
+  [`TLS 1.3`](glossary/syllabus_ver2_1.md#tls-13), [`IPsec`](glossary/syllabus_ver2_1.md#ipsec), [`DNSSEC`](glossary/syllabus_ver2_1.md#dnssec), [`SPF / DKIM / DMARC`](glossary/syllabus_ver2_1.md#spf-dkim-dmarc), [`ファイアウォール`](glossary/syllabus_ver2_1.md#ファイアウォール), [`WAF`](glossary/syllabus_ver2_1.md#waf), [`IDS / IPS`](glossary/syllabus_ver2_1.md#ids-ips), [`プロキシ`](glossary/syllabus_ver2_1.md#プロキシ), [`無線LANセキュリティ(WPA3等)`](glossary/syllabus_ver2_1.md#無線lanセキュリティ(wpa3等))
 
 ### 3-6 脆弱性への対応
 - **大項目**: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること
@@ -394,7 +394,7 @@ graph TD
   - 効果的な構成管理，脆弱性情報収集を設計する能力
   - 脆弱性の影響を評価し，セキュリティパッチの適用，回避策の実施などの対応策を検討・助言する能力
 - **用語例・キーワード (全網羅)**:
-  [`CVE`](glossary/syllabus_ver2_1.md#cve), [`JVN`](glossary/syllabus_ver2_1.md#jvn), [`CVSS (v2/v3/v4)`](glossary/syllabus_ver2_1.md#cvss-(v2-v3-v4)), [`脆弱性スキャナ`](glossary/syllabus_ver2_1.md#脆弱性スキャナ), [`構成管理 (CMDB)`](glossary/syllabus_ver2_1.md#構成管理-(cmdb)), [`セキュリティパッチ管理`](glossary/syllabus_ver2_1.md#セキュリティパッチ管理), [`ワークアラウンド (回避策)`](glossary/syllabus_ver2_1.md#ワークアラウンド-(回避策))
+  [`CVE`](glossary/syllabus_ver2_1.md#cve), [`JVN`](glossary/syllabus_ver2_1.md#jvn), [`CVSS(v2/v3/v4)`](glossary/syllabus_ver2_1.md#cvss(v2-v3-v4)), [`脆弱性スキャナ`](glossary/syllabus_ver2_1.md#脆弱性スキャナ), [`構成管理(CMDB)`](glossary/syllabus_ver2_1.md#構成管理(cmdb)), [`セキュリティパッチ管理`](glossary/syllabus_ver2_1.md#セキュリティパッチ管理), [`ワークアラウンド(回避策)`](glossary/syllabus_ver2_1.md#ワークアラウンド(回避策))
 
 ### 3-7 物理的セキュリティ管理
 - **大項目**: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること
@@ -410,7 +410,7 @@ graph TD
   - 物理的セキュリティ境界を定義し，オフィス，部屋及び施設に対する物理的セキュリティを設計する能力
   - 記憶媒体の廃棄・再利用，無人状態にある機器の保護，紙の書類の管理，複合機の利用などの情報セキュリティを設計する能力
 - **用語例・キーワード (全網羅)**:
-  [`物理的セキュリティ境界`](glossary/syllabus_ver2_1.md#物理的セキュリティ境界), [`入退管理システム`](glossary/syllabus_ver2_1.md#入退管理システム), [`監視カメラ (CCTV)`](glossary/syllabus_ver2_1.md#監視カメラ-(cctv)), [`UPS (無停電電源装置)`](glossary/syllabus_ver2_1.md#ups-(無停電電源装置)), [`記憶媒体破棄・消去`](glossary/syllabus_ver2_1.md#記憶媒体破棄消去), [`クリアデスク・クリアスクリーン`](glossary/syllabus_ver2_1.md#クリアデスククリアスクリーン)
+  [`物理的セキュリティ境界`](glossary/syllabus_ver2_1.md#物理的セキュリティ境界), [`入退管理システム`](glossary/syllabus_ver2_1.md#入退管理システム), [`監視カメラ(CCTV)`](glossary/syllabus_ver2_1.md#監視カメラ(cctv)), [`UPS(無停電電源装置)`](glossary/syllabus_ver2_1.md#ups(無停電電源装置)), [`記憶媒体破棄・消去`](glossary/syllabus_ver2_1.md#記憶媒体破棄消去), [`クリアデスク・クリアスクリーン`](glossary/syllabus_ver2_1.md#クリアデスククリアスクリーン)
 
 ### 3-8 アカウント管理及びアクセス管理
 - **大項目**: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること
@@ -429,7 +429,7 @@ graph TD
   - 責任追跡性を確保するための，特権的アクセスのログの記録，保護及びレビューの手順を設計する能力
   - 情報システムの重要性に応じた認証情報の割当て及び管理を設計する能力
 - **用語例・キーワード (全網羅)**:
-  [`RBAC (ロールベースアクセス制御)`](glossary/syllabus_ver2_1.md#rbac-(ロールベースアクセス制御)), [`ABAC (属性ベースアクセス制御)`](glossary/syllabus_ver2_1.md#abac-(属性ベースアクセス制御)), [`ID統合管理`](glossary/syllabus_ver2_1.md#id統合管理), [`特権アクセス管理 (PAM)`](glossary/syllabus_ver2_1.md#特権アクセス管理-(pam)), [`職務分掌 (SoD)`](glossary/syllabus_ver2_1.md#職務分掌-(sod)), [`最小権限の原則`](glossary/syllabus_ver2_1.md#最小権限の原則), [`アカウントライフサイクル管理`](glossary/syllabus_ver2_1.md#アカウントライフサイクル管理)
+  [`RBAC(ロールベースアクセス制御)`](glossary/syllabus_ver2_1.md#rbac(ロールベースアクセス制御)), [`ABAC(属性ベースアクセス制御)`](glossary/syllabus_ver2_1.md#abac(属性ベースアクセス制御)), [`ID統合管理`](glossary/syllabus_ver2_1.md#id統合管理), [`特権アクセス管理(PAM)`](glossary/syllabus_ver2_1.md#特権アクセス管理(pam)), [`職務分掌(SoD)`](glossary/syllabus_ver2_1.md#職務分掌(sod)), [`最小権限の原則`](glossary/syllabus_ver2_1.md#最小権限の原則), [`アカウントライフサイクル管理`](glossary/syllabus_ver2_1.md#アカウントライフサイクル管理)
 
 ### 3-9 人的管理
 - **大項目**: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること
@@ -443,7 +443,7 @@ graph TD
   - 内部不正防止を設計する能力
   - 組織，職務の変更，退職における情報管理プロセスを設計・評価する能力
 - **用語例・キーワード (全網羅)**:
-  [`組織における内部不正防止ガイドライン`](glossary/syllabus_ver2_1.md#組織における内部不正防止ガイドライン), [`内部脅威 (Insider Threat)`](glossary/syllabus_ver2_1.md#内部脅威-(insider-threat)), [`秘密保持契約 (NDA)`](glossary/syllabus_ver2_1.md#秘密保持契約-(nda)), [`職務分掌 (SoD)`](glossary/syllabus_ver2_1.md#職務分掌-(sod)), [`不正のトライアングル (機会`](glossary/syllabus_ver2_1.md#不正のトライアングル-(機会), [`動機`](glossary/syllabus_ver2_1.md#動機), [`正当化)`](glossary/syllabus_ver2_1.md#正当化)), [`退職時アカウント無効化`](glossary/syllabus_ver2_1.md#退職時アカウント無効化)
+  [`組織における内部不正防止ガイドライン`](glossary/syllabus_ver2_1.md#組織における内部不正防止ガイドライン), [`内部脅威(Insider Threat)`](glossary/syllabus_ver2_1.md#内部脅威(insider-threat)), [`秘密保持契約(NDA)`](glossary/syllabus_ver2_1.md#秘密保持契約(nda)), [`職務分掌(SoD)`](glossary/syllabus_ver2_1.md#職務分掌(sod)), [`不正のトライアングル(機会`](glossary/syllabus_ver2_1.md#不正のトライアングル(機会), [`動機`](glossary/syllabus_ver2_1.md#動機), [`正当化)`](glossary/syllabus_ver2_1.md#正当化)), [`退職時アカウント無効化`](glossary/syllabus_ver2_1.md#退職時アカウント無効化)
 
 ### 3-10 サプライチェーンの情報セキュリティの推進
 - **大項目**: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること
@@ -458,7 +458,7 @@ graph TD
   - 要求事項を設計する能力
   - ビジネスパートナー・委託先での要求事項への対応状況を評価する能力
 - **用語例・キーワード (全網羅)**:
-  [`サプライチェーンリスクマネジメント (SCRM)`](glossary/syllabus_ver2_1.md#サプライチェーンリスクマネジメント-(scrm)), [`サードパーティリスクマネジメント (TPRM)`](glossary/syllabus_ver2_1.md#サードパーティリスクマネジメント-(tprm)), [`委託先セキュリティ審査`](glossary/syllabus_ver2_1.md#委託先セキュリティ審査), [`再委託管理`](glossary/syllabus_ver2_1.md#再委託管理), [`SLA / NDA`](glossary/syllabus_ver2_1.md#sla-nda), [`委託先現地監査`](glossary/syllabus_ver2_1.md#委託先現地監査)
+  [`サプライチェーンリスクマネジメント(SCRM)`](glossary/syllabus_ver2_1.md#サプライチェーンリスクマネジメント(scrm)), [`サードパーティリスクマネジメント(TPRM)`](glossary/syllabus_ver2_1.md#サードパーティリスクマネジメント(tprm)), [`委託先セキュリティ審査`](glossary/syllabus_ver2_1.md#委託先セキュリティ審査), [`再委託管理`](glossary/syllabus_ver2_1.md#再委託管理), [`SLA / NDA`](glossary/syllabus_ver2_1.md#sla-nda), [`委託先現地監査`](glossary/syllabus_ver2_1.md#委託先現地監査)
 
 ### 3-11 コンプライアンス管理
 - **大項目**: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること
@@ -475,7 +475,7 @@ graph TD
   - 契約上の義務を確実に遂行する方法を設計する能力
   - コンプライアンス管理の重要性を関係者に伝達する手段を設計する能力
 - **用語例・キーワード (全網羅)**:
-  [`サイバーセキュリティ基本法`](glossary/syllabus_ver2_1.md#サイバーセキュリティ基本法), [`不正アクセス禁止法`](glossary/syllabus_ver2_1.md#不正アクセス禁止法), [`個人情報保護法 (Pマーク/APPI)`](glossary/syllabus_ver2_1.md#個人情報保護法-(pマーク-appi)), [`プロバイダ責任制限法`](glossary/syllabus_ver2_1.md#プロバイダ責任制限法), [`特定電子メール法`](glossary/syllabus_ver2_1.md#特定電子メール法), [`著作権法`](glossary/syllabus_ver2_1.md#著作権法), [`電子署名法`](glossary/syllabus_ver2_1.md#電子署名法), [`不正競争防止法`](glossary/syllabus_ver2_1.md#不正競争防止法), [`刑法`](glossary/syllabus_ver2_1.md#刑法)
+  [`サイバーセキュリティ基本法`](glossary/syllabus_ver2_1.md#サイバーセキュリティ基本法), [`不正アクセス禁止法`](glossary/syllabus_ver2_1.md#不正アクセス禁止法), [`個人情報保護法(Pマーク/APPI)`](glossary/syllabus_ver2_1.md#個人情報保護法(pマーク-appi)), [`プロバイダ責任制限法`](glossary/syllabus_ver2_1.md#プロバイダ責任制限法), [`特定電子メール法`](glossary/syllabus_ver2_1.md#特定電子メール法), [`著作権法`](glossary/syllabus_ver2_1.md#著作権法), [`電子署名法`](glossary/syllabus_ver2_1.md#電子署名法), [`不正競争防止法`](glossary/syllabus_ver2_1.md#不正競争防止法), [`刑法`](glossary/syllabus_ver2_1.md#刑法)
 
 ---
 
@@ -495,7 +495,7 @@ graph TD
   - 情報セキュリティインシデントの管理に関する規程を検討する能力
   - 情報セキュリティ事象を情報セキュリティインシデントとするかの判断基準，及び対応の優先順位の判断基準を設計する能力
 - **用語例・キーワード (全網羅)**:
-  [`CSIRT (Computer Security Incident Response Team)`](glossary/syllabus_ver2_1.md#csirt-(computer-security-incident-response-team)), [`SOC (Security Operations Center)`](glossary/syllabus_ver2_1.md#soc-(security-operations-center)), [`PSIRT`](glossary/syllabus_ver2_1.md#psirt), [`インシデントハンドリング規程`](glossary/syllabus_ver2_1.md#インシデントハンドリング規程), [`エスカレーションフロー`](glossary/syllabus_ver2_1.md#エスカレーションフロー), [`JPCERT/CC`](glossary/syllabus_ver2_1.md#jpcert-cc), [`NISC`](glossary/syllabus_ver2_1.md#nisc), [`FIRST`](glossary/syllabus_ver2_1.md#first)
+  [`CSIRT(Computer Security Incident Response Team)`](glossary/syllabus_ver2_1.md#csirt(computer-security-incident-response-team)), [`SOC(Security Operations Center)`](glossary/syllabus_ver2_1.md#soc(security-operations-center)), [`PSIRT`](glossary/syllabus_ver2_1.md#psirt), [`インシデントハンドリング規程`](glossary/syllabus_ver2_1.md#インシデントハンドリング規程), [`エスカレーションフロー`](glossary/syllabus_ver2_1.md#エスカレーションフロー), [`JPCERT/CC`](glossary/syllabus_ver2_1.md#jpcert-cc), [`NISC`](glossary/syllabus_ver2_1.md#nisc), [`FIRST`](glossary/syllabus_ver2_1.md#first)
 
 ### 4-2 情報セキュリティインシデントの初動対応
 - **大項目**: 4. 情報セキュリティインシデント管理の推進又は支援に関すること
@@ -509,7 +509,7 @@ graph TD
   - 初動対応を設計する能力
   - 情報セキュリティ事象の影響度，緊急度を迅速に判定し，指示・助言する能力
 - **用語例・キーワード (全網羅)**:
-  [`トリアージ (Triage)`](glossary/syllabus_ver2_1.md#トリアージ-(triage)), [`初動対応 (Initial Response)`](glossary/syllabus_ver2_1.md#初動対応-(initial-response)), [`被害拡散防止・ネットワーク隔離`](glossary/syllabus_ver2_1.md#被害拡散防止ネットワーク隔離), [`緊急連絡網・エスカレーション`](glossary/syllabus_ver2_1.md#緊急連絡網エスカレーション), [`影響度・緊急度判定`](glossary/syllabus_ver2_1.md#影響度緊急度判定)
+  [`トリアージ(Triage)`](glossary/syllabus_ver2_1.md#トリアージ(triage)), [`初動対応(Initial Response)`](glossary/syllabus_ver2_1.md#初動対応(initial-response)), [`被害拡散防止・ネットワーク隔離`](glossary/syllabus_ver2_1.md#被害拡散防止ネットワーク隔離), [`緊急連絡網・エスカレーション`](glossary/syllabus_ver2_1.md#緊急連絡網エスカレーション), [`影響度・緊急度判定`](glossary/syllabus_ver2_1.md#影響度緊急度判定)
 
 ### 4-3 情報セキュリティインシデントへの対応
 - **大項目**: 4. 情報セキュリティインシデント管理の推進又は支援に関すること
@@ -529,7 +529,7 @@ graph TD
   - 再発防止及び対応改善のための教訓を教育・訓練に反映する能力
   - マルウェア解析を支援する能力
 - **用語例・キーワード (全網羅)**:
-  [`根本原因分析 (RCA)`](glossary/syllabus_ver2_1.md#根本原因分析-(rca)), [`再発防止策`](glossary/syllabus_ver2_1.md#再発防止策), [`被害・損失評価`](glossary/syllabus_ver2_1.md#被害損失評価), [`事後レビュー (Lessons Learned)`](glossary/syllabus_ver2_1.md#事後レビュー-(lessons-learned)), [`インシデント報告書・対外公表`](glossary/syllabus_ver2_1.md#インシデント報告書対外公表), [`マルウェア解析 (動的/静的)`](glossary/syllabus_ver2_1.md#マルウェア解析-(動的-静的))
+  [`根本原因分析(RCA)`](glossary/syllabus_ver2_1.md#根本原因分析(rca)), [`再発防止策`](glossary/syllabus_ver2_1.md#再発防止策), [`被害・損失評価`](glossary/syllabus_ver2_1.md#被害損失評価), [`事後レビュー(Lessons Learned)`](glossary/syllabus_ver2_1.md#事後レビュー(lessons-learned)), [`インシデント報告書・対外公表`](glossary/syllabus_ver2_1.md#インシデント報告書対外公表), [`マルウェア解析(動的/静的)`](glossary/syllabus_ver2_1.md#マルウェア解析(動的-静的))
 
 ### 4-4 証拠の収集及び分析
 - **大項目**: 4. 情報セキュリティインシデント管理の推進又は支援に関すること
@@ -546,7 +546,7 @@ graph TD
   - 証拠保全の対象（デスクトップPC，ノートPC，サーバ，記憶媒体），電源の状態などに応じた証拠保全方法を設計する能力
   - 証拠を分析する能力
 - **用語例・キーワード (全網羅)**:
-  [`デジタルフォレンジック`](glossary/syllabus_ver2_1.md#デジタルフォレンジック), [`証拠保全 (Chain of Custody)`](glossary/syllabus_ver2_1.md#証拠保全-(chain-of-custody)), [`揮発性順序 (Order of Volatility)`](glossary/syllabus_ver2_1.md#揮発性順序-(order-of-volatility)), [`ライトブロッカ`](glossary/syllabus_ver2_1.md#ライトブロッカ), [`ディスクイメージング`](glossary/syllabus_ver2_1.md#ディスクイメージング), [`メモリフォレンジック`](glossary/syllabus_ver2_1.md#メモリフォレンジック), [`タイムスタンプ分析`](glossary/syllabus_ver2_1.md#タイムスタンプ分析)
+  [`デジタルフォレンジック`](glossary/syllabus_ver2_1.md#デジタルフォレンジック), [`証拠保全(Chain of Custody)`](glossary/syllabus_ver2_1.md#証拠保全(chain-of-custody)), [`揮発性順序(Order of Volatility)`](glossary/syllabus_ver2_1.md#揮発性順序(order-of-volatility)), [`ライトブロッカ`](glossary/syllabus_ver2_1.md#ライトブロッカ), [`ディスクイメージング`](glossary/syllabus_ver2_1.md#ディスクイメージング), [`メモリフォレンジック`](glossary/syllabus_ver2_1.md#メモリフォレンジック), [`タイムスタンプ分析`](glossary/syllabus_ver2_1.md#タイムスタンプ分析)
 
 ---
 
