@@ -8,7 +8,7 @@
 
 | ID | 種別 | タイトル | 優先度 | ステータス | 担当・リンク |
 |---|---|---|---|---|---|
-| 019 | Feature | [用語辞書 (docs/glossary/*) における全専門用語の解説内容の拡充と質的向上](019-expand-glossary-detailed-explanations.md) | Medium | Open (New) | [019-expand-glossary-detailed-explanations.md](019-expand-glossary-detailed-explanations.md) |
+| 019 | Feature | [用語辞書 (docs/glossary/*) における全専門用語の解説内容の拡充と重要用語 (ST/SA等) のページ分割体系化](019-expand-glossary-detailed-explanations.md) | Medium | In Progress | [019-expand-glossary-detailed-explanations.md](019-expand-glossary-detailed-explanations.md) |
 
 ---
 
