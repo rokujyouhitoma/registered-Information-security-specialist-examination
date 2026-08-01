@@ -41,7 +41,21 @@ author: "Information Security Specialist Agent"
    - 午後記述試験で問われやすいキーワードや模範解答フレーズは、強調表記 (`**` や引用ブロック `>`) で際立たせる。
 
 5. **相対パス強制ルール**:
-   - リポジトリ内のすべてのリンク・画像指定は相対パス（例: `../references/syllabus_sc_ver2_1.pdf`）を使用し、ローカル環境依存の絶対パス (`file:///workspace/...`, `file:///root/...`) を一切含めないこと。
+   - リポジトリ内のすべてのハイパーリンク・画像埋め込みは相対パスを使用し、環境依存の絶対パス（`file:///workspace/...`, `file:///root/...`, `/workspace/...`）を絶対に使用しないでください。
+   - GitHub Pages, Git ローカルリポジトリ, IDE（VSCode等）等の異なる閲覧環境でもリンク切れが発生しないようにするためです。
+   
+   #### ❌ NG 例（使用禁止）
+   - `[シラバス](file:///workspace/registered-Information-security-specialist-examination/references/syllabus.pdf)` (ローカル絶対パス)
+   - `[シラバス](/workspace/registered-Information-security-specialist-examination/references/syllabus.pdf)` (ルート絶対パス)
+   - `<a href="file:///root/.gemini/...">` (環境固有パス)
+
+   #### ⭕ OK 例（推奨）
+   - `[シラバス](../references/syllabus.pdf)` (1階層上のディレクトリ参照)
+   - `[用語集](glossary.md)` (同階層の参照)
+   - `[詳細](../docs/syllabus_detail.md#L10-L20)` (アンカー指定を含む相対パス)
+
+   > [!NOTE]
+   > 規約の説明文など、インラインコード内（` `file:///...` `）で絶対パスの例を挙げることは許可されますが、`[text](url)` や `<a href="url">` などの実効ハイパーリンク・画像タグ内での使用は厳禁です。
 
 ---
 

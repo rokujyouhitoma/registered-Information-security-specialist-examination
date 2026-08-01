@@ -8,7 +8,6 @@
 
 | ID | 種別 | タイトル | 優先度 | ステータス | 担当・リンク |
 |---|---|---|---|---|---|
-| 008 | Refactor | [絶対パス排除と相対パス表記ルールの厳格化](008-enforce-relative-path-rules.md) | Medium | In Progress | [008-enforce-relative-path-rules.md](008-enforce-relative-path-rules.md) |
 | 011 | Documentation | [一次情報 (references/*) および検証スクリプトの管理規約策定](011-reference-data-asset-management-rules.md) | Low | In Progress | [011-reference-data-asset-management-rules.md](011-reference-data-asset-management-rules.md) |
 | 014 | Process | [IPAシラバス改定追従プロセス & 変更履歴 (Changelog) の運用](014-syllabus-update-changelog-governance.md) | Low | In Progress | [014-syllabus-update-changelog-governance.md](014-syllabus-update-changelog-governance.md) |
 
@@ -18,6 +17,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 008 | Refactor | [絶対パス排除と相対パス表記ルールの厳格化](closed/008-enforce-relative-path-rules.md) | 2026-08-01 | [008-enforce-relative-path-rules.md](closed/008-enforce-relative-path-rules.md) |
 | 001 | Feature | [yuzoraリポジトリからのエージェント定義ファイル (.agents/agents/*) の取り込み](closed/001-import-yuzora-agents.md) | 2026-07-31 | [001-import-yuzora-agents.md](closed/001-import-yuzora-agents.md) |
 | 002 | Feature | [IPA公式シラバス資料 (/references/*) の収集・取り込み](closed/002-import-official-syllabus-references.md) | 2026-07-31 | [002-import-official-syllabus-references.md](closed/002-import-official-syllabus-references.md) |
 | 003 | Feature | [docs/syllabus_detail.md IPA公式シラバスVer.2.1完全準拠化](closed/003-syllabus-detail-official-alignment.md) | 2026-07-31 | [003-syllabus-detail-official-alignment.md](closed/003-syllabus-detail-official-alignment.md) |

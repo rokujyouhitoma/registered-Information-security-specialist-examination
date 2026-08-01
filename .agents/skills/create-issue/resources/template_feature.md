@@ -20,7 +20,7 @@ ID: XXX
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
 <!-- 実装・変更・作成が必要なファイルパスやコンポーネントを記述します。 -->
-- [ ] [filename](file:///absolute/path/to/file)
+- [ ] [filename](../path/to/file)
 
 ---
 

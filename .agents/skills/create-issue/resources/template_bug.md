@@ -22,7 +22,7 @@ ID: XXX
 
 ## 2. 影響範囲と関連ファイル / Scope and Affected Files
 <!-- 調査・修正が必要なファイルパスやコンポーネントを記述します。 -->
-- [ ] [filename](file:///absolute/path/to/file)
+- [ ] [filename](../path/to/file)
 
 ---
 
