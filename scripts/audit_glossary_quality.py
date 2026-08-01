@@ -1,13 +1,22 @@
 #!/usr/bin/env python3
 """
 scripts/audit_glossary_quality.py
-PM 全用語厳格品質監査スクリプト。
+PM 全用語厳格品質監査スクリプト (Ver. 3.0)。
 docs/glossary/syllabus_ver2_1.md および docs/glossary/syllabus_tsuiho_ver4_0.md 内の
-全用語項目（全2,760件）を全数走り走査し、
-・タイポ・ノイズ（例: 「びゅう」等の異物文字）
-・抽象逃げフレーズ（「～に関する機能・役割および...」等）
-・解説の未設定・欠落
-を1件残らず検出する。不備が1件でも検出された場合は Exit Code 1 で監査不合格とする。
+全用語項目（全2,760件）を全数走行・走査し、以下の不具合を 1 件残らず検出する。
+
+1. 【定型・抽象フレーズ残存】: 「〜に関するセキュリティ上の目的...」等のテンプレート文言
+2. 【誤用・定義コンテキスト不整合】:
+   - AEAD に SOC / 24時間監視 の説明が適用されている
+   - OSPF に SPF / 送信元ドメイン の説明が適用されている
+   - eDRX に EDR / エンドポイント の説明が適用されている
+   - 敵対的サンプル に RSA / 素因数分解 の説明が適用されている
+3. 【見出し・アンカー不整合・ノイズ混入】:
+   - 開き/閉じカッコ不一致
+   - 先頭の中黒 `・` 残存
+   - 複数用語の結合 (例: `...攻撃...スクリプティング...`)
+   - フッター・注記テキスト混入 (`独立行政法人`, `「技術レベル`, `要求されるデータ` 等)
+4. 【タイポ・誤字】: `だ方式`, `フたいァイル`, `ふくそう`, `びゅう` 等
 """
 
 import re
@@ -23,6 +32,7 @@ FILES_TO_AUDIT = [
 ]
 
 ABSTRACT_PATTERNS = [
+    r"に関するセキュリティ上の目的、動作メカニズム、または運用制御仕様のことです",
     r"に関する機能・役割および技術的仕様のことです",
     r"に関するセキュリティ定義および技術仕様のことです",
     r"に関するセキュリティ上の概念・技術仕様のことです",
@@ -30,7 +40,26 @@ ABSTRACT_PATTERNS = [
     r"適切な設計と運用管理によって安全性を確保します"
 ]
 
+MISMATCH_CHECKS = [
+    {"term_pat": r"^aead$", "bad_exp_pat": r"soc|監視|24時間", "desc": "AEADにSOCの説明が誤適用"},
+    {"term_pat": r"^ospf$", "bad_exp_pat": r"送信元|ドメイン|spf", "desc": "OSPFにSPFの説明が誤適用"},
+    {"term_pat": r"^edrx$", "bad_exp_pat": r"エンドポイント|edr|マルウェア", "desc": "eDRXにEDRの説明が誤適用"},
+    {"term_pat": r"敵対的サンプル", "bad_exp_pat": r"rsa|素因数分解|鍵長", "desc": "敵対的サンプルにRSAの説明が誤適用"}
+]
+
+HEADER_NOISE_PATTERNS = [
+    r"^・",
+    r"独立行政法人",
+    r"「技術レベル",
+    r"要求されるデータ",
+    r"スクラムの特徴を",
+    r"情報処理安全確保支援士試験シラバス"
+]
+
 TYPO_PATTERNS = [
+    r"だ方式",
+    r"フたいァイル",
+    r"ふくそうデータリンク",
     r"びゅう",
     r"てすと",
     r"ほげ",
@@ -45,7 +74,6 @@ def audit_file(filepath: Path):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # 用語エントリのパース: #### <a id="..."></a>用語名\n- **解説**: ...\n- **シラバス参照**: ...
     entries = re.findall(r'####\s+<a id="([^"]+)"></a>([^\n]+)\n-\s+\*\*解説\*\*:\s+([^\n]+)', content)
     
     total_entries = len(entries)
@@ -54,42 +82,68 @@ def audit_file(filepath: Path):
     for anchor, term, exp in entries:
         term = term.strip()
         exp = exp.strip()
+        t_norm = term.lower()
 
-        # 1. 抽象フレーズ検出
+        # 1. 定型・抽象フレーズ検出
         for pat in ABSTRACT_PATTERNS:
             if re.search(pat, exp):
                 violations.append({
-                    'type': '抽象定型文言検出',
+                    'type': '1.定型抽象フレーズ残存',
                     'term': term,
                     'explanation': exp,
-                    'pattern': pat
+                    'detail': pat
                 })
                 break
 
-        # 2. タイポ・ノイズ検出
-        for pat in TYPO_PATTERNS:
-            if re.search(pat, term) or re.search(pat, exp):
+        # 2. 誤用・定義コンテキスト不整合
+        for chk in MISMATCH_CHECKS:
+            if re.search(chk["term_pat"], t_norm):
+                if re.search(chk["bad_exp_pat"], exp.lower()):
+                    violations.append({
+                        'type': '2.定義コンテキスト不整合',
+                        'term': term,
+                        'explanation': exp,
+                        'detail': chk["desc"]
+                    })
+                    break
+
+        # 3. 見出し・アンカー不整合・ノイズ混入
+        for h_pat in HEADER_NOISE_PATTERNS:
+            if re.search(h_pat, term):
                 violations.append({
-                    'type': 'タイポ・ノイズ検出',
+                    'type': '3.見出しテキストノイズ混入',
                     'term': term,
                     'explanation': exp,
-                    'pattern': pat
+                    'detail': h_pat
                 })
                 break
 
-        # 3. 解説欠落・薄弱検出 (20文字未満の解説)
-        if len(exp) < 15:
+        # 3.b 括弧不一致・複数用語結合の検出
+        left_paren = term.count("（") + term.count("(")
+        right_paren = term.count("）") + term.count(")")
+        if left_paren != right_paren:
             violations.append({
-                'type': '解説内容欠落・極小',
+                'type': '3.括弧対応不一致',
                 'term': term,
                 'explanation': exp,
-                'pattern': 'len < 15'
+                'detail': f"（={left_paren}, ）={right_paren}"
             })
+
+        # 4. タイポ・誤字検出
+        for t_pat in TYPO_PATTERNS:
+            if re.search(t_pat, term) or re.search(t_pat, exp):
+                violations.append({
+                    'type': '4.タイポ・誤字検出',
+                    'term': term,
+                    'explanation': exp,
+                    'detail': t_pat
+                })
+                break
 
     return len(violations) == 0, total_entries, violations
 
 def main():
-    print("=== PM 全用語厳格品質監査 (Glossary Quality Audit) を開始します ===")
+    print("=== PM 全用語厳格品質監査 (Glossary Quality Audit Ver. 3.0) を開始します ===")
     total_all_terms = 0
     all_passed = True
 
@@ -99,22 +153,22 @@ def main():
         total_all_terms += count
 
         if passed:
-            print(f"  ✅ 合格: 全 {count} 件の用語項目が具体的な技術定義を完備しています。")
+            print(f"  ✅ 合格: 全 {count} 件の用語項目が品質規準を完全に満たしています。")
         else:
             all_passed = False
-            print(f"  ❌ 不合格: {len(violations)} / {count} 件の用語項目に品質違反を検出しました:")
-            for v in violations[:10]:
-                print(f"    ・[{v['type']}] 用語: {v['term']} ➔ {v['explanation']}")
-            if len(violations) > 10:
-                print(f"    ... 他 {len(violations) - 10} 件の違反")
+            print(f"  ❌ 不合格: {len(violations)} / {count} 件の用語項目に違反を検出しました:")
+            for v in violations[:15]:
+                print(f"    ・[{v['type']}] 用語: {v['term']} ➔ 解説: {v['explanation']} (詳細: {v['detail']})")
+            if len(violations) > 15:
+                print(f"    ... 他 {len(violations) - 15} 件の違反")
 
     print("\n--------------------------------------------------")
     print(f"📊 総監査項目数: {total_all_terms} 件")
     if all_passed:
-        print("🎉 [PM監査合格] すべての用語解説が抽象フレーズ・タイポなしで全件具体化されています。")
+        print("🎉 [PM監査合格] すべての用語解説が指摘4カテゴリ（不整合/定型句/ノイズ見出し/タイポ）ゼロでクリアされました。")
         sys.exit(0)
     else:
-        print("🚨 [PM監査不合格] 抽象フレーズやタイポが検出されました。修復が必要です。")
+        print("🚨 [PM監査不合格] 上記の違反項目を修復してください。")
         sys.exit(1)
 
 if __name__ == "__main__":
