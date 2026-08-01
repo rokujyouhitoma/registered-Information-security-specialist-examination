@@ -26,8 +26,8 @@ ID: 019
 - [ ] [docs/glossary/syllabus_ver2_1.md](../docs/glossary/syllabus_ver2_1.md)
 - [ ] [docs/glossary/syllabus_tsuiho_ver4_0.md](../docs/glossary/syllabus_tsuiho_ver4_0.md)
 - [ ] [docs/glossary/terms/*.md](../docs/glossary/terms/) (新規作成: 重要用語の個別詳細解説ページ)
-- [ ] [references/nist_sp800_207_zero_trust_summary.md](../references/nist_sp800_207_zero_trust_summary.md) (新規追加: NIST SP 800-207 参考資料)
-- [ ] [references/cryptrec_ciphers_list_2025.md](../references/cryptrec_ciphers_list_2025.md) (新規追加: CRYPTREC 暗号リスト参考資料)
+- [ ] [references/nist_sp800_207.pdf](../references/nist_sp800_207.pdf) (原本資料: NIST SP 800-207 Zero Trust Architecture)
+- [ ] [references/cryptrec_ciphers_list.pdf](../references/cryptrec_ciphers_list.pdf) (原本資料: CRYPTREC 電子政府推奨暗号リスト)
 - [ ] [references/README.md](../references/README.md) (一次情報カタログ更新)
 - [ ] [mkdocs.yml](../mkdocs.yml) (ナビゲーション拡張)
 

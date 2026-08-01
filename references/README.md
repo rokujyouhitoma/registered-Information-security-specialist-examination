@@ -27,12 +27,12 @@
 
 ---
 
-## 📑 3. セキュリティ標準・ガイドライン参考資料 (NIST SP 800 / CRYPTREC)
+## 📑 3. セキュリティ標準・ガイドライン原本資料 (NIST SP 800 / CRYPTREC)
 
-| ファイル名 | 分類・原典タイトル | タイプ | 公式URL / 原典 |
+| ファイル名 | 分類・原典タイトル | サイズ | 公式URL / 原典 |
 |---|---|---|---|
-| [`nist_sp800_207_zero_trust_summary.md`](nist_sp800_207_zero_trust_summary.md) | NIST SP 800-207 ゼロトラスト・アーキテクチャ 要約参照ガイド | Markdown | [NIST CSRC (SP 800-207)](https://csrc.nist.gov/publications/detail/sp/800-207/final) |
-| [`cryptrec_ciphers_list_2025.md`](cryptrec_ciphers_list_2025.md) | CRYPTREC 電子政府推奨暗号リスト 要約参照ガイド | Markdown | [CRYPTREC公式](https://www.cryptrec.go.jp/list.html) |
+| `nist_sp800_207.pdf` | NIST SP 800-207 Zero Trust Architecture (ゼロトラスト・アーキテクチャ原本仕様書) | 945 KB | [NIST CSRC (NIST.SP.800-207.pdf)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf) |
+| `cryptrec_ciphers_list.pdf` | CRYPTREC 電子政府推奨暗号リスト (公式仕様書原本) | 161 KB | [CRYPTREC (cryptrec-ls-0001-2022r1.pdf)](https://www.cryptrec.go.jp/list/cryptrec-ls-0001-2022r1.pdf) |
 
 ---
 
