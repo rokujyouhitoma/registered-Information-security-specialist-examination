@@ -49,5 +49,9 @@ nav:
       - シラバス概要: syllabus.md
       - 公式シラバス Ver.2.1 詳細: syllabus_detail.md
       - 科目A-2 追補版 Ver.4.0 詳細: syllabus_tsuiho_detail.md
+  - 総合用語辞書 (Glossary):
+      - 用語インデックス: glossary/index.md
+      - シラバスVer.2.1 用語辞書: glossary/syllabus_ver2_1.md
+      - 追補版Ver.4.0 用語辞書: glossary/syllabus_tsuiho_ver4_0.md
   - 試験対策ガイド:
       - 試験概要: exam_overview.md
