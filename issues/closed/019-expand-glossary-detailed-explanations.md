@@ -1,7 +1,7 @@
 ---
 ID: 019
 種別: Feature
-優先度: Medium
+優先度: High
 ステータス: Closed
 ---
 
