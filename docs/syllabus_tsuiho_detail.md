@@ -51,7 +51,7 @@ graph TD
 維持することによって，様々な脅威から情報システム及び情報を保護し，情報システムの信
 頼性を高めることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `機密性（Confidentiality）`, `完全性（Integrity）`, `可用性（Availability）`, `真正 性 （ Authenticity ）`, `責任 追跡 性 （ Accountability ）`, `否認 防止 （ NonRepudiation）`, `信頼性（Reliability）`, `多層防御`, `セキュリティバイデザイン （セキュアバイデザイン）`, `プライバシーバイデザイン`
+    [`機密性（Confidentiality）`](glossary/syllabus_tsuiho_ver4_0.md#機密性（confidentiality）), [`完全性（Integrity）`](glossary/syllabus_tsuiho_ver4_0.md#完全性（integrity）), [`可用性（Availability）`](glossary/syllabus_tsuiho_ver4_0.md#可用性（availability）), [`真正 性 （ Authenticity ）`](glossary/syllabus_tsuiho_ver4_0.md#真正-性-（-authenticity-）), [`責任 追跡 性 （ Accountability ）`](glossary/syllabus_tsuiho_ver4_0.md#責任-追跡-性-（-accountability-）), [`否認 防止 （ NonRepudiation）`](glossary/syllabus_tsuiho_ver4_0.md#否認-防止-（-nonrepudiation）), [`信頼性（Reliability）`](glossary/syllabus_tsuiho_ver4_0.md#信頼性（reliability）), [`多層防御`](glossary/syllabus_tsuiho_ver4_0.md#多層防御), [`セキュリティバイデザイン （セキュアバイデザイン）`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティバイデザイン-（セキュアバイデザイン）), [`プライバシーバイデザイン`](glossary/syllabus_tsuiho_ver4_0.md#プライバシーバイデザイン)
 
 
 ##### （2）情報セキュリティの重要性
@@ -60,7 +60,7 @@ graph TD
 向上につながること，情報システム関連の事故が事業の存続を脅かす可能性があることから，
 情報セキュリティの重要性を理解する。
   - **用語例・キーワード (全網羅)**:
-    `情報資産`, `脅威`, `脆弱性`, `サイバー攻撃`
+    [`情報資産`](glossary/syllabus_tsuiho_ver4_0.md#情報資産), [`脅威`](glossary/syllabus_tsuiho_ver4_0.md#脅威), [`脆弱性`](glossary/syllabus_tsuiho_ver4_0.md#脆弱性), [`サイバー攻撃`](glossary/syllabus_tsuiho_ver4_0.md#サイバー攻撃)
 
 
 ##### （3）脅威
@@ -70,14 +70,14 @@ graph TD
 
 情報資産に対する様々な脅威を理解する。
   - **用語例・キーワード (全網羅)**:
-    `事故`, `災害`, `故障`, `破壊`, `盗難`, `侵入`, `不正アクセス`, `盗聴`, `なりすまし`, `改ざん`, `エラー`, `クラッキング`, `ビジネスメール詐欺（BEC）`, `権限昇格`, `誤操作`, `アクセス権の誤設定`, `紛失`, `破損`, `盗み見`, `不正利用`, `ソーシャルエンジニアリンびゅうグ`, `情報漏えい`, `故意`, `過失`, `誤謬`, `内部不正`, `妨害行為`, `SNSの悪用`, `踏み台`, `迷惑メール（スパム）`, `AIに対する脅威`, `攻撃ベクトル（Attack Vector）`, `攻撃対象領域（アタックサーフェス：Attack Surface）`
+    [`事故`](glossary/syllabus_tsuiho_ver4_0.md#事故), [`災害`](glossary/syllabus_tsuiho_ver4_0.md#災害), [`故障`](glossary/syllabus_tsuiho_ver4_0.md#故障), [`破壊`](glossary/syllabus_tsuiho_ver4_0.md#破壊), [`盗難`](glossary/syllabus_tsuiho_ver4_0.md#盗難), [`侵入`](glossary/syllabus_tsuiho_ver4_0.md#侵入), [`不正アクセス`](glossary/syllabus_tsuiho_ver4_0.md#不正アクセス), [`盗聴`](glossary/syllabus_tsuiho_ver4_0.md#盗聴), [`なりすまし`](glossary/syllabus_tsuiho_ver4_0.md#なりすまし), [`改ざん`](glossary/syllabus_tsuiho_ver4_0.md#改ざん), [`エラー`](glossary/syllabus_tsuiho_ver4_0.md#エラー), [`クラッキング`](glossary/syllabus_tsuiho_ver4_0.md#クラッキング), [`ビジネスメール詐欺（BEC）`](glossary/syllabus_tsuiho_ver4_0.md#ビジネスメール詐欺（bec）), [`権限昇格`](glossary/syllabus_tsuiho_ver4_0.md#権限昇格), [`誤操作`](glossary/syllabus_tsuiho_ver4_0.md#誤操作), [`アクセス権の誤設定`](glossary/syllabus_tsuiho_ver4_0.md#アクセス権の誤設定), [`紛失`](glossary/syllabus_tsuiho_ver4_0.md#紛失), [`破損`](glossary/syllabus_tsuiho_ver4_0.md#破損), [`盗み見`](glossary/syllabus_tsuiho_ver4_0.md#盗み見), [`不正利用`](glossary/syllabus_tsuiho_ver4_0.md#不正利用), [`ソーシャルエンジニアリンびゅうグ`](glossary/syllabus_tsuiho_ver4_0.md#ソーシャルエンジニアリンびゅうグ), [`情報漏えい`](glossary/syllabus_tsuiho_ver4_0.md#情報漏えい), [`故意`](glossary/syllabus_tsuiho_ver4_0.md#故意), [`過失`](glossary/syllabus_tsuiho_ver4_0.md#過失), [`誤謬`](glossary/syllabus_tsuiho_ver4_0.md#誤謬), [`内部不正`](glossary/syllabus_tsuiho_ver4_0.md#内部不正), [`妨害行為`](glossary/syllabus_tsuiho_ver4_0.md#妨害行為), [`SNSの悪用`](glossary/syllabus_tsuiho_ver4_0.md#snsの悪用), [`踏み台`](glossary/syllabus_tsuiho_ver4_0.md#踏み台), [`迷惑メール（スパム）`](glossary/syllabus_tsuiho_ver4_0.md#迷惑メール（スパム）), [`AIに対する脅威`](glossary/syllabus_tsuiho_ver4_0.md#aiに対する脅威), [`攻撃ベクトル（Attack Vector）`](glossary/syllabus_tsuiho_ver4_0.md#攻撃ベクトル（attack-vector）), [`攻撃対象領域（アタックサーフェス：Attack Surface）`](glossary/syllabus_tsuiho_ver4_0.md#攻撃対象領域（アタックサーフェスattack-surface）)
 
 
 ###### ② マルウェア・不正プログラム
 
 マルウェア・不正プログラムの種類とその振る舞いを理解する。
   - **用語例・キーワード (全網羅)**:
-    `コンピュータウイルス`, `マクロウイルス`, `ワーム`, `ボット（ボットネット`, `遠隔操作型ウイルス（RAT：Remote Access Trojan）`, `C&Cサーバ）`, `コネクトバック`, `リバースシェル`, `トロイの木馬`, `スパイウェア`, `ランサムウェア`, `キーロガー`, `ルートキット`, `バックドア`, `ステルス技術（ポリモーフィック型`, `メタモーフィック型ほか）`, `ファイルレスマルウェア`, `エクスプロイトコード`, `エクスプロイトキット`
+    [`コンピュータウイルス`](glossary/syllabus_tsuiho_ver4_0.md#コンピュータウイルス), [`マクロウイルス`](glossary/syllabus_tsuiho_ver4_0.md#マクロウイルス), [`ワーム`](glossary/syllabus_tsuiho_ver4_0.md#ワーム), [`ボット（ボットネット`](glossary/syllabus_tsuiho_ver4_0.md#ボット（ボットネット), [`遠隔操作型ウイルス（RAT：Remote Access Trojan）`](glossary/syllabus_tsuiho_ver4_0.md#遠隔操作型ウイルス（ratremote-access-trojan）), [`C&Cサーバ）`](glossary/syllabus_tsuiho_ver4_0.md#ccサーバ）), [`コネクトバック`](glossary/syllabus_tsuiho_ver4_0.md#コネクトバック), [`リバースシェル`](glossary/syllabus_tsuiho_ver4_0.md#リバースシェル), [`トロイの木馬`](glossary/syllabus_tsuiho_ver4_0.md#トロイの木馬), [`スパイウェア`](glossary/syllabus_tsuiho_ver4_0.md#スパイウェア), [`ランサムウェア`](glossary/syllabus_tsuiho_ver4_0.md#ランサムウェア), [`キーロガー`](glossary/syllabus_tsuiho_ver4_0.md#キーロガー), [`ルートキット`](glossary/syllabus_tsuiho_ver4_0.md#ルートキット), [`バックドア`](glossary/syllabus_tsuiho_ver4_0.md#バックドア), [`ステルス技術（ポリモーフィック型`](glossary/syllabus_tsuiho_ver4_0.md#ステルス技術（ポリモーフィック型), [`メタモーフィック型ほか）`](glossary/syllabus_tsuiho_ver4_0.md#メタモーフィック型ほか）), [`ファイルレスマルウェア`](glossary/syllabus_tsuiho_ver4_0.md#ファイルレスマルウェア), [`エクスプロイトコード`](glossary/syllabus_tsuiho_ver4_0.md#エクスプロイトコード), [`エクスプロイトキット`](glossary/syllabus_tsuiho_ver4_0.md#エクスプロイトキット)
 
 
 ##### （4）脆弱性
@@ -85,7 +85,7 @@ graph TD
 情報システムの情報セキュリティに関する欠陥，行動規範・職務分掌の組織での未整備，
 従業員への不徹底などの脆弱性を理解する。
   - **用語例・キーワード (全網羅)**:
-    `バグ`, `セキュリティホール`, `人的脆弱性`, `内部統制の不備`, `シャドーIT`, `バッファエラー`, `認可・権限・アクセス制御の不備`, `不適切な入力確認`, `パスワードのハードコード`, `認証の欠如`, `重要情報の平文での保存・送信`, `レースコンディション`, `OWASP Top 10`
+    [`バグ`](glossary/syllabus_tsuiho_ver4_0.md#バグ), [`セキュリティホール`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティホール), [`人的脆弱性`](glossary/syllabus_tsuiho_ver4_0.md#人的脆弱性), [`内部統制の不備`](glossary/syllabus_tsuiho_ver4_0.md#内部統制の不備), [`シャドーIT`](glossary/syllabus_tsuiho_ver4_0.md#シャドーit), [`バッファエラー`](glossary/syllabus_tsuiho_ver4_0.md#バッファエラー), [`認可・権限・アクセス制御の不備`](glossary/syllabus_tsuiho_ver4_0.md#認可権限アクセス制御の不備), [`不適切な入力確認`](glossary/syllabus_tsuiho_ver4_0.md#不適切な入力確認), [`パスワードのハードコード`](glossary/syllabus_tsuiho_ver4_0.md#パスワードのハードコード), [`認証の欠如`](glossary/syllabus_tsuiho_ver4_0.md#認証の欠如), [`重要情報の平文での保存・送信`](glossary/syllabus_tsuiho_ver4_0.md#重要情報の平文での保存送信), [`レースコンディション`](glossary/syllabus_tsuiho_ver4_0.md#レースコンディション), [`OWASP Top 10`](glossary/syllabus_tsuiho_ver4_0.md#owasp-top-10)
 
 
 ##### （5）不正のメカニズム
@@ -93,7 +93,7 @@ graph TD
 不正行為が発生する要因，内部不正による情報セキュリティ事故・事件の発生を防止する
 ための環境整備の考え方を理解する。
   - **用語例・キーワード (全網羅)**:
-    `不正のトライアングル（機会`, `動機`, `正当化）`, `状況的犯罪予防`, `割れ窓理論`, `防犯環境設計`
+    [`不正のトライアングル（機会`](glossary/syllabus_tsuiho_ver4_0.md#不正のトライアングル（機会), [`動機`](glossary/syllabus_tsuiho_ver4_0.md#動機), [`正当化）`](glossary/syllabus_tsuiho_ver4_0.md#正当化）), [`状況的犯罪予防`](glossary/syllabus_tsuiho_ver4_0.md#状況的犯罪予防), [`割れ窓理論`](glossary/syllabus_tsuiho_ver4_0.md#割れ窓理論), [`防犯環境設計`](glossary/syllabus_tsuiho_ver4_0.md#防犯環境設計)
 
 
 ##### （6）攻撃者の種類，攻撃の動機
@@ -101,14 +101,14 @@ graph TD
 悪意をもった攻撃者の種類，及び攻撃者が不正・犯罪・攻撃を行う主な動機，流れ，パタ
 ーンを理解する。
   - **用語例・キーワード (全網羅)**:
-    `スクリプトキディ`, `ボットハーダー`, `内部犯`, `愉快犯`, `詐欺犯`, `故意犯`, `ダークウェブ`, `金銭奪取`, `二重脅迫（ダブルエクストーション）`, `ハクティビズム`, `サイバーテロリズム`, `リークサイト`, `脅威モデリング`, `サイバーキルチェーン`, `MITRE ATT&CK`, `MITRE CAPEC （ Common Attack Pattern Enumeration and Classification）`
+    [`スクリプトキディ`](glossary/syllabus_tsuiho_ver4_0.md#スクリプトキディ), [`ボットハーダー`](glossary/syllabus_tsuiho_ver4_0.md#ボットハーダー), [`内部犯`](glossary/syllabus_tsuiho_ver4_0.md#内部犯), [`愉快犯`](glossary/syllabus_tsuiho_ver4_0.md#愉快犯), [`詐欺犯`](glossary/syllabus_tsuiho_ver4_0.md#詐欺犯), [`故意犯`](glossary/syllabus_tsuiho_ver4_0.md#故意犯), [`ダークウェブ`](glossary/syllabus_tsuiho_ver4_0.md#ダークウェブ), [`金銭奪取`](glossary/syllabus_tsuiho_ver4_0.md#金銭奪取), [`二重脅迫（ダブルエクストーション）`](glossary/syllabus_tsuiho_ver4_0.md#二重脅迫（ダブルエクストーション）), [`ハクティビズム`](glossary/syllabus_tsuiho_ver4_0.md#ハクティビズム), [`サイバーテロリズム`](glossary/syllabus_tsuiho_ver4_0.md#サイバーテロリズム), [`リークサイト`](glossary/syllabus_tsuiho_ver4_0.md#リークサイト), [`脅威モデリング`](glossary/syllabus_tsuiho_ver4_0.md#脅威モデリング), [`サイバーキルチェーン`](glossary/syllabus_tsuiho_ver4_0.md#サイバーキルチェーン), [`MITRE ATT&CK`](glossary/syllabus_tsuiho_ver4_0.md#mitre-attck), [`MITRE CAPEC （ Common Attack Pattern Enumeration and Classification）`](glossary/syllabus_tsuiho_ver4_0.md#mitre-capec-（-common-attack-pattern-enumeration-and-classification）)
 
 
 ##### （7）攻撃手法
 
 情報システム，組織及び個人への不正な行為と手法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `・辞書攻撃`, `総当たり（ブルートフォース）攻撃`, `リバースブルートフォース攻撃`, `レインボーテーブル攻撃`, `パスワードリスト攻撃（クレデンシャルスタッフィング） ・クロスサイトスクリプティング（反射型`, `格納型`, `DOMベース）`, `クロスサイトリクエストフォージェリ`, `クリックジャッキング`, `ドライブバイダウンロード`, `SQLインジェクション`, `HTTPヘッダインジェクション`, `OSコマンドインジェクション`, `ディレクトリトラバーサル`, `バッファオーバーフロー`, `オープンリダイレクトの悪用 ・中間者（Man-in-the-middle）攻撃`, `MITB（Man-in-the-browser）攻撃`, `第三者中継（オープンリレー）`, `IPスプーフィング`, `DNSキャッシュポイズニング`, `フィッシング（スミッシングほか）`, `セッションハイジャック`, `セッション IDの 固定化（Session Fixation）攻撃`, `リプレイ攻撃`, `ドメインフロンティング攻撃`, `多要素認証疲労攻撃（Multi-Factor Authentication Fatigue Attack） ・DoS（Denial of Service：サービス妨害）攻撃`, `DDoS攻撃（マルチベクトル型ほか）`, `DRDoS攻撃`, `ICMP Flood攻撃`, `Smurf攻撃`, `リフレクション攻撃`, `DNS水 責め攻撃（ランダムサブドメイン攻撃）`, `クリプトジャッキング ・標的型攻撃（APT（Advanced Persistent Threat）`, `水飲み場型攻撃`, `やり取り型攻撃ほか）`, `SEOポイズニング ・ゼロデイ攻撃`, `サイドチャネル攻撃（テンペスト攻撃`, `プローブ攻撃`, `タイミング攻撃`, `電力解析攻撃など）`, `エアギャップに対する攻撃`, `サービス及びソフトウェアの機能の悪用（RLO（Right-to-Left Override）の悪用`, `オープンリゾルバの悪用ほか）`, `バージョンロールバック攻撃 ・AIを悪用した攻撃（標的型攻撃・フィッシング・なりすましの巧妙化`, `マルウェア（バリアント（亜種））の生成`, `システムの脆弱性発見の効率化ほか）`, `ディープフェイク`, `敵対的サンプル（Adversarial Examples）`, `プロンプトインジェクション`, `データポイズニング`, `モデルインバージョン攻撃`, `メンバーシップ推測攻撃 ・攻撃の準備（フットプリンティング`, `ポートスキャンほか）`, `RaaS（Ransomware as a Service）`, `ラテラルムーブメント`
+    [`・辞書攻撃`](glossary/syllabus_tsuiho_ver4_0.md#辞書攻撃), [`総当たり（ブルートフォース）攻撃`](glossary/syllabus_tsuiho_ver4_0.md#総当たり（ブルートフォース）攻撃), [`リバースブルートフォース攻撃`](glossary/syllabus_tsuiho_ver4_0.md#リバースブルートフォース攻撃), [`レインボーテーブル攻撃`](glossary/syllabus_tsuiho_ver4_0.md#レインボーテーブル攻撃), [`パスワードリスト攻撃（クレデンシャルスタッフィング） ・クロスサイトスクリプティング（反射型`](glossary/syllabus_tsuiho_ver4_0.md#パスワードリスト攻撃（クレデンシャルスタッフィング）-クロスサイトスクリプティング（反射型), [`格納型`](glossary/syllabus_tsuiho_ver4_0.md#格納型), [`DOMベース）`](glossary/syllabus_tsuiho_ver4_0.md#domベース）), [`クロスサイトリクエストフォージェリ`](glossary/syllabus_tsuiho_ver4_0.md#クロスサイトリクエストフォージェリ), [`クリックジャッキング`](glossary/syllabus_tsuiho_ver4_0.md#クリックジャッキング), [`ドライブバイダウンロード`](glossary/syllabus_tsuiho_ver4_0.md#ドライブバイダウンロード), [`SQLインジェクション`](glossary/syllabus_tsuiho_ver4_0.md#sqlインジェクション), [`HTTPヘッダインジェクション`](glossary/syllabus_tsuiho_ver4_0.md#httpヘッダインジェクション), [`OSコマンドインジェクション`](glossary/syllabus_tsuiho_ver4_0.md#osコマンドインジェクション), [`ディレクトリトラバーサル`](glossary/syllabus_tsuiho_ver4_0.md#ディレクトリトラバーサル), [`バッファオーバーフロー`](glossary/syllabus_tsuiho_ver4_0.md#バッファオーバーフロー), [`オープンリダイレクトの悪用 ・中間者（Man-in-the-middle）攻撃`](glossary/syllabus_tsuiho_ver4_0.md#オープンリダイレクトの悪用-中間者（man-in-the-middle）攻撃), [`MITB（Man-in-the-browser）攻撃`](glossary/syllabus_tsuiho_ver4_0.md#mitb（man-in-the-browser）攻撃), [`第三者中継（オープンリレー）`](glossary/syllabus_tsuiho_ver4_0.md#第三者中継（オープンリレー）), [`IPスプーフィング`](glossary/syllabus_tsuiho_ver4_0.md#ipスプーフィング), [`DNSキャッシュポイズニング`](glossary/syllabus_tsuiho_ver4_0.md#dnsキャッシュポイズニング), [`フィッシング（スミッシングほか）`](glossary/syllabus_tsuiho_ver4_0.md#フィッシング（スミッシングほか）), [`セッションハイジャック`](glossary/syllabus_tsuiho_ver4_0.md#セッションハイジャック), [`セッション IDの 固定化（Session Fixation）攻撃`](glossary/syllabus_tsuiho_ver4_0.md#セッション-idの-固定化（session-fixation）攻撃), [`リプレイ攻撃`](glossary/syllabus_tsuiho_ver4_0.md#リプレイ攻撃), [`ドメインフロンティング攻撃`](glossary/syllabus_tsuiho_ver4_0.md#ドメインフロンティング攻撃), [`多要素認証疲労攻撃（Multi-Factor Authentication Fatigue Attack） ・DoS（Denial of Service：サービス妨害）攻撃`](glossary/syllabus_tsuiho_ver4_0.md#多要素認証疲労攻撃（multi-factor-authentication-fatigue-attack）-dos（denial-of-serviceサービス妨害）攻撃), [`DDoS攻撃（マルチベクトル型ほか）`](glossary/syllabus_tsuiho_ver4_0.md#ddos攻撃（マルチベクトル型ほか）), [`DRDoS攻撃`](glossary/syllabus_tsuiho_ver4_0.md#drdos攻撃), [`ICMP Flood攻撃`](glossary/syllabus_tsuiho_ver4_0.md#icmp-flood攻撃), [`Smurf攻撃`](glossary/syllabus_tsuiho_ver4_0.md#smurf攻撃), [`リフレクション攻撃`](glossary/syllabus_tsuiho_ver4_0.md#リフレクション攻撃), [`DNS水 責め攻撃（ランダムサブドメイン攻撃）`](glossary/syllabus_tsuiho_ver4_0.md#dns水-責め攻撃（ランダムサブドメイン攻撃）), [`クリプトジャッキング ・標的型攻撃（APT（Advanced Persistent Threat）`](glossary/syllabus_tsuiho_ver4_0.md#クリプトジャッキング-標的型攻撃（apt（advanced-persistent-threat）), [`水飲み場型攻撃`](glossary/syllabus_tsuiho_ver4_0.md#水飲み場型攻撃), [`やり取り型攻撃ほか）`](glossary/syllabus_tsuiho_ver4_0.md#やり取り型攻撃ほか）), [`SEOポイズニング ・ゼロデイ攻撃`](glossary/syllabus_tsuiho_ver4_0.md#seoポイズニング-ゼロデイ攻撃), [`サイドチャネル攻撃（テンペスト攻撃`](glossary/syllabus_tsuiho_ver4_0.md#サイドチャネル攻撃（テンペスト攻撃), [`プローブ攻撃`](glossary/syllabus_tsuiho_ver4_0.md#プローブ攻撃), [`タイミング攻撃`](glossary/syllabus_tsuiho_ver4_0.md#タイミング攻撃), [`電力解析攻撃など）`](glossary/syllabus_tsuiho_ver4_0.md#電力解析攻撃など）), [`エアギャップに対する攻撃`](glossary/syllabus_tsuiho_ver4_0.md#エアギャップに対する攻撃), [`サービス及びソフトウェアの機能の悪用（RLO（Right-to-Left Override）の悪用`](glossary/syllabus_tsuiho_ver4_0.md#サービス及びソフトウェアの機能の悪用（rlo（right-to-left-override）の悪用), [`オープンリゾルバの悪用ほか）`](glossary/syllabus_tsuiho_ver4_0.md#オープンリゾルバの悪用ほか）), [`バージョンロールバック攻撃 ・AIを悪用した攻撃（標的型攻撃・フィッシング・なりすましの巧妙化`](glossary/syllabus_tsuiho_ver4_0.md#バージョンロールバック攻撃-aiを悪用した攻撃（標的型攻撃フィッシングなりすましの巧妙化), [`マルウェア（バリアント（亜種））の生成`](glossary/syllabus_tsuiho_ver4_0.md#マルウェア（バリアント（亜種））の生成), [`システムの脆弱性発見の効率化ほか）`](glossary/syllabus_tsuiho_ver4_0.md#システムの脆弱性発見の効率化ほか）), [`ディープフェイク`](glossary/syllabus_tsuiho_ver4_0.md#ディープフェイク), [`敵対的サンプル（Adversarial Examples）`](glossary/syllabus_tsuiho_ver4_0.md#敵対的サンプル（adversarial-examples）), [`プロンプトインジェクション`](glossary/syllabus_tsuiho_ver4_0.md#プロンプトインジェクション), [`データポイズニング`](glossary/syllabus_tsuiho_ver4_0.md#データポイズニング), [`モデルインバージョン攻撃`](glossary/syllabus_tsuiho_ver4_0.md#モデルインバージョン攻撃), [`メンバーシップ推測攻撃 ・攻撃の準備（フットプリンティング`](glossary/syllabus_tsuiho_ver4_0.md#メンバーシップ推測攻撃-攻撃の準備（フットプリンティング), [`ポートスキャンほか）`](glossary/syllabus_tsuiho_ver4_0.md#ポートスキャンほか）), [`RaaS（Ransomware as a Service）`](glossary/syllabus_tsuiho_ver4_0.md#raas（ransomware-as-a-service）), [`ラテラルムーブメント`](glossary/syllabus_tsuiho_ver4_0.md#ラテラルムーブメント)
 
 
 ##### （8）情報セキュリティに関する技術
@@ -119,7 +119,7 @@ graph TD
 脅威を防止するために用いられる暗号技術の活用を理解する。また，暗号化の種類，代
 表的な暗号方式の仕組み，特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `CRYPTREC暗号リスト`, `暗号方式（暗号化（暗号鍵）`, `復号（復号鍵）`, `共通鍵暗号だ 方式（共通鍵）`, `公開鍵暗号方式（公開鍵`, `秘密鍵））`, `RSA暗号`, `楕円曲線暗号 （ ECDSA ）`, `鍵共 有`, `Diffie-Hellman （ DH ） 鍵共 有方 式`, `前方 秘匿 性 （ PFS ： Perfect Forward Secrecy）`, `ハイブリッド暗号`, `認証暗号（認証付き暗号`, `AEAD：Authenticated Encryption with Associated Data）`, `秘密分散（電子割符）`, `秘密計算（秘密分散方式`, `準同型暗号方式）`, `量子暗号`, `耐量子暗号（PQC（Post Quantum Cryptography：耐量子計算機暗号）ほか）`, `ハッシュ関数（SHA-256 （SHA-2）`, `SHA-3`, `一方向性`, `第二原像発見困難性`, `衝突発見困難性ほか）`, `ブロック暗号（AES（Advanced Encryption Standard）`, `Camelliaほか）`, `暗号利用モ ード（CBC`, `CTRほか）`, `ストリーム暗号（KCipher-2ほか）`, `軽量暗号`, `鍵生成`, `疑似乱数`, `乱数生成`, `疑似乱数生成器（PRNG）`, `鍵管理`, `ストレージ暗号化`, `フたいァイル暗号化`, `危殆化`, `ゼロ知識証明`, `ブロックチェーン`, `SSL/TLS暗号設定ガイドライン`, `ワンタイムパッド`, `計算量（オーダー記号）`, `暗号強度（ビットセキュリティ）`, `情報量的安全性`, `計算量的安全性`
+    [`CRYPTREC暗号リスト`](glossary/syllabus_tsuiho_ver4_0.md#cryptrec暗号リスト), [`暗号方式（暗号化（暗号鍵）`](glossary/syllabus_tsuiho_ver4_0.md#暗号方式（暗号化（暗号鍵）), [`復号（復号鍵）`](glossary/syllabus_tsuiho_ver4_0.md#復号（復号鍵）), [`共通鍵暗号だ 方式（共通鍵）`](glossary/syllabus_tsuiho_ver4_0.md#共通鍵暗号だ-方式（共通鍵）), [`公開鍵暗号方式（公開鍵`](glossary/syllabus_tsuiho_ver4_0.md#公開鍵暗号方式（公開鍵), [`秘密鍵））`](glossary/syllabus_tsuiho_ver4_0.md#秘密鍵））), [`RSA暗号`](glossary/syllabus_tsuiho_ver4_0.md#rsa暗号), [`楕円曲線暗号 （ ECDSA ）`](glossary/syllabus_tsuiho_ver4_0.md#楕円曲線暗号-（-ecdsa-）), [`鍵共 有`](glossary/syllabus_tsuiho_ver4_0.md#鍵共-有), [`Diffie-Hellman （ DH ） 鍵共 有方 式`](glossary/syllabus_tsuiho_ver4_0.md#diffie-hellman-（-dh-）-鍵共-有方-式), [`前方 秘匿 性 （ PFS ： Perfect Forward Secrecy）`](glossary/syllabus_tsuiho_ver4_0.md#前方-秘匿-性-（-pfs--perfect-forward-secrecy）), [`ハイブリッド暗号`](glossary/syllabus_tsuiho_ver4_0.md#ハイブリッド暗号), [`認証暗号（認証付き暗号`](glossary/syllabus_tsuiho_ver4_0.md#認証暗号（認証付き暗号), [`AEAD：Authenticated Encryption with Associated Data）`](glossary/syllabus_tsuiho_ver4_0.md#aeadauthenticated-encryption-with-associated-data）), [`秘密分散（電子割符）`](glossary/syllabus_tsuiho_ver4_0.md#秘密分散（電子割符）), [`秘密計算（秘密分散方式`](glossary/syllabus_tsuiho_ver4_0.md#秘密計算（秘密分散方式), [`準同型暗号方式）`](glossary/syllabus_tsuiho_ver4_0.md#準同型暗号方式）), [`量子暗号`](glossary/syllabus_tsuiho_ver4_0.md#量子暗号), [`耐量子暗号（PQC（Post Quantum Cryptography：耐量子計算機暗号）ほか）`](glossary/syllabus_tsuiho_ver4_0.md#耐量子暗号（pqc（post-quantum-cryptography耐量子計算機暗号）ほか）), [`ハッシュ関数（SHA-256 （SHA-2）`](glossary/syllabus_tsuiho_ver4_0.md#ハッシュ関数（sha-256-（sha-2）), [`SHA-3`](glossary/syllabus_tsuiho_ver4_0.md#sha-3), [`一方向性`](glossary/syllabus_tsuiho_ver4_0.md#一方向性), [`第二原像発見困難性`](glossary/syllabus_tsuiho_ver4_0.md#第二原像発見困難性), [`衝突発見困難性ほか）`](glossary/syllabus_tsuiho_ver4_0.md#衝突発見困難性ほか）), [`ブロック暗号（AES（Advanced Encryption Standard）`](glossary/syllabus_tsuiho_ver4_0.md#ブロック暗号（aes（advanced-encryption-standard）), [`Camelliaほか）`](glossary/syllabus_tsuiho_ver4_0.md#camelliaほか）), [`暗号利用モ ード（CBC`](glossary/syllabus_tsuiho_ver4_0.md#暗号利用モ-ード（cbc), [`CTRほか）`](glossary/syllabus_tsuiho_ver4_0.md#ctrほか）), [`ストリーム暗号（KCipher-2ほか）`](glossary/syllabus_tsuiho_ver4_0.md#ストリーム暗号（kcipher-2ほか）), [`軽量暗号`](glossary/syllabus_tsuiho_ver4_0.md#軽量暗号), [`鍵生成`](glossary/syllabus_tsuiho_ver4_0.md#鍵生成), [`疑似乱数`](glossary/syllabus_tsuiho_ver4_0.md#疑似乱数), [`乱数生成`](glossary/syllabus_tsuiho_ver4_0.md#乱数生成), [`疑似乱数生成器（PRNG）`](glossary/syllabus_tsuiho_ver4_0.md#疑似乱数生成器（prng）), [`鍵管理`](glossary/syllabus_tsuiho_ver4_0.md#鍵管理), [`ストレージ暗号化`](glossary/syllabus_tsuiho_ver4_0.md#ストレージ暗号化), [`フたいァイル暗号化`](glossary/syllabus_tsuiho_ver4_0.md#フたいァイル暗号化), [`危殆化`](glossary/syllabus_tsuiho_ver4_0.md#危殆化), [`ゼロ知識証明`](glossary/syllabus_tsuiho_ver4_0.md#ゼロ知識証明), [`ブロックチェーン`](glossary/syllabus_tsuiho_ver4_0.md#ブロックチェーン), [`SSL/TLS暗号設定ガイドライン`](glossary/syllabus_tsuiho_ver4_0.md#ssl-tls暗号設定ガイドライン), [`ワンタイムパッド`](glossary/syllabus_tsuiho_ver4_0.md#ワンタイムパッド), [`計算量（オーダー記号）`](glossary/syllabus_tsuiho_ver4_0.md#計算量（オーダー記号）), [`暗号強度（ビットセキュリティ）`](glossary/syllabus_tsuiho_ver4_0.md#暗号強度（ビットセキュリティ）), [`情報量的安全性`](glossary/syllabus_tsuiho_ver4_0.md#情報量的安全性), [`計算量的安全性`](glossary/syllabus_tsuiho_ver4_0.md#計算量的安全性)
 
 
 ###### ② 認証技術
@@ -127,14 +127,14 @@ graph TD
 認証の種類，仕組み，特徴，脅威を防止するためにどのような認証技術が用いられるか，
 認証技術が何を証明するかを理解する。
   - **用語例・キーワード (全網羅)**:
-    `デジタル署名（署名鍵`, `検証鍵）`, `XMLデジタル署名`, `ブラインド署名`, `グループ署名`, `トランザクション署名`, `タイムスタンプ（時刻認証）`, `メッセージダイジェスト`, `メッセージ認証`, `MAC（Message Authentication Code：メッセージ認証符号）`, `HMAC`, `CMAC`, `フィンガプリント`, `チャレンジレスポンス認証`, `リスクベ ース認証`, `コードサイニング`, `エンティティ認証`
+    [`デジタル署名（署名鍵`](glossary/syllabus_tsuiho_ver4_0.md#デジタル署名（署名鍵), [`検証鍵）`](glossary/syllabus_tsuiho_ver4_0.md#検証鍵）), [`XMLデジタル署名`](glossary/syllabus_tsuiho_ver4_0.md#xmlデジタル署名), [`ブラインド署名`](glossary/syllabus_tsuiho_ver4_0.md#ブラインド署名), [`グループ署名`](glossary/syllabus_tsuiho_ver4_0.md#グループ署名), [`トランザクション署名`](glossary/syllabus_tsuiho_ver4_0.md#トランザクション署名), [`タイムスタンプ（時刻認証）`](glossary/syllabus_tsuiho_ver4_0.md#タイムスタンプ（時刻認証）), [`メッセージダイジェスト`](glossary/syllabus_tsuiho_ver4_0.md#メッセージダイジェスト), [`メッセージ認証`](glossary/syllabus_tsuiho_ver4_0.md#メッセージ認証), [`MAC（Message Authentication Code：メッセージ認証符号）`](glossary/syllabus_tsuiho_ver4_0.md#mac（message-authentication-codeメッセージ認証符号）), [`HMAC`](glossary/syllabus_tsuiho_ver4_0.md#hmac), [`CMAC`](glossary/syllabus_tsuiho_ver4_0.md#cmac), [`フィンガプリント`](glossary/syllabus_tsuiho_ver4_0.md#フィンガプリント), [`チャレンジレスポンス認証`](glossary/syllabus_tsuiho_ver4_0.md#チャレンジレスポンス認証), [`リスクベ ース認証`](glossary/syllabus_tsuiho_ver4_0.md#リスクベ-ース認証), [`コードサイニング`](glossary/syllabus_tsuiho_ver4_0.md#コードサイニング), [`エンティティ認証`](glossary/syllabus_tsuiho_ver4_0.md#エンティティ認証)
 
 
 ###### ③ 利用者認証
 
 利用者認証のために利用される技術の種類，仕組み，特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ログイン（利用者 IDとパスワード）`, `アクセス管理`, `ICカード`, `PINコード`, `Kerberos方式`, `LDAPサーバでの認証`, `ワンタイムパスワード`, `多要素認証（記憶`, `所有`, `生体）`, `多段階認証`, `パスワードレス認証（FIDO UAF`, `FIDO U2F`, `FIDO2`, `WebAuthn`, `Passkeys）`, `EMV 3-Dセキュア（3Dセキュア 2.0）`, `アイデンティティ連携（OpenID Connect`, `SAML）`, `IdP（Identity Provider）`, `IDaaS（Identity as a Service）`, `シングルサインオン`, `CAPTCHA`, `AAA（認証`, `認可`, `アカウンティング）`, `eKYC（electronic Know Your Customer）`
+    [`ログイン（利用者 IDとパスワード）`](glossary/syllabus_tsuiho_ver4_0.md#ログイン（利用者-idとパスワード）), [`アクセス管理`](glossary/syllabus_tsuiho_ver4_0.md#アクセス管理), [`ICカード`](glossary/syllabus_tsuiho_ver4_0.md#icカード), [`PINコード`](glossary/syllabus_tsuiho_ver4_0.md#pinコード), [`Kerberos方式`](glossary/syllabus_tsuiho_ver4_0.md#kerberos方式), [`LDAPサーバでの認証`](glossary/syllabus_tsuiho_ver4_0.md#ldapサーバでの認証), [`ワンタイムパスワード`](glossary/syllabus_tsuiho_ver4_0.md#ワンタイムパスワード), [`多要素認証（記憶`](glossary/syllabus_tsuiho_ver4_0.md#多要素認証（記憶), [`所有`](glossary/syllabus_tsuiho_ver4_0.md#所有), [`生体）`](glossary/syllabus_tsuiho_ver4_0.md#生体）), [`多段階認証`](glossary/syllabus_tsuiho_ver4_0.md#多段階認証), [`パスワードレス認証（FIDO UAF`](glossary/syllabus_tsuiho_ver4_0.md#パスワードレス認証（fido-uaf), [`FIDO U2F`](glossary/syllabus_tsuiho_ver4_0.md#fido-u2f), [`FIDO2`](glossary/syllabus_tsuiho_ver4_0.md#fido2), [`WebAuthn`](glossary/syllabus_tsuiho_ver4_0.md#webauthn), [`Passkeys）`](glossary/syllabus_tsuiho_ver4_0.md#passkeys）), [`EMV 3-Dセキュア（3Dセキュア 2.0）`](glossary/syllabus_tsuiho_ver4_0.md#emv-3-dセキュア（3dセキュア-20）), [`アイデンティティ連携（OpenID Connect`](glossary/syllabus_tsuiho_ver4_0.md#アイデンティティ連携（openid-connect), [`SAML）`](glossary/syllabus_tsuiho_ver4_0.md#saml）), [`IdP（Identity Provider）`](glossary/syllabus_tsuiho_ver4_0.md#idp（identity-provider）), [`IDaaS（Identity as a Service）`](glossary/syllabus_tsuiho_ver4_0.md#idaas（identity-as-a-service）), [`シングルサインオン`](glossary/syllabus_tsuiho_ver4_0.md#シングルサインオン), [`CAPTCHA`](glossary/syllabus_tsuiho_ver4_0.md#captcha), [`AAA（認証`](glossary/syllabus_tsuiho_ver4_0.md#aaa（認証), [`認可`](glossary/syllabus_tsuiho_ver4_0.md#認可), [`アカウンティング）`](glossary/syllabus_tsuiho_ver4_0.md#アカウンティング）), [`eKYC（electronic Know Your Customer）`](glossary/syllabus_tsuiho_ver4_0.md#ekyc（electronic-know-your-customer）)
 
 
 ###### ④ 生体認証技術
@@ -142,14 +142,14 @@ graph TD
 利用者確認に利用される技術の一つである生体認証技術の種類，仕組み，特徴を理解す
 る。
   - **用語例・キーワード (全網羅)**:
-    `身体的特徴（静脈パターン認証`, `虹彩認証`, `顔認証`, `網膜認証ほか）`, `行動的特徴（声紋認証`, `署名認証ほか）`, `本人拒否率（FRR）`, `他人受入率（FAR）`
+    [`身体的特徴（静脈パターン認証`](glossary/syllabus_tsuiho_ver4_0.md#身体的特徴（静脈パターン認証), [`虹彩認証`](glossary/syllabus_tsuiho_ver4_0.md#虹彩認証), [`顔認証`](glossary/syllabus_tsuiho_ver4_0.md#顔認証), [`網膜認証ほか）`](glossary/syllabus_tsuiho_ver4_0.md#網膜認証ほか）), [`行動的特徴（声紋認証`](glossary/syllabus_tsuiho_ver4_0.md#行動的特徴（声紋認証), [`署名認証ほか）`](glossary/syllabus_tsuiho_ver4_0.md#署名認証ほか）), [`本人拒否率（FRR）`](glossary/syllabus_tsuiho_ver4_0.md#本人拒否率（frr）), [`他人受入率（FAR）`](glossary/syllabus_tsuiho_ver4_0.md#他人受入率（far）)
 
 
 ###### ⑤ 公開鍵基盤
 
 PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活用場面を理解する。
   - **用語例・キーワード (全網羅)**:
-    `PKI（Public Key Infrastructure：公開鍵基盤）`, `デジタル証明書（公開鍵証明書）`, `ルート証明書`, `トラストアンカー（信頼の基点）`, `中間 CA証明書`, `サーバ証明 書`, `クラ イア ント 証明 書`, `コ ー ドサ イニ ング 証明 書`, `CRL （ Certificate Revocation List：証明書失効リスト）`, `OCSP`, `CA（Certification Authority：認証 局 ）`, `VA （ Validation Authority ）`, `GPKI （ Government Public Key Infrastructure：政府認証基盤）`, `BCA（Bridge Certification Authority：ブリッ ジ認 証局 ）`, `ITU-T X.509`, `証明 書パ ス検 証`, `サブ ジェ クト`, `CP/CPS （Certificate Policy/Certification Practice Statement）`, `CAA（Certificate Authority Authorization ）`, `証明 書自 動発 行 （ SCEP ： Simple Certificate Enrollment Protocol`, `ACME：Automatic Certificate Management Environment)`, `CA/Browser Forum`
+    [`PKI（Public Key Infrastructure：公開鍵基盤）`](glossary/syllabus_tsuiho_ver4_0.md#pki（public-key-infrastructure公開鍵基盤）), [`デジタル証明書（公開鍵証明書）`](glossary/syllabus_tsuiho_ver4_0.md#デジタル証明書（公開鍵証明書）), [`ルート証明書`](glossary/syllabus_tsuiho_ver4_0.md#ルート証明書), [`トラストアンカー（信頼の基点）`](glossary/syllabus_tsuiho_ver4_0.md#トラストアンカー（信頼の基点）), [`中間 CA証明書`](glossary/syllabus_tsuiho_ver4_0.md#中間-ca証明書), [`サーバ証明 書`](glossary/syllabus_tsuiho_ver4_0.md#サーバ証明-書), [`クラ イア ント 証明 書`](glossary/syllabus_tsuiho_ver4_0.md#クラ-イア-ント-証明-書), [`コ ー ドサ イニ ング 証明 書`](glossary/syllabus_tsuiho_ver4_0.md#コ-ー-ドサ-イニ-ング-証明-書), [`CRL （ Certificate Revocation List：証明書失効リスト）`](glossary/syllabus_tsuiho_ver4_0.md#crl-（-certificate-revocation-list証明書失効リスト）), [`OCSP`](glossary/syllabus_tsuiho_ver4_0.md#ocsp), [`CA（Certification Authority：認証 局 ）`](glossary/syllabus_tsuiho_ver4_0.md#ca（certification-authority認証-局-）), [`VA （ Validation Authority ）`](glossary/syllabus_tsuiho_ver4_0.md#va-（-validation-authority-）), [`GPKI （ Government Public Key Infrastructure：政府認証基盤）`](glossary/syllabus_tsuiho_ver4_0.md#gpki-（-government-public-key-infrastructure政府認証基盤）), [`BCA（Bridge Certification Authority：ブリッ ジ認 証局 ）`](glossary/syllabus_tsuiho_ver4_0.md#bca（bridge-certification-authorityブリッ-ジ認-証局-）), [`ITU-T X.509`](glossary/syllabus_tsuiho_ver4_0.md#itu-t-x509), [`証明 書パ ス検 証`](glossary/syllabus_tsuiho_ver4_0.md#証明-書パ-ス検-証), [`サブ ジェ クト`](glossary/syllabus_tsuiho_ver4_0.md#サブ-ジェ-クト), [`CP/CPS （Certificate Policy/Certification Practice Statement）`](glossary/syllabus_tsuiho_ver4_0.md#cp-cps-（certificate-policy-certification-practice-statement）), [`CAA（Certificate Authority Authorization ）`](glossary/syllabus_tsuiho_ver4_0.md#caa（certificate-authority-authorization-）), [`証明 書自 動発 行 （ SCEP ： Simple Certificate Enrollment Protocol`](glossary/syllabus_tsuiho_ver4_0.md#証明-書自-動発-行-（-scep--simple-certificate-enrollment-protocol), [`ACME：Automatic Certificate Management Environment)`](glossary/syllabus_tsuiho_ver4_0.md#acmeautomatic-certificate-management-environment)), [`CA/Browser Forum`](glossary/syllabus_tsuiho_ver4_0.md#ca-browser-forum)
 
 
 #### 🔹 2. 情報セキュリティ管理
@@ -170,7 +170,7 @@ PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活�
 組織の情報セキュリティ対策を包括的かつ継続的に実施するために，情報セキュリティ管
 理の考え方，情報資産などの保護対象を理解する。
   - **用語例・キーワード (全網羅)**:
-    `情報セキュリティポリシーに基づく情報の管理`, `情報資産`, `リスクマネジメント （JIS Q 31000）`, `監視`, `情報セキュリティ事象`, `情報セキュリティインシデント`, `アカウント管理`, `利用者アクセス権の管理（need-to-know（最小権限）の原則ほか）`, `クラウドサービスの責任共有モデル`, `セキュリティエコノミクス`, `外部委託やクラウドサービスの利用時における情報セキュリティ`, `サイバーハイジーン`
+    [`情報セキュリティポリシーに基づく情報の管理`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティポリシーに基づく情報の管理), [`情報資産`](glossary/syllabus_tsuiho_ver4_0.md#情報資産), [`リスクマネジメント （JIS Q 31000）`](glossary/syllabus_tsuiho_ver4_0.md#リスクマネジメント-（jis-q-31000）), [`監視`](glossary/syllabus_tsuiho_ver4_0.md#監視), [`情報セキュリティ事象`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ事象), [`情報セキュリティインシデント`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティインシデント), [`アカウント管理`](glossary/syllabus_tsuiho_ver4_0.md#アカウント管理), [`利用者アクセス権の管理（need-to-know（最小権限）の原則ほか）`](glossary/syllabus_tsuiho_ver4_0.md#利用者アクセス権の管理（need-to-know（最小権限）の原則ほか）), [`クラウドサービスの責任共有モデル`](glossary/syllabus_tsuiho_ver4_0.md#クラウドサービスの責任共有モデル), [`セキュリティエコノミクス`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティエコノミクス), [`外部委託やクラウドサービスの利用時における情報セキュリティ`](glossary/syllabus_tsuiho_ver4_0.md#外部委託やクラウドサービスの利用時における情報セキュリティ), [`サイバーハイジーン`](glossary/syllabus_tsuiho_ver4_0.md#サイバーハイジーン)
 
 
 ##### （2）リスク分析と評価
@@ -186,14 +186,14 @@ PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活�
 機密性，完全性，可用性の側面から情報資産の重要性を検討し，情報資産を保護するた
 めに，定められた基準に基づいて情報資産を分類することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `機密性`, `完全性`, `可用性`, `情報資産台帳`
+    [`機密性`](glossary/syllabus_tsuiho_ver4_0.md#機密性), [`完全性`](glossary/syllabus_tsuiho_ver4_0.md#完全性), [`可用性`](glossary/syllabus_tsuiho_ver4_0.md#可用性), [`情報資産台帳`](glossary/syllabus_tsuiho_ver4_0.md#情報資産台帳)
 
 
 ###### ③ リスクの種類
 
 調査した情報資産を取り巻く脅威に対するリスクの種類を理解する。
   - **用語例・キーワード (全網羅)**:
-    `財産損失`, `責任損失`, `純収益の喪失`, `人的損失`, `リスクの種類（オペレーショナルリスク`, `サプライチェーンリスク`, `外部サービス利用のリスク`, `SNSによる情報発信のリスク`, `地政学的リスクほか）`, `ペリル`, `ハザード`, `モラルハザード`, `年間予想損失額`, `得点法`, `コスト要因`
+    [`財産損失`](glossary/syllabus_tsuiho_ver4_0.md#財産損失), [`責任損失`](glossary/syllabus_tsuiho_ver4_0.md#責任損失), [`純収益の喪失`](glossary/syllabus_tsuiho_ver4_0.md#純収益の喪失), [`人的損失`](glossary/syllabus_tsuiho_ver4_0.md#人的損失), [`リスクの種類（オペレーショナルリスク`](glossary/syllabus_tsuiho_ver4_0.md#リスクの種類（オペレーショナルリスク), [`サプライチェーンリスク`](glossary/syllabus_tsuiho_ver4_0.md#サプライチェーンリスク), [`外部サービス利用のリスク`](glossary/syllabus_tsuiho_ver4_0.md#外部サービス利用のリスク), [`SNSによる情報発信のリスク`](glossary/syllabus_tsuiho_ver4_0.md#snsによる情報発信のリスク), [`地政学的リスクほか）`](glossary/syllabus_tsuiho_ver4_0.md#地政学的リスクほか）), [`ペリル`](glossary/syllabus_tsuiho_ver4_0.md#ペリル), [`ハザード`](glossary/syllabus_tsuiho_ver4_0.md#ハザード), [`モラルハザード`](glossary/syllabus_tsuiho_ver4_0.md#モラルハザード), [`年間予想損失額`](glossary/syllabus_tsuiho_ver4_0.md#年間予想損失額), [`得点法`](glossary/syllabus_tsuiho_ver4_0.md#得点法), [`コスト要因`](glossary/syllabus_tsuiho_ver4_0.md#コスト要因)
 
 
 ###### ④ 情報セキュリティリスクアセスメント
@@ -202,7 +202,7 @@ PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活�
 量的又は定性的に把握してリスクレベルを決定し，組織が定めたリスク受容基準に基づく
 評価を行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `リスク基準（リスク受容基準`, `情報セキュリティリスクアセスメントを実施するための基準）`, `リスクレベル`, `リスクマトリックス`, `リスク所有者`, `リスク源`, `リスクアセスメントのプロセス（リスク特定`, `リスク分析`, `リスク評価）`, `リスク忌避`, `リスク選好`, `リスクの定性的分析`, `リスクの定量的分析`
+    [`リスク基準（リスク受容基準`](glossary/syllabus_tsuiho_ver4_0.md#リスク基準（リスク受容基準), [`情報セキュリティリスクアセスメントを実施するための基準）`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティリスクアセスメントを実施するための基準）), [`リスクレベル`](glossary/syllabus_tsuiho_ver4_0.md#リスクレベル), [`リスクマトリックス`](glossary/syllabus_tsuiho_ver4_0.md#リスクマトリックス), [`リスク所有者`](glossary/syllabus_tsuiho_ver4_0.md#リスク所有者), [`リスク源`](glossary/syllabus_tsuiho_ver4_0.md#リスク源), [`リスクアセスメントのプロセス（リスク特定`](glossary/syllabus_tsuiho_ver4_0.md#リスクアセスメントのプロセス（リスク特定), [`リスク分析`](glossary/syllabus_tsuiho_ver4_0.md#リスク分析), [`リスク評価）`](glossary/syllabus_tsuiho_ver4_0.md#リスク評価）), [`リスク忌避`](glossary/syllabus_tsuiho_ver4_0.md#リスク忌避), [`リスク選好`](glossary/syllabus_tsuiho_ver4_0.md#リスク選好), [`リスクの定性的分析`](glossary/syllabus_tsuiho_ver4_0.md#リスクの定性的分析), [`リスクの定量的分析`](glossary/syllabus_tsuiho_ver4_0.md#リスクの定量的分析)
 
 
 ###### ⑤ 情報セキュリティリスク対応
@@ -210,7 +210,7 @@ PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活�
 情報セキュリティリスクアセスメントの結果を考慮して，適切な情報セキュリティリス
 ク対応の選択肢を選定し，その選択肢の実施に必要な管理策を決定することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `リスクコントロール`, `リスクヘッジ`, `リスクファイナンシング`, `サイバー保険`, `リスク回避`, `リスク共有（リスク移転`, `リスク分散）`, `リスク保有`, `リスク集約`, `残留リスク`, `リスク対応計画`, `リスク登録簿`, `リスクコミュニケーション`
+    [`リスクコントロール`](glossary/syllabus_tsuiho_ver4_0.md#リスクコントロール), [`リスクヘッジ`](glossary/syllabus_tsuiho_ver4_0.md#リスクヘッジ), [`リスクファイナンシング`](glossary/syllabus_tsuiho_ver4_0.md#リスクファイナンシング), [`サイバー保険`](glossary/syllabus_tsuiho_ver4_0.md#サイバー保険), [`リスク回避`](glossary/syllabus_tsuiho_ver4_0.md#リスク回避), [`リスク共有（リスク移転`](glossary/syllabus_tsuiho_ver4_0.md#リスク共有（リスク移転), [`リスク分散）`](glossary/syllabus_tsuiho_ver4_0.md#リスク分散）), [`リスク保有`](glossary/syllabus_tsuiho_ver4_0.md#リスク保有), [`リスク集約`](glossary/syllabus_tsuiho_ver4_0.md#リスク集約), [`残留リスク`](glossary/syllabus_tsuiho_ver4_0.md#残留リスク), [`リスク対応計画`](glossary/syllabus_tsuiho_ver4_0.md#リスク対応計画), [`リスク登録簿`](glossary/syllabus_tsuiho_ver4_0.md#リスク登録簿), [`リスクコミュニケーション`](glossary/syllabus_tsuiho_ver4_0.md#リスクコミュニケーション)
 
 
 ##### （3）情報セキュリティ継続
@@ -219,7 +219,7 @@ PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活�
 （継続した情報セキュリティの運用を確実にするためのプロセス）を組織の事業継続マネジ
 メントシステムに組み込む必要性を理解する。
   - **用語例・キーワード (全網羅)**:
-    `緊急事態の区分`, `緊急時対応計画（コンティンジェンシー計画）`, `復旧計画`, `災害復旧`, `バックアップによる対策`, `被害状況の調査手法`
+    [`緊急事態の区分`](glossary/syllabus_tsuiho_ver4_0.md#緊急事態の区分), [`緊急時対応計画（コンティンジェンシー計画）`](glossary/syllabus_tsuiho_ver4_0.md#緊急時対応計画（コンティンジェンシー計画）), [`復旧計画`](glossary/syllabus_tsuiho_ver4_0.md#復旧計画), [`災害復旧`](glossary/syllabus_tsuiho_ver4_0.md#災害復旧), [`バックアップによる対策`](glossary/syllabus_tsuiho_ver4_0.md#バックアップによる対策), [`被害状況の調査手法`](glossary/syllabus_tsuiho_ver4_0.md#被害状況の調査手法)
 
 
 ##### （4）情報セキュリティ諸規程（情報セキュリティポリシーを含む組織内規程）
@@ -228,7 +228,7 @@ PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活�
 ティポリシーに従った組織運営を理解する。また，組織の情報セキュリティ目的，資産の分
 類・管理手順，情報セキュリティ対策基準などを体系的に定めることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `情報セキュリティ方針`, `情報セキュリティ目的`, `情報セキュリティ対策基準`, `情報管理規程`, `秘密情報管理規程`, `文書管理規程`, `情報セキュリティインシデント対応規程（マルウェア感染時の対応ほか）`, `情報セキュリティ教育の規程`, `プライバシーポリシー（個人情報保護方針）`, `職務規程`, `罰則の規程`, `対外説明の規程`, `例外の規程`, `規則更新の規程`, `規程の承認手続`, `ソーシャルメディアガイドライン（SNS利用ポリシー）`
+    [`情報セキュリティ方針`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ方針), [`情報セキュリティ目的`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ目的), [`情報セキュリティ対策基準`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ対策基準), [`情報管理規程`](glossary/syllabus_tsuiho_ver4_0.md#情報管理規程), [`秘密情報管理規程`](glossary/syllabus_tsuiho_ver4_0.md#秘密情報管理規程), [`文書管理規程`](glossary/syllabus_tsuiho_ver4_0.md#文書管理規程), [`情報セキュリティインシデント対応規程（マルウェア感染時の対応ほか）`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティインシデント対応規程（マルウェア感染時の対応ほか）), [`情報セキュリティ教育の規程`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ教育の規程), [`プライバシーポリシー（個人情報保護方針）`](glossary/syllabus_tsuiho_ver4_0.md#プライバシーポリシー（個人情報保護方針）), [`職務規程`](glossary/syllabus_tsuiho_ver4_0.md#職務規程), [`罰則の規程`](glossary/syllabus_tsuiho_ver4_0.md#罰則の規程), [`対外説明の規程`](glossary/syllabus_tsuiho_ver4_0.md#対外説明の規程), [`例外の規程`](glossary/syllabus_tsuiho_ver4_0.md#例外の規程), [`規則更新の規程`](glossary/syllabus_tsuiho_ver4_0.md#規則更新の規程), [`規程の承認手続`](glossary/syllabus_tsuiho_ver4_0.md#規程の承認手続), [`ソーシャルメディアガイドライン（SNS利用ポリシー）`](glossary/syllabus_tsuiho_ver4_0.md#ソーシャルメディアガイドライン（sns利用ポリシー）)
 
 
 ##### （5）情報セキュリティマネジメントシステム（ISMS）
@@ -237,14 +237,14 @@ PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活�
 （Information Security Management System：情報セキュリティマネジメントシステム）の
 仕組みを理解する。
   - **用語例・キーワード (全網羅)**:
-    `ISMS適用範囲`, `リーダーシップ`, `計画`, `運用`, `パフォーマンス評価（内部監査`, `マネジメントレビューほか）`, `改善（不適合及び是正処置`, `継続的改善）`, `管理目的`, `情報セキュリティ管理策（組織的管理策`, `人的管理策`, `物理的管理策`, `技術的管理策）`, `管理策タイプ（予防`, `検知`, `是正）`, `サイバーセキュリティ概念（識別`, `防御`, `検知`, `対応`, `復旧）`, `有効性`, `ISMS適合性評価制度`, `ISMS認証`, `JIS Q 27001（ISO/IEC 27001）`, `JIS Q 27002（ISO/IEC 27002）`, `情報セキュリティガバナンス（JIS Q 27014（ISO/IEC 27014））`, `JIS Q 27017（ISO/IEC 27017）`
+    [`ISMS適用範囲`](glossary/syllabus_tsuiho_ver4_0.md#isms適用範囲), [`リーダーシップ`](glossary/syllabus_tsuiho_ver4_0.md#リーダーシップ), [`計画`](glossary/syllabus_tsuiho_ver4_0.md#計画), [`運用`](glossary/syllabus_tsuiho_ver4_0.md#運用), [`パフォーマンス評価（内部監査`](glossary/syllabus_tsuiho_ver4_0.md#パフォーマンス評価（内部監査), [`マネジメントレビューほか）`](glossary/syllabus_tsuiho_ver4_0.md#マネジメントレビューほか）), [`改善（不適合及び是正処置`](glossary/syllabus_tsuiho_ver4_0.md#改善（不適合及び是正処置), [`継続的改善）`](glossary/syllabus_tsuiho_ver4_0.md#継続的改善）), [`管理目的`](glossary/syllabus_tsuiho_ver4_0.md#管理目的), [`情報セキュリティ管理策（組織的管理策`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ管理策（組織的管理策), [`人的管理策`](glossary/syllabus_tsuiho_ver4_0.md#人的管理策), [`物理的管理策`](glossary/syllabus_tsuiho_ver4_0.md#物理的管理策), [`技術的管理策）`](glossary/syllabus_tsuiho_ver4_0.md#技術的管理策）), [`管理策タイプ（予防`](glossary/syllabus_tsuiho_ver4_0.md#管理策タイプ（予防), [`検知`](glossary/syllabus_tsuiho_ver4_0.md#検知), [`是正）`](glossary/syllabus_tsuiho_ver4_0.md#是正）), [`サイバーセキュリティ概念（識別`](glossary/syllabus_tsuiho_ver4_0.md#サイバーセキュリティ概念（識別), [`防御`](glossary/syllabus_tsuiho_ver4_0.md#防御), [`検知`](glossary/syllabus_tsuiho_ver4_0.md#検知), [`対応`](glossary/syllabus_tsuiho_ver4_0.md#対応), [`復旧）`](glossary/syllabus_tsuiho_ver4_0.md#復旧）), [`有効性`](glossary/syllabus_tsuiho_ver4_0.md#有効性), [`ISMS適合性評価制度`](glossary/syllabus_tsuiho_ver4_0.md#isms適合性評価制度), [`ISMS認証`](glossary/syllabus_tsuiho_ver4_0.md#isms認証), [`JIS Q 27001（ISO/IEC 27001）`](glossary/syllabus_tsuiho_ver4_0.md#jis-q-27001（iso-iec-27001）), [`JIS Q 27002（ISO/IEC 27002）`](glossary/syllabus_tsuiho_ver4_0.md#jis-q-27002（iso-iec-27002）), [`情報セキュリティガバナンス（JIS Q 27014（ISO/IEC 27014））`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティガバナンス（jis-q-27014（iso-iec-27014））), [`JIS Q 27017（ISO/IEC 27017）`](glossary/syllabus_tsuiho_ver4_0.md#jis-q-27017（iso-iec-27017）)
 
 
 ##### （6）情報セキュリティ管理におけるインシデント管理
 
 インシデント発生時から解決までの一連のフローであるインシデント管理を理解する。
   - **用語例・キーワード (全網羅)**:
-    `インシデントハンドリング（検知／連絡受付`, `トリアージ`, `インシデントレスポンス（対応）`, `報告／情報公開）`, `テイクダウン`
+    [`インシデントハンドリング（検知／連絡受付`](glossary/syllabus_tsuiho_ver4_0.md#インシデントハンドリング（検知-連絡受付), [`トリアージ`](glossary/syllabus_tsuiho_ver4_0.md#トリアージ), [`インシデントレスポンス（対応）`](glossary/syllabus_tsuiho_ver4_0.md#インシデントレスポンス（対応）), [`報告／情報公開）`](glossary/syllabus_tsuiho_ver4_0.md#報告-情報公開）), [`テイクダウン`](glossary/syllabus_tsuiho_ver4_0.md#テイクダウン)
 
 
 ##### （7）情報セキュリティ組織・機関
@@ -252,14 +252,14 @@ PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活�
 不正アクセスによる被害受付の対応，再発防止のための提言，情報セキュリティに関する
 啓発活動などを行う情報セキュリティ組織・機関の役割，及び関連する制度を理解する。
   - **用語例・キーワード (全網羅)**:
-    `・情報セキュリティ委員会`, `情報セキュリティ関連組織（CSIRT`, `PSIRT`, `SOC （Security Operation Center） ）`, `組織への設置が推奨されている窓口（abuse@ ドメイン名`, `noc@ドメイン名`, `security@ドメイン名）`, `エシカルハッカー ・サイバーセキュリティ戦略本部`, `内閣サイバーセキュリティセンター（NISC）`, `IPAセキュリティセンター`, `CRYPTREC`, `米国国立標準技術研究所（NIST）`, `MITRE`, `FIRST（Forum of Incident Response and Security Teams）`, `JPCERTコーディネーションセンター`, `J-CSIP（サイバー情報共有イニシアティブ）`, `サイバーレスキュー隊（J-CRAT）`, `Trusted Web推進協議会 ・コンピュータ不正アクセス届出制度`, `コンピュータウイルス届出制度`, `ソフトウェア等の脆弱性関連情報に関する届出制度`, `情報セキュリティサービス基準`, `情報セキュリティサービス審査登録制度`, `情報セキュリティサービス基準適合サービスリスト`, `ISMAP（政府情報システムのためのセキュリティ評価制度）`, `ソフトウェア製品開発者の脆弱性開示（ISO/IEC 29147）`, `脆弱性情報取扱手順 （ISO/IEC 30111）`, `NOTICE`, `SECURITY ACTION`, `情報セキュリティ早期警戒パー トナーシップ`, `ISAC（Information Sharing and Analysis Center：セキュリティ情報共有組織）`
+    [`・情報セキュリティ委員会`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ委員会), [`情報セキュリティ関連組織（CSIRT`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ関連組織（csirt), [`PSIRT`](glossary/syllabus_tsuiho_ver4_0.md#psirt), [`SOC （Security Operation Center） ）`](glossary/syllabus_tsuiho_ver4_0.md#soc-（security-operation-center）-）), [`組織への設置が推奨されている窓口（abuse@ ドメイン名`](glossary/syllabus_tsuiho_ver4_0.md#組織への設置が推奨されている窓口（abuse-ドメイン名), [`noc@ドメイン名`](glossary/syllabus_tsuiho_ver4_0.md#nocドメイン名), [`security@ドメイン名）`](glossary/syllabus_tsuiho_ver4_0.md#securityドメイン名）), [`エシカルハッカー ・サイバーセキュリティ戦略本部`](glossary/syllabus_tsuiho_ver4_0.md#エシカルハッカー-サイバーセキュリティ戦略本部), [`内閣サイバーセキュリティセンター（NISC）`](glossary/syllabus_tsuiho_ver4_0.md#内閣サイバーセキュリティセンター（nisc）), [`IPAセキュリティセンター`](glossary/syllabus_tsuiho_ver4_0.md#ipaセキュリティセンター), [`CRYPTREC`](glossary/syllabus_tsuiho_ver4_0.md#cryptrec), [`米国国立標準技術研究所（NIST）`](glossary/syllabus_tsuiho_ver4_0.md#米国国立標準技術研究所（nist）), [`MITRE`](glossary/syllabus_tsuiho_ver4_0.md#mitre), [`FIRST（Forum of Incident Response and Security Teams）`](glossary/syllabus_tsuiho_ver4_0.md#first（forum-of-incident-response-and-security-teams）), [`JPCERTコーディネーションセンター`](glossary/syllabus_tsuiho_ver4_0.md#jpcertコーディネーションセンター), [`J-CSIP（サイバー情報共有イニシアティブ）`](glossary/syllabus_tsuiho_ver4_0.md#j-csip（サイバー情報共有イニシアティブ）), [`サイバーレスキュー隊（J-CRAT）`](glossary/syllabus_tsuiho_ver4_0.md#サイバーレスキュー隊（j-crat）), [`Trusted Web推進協議会 ・コンピュータ不正アクセス届出制度`](glossary/syllabus_tsuiho_ver4_0.md#trusted-web推進協議会-コンピュータ不正アクセス届出制度), [`コンピュータウイルス届出制度`](glossary/syllabus_tsuiho_ver4_0.md#コンピュータウイルス届出制度), [`ソフトウェア等の脆弱性関連情報に関する届出制度`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア等の脆弱性関連情報に関する届出制度), [`情報セキュリティサービス基準`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティサービス基準), [`情報セキュリティサービス審査登録制度`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティサービス審査登録制度), [`情報セキュリティサービス基準適合サービスリスト`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティサービス基準適合サービスリスト), [`ISMAP（政府情報システムのためのセキュリティ評価制度）`](glossary/syllabus_tsuiho_ver4_0.md#ismap（政府情報システムのためのセキュリティ評価制度）), [`ソフトウェア製品開発者の脆弱性開示（ISO/IEC 29147）`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア製品開発者の脆弱性開示（iso-iec-29147）), [`脆弱性情報取扱手順 （ISO/IEC 30111）`](glossary/syllabus_tsuiho_ver4_0.md#脆弱性情報取扱手順-（iso-iec-30111）), [`NOTICE`](glossary/syllabus_tsuiho_ver4_0.md#notice), [`SECURITY ACTION`](glossary/syllabus_tsuiho_ver4_0.md#security-action), [`情報セキュリティ早期警戒パー トナーシップ`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ早期警戒パー-トナーシップ), [`ISAC（Information Sharing and Analysis Center：セキュリティ情報共有組織）`](glossary/syllabus_tsuiho_ver4_0.md#isac（information-sharing-and-analysis-centerセキュリティ情報共有組織）)
 
 
 ##### （8）情報セキュリティに関する基準
 
 情報セキュリティに関する基準，指針を理解する。
   - **用語例・キーワード (全網羅)**:
-    `コンピュータウイルス対策基準`, `コンピュータ不正アクセス対策基準`, `ソフトウエア製品等の脆弱性関連情報に関する取扱規程`, `政府機関等の情報セキュリティ対策のための統一基準群`, `サイバーセキュリティ経営ガイドライン`, `中小企業の情報セキュリティ対策ガイドライン`, `IoTセキュリティガイドライン`, `サイバ ー・フィジカル・セキュリティ対策フレームワーク`, `金融機関等コンピュータシステムの安全対策基準・解説書`, `PCI DSS`, `サイバーセキュリティフレームワー ク（CSF）`, `NIST SP 800シリーズ`
+    [`コンピュータウイルス対策基準`](glossary/syllabus_tsuiho_ver4_0.md#コンピュータウイルス対策基準), [`コンピュータ不正アクセス対策基準`](glossary/syllabus_tsuiho_ver4_0.md#コンピュータ不正アクセス対策基準), [`ソフトウエア製品等の脆弱性関連情報に関する取扱規程`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウエア製品等の脆弱性関連情報に関する取扱規程), [`政府機関等の情報セキュリティ対策のための統一基準群`](glossary/syllabus_tsuiho_ver4_0.md#政府機関等の情報セキュリティ対策のための統一基準群), [`サイバーセキュリティ経営ガイドライン`](glossary/syllabus_tsuiho_ver4_0.md#サイバーセキュリティ経営ガイドライン), [`中小企業の情報セキュリティ対策ガイドライン`](glossary/syllabus_tsuiho_ver4_0.md#中小企業の情報セキュリティ対策ガイドライン), [`IoTセキュリティガイドライン`](glossary/syllabus_tsuiho_ver4_0.md#iotセキュリティガイドライン), [`サイバ ー・フィジカル・セキュリティ対策フレームワーク`](glossary/syllabus_tsuiho_ver4_0.md#サイバ-ーフィジカルセキュリティ対策フレームワーク), [`金融機関等コンピュータシステムの安全対策基準・解説書`](glossary/syllabus_tsuiho_ver4_0.md#金融機関等コンピュータシステムの安全対策基準解説書), [`PCI DSS`](glossary/syllabus_tsuiho_ver4_0.md#pci-dss), [`サイバーセキュリティフレームワー ク（CSF）`](glossary/syllabus_tsuiho_ver4_0.md#サイバーセキュリティフレームワー-ク（csf）), [`NIST SP 800シリーズ`](glossary/syllabus_tsuiho_ver4_0.md#nist-sp-800シリーズ)
 
 
 #### 🔹 3. セキュリティ技術評価
@@ -273,7 +273,7 @@ PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活�
 情報資産の不正コピーや改ざんなどを防ぐセキュリティ製品の，セキュリティ水準を知る
 ためのセキュリティ技術評価の目的，考え方，適用方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `評価方法`, `セキュリティ機能要件`, `セキュリティ保証要件`, `保証レベル`, `JCMVP （暗号モジュール試験及び認証制度）`, `暗号モジュールのセキュリティ要求事項 （FIPS 140）`, `耐タンパ性`, `IT製品の調達におけるセキュリティ要件リスト`
+    [`評価方法`](glossary/syllabus_tsuiho_ver4_0.md#評価方法), [`セキュリティ機能要件`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティ機能要件), [`セキュリティ保証要件`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティ保証要件), [`保証レベル`](glossary/syllabus_tsuiho_ver4_0.md#保証レベル), [`JCMVP （暗号モジュール試験及び認証制度）`](glossary/syllabus_tsuiho_ver4_0.md#jcmvp-（暗号モジュール試験及び認証制度）), [`暗号モジュールのセキュリティ要求事項 （FIPS 140）`](glossary/syllabus_tsuiho_ver4_0.md#暗号モジュールのセキュリティ要求事項-（fips-140）), [`耐タンパ性`](glossary/syllabus_tsuiho_ver4_0.md#耐タンパ性), [`IT製品の調達におけるセキュリティ要件リスト`](glossary/syllabus_tsuiho_ver4_0.md#it製品の調達におけるセキュリティ要件リスト)
 
 
 ##### （2）ISO/IEC 15408，ISO/IEC 18045
@@ -282,7 +282,7 @@ PKI（Public Key Infrastructure：公開鍵基盤）の仕組み，特徴，活�
 れ，正しく実装されていることを評価する ISO/IEC 15408（コモンクライテリア）の適用方
 法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `CC（Common Criteria：コモンクライテリア`, `ISO/IEC 15408）`, `PP（Protection Profile ： プロ テク ショ ンプ ロフ ァイ ル ）`, `CEM （ Common Methodology for Information Technology Security Evaluation：共通評価方法`, `ISO/IEC 18045）`, `EAL（Evaluation Assurance Level：評価保証レベル）`, `JISEC（ITセキュリティ評価及び認証制度）`
+    [`CC（Common Criteria：コモンクライテリア`](glossary/syllabus_tsuiho_ver4_0.md#cc（common-criteriaコモンクライテリア), [`ISO/IEC 15408）`](glossary/syllabus_tsuiho_ver4_0.md#iso-iec-15408）), [`PP（Protection Profile ： プロ テク ショ ンプ ロフ ァイ ル ）`](glossary/syllabus_tsuiho_ver4_0.md#pp（protection-profile--プロ-テク-ショ-ンプ-ロフ-ァイ-ル-）), [`CEM （ Common Methodology for Information Technology Security Evaluation：共通評価方法`](glossary/syllabus_tsuiho_ver4_0.md#cem-（-common-methodology-for-information-technology-security-evaluation共通評価方法), [`ISO/IEC 18045）`](glossary/syllabus_tsuiho_ver4_0.md#iso-iec-18045）), [`EAL（Evaluation Assurance Level：評価保証レベル）`](glossary/syllabus_tsuiho_ver4_0.md#eal（evaluation-assurance-level評価保証レベル）), [`JISEC（ITセキュリティ評価及び認証制度）`](glossary/syllabus_tsuiho_ver4_0.md#jisec（itセキュリティ評価及び認証制度）)
 
 
 ##### （3）制御システムのセキュリティ評価
@@ -292,21 +292,21 @@ Control System）を対象とした CSMS（Cyber Security Management System：�
 リティマネジメントシステム）など，制御システム及び重要インフラのセキュリティの仕組
 みを理解する。
   - **用語例・キーワード (全網羅)**:
-    `CSMS適合性評価制度`, `CSMS認証基準（IEC 62443-2-1）`, `EDSA認証`, `重要インフラのサイバーセキュリティを向上させるためのフレームワーク`
+    [`CSMS適合性評価制度`](glossary/syllabus_tsuiho_ver4_0.md#csms適合性評価制度), [`CSMS認証基準（IEC 62443-2-1）`](glossary/syllabus_tsuiho_ver4_0.md#csms認証基準（iec-62443-2-1）), [`EDSA認証`](glossary/syllabus_tsuiho_ver4_0.md#edsa認証), [`重要インフラのサイバーセキュリティを向上させるためのフレームワーク`](glossary/syllabus_tsuiho_ver4_0.md#重要インフラのサイバーセキュリティを向上させるためのフレームワーク)
 
 
 ##### （4）脆弱性評価
 
 情報システムの脆弱性に対する評価手法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `JVN （ Japan Vulnerability Notes ）`, `CVSS （ Common Vulnerability Scoring System ： 共通 脆弱 性評 価シ ステ ム ）`, `CVE （ Common Vulnerabilities and Exposures：共通脆弱性識別子）`, `CWE（Common Weakness Enumeration：共通脆弱性タイプ一覧）`, `SCAP（Security Content Automation Protocol：セキュリティ設定共通化手順）`, `CPE（Common Platform Enumeration）`, `KEV（Known Exploited Vulnerability）`, `脆弱性診断`, `ペネトレーションテスト`, `脆弱性報奨金制度（バグバウンティプログラム）`
+    [`JVN （ Japan Vulnerability Notes ）`](glossary/syllabus_tsuiho_ver4_0.md#jvn-（-japan-vulnerability-notes-）), [`CVSS （ Common Vulnerability Scoring System ： 共通 脆弱 性評 価シ ステ ム ）`](glossary/syllabus_tsuiho_ver4_0.md#cvss-（-common-vulnerability-scoring-system--共通-脆弱-性評-価シ-ステ-ム-）), [`CVE （ Common Vulnerabilities and Exposures：共通脆弱性識別子）`](glossary/syllabus_tsuiho_ver4_0.md#cve-（-common-vulnerabilities-and-exposures共通脆弱性識別子）), [`CWE（Common Weakness Enumeration：共通脆弱性タイプ一覧）`](glossary/syllabus_tsuiho_ver4_0.md#cwe（common-weakness-enumeration共通脆弱性タイプ一覧）), [`SCAP（Security Content Automation Protocol：セキュリティ設定共通化手順）`](glossary/syllabus_tsuiho_ver4_0.md#scap（security-content-automation-protocolセキュリティ設定共通化手順）), [`CPE（Common Platform Enumeration）`](glossary/syllabus_tsuiho_ver4_0.md#cpe（common-platform-enumeration）), [`KEV（Known Exploited Vulnerability）`](glossary/syllabus_tsuiho_ver4_0.md#kev（known-exploited-vulnerability）), [`脆弱性診断`](glossary/syllabus_tsuiho_ver4_0.md#脆弱性診断), [`ペネトレーションテスト`](glossary/syllabus_tsuiho_ver4_0.md#ペネトレーションテスト), [`脆弱性報奨金制度（バグバウンティプログラム）`](glossary/syllabus_tsuiho_ver4_0.md#脆弱性報奨金制度（バグバウンティプログラム）)
 
 
 ##### （5）セキュリティ情報共有技術
 
 サイバー攻撃活動に関する情報を記述，交換するための技術仕様を理解する。
   - **用語例・キーワード (全網羅)**:
-    `TAXII（Trusted Automated eXchange of Indicator Information：検知指標情報自動交換手順）`, `STIX（Structured Threat Information eXpression：脅威情報構造 化記 述形 式 ）`, `TLP （ Traffic Light Protocol ）`, `IoC （ Indicator of Compromise）`, `脅威インテリジェンス（OSINTなど）の利用`
+    [`TAXII（Trusted Automated eXchange of Indicator Information：検知指標情報自動交換手順）`](glossary/syllabus_tsuiho_ver4_0.md#taxii（trusted-automated-exchange-of-indicator-information検知指標情報自動交換手順）), [`STIX（Structured Threat Information eXpression：脅威情報構造 化記 述形 式 ）`](glossary/syllabus_tsuiho_ver4_0.md#stix（structured-threat-information-expression脅威情報構造-化記-述形-式-）), [`TLP （ Traffic Light Protocol ）`](glossary/syllabus_tsuiho_ver4_0.md#tlp-（-traffic-light-protocol-）), [`IoC （ Indicator of Compromise）`](glossary/syllabus_tsuiho_ver4_0.md#ioc-（-indicator-of-compromise）), [`脅威インテリジェンス（OSINTなど）の利用`](glossary/syllabus_tsuiho_ver4_0.md#脅威インテリジェンス（osintなど）の利用)
 
 
 #### 🔹 4. 情報セキュリティ対策
@@ -325,7 +325,7 @@ Control System）を対象とした CSMS（Cyber Security Management System：�
 グなどのリスクを軽減するための教育と訓練，事件や事故に対して被害を最小限にするた
 めの対策を理解する。
   - **用語例・キーワード (全網羅)**:
-    `組織における内部不正防止ガイドライン`, `情報セキュリティ啓発（教育`, `資料配付`, `メディア活用）`, `情報セキュリティ訓練（標的型メールに関する訓練`, `レッド チ ー ム演 習ほ か ）`, `認証 情報 の割 当て 及び 管理`, `UBA （ User Behavior Analytics）`, `UEBA（User and Entity Behavior Analytics）`, `セキュリティクリアランス`, `秘密保持契約・誓約書`
+    [`組織における内部不正防止ガイドライン`](glossary/syllabus_tsuiho_ver4_0.md#組織における内部不正防止ガイドライン), [`情報セキュリティ啓発（教育`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ啓発（教育), [`資料配付`](glossary/syllabus_tsuiho_ver4_0.md#資料配付), [`メディア活用）`](glossary/syllabus_tsuiho_ver4_0.md#メディア活用）), [`情報セキュリティ訓練（標的型メールに関する訓練`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ訓練（標的型メールに関する訓練), [`レッド チ ー ム演 習ほ か ）`](glossary/syllabus_tsuiho_ver4_0.md#レッド-チ-ー-ム演-習ほ-か-）), [`認証 情報 の割 当て 及び 管理`](glossary/syllabus_tsuiho_ver4_0.md#認証-情報-の割-当て-及び-管理), [`UBA （ User Behavior Analytics）`](glossary/syllabus_tsuiho_ver4_0.md#uba-（-user-behavior-analytics）), [`UEBA（User and Entity Behavior Analytics）`](glossary/syllabus_tsuiho_ver4_0.md#ueba（user-and-entity-behavior-analytics）), [`セキュリティクリアランス`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティクリアランス), [`秘密保持契約・誓約書`](glossary/syllabus_tsuiho_ver4_0.md#秘密保持契約誓約書)
 
 
 ###### ② 技術的セキュリティ対策
@@ -334,7 +334,7 @@ Control System）を対象とした CSMS（Cyber Security Management System：�
 どに技術的対策を実施することによって，システム開発，運用業務などに被害が発生する
 ことを防ぐことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `〔技術的セキュリティ対策の種類〕 クラッキング対策`, `不正アクセス対策`, `情報漏えい対策`, `マルウェア・不正プログラム対策（マルウェア対策ソフトの導入`, `マルウェア定義ファイルの更新ほか）`, `ランサムウェア対策（データのバックアップ`, `3-2-1ルール`, `WORM（Write Once Read Many）機能`, `イミュータブルバックアップ）`, `マルウェア検出手法（パターンマッチング法`, `ビヘイビア法（振る舞い検知）`, `ヒューリスティック法`, `未知マルウェア検出手法`, `動的解析`, `静的解析ほか）`, `秘匿化`, `匿名化の手法 （項目削除／レコード削除／セル削除`, `トップ（ボトム）コーディングなどの一般的な手法のほか`, `k-匿名化などの高度な手法を含む）`, `アクセス制御`, `特権的アクセス権の管理`, `ログ管理`, `脆弱性管理（OSアップデート`, `脆弱性修正プログラム（セキュリティパッチ）の適用`, `ソフトウェア構成分析（SCA：Software Composition Analysis）`, `SBOM（Software Bill of Materials）を利用した脆弱性管理ほか）`, `ネットワーク監視`, `アクセス権の設定`, `侵入検知`, `侵入防止`, `DMZ （非武装地帯）`, `検疫ネットワーク`, `電子メール・Webのセキュリティ（メール無害化`, `メール誤送信対策`, `URLフィルタリング（Webフィルタリング）`, `コンテンツフィルタリング`, `プロキシ認証）`, `携帯端末（携帯電話`, `スマートフォン`, `タブレット端末ほか）のセキュリティ`, `ハードウェアのセキュリティ（セキュアエレメント`, `TPM（Trusted Platform Module）`, `SED（Self Encrypting Drive：自己暗号化ドライブ）`, `TNC（Trusted Network Communications：高信頼ネットワー ク） ）`, `セキュアブート（UEFI：Unified Extensible Firmware Interface）`, `デー タマスキング`, `暗号化消去（CE：Cryptographic Erase）`, `クラウドサービスのセキュリティ`, `IoTのセキュリティ`, `制御システムのセキュリティ`, `電子透かし`, `デジタルフォレンジックス（証拠保全ほか）`, `AIを使ったセキュリティ技術（AI for Security）`, `AIそのものを守るセキュリティ技術（Security for AI）`, `連合学習`, `要塞化（ハードニング）`, `ゼロトラストアーキテクチャ`, `脅威ハンティング（Threat Hunting） 〔セキュリティ製品・サービス〕 マル ウェ ア対 策ソ フト`, `EDR （ Endpoint Detection and Response ）`, `XDR （Extended Detection and Response）`, `MDR（Managed Detection and Response）`, `DLP （ Data Loss Prevention ）`, `SIEM （ Security Information and Event Management ）`, `ファ イア ウォ ー ル`, `WAF （ Web Application Firewall ）`, `RASP （Runtime Application Self-Protection）`, `IDS（Intrusion Detection System： 侵入検知システム）`, `IPS（Intrusion Prevention System：侵入防止システム）`, `UTM（Unified Threat Management：統合脅威管理）`, `許可リスト（パスリスト）`, `拒否リスト（ブロックリスト）`, `シグネチャ型`, `アノマリ型`, `フォールスネガティブ`, `フォールスポジティブ`, `SSL/TLSアクセラレーター`, `MDM（Mobile Device Management）`, `CASB（Cloud Access Security Broker）`, `CSPM（Cloud Security Posture Management）`, `SSPM（SaaS Security Posture Management）`, `CWPP（Cloud Workload Protection Platform）`, `SASE（Secure Access Service Edge）`, `Webア イソレーション`, `SOAR（Security Orchestration, Automation and Response）`, `MSS（Managed Security Service）`
+    [`〔技術的セキュリティ対策の種類〕 クラッキング対策`](glossary/syllabus_tsuiho_ver4_0.md#技術的セキュリティ対策の種類-クラッキング対策), [`不正アクセス対策`](glossary/syllabus_tsuiho_ver4_0.md#不正アクセス対策), [`情報漏えい対策`](glossary/syllabus_tsuiho_ver4_0.md#情報漏えい対策), [`マルウェア・不正プログラム対策（マルウェア対策ソフトの導入`](glossary/syllabus_tsuiho_ver4_0.md#マルウェア不正プログラム対策（マルウェア対策ソフトの導入), [`マルウェア定義ファイルの更新ほか）`](glossary/syllabus_tsuiho_ver4_0.md#マルウェア定義ファイルの更新ほか）), [`ランサムウェア対策（データのバックアップ`](glossary/syllabus_tsuiho_ver4_0.md#ランサムウェア対策（データのバックアップ), [`3-2-1ルール`](glossary/syllabus_tsuiho_ver4_0.md#3-2-1ルール), [`WORM（Write Once Read Many）機能`](glossary/syllabus_tsuiho_ver4_0.md#worm（write-once-read-many）機能), [`イミュータブルバックアップ）`](glossary/syllabus_tsuiho_ver4_0.md#イミュータブルバックアップ）), [`マルウェア検出手法（パターンマッチング法`](glossary/syllabus_tsuiho_ver4_0.md#マルウェア検出手法（パターンマッチング法), [`ビヘイビア法（振る舞い検知）`](glossary/syllabus_tsuiho_ver4_0.md#ビヘイビア法（振る舞い検知）), [`ヒューリスティック法`](glossary/syllabus_tsuiho_ver4_0.md#ヒューリスティック法), [`未知マルウェア検出手法`](glossary/syllabus_tsuiho_ver4_0.md#未知マルウェア検出手法), [`動的解析`](glossary/syllabus_tsuiho_ver4_0.md#動的解析), [`静的解析ほか）`](glossary/syllabus_tsuiho_ver4_0.md#静的解析ほか）), [`秘匿化`](glossary/syllabus_tsuiho_ver4_0.md#秘匿化), [`匿名化の手法 （項目削除／レコード削除／セル削除`](glossary/syllabus_tsuiho_ver4_0.md#匿名化の手法-（項目削除-レコード削除-セル削除), [`トップ（ボトム）コーディングなどの一般的な手法のほか`](glossary/syllabus_tsuiho_ver4_0.md#トップ（ボトム）コーディングなどの一般的な手法のほか), [`k-匿名化などの高度な手法を含む）`](glossary/syllabus_tsuiho_ver4_0.md#k-匿名化などの高度な手法を含む）), [`アクセス制御`](glossary/syllabus_tsuiho_ver4_0.md#アクセス制御), [`特権的アクセス権の管理`](glossary/syllabus_tsuiho_ver4_0.md#特権的アクセス権の管理), [`ログ管理`](glossary/syllabus_tsuiho_ver4_0.md#ログ管理), [`脆弱性管理（OSアップデート`](glossary/syllabus_tsuiho_ver4_0.md#脆弱性管理（osアップデート), [`脆弱性修正プログラム（セキュリティパッチ）の適用`](glossary/syllabus_tsuiho_ver4_0.md#脆弱性修正プログラム（セキュリティパッチ）の適用), [`ソフトウェア構成分析（SCA：Software Composition Analysis）`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア構成分析（scasoftware-composition-analysis）), [`SBOM（Software Bill of Materials）を利用した脆弱性管理ほか）`](glossary/syllabus_tsuiho_ver4_0.md#sbom（software-bill-of-materials）を利用した脆弱性管理ほか）), [`ネットワーク監視`](glossary/syllabus_tsuiho_ver4_0.md#ネットワーク監視), [`アクセス権の設定`](glossary/syllabus_tsuiho_ver4_0.md#アクセス権の設定), [`侵入検知`](glossary/syllabus_tsuiho_ver4_0.md#侵入検知), [`侵入防止`](glossary/syllabus_tsuiho_ver4_0.md#侵入防止), [`DMZ （非武装地帯）`](glossary/syllabus_tsuiho_ver4_0.md#dmz-（非武装地帯）), [`検疫ネットワーク`](glossary/syllabus_tsuiho_ver4_0.md#検疫ネットワーク), [`電子メール・Webのセキュリティ（メール無害化`](glossary/syllabus_tsuiho_ver4_0.md#電子メールwebのセキュリティ（メール無害化), [`メール誤送信対策`](glossary/syllabus_tsuiho_ver4_0.md#メール誤送信対策), [`URLフィルタリング（Webフィルタリング）`](glossary/syllabus_tsuiho_ver4_0.md#urlフィルタリング（webフィルタリング）), [`コンテンツフィルタリング`](glossary/syllabus_tsuiho_ver4_0.md#コンテンツフィルタリング), [`プロキシ認証）`](glossary/syllabus_tsuiho_ver4_0.md#プロキシ認証）), [`携帯端末（携帯電話`](glossary/syllabus_tsuiho_ver4_0.md#携帯端末（携帯電話), [`スマートフォン`](glossary/syllabus_tsuiho_ver4_0.md#スマートフォン), [`タブレット端末ほか）のセキュリティ`](glossary/syllabus_tsuiho_ver4_0.md#タブレット端末ほか）のセキュリティ), [`ハードウェアのセキュリティ（セキュアエレメント`](glossary/syllabus_tsuiho_ver4_0.md#ハードウェアのセキュリティ（セキュアエレメント), [`TPM（Trusted Platform Module）`](glossary/syllabus_tsuiho_ver4_0.md#tpm（trusted-platform-module）), [`SED（Self Encrypting Drive：自己暗号化ドライブ）`](glossary/syllabus_tsuiho_ver4_0.md#sed（self-encrypting-drive自己暗号化ドライブ）), [`TNC（Trusted Network Communications：高信頼ネットワー ク） ）`](glossary/syllabus_tsuiho_ver4_0.md#tnc（trusted-network-communications高信頼ネットワー-ク）-）), [`セキュアブート（UEFI：Unified Extensible Firmware Interface）`](glossary/syllabus_tsuiho_ver4_0.md#セキュアブート（uefiunified-extensible-firmware-interface）), [`デー タマスキング`](glossary/syllabus_tsuiho_ver4_0.md#デー-タマスキング), [`暗号化消去（CE：Cryptographic Erase）`](glossary/syllabus_tsuiho_ver4_0.md#暗号化消去（cecryptographic-erase）), [`クラウドサービスのセキュリティ`](glossary/syllabus_tsuiho_ver4_0.md#クラウドサービスのセキュリティ), [`IoTのセキュリティ`](glossary/syllabus_tsuiho_ver4_0.md#iotのセキュリティ), [`制御システムのセキュリティ`](glossary/syllabus_tsuiho_ver4_0.md#制御システムのセキュリティ), [`電子透かし`](glossary/syllabus_tsuiho_ver4_0.md#電子透かし), [`デジタルフォレンジックス（証拠保全ほか）`](glossary/syllabus_tsuiho_ver4_0.md#デジタルフォレンジックス（証拠保全ほか）), [`AIを使ったセキュリティ技術（AI for Security）`](glossary/syllabus_tsuiho_ver4_0.md#aiを使ったセキュリティ技術（ai-for-security）), [`AIそのものを守るセキュリティ技術（Security for AI）`](glossary/syllabus_tsuiho_ver4_0.md#aiそのものを守るセキュリティ技術（security-for-ai）), [`連合学習`](glossary/syllabus_tsuiho_ver4_0.md#連合学習), [`要塞化（ハードニング）`](glossary/syllabus_tsuiho_ver4_0.md#要塞化（ハードニング）), [`ゼロトラストアーキテクチャ`](glossary/syllabus_tsuiho_ver4_0.md#ゼロトラストアーキテクチャ), [`脅威ハンティング（Threat Hunting） 〔セキュリティ製品・サービス〕 マル ウェ ア対 策ソ フト`](glossary/syllabus_tsuiho_ver4_0.md#脅威ハンティング（threat-hunting）-セキュリティ製品サービス-マル-ウェ-ア対-策ソ-フト), [`EDR （ Endpoint Detection and Response ）`](glossary/syllabus_tsuiho_ver4_0.md#edr-（-endpoint-detection-and-response-）), [`XDR （Extended Detection and Response）`](glossary/syllabus_tsuiho_ver4_0.md#xdr-（extended-detection-and-response）), [`MDR（Managed Detection and Response）`](glossary/syllabus_tsuiho_ver4_0.md#mdr（managed-detection-and-response）), [`DLP （ Data Loss Prevention ）`](glossary/syllabus_tsuiho_ver4_0.md#dlp-（-data-loss-prevention-）), [`SIEM （ Security Information and Event Management ）`](glossary/syllabus_tsuiho_ver4_0.md#siem-（-security-information-and-event-management-）), [`ファ イア ウォ ー ル`](glossary/syllabus_tsuiho_ver4_0.md#ファ-イア-ウォ-ー-ル), [`WAF （ Web Application Firewall ）`](glossary/syllabus_tsuiho_ver4_0.md#waf-（-web-application-firewall-）), [`RASP （Runtime Application Self-Protection）`](glossary/syllabus_tsuiho_ver4_0.md#rasp-（runtime-application-self-protection）), [`IDS（Intrusion Detection System： 侵入検知システム）`](glossary/syllabus_tsuiho_ver4_0.md#ids（intrusion-detection-system-侵入検知システム）), [`IPS（Intrusion Prevention System：侵入防止システム）`](glossary/syllabus_tsuiho_ver4_0.md#ips（intrusion-prevention-system侵入防止システム）), [`UTM（Unified Threat Management：統合脅威管理）`](glossary/syllabus_tsuiho_ver4_0.md#utm（unified-threat-management統合脅威管理）), [`許可リスト（パスリスト）`](glossary/syllabus_tsuiho_ver4_0.md#許可リスト（パスリスト）), [`拒否リスト（ブロックリスト）`](glossary/syllabus_tsuiho_ver4_0.md#拒否リスト（ブロックリスト）), [`シグネチャ型`](glossary/syllabus_tsuiho_ver4_0.md#シグネチャ型), [`アノマリ型`](glossary/syllabus_tsuiho_ver4_0.md#アノマリ型), [`フォールスネガティブ`](glossary/syllabus_tsuiho_ver4_0.md#フォールスネガティブ), [`フォールスポジティブ`](glossary/syllabus_tsuiho_ver4_0.md#フォールスポジティブ), [`SSL/TLSアクセラレーター`](glossary/syllabus_tsuiho_ver4_0.md#ssl-tlsアクセラレーター), [`MDM（Mobile Device Management）`](glossary/syllabus_tsuiho_ver4_0.md#mdm（mobile-device-management）), [`CASB（Cloud Access Security Broker）`](glossary/syllabus_tsuiho_ver4_0.md#casb（cloud-access-security-broker）), [`CSPM（Cloud Security Posture Management）`](glossary/syllabus_tsuiho_ver4_0.md#cspm（cloud-security-posture-management）), [`SSPM（SaaS Security Posture Management）`](glossary/syllabus_tsuiho_ver4_0.md#sspm（saas-security-posture-management）), [`CWPP（Cloud Workload Protection Platform）`](glossary/syllabus_tsuiho_ver4_0.md#cwpp（cloud-workload-protection-platform）), [`SASE（Secure Access Service Edge）`](glossary/syllabus_tsuiho_ver4_0.md#sase（secure-access-service-edge）), [`Webア イソレーション`](glossary/syllabus_tsuiho_ver4_0.md#webア-イソレーション), [`SOAR（Security Orchestration`](glossary/syllabus_tsuiho_ver4_0.md#soar（security-orchestration), [`Automation and Response）`](glossary/syllabus_tsuiho_ver4_0.md#automation-and-response）), [`MSS（Managed Security Service）`](glossary/syllabus_tsuiho_ver4_0.md#mss（managed-security-service）)
 
 
 ###### ③ 物理的セキュリティ対策
@@ -343,7 +343,7 @@ Control System）を対象とした CSMS（Cyber Security Management System：�
 爆発，火災などから情報システムを保護し，情報システムの信頼性，可用性を確保するた
 めの対策を理解する。
   - **用語例・キーワード (全網羅)**:
-    `RASIS（Reliability`, `Availability`, `Serviceability`, `Integrity`, `Security）`, `RAS技術`, `耐震耐火設備`, `UPS`, `多重化技術`, `ストレージのミラーリング`, `ハウジングセキュリティ`, `セキュリティゾーニング`, `監視カメラ`, `セキュリティゲート`, `アンチパスバック`, `インターロック`, `施錠管理`, `入退室管理`, `機械警備`, `クリアデスク・クリアスクリーン`, `遠隔バックアップ`, `USBキー`, `セキュリティケーブル`, `記憶媒体の管理`, `装置のセキュリティを保った処分又は再利用`
+    [`RASIS（Reliability`](glossary/syllabus_tsuiho_ver4_0.md#rasis（reliability), [`Availability`](glossary/syllabus_tsuiho_ver4_0.md#availability), [`Serviceability`](glossary/syllabus_tsuiho_ver4_0.md#serviceability), [`Integrity`](glossary/syllabus_tsuiho_ver4_0.md#integrity), [`Security）`](glossary/syllabus_tsuiho_ver4_0.md#security）), [`RAS技術`](glossary/syllabus_tsuiho_ver4_0.md#ras技術), [`耐震耐火設備`](glossary/syllabus_tsuiho_ver4_0.md#耐震耐火設備), [`UPS`](glossary/syllabus_tsuiho_ver4_0.md#ups), [`多重化技術`](glossary/syllabus_tsuiho_ver4_0.md#多重化技術), [`ストレージのミラーリング`](glossary/syllabus_tsuiho_ver4_0.md#ストレージのミラーリング), [`ハウジングセキュリティ`](glossary/syllabus_tsuiho_ver4_0.md#ハウジングセキュリティ), [`セキュリティゾーニング`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティゾーニング), [`監視カメラ`](glossary/syllabus_tsuiho_ver4_0.md#監視カメラ), [`セキュリティゲート`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティゲート), [`アンチパスバック`](glossary/syllabus_tsuiho_ver4_0.md#アンチパスバック), [`インターロック`](glossary/syllabus_tsuiho_ver4_0.md#インターロック), [`施錠管理`](glossary/syllabus_tsuiho_ver4_0.md#施錠管理), [`入退室管理`](glossary/syllabus_tsuiho_ver4_0.md#入退室管理), [`機械警備`](glossary/syllabus_tsuiho_ver4_0.md#機械警備), [`クリアデスク・クリアスクリーン`](glossary/syllabus_tsuiho_ver4_0.md#クリアデスククリアスクリーン), [`遠隔バックアップ`](glossary/syllabus_tsuiho_ver4_0.md#遠隔バックアップ), [`USBキー`](glossary/syllabus_tsuiho_ver4_0.md#usbキー), [`セキュリティケーブル`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティケーブル), [`記憶媒体の管理`](glossary/syllabus_tsuiho_ver4_0.md#記憶媒体の管理), [`装置のセキュリティを保った処分又は再利用`](glossary/syllabus_tsuiho_ver4_0.md#装置のセキュリティを保った処分又は再利用)
 
 
 #### 🔹 5. セキュリティ実装技術
@@ -361,7 +361,7 @@ Control System）を対象とした CSMS（Cyber Security Management System：�
 
 通信データの盗聴，不正接続を防ぐセキュアプロトコルの種類と効果を理解する。
   - **用語例・キーワード (全網羅)**:
-    `IPsec（ESP`, `AH`, `IKE）`, `SSL/TLS`, `STARTTLS`, `SSH`, `HTTP over TLS（HTTPS）`, `QUIC`, `WPA2`, `WPA3`, `PSK（Pre-Shared Key）`, `Enhanced Open`, `SMTP over TLS`
+    [`IPsec（ESP`](glossary/syllabus_tsuiho_ver4_0.md#ipsec（esp), [`AH`](glossary/syllabus_tsuiho_ver4_0.md#ah), [`IKE）`](glossary/syllabus_tsuiho_ver4_0.md#ike）), [`SSL/TLS`](glossary/syllabus_tsuiho_ver4_0.md#ssl-tls), [`STARTTLS`](glossary/syllabus_tsuiho_ver4_0.md#starttls), [`SSH`](glossary/syllabus_tsuiho_ver4_0.md#ssh), [`HTTP over TLS（HTTPS）`](glossary/syllabus_tsuiho_ver4_0.md#http-over-tls（https）), [`QUIC`](glossary/syllabus_tsuiho_ver4_0.md#quic), [`WPA2`](glossary/syllabus_tsuiho_ver4_0.md#wpa2), [`WPA3`](glossary/syllabus_tsuiho_ver4_0.md#wpa3), [`PSK（Pre-Shared Key）`](glossary/syllabus_tsuiho_ver4_0.md#psk（pre-shared-key）), [`Enhanced Open`](glossary/syllabus_tsuiho_ver4_0.md#enhanced-open), [`SMTP over TLS`](glossary/syllabus_tsuiho_ver4_0.md#smtp-over-tls)
 
 
 ##### （2）認証・認可技術
@@ -369,7 +369,7 @@ Control System）を対象とした CSMS（Cyber Security Management System：�
 なりすましによる不正接続，サービスの不正利用を防ぐ認証・認可技術の種類と効果を理
 解する。
   - **用語例・キーワード (全網羅)**:
-    `スパム対策（ベイジアンフィルタリング`, `送信元ドメイン認証`, `SPF`, `DKIM`, `DMARC`, `SMTP-AUTH`, `OP25B`, `IP25B`, `PGP（Pretty Good Privacy）`, `S/MIME（Secure MIME）ほか）`, `OAuth`, `DNSSEC`, `IEEE 802.1X`, `EAP（Extensible Authentication Protocol）`, `EAP-TLS`, `PEAP`, `RADIUS`, `Diameter`
+    [`スパム対策（ベイジアンフィルタリング`](glossary/syllabus_tsuiho_ver4_0.md#スパム対策（ベイジアンフィルタリング), [`送信元ドメイン認証`](glossary/syllabus_tsuiho_ver4_0.md#送信元ドメイン認証), [`SPF`](glossary/syllabus_tsuiho_ver4_0.md#spf), [`DKIM`](glossary/syllabus_tsuiho_ver4_0.md#dkim), [`DMARC`](glossary/syllabus_tsuiho_ver4_0.md#dmarc), [`SMTP-AUTH`](glossary/syllabus_tsuiho_ver4_0.md#smtp-auth), [`OP25B`](glossary/syllabus_tsuiho_ver4_0.md#op25b), [`IP25B`](glossary/syllabus_tsuiho_ver4_0.md#ip25b), [`PGP（Pretty Good Privacy）`](glossary/syllabus_tsuiho_ver4_0.md#pgp（pretty-good-privacy）), [`S/MIME（Secure MIME）ほか）`](glossary/syllabus_tsuiho_ver4_0.md#s-mime（secure-mime）ほか）), [`OAuth`](glossary/syllabus_tsuiho_ver4_0.md#oauth), [`DNSSEC`](glossary/syllabus_tsuiho_ver4_0.md#dnssec), [`IEEE 802.1X`](glossary/syllabus_tsuiho_ver4_0.md#ieee-8021x), [`EAP（Extensible Authentication Protocol）`](glossary/syllabus_tsuiho_ver4_0.md#eap（extensible-authentication-protocol）), [`EAP-TLS`](glossary/syllabus_tsuiho_ver4_0.md#eap-tls), [`PEAP`](glossary/syllabus_tsuiho_ver4_0.md#peap), [`RADIUS`](glossary/syllabus_tsuiho_ver4_0.md#radius), [`Diameter`](glossary/syllabus_tsuiho_ver4_0.md#diameter)
 
 
 ##### （3）OSのセキュリティ
@@ -377,7 +377,7 @@ Control System）を対象とした CSMS（Cyber Security Management System：�
 OSのセキュリティや，セキュリティを強化した OSであるセキュア OSの仕組み，実装技術，
 効果を理解する。
   - **用語例・キーワード (全網羅)**:
-    `MAC（Mandatory Access Control：強制アクセス制御）`, `RBAC（Role-Based Access Control：ロールベースアクセス制御）`, `最小特権`, `トラステッド OS`
+    [`MAC（Mandatory Access Control：強制アクセス制御）`](glossary/syllabus_tsuiho_ver4_0.md#mac（mandatory-access-control強制アクセス制御）), [`RBAC（Role-Based Access Control：ロールベースアクセス制御）`](glossary/syllabus_tsuiho_ver4_0.md#rbac（role-based-access-controlロールベースアクセス制御）), [`最小特権`](glossary/syllabus_tsuiho_ver4_0.md#最小特権), [`トラステッド OS`](glossary/syllabus_tsuiho_ver4_0.md#トラステッド-os)
 
 
 ##### （4）ネットワークセキュリティ
@@ -385,7 +385,7 @@ OSのセキュリティや，セキュリティを強化した OSであるセキ
 ネットワークに対する不正アクセス，不正利用，サービスの妨害行為などの脅威に対する
 対策の仕組み，実装方法，効果を理解する。
   - **用語例・キーワード (全網羅)**:
-    `パケットフィルタリング`, `ステートフルパケットフィルタリング`, `MACアドレス （Media Access Control address）フィルタリング`, `アプリケーションゲートウェイ方式`, `ネットワークトラフィック分析`, `認証サーバ`, `NAT`, `IPマスカレード （NAPT）`, `認証 VLAN`, `VPN（リバースプロキシ方式`, `ポートフォワーディング方式`, `L2フォワーディング方式）`, `リバースプロキシ`, `DNSBL`, `DHCPスヌーピング`, `ネットワーク脆弱性検査`, `ポートスキャンによる検査`
+    [`パケットフィルタリング`](glossary/syllabus_tsuiho_ver4_0.md#パケットフィルタリング), [`ステートフルパケットフィルタリング`](glossary/syllabus_tsuiho_ver4_0.md#ステートフルパケットフィルタリング), [`MACアドレス （Media Access Control address）フィルタリング`](glossary/syllabus_tsuiho_ver4_0.md#macアドレス-（media-access-control-address）フィルタリング), [`アプリケーションゲートウェイ方式`](glossary/syllabus_tsuiho_ver4_0.md#アプリケーションゲートウェイ方式), [`ネットワークトラフィック分析`](glossary/syllabus_tsuiho_ver4_0.md#ネットワークトラフィック分析), [`認証サーバ`](glossary/syllabus_tsuiho_ver4_0.md#認証サーバ), [`NAT`](glossary/syllabus_tsuiho_ver4_0.md#nat), [`IPマスカレード （NAPT）`](glossary/syllabus_tsuiho_ver4_0.md#ipマスカレード-（napt）), [`認証 VLAN`](glossary/syllabus_tsuiho_ver4_0.md#認証-vlan), [`VPN（リバースプロキシ方式`](glossary/syllabus_tsuiho_ver4_0.md#vpn（リバースプロキシ方式), [`ポートフォワーディング方式`](glossary/syllabus_tsuiho_ver4_0.md#ポートフォワーディング方式), [`L2フォワーディング方式）`](glossary/syllabus_tsuiho_ver4_0.md#l2フォワーディング方式）), [`リバースプロキシ`](glossary/syllabus_tsuiho_ver4_0.md#リバースプロキシ), [`DNSBL`](glossary/syllabus_tsuiho_ver4_0.md#dnsbl), [`DHCPスヌーピング`](glossary/syllabus_tsuiho_ver4_0.md#dhcpスヌーピング), [`ネットワーク脆弱性検査`](glossary/syllabus_tsuiho_ver4_0.md#ネットワーク脆弱性検査), [`ポートスキャンによる検査`](glossary/syllabus_tsuiho_ver4_0.md#ポートスキャンによる検査)
 
 
 ##### （5）データベースセキュリティ
@@ -393,7 +393,7 @@ OSのセキュリティや，セキュリティを強化した OSであるセキ
 データベースに対する不正アクセス，不正利用，破壊などの脅威への対策の仕組み，実装
 方法，効果を理解する。
   - **用語例・キーワード (全網羅)**:
-    `データベース暗号化`, `データベースアクセス制御`, `データベースバックアップ`, `ログの取得`
+    [`データベース暗号化`](glossary/syllabus_tsuiho_ver4_0.md#データベース暗号化), [`データベースアクセス制御`](glossary/syllabus_tsuiho_ver4_0.md#データベースアクセス制御), [`データベースバックアップ`](glossary/syllabus_tsuiho_ver4_0.md#データベースバックアップ), [`ログの取得`](glossary/syllabus_tsuiho_ver4_0.md#ログの取得)
 
 
 ##### （6）アプリケーションセキュリティ
@@ -401,7 +401,7 @@ OSのセキュリティや，セキュリティを強化した OSであるセキ
 アプリケーションソフトウェアに対する攻撃を抑制するアプリケーションセキュリティの
 対策の仕組み，実装方法，効果を理解する。
   - **用語例・キーワード (全網羅)**:
-    `Webシステムのセキュリティ対策`, `セキュアプログラミング`, `脆弱性検査技術 （ソースコード静的検査（SAST：Static Application Security Testing）`, `プログラムの動的検査（DAST：Dynamic Application Security Testing）`, `インタラクティブアプリケーションセキュリティ検査（IAST：Interactive Application Security Testing）`, `Webアプリケーションソフトウェアの脆弱性検査`, `ファジングほか）`, `コンテナセキュリティ`, `Same Origin Policy`, `CORS（Cross-Origin Resource Sharing）`, `パスワードクラック対策（ソルト`, `ストレッチングほか）`, `バッファオーバーフロー対策`, `クロスサイトスクリプティング対策`, `SQLインジェクション対策（プレースホルダほか）`, `cookieの Secure属性指定`, `HSTS（HTTP Strict Transport Security）`, `HSTSプリロード`, `CSP（Content Security Policy）`
+    [`Webシステムのセキュリティ対策`](glossary/syllabus_tsuiho_ver4_0.md#webシステムのセキュリティ対策), [`セキュアプログラミング`](glossary/syllabus_tsuiho_ver4_0.md#セキュアプログラミング), [`脆弱性検査技術 （ソースコード静的検査（SAST：Static Application Security Testing）`](glossary/syllabus_tsuiho_ver4_0.md#脆弱性検査技術-（ソースコード静的検査（saststatic-application-security-testing）), [`プログラムの動的検査（DAST：Dynamic Application Security Testing）`](glossary/syllabus_tsuiho_ver4_0.md#プログラムの動的検査（dastdynamic-application-security-testing）), [`インタラクティブアプリケーションセキュリティ検査（IAST：Interactive Application Security Testing）`](glossary/syllabus_tsuiho_ver4_0.md#インタラクティブアプリケーションセキュリティ検査（iastinteractive-application-security-testing）), [`Webアプリケーションソフトウェアの脆弱性検査`](glossary/syllabus_tsuiho_ver4_0.md#webアプリケーションソフトウェアの脆弱性検査), [`ファジングほか）`](glossary/syllabus_tsuiho_ver4_0.md#ファジングほか）), [`コンテナセキュリティ`](glossary/syllabus_tsuiho_ver4_0.md#コンテナセキュリティ), [`Same Origin Policy`](glossary/syllabus_tsuiho_ver4_0.md#same-origin-policy), [`CORS（Cross-Origin Resource Sharing）`](glossary/syllabus_tsuiho_ver4_0.md#cors（cross-origin-resource-sharing）), [`パスワードクラック対策（ソルト`](glossary/syllabus_tsuiho_ver4_0.md#パスワードクラック対策（ソルト), [`ストレッチングほか）`](glossary/syllabus_tsuiho_ver4_0.md#ストレッチングほか）), [`バッファオーバーフロー対策`](glossary/syllabus_tsuiho_ver4_0.md#バッファオーバーフロー対策), [`クロスサイトスクリプティング対策`](glossary/syllabus_tsuiho_ver4_0.md#クロスサイトスクリプティング対策), [`SQLインジェクション対策（プレースホルダほか）`](glossary/syllabus_tsuiho_ver4_0.md#sqlインジェクション対策（プレースホルダほか）), [`cookieの Secure属性指定`](glossary/syllabus_tsuiho_ver4_0.md#cookieの-secure属性指定), [`HSTS（HTTP Strict Transport Security）`](glossary/syllabus_tsuiho_ver4_0.md#hsts（http-strict-transport-security）), [`HSTSプリロード`](glossary/syllabus_tsuiho_ver4_0.md#hstsプリロード), [`CSP（Content Security Policy）`](glossary/syllabus_tsuiho_ver4_0.md#csp（content-security-policy）)
 
 
 ##### （7）マルウェア解析
@@ -409,7 +409,7 @@ OSのセキュリティや，セキュリティを強化した OSであるセキ
 マルウェア解析環境の仕組み，マルウェア検体の解析手法を理解する。また，解析をマル
 ウェアが回避，妨害する仕組みを理解する。
   - **用語例・キーワード (全網羅)**:
-    `サンドボックス`, `ハニーポット`, `ハニーネット`, `パケットキャプチャ`, `バイナリ解析ツール`, `逆アセンブル`, `アンパック`, `解析の回避（パッカー`, `難読化`, `デバッガの検知`, `マルウェア対策ソフトの停止ほか）`, `PE（Portable Executable）ファイル`, `PEヘッダー`
+    [`サンドボックス`](glossary/syllabus_tsuiho_ver4_0.md#サンドボックス), [`ハニーポット`](glossary/syllabus_tsuiho_ver4_0.md#ハニーポット), [`ハニーネット`](glossary/syllabus_tsuiho_ver4_0.md#ハニーネット), [`パケットキャプチャ`](glossary/syllabus_tsuiho_ver4_0.md#パケットキャプチャ), [`バイナリ解析ツール`](glossary/syllabus_tsuiho_ver4_0.md#バイナリ解析ツール), [`逆アセンブル`](glossary/syllabus_tsuiho_ver4_0.md#逆アセンブル), [`アンパック`](glossary/syllabus_tsuiho_ver4_0.md#アンパック), [`解析の回避（パッカー`](glossary/syllabus_tsuiho_ver4_0.md#解析の回避（パッカー), [`難読化`](glossary/syllabus_tsuiho_ver4_0.md#難読化), [`デバッガの検知`](glossary/syllabus_tsuiho_ver4_0.md#デバッガの検知), [`マルウェア対策ソフトの停止ほか）`](glossary/syllabus_tsuiho_ver4_0.md#マルウェア対策ソフトの停止ほか）), [`PE（Portable Executable）ファイル`](glossary/syllabus_tsuiho_ver4_0.md#pe（portable-executable）ファイル), [`PEヘッダー`](glossary/syllabus_tsuiho_ver4_0.md#peヘッダー)
 
 
 ##### （8）IoTシステムの設計・開発におけるセキュリティ
@@ -417,7 +417,7 @@ OSのセキュリティや，セキュリティを強化した OSであるセキ
 IoTシステム，IoT機器の設計・開発について策定された各種の指針・ガイドラインを理解
 する。
   - **用語例・キーワード (全網羅)**:
-    `つながる世界の開発指針`, `IoT開発におけるセキュリティ設計の手引き`, `IoTセ キュリティガイドライン`
+    [`つながる世界の開発指針`](glossary/syllabus_tsuiho_ver4_0.md#つながる世界の開発指針), [`IoT開発におけるセキュリティ設計の手引き`](glossary/syllabus_tsuiho_ver4_0.md#iot開発におけるセキュリティ設計の手引き), [`IoTセ キュリティガイドライン`](glossary/syllabus_tsuiho_ver4_0.md#iotセ-キュリティガイドライン)
 
 
 ## 📌 大分類 3：技術要素
@@ -440,7 +440,7 @@ LANと WANの仕組み，特徴，電気通信事業者が提供するサービ�
 通信ネットワークが果たす役割と効果，ネットワーク障害が発生した場合の社会的影響の
 大きさを理解する。
   - **用語例・キーワード (全網羅)**:
-    `ネットワーク社会`, `ICT（Information and Communication Technology：情報通信技術）`
+    [`ネットワーク社会`](glossary/syllabus_tsuiho_ver4_0.md#ネットワーク社会), [`ICT（Information and Communication Technology：情報通信技術）`](glossary/syllabus_tsuiho_ver4_0.md#ict（information-and-communication-technology情報通信技術）)
 
 
 ##### （2）ネットワークの種類と特徴
@@ -448,28 +448,28 @@ LANと WANの仕組み，特徴，電気通信事業者が提供するサービ�
 LANと WANの仕組み，特徴，構成要素，運用費用を理解する。また，WANを構成する場合に
 利用する電気通信事業者から提供されているサービスの種類と特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `イン タ ー ネットサ ー ビス プロ バイ ダ（ ISP ）`, `従量 制`, `月額固定 料金`, `IDF （Intermediate Distribution Frame）`, `MDF（Main Distribution Frame）`, `パケット交換網`, `回線交換網`, `センサーネットワーク`
+    [`イン タ ー ネットサ ー ビス プロ バイ ダ（ ISP ）`](glossary/syllabus_tsuiho_ver4_0.md#イン-タ-ー-ネットサ-ー-ビス-プロ-バイ-ダ（-isp-）), [`従量 制`](glossary/syllabus_tsuiho_ver4_0.md#従量-制), [`月額固定 料金`](glossary/syllabus_tsuiho_ver4_0.md#月額固定-料金), [`IDF （Intermediate Distribution Frame）`](glossary/syllabus_tsuiho_ver4_0.md#idf-（intermediate-distribution-frame）), [`MDF（Main Distribution Frame）`](glossary/syllabus_tsuiho_ver4_0.md#mdf（main-distribution-frame）), [`パケット交換網`](glossary/syllabus_tsuiho_ver4_0.md#パケット交換網), [`回線交換網`](glossary/syllabus_tsuiho_ver4_0.md#回線交換網), [`センサーネットワーク`](glossary/syllabus_tsuiho_ver4_0.md#センサーネットワーク)
 
 
 ##### （3）有線 LAN
 
 有線 LANの仕組み，構成要素，特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `同軸ケーブル`, `より対線`, `光ファイバケーブル`
+    [`同軸ケーブル`](glossary/syllabus_tsuiho_ver4_0.md#同軸ケーブル), [`より対線`](glossary/syllabus_tsuiho_ver4_0.md#より対線), [`光ファイバケーブル`](glossary/syllabus_tsuiho_ver4_0.md#光ファイバケーブル)
 
 
 ##### （4）無線 LAN
 
 無線 LANの仕組み，構成要素，特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `電波`, `赤外線`, `無線 LANアクセスポイント`, `インフラストラクチャモード`, `アドホックモード`, `SSID`, `BSSID`, `隠れ端末問題`, `さらし端末問題`
+    [`電波`](glossary/syllabus_tsuiho_ver4_0.md#電波), [`赤外線`](glossary/syllabus_tsuiho_ver4_0.md#赤外線), [`無線 LANアクセスポイント`](glossary/syllabus_tsuiho_ver4_0.md#無線-lanアクセスポイント), [`インフラストラクチャモード`](glossary/syllabus_tsuiho_ver4_0.md#インフラストラクチャモード), [`アドホックモード`](glossary/syllabus_tsuiho_ver4_0.md#アドホックモード), [`SSID`](glossary/syllabus_tsuiho_ver4_0.md#ssid), [`BSSID`](glossary/syllabus_tsuiho_ver4_0.md#bssid), [`隠れ端末問題`](glossary/syllabus_tsuiho_ver4_0.md#隠れ端末問題), [`さらし端末問題`](glossary/syllabus_tsuiho_ver4_0.md#さらし端末問題)
 
 
 ##### （5）交換方式
 
 回線交換とパケット交換の仕組み，特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `パケット`, `VoIP（Voice over Internet Protocol）`, `SIP`
+    [`パケット`](glossary/syllabus_tsuiho_ver4_0.md#パケット), [`VoIP（Voice over Internet Protocol）`](glossary/syllabus_tsuiho_ver4_0.md#voip（voice-over-internet-protocol）), [`SIP`](glossary/syllabus_tsuiho_ver4_0.md#sip)
 
 
 ##### （6）回線に関する計算
@@ -478,7 +478,7 @@ LANと WANの仕組み，特徴，構成要素，運用費用を理解する。�
 用率からの転送時間の算出方法を理解する。また，発生するトラフィック量から必要な回線
 速度を算出する方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `転送速度（伝送速度）`, `bps（bit per second：ビット／秒）`, `回線容量`, `ビット誤り率`, `トラフィック理論`, `呼量`, `呼損率`, `アーラン B式（アーランの損失式）`, `アーラン`, `トラフィック設計`, `性能評価`
+    [`転送速度（伝送速度）`](glossary/syllabus_tsuiho_ver4_0.md#転送速度（伝送速度）), [`bps（bit per second：ビット／秒）`](glossary/syllabus_tsuiho_ver4_0.md#bps（bit-per-secondビット-秒）), [`回線容量`](glossary/syllabus_tsuiho_ver4_0.md#回線容量), [`ビット誤り率`](glossary/syllabus_tsuiho_ver4_0.md#ビット誤り率), [`トラフィック理論`](glossary/syllabus_tsuiho_ver4_0.md#トラフィック理論), [`呼量`](glossary/syllabus_tsuiho_ver4_0.md#呼量), [`呼損率`](glossary/syllabus_tsuiho_ver4_0.md#呼損率), [`アーラン B式（アーランの損失式）`](glossary/syllabus_tsuiho_ver4_0.md#アーラン-b式（アーランの損失式）), [`アーラン`](glossary/syllabus_tsuiho_ver4_0.md#アーラン), [`トラフィック設計`](glossary/syllabus_tsuiho_ver4_0.md#トラフィック設計), [`性能評価`](glossary/syllabus_tsuiho_ver4_0.md#性能評価)
 
 
 ##### （7）インターネット技術
@@ -487,7 +487,7 @@ LANと WANの仕組み，特徴，構成要素，運用費用を理解する。�
 能となっていること，アドレスを構成するネットワークアドレスとホストアドレスの役割，
 IPパケットのルーティングの動作，IPv6の必要性と特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `IPv4`, `IPv6`, `アドレスクラス`, `グローバル IPアドレス`, `プライベート IPアドレス`, `IPマスカレード`, `NAT`, `オーバーレイネットワーク`, `DNS`, `ドメイン`, `FQDN`, `TLD`, `QoS（Quality of Service：サービス品質）`, `ユビキタス`, `パーベイシブ`, `セキュリティプロトコル`, `ファイアウォール`, `RADIUS`
+    [`IPv4`](glossary/syllabus_tsuiho_ver4_0.md#ipv4), [`IPv6`](glossary/syllabus_tsuiho_ver4_0.md#ipv6), [`アドレスクラス`](glossary/syllabus_tsuiho_ver4_0.md#アドレスクラス), [`グローバル IPアドレス`](glossary/syllabus_tsuiho_ver4_0.md#グローバル-ipアドレス), [`プライベート IPアドレス`](glossary/syllabus_tsuiho_ver4_0.md#プライベート-ipアドレス), [`IPマスカレード`](glossary/syllabus_tsuiho_ver4_0.md#ipマスカレード), [`NAT`](glossary/syllabus_tsuiho_ver4_0.md#nat), [`オーバーレイネットワーク`](glossary/syllabus_tsuiho_ver4_0.md#オーバーレイネットワーク), [`DNS`](glossary/syllabus_tsuiho_ver4_0.md#dns), [`ドメイン`](glossary/syllabus_tsuiho_ver4_0.md#ドメイン), [`FQDN`](glossary/syllabus_tsuiho_ver4_0.md#fqdn), [`TLD`](glossary/syllabus_tsuiho_ver4_0.md#tld), [`QoS（Quality of Service：サービス品質）`](glossary/syllabus_tsuiho_ver4_0.md#qos（quality-of-serviceサービス品質）), [`ユビキタス`](glossary/syllabus_tsuiho_ver4_0.md#ユビキタス), [`パーベイシブ`](glossary/syllabus_tsuiho_ver4_0.md#パーベイシブ), [`セキュリティプロトコル`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティプロトコル), [`ファイアウォール`](glossary/syllabus_tsuiho_ver4_0.md#ファイアウォール), [`RADIUS`](glossary/syllabus_tsuiho_ver4_0.md#radius)
 
 
 #### 🔹 2. データ通信と制御
@@ -509,7 +509,7 @@ IPパケットのルーティングの動作，IPv6の必要性と特徴を理�
 るかや，ネットワーク構成図の作成方法を理解する。また，各構成における信頼性と障害
 時の動作の違いを理解する。
   - **用語例・キーワード (全網羅)**:
-    `ポイントツーポイント（2地点間接続）`, `ツリー型`, `バス型`, `スター型`, `リング型`
+    [`ポイントツーポイント（2地点間接続）`](glossary/syllabus_tsuiho_ver4_0.md#ポイントツーポイント（2地点間接続）), [`ツリー型`](glossary/syllabus_tsuiho_ver4_0.md#ツリー型), [`バス型`](glossary/syllabus_tsuiho_ver4_0.md#バス型), [`スター型`](glossary/syllabus_tsuiho_ver4_0.md#スター型), [`リング型`](glossary/syllabus_tsuiho_ver4_0.md#リング型)
 
 
 ###### ② OSI基本参照モデル
@@ -517,21 +517,21 @@ IPパケットのルーティングの動作，IPv6の必要性と特徴を理�
 ISOが策定した 7層からなるネットワークアーキテクチャである OSI基本参照モデルの
 各層の機能，各層の間の関係を理解する。
   - **用語例・キーワード (全網羅)**:
-    `物理層`, `データリンク層`, `ネットワーク層`, `トランスポート層`, `セション層`, `プレゼンテーション層`, `アプリケーション層`
+    [`物理層`](glossary/syllabus_tsuiho_ver4_0.md#物理層), [`データリンク層`](glossary/syllabus_tsuiho_ver4_0.md#データリンク層), [`ネットワーク層`](glossary/syllabus_tsuiho_ver4_0.md#ネットワーク層), [`トランスポート層`](glossary/syllabus_tsuiho_ver4_0.md#トランスポート層), [`セション層`](glossary/syllabus_tsuiho_ver4_0.md#セション層), [`プレゼンテーション層`](glossary/syllabus_tsuiho_ver4_0.md#プレゼンテーション層), [`アプリケーション層`](glossary/syllabus_tsuiho_ver4_0.md#アプリケーション層)
 
 
 ###### ③ 標準化の実例
 
 WANにおける通信プロトコルの標準化が ITU-Tにおいて策定されていることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `Xシリーズ`, `Vシリーズ`, `Iシリーズ`
+    [`Xシリーズ`](glossary/syllabus_tsuiho_ver4_0.md#xシリーズ), [`Vシリーズ`](glossary/syllabus_tsuiho_ver4_0.md#vシリーズ), [`Iシリーズ`](glossary/syllabus_tsuiho_ver4_0.md#iシリーズ)
 
 
 ##### （2）伝送方式と回線
 
 ネットワークで使用される回線の種類，通信方式，交換方式の種類と特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `単方向`, `半二重`, `全二重`, `WDM（Wavelength Division Multiplexing：波長分割多重）`, `TDMA`, `CDMA`, `OFDMA`, `リンクアグリゲーション`, `回線交換`, `パケット交換`, `公衆回線`, `専用線`, `電力線通信（PLC）`
+    [`単方向`](glossary/syllabus_tsuiho_ver4_0.md#単方向), [`半二重`](glossary/syllabus_tsuiho_ver4_0.md#半二重), [`全二重`](glossary/syllabus_tsuiho_ver4_0.md#全二重), [`WDM（Wavelength Division Multiplexing：波長分割多重）`](glossary/syllabus_tsuiho_ver4_0.md#wdm（wavelength-division-multiplexing波長分割多重）), [`TDMA`](glossary/syllabus_tsuiho_ver4_0.md#tdma), [`CDMA`](glossary/syllabus_tsuiho_ver4_0.md#cdma), [`OFDMA`](glossary/syllabus_tsuiho_ver4_0.md#ofdma), [`リンクアグリゲーション`](glossary/syllabus_tsuiho_ver4_0.md#リンクアグリゲーション), [`回線交換`](glossary/syllabus_tsuiho_ver4_0.md#回線交換), [`パケット交換`](glossary/syllabus_tsuiho_ver4_0.md#パケット交換), [`公衆回線`](glossary/syllabus_tsuiho_ver4_0.md#公衆回線), [`専用線`](glossary/syllabus_tsuiho_ver4_0.md#専用線), [`電力線通信（PLC）`](glossary/syllabus_tsuiho_ver4_0.md#電力線通信（plc）)
 
 
 ##### （3）ネットワーク接続
@@ -539,7 +539,7 @@ WANにおける通信プロトコルの標準化が ITU-Tにおいて策定さ�
 LAN内接続，LAN間接続，LAN-WAN接続の装置の種類，特徴，各装置の機能が，OSI基本参
 照モデルのどの層に対応するかを理解する。
   - **用語例・キーワード (全網羅)**:
-    `リピータ`, `ハブ`, `カスケード接続`, `Automatic MDI/MDI-X`, `スイッチングハブ`, `ルータ`, `回線接続装置`, `レイヤー2（L2）スイッチ`, `レイヤー3（L3）スイッチ`, `ブリッジ`, `ゲートウェイ`, `プロキシサーバ`, `リバースプロキシサーバ`, `ロードバランサー`, `スパニングツリー`, `VRRP`
+    [`リピータ`](glossary/syllabus_tsuiho_ver4_0.md#リピータ), [`ハブ`](glossary/syllabus_tsuiho_ver4_0.md#ハブ), [`カスケード接続`](glossary/syllabus_tsuiho_ver4_0.md#カスケード接続), [`Automatic MDI/MDI-X`](glossary/syllabus_tsuiho_ver4_0.md#automatic-mdi-mdi-x), [`スイッチングハブ`](glossary/syllabus_tsuiho_ver4_0.md#スイッチングハブ), [`ルータ`](glossary/syllabus_tsuiho_ver4_0.md#ルータ), [`回線接続装置`](glossary/syllabus_tsuiho_ver4_0.md#回線接続装置), [`レイヤー2（L2）スイッチ`](glossary/syllabus_tsuiho_ver4_0.md#レイヤー2（l2）スイッチ), [`レイヤー3（L3）スイッチ`](glossary/syllabus_tsuiho_ver4_0.md#レイヤー3（l3）スイッチ), [`ブリッジ`](glossary/syllabus_tsuiho_ver4_0.md#ブリッジ), [`ゲートウェイ`](glossary/syllabus_tsuiho_ver4_0.md#ゲートウェイ), [`プロキシサーバ`](glossary/syllabus_tsuiho_ver4_0.md#プロキシサーバ), [`リバースプロキシサーバ`](glossary/syllabus_tsuiho_ver4_0.md#リバースプロキシサーバ), [`ロードバランサー`](glossary/syllabus_tsuiho_ver4_0.md#ロードバランサー), [`スパニングツリー`](glossary/syllabus_tsuiho_ver4_0.md#スパニングツリー), [`VRRP`](glossary/syllabus_tsuiho_ver4_0.md#vrrp)
 
 
 ##### （4）伝送制御
@@ -547,7 +547,7 @@ LAN内接続，LAN間接続，LAN-WAN接続の装置の種類，特徴，各装�
 送受信者の間でデータを確実に伝送するための制御機能である伝送制御の仕組み，特徴を
 理解する。
   - **用語例・キーワード (全網羅)**:
-    `ふくそうデータリンク制御`, `ルーティング制御`, `フロー制御`, `輻輳制御`, `ベーシック手順`, `コンテンション方式`, `ポーリング／セレクティング方式`, `HDLC`, `マルチリンク手順`, `相手固定`, `交換方式`, `コネクション方式`, `コネクションレス方式`, `パリティチェック`, `CRC`, `ハミング符号`, `ビット誤り率`, `SYN同期`, `フラグ同期`, `フレーム同期`
+    [`ふくそうデータリンク制御`](glossary/syllabus_tsuiho_ver4_0.md#ふくそうデータリンク制御), [`ルーティング制御`](glossary/syllabus_tsuiho_ver4_0.md#ルーティング制御), [`フロー制御`](glossary/syllabus_tsuiho_ver4_0.md#フロー制御), [`輻輳制御`](glossary/syllabus_tsuiho_ver4_0.md#輻輳制御), [`ベーシック手順`](glossary/syllabus_tsuiho_ver4_0.md#ベーシック手順), [`コンテンション方式`](glossary/syllabus_tsuiho_ver4_0.md#コンテンション方式), [`ポーリング／セレクティング方式`](glossary/syllabus_tsuiho_ver4_0.md#ポーリング-セレクティング方式), [`HDLC`](glossary/syllabus_tsuiho_ver4_0.md#hdlc), [`マルチリンク手順`](glossary/syllabus_tsuiho_ver4_0.md#マルチリンク手順), [`相手固定`](glossary/syllabus_tsuiho_ver4_0.md#相手固定), [`交換方式`](glossary/syllabus_tsuiho_ver4_0.md#交換方式), [`コネクション方式`](glossary/syllabus_tsuiho_ver4_0.md#コネクション方式), [`コネクションレス方式`](glossary/syllabus_tsuiho_ver4_0.md#コネクションレス方式), [`パリティチェック`](glossary/syllabus_tsuiho_ver4_0.md#パリティチェック), [`CRC`](glossary/syllabus_tsuiho_ver4_0.md#crc), [`ハミング符号`](glossary/syllabus_tsuiho_ver4_0.md#ハミング符号), [`ビット誤り率`](glossary/syllabus_tsuiho_ver4_0.md#ビット誤り率), [`SYN同期`](glossary/syllabus_tsuiho_ver4_0.md#syn同期), [`フラグ同期`](glossary/syllabus_tsuiho_ver4_0.md#フラグ同期), [`フレーム同期`](glossary/syllabus_tsuiho_ver4_0.md#フレーム同期)
 
 
 ##### （5）メディアアクセス制御
@@ -556,7 +556,7 @@ LAN内接続，LAN間接続，LAN-WAN接続の装置の種類，特徴，各装�
 アアクセス制御）の仕組みと特徴を理解する。また，アクセス制御の目的，アクセス制御手
 法の代表的な種類と仕組みを理解する。
   - **用語例・キーワード (全網羅)**:
-    `CSMA/CD`, `CSMA/CA`, `トークンパッシング`, `衝突`
+    [`CSMA/CD`](glossary/syllabus_tsuiho_ver4_0.md#csma-cd), [`CSMA/CA`](glossary/syllabus_tsuiho_ver4_0.md#csma-ca), [`トークンパッシング`](glossary/syllabus_tsuiho_ver4_0.md#トークンパッシング), [`衝突`](glossary/syllabus_tsuiho_ver4_0.md#衝突)
 
 
 #### 🔹 3. 通信プロトコル
@@ -575,7 +575,7 @@ TCP/IPを OSI基本参照モデルの 7階層と対比させながら，各層�
 いるインタフェースを理解する。また，代表的なサービスのポート番号（ウェルノウンポ
 ート）などを理解する。
   - **用語例・キーワード (全網羅)**:
-    `パケット`, `ヘッダー`
+    [`パケット`](glossary/syllabus_tsuiho_ver4_0.md#パケット), [`ヘッダー`](glossary/syllabus_tsuiho_ver4_0.md#ヘッダー)
 
 
 ###### ② データリンク層のプロトコル
@@ -583,35 +583,35 @@ TCP/IPを OSI基本参照モデルの 7階層と対比させながら，各層�
 ARPなど，TCP/IPネットワークにおいて使用されるデータリンク層レベルのプロトコル
 の役割，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `RARP（Reverse Address Resolution Protocol：逆アドレス解決プロトコル）`, `L2TP`, `PPP`, `PPPoE（Point to Point Protocol over Ethernet）`, `IPoE（IP over Ethernet）`, `VLAN`, `IEEE 802.1Q`, `プロキシ ARP`
+    [`RARP（Reverse Address Resolution Protocol：逆アドレス解決プロトコル）`](glossary/syllabus_tsuiho_ver4_0.md#rarp（reverse-address-resolution-protocol逆アドレス解決プロトコル）), [`L2TP`](glossary/syllabus_tsuiho_ver4_0.md#l2tp), [`PPP`](glossary/syllabus_tsuiho_ver4_0.md#ppp), [`PPPoE（Point to Point Protocol over Ethernet）`](glossary/syllabus_tsuiho_ver4_0.md#pppoe（point-to-point-protocol-over-ethernet）), [`IPoE（IP over Ethernet）`](glossary/syllabus_tsuiho_ver4_0.md#ipoe（ip-over-ethernet）), [`VLAN`](glossary/syllabus_tsuiho_ver4_0.md#vlan), [`IEEE 802.1Q`](glossary/syllabus_tsuiho_ver4_0.md#ieee-8021q), [`プロキシ ARP`](glossary/syllabus_tsuiho_ver4_0.md#プロキシ-arp)
 
 
 ###### ③ ネットワーク層のプロトコル
 
 IPの役割，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `IPアドレス`, `サブネットアドレス`, `サブネットマスク`, `物理アドレス`, `ルーティング`, `ユニキャスト`, `ブロードキャスト`, `マルチキャスト`, `ICMP（Internet Control Message Protocol）`, `ICMPv6`, `IGMP`, `CIDR（Classless Inter Domain Routing ）`, `IPv6`, `IPv4/IPv6共 存技 術 （ IPv4/IPv6ト ラン スレ ー ショ ン`, `IPv4/IPv6デュアルスタック`, `6to4）`
+    [`IPアドレス`](glossary/syllabus_tsuiho_ver4_0.md#ipアドレス), [`サブネットアドレス`](glossary/syllabus_tsuiho_ver4_0.md#サブネットアドレス), [`サブネットマスク`](glossary/syllabus_tsuiho_ver4_0.md#サブネットマスク), [`物理アドレス`](glossary/syllabus_tsuiho_ver4_0.md#物理アドレス), [`ルーティング`](glossary/syllabus_tsuiho_ver4_0.md#ルーティング), [`ユニキャスト`](glossary/syllabus_tsuiho_ver4_0.md#ユニキャスト), [`ブロードキャスト`](glossary/syllabus_tsuiho_ver4_0.md#ブロードキャスト), [`マルチキャスト`](glossary/syllabus_tsuiho_ver4_0.md#マルチキャスト), [`ICMP（Internet Control Message Protocol）`](glossary/syllabus_tsuiho_ver4_0.md#icmp（internet-control-message-protocol）), [`ICMPv6`](glossary/syllabus_tsuiho_ver4_0.md#icmpv6), [`IGMP`](glossary/syllabus_tsuiho_ver4_0.md#igmp), [`CIDR（Classless Inter Domain Routing ）`](glossary/syllabus_tsuiho_ver4_0.md#cidr（classless-inter-domain-routing-）), [`IPv6`](glossary/syllabus_tsuiho_ver4_0.md#ipv6), [`IPv4/IPv6共 存技 術 （ IPv4/IPv6ト ラン スレ ー ショ ン`](glossary/syllabus_tsuiho_ver4_0.md#ipv4-ipv6共-存技-術-（-ipv4-ipv6ト-ラン-スレ-ー-ショ-ン), [`IPv4/IPv6デュアルスタック`](glossary/syllabus_tsuiho_ver4_0.md#ipv4-ipv6デュアルスタック), [`6to4）`](glossary/syllabus_tsuiho_ver4_0.md#6to4）)
 
 
 ###### ④ トランスポート層のプロトコル
 
 TCPと UDPの役割，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ポート番号`, `ウィンドウ制御`, `確認応答`, `サブミッションポート`
+    [`ポート番号`](glossary/syllabus_tsuiho_ver4_0.md#ポート番号), [`ウィンドウ制御`](glossary/syllabus_tsuiho_ver4_0.md#ウィンドウ制御), [`確認応答`](glossary/syllabus_tsuiho_ver4_0.md#確認応答), [`サブミッションポート`](glossary/syllabus_tsuiho_ver4_0.md#サブミッションポート)
 
 
 ###### ⑤ アプリケーション層のプロトコル
 
 HTTP，SMTP，POP，FTP，DNSなどの役割，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `TELNET`, `DHCP`, `IMAP`, `NTP`, `SOAP`, `RTP`, `HTTP/2`, `HTTP/3`
+    [`TELNET`](glossary/syllabus_tsuiho_ver4_0.md#telnet), [`DHCP`](glossary/syllabus_tsuiho_ver4_0.md#dhcp), [`IMAP`](glossary/syllabus_tsuiho_ver4_0.md#imap), [`NTP`](glossary/syllabus_tsuiho_ver4_0.md#ntp), [`SOAP`](glossary/syllabus_tsuiho_ver4_0.md#soap), [`RTP`](glossary/syllabus_tsuiho_ver4_0.md#rtp), [`HTTP/2`](glossary/syllabus_tsuiho_ver4_0.md#http-2), [`HTTP/3`](glossary/syllabus_tsuiho_ver4_0.md#http-3)
 
 
 ###### ⑥ ルーティングプロトコル
 
 ルーティングプロトコルの役割，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `OSPF`, `RIP`, `RIPng`, `BGP`, `MPLS`
+    [`OSPF`](glossary/syllabus_tsuiho_ver4_0.md#ospf), [`RIP`](glossary/syllabus_tsuiho_ver4_0.md#rip), [`RIPng`](glossary/syllabus_tsuiho_ver4_0.md#ripng), [`BGP`](glossary/syllabus_tsuiho_ver4_0.md#bgp), [`MPLS`](glossary/syllabus_tsuiho_ver4_0.md#mpls)
 
 
 ###### ⑦ LANと WANのインタフェース
@@ -619,7 +619,7 @@ HTTP，SMTP，POP，FTP，DNSなどの役割，機能を理解する。
 イーサネット，無線 LAN，ISDN，PRI（Primary Rate Interface：1次群インタフェース）
 など，LANと WANで使用される代表的なインタフェースの役割，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `10BASE-T`, `100BASE-TX`, `1000BASE-T`, `10GBASE-T`, `IEEE 802.11a/b/g/n/ac/ad/ax`, `Wi-Fi 4/5/6/6E`, `メッシュ Wi-Fi`
+    [`10BASE-T`](glossary/syllabus_tsuiho_ver4_0.md#10base-t), [`100BASE-TX`](glossary/syllabus_tsuiho_ver4_0.md#100base-tx), [`1000BASE-T`](glossary/syllabus_tsuiho_ver4_0.md#1000base-t), [`10GBASE-T`](glossary/syllabus_tsuiho_ver4_0.md#10gbase-t), [`IEEE 802.11a/b/g/n/ac/ad/ax`](glossary/syllabus_tsuiho_ver4_0.md#ieee-80211a-b-g-n-ac-ad-ax), [`Wi-Fi 4/5/6/6E`](glossary/syllabus_tsuiho_ver4_0.md#wi-fi-4-5-6-6e), [`メッシュ Wi-Fi`](glossary/syllabus_tsuiho_ver4_0.md#メッシュ-wi-fi)
 
 
 ###### ⑧ CORBA
@@ -627,7 +627,7 @@ HTTP，SMTP，POP，FTP，DNSなどの役割，機能を理解する。
 CORBAはプログラム言語やネットワークプロトコルに依存せず，異機種分散環境におけ
 るシステム統合の基盤の考え方として利用できることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `分散オブジェクト技術`, `クライアント`, `オブジェクトサービス`, `リクエストアプリケーションオブジェクト`
+    [`分散オブジェクト技術`](glossary/syllabus_tsuiho_ver4_0.md#分散オブジェクト技術), [`クライアント`](glossary/syllabus_tsuiho_ver4_0.md#クライアント), [`オブジェクトサービス`](glossary/syllabus_tsuiho_ver4_0.md#オブジェクトサービス), [`リクエストアプリケーションオブジェクト`](glossary/syllabus_tsuiho_ver4_0.md#リクエストアプリケーションオブジェクト)
 
 
 #### 🔹 4. ネットワーク管理
@@ -645,14 +645,14 @@ CORBAはプログラム言語やネットワークプロトコルに依存せず
 
 構成情報を維持し，変更を記録する構成管理の管理方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ネットワーク構成`, `バージョン`
+    [`ネットワーク構成`](glossary/syllabus_tsuiho_ver4_0.md#ネットワーク構成), [`バージョン`](glossary/syllabus_tsuiho_ver4_0.md#バージョン)
 
 
 ###### ② 障害管理
 
 障害の検出，分析，対応を行う障害管理の管理方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `情報収集`, `障害の切分け`, `障害原因の特定`, `復旧措置`, `記録`, `死活監視`
+    [`情報収集`](glossary/syllabus_tsuiho_ver4_0.md#情報収集), [`障害の切分け`](glossary/syllabus_tsuiho_ver4_0.md#障害の切分け), [`障害原因の特定`](glossary/syllabus_tsuiho_ver4_0.md#障害原因の特定), [`復旧措置`](glossary/syllabus_tsuiho_ver4_0.md#復旧措置), [`記録`](glossary/syllabus_tsuiho_ver4_0.md#記録), [`死活監視`](glossary/syllabus_tsuiho_ver4_0.md#死活監視)
 
 
 ###### ③ 性能管理
@@ -660,7 +660,7 @@ CORBAはプログラム言語やネットワークプロトコルに依存せず
 トラフィック量と転送時間の関係の分析などによるネットワークの性能の管理方法，並
 びにネットワーク及びサーバの負荷分散手法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `トラフィック監視`, `負荷分散（DNSラウンドロビン`, `DNSゾーン転送ほか）`
+    [`トラフィック監視`](glossary/syllabus_tsuiho_ver4_0.md#トラフィック監視), [`負荷分散（DNSラウンドロビン`](glossary/syllabus_tsuiho_ver4_0.md#負荷分散（dnsラウンドロビン), [`DNSゾーン転送ほか）`](glossary/syllabus_tsuiho_ver4_0.md#dnsゾーン転送ほか）)
 
 
 ##### （2）ネットワーク運用管理ツール
@@ -668,7 +668,7 @@ CORBAはプログラム言語やネットワークプロトコルに依存せず
 ネットワークの運用管理に利用されているツールやユーティリティの機能，仕組みを理解
 する。
   - **用語例・キーワード (全網羅)**:
-    `ping`, `ifconfig`, `arp`, `netstat`, `nslookup`, `ip`, `ss`, `dig`, `traceroute`, `syslog`, `IPFIX（Internet Protocol Flow Information Export）`, `パケットアナライザー （tcpdump`, `Wiresharkほか）`
+    [`ping`](glossary/syllabus_tsuiho_ver4_0.md#ping), [`ifconfig`](glossary/syllabus_tsuiho_ver4_0.md#ifconfig), [`arp`](glossary/syllabus_tsuiho_ver4_0.md#arp), [`netstat`](glossary/syllabus_tsuiho_ver4_0.md#netstat), [`nslookup`](glossary/syllabus_tsuiho_ver4_0.md#nslookup), [`ip`](glossary/syllabus_tsuiho_ver4_0.md#ip), [`ss`](glossary/syllabus_tsuiho_ver4_0.md#ss), [`dig`](glossary/syllabus_tsuiho_ver4_0.md#dig), [`traceroute`](glossary/syllabus_tsuiho_ver4_0.md#traceroute), [`syslog`](glossary/syllabus_tsuiho_ver4_0.md#syslog), [`IPFIX（Internet Protocol Flow Information Export）`](glossary/syllabus_tsuiho_ver4_0.md#ipfix（internet-protocol-flow-information-export）), [`パケットアナライザー （tcpdump`](glossary/syllabus_tsuiho_ver4_0.md#パケットアナライザー-（tcpdump), [`Wiresharkほか）`](glossary/syllabus_tsuiho_ver4_0.md#wiresharkほか）)
 
 
 ##### （3）SNMP
@@ -677,14 +677,14 @@ CORBAはプログラム言語やネットワークプロトコルに依存せず
 （Management Information Base：管理情報ベース）を使用したトラフィック解析方法を理解
 する。
   - **用語例・キーワード (全網羅)**:
-    `SNMPエージェント`, `SNMP管理ステーション`, `MIB（Management Information Base：管理情報ベース）`, `get要求`, `put要求`, `trap要求`
+    [`SNMPエージェント`](glossary/syllabus_tsuiho_ver4_0.md#snmpエージェント), [`SNMP管理ステーション`](glossary/syllabus_tsuiho_ver4_0.md#snmp管理ステーション), [`MIB（Management Information Base：管理情報ベース）`](glossary/syllabus_tsuiho_ver4_0.md#mib（management-information-base管理情報ベース）), [`get要求`](glossary/syllabus_tsuiho_ver4_0.md#get要求), [`put要求`](glossary/syllabus_tsuiho_ver4_0.md#put要求), [`trap要求`](glossary/syllabus_tsuiho_ver4_0.md#trap要求)
 
 
 ##### （4）仮想ネットワーク
 
 ネットワークの仮想化の仕組み，特徴，構成要素を理解する。
   - **用語例・キーワード (全網羅)**:
-    `トンネリング`, `SDN（Software-Defined Networking）`, `SD-WAN（Software Defined WAN）`, `OpenFlow`, `NFV（Network Functions Virtualization）`, `VXLAN`
+    [`トンネリング`](glossary/syllabus_tsuiho_ver4_0.md#トンネリング), [`SDN（Software-Defined Networking）`](glossary/syllabus_tsuiho_ver4_0.md#sdn（software-defined-networking）), [`SD-WAN（Software Defined WAN）`](glossary/syllabus_tsuiho_ver4_0.md#sd-wan（software-defined-wan）), [`OpenFlow`](glossary/syllabus_tsuiho_ver4_0.md#openflow), [`NFV（Network Functions Virtualization）`](glossary/syllabus_tsuiho_ver4_0.md#nfv（network-functions-virtualization）), [`VXLAN`](glossary/syllabus_tsuiho_ver4_0.md#vxlan)
 
 
 #### 🔹 5. ネットワーク応用
@@ -707,7 +707,7 @@ CORBAはプログラム言語やネットワークプロトコルに依存せず
 メールはメールサーバからメールサーバへリレー方式で配送される仕組みであること，電
 子メールシステムの特徴，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `SMTP`, `POP3`, `IMAP4`, `MIME`, `base64`, `HTMLメール（MHTML）`, `Webメール`
+    [`SMTP`](glossary/syllabus_tsuiho_ver4_0.md#smtp), [`POP3`](glossary/syllabus_tsuiho_ver4_0.md#pop3), [`IMAP4`](glossary/syllabus_tsuiho_ver4_0.md#imap4), [`MIME`](glossary/syllabus_tsuiho_ver4_0.md#mime), [`base64`](glossary/syllabus_tsuiho_ver4_0.md#base64), [`HTMLメール（MHTML）`](glossary/syllabus_tsuiho_ver4_0.md#htmlメール（mhtml）), [`Webメール`](glossary/syllabus_tsuiho_ver4_0.md#webメール)
 
 
 ###### ② Web
@@ -717,7 +717,7 @@ WWWはインターネット上で提供されるハイパーテキストのシ�
 のマークアップ言語で記述され，ハイパーリンクで簡単に別のページを参照できることや，
 Webアプリケーションシステムの仕組み，特徴，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `HTTP`, `HTTP over TLS（HTTPS）`, `CGI`, `cookie`, `URL`, `セッション ID`, `REST`, `WebDAV`, `QUIC（Quick UDP Internet Connection）`
+    [`HTTP`](glossary/syllabus_tsuiho_ver4_0.md#http), [`HTTP over TLS（HTTPS）`](glossary/syllabus_tsuiho_ver4_0.md#http-over-tls（https）), [`CGI`](glossary/syllabus_tsuiho_ver4_0.md#cgi), [`cookie`](glossary/syllabus_tsuiho_ver4_0.md#cookie), [`URL`](glossary/syllabus_tsuiho_ver4_0.md#url), [`セッション ID`](glossary/syllabus_tsuiho_ver4_0.md#セッション-id), [`REST`](glossary/syllabus_tsuiho_ver4_0.md#rest), [`WebDAV`](glossary/syllabus_tsuiho_ver4_0.md#webdav), [`QUIC（Quick UDP Internet Connection）`](glossary/syllabus_tsuiho_ver4_0.md#quic（quick-udp-internet-connection）)
 
 
 ###### ③ ファイル転送
@@ -725,14 +725,14 @@ Webアプリケーションシステムの仕組み，特徴，機能を理解�
 FTPサーバとクライアントの仕組みや Webへの組込み方式の仕組み，特徴，機能を理解
 する。
   - **用語例・キーワード (全網羅)**:
-    `アップロード`, `ダウンロード`, `アクティブモード`, `パッシブモード`, `TFTP （Trivial File Transfer Protocol）`
+    [`アップロード`](glossary/syllabus_tsuiho_ver4_0.md#アップロード), [`ダウンロード`](glossary/syllabus_tsuiho_ver4_0.md#ダウンロード), [`アクティブモード`](glossary/syllabus_tsuiho_ver4_0.md#アクティブモード), [`パッシブモード`](glossary/syllabus_tsuiho_ver4_0.md#パッシブモード), [`TFTP （Trivial File Transfer Protocol）`](glossary/syllabus_tsuiho_ver4_0.md#tftp-（trivial-file-transfer-protocol）)
 
 
 ###### ④ 検索エンジン
 
 Webの環境で利用される代表的な検索エンジンの仕組み，特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `全文検索型`, `ロボット型`
+    [`全文検索型`](glossary/syllabus_tsuiho_ver4_0.md#全文検索型), [`ロボット型`](glossary/syllabus_tsuiho_ver4_0.md#ロボット型)
 
 
 ##### （2）イントラネット
@@ -740,14 +740,14 @@ Webの環境で利用される代表的な検索エンジンの仕組み，特�
 インターネットの技術を企業内ネットワークの構築に応用したイントラネットの仕組み，
 特徴，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `VPN`, `相手固定接続`, `プライベート IPアドレス`, `NAT`
+    [`VPN`](glossary/syllabus_tsuiho_ver4_0.md#vpn), [`相手固定接続`](glossary/syllabus_tsuiho_ver4_0.md#相手固定接続), [`プライベート IPアドレス`](glossary/syllabus_tsuiho_ver4_0.md#プライベート-ipアドレス), [`NAT`](glossary/syllabus_tsuiho_ver4_0.md#nat)
 
 
 ##### （3）エクストラネット
 
 企業のイントラネットを相互接続したエクストラネットの仕組み，特徴，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `EC（Electronic Commerce：電子商取引）`, `EDI`
+    [`EC（Electronic Commerce：電子商取引）`](glossary/syllabus_tsuiho_ver4_0.md#ec（electronic-commerce電子商取引）), [`EDI`](glossary/syllabus_tsuiho_ver4_0.md#edi)
 
 
 ##### （4）ネットワーク OS
@@ -755,7 +755,7 @@ Webの環境で利用される代表的な検索エンジンの仕組み，特�
 ネットワーク管理や通信サービスの提供を専門に行うソフトウェアであるネットワーク OS
 の仕組み，特徴，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ピアツーピア形式`, `クライアントサーバ形式`
+    [`ピアツーピア形式`](glossary/syllabus_tsuiho_ver4_0.md#ピアツーピア形式), [`クライアントサーバ形式`](glossary/syllabus_tsuiho_ver4_0.md#クライアントサーバ形式)
 
 
 ##### （5）通信サービス
@@ -763,7 +763,7 @@ Webの環境で利用される代表的な検索エンジンの仕組み，特�
 代表的な通信サービスの種類，特徴，機能，利用条件，サービス選択上の留意事項を理解
 する。
   - **用語例・キーワード (全網羅)**:
-    `専用線サービス`, `回線交換サービス`, `パケット交換サービス`, `IP電話`, `IPセントレックス`, `IP-PBX`, `xDSL`, `FTTH`, `衛星通信サービス`, `国際通信サービス`, `広域 Ethernet`, `IP-VPN`, `ベストエフォート`, `マルチホーミング`
+    [`専用線サービス`](glossary/syllabus_tsuiho_ver4_0.md#専用線サービス), [`回線交換サービス`](glossary/syllabus_tsuiho_ver4_0.md#回線交換サービス), [`パケット交換サービス`](glossary/syllabus_tsuiho_ver4_0.md#パケット交換サービス), [`IP電話`](glossary/syllabus_tsuiho_ver4_0.md#ip電話), [`IPセントレックス`](glossary/syllabus_tsuiho_ver4_0.md#ipセントレックス), [`IP-PBX`](glossary/syllabus_tsuiho_ver4_0.md#ip-pbx), [`xDSL`](glossary/syllabus_tsuiho_ver4_0.md#xdsl), [`FTTH`](glossary/syllabus_tsuiho_ver4_0.md#ftth), [`衛星通信サービス`](glossary/syllabus_tsuiho_ver4_0.md#衛星通信サービス), [`国際通信サービス`](glossary/syllabus_tsuiho_ver4_0.md#国際通信サービス), [`広域 Ethernet`](glossary/syllabus_tsuiho_ver4_0.md#広域-ethernet), [`IP-VPN`](glossary/syllabus_tsuiho_ver4_0.md#ip-vpn), [`ベストエフォート`](glossary/syllabus_tsuiho_ver4_0.md#ベストエフォート), [`マルチホーミング`](glossary/syllabus_tsuiho_ver4_0.md#マルチホーミング)
 
 
 ##### （6）モバイルシステム
@@ -773,28 +773,28 @@ Webの環境で利用される代表的な検索エンジンの仕組み，特�
 
 モバイル通信サービスの種類，特徴，サービス選択上の留意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `移動体通信事業者`, `仮想移動体通信事業者（MVNO：Mobile Virtual Network Operator）`, `LTE`, `VoLTE`, `5G（第 5世代移動通信システム）`, `ローカル 5G`, `SA （Stand Alone）方式`, `NSA（Non-Stand Alone）方式`, `ネットワークスライシング`, `キャリアアグリゲーション`, `SIMカード`, `eSIM（embedded SIM）`, `IMEI`, `ISMバンド`, `サブ GHz帯`
+    [`移動体通信事業者`](glossary/syllabus_tsuiho_ver4_0.md#移動体通信事業者), [`仮想移動体通信事業者（MVNO：Mobile Virtual Network Operator）`](glossary/syllabus_tsuiho_ver4_0.md#仮想移動体通信事業者（mvnomobile-virtual-network-operator）), [`LTE`](glossary/syllabus_tsuiho_ver4_0.md#lte), [`VoLTE`](glossary/syllabus_tsuiho_ver4_0.md#volte), [`5G（第 5世代移動通信システム）`](glossary/syllabus_tsuiho_ver4_0.md#5g（第-5世代移動通信システム）), [`ローカル 5G`](glossary/syllabus_tsuiho_ver4_0.md#ローカル-5g), [`SA （Stand Alone）方式`](glossary/syllabus_tsuiho_ver4_0.md#sa-（stand-alone）方式), [`NSA（Non-Stand Alone）方式`](glossary/syllabus_tsuiho_ver4_0.md#nsa（non-stand-alone）方式), [`ネットワークスライシング`](glossary/syllabus_tsuiho_ver4_0.md#ネットワークスライシング), [`キャリアアグリゲーション`](glossary/syllabus_tsuiho_ver4_0.md#キャリアアグリゲーション), [`SIMカード`](glossary/syllabus_tsuiho_ver4_0.md#simカード), [`eSIM（embedded SIM）`](glossary/syllabus_tsuiho_ver4_0.md#esim（embedded-sim）), [`IMEI`](glossary/syllabus_tsuiho_ver4_0.md#imei), [`ISMバンド`](glossary/syllabus_tsuiho_ver4_0.md#ismバンド), [`サブ GHz帯`](glossary/syllabus_tsuiho_ver4_0.md#サブ-ghz帯)
 
 
 ###### ② モバイルシステム構成要素
 
 モバイルシステムの構成要素，特徴，機能を理解する。
   - **用語例・キーワード (全網羅)**:
-    `基地局`, `フェムトセル`, `携帯端末（携帯電話`, `スマートフォン`, `タブレット端末ほか）`, `テザリング`, `テレマティクス`
+    [`基地局`](glossary/syllabus_tsuiho_ver4_0.md#基地局), [`フェムトセル`](glossary/syllabus_tsuiho_ver4_0.md#フェムトセル), [`携帯端末（携帯電話`](glossary/syllabus_tsuiho_ver4_0.md#携帯端末（携帯電話), [`スマートフォン`](glossary/syllabus_tsuiho_ver4_0.md#スマートフォン), [`タブレット端末ほか）`](glossary/syllabus_tsuiho_ver4_0.md#タブレット端末ほか）), [`テザリング`](glossary/syllabus_tsuiho_ver4_0.md#テザリング), [`テレマティクス`](glossary/syllabus_tsuiho_ver4_0.md#テレマティクス)
 
 
 ###### ③ モバイル通信技術
 
 無線 LANも含め，無線通信で用いられる基盤技術の特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ハンドオーバー`, `ローミング`, `MIMO`, `モバイル通信の省電力化技術（間欠受信`, `eDRX`, `ビームフォーミング`, `ドーマント（プリザベーション）`, `PSMほか）`
+    [`ハンドオーバー`](glossary/syllabus_tsuiho_ver4_0.md#ハンドオーバー), [`ローミング`](glossary/syllabus_tsuiho_ver4_0.md#ローミング), [`MIMO`](glossary/syllabus_tsuiho_ver4_0.md#mimo), [`モバイル通信の省電力化技術（間欠受信`](glossary/syllabus_tsuiho_ver4_0.md#モバイル通信の省電力化技術（間欠受信), [`eDRX`](glossary/syllabus_tsuiho_ver4_0.md#edrx), [`ビームフォーミング`](glossary/syllabus_tsuiho_ver4_0.md#ビームフォーミング), [`ドーマント（プリザベーション）`](glossary/syllabus_tsuiho_ver4_0.md#ドーマント（プリザベーション）), [`PSMほか）`](glossary/syllabus_tsuiho_ver4_0.md#psmほか）)
 
 
 ###### ④ IoTシステムのネットワーク
 
 IoTシステムに適したネットワークの特徴，適合する技術を理解する。
   - **用語例・キーワード (全網羅)**:
-    `LPWA（LTE-M`, `NB-IoT`, `Wi-SUN`, `LoRaWAN）`, `IEEE 802.11ah（Wi-Fi HaLow）`, `軽量プロトコル（CoAP`, `MQTT）`, `NB-IoT（Narrow Band-IoT）`, `カテゴリ 0`, `カテゴリ M`, `IoTエリアネットワーク （補足） 「技術レベル 3」の中分類の知識の幅と深さは応用情報技術者試験（AP）と同等です。 以下は APシラバスの内容をそのまま掲載しています。`
+    [`LPWA（LTE-M`](glossary/syllabus_tsuiho_ver4_0.md#lpwa（lte-m), [`NB-IoT`](glossary/syllabus_tsuiho_ver4_0.md#nb-iot), [`Wi-SUN`](glossary/syllabus_tsuiho_ver4_0.md#wi-sun), [`LoRaWAN）`](glossary/syllabus_tsuiho_ver4_0.md#lorawan）), [`IEEE 802.11ah（Wi-Fi HaLow）`](glossary/syllabus_tsuiho_ver4_0.md#ieee-80211ah（wi-fi-halow）), [`軽量プロトコル（CoAP`](glossary/syllabus_tsuiho_ver4_0.md#軽量プロトコル（coap), [`MQTT）`](glossary/syllabus_tsuiho_ver4_0.md#mqtt）), [`NB-IoT（Narrow Band-IoT）`](glossary/syllabus_tsuiho_ver4_0.md#nb-iot（narrow-band-iot）), [`カテゴリ 0`](glossary/syllabus_tsuiho_ver4_0.md#カテゴリ-0), [`カテゴリ M`](glossary/syllabus_tsuiho_ver4_0.md#カテゴリ-m), [`IoTエリアネットワーク （補足） 「技術レベル 3」の中分類の知識の幅と深さは応用情報技術者試験（AP）と同等です。 以下は APシラバスの内容をそのまま掲載しています。`](glossary/syllabus_tsuiho_ver4_0.md#iotエリアネットワーク-（補足）-技術レベル-3の中分類の知識の幅と深さは応用情報技術者試験（ap）と同等です-以下は-apシラバスの内容をそのまま掲載しています)
 
 
 ## 📌 大分類 3：技術要素
@@ -820,7 +820,7 @@ IoTシステムに適したネットワークの特徴，適合する技術を�
 類ごとの特徴，与えられた要件に応じて最適なデータベースを選択し，設計に活用するこ
 とを理解する。
   - **用語例・キーワード (全網羅)**:
-    `RDB（Relational Database：関係データベース）`, `構造型データベース`, `HDB （Hierarchical Database：階層型データベース）`, `NDB（Network Database：網型データベース）`, `OODB（Object Oriented Database：オブジェクト指向データベー ス）`, `XMLデータベース`, `分散データベース`, `ドキュメント指向データベース`, `列指向データベース`, `グラフデータベース`, `キーバリュー型データベース`, `インメモリデータベース`
+    [`RDB（Relational Database：関係データベース）`](glossary/syllabus_tsuiho_ver4_0.md#rdb（relational-database関係データベース）), [`構造型データベース`](glossary/syllabus_tsuiho_ver4_0.md#構造型データベース), [`HDB （Hierarchical Database：階層型データベース）`](glossary/syllabus_tsuiho_ver4_0.md#hdb-（hierarchical-database階層型データベース）), [`NDB（Network Database：網型データベース）`](glossary/syllabus_tsuiho_ver4_0.md#ndb（network-database網型データベース）), [`OODB（Object Oriented Database：オブジェクト指向データベー ス）`](glossary/syllabus_tsuiho_ver4_0.md#oodb（object-oriented-databaseオブジェクト指向データベー-ス）), [`XMLデータベース`](glossary/syllabus_tsuiho_ver4_0.md#xmlデータベース), [`分散データベース`](glossary/syllabus_tsuiho_ver4_0.md#分散データベース), [`ドキュメント指向データベース`](glossary/syllabus_tsuiho_ver4_0.md#ドキュメント指向データベース), [`列指向データベース`](glossary/syllabus_tsuiho_ver4_0.md#列指向データベース), [`グラフデータベース`](glossary/syllabus_tsuiho_ver4_0.md#グラフデータベース), [`キーバリュー型データベース`](glossary/syllabus_tsuiho_ver4_0.md#キーバリュー型データベース), [`インメモリデータベース`](glossary/syllabus_tsuiho_ver4_0.md#インメモリデータベース)
 
 
 ###### ② データベースの 3層スキーマアーキテクチャ（3層スキーマ構造）
@@ -829,7 +829,7 @@ IoTシステムに適したネットワークの特徴，適合する技術を�
 マ），論理的なデータ構造（概念スキーマ），物理的なデータ構造（内部スキーマ）の 3層
 を区別することでデータの独立性を高めていること，各スキーマの表現方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `概念スキーマ`, `外部スキーマ（副スキーマ）`, `内部スキーマ（記憶スキーマ）`
+    [`概念スキーマ`](glossary/syllabus_tsuiho_ver4_0.md#概念スキーマ), [`外部スキーマ（副スキーマ）`](glossary/syllabus_tsuiho_ver4_0.md#外部スキーマ（副スキーマ）), [`内部スキーマ（記憶スキーマ）`](glossary/syllabus_tsuiho_ver4_0.md#内部スキーマ（記憶スキーマ）)
 
 
 ###### ③ データベースのデータモデル
@@ -837,7 +837,7 @@ IoTシステムに適したネットワークの特徴，適合する技術を�
 データベースの論理的なデータ構造を表現するためのデータモデルの種類，特徴，利点，
 表現できる内容，特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `論理データモデル`, `物理データモデル`, `関係モデル`, `階層モデル`, `ネットワークモデル（網モデル）`, `グラフ型のデータモデル（プロパティグラフ`, `トリプルストア）`
+    [`論理データモデル`](glossary/syllabus_tsuiho_ver4_0.md#論理データモデル), [`物理データモデル`](glossary/syllabus_tsuiho_ver4_0.md#物理データモデル), [`関係モデル`](glossary/syllabus_tsuiho_ver4_0.md#関係モデル), [`階層モデル`](glossary/syllabus_tsuiho_ver4_0.md#階層モデル), [`ネットワークモデル（網モデル）`](glossary/syllabus_tsuiho_ver4_0.md#ネットワークモデル（網モデル）), [`グラフ型のデータモデル（プロパティグラフ`](glossary/syllabus_tsuiho_ver4_0.md#グラフ型のデータモデル（プロパティグラフ), [`トリプルストア）`](glossary/syllabus_tsuiho_ver4_0.md#トリプルストア）)
 
 
 ###### ④ 関係モデル
@@ -846,7 +846,7 @@ IoTシステムに適したネットワークの特徴，適合する技術を�
 の関係付けを理解する。また，与えられた要件に応じて，規定の表記法を使用してデータ
 構造を表現することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `関係（リレーション）`, `タプル（行`, `組）`, `属性（列`, `フィールド）`, `実現値`, `定義域（ドメイン）`, `関係スキーマ`
+    [`関係（リレーション）`](glossary/syllabus_tsuiho_ver4_0.md#関係（リレーション）), [`タプル（行`](glossary/syllabus_tsuiho_ver4_0.md#タプル（行), [`組）`](glossary/syllabus_tsuiho_ver4_0.md#組）), [`属性（列`](glossary/syllabus_tsuiho_ver4_0.md#属性（列), [`フィールド）`](glossary/syllabus_tsuiho_ver4_0.md#フィールド）), [`実現値`](glossary/syllabus_tsuiho_ver4_0.md#実現値), [`定義域（ドメイン）`](glossary/syllabus_tsuiho_ver4_0.md#定義域（ドメイン）), [`関係スキーマ`](glossary/syllabus_tsuiho_ver4_0.md#関係スキーマ)
 
 
 ##### （2）データベース管理システム
@@ -857,7 +857,7 @@ IoTシステムに適したネットワークの特徴，適合する技術を�
 DBMSの目的，代表的な機能とともに，DBMSにも階層型，網型，関係型があること，DBMS
 のマネジメント機能をデータベース開発や保守に利用することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `データベース定義機能`, `データベース操作機能`, `データベース制御機能`, `保全機能`, `データ機密保護機能`
+    [`データベース定義機能`](glossary/syllabus_tsuiho_ver4_0.md#データベース定義機能), [`データベース操作機能`](glossary/syllabus_tsuiho_ver4_0.md#データベース操作機能), [`データベース制御機能`](glossary/syllabus_tsuiho_ver4_0.md#データベース制御機能), [`保全機能`](glossary/syllabus_tsuiho_ver4_0.md#保全機能), [`データ機密保護機能`](glossary/syllabus_tsuiho_ver4_0.md#データ機密保護機能)
 
 
 ###### ② 同時実行制御（排他制御）
@@ -865,7 +865,7 @@ DBMSの目的，代表的な機能とともに，DBMSにも階層型，網型，
 複数のトランザクションが一つのデータベースに同時にアクセスするときに必要な制御
 方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `トランザクション`, `ロック`, `デッドロック`, `ACID特性`, `データ辞書`
+    [`トランザクション`](glossary/syllabus_tsuiho_ver4_0.md#トランザクション), [`ロック`](glossary/syllabus_tsuiho_ver4_0.md#ロック), [`デッドロック`](glossary/syllabus_tsuiho_ver4_0.md#デッドロック), [`ACID特性`](glossary/syllabus_tsuiho_ver4_0.md#acid特性), [`データ辞書`](glossary/syllabus_tsuiho_ver4_0.md#データ辞書)
 
 
 ###### ③ 障害回復
@@ -882,7 +882,7 @@ DBMSの目的，代表的な機能とともに，DBMSにも階層型，網型，
 NoSQLのデータベース管理システムとの違い，取り扱う上での留意事項，関連する機能を
 理解する。
   - **用語例・キーワード (全網羅)**:
-    `関係データベース（MySQL`, `PostgreSQL`, `SQLiteほか）`, `NoSQLデータベース （Apache Cassandra`, `Apache CouchDB`, `MongoDB`, `Redis`, `Neo4jほか）`
+    [`関係データベース（MySQL`](glossary/syllabus_tsuiho_ver4_0.md#関係データベース（mysql), [`PostgreSQL`](glossary/syllabus_tsuiho_ver4_0.md#postgresql), [`SQLiteほか）`](glossary/syllabus_tsuiho_ver4_0.md#sqliteほか）), [`NoSQLデータベース （Apache Cassandra`](glossary/syllabus_tsuiho_ver4_0.md#nosqlデータベース-（apache-cassandra), [`Apache CouchDB`](glossary/syllabus_tsuiho_ver4_0.md#apache-couchdb), [`MongoDB`](glossary/syllabus_tsuiho_ver4_0.md#mongodb), [`Redis`](glossary/syllabus_tsuiho_ver4_0.md#redis), [`Neo4jほか）`](glossary/syllabus_tsuiho_ver4_0.md#neo4jほか）)
 
 
 #### 🔹 2. データベース設計
@@ -901,7 +901,7 @@ NoSQLのデータベース管理システムとの違い，取り扱う上での
 タ分析を行う際の考え方を理解する。また，データモデルの作成手法であるトップダウンア
 プローチとボトムアップアプローチを理解する。
   - **用語例・キーワード (全網羅)**:
-    `データ重複の排除`, `メタデータ`, `データディクショナリ`
+    [`データ重複の排除`](glossary/syllabus_tsuiho_ver4_0.md#データ重複の排除), [`メタデータ`](glossary/syllabus_tsuiho_ver4_0.md#メタデータ), [`データディクショナリ`](glossary/syllabus_tsuiho_ver4_0.md#データディクショナリ)
 
 
 ##### （2）データベースの設計
@@ -912,7 +912,7 @@ NoSQLのデータベース管理システムとの違い，取り扱う上での
 開発計画立案，外部設計，内部設計，プログラム作成，テスト，移行に至るまでのデー
 タベース開発の工程と手順，手法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `システム分析`, `要求定義`, `企業データモデル`, `データモデル`, `概念データモデル`, `論理データモデル`, `物理データモデル`, `副次索引`, `分割法`, `DOA（Data Oriented Approach：データ中心アプローチ）`
+    [`システム分析`](glossary/syllabus_tsuiho_ver4_0.md#システム分析), [`要求定義`](glossary/syllabus_tsuiho_ver4_0.md#要求定義), [`企業データモデル`](glossary/syllabus_tsuiho_ver4_0.md#企業データモデル), [`データモデル`](glossary/syllabus_tsuiho_ver4_0.md#データモデル), [`概念データモデル`](glossary/syllabus_tsuiho_ver4_0.md#概念データモデル), [`論理データモデル`](glossary/syllabus_tsuiho_ver4_0.md#論理データモデル), [`物理データモデル`](glossary/syllabus_tsuiho_ver4_0.md#物理データモデル), [`副次索引`](glossary/syllabus_tsuiho_ver4_0.md#副次索引), [`分割法`](glossary/syllabus_tsuiho_ver4_0.md#分割法), [`DOA（Data Oriented Approach：データ中心アプローチ）`](glossary/syllabus_tsuiho_ver4_0.md#doa（data-oriented-approachデータ中心アプローチ）)
 
 
 ###### ② データベースの概念設計
@@ -922,7 +922,7 @@ NoSQLのデータベース管理システムとの違い，取り扱う上での
 いデータの関連を表現する手法として，E-R図や UMLを使用した構成要素，属性，関連の
 表し方，特徴，カーディナリティ（1対 1，1対多，多対多）などを理解する。
   - **用語例・キーワード (全網羅)**:
-    `概念データモデル`, `バックマン線図`, `エンティティ`, `属性`, `リレーションシップ`
+    [`概念データモデル`](glossary/syllabus_tsuiho_ver4_0.md#概念データモデル), [`バックマン線図`](glossary/syllabus_tsuiho_ver4_0.md#バックマン線図), [`エンティティ`](glossary/syllabus_tsuiho_ver4_0.md#エンティティ), [`属性`](glossary/syllabus_tsuiho_ver4_0.md#属性), [`リレーションシップ`](glossary/syllabus_tsuiho_ver4_0.md#リレーションシップ)
 
 
 ###### ③ データベースの論理設計
@@ -931,7 +931,7 @@ NoSQLのデータベース管理システムとの違い，取り扱う上での
 の概念，一貫性制約（一意性制約，参照制約，検査制約など）の制約を理解する。また，
 ビューの機能と定義を理解する。
   - **用語例・キーワード (全網羅)**:
-    `論理データモデル`, `配置モード`, `親子集合順序`, `親子集合`, `索引`, `フィールド （項目）`, `レコード`, `ファイル`, `NULL`, `一意性制約`, `サロゲートキー`
+    [`論理データモデル`](glossary/syllabus_tsuiho_ver4_0.md#論理データモデル), [`配置モード`](glossary/syllabus_tsuiho_ver4_0.md#配置モード), [`親子集合順序`](glossary/syllabus_tsuiho_ver4_0.md#親子集合順序), [`親子集合`](glossary/syllabus_tsuiho_ver4_0.md#親子集合), [`索引`](glossary/syllabus_tsuiho_ver4_0.md#索引), [`フィールド （項目）`](glossary/syllabus_tsuiho_ver4_0.md#フィールド-（項目）), [`レコード`](glossary/syllabus_tsuiho_ver4_0.md#レコード), [`ファイル`](glossary/syllabus_tsuiho_ver4_0.md#ファイル), [`NULL`](glossary/syllabus_tsuiho_ver4_0.md#null), [`一意性制約`](glossary/syllabus_tsuiho_ver4_0.md#一意性制約), [`サロゲートキー`](glossary/syllabus_tsuiho_ver4_0.md#サロゲートキー)
 
 
 ##### （3）データの正規化
@@ -940,7 +940,7 @@ NoSQLのデータベース管理システムとの違い，取り扱う上での
 化の考え方に従った，具体的な設計案に対して更新容易性や性能面などから評価し，最適な
 設計を行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `完全関数従属`, `部分関数従属`, `推移関数従属`
+    [`完全関数従属`](glossary/syllabus_tsuiho_ver4_0.md#完全関数従属), [`部分関数従属`](glossary/syllabus_tsuiho_ver4_0.md#部分関数従属), [`推移関数従属`](glossary/syllabus_tsuiho_ver4_0.md#推移関数従属)
 
 
 ##### （4）データベースのパフォーマンス設計
@@ -948,7 +948,7 @@ NoSQLのデータベース管理システムとの違い，取り扱う上での
 処理の高速化のためにあえて正規化を行わず，表の結合にかかる時間を短縮するなど，パ
 フォーマンスを考慮したデータベース設計の考え方を理解する。
   - **用語例・キーワード (全網羅)**:
-    `非正規化`
+    [`非正規化`](glossary/syllabus_tsuiho_ver4_0.md#非正規化)
 
 
 ##### （5）データベースの物理設計
@@ -958,7 +958,7 @@ NoSQLのデータベース管理システムとの違い，取り扱う上での
 ータ構造へのマッピングなど，データベースの物理的構造を設計する際の留意事項を理解す
 る。
   - **用語例・キーワード (全網羅)**:
-    `ディスク容量見積り`, `論理データ構造のマッピング`, `ファイル編成`, `最適ブロック設計`, `物理入出力`, `性能評価`, `コンプレッション`, `デコンプレッション`, `性能改善ポイント`, `インメモリデータベース`
+    [`ディスク容量見積り`](glossary/syllabus_tsuiho_ver4_0.md#ディスク容量見積り), [`論理データ構造のマッピング`](glossary/syllabus_tsuiho_ver4_0.md#論理データ構造のマッピング), [`ファイル編成`](glossary/syllabus_tsuiho_ver4_0.md#ファイル編成), [`最適ブロック設計`](glossary/syllabus_tsuiho_ver4_0.md#最適ブロック設計), [`物理入出力`](glossary/syllabus_tsuiho_ver4_0.md#物理入出力), [`性能評価`](glossary/syllabus_tsuiho_ver4_0.md#性能評価), [`コンプレッション`](glossary/syllabus_tsuiho_ver4_0.md#コンプレッション), [`デコンプレッション`](glossary/syllabus_tsuiho_ver4_0.md#デコンプレッション), [`性能改善ポイント`](glossary/syllabus_tsuiho_ver4_0.md#性能改善ポイント), [`インメモリデータベース`](glossary/syllabus_tsuiho_ver4_0.md#インメモリデータベース)
 
 
 ##### （6）データベースの作成手順
@@ -966,7 +966,7 @@ NoSQLのデータベース管理システムとの違い，取り扱う上での
 データベース環境の準備，入力データの準備，データベースの定義，データの登録，デー
 タベースの検証などの一連のデータベースの作成手順を理解する。
   - **用語例・キーワード (全網羅)**:
-    `データベース定義情報`, `レコード形式`, `親子関係`, `キー順`, `存在制約`, `インバー テッドファイル`
+    [`データベース定義情報`](glossary/syllabus_tsuiho_ver4_0.md#データベース定義情報), [`レコード形式`](glossary/syllabus_tsuiho_ver4_0.md#レコード形式), [`親子関係`](glossary/syllabus_tsuiho_ver4_0.md#親子関係), [`キー順`](glossary/syllabus_tsuiho_ver4_0.md#キー順), [`存在制約`](glossary/syllabus_tsuiho_ver4_0.md#存在制約), [`インバー テッドファイル`](glossary/syllabus_tsuiho_ver4_0.md#インバー-テッドファイル)
 
 
 ##### （7）データベースの評価・運用
@@ -974,7 +974,7 @@ NoSQLのデータベース管理システムとの違い，取り扱う上での
 データベースの性能評価方法を理解し，評価結果によってはチューニングや再編成などの
 対応策が必要であることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `データベースの運用・保守`
+    [`データベースの運用・保守`](glossary/syllabus_tsuiho_ver4_0.md#データベースの運用保守)
 
 
 #### 🔹 3. データ操作
@@ -991,7 +991,7 @@ NoSQLのデータベース管理システムとの違い，取り扱う上での
 ，関係演算（選
 択，射影，結合，商，直積）などを理解する。
   - **用語例・キーワード (全網羅)**:
-    `関係代数`
+    [`関係代数`](glossary/syllabus_tsuiho_ver4_0.md#関係代数)
 
 
 ##### （2）データベース言語
@@ -1004,7 +1004,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 を単独で使用する独立言語方式と，他のプログラム言語から使用する親言語方式があるこ
 とを理解する。
   - **用語例・キーワード (全網羅)**:
-    `会話型 SQL`, `埋込み SQL`, `モジュール言語`, `コマンド方式`, `フォーム`, `問合せ（クエリ）`
+    [`会話型 SQL`](glossary/syllabus_tsuiho_ver4_0.md#会話型-sql), [`埋込み SQL`](glossary/syllabus_tsuiho_ver4_0.md#埋込み-sql), [`モジュール言語`](glossary/syllabus_tsuiho_ver4_0.md#モジュール言語), [`コマンド方式`](glossary/syllabus_tsuiho_ver4_0.md#コマンド方式), [`フォーム`](glossary/syllabus_tsuiho_ver4_0.md#フォーム), [`問合せ（クエリ）`](glossary/syllabus_tsuiho_ver4_0.md#問合せ（クエリ）)
 
 
 ###### ② データベース言語（SQL）
@@ -1014,13 +1014,13 @@ Manipulation Language：データ操作言語）などに大別されること�
 タ型，列制約，表制約の定義方法，ビューの更新（更新可能なビューと更新不可能な
 ビュー）を理解する。
   - **用語例・キーワード (全網羅)**:
-    `実表`, `ビュー表`, `文字型`, `数値型`, `日付型`, `一意性制約`, `参照制約`, `検査制約`, `非 NULL制約`, `アクセス権`, `CASCADE`, `TRIGGER （b）データ操作言語（SELECT文） 要求されるデータを選択するために`, `SELECT文による問合せの方法`, `条件を指定した特定行や列の選択`, `表の結合`, `BETWEENや INなどの述語指定`, `集合関数`, `グループ化`, `ウィンドウ`, `並べ替えなどを理解する。`
+    [`実表`](glossary/syllabus_tsuiho_ver4_0.md#実表), [`ビュー表`](glossary/syllabus_tsuiho_ver4_0.md#ビュー表), [`文字型`](glossary/syllabus_tsuiho_ver4_0.md#文字型), [`数値型`](glossary/syllabus_tsuiho_ver4_0.md#数値型), [`日付型`](glossary/syllabus_tsuiho_ver4_0.md#日付型), [`一意性制約`](glossary/syllabus_tsuiho_ver4_0.md#一意性制約), [`参照制約`](glossary/syllabus_tsuiho_ver4_0.md#参照制約), [`検査制約`](glossary/syllabus_tsuiho_ver4_0.md#検査制約), [`非 NULL制約`](glossary/syllabus_tsuiho_ver4_0.md#非-null制約), [`アクセス権`](glossary/syllabus_tsuiho_ver4_0.md#アクセス権), [`CASCADE`](glossary/syllabus_tsuiho_ver4_0.md#cascade), [`TRIGGER （b）データ操作言語（SELECT文） 要求されるデータを選択するために`](glossary/syllabus_tsuiho_ver4_0.md#trigger-（b）データ操作言語（select文）-要求されるデータを選択するために), [`SELECT文による問合せの方法`](glossary/syllabus_tsuiho_ver4_0.md#select文による問合せの方法), [`条件を指定した特定行や列の選択`](glossary/syllabus_tsuiho_ver4_0.md#条件を指定した特定行や列の選択), [`表の結合`](glossary/syllabus_tsuiho_ver4_0.md#表の結合), [`BETWEENや INなどの述語指定`](glossary/syllabus_tsuiho_ver4_0.md#betweenや-inなどの述語指定), [`集合関数`](glossary/syllabus_tsuiho_ver4_0.md#集合関数), [`グループ化`](glossary/syllabus_tsuiho_ver4_0.md#グループ化), [`ウィンドウ`](glossary/syllabus_tsuiho_ver4_0.md#ウィンドウ), [`並べ替えなどを理解する。`](glossary/syllabus_tsuiho_ver4_0.md#並べ替えなどを理解する)
 
   - **用語例・キーワード (全網羅)**:
-    `集約関数`, `パターン文字列`, `相関名`, `副問合せ`, `相関副問合せ`, `ウィンドウ関数 （c）その他のデータ操作言語 INSERT文`, `UPDATE文`, `DELETE文`, `GRANT文などの SQL文を理解する。 （d）埋込み SQLカーソル操作`, `非カーソル操作`, `親言語との接続など`, `埋込み SQLによるデータ操作の仕組み`, `利点`, `利用法を理解する。また`, `カーソル操作において`, `カーソルの宣言`, `操作の開始`, `終了`, `読込みを行うなどの SQL文を理解する。`
+    [`集約関数`](glossary/syllabus_tsuiho_ver4_0.md#集約関数), [`パターン文字列`](glossary/syllabus_tsuiho_ver4_0.md#パターン文字列), [`相関名`](glossary/syllabus_tsuiho_ver4_0.md#相関名), [`副問合せ`](glossary/syllabus_tsuiho_ver4_0.md#副問合せ), [`相関副問合せ`](glossary/syllabus_tsuiho_ver4_0.md#相関副問合せ), [`ウィンドウ関数 （c）その他のデータ操作言語 INSERT文`](glossary/syllabus_tsuiho_ver4_0.md#ウィンドウ関数-（c）その他のデータ操作言語-insert文), [`UPDATE文`](glossary/syllabus_tsuiho_ver4_0.md#update文), [`DELETE文`](glossary/syllabus_tsuiho_ver4_0.md#delete文), [`GRANT文などの SQL文を理解する。 （d）埋込み SQLカーソル操作`](glossary/syllabus_tsuiho_ver4_0.md#grant文などの-sql文を理解する-（d）埋込み-sqlカーソル操作), [`非カーソル操作`](glossary/syllabus_tsuiho_ver4_0.md#非カーソル操作), [`親言語との接続など`](glossary/syllabus_tsuiho_ver4_0.md#親言語との接続など), [`埋込み SQLによるデータ操作の仕組み`](glossary/syllabus_tsuiho_ver4_0.md#埋込み-sqlによるデータ操作の仕組み), [`利点`](glossary/syllabus_tsuiho_ver4_0.md#利点), [`利用法を理解する。また`](glossary/syllabus_tsuiho_ver4_0.md#利用法を理解するまた), [`カーソル操作において`](glossary/syllabus_tsuiho_ver4_0.md#カーソル操作において), [`カーソルの宣言`](glossary/syllabus_tsuiho_ver4_0.md#カーソルの宣言), [`操作の開始`](glossary/syllabus_tsuiho_ver4_0.md#操作の開始), [`終了`](glossary/syllabus_tsuiho_ver4_0.md#終了), [`読込みを行うなどの SQL文を理解する。`](glossary/syllabus_tsuiho_ver4_0.md#読込みを行うなどの-sql文を理解する)
 
   - **用語例・キーワード (全網羅)**:
-    `カーソル`
+    [`カーソル`](glossary/syllabus_tsuiho_ver4_0.md#カーソル)
 
 
 #### 🔹 4. トランザクション処理
@@ -1041,7 +1041,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 ロック方式，セマフォ方式，コミットメント制御，多版同時実行制御（MVCC）の仕組みを理
 解する。
   - **用語例・キーワード (全網羅)**:
-    `専有ロック`, `共有ロック`, `ロック粒度`, `2相ロッキングプロトコル`, `デッドロック`, `Wait-Die方式`, `Wound-Wait方式`, `2相コミットメント`, `ダーティリード`, `ノンリピータブルリード`, `ファントムリード`, `隔離性水準`, `補償トランザクション`, `TCCパターン`, `Sagaパターン`, `スキュー（skew）`
+    [`専有ロック`](glossary/syllabus_tsuiho_ver4_0.md#専有ロック), [`共有ロック`](glossary/syllabus_tsuiho_ver4_0.md#共有ロック), [`ロック粒度`](glossary/syllabus_tsuiho_ver4_0.md#ロック粒度), [`2相ロッキングプロトコル`](glossary/syllabus_tsuiho_ver4_0.md#2相ロッキングプロトコル), [`デッドロック`](glossary/syllabus_tsuiho_ver4_0.md#デッドロック), [`Wait-Die方式`](glossary/syllabus_tsuiho_ver4_0.md#wait-die方式), [`Wound-Wait方式`](glossary/syllabus_tsuiho_ver4_0.md#wound-wait方式), [`2相コミットメント`](glossary/syllabus_tsuiho_ver4_0.md#2相コミットメント), [`ダーティリード`](glossary/syllabus_tsuiho_ver4_0.md#ダーティリード), [`ノンリピータブルリード`](glossary/syllabus_tsuiho_ver4_0.md#ノンリピータブルリード), [`ファントムリード`](glossary/syllabus_tsuiho_ver4_0.md#ファントムリード), [`隔離性水準`](glossary/syllabus_tsuiho_ver4_0.md#隔離性水準), [`補償トランザクション`](glossary/syllabus_tsuiho_ver4_0.md#補償トランザクション), [`TCCパターン`](glossary/syllabus_tsuiho_ver4_0.md#tccパターン), [`Sagaパターン`](glossary/syllabus_tsuiho_ver4_0.md#sagaパターン), [`スキュー（skew）`](glossary/syllabus_tsuiho_ver4_0.md#スキュー（skew）)
 
 
 ##### （2）障害回復
@@ -1050,7 +1050,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 るリカバリ処理の仕組み，データベースの利用環境の準備，アクセス効率の向上のための再
 編成などの考え方，仕組みを理解する。
   - **用語例・キーワード (全網羅)**:
-    `フルバックアップ`, `差分バックアップ`, `増分バックアップ`, `ダンプファイル`, `リストア`, `データディレクトリ`, `ジャーナルファイル（ログファイル）`, `チェックポイント`, `フォワードリカバリ（ロールフォワード）`, `バックワードリカバリ （ロールバック）`, `シャドウページ法`, `ウォームスタート`, `コールドスタート`
+    [`フルバックアップ`](glossary/syllabus_tsuiho_ver4_0.md#フルバックアップ), [`差分バックアップ`](glossary/syllabus_tsuiho_ver4_0.md#差分バックアップ), [`増分バックアップ`](glossary/syllabus_tsuiho_ver4_0.md#増分バックアップ), [`ダンプファイル`](glossary/syllabus_tsuiho_ver4_0.md#ダンプファイル), [`リストア`](glossary/syllabus_tsuiho_ver4_0.md#リストア), [`データディレクトリ`](glossary/syllabus_tsuiho_ver4_0.md#データディレクトリ), [`ジャーナルファイル（ログファイル）`](glossary/syllabus_tsuiho_ver4_0.md#ジャーナルファイル（ログファイル）), [`チェックポイント`](glossary/syllabus_tsuiho_ver4_0.md#チェックポイント), [`フォワードリカバリ（ロールフォワード）`](glossary/syllabus_tsuiho_ver4_0.md#フォワードリカバリ（ロールフォワード）), [`バックワードリカバリ （ロールバック）`](glossary/syllabus_tsuiho_ver4_0.md#バックワードリカバリ-（ロールバック）), [`シャドウページ法`](glossary/syllabus_tsuiho_ver4_0.md#シャドウページ法), [`ウォームスタート`](glossary/syllabus_tsuiho_ver4_0.md#ウォームスタート), [`コールドスタート`](glossary/syllabus_tsuiho_ver4_0.md#コールドスタート)
 
 
 ##### （3）トランザクション管理
@@ -1063,7 +1063,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 データベースへのアクセス効率向上のために，インデックスを有効に活用する考え方を理
 解する。
   - **用語例・キーワード (全網羅)**:
-    `インデックス数`, `負荷`, `ユニークインデックス`, `クラスタ化インデックス`, `Btreeインデックス`, `ビットマップインデックス`, `ハッシュインデックス`, `カバリングインデックス`, `転置インデックス`
+    [`インデックス数`](glossary/syllabus_tsuiho_ver4_0.md#インデックス数), [`負荷`](glossary/syllabus_tsuiho_ver4_0.md#負荷), [`ユニークインデックス`](glossary/syllabus_tsuiho_ver4_0.md#ユニークインデックス), [`クラスタ化インデックス`](glossary/syllabus_tsuiho_ver4_0.md#クラスタ化インデックス), [`Btreeインデックス`](glossary/syllabus_tsuiho_ver4_0.md#btreeインデックス), [`ビットマップインデックス`](glossary/syllabus_tsuiho_ver4_0.md#ビットマップインデックス), [`ハッシュインデックス`](glossary/syllabus_tsuiho_ver4_0.md#ハッシュインデックス), [`カバリングインデックス`](glossary/syllabus_tsuiho_ver4_0.md#カバリングインデックス), [`転置インデックス`](glossary/syllabus_tsuiho_ver4_0.md#転置インデックス)
 
 
 ##### （5）データへのアクセス制御
@@ -1072,7 +1072,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 てはデータベースに接続する権限，データを検索する権限，データを新規登録する権限，デ
 ータを更新する権限などがあること，SQLによる権限の定義と変更の方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `参照権限`, `挿入権限`, `削除権限`
+    [`参照権限`](glossary/syllabus_tsuiho_ver4_0.md#参照権限), [`挿入権限`](glossary/syllabus_tsuiho_ver4_0.md#挿入権限), [`削除権限`](glossary/syllabus_tsuiho_ver4_0.md#削除権限)
 
 
 #### 🔹 5. データベース応用
@@ -1091,7 +1091,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 ニングなど，データを分析して有効活用する技術の特徴，これらの技術が企業会計システム，
 在庫管理システムなどで使われていること，その応用方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `OLTP（Online Transaction Processing）`, `ETL（Extract/Transform/Load）`, `ELT （Extract/Load/Transform）`, `データクレンジング`, `ビッグデータ`, `文書管理システム`, `営業支援システム`
+    [`OLTP（Online Transaction Processing）`](glossary/syllabus_tsuiho_ver4_0.md#oltp（online-transaction-processing）), [`ETL（Extract/Transform/Load）`](glossary/syllabus_tsuiho_ver4_0.md#etl（extract-transform-load）), [`ELT （Extract/Load/Transform）`](glossary/syllabus_tsuiho_ver4_0.md#elt-（extract-load-transform）), [`データクレンジング`](glossary/syllabus_tsuiho_ver4_0.md#データクレンジング), [`ビッグデータ`](glossary/syllabus_tsuiho_ver4_0.md#ビッグデータ), [`文書管理システム`](glossary/syllabus_tsuiho_ver4_0.md#文書管理システム), [`営業支援システム`](glossary/syllabus_tsuiho_ver4_0.md#営業支援システム)
 
 
 ##### （2）分散データベース
@@ -1099,7 +1099,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 複数のサイトに配置された分散データベースの特徴，利点，取り扱う上での留意事項，サ
 イト間でのデータ同期の仕組み，関連する機能，集中型データベースとの違いを理解する。
   - **用語例・キーワード (全網羅)**:
-    `透過性`, `クライアントキャッシュ`, `コミットメント制御`, `2相コミットメント`, `コミットシーケンス`, `同時実行制御`, `レプリケーション`, `水平分散`, `垂直分散`, `表の分散（水平`, `垂直）`, `分散問合せ`, `結合演算`, `分散トランザクション`, `スプリットブレイン`, `OSI-RDA（Open Systems Interconnection-Remote Database Access：開放型システム間相互接続-遠隔データベースアクセス）プロトコル`, `ブロックチェーンにおけるデータベース関連技術（コンセンサスアルゴリズム`, `ファイナリティほか）`, `分散処理フレームワーク（Apache Hadoop`, `Apache Sparkほか）`, `CAP定理`, `BASE特性`, `結果整合性`, `シャーディング`
+    [`透過性`](glossary/syllabus_tsuiho_ver4_0.md#透過性), [`クライアントキャッシュ`](glossary/syllabus_tsuiho_ver4_0.md#クライアントキャッシュ), [`コミットメント制御`](glossary/syllabus_tsuiho_ver4_0.md#コミットメント制御), [`2相コミットメント`](glossary/syllabus_tsuiho_ver4_0.md#2相コミットメント), [`コミットシーケンス`](glossary/syllabus_tsuiho_ver4_0.md#コミットシーケンス), [`同時実行制御`](glossary/syllabus_tsuiho_ver4_0.md#同時実行制御), [`レプリケーション`](glossary/syllabus_tsuiho_ver4_0.md#レプリケーション), [`水平分散`](glossary/syllabus_tsuiho_ver4_0.md#水平分散), [`垂直分散`](glossary/syllabus_tsuiho_ver4_0.md#垂直分散), [`表の分散（水平`](glossary/syllabus_tsuiho_ver4_0.md#表の分散（水平), [`垂直）`](glossary/syllabus_tsuiho_ver4_0.md#垂直）), [`分散問合せ`](glossary/syllabus_tsuiho_ver4_0.md#分散問合せ), [`結合演算`](glossary/syllabus_tsuiho_ver4_0.md#結合演算), [`分散トランザクション`](glossary/syllabus_tsuiho_ver4_0.md#分散トランザクション), [`スプリットブレイン`](glossary/syllabus_tsuiho_ver4_0.md#スプリットブレイン), [`OSI-RDA（Open Systems Interconnection-Remote Database Access：開放型システム間相互接続-遠隔データベースアクセス）プロトコル`](glossary/syllabus_tsuiho_ver4_0.md#osi-rda（open-systems-interconnection-remote-database-access開放型システム間相互接続-遠隔データベースアクセス）プロトコル), [`ブロックチェーンにおけるデータベース関連技術（コンセンサスアルゴリズム`](glossary/syllabus_tsuiho_ver4_0.md#ブロックチェーンにおけるデータベース関連技術（コンセンサスアルゴリズム), [`ファイナリティほか）`](glossary/syllabus_tsuiho_ver4_0.md#ファイナリティほか）), [`分散処理フレームワーク（Apache Hadoop`](glossary/syllabus_tsuiho_ver4_0.md#分散処理フレームワーク（apache-hadoop), [`Apache Sparkほか）`](glossary/syllabus_tsuiho_ver4_0.md#apache-sparkほか）), [`CAP定理`](glossary/syllabus_tsuiho_ver4_0.md#cap定理), [`BASE特性`](glossary/syllabus_tsuiho_ver4_0.md#base特性), [`結果整合性`](glossary/syllabus_tsuiho_ver4_0.md#結果整合性), [`シャーディング`](glossary/syllabus_tsuiho_ver4_0.md#シャーディング)
 
 
 ##### （3）データ資源管理
@@ -1108,7 +1108,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 収集，管理したデータディクショナリや，ソフトウェア開発と保守における様々な情報を一
 元的に管理するリポジトリを理解する。
   - **用語例・キーワード (全網羅)**:
-    `IRDS（Information Resource Dictionary System：情報資源辞書システム）`, `分散ファイルシステム（HDFS（Hadoop Distributed File System）`, `Ceph`, `GlusterFSほか）`, `ファクトデータベース`, `リファレンスデータベース`, `データベースサー ビス`, `構造化データ`, `半構造化データ`, `非構造化データ`, `ストリーミングデータ`, `データレイク`, `大規模データセットのクエリエンジン（Apache Hive`, `Prestoほ か）`
+    [`IRDS（Information Resource Dictionary System：情報資源辞書システム）`](glossary/syllabus_tsuiho_ver4_0.md#irds（information-resource-dictionary-system情報資源辞書システム）), [`分散ファイルシステム（HDFS（Hadoop Distributed File System）`](glossary/syllabus_tsuiho_ver4_0.md#分散ファイルシステム（hdfs（hadoop-distributed-file-system）), [`Ceph`](glossary/syllabus_tsuiho_ver4_0.md#ceph), [`GlusterFSほか）`](glossary/syllabus_tsuiho_ver4_0.md#glusterfsほか）), [`ファクトデータベース`](glossary/syllabus_tsuiho_ver4_0.md#ファクトデータベース), [`リファレンスデータベース`](glossary/syllabus_tsuiho_ver4_0.md#リファレンスデータベース), [`データベースサー ビス`](glossary/syllabus_tsuiho_ver4_0.md#データベースサー-ビス), [`構造化データ`](glossary/syllabus_tsuiho_ver4_0.md#構造化データ), [`半構造化データ`](glossary/syllabus_tsuiho_ver4_0.md#半構造化データ), [`非構造化データ`](glossary/syllabus_tsuiho_ver4_0.md#非構造化データ), [`ストリーミングデータ`](glossary/syllabus_tsuiho_ver4_0.md#ストリーミングデータ), [`データレイク`](glossary/syllabus_tsuiho_ver4_0.md#データレイク), [`大規模データセットのクエリエンジン（Apache Hive`](glossary/syllabus_tsuiho_ver4_0.md#大規模データセットのクエリエンジン（apache-hive), [`Prestoほ か）`](glossary/syllabus_tsuiho_ver4_0.md#prestoほ-か）)
 
 
 ## 📌 大分類 4：開発技術
@@ -1137,7 +1137,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 利害関係者要件として定義された，利用の状況及び運用シナリオに基づいて機能的な境
 界を定義することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `利用の状況`, `運用シナリオ`, `API`, `GUI`, `インタフェースファイル`, `サービス`
+    [`利用の状況`](glossary/syllabus_tsuiho_ver4_0.md#利用の状況), [`運用シナリオ`](glossary/syllabus_tsuiho_ver4_0.md#運用シナリオ), [`API`](glossary/syllabus_tsuiho_ver4_0.md#api), [`GUI`](glossary/syllabus_tsuiho_ver4_0.md#gui), [`インタフェースファイル`](glossary/syllabus_tsuiho_ver4_0.md#インタフェースファイル), [`サービス`](glossary/syllabus_tsuiho_ver4_0.md#サービス)
 
 
 ###### ② システム化の目標と対象範囲
@@ -1151,7 +1151,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 
 システムの機能要件，性能要件をまとめることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `システム機能仕様`, `レスポンスタイム`, `スループット`
+    [`システム機能仕様`](glossary/syllabus_tsuiho_ver4_0.md#システム機能仕様), [`レスポンスタイム`](glossary/syllabus_tsuiho_ver4_0.md#レスポンスタイム), [`スループット`](glossary/syllabus_tsuiho_ver4_0.md#スループット)
 
 
 ###### ② 業務・組織及び利用者の要件
@@ -1162,7 +1162,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 出し，5W2H（Why，When，Where，Who，What，How，How much）の観点から明確に文書化す
 ることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `性能要件`, `データベース要件`, `テスト要件`, `セキュリティ要件`, `移行要件`, `運用要件`, `運用手順`, `運用形態`, `保守要件`, `可用性`, `障害対応`, `教育`, `訓練`, `費用`, `保守の形態`, `保守のタイミング`, `CRUDマトリクス`
+    [`性能要件`](glossary/syllabus_tsuiho_ver4_0.md#性能要件), [`データベース要件`](glossary/syllabus_tsuiho_ver4_0.md#データベース要件), [`テスト要件`](glossary/syllabus_tsuiho_ver4_0.md#テスト要件), [`セキュリティ要件`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティ要件), [`移行要件`](glossary/syllabus_tsuiho_ver4_0.md#移行要件), [`運用要件`](glossary/syllabus_tsuiho_ver4_0.md#運用要件), [`運用手順`](glossary/syllabus_tsuiho_ver4_0.md#運用手順), [`運用形態`](glossary/syllabus_tsuiho_ver4_0.md#運用形態), [`保守要件`](glossary/syllabus_tsuiho_ver4_0.md#保守要件), [`可用性`](glossary/syllabus_tsuiho_ver4_0.md#可用性), [`障害対応`](glossary/syllabus_tsuiho_ver4_0.md#障害対応), [`教育`](glossary/syllabus_tsuiho_ver4_0.md#教育), [`訓練`](glossary/syllabus_tsuiho_ver4_0.md#訓練), [`費用`](glossary/syllabus_tsuiho_ver4_0.md#費用), [`保守の形態`](glossary/syllabus_tsuiho_ver4_0.md#保守の形態), [`保守のタイミング`](glossary/syllabus_tsuiho_ver4_0.md#保守のタイミング), [`CRUDマトリクス`](glossary/syllabus_tsuiho_ver4_0.md#crudマトリクス)
 
 
 ###### ③ その他の要件
@@ -1171,7 +1171,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 の定義，適格性確認要件（開発するシステムが利用可能な品質であることを確認する基準）
 の定義，開発環境の検討などを行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `実行環境要件`, `周辺インタフェース要件`, `品質要件`, `機能要件`, `非機能要件`, `達成する遂行能力・性能・運用時の実績に対する要件（パフォーマンス要件）`, `UXデザイン`, `イネーブリングシステム`
+    [`実行環境要件`](glossary/syllabus_tsuiho_ver4_0.md#実行環境要件), [`周辺インタフェース要件`](glossary/syllabus_tsuiho_ver4_0.md#周辺インタフェース要件), [`品質要件`](glossary/syllabus_tsuiho_ver4_0.md#品質要件), [`機能要件`](glossary/syllabus_tsuiho_ver4_0.md#機能要件), [`非機能要件`](glossary/syllabus_tsuiho_ver4_0.md#非機能要件), [`達成する遂行能力・性能・運用時の実績に対する要件（パフォーマンス要件）`](glossary/syllabus_tsuiho_ver4_0.md#達成する遂行能力性能運用時の実績に対する要件（パフォーマンス要件）), [`UXデザイン`](glossary/syllabus_tsuiho_ver4_0.md#uxデザイン), [`イネーブリングシステム`](glossary/syllabus_tsuiho_ver4_0.md#イネーブリングシステム)
 
 
 ##### （4）システム要件の評価及びレビュー
@@ -1179,7 +1179,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 システム要件を評価する際の基準を理解する。また，システム要件定義書の作成後，シス
 テムの取得者及び供給者が共同でレビューを行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `双方向の追跡可能性（双方向のトレーサビリティ）`, `一貫性`, `テスト可能性`, `システム設計の実現可能性`, `運用及び保守の実現可能性`, `レビュー参加者`, `レビュ ー方式`, `アシュアランスケース`
+    [`双方向の追跡可能性（双方向のトレーサビリティ）`](glossary/syllabus_tsuiho_ver4_0.md#双方向の追跡可能性（双方向のトレーサビリティ）), [`一貫性`](glossary/syllabus_tsuiho_ver4_0.md#一貫性), [`テスト可能性`](glossary/syllabus_tsuiho_ver4_0.md#テスト可能性), [`システム設計の実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#システム設計の実現可能性), [`運用及び保守の実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#運用及び保守の実現可能性), [`レビュー参加者`](glossary/syllabus_tsuiho_ver4_0.md#レビュー参加者), [`レビュ ー方式`](glossary/syllabus_tsuiho_ver4_0.md#レビュ-ー方式), [`アシュアランスケース`](glossary/syllabus_tsuiho_ver4_0.md#アシュアランスケース)
 
 
 ##### （5）ソフトウェア要件定義のタスク
@@ -1197,7 +1197,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 を決定し，ソフトウェア要件を定めることを理解する。また，要件定義のための業務分析
 には，DFD，E-R図，UMLなどの分析，表現方法を使用することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `要件の属性（根拠`, `優先順位`, `ソフトウェア要素・テストケース・情報項目への追跡可能性（トレーサビリティ）`, `検証手法）`, `トレーサビリティマトリクス`, `UXデザイン`, `使用性（usability）`
+    [`要件の属性（根拠`](glossary/syllabus_tsuiho_ver4_0.md#要件の属性（根拠), [`優先順位`](glossary/syllabus_tsuiho_ver4_0.md#優先順位), [`ソフトウェア要素・テストケース・情報項目への追跡可能性（トレーサビリティ）`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア要素テストケース情報項目への追跡可能性（トレーサビリティ）), [`検証手法）`](glossary/syllabus_tsuiho_ver4_0.md#検証手法）), [`トレーサビリティマトリクス`](glossary/syllabus_tsuiho_ver4_0.md#トレーサビリティマトリクス), [`UXデザイン`](glossary/syllabus_tsuiho_ver4_0.md#uxデザイン), [`使用性（usability）`](glossary/syllabus_tsuiho_ver4_0.md#使用性（usability）)
 
 
 ###### ② ソフトウェアの機能仕様とそのインタフェースの仕様の識別
@@ -1205,7 +1205,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 ソフトウェアの機能仕様とそのインタフェースの仕様を識別する一連の活動と留意事項
 を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ユースケース`, `ユーザーストーリー`, `シナリオ`, `DFD`, `E-R図`, `UML`, `運用の状態又はモード`, `サブシステム分割`, `サブシステム機能仕様定義`, `サブシステムインタフェース定義`, `サブシステム関連図`, `サービスの定義`, `実装制約条件`, `品質特性`, `IoT`
+    [`ユースケース`](glossary/syllabus_tsuiho_ver4_0.md#ユースケース), [`ユーザーストーリー`](glossary/syllabus_tsuiho_ver4_0.md#ユーザーストーリー), [`シナリオ`](glossary/syllabus_tsuiho_ver4_0.md#シナリオ), [`DFD`](glossary/syllabus_tsuiho_ver4_0.md#dfd), [`E-R図`](glossary/syllabus_tsuiho_ver4_0.md#e-r図), [`UML`](glossary/syllabus_tsuiho_ver4_0.md#uml), [`運用の状態又はモード`](glossary/syllabus_tsuiho_ver4_0.md#運用の状態又はモード), [`サブシステム分割`](glossary/syllabus_tsuiho_ver4_0.md#サブシステム分割), [`サブシステム機能仕様定義`](glossary/syllabus_tsuiho_ver4_0.md#サブシステム機能仕様定義), [`サブシステムインタフェース定義`](glossary/syllabus_tsuiho_ver4_0.md#サブシステムインタフェース定義), [`サブシステム関連図`](glossary/syllabus_tsuiho_ver4_0.md#サブシステム関連図), [`サービスの定義`](glossary/syllabus_tsuiho_ver4_0.md#サービスの定義), [`実装制約条件`](glossary/syllabus_tsuiho_ver4_0.md#実装制約条件), [`品質特性`](glossary/syllabus_tsuiho_ver4_0.md#品質特性), [`IoT`](glossary/syllabus_tsuiho_ver4_0.md#iot)
 
 
 ###### ③ 業務モデルとデータモデルの識別
@@ -1213,7 +1213,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 業務フローやサブシステム間の関係から業務モデルとデータモデルを作成する一連の活
 動と留意事項，データモデルの種類と各々の特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `論理モデル`, `物理モデル`, `業務モデリング`, `IoT`, `画面設計`, `帳票設計`, `伝票設計`, `データモデリング`, `システム業務フロー`, `データ要素`, `データ構造`, `データ形式`, `データベース又はデータ維持の要件`, `ユーザーインタフェース`, `利用者用文書類`, `利用者の教育訓練`
+    [`論理モデル`](glossary/syllabus_tsuiho_ver4_0.md#論理モデル), [`物理モデル`](glossary/syllabus_tsuiho_ver4_0.md#物理モデル), [`業務モデリング`](glossary/syllabus_tsuiho_ver4_0.md#業務モデリング), [`IoT`](glossary/syllabus_tsuiho_ver4_0.md#iot), [`画面設計`](glossary/syllabus_tsuiho_ver4_0.md#画面設計), [`帳票設計`](glossary/syllabus_tsuiho_ver4_0.md#帳票設計), [`伝票設計`](glossary/syllabus_tsuiho_ver4_0.md#伝票設計), [`データモデリング`](glossary/syllabus_tsuiho_ver4_0.md#データモデリング), [`システム業務フロー`](glossary/syllabus_tsuiho_ver4_0.md#システム業務フロー), [`データ要素`](glossary/syllabus_tsuiho_ver4_0.md#データ要素), [`データ構造`](glossary/syllabus_tsuiho_ver4_0.md#データ構造), [`データ形式`](glossary/syllabus_tsuiho_ver4_0.md#データ形式), [`データベース又はデータ維持の要件`](glossary/syllabus_tsuiho_ver4_0.md#データベース又はデータ維持の要件), [`ユーザーインタフェース`](glossary/syllabus_tsuiho_ver4_0.md#ユーザーインタフェース), [`利用者用文書類`](glossary/syllabus_tsuiho_ver4_0.md#利用者用文書類), [`利用者の教育訓練`](glossary/syllabus_tsuiho_ver4_0.md#利用者の教育訓練)
 
 
 ###### ④ セキュリティ要件の識別
@@ -1221,7 +1221,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 企業の情報セキュリティポリシーに即したセキュリティ機能に関する設計原則及び設計
 特性を選定して優先順位をつける活動と留意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `情報セキュリティ方針`, `セキュリティ要件`, `セキュリティ実現方式`, `安全性対策`, `信頼性対策`, `設計原則（最小限の原則`, `多層防御`, `システムサービスへのアクセス制限`, `システムへの攻撃にさらされる境界面の最小化及び防御）`, `設計特性 （アベイラビリティ`, `障害許容性（耐故障性）`, `復元性（resilience） ）`
+    [`情報セキュリティ方針`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ方針), [`セキュリティ要件`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティ要件), [`セキュリティ実現方式`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティ実現方式), [`安全性対策`](glossary/syllabus_tsuiho_ver4_0.md#安全性対策), [`信頼性対策`](glossary/syllabus_tsuiho_ver4_0.md#信頼性対策), [`設計原則（最小限の原則`](glossary/syllabus_tsuiho_ver4_0.md#設計原則（最小限の原則), [`多層防御`](glossary/syllabus_tsuiho_ver4_0.md#多層防御), [`システムサービスへのアクセス制限`](glossary/syllabus_tsuiho_ver4_0.md#システムサービスへのアクセス制限), [`システムへの攻撃にさらされる境界面の最小化及び防御）`](glossary/syllabus_tsuiho_ver4_0.md#システムへの攻撃にさらされる境界面の最小化及び防御）), [`設計特性 （アベイラビリティ`](glossary/syllabus_tsuiho_ver4_0.md#設計特性-（アベイラビリティ), [`障害許容性（耐故障性）`](glossary/syllabus_tsuiho_ver4_0.md#障害許容性（耐故障性）), [`復元性（resilience） ）`](glossary/syllabus_tsuiho_ver4_0.md#復元性（resilience）-）)
 
 
 ###### ⑤ 保守性の考慮
@@ -1229,7 +1229,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 運用開始後の新機能の追加及び既存機能の変更に必要な工数を抑え，機敏性を獲得する
 ための設計上の配慮の必要性を理解する。
   - **用語例・キーワード (全網羅)**:
-    `無矛盾性`, `自己記述性`, `構造性`, `簡潔性`, `拡張性`, `移植性`
+    [`無矛盾性`](glossary/syllabus_tsuiho_ver4_0.md#無矛盾性), [`自己記述性`](glossary/syllabus_tsuiho_ver4_0.md#自己記述性), [`構造性`](glossary/syllabus_tsuiho_ver4_0.md#構造性), [`簡潔性`](glossary/syllabus_tsuiho_ver4_0.md#簡潔性), [`拡張性`](glossary/syllabus_tsuiho_ver4_0.md#拡張性), [`移植性`](glossary/syllabus_tsuiho_ver4_0.md#移植性)
 
 
 ##### （7）ソフトウェア要件の評価及びレビュー
@@ -1238,7 +1238,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 ェア要件を評価する際の基準，ソフトウェア要件定義書の作成後，システムの取得者及び供
 給者が共同でレビューを行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `双方向の追跡可能性（双方向のトレーサビリティ）`, `外部一貫性`, `内部一貫性`, `テスト可能性`, `ソフトウェアシステムの実現可能性`, `トレーサビリティマトリクス`, `運用及び保守の実現可能性`, `レビュー参加者`, `レビュー方式`, `アシュアランスケース`
+    [`双方向の追跡可能性（双方向のトレーサビリティ）`](glossary/syllabus_tsuiho_ver4_0.md#双方向の追跡可能性（双方向のトレーサビリティ）), [`外部一貫性`](glossary/syllabus_tsuiho_ver4_0.md#外部一貫性), [`内部一貫性`](glossary/syllabus_tsuiho_ver4_0.md#内部一貫性), [`テスト可能性`](glossary/syllabus_tsuiho_ver4_0.md#テスト可能性), [`ソフトウェアシステムの実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアシステムの実現可能性), [`トレーサビリティマトリクス`](glossary/syllabus_tsuiho_ver4_0.md#トレーサビリティマトリクス), [`運用及び保守の実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#運用及び保守の実現可能性), [`レビュー参加者`](glossary/syllabus_tsuiho_ver4_0.md#レビュー参加者), [`レビュー方式`](glossary/syllabus_tsuiho_ver4_0.md#レビュー方式), [`アシュアランスケース`](glossary/syllabus_tsuiho_ver4_0.md#アシュアランスケース)
 
 
 ##### （8）業務分析や要件定義に用いられる手法
@@ -1249,7 +1249,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 ソフトウェアに何が要求されているかを明らかにし，理解するためには，利用者からの
 ヒアリングが有効であること，ヒアリング実施の手順，考え方を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ヒアリング計画`, `ヒアリング議事録`
+    [`ヒアリング計画`](glossary/syllabus_tsuiho_ver4_0.md#ヒアリング計画), [`ヒアリング議事録`](glossary/syllabus_tsuiho_ver4_0.md#ヒアリング議事録)
 
 
 ###### ② ユースケース
@@ -1257,7 +1257,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 ユースケースは，一つの目標を達成するための利用者とシステムのやり取りを定義する
 ために用いること，その特徴，目的，ユースケースを描く方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `アクター`, `振舞い`, `ユースケース図`
+    [`アクター`](glossary/syllabus_tsuiho_ver4_0.md#アクター), [`振舞い`](glossary/syllabus_tsuiho_ver4_0.md#振舞い), [`ユースケース図`](glossary/syllabus_tsuiho_ver4_0.md#ユースケース図)
 
 
 ###### ③ モックアップ及びプロトタイプ
@@ -1266,7 +1266,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 価を行い，手戻りを防ぐためにモックアップ及びプロトタイプを作成することがあること，
 モックアップ及びプロトタイピングの特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `プロトタイプ版評価`, `垂直型プロトタイプ`, `水平型プロトタイプ`
+    [`プロトタイプ版評価`](glossary/syllabus_tsuiho_ver4_0.md#プロトタイプ版評価), [`垂直型プロトタイプ`](glossary/syllabus_tsuiho_ver4_0.md#垂直型プロトタイプ), [`水平型プロトタイプ`](glossary/syllabus_tsuiho_ver4_0.md#水平型プロトタイプ)
 
 
 ###### ④ DFD
@@ -1274,7 +1274,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 業務プロセスをデータの流れに着目して表現する場合に，DFDを使用することを理解す
 る。
   - **用語例・キーワード (全網羅)**:
-    `データストア`, `データフロー`, `プロセス`, `源泉と吸収`, `外部実体`, `コンテキストダイアグラム`, `ミニスペック`, `段階的詳細化`, `構造化分析法`, `アクティビティ`
+    [`データストア`](glossary/syllabus_tsuiho_ver4_0.md#データストア), [`データフロー`](glossary/syllabus_tsuiho_ver4_0.md#データフロー), [`プロセス`](glossary/syllabus_tsuiho_ver4_0.md#プロセス), [`源泉と吸収`](glossary/syllabus_tsuiho_ver4_0.md#源泉と吸収), [`外部実体`](glossary/syllabus_tsuiho_ver4_0.md#外部実体), [`コンテキストダイアグラム`](glossary/syllabus_tsuiho_ver4_0.md#コンテキストダイアグラム), [`ミニスペック`](glossary/syllabus_tsuiho_ver4_0.md#ミニスペック), [`段階的詳細化`](glossary/syllabus_tsuiho_ver4_0.md#段階的詳細化), [`構造化分析法`](glossary/syllabus_tsuiho_ver4_0.md#構造化分析法), [`アクティビティ`](glossary/syllabus_tsuiho_ver4_0.md#アクティビティ)
 
 
 ###### ⑤ E-R図
@@ -1282,7 +1282,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 業務で扱う情報を抽象化し，実体（エンティティ）と実体間の関連（リレーションシッ
 プ）を表現する場合に，E-R図を使用することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `実体`, `関連`, `データ中心設計`
+    [`実体`](glossary/syllabus_tsuiho_ver4_0.md#実体), [`関連`](glossary/syllabus_tsuiho_ver4_0.md#関連), [`データ中心設計`](glossary/syllabus_tsuiho_ver4_0.md#データ中心設計)
 
 
 ###### ⑥ UML
@@ -1290,21 +1290,21 @@ Manipulation Language：データ操作言語）などに大別されること�
 オブジェクト指向設計の標準化された表記法として UMLがあること，UMLで用いる図式
 の種類，特徴，UMLを用いてシステムの仕組みを表現する方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `クラス図`, `操作`, `属性`, `ロール名`, `パッケージ図`, `アクティビティ図`, `ユースケ ース図`, `ステートマシン図`, `シーケンス図`, `コミュニケーション図`, `イベントフロー分析`, `バックトラック`, `コントロールフロー`, `分析と設計の役割分担`, `エー ジェント指向`, `モデル`, `フレームワーク`
+    [`クラス図`](glossary/syllabus_tsuiho_ver4_0.md#クラス図), [`操作`](glossary/syllabus_tsuiho_ver4_0.md#操作), [`属性`](glossary/syllabus_tsuiho_ver4_0.md#属性), [`ロール名`](glossary/syllabus_tsuiho_ver4_0.md#ロール名), [`パッケージ図`](glossary/syllabus_tsuiho_ver4_0.md#パッケージ図), [`アクティビティ図`](glossary/syllabus_tsuiho_ver4_0.md#アクティビティ図), [`ユースケ ース図`](glossary/syllabus_tsuiho_ver4_0.md#ユースケ-ース図), [`ステートマシン図`](glossary/syllabus_tsuiho_ver4_0.md#ステートマシン図), [`シーケンス図`](glossary/syllabus_tsuiho_ver4_0.md#シーケンス図), [`コミュニケーション図`](glossary/syllabus_tsuiho_ver4_0.md#コミュニケーション図), [`イベントフロー分析`](glossary/syllabus_tsuiho_ver4_0.md#イベントフロー分析), [`バックトラック`](glossary/syllabus_tsuiho_ver4_0.md#バックトラック), [`コントロールフロー`](glossary/syllabus_tsuiho_ver4_0.md#コントロールフロー), [`分析と設計の役割分担`](glossary/syllabus_tsuiho_ver4_0.md#分析と設計の役割分担), [`エー ジェント指向`](glossary/syllabus_tsuiho_ver4_0.md#エー-ジェント指向), [`モデル`](glossary/syllabus_tsuiho_ver4_0.md#モデル), [`フレームワーク`](glossary/syllabus_tsuiho_ver4_0.md#フレームワーク)
 
 
 ###### ⑦ ユーザーストーリー
 
 ソフトウェア要件を記述する方法としてユーザーストーリーがあることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `エピック`, `ユーザーストーリー`, `ストーリーポイント`, `プロダクトバックログ`
+    [`エピック`](glossary/syllabus_tsuiho_ver4_0.md#エピック), [`ユーザーストーリー`](glossary/syllabus_tsuiho_ver4_0.md#ユーザーストーリー), [`ストーリーポイント`](glossary/syllabus_tsuiho_ver4_0.md#ストーリーポイント), [`プロダクトバックログ`](glossary/syllabus_tsuiho_ver4_0.md#プロダクトバックログ)
 
 
 ###### ⑧ その他の手法
 
 その他，業務分析や要件定義に用いられる手法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `決定表（デシジョンテーブル）`, `SysML`, `状態遷移図`, `状態遷移表`
+    [`決定表（デシジョンテーブル）`](glossary/syllabus_tsuiho_ver4_0.md#決定表（デシジョンテーブル）), [`SysML`](glossary/syllabus_tsuiho_ver4_0.md#sysml), [`状態遷移図`](glossary/syllabus_tsuiho_ver4_0.md#状態遷移図), [`状態遷移表`](glossary/syllabus_tsuiho_ver4_0.md#状態遷移表)
 
 
 #### 🔹 2. 設計
@@ -1329,7 +1329,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 実現できるか，リスクなどを考慮した選択肢の提案は可能か，効率的な運用及び保守がで
 きるかなど，システムを設計する際に考慮すべき点を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ハードウェア構成品目`, `ソフトウェア構成品目`, `サービス`, `手作業`, `機能要件`, `非機能要件`
+    [`ハードウェア構成品目`](glossary/syllabus_tsuiho_ver4_0.md#ハードウェア構成品目), [`ソフトウェア構成品目`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア構成品目), [`サービス`](glossary/syllabus_tsuiho_ver4_0.md#サービス), [`手作業`](glossary/syllabus_tsuiho_ver4_0.md#手作業), [`機能要件`](glossary/syllabus_tsuiho_ver4_0.md#機能要件), [`非機能要件`](glossary/syllabus_tsuiho_ver4_0.md#非機能要件)
 
 
 ###### ② ハードウェア・ソフトウェア・サービス・手作業の機能分割
@@ -1337,7 +1337,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 ハードウェア，ソフトウェア，サービス，手作業の機能分割を，業務効率，作業負荷，
 作業コストなどの観点から検討し，決定することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `利用者作業範囲`
+    [`利用者作業範囲`](glossary/syllabus_tsuiho_ver4_0.md#利用者作業範囲)
 
 
 ###### ③ ハードウェア構成の決定
@@ -1345,7 +1345,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 信頼性や性能要件に基づいて，冗長化やフォールトトレラント設計，サーバの機能配分，
 信頼性配分などを検討し，ハードウェア構成を決定することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `アーキテクチャ`, `ハードウェア要素`, `IaaS`, `PaaS`, `SaaS`
+    [`アーキテクチャ`](glossary/syllabus_tsuiho_ver4_0.md#アーキテクチャ), [`ハードウェア要素`](glossary/syllabus_tsuiho_ver4_0.md#ハードウェア要素), [`IaaS`](glossary/syllabus_tsuiho_ver4_0.md#iaas), [`PaaS`](glossary/syllabus_tsuiho_ver4_0.md#paas), [`SaaS`](glossary/syllabus_tsuiho_ver4_0.md#saas)
 
 
 ###### ④ ソフトウェア構成の決定
@@ -1354,7 +1354,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 などの方針，使用するミドルウェアの選択などを検討し，ソフトウェア構成を決定するこ
 とを理解する。
   - **用語例・キーワード (全網羅)**:
-    `アーキテクチャ`, `ソフトウェアシステム要素`, `ソフトウェア要素`
+    [`アーキテクチャ`](glossary/syllabus_tsuiho_ver4_0.md#アーキテクチャ), [`ソフトウェアシステム要素`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアシステム要素), [`ソフトウェア要素`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア要素)
 
 
 ###### ⑤ システム処理方式の決定
@@ -1362,7 +1362,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 業務に応じて集中処理，分散処理を選択すること，Webシステム，クライアントサーバ
 システムなど，システムの処理方式を検討し，決定することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `集中処理`, `分散処理`, `マイクロサービスアーキテクチャ`, `サービスメッシュ`, `サ ーキットブレーカー`, `サーバレスアーキテクチャ`, `Webシステム`, `クライアントサーバシステム`, `プロトタイプ`, `データモデル`, `擬似コード`, `E-R図`, `ユースケ ース`, `利用者の役割及び特権のマトリックス`, `インタフェース仕様`, `サービス記述`, `手順`
+    [`集中処理`](glossary/syllabus_tsuiho_ver4_0.md#集中処理), [`分散処理`](glossary/syllabus_tsuiho_ver4_0.md#分散処理), [`マイクロサービスアーキテクチャ`](glossary/syllabus_tsuiho_ver4_0.md#マイクロサービスアーキテクチャ), [`サービスメッシュ`](glossary/syllabus_tsuiho_ver4_0.md#サービスメッシュ), [`サ ーキットブレーカー`](glossary/syllabus_tsuiho_ver4_0.md#サ-ーキットブレーカー), [`サーバレスアーキテクチャ`](glossary/syllabus_tsuiho_ver4_0.md#サーバレスアーキテクチャ), [`Webシステム`](glossary/syllabus_tsuiho_ver4_0.md#webシステム), [`クライアントサーバシステム`](glossary/syllabus_tsuiho_ver4_0.md#クライアントサーバシステム), [`プロトタイプ`](glossary/syllabus_tsuiho_ver4_0.md#プロトタイプ), [`データモデル`](glossary/syllabus_tsuiho_ver4_0.md#データモデル), [`擬似コード`](glossary/syllabus_tsuiho_ver4_0.md#擬似コード), [`E-R図`](glossary/syllabus_tsuiho_ver4_0.md#e-r図), [`ユースケ ース`](glossary/syllabus_tsuiho_ver4_0.md#ユースケ-ース), [`利用者の役割及び特権のマトリックス`](glossary/syllabus_tsuiho_ver4_0.md#利用者の役割及び特権のマトリックス), [`インタフェース仕様`](glossary/syllabus_tsuiho_ver4_0.md#インタフェース仕様), [`サービス記述`](glossary/syllabus_tsuiho_ver4_0.md#サービス記述), [`手順`](glossary/syllabus_tsuiho_ver4_0.md#手順)
 
 
 ###### ⑥ データベース方式の決定
@@ -1370,7 +1370,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 システムで使用するデータベースの種類，信頼性を考慮して冗長化したレプリケーショ
 ンなどを検討し，決定することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `RDB（Relational Database：関係データベース）`, `NDB（Network Database：網型データベース）`, `OODB（Object Oriented Database：オブジェクト指向データベー ス）`, `XMLデータベース`, `インメモリデータベース`, `分散データベース`, `NoSQLデ ータベース`
+    [`RDB（Relational Database：関係データベース）`](glossary/syllabus_tsuiho_ver4_0.md#rdb（relational-database関係データベース）), [`NDB（Network Database：網型データベース）`](glossary/syllabus_tsuiho_ver4_0.md#ndb（network-database網型データベース）), [`OODB（Object Oriented Database：オブジェクト指向データベー ス）`](glossary/syllabus_tsuiho_ver4_0.md#oodb（object-oriented-databaseオブジェクト指向データベー-ス）), [`XMLデータベース`](glossary/syllabus_tsuiho_ver4_0.md#xmlデータベース), [`インメモリデータベース`](glossary/syllabus_tsuiho_ver4_0.md#インメモリデータベース), [`分散データベース`](glossary/syllabus_tsuiho_ver4_0.md#分散データベース), [`NoSQLデ ータベース`](glossary/syllabus_tsuiho_ver4_0.md#nosqlデ-ータベース)
 
 
 ##### （3）システム統合テストの設計
@@ -1379,7 +1379,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 検討し，システムが機能を全て満たしているかどうかを確認するシステム統合テスト仕様書
 を作成することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `テスト要求事項`
+    [`テスト要求事項`](glossary/syllabus_tsuiho_ver4_0.md#テスト要求事項)
 
 
 ##### （4）アーキテクチャ及びシステム要素の評価及びレビュー
@@ -1388,7 +1388,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 など，システム要素を評価する際の基準を作成し，システムの取得者及び供給者が共同でレ
 ビューを行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `双方向の追跡可能性（双方向のトレーサビリティ）`, `一貫性`, `設計標準や方法の適切性`, `ソフトウェア要素の実現可能性`, `運用及び保守の実現可能性`, `レビュー 参加者`, `レビュー方式`, `クリーンアーキテクチャ`
+    [`双方向の追跡可能性（双方向のトレーサビリティ）`](glossary/syllabus_tsuiho_ver4_0.md#双方向の追跡可能性（双方向のトレーサビリティ）), [`一貫性`](glossary/syllabus_tsuiho_ver4_0.md#一貫性), [`設計標準や方法の適切性`](glossary/syllabus_tsuiho_ver4_0.md#設計標準や方法の適切性), [`ソフトウェア要素の実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア要素の実現可能性), [`運用及び保守の実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#運用及び保守の実現可能性), [`レビュー 参加者`](glossary/syllabus_tsuiho_ver4_0.md#レビュー-参加者), [`レビュー方式`](glossary/syllabus_tsuiho_ver4_0.md#レビュー方式), [`クリーンアーキテクチャ`](glossary/syllabus_tsuiho_ver4_0.md#クリーンアーキテクチャ)
 
 
 ##### （5）ソフトウェア設計のタスク
@@ -1407,7 +1407,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 の処理の手順や関係を明確にすること，ソフトウェア設計書作成の構成，記述上の留意事
 項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `構造化`, `ソフトウェア要素`, `ソフトウェアユニット`, `ソフトウェアユニット分割`, `ソフトウェアユニット機能仕様決定`, `ソフトウェアユニット間インタフェース設計`, `ソフトウェア統合のためのテスト要件`, `基本機能`, `部品`, `入出力設計`, `物理データ設計`, `部品化`, `再利用`
+    [`構造化`](glossary/syllabus_tsuiho_ver4_0.md#構造化), [`ソフトウェア要素`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア要素), [`ソフトウェアユニット`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアユニット), [`ソフトウェアユニット分割`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアユニット分割), [`ソフトウェアユニット機能仕様決定`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアユニット機能仕様決定), [`ソフトウェアユニット間インタフェース設計`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアユニット間インタフェース設計), [`ソフトウェア統合のためのテスト要件`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア統合のためのテスト要件), [`基本機能`](glossary/syllabus_tsuiho_ver4_0.md#基本機能), [`部品`](glossary/syllabus_tsuiho_ver4_0.md#部品), [`入出力設計`](glossary/syllabus_tsuiho_ver4_0.md#入出力設計), [`物理データ設計`](glossary/syllabus_tsuiho_ver4_0.md#物理データ設計), [`部品化`](glossary/syllabus_tsuiho_ver4_0.md#部品化), [`再利用`](glossary/syllabus_tsuiho_ver4_0.md#再利用)
 
 
 ###### ② インタフェース設計
@@ -1416,7 +1416,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 ハードウェア及びソフトウェアの機能，処理方法を考慮して，入出力装置を介して取り扱
 われるデータに関する物理設計を行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `入出力詳細設計`, `GUI`, `画面設計`, `帳票設計`, `伝票設計`, `レイアウト設計`, `インタフェース設計基準`, `タイミング設計`, `インタフェース条件`, `ソフトウェアユニット間インタフェース`, `インタフェース項目`, `UXデザイン`, `ユーザーインタフェ ース`, `画面構成`, `フォームオーバーレイ`, `リミットチェック`, `IoT`
+    [`入出力詳細設計`](glossary/syllabus_tsuiho_ver4_0.md#入出力詳細設計), [`GUI`](glossary/syllabus_tsuiho_ver4_0.md#gui), [`画面設計`](glossary/syllabus_tsuiho_ver4_0.md#画面設計), [`帳票設計`](glossary/syllabus_tsuiho_ver4_0.md#帳票設計), [`伝票設計`](glossary/syllabus_tsuiho_ver4_0.md#伝票設計), [`レイアウト設計`](glossary/syllabus_tsuiho_ver4_0.md#レイアウト設計), [`インタフェース設計基準`](glossary/syllabus_tsuiho_ver4_0.md#インタフェース設計基準), [`タイミング設計`](glossary/syllabus_tsuiho_ver4_0.md#タイミング設計), [`インタフェース条件`](glossary/syllabus_tsuiho_ver4_0.md#インタフェース条件), [`ソフトウェアユニット間インタフェース`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアユニット間インタフェース), [`インタフェース項目`](glossary/syllabus_tsuiho_ver4_0.md#インタフェース項目), [`UXデザイン`](glossary/syllabus_tsuiho_ver4_0.md#uxデザイン), [`ユーザーインタフェ ース`](glossary/syllabus_tsuiho_ver4_0.md#ユーザーインタフェ-ース), [`画面構成`](glossary/syllabus_tsuiho_ver4_0.md#画面構成), [`フォームオーバーレイ`](glossary/syllabus_tsuiho_ver4_0.md#フォームオーバーレイ), [`リミットチェック`](glossary/syllabus_tsuiho_ver4_0.md#リミットチェック), [`IoT`](glossary/syllabus_tsuiho_ver4_0.md#iot)
 
 
 ###### ③ ソフトウェアユニットのテストの設計
@@ -1425,7 +1425,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 するために，テストの範囲，テスト計画，テスト方式を定義し，ソフトウェアユニットの
 テスト仕様書を作成することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `テスト要件`, `チェックリスト`, `ホワイトボックステスト`
+    [`テスト要件`](glossary/syllabus_tsuiho_ver4_0.md#テスト要件), [`チェックリスト`](glossary/syllabus_tsuiho_ver4_0.md#チェックリスト), [`ホワイトボックステスト`](glossary/syllabus_tsuiho_ver4_0.md#ホワイトボックステスト)
 
 
 ###### ④ ソフトウェア統合テストの設計
@@ -1434,7 +1434,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 テストの範囲，テスト計画，テスト方式を定義し，ソフトウェア統合テスト仕様書を作成
 することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `ソフトウェア統合テスト仕様`, `テスト要件`, `チェックリスト`, `ブラックボックステスト`
+    [`ソフトウェア統合テスト仕様`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア統合テスト仕様), [`テスト要件`](glossary/syllabus_tsuiho_ver4_0.md#テスト要件), [`チェックリスト`](glossary/syllabus_tsuiho_ver4_0.md#チェックリスト), [`ブラックボックステスト`](glossary/syllabus_tsuiho_ver4_0.md#ブラックボックステスト)
 
 
 ##### （7）ソフトウェア要素の評価及びレビュー
@@ -1443,7 +1443,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 ウェアユニット間の内部一貫性などのソフトウェア要素を評価する際の基準を理解する。ま
 た，ソフトウェア設計書について，作成後にレビューを行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `双方向の追跡可能性（双方向のトレーサビリティ）`, `外部一貫性`, `内部一貫性`, `設計方法や作業標準の適切性`, `テストの実現可能性`, `運用及び保守の実現可能性`, `レビュー参加者`, `レビュー方式`
+    [`双方向の追跡可能性（双方向のトレーサビリティ）`](glossary/syllabus_tsuiho_ver4_0.md#双方向の追跡可能性（双方向のトレーサビリティ）), [`外部一貫性`](glossary/syllabus_tsuiho_ver4_0.md#外部一貫性), [`内部一貫性`](glossary/syllabus_tsuiho_ver4_0.md#内部一貫性), [`設計方法や作業標準の適切性`](glossary/syllabus_tsuiho_ver4_0.md#設計方法や作業標準の適切性), [`テストの実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#テストの実現可能性), [`運用及び保守の実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#運用及び保守の実現可能性), [`レビュー参加者`](glossary/syllabus_tsuiho_ver4_0.md#レビュー参加者), [`レビュー方式`](glossary/syllabus_tsuiho_ver4_0.md#レビュー方式)
 
 
 ##### （8）ソフトウェア品質
@@ -1451,7 +1451,7 @@ Manipulation Language：データ操作言語）などに大別されること�
 JIS X 25010で規定されているシステム及びソフトウェア製品の品質特性を理解し，要件
 定義や設計の際には品質特性を考慮することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `JIS X 25010`, `ISO 9000`
+    [`JIS X 25010`](glossary/syllabus_tsuiho_ver4_0.md#jis-x-25010), [`ISO 9000`](glossary/syllabus_tsuiho_ver4_0.md#iso-9000)
 
 
 ###### ① 利用時の品質モデル
@@ -1459,7 +1459,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 システムとの対話による成果に関係する五つの特性である，利用時の品質モデルを理解
 する。
   - **用語例・キーワード (全網羅)**:
-    `有効性`, `効率性`, `満足性`, `リスク回避性`, `利用状況網羅性`
+    [`有効性`](glossary/syllabus_tsuiho_ver4_0.md#有効性), [`効率性`](glossary/syllabus_tsuiho_ver4_0.md#効率性), [`満足性`](glossary/syllabus_tsuiho_ver4_0.md#満足性), [`リスク回避性`](glossary/syllabus_tsuiho_ver4_0.md#リスク回避性), [`利用状況網羅性`](glossary/syllabus_tsuiho_ver4_0.md#利用状況網羅性)
 
 
 ###### ② 製品品質モデル
@@ -1468,7 +1468,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 れに伴う品質測定量）を八つに分類した製品品質モデルを理解する。また，各特性は関連
 する副特性の集合から構成されていることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `機能適合性`, `性能効率性`, `互換性`, `使用性（習得性`, `運用操作性`, `アクセシビリティほか）`, `信頼性（可用性`, `回復性ほか）`, `セキュリティ`, `保守性（解析性`, `試験性ほか）`, `移植性`
+    [`機能適合性`](glossary/syllabus_tsuiho_ver4_0.md#機能適合性), [`性能効率性`](glossary/syllabus_tsuiho_ver4_0.md#性能効率性), [`互換性`](glossary/syllabus_tsuiho_ver4_0.md#互換性), [`使用性（習得性`](glossary/syllabus_tsuiho_ver4_0.md#使用性（習得性), [`運用操作性`](glossary/syllabus_tsuiho_ver4_0.md#運用操作性), [`アクセシビリティほか）`](glossary/syllabus_tsuiho_ver4_0.md#アクセシビリティほか）), [`信頼性（可用性`](glossary/syllabus_tsuiho_ver4_0.md#信頼性（可用性), [`回復性ほか）`](glossary/syllabus_tsuiho_ver4_0.md#回復性ほか）), [`セキュリティ`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティ), [`保守性（解析性`](glossary/syllabus_tsuiho_ver4_0.md#保守性（解析性), [`試験性ほか）`](glossary/syllabus_tsuiho_ver4_0.md#試験性ほか）), [`移植性`](glossary/syllabus_tsuiho_ver4_0.md#移植性)
 
 
 ##### （9）ソフトウェア設計手法
@@ -1482,7 +1482,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 
 データ中心設計手法によるソフトウェア設計の考え方と手順を理解する。
   - **用語例・キーワード (全網羅)**:
-    `DOA（Data Oriented Approach：データ中心アプローチ）`, `E-R図`, `実体`, `関連`, `正規化`, `一事実一箇所`
+    [`DOA（Data Oriented Approach：データ中心アプローチ）`](glossary/syllabus_tsuiho_ver4_0.md#doa（data-oriented-approachデータ中心アプローチ）), [`E-R図`](glossary/syllabus_tsuiho_ver4_0.md#e-r図), [`実体`](glossary/syllabus_tsuiho_ver4_0.md#実体), [`関連`](glossary/syllabus_tsuiho_ver4_0.md#関連), [`正規化`](glossary/syllabus_tsuiho_ver4_0.md#正規化), [`一事実一箇所`](glossary/syllabus_tsuiho_ver4_0.md#一事実一箇所)
 
 
 ###### ③ 構造化設計
@@ -1492,27 +1492,27 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 プ化，階層構造化，プログラム機能の決定，機能仕様の文書化），構造化設計による
 機能分割の利点，留意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `階層`, `段階的詳細化`, `複合設計 （b）構造化設計の手法構造化設計で用いられる手法として`, `流れ図`, `DFD`, `構造化チャート`, `状態遷移図などがあることを理解する。`
+    [`階層`](glossary/syllabus_tsuiho_ver4_0.md#階層), [`段階的詳細化`](glossary/syllabus_tsuiho_ver4_0.md#段階的詳細化), [`複合設計 （b）構造化設計の手法構造化設計で用いられる手法として`](glossary/syllabus_tsuiho_ver4_0.md#複合設計-（b）構造化設計の手法構造化設計で用いられる手法として), [`流れ図`](glossary/syllabus_tsuiho_ver4_0.md#流れ図), [`DFD`](glossary/syllabus_tsuiho_ver4_0.md#dfd), [`構造化チャート`](glossary/syllabus_tsuiho_ver4_0.md#構造化チャート), [`状態遷移図などがあることを理解する。`](glossary/syllabus_tsuiho_ver4_0.md#状態遷移図などがあることを理解する)
 
   - **用語例・キーワード (全網羅)**:
-    `順次`, `選択`, `繰返し`, `NS（Nassi-Shneiderman：ナッシシュナイダマン）図`, `HIPO（Hierarchy plus Input Process Output）`, `ブロック図`, `バブルチャート`, `階層構造図`, `イベントトレース図`, `ジャクソン法`, `ワーニエ法 （c）プログラムの構造化設計プログラムの構造化設計の目的`, `基本的な考え方`, `手順を理解する。`
+    [`順次`](glossary/syllabus_tsuiho_ver4_0.md#順次), [`選択`](glossary/syllabus_tsuiho_ver4_0.md#選択), [`繰返し`](glossary/syllabus_tsuiho_ver4_0.md#繰返し), [`NS（Nassi-Shneiderman：ナッシシュナイダマン）図`](glossary/syllabus_tsuiho_ver4_0.md#ns（nassi-shneidermanナッシシュナイダマン）図), [`HIPO（Hierarchy plus Input Process Output）`](glossary/syllabus_tsuiho_ver4_0.md#hipo（hierarchy-plus-input-process-output）), [`ブロック図`](glossary/syllabus_tsuiho_ver4_0.md#ブロック図), [`バブルチャート`](glossary/syllabus_tsuiho_ver4_0.md#バブルチャート), [`階層構造図`](glossary/syllabus_tsuiho_ver4_0.md#階層構造図), [`イベントトレース図`](glossary/syllabus_tsuiho_ver4_0.md#イベントトレース図), [`ジャクソン法`](glossary/syllabus_tsuiho_ver4_0.md#ジャクソン法), [`ワーニエ法 （c）プログラムの構造化設計プログラムの構造化設計の目的`](glossary/syllabus_tsuiho_ver4_0.md#ワーニエ法-（c）プログラムの構造化設計プログラムの構造化設計の目的), [`基本的な考え方`](glossary/syllabus_tsuiho_ver4_0.md#基本的な考え方), [`手順を理解する。`](glossary/syllabus_tsuiho_ver4_0.md#手順を理解する)
 
   - **用語例・キーワード (全網羅)**:
-    `品質特性`, `モジュール分割`
+    [`品質特性`](glossary/syllabus_tsuiho_ver4_0.md#品質特性), [`モジュール分割`](glossary/syllabus_tsuiho_ver4_0.md#モジュール分割)
 
 
 ###### ④ オブジェクト指向設計
 
 オブジェクト指向設計の考え方，手順，手法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ソフトウェア設計原則（SOLID）`, `クラス`, `抽象クラス`, `スーパークラス`, `インスタンス`, `属性`, `メソッド`, `カプセル化`, `サブクラス`, `継承（インヘリタンス）`, `部品化`, `再利用`, `クラス図`, `多相性`, `パッケージ`, `関連`, `派生関連`, `派生属性`, `コレクション`, `汎化`, `特化`, `分解`, `集約`
+    [`ソフトウェア設計原則（SOLID）`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア設計原則（solid）), [`クラス`](glossary/syllabus_tsuiho_ver4_0.md#クラス), [`抽象クラス`](glossary/syllabus_tsuiho_ver4_0.md#抽象クラス), [`スーパークラス`](glossary/syllabus_tsuiho_ver4_0.md#スーパークラス), [`インスタンス`](glossary/syllabus_tsuiho_ver4_0.md#インスタンス), [`属性`](glossary/syllabus_tsuiho_ver4_0.md#属性), [`メソッド`](glossary/syllabus_tsuiho_ver4_0.md#メソッド), [`カプセル化`](glossary/syllabus_tsuiho_ver4_0.md#カプセル化), [`サブクラス`](glossary/syllabus_tsuiho_ver4_0.md#サブクラス), [`継承（インヘリタンス）`](glossary/syllabus_tsuiho_ver4_0.md#継承（インヘリタンス）), [`部品化`](glossary/syllabus_tsuiho_ver4_0.md#部品化), [`再利用`](glossary/syllabus_tsuiho_ver4_0.md#再利用), [`クラス図`](glossary/syllabus_tsuiho_ver4_0.md#クラス図), [`多相性`](glossary/syllabus_tsuiho_ver4_0.md#多相性), [`パッケージ`](glossary/syllabus_tsuiho_ver4_0.md#パッケージ), [`関連`](glossary/syllabus_tsuiho_ver4_0.md#関連), [`派生関連`](glossary/syllabus_tsuiho_ver4_0.md#派生関連), [`派生属性`](glossary/syllabus_tsuiho_ver4_0.md#派生属性), [`コレクション`](glossary/syllabus_tsuiho_ver4_0.md#コレクション), [`汎化`](glossary/syllabus_tsuiho_ver4_0.md#汎化), [`特化`](glossary/syllabus_tsuiho_ver4_0.md#特化), [`分解`](glossary/syllabus_tsuiho_ver4_0.md#分解), [`集約`](glossary/syllabus_tsuiho_ver4_0.md#集約)
 
 
 ###### ⑤ ドメイン駆動設計（DDD）
 
 ドメイン駆動設計の考え方，手順，手法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ドメイン`, `ドメインモデル`, `ドメインロジック`, `コンテキストマップ`, `ユビキタス言語`, `エンティティ`, `値オブジェクト`, `サービス`
+    [`ドメイン`](glossary/syllabus_tsuiho_ver4_0.md#ドメイン), [`ドメインモデル`](glossary/syllabus_tsuiho_ver4_0.md#ドメインモデル), [`ドメインロジック`](glossary/syllabus_tsuiho_ver4_0.md#ドメインロジック), [`コンテキストマップ`](glossary/syllabus_tsuiho_ver4_0.md#コンテキストマップ), [`ユビキタス言語`](glossary/syllabus_tsuiho_ver4_0.md#ユビキタス言語), [`エンティティ`](glossary/syllabus_tsuiho_ver4_0.md#エンティティ), [`値オブジェクト`](glossary/syllabus_tsuiho_ver4_0.md#値オブジェクト), [`サービス`](glossary/syllabus_tsuiho_ver4_0.md#サービス)
 
 
 ##### （10）ソフトウェア要素の設計
@@ -1524,14 +1524,14 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 処理効率の違い，同時使用可能資源，入出力装置の特徴などがあることを理解する。また，
 基準ごとの特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ファイルの統合`, `ファイルの分割`, `レコード処理`, `処理の周期`
+    [`ファイルの統合`](glossary/syllabus_tsuiho_ver4_0.md#ファイルの統合), [`ファイルの分割`](glossary/syllabus_tsuiho_ver4_0.md#ファイルの分割), [`レコード処理`](glossary/syllabus_tsuiho_ver4_0.md#レコード処理), [`処理の周期`](glossary/syllabus_tsuiho_ver4_0.md#処理の周期)
 
 
 ###### ② プログラム分割基準
 
 プログラム分割の基準を理解する。
   - **用語例・キーワード (全網羅)**:
-    `分かりやすさ`, `安全性`, `開発の生産性`, `運用性`, `処理能力`, `保守性`, `再利用性`
+    [`分かりやすさ`](glossary/syllabus_tsuiho_ver4_0.md#分かりやすさ), [`安全性`](glossary/syllabus_tsuiho_ver4_0.md#安全性), [`開発の生産性`](glossary/syllabus_tsuiho_ver4_0.md#開発の生産性), [`運用性`](glossary/syllabus_tsuiho_ver4_0.md#運用性), [`処理能力`](glossary/syllabus_tsuiho_ver4_0.md#処理能力), [`保守性`](glossary/syllabus_tsuiho_ver4_0.md#保守性), [`再利用性`](glossary/syllabus_tsuiho_ver4_0.md#再利用性)
 
 
 ##### （11）モジュールの設計
@@ -1543,7 +1543,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 処理の形態に応じて複数の分割手法を組み合わせること，分割手法の種類，特徴を理解す
 る。
   - **用語例・キーワード (全網羅)**:
-    `STS（Source Transform Sink）分割`, `TR（Transaction：トランザクション）分割`, `共通機能分割`, `論理設計`, `領域設計`, `サブルーチン`, `再帰プログラム`
+    [`STS（Source Transform Sink）分割`](glossary/syllabus_tsuiho_ver4_0.md#sts（source-transform-sink）分割), [`TR（Transaction：トランザクション）分割`](glossary/syllabus_tsuiho_ver4_0.md#tr（transactionトランザクション）分割), [`共通機能分割`](glossary/syllabus_tsuiho_ver4_0.md#共通機能分割), [`論理設計`](glossary/syllabus_tsuiho_ver4_0.md#論理設計), [`領域設計`](glossary/syllabus_tsuiho_ver4_0.md#領域設計), [`サブルーチン`](glossary/syllabus_tsuiho_ver4_0.md#サブルーチン), [`再帰プログラム`](glossary/syllabus_tsuiho_ver4_0.md#再帰プログラム)
 
 
 ###### ② 分割基準
@@ -1551,7 +1551,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 モジュールの独立性の評価基準として，モジュールの結束性（強度），結合度，それら
 と独立性との関係，分割量の評価基準，部品化と再利用のための評価基準を理解する。
   - **用語例・キーワード (全網羅)**:
-    `モジュールの制御領域`, `モジュールの影響領域`, `分割量`, `モジュール再分割`, `従属モジュール`, `機能的結束性`, `情報的結束性`, `データ結合`, `制御結合`
+    [`モジュールの制御領域`](glossary/syllabus_tsuiho_ver4_0.md#モジュールの制御領域), [`モジュールの影響領域`](glossary/syllabus_tsuiho_ver4_0.md#モジュールの影響領域), [`分割量`](glossary/syllabus_tsuiho_ver4_0.md#分割量), [`モジュール再分割`](glossary/syllabus_tsuiho_ver4_0.md#モジュール再分割), [`従属モジュール`](glossary/syllabus_tsuiho_ver4_0.md#従属モジュール), [`機能的結束性`](glossary/syllabus_tsuiho_ver4_0.md#機能的結束性), [`情報的結束性`](glossary/syllabus_tsuiho_ver4_0.md#情報的結束性), [`データ結合`](glossary/syllabus_tsuiho_ver4_0.md#データ結合), [`制御結合`](glossary/syllabus_tsuiho_ver4_0.md#制御結合)
 
 
 ###### ③ モジュール仕様の作成
@@ -1559,7 +1559,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 各モジュール仕様の作成の考え方，手順，モジュール仕様の作成に用いられる手法を理
 解する。
   - **用語例・キーワード (全網羅)**:
-    `流れ図`, `PSD（Program Structure Diagram）`, `DSD（Design Structure Diagram）`, `SPD （ Structured Programming Diagrams ）`, `HCP （ Hierarchical and Compact description）チャート`, `PAD（Problem Analysis Diagram）`, `決定表（デシジョンテーブル）`, `ワーニエ法`, `ジャクソン法`, `NS図`, `論理構造図`, `プログラミングテ ーブル`
+    [`流れ図`](glossary/syllabus_tsuiho_ver4_0.md#流れ図), [`PSD（Program Structure Diagram）`](glossary/syllabus_tsuiho_ver4_0.md#psd（program-structure-diagram）), [`DSD（Design Structure Diagram）`](glossary/syllabus_tsuiho_ver4_0.md#dsd（design-structure-diagram）), [`SPD （ Structured Programming Diagrams ）`](glossary/syllabus_tsuiho_ver4_0.md#spd-（-structured-programming-diagrams-）), [`HCP （ Hierarchical and Compact description）チャート`](glossary/syllabus_tsuiho_ver4_0.md#hcp-（-hierarchical-and-compact-description）チャート), [`PAD（Problem Analysis Diagram）`](glossary/syllabus_tsuiho_ver4_0.md#pad（problem-analysis-diagram）), [`決定表（デシジョンテーブル）`](glossary/syllabus_tsuiho_ver4_0.md#決定表（デシジョンテーブル）), [`ワーニエ法`](glossary/syllabus_tsuiho_ver4_0.md#ワーニエ法), [`ジャクソン法`](glossary/syllabus_tsuiho_ver4_0.md#ジャクソン法), [`NS図`](glossary/syllabus_tsuiho_ver4_0.md#ns図), [`論理構造図`](glossary/syllabus_tsuiho_ver4_0.md#論理構造図), [`プログラミングテ ーブル`](glossary/syllabus_tsuiho_ver4_0.md#プログラミングテ-ーブル)
 
 
 ##### （12）部品化と再利用
@@ -1567,7 +1567,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ソフトウェアの部品化と再利用の必要性，部品の種類と特徴，部品設計の留意事項，ソフ
 トウェアパッケージの利用法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `コンポーネントウェア`, `ホワイトボックス型`, `ブラックボックス型`, `クラスライブラリ`, `デザインパターン`, `レガシーラッピング`, `COTS（Commercial Off-TheShelf）`
+    [`コンポーネントウェア`](glossary/syllabus_tsuiho_ver4_0.md#コンポーネントウェア), [`ホワイトボックス型`](glossary/syllabus_tsuiho_ver4_0.md#ホワイトボックス型), [`ブラックボックス型`](glossary/syllabus_tsuiho_ver4_0.md#ブラックボックス型), [`クラスライブラリ`](glossary/syllabus_tsuiho_ver4_0.md#クラスライブラリ), [`デザインパターン`](glossary/syllabus_tsuiho_ver4_0.md#デザインパターン), [`レガシーラッピング`](glossary/syllabus_tsuiho_ver4_0.md#レガシーラッピング), [`COTS（Commercial Off-TheShelf）`](glossary/syllabus_tsuiho_ver4_0.md#cots（commercial-off-theshelf）)
 
 
 ##### （13）アーキテクチャパターン
@@ -1575,7 +1575,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 アーキテクチャパターンはソフトウェア構造のパターンであることなどの特徴を踏まえて，
 アーキテクチャパターンを利用する利点，留意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `MVCモデル`
+    [`MVCモデル`](glossary/syllabus_tsuiho_ver4_0.md#mvcモデル)
 
 
 ##### （14）デザインパターン
@@ -1584,7 +1584,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 に関するパターン，振る舞いに関するパターンの 3種類に分類されることなどの特徴を踏ま
 えて，デザインパターンを利用する利点，留意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `生成`, `構造`, `振舞い`, `GoF`
+    [`生成`](glossary/syllabus_tsuiho_ver4_0.md#生成), [`構造`](glossary/syllabus_tsuiho_ver4_0.md#構造), [`振舞い`](glossary/syllabus_tsuiho_ver4_0.md#振舞い), [`GoF`](glossary/syllabus_tsuiho_ver4_0.md#gof)
 
 
 ##### （15）レビュー
@@ -1601,14 +1601,14 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 
 レビューの対象，実施タイミング，種類を理解する。
   - **用語例・キーワード (全網羅)**:
-    `コードレビュー`, `テスト仕様レビュー`, `利用者マニュアルレビュー`, `ピアレビュ ー`, `デザインレビュー`, `インスペクション`, `モデレーター`, `文書化手法`, `ウォー クスルー`, `共同レビュー`
+    [`コードレビュー`](glossary/syllabus_tsuiho_ver4_0.md#コードレビュー), [`テスト仕様レビュー`](glossary/syllabus_tsuiho_ver4_0.md#テスト仕様レビュー), [`利用者マニュアルレビュー`](glossary/syllabus_tsuiho_ver4_0.md#利用者マニュアルレビュー), [`ピアレビュ ー`](glossary/syllabus_tsuiho_ver4_0.md#ピアレビュ-ー), [`デザインレビュー`](glossary/syllabus_tsuiho_ver4_0.md#デザインレビュー), [`インスペクション`](glossary/syllabus_tsuiho_ver4_0.md#インスペクション), [`モデレーター`](glossary/syllabus_tsuiho_ver4_0.md#モデレーター), [`文書化手法`](glossary/syllabus_tsuiho_ver4_0.md#文書化手法), [`ウォー クスルー`](glossary/syllabus_tsuiho_ver4_0.md#ウォー-クスルー), [`共同レビュー`](glossary/syllabus_tsuiho_ver4_0.md#共同レビュー)
 
 
 ###### ③ 妥当性評価の項目
 
 レビューで確認する妥当性評価の項目を理解する。
   - **用語例・キーワード (全網羅)**:
-    `機能`, `性能`, `容量・能力`, `信頼性`, `操作性`, `安定性`, `運用の容易性`, `技術的整合性`, `合目的性`, `実現可能性`, `開発の合理性`, `経済性`, `投資効果`
+    [`機能`](glossary/syllabus_tsuiho_ver4_0.md#機能), [`性能`](glossary/syllabus_tsuiho_ver4_0.md#性能), [`容量・能力`](glossary/syllabus_tsuiho_ver4_0.md#容量能力), [`信頼性`](glossary/syllabus_tsuiho_ver4_0.md#信頼性), [`操作性`](glossary/syllabus_tsuiho_ver4_0.md#操作性), [`安定性`](glossary/syllabus_tsuiho_ver4_0.md#安定性), [`運用の容易性`](glossary/syllabus_tsuiho_ver4_0.md#運用の容易性), [`技術的整合性`](glossary/syllabus_tsuiho_ver4_0.md#技術的整合性), [`合目的性`](glossary/syllabus_tsuiho_ver4_0.md#合目的性), [`実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#実現可能性), [`開発の合理性`](glossary/syllabus_tsuiho_ver4_0.md#開発の合理性), [`経済性`](glossary/syllabus_tsuiho_ver4_0.md#経済性), [`投資効果`](glossary/syllabus_tsuiho_ver4_0.md#投資効果)
 
 
 ###### ④ その他の妥当性評価手法
@@ -1616,7 +1616,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 測定器やテストプログラムの利用によるデータ実測，利用者の意見や感想の収集など，
 レビュー以外の妥当性評価の手法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ヒアリング`, `アンケート`, `チェックリスト`
+    [`ヒアリング`](glossary/syllabus_tsuiho_ver4_0.md#ヒアリング), [`アンケート`](glossary/syllabus_tsuiho_ver4_0.md#アンケート), [`チェックリスト`](glossary/syllabus_tsuiho_ver4_0.md#チェックリスト)
 
 
 #### 🔹 3. 実装・構築
@@ -1631,7 +1631,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 フトウェアユニットのテストの実施，利用者用文書類の更新，ソフトウェア統合テスト要件
 の更新，ソフトウェアコード及びテスト結果の評価を実施することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `コーディング`, `プログラム言語`, `プログラム書法`
+    [`コーディング`](glossary/syllabus_tsuiho_ver4_0.md#コーディング), [`プログラム言語`](glossary/syllabus_tsuiho_ver4_0.md#プログラム言語), [`プログラム書法`](glossary/syllabus_tsuiho_ver4_0.md#プログラム書法)
 
 
 ##### （2）ソフトウェアユニットの作成
@@ -1639,7 +1639,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 定められたコーディング標準，プログラム言語の仕様に従い，ソフトウェアユニット機能
 仕様書に基づいてプログラミングを行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `セグメント化`, `制御構造`, `制御セグメント`, `プログラム設計`, `アルゴリズム`, `デ ータ処理`, `データベース`, `加工セグメント`, `構造化プログラミング`, `モジュール分割`, `モジュール仕様`, `論理型プログラミング`, `並列処理プログラミング`, `アスペクト指向プログラミング`
+    [`セグメント化`](glossary/syllabus_tsuiho_ver4_0.md#セグメント化), [`制御構造`](glossary/syllabus_tsuiho_ver4_0.md#制御構造), [`制御セグメント`](glossary/syllabus_tsuiho_ver4_0.md#制御セグメント), [`プログラム設計`](glossary/syllabus_tsuiho_ver4_0.md#プログラム設計), [`アルゴリズム`](glossary/syllabus_tsuiho_ver4_0.md#アルゴリズム), [`デ ータ処理`](glossary/syllabus_tsuiho_ver4_0.md#デ-ータ処理), [`データベース`](glossary/syllabus_tsuiho_ver4_0.md#データベース), [`加工セグメント`](glossary/syllabus_tsuiho_ver4_0.md#加工セグメント), [`構造化プログラミング`](glossary/syllabus_tsuiho_ver4_0.md#構造化プログラミング), [`モジュール分割`](glossary/syllabus_tsuiho_ver4_0.md#モジュール分割), [`モジュール仕様`](glossary/syllabus_tsuiho_ver4_0.md#モジュール仕様), [`論理型プログラミング`](glossary/syllabus_tsuiho_ver4_0.md#論理型プログラミング), [`並列処理プログラミング`](glossary/syllabus_tsuiho_ver4_0.md#並列処理プログラミング), [`アスペクト指向プログラミング`](glossary/syllabus_tsuiho_ver4_0.md#アスペクト指向プログラミング)
 
 
 ##### （3）ソフトウェアコード及びテスト結果の評価基準
@@ -1647,7 +1647,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ソフトウェアコードとテスト結果を評価する際の基準を理解する。また，ソフトウェアユ
 ニットの作成，ソフトウェアユニットのテスト実施後，レビューを行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `追跡可能性`, `外部一貫性`, `内部一貫性`, `テスト網羅性`, `コーディング方法及び作業標準の適切性`, `ソフトウェア統合及びテストの実現可能性`, `運用及び保守の実現可能性`
+    [`追跡可能性`](glossary/syllabus_tsuiho_ver4_0.md#追跡可能性), [`外部一貫性`](glossary/syllabus_tsuiho_ver4_0.md#外部一貫性), [`内部一貫性`](glossary/syllabus_tsuiho_ver4_0.md#内部一貫性), [`テスト網羅性`](glossary/syllabus_tsuiho_ver4_0.md#テスト網羅性), [`コーディング方法及び作業標準の適切性`](glossary/syllabus_tsuiho_ver4_0.md#コーディング方法及び作業標準の適切性), [`ソフトウェア統合及びテストの実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア統合及びテストの実現可能性), [`運用及び保守の実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#運用及び保守の実現可能性)
 
 
 ##### （4）コーディング標準
@@ -1655,14 +1655,14 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 コーディング標準の目的を理解する。また，コーディング標準には具体的にどのような内
 容を含めるか，コーディング標準を守らない場合にどのような弊害が起こるかを理解する。
   - **用語例・キーワード (全網羅)**:
-    `インデンテーション`, `ネスト`, `命名規則`, `使用禁止命令`
+    [`インデンテーション`](glossary/syllabus_tsuiho_ver4_0.md#インデンテーション), [`ネスト`](glossary/syllabus_tsuiho_ver4_0.md#ネスト), [`命名規則`](glossary/syllabus_tsuiho_ver4_0.md#命名規則), [`使用禁止命令`](glossary/syllabus_tsuiho_ver4_0.md#使用禁止命令)
 
 
 ##### （5）コーディング支援手法
 
 コーディング支援手法の特徴と，利用する利点，留意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `コード補完`, `オートインデント`, `コードオーディター`, `シンタックスハイライト`, `ブレークポイント`
+    [`コード補完`](glossary/syllabus_tsuiho_ver4_0.md#コード補完), [`オートインデント`](glossary/syllabus_tsuiho_ver4_0.md#オートインデント), [`コードオーディター`](glossary/syllabus_tsuiho_ver4_0.md#コードオーディター), [`シンタックスハイライト`](glossary/syllabus_tsuiho_ver4_0.md#シンタックスハイライト), [`ブレークポイント`](glossary/syllabus_tsuiho_ver4_0.md#ブレークポイント)
 
 
 ##### （6）コードレビュー
@@ -1671,7 +1671,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 トウェア詳細設計書に基づいているか，効率性や保守性が適切かなどを確認することを理解
 する。
   - **用語例・キーワード (全網羅)**:
-    `メトリクス計測`, `コードインスペクション`, `ピアコードレビュー`, `ウォークスル ー`, `サイクロマティック複雑度`
+    [`メトリクス計測`](glossary/syllabus_tsuiho_ver4_0.md#メトリクス計測), [`コードインスペクション`](glossary/syllabus_tsuiho_ver4_0.md#コードインスペクション), [`ピアコードレビュー`](glossary/syllabus_tsuiho_ver4_0.md#ピアコードレビュー), [`ウォークスル ー`](glossary/syllabus_tsuiho_ver4_0.md#ウォークスル-ー), [`サイクロマティック複雑度`](glossary/syllabus_tsuiho_ver4_0.md#サイクロマティック複雑度)
 
 
 ##### （7）デバッグ
@@ -1679,7 +1679,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 デバッグの方法，留意事項，机上デバッグと実際にソフトウェアを動作させて行うデバッ
 グの特徴，各種開発ツールを用いたデバッグ方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `デバッグ環境`, `静的解析`, `動的テスト`, `アサーション`, `デバッガ`, `トレーサー`, `スナップショット`
+    [`デバッグ環境`](glossary/syllabus_tsuiho_ver4_0.md#デバッグ環境), [`静的解析`](glossary/syllabus_tsuiho_ver4_0.md#静的解析), [`動的テスト`](glossary/syllabus_tsuiho_ver4_0.md#動的テスト), [`アサーション`](glossary/syllabus_tsuiho_ver4_0.md#アサーション), [`デバッガ`](glossary/syllabus_tsuiho_ver4_0.md#デバッガ), [`トレーサー`](glossary/syllabus_tsuiho_ver4_0.md#トレーサー), [`スナップショット`](glossary/syllabus_tsuiho_ver4_0.md#スナップショット)
 
 
 ##### （8）ソフトウェアユニットのテスト
@@ -1690,7 +1690,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ソフトウェアユニットのテストは，ソフトウェア設計で定義したテスト仕様に従って行
 い，要求事項を満たしているかどうかを確認することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `障害`, `欠陥`, `障害分析`, `使用性（usability）`
+    [`障害`](glossary/syllabus_tsuiho_ver4_0.md#障害), [`欠陥`](glossary/syllabus_tsuiho_ver4_0.md#欠陥), [`障害分析`](glossary/syllabus_tsuiho_ver4_0.md#障害分析), [`使用性（usability）`](glossary/syllabus_tsuiho_ver4_0.md#使用性（usability）)
 
 
 ###### ② テストの手順
@@ -1699,7 +1699,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ト計画を立て，次にテスト項目，テストデータの作成，テスト環境の用意などのテスト準
 備を行い，テストを実施し，テスト結果を評価するという一連の手順を理解する。
   - **用語例・キーワード (全網羅)**:
-    `テスト方法論`, `テスト範囲`, `テスト準備（テスト環境`, `テストデータなど）`, `テストオラクル`, `テスト実施者`, `ユニットテスト`, `チェックシートの作成`, `シミュレーター`, `プロトタイプ`
+    [`テスト方法論`](glossary/syllabus_tsuiho_ver4_0.md#テスト方法論), [`テスト範囲`](glossary/syllabus_tsuiho_ver4_0.md#テスト範囲), [`テスト準備（テスト環境`](glossary/syllabus_tsuiho_ver4_0.md#テスト準備（テスト環境), [`テストデータなど）`](glossary/syllabus_tsuiho_ver4_0.md#テストデータなど）), [`テストオラクル`](glossary/syllabus_tsuiho_ver4_0.md#テストオラクル), [`テスト実施者`](glossary/syllabus_tsuiho_ver4_0.md#テスト実施者), [`ユニットテスト`](glossary/syllabus_tsuiho_ver4_0.md#ユニットテスト), [`チェックシートの作成`](glossary/syllabus_tsuiho_ver4_0.md#チェックシートの作成), [`シミュレーター`](glossary/syllabus_tsuiho_ver4_0.md#シミュレーター), [`プロトタイプ`](glossary/syllabus_tsuiho_ver4_0.md#プロトタイプ)
 
 
 ###### ③ テストの実施と評価
@@ -1708,7 +1708,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 る。また，テストの実行後には，テスト結果の記録，結果分析，プログラムの修正や改良
 作業を行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `デバッガ`, `ドライバ`, `スタブ`, `テストデータジェネレーター`, `テスト設計と管理手法（バグ曲線`, `エラー除去`, `バグ管理図）`, `テスト自動化`, `テストの網羅度`, `テスト密度`, `欠陥密度（バグ密度）`, `トレーサビリティ要件`, `ソフトウェア要件又はソフトウェア設計との一貫性`, `ユニットの要件内の一貫性`
+    [`デバッガ`](glossary/syllabus_tsuiho_ver4_0.md#デバッガ), [`ドライバ`](glossary/syllabus_tsuiho_ver4_0.md#ドライバ), [`スタブ`](glossary/syllabus_tsuiho_ver4_0.md#スタブ), [`テストデータジェネレーター`](glossary/syllabus_tsuiho_ver4_0.md#テストデータジェネレーター), [`テスト設計と管理手法（バグ曲線`](glossary/syllabus_tsuiho_ver4_0.md#テスト設計と管理手法（バグ曲線), [`エラー除去`](glossary/syllabus_tsuiho_ver4_0.md#エラー除去), [`バグ管理図）`](glossary/syllabus_tsuiho_ver4_0.md#バグ管理図）), [`テスト自動化`](glossary/syllabus_tsuiho_ver4_0.md#テスト自動化), [`テストの網羅度`](glossary/syllabus_tsuiho_ver4_0.md#テストの網羅度), [`テスト密度`](glossary/syllabus_tsuiho_ver4_0.md#テスト密度), [`欠陥密度（バグ密度）`](glossary/syllabus_tsuiho_ver4_0.md#欠陥密度（バグ密度）), [`トレーサビリティ要件`](glossary/syllabus_tsuiho_ver4_0.md#トレーサビリティ要件), [`ソフトウェア要件又はソフトウェア設計との一貫性`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア要件又はソフトウェア設計との一貫性), [`ユニットの要件内の一貫性`](glossary/syllabus_tsuiho_ver4_0.md#ユニットの要件内の一貫性)
 
 
 ###### ④ テストの手法
@@ -1716,7 +1716,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 テストで用いられるブラックボックス法，ホワイトボックス法のテストデータの作成方
 法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `メトリクス計測`, `テストケース`, `命令網羅`, `条件網羅`, `判定条件網羅（decision coverage）`, `複数条件網羅（multiple condition coverage）`, `経路組合せ網羅`, `網羅率`, `カバレージ`, `限界値分析法`, `同値分析法`, `原因結果グラフ法`, `エラー埋込法`, `実験計画法`, `ミューテーションテスト`, `ドメイン分析テスト`
+    [`メトリクス計測`](glossary/syllabus_tsuiho_ver4_0.md#メトリクス計測), [`テストケース`](glossary/syllabus_tsuiho_ver4_0.md#テストケース), [`命令網羅`](glossary/syllabus_tsuiho_ver4_0.md#命令網羅), [`条件網羅`](glossary/syllabus_tsuiho_ver4_0.md#条件網羅), [`判定条件網羅（decision coverage）`](glossary/syllabus_tsuiho_ver4_0.md#判定条件網羅（decision-coverage）), [`複数条件網羅（multiple condition coverage）`](glossary/syllabus_tsuiho_ver4_0.md#複数条件網羅（multiple-condition-coverage）), [`経路組合せ網羅`](glossary/syllabus_tsuiho_ver4_0.md#経路組合せ網羅), [`網羅率`](glossary/syllabus_tsuiho_ver4_0.md#網羅率), [`カバレージ`](glossary/syllabus_tsuiho_ver4_0.md#カバレージ), [`限界値分析法`](glossary/syllabus_tsuiho_ver4_0.md#限界値分析法), [`同値分析法`](glossary/syllabus_tsuiho_ver4_0.md#同値分析法), [`原因結果グラフ法`](glossary/syllabus_tsuiho_ver4_0.md#原因結果グラフ法), [`エラー埋込法`](glossary/syllabus_tsuiho_ver4_0.md#エラー埋込法), [`実験計画法`](glossary/syllabus_tsuiho_ver4_0.md#実験計画法), [`ミューテーションテスト`](glossary/syllabus_tsuiho_ver4_0.md#ミューテーションテスト), [`ドメイン分析テスト`](glossary/syllabus_tsuiho_ver4_0.md#ドメイン分析テスト)
 
 
 #### 🔹 4. 統合・テスト
@@ -1732,7 +1732,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 統合テストの実施，利用者用文書類の更新，ソフトウェア統合の評価，ソフトウェア統合の
 共同レビュー，ソフトウェア検証テストの準備を実施することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `テスト要件`, `テスト手順`, `テストデータ`
+    [`テスト要件`](glossary/syllabus_tsuiho_ver4_0.md#テスト要件), [`テスト手順`](glossary/syllabus_tsuiho_ver4_0.md#テスト手順), [`テストデータ`](glossary/syllabus_tsuiho_ver4_0.md#テストデータ)
 
 
 ##### （2）ソフトウェア検証テストのタスク
@@ -1741,7 +1741,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ソフトウェア検証テストの評価，ソフトウェア検証テストの共同レビューの実施，監査の支
 援，納入ソフトウェア製品の準備を実施することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `ソフトウェア要件`, `監査`
+    [`ソフトウェア要件`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア要件), [`監査`](glossary/syllabus_tsuiho_ver4_0.md#監査)
 
 
 ##### （3）ソフトウェア統合
@@ -1749,7 +1749,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ソフトウェア統合では，統合する順序に基づいてソフトウェア統合計画を作成し，構築さ
 れたソフトウェアを統合することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `統合する順序`, `再帰戦略（回帰戦略）`
+    [`統合する順序`](glossary/syllabus_tsuiho_ver4_0.md#統合する順序), [`再帰戦略（回帰戦略）`](glossary/syllabus_tsuiho_ver4_0.md#再帰戦略（回帰戦略）)
 
 
 ##### （4）ソフトウェア統合テスト
@@ -1758,7 +1758,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ウェアの動作を確認すること，ソフトウェア統合テストの実施時期，実施手順，評価の基準
 を理解する。
   - **用語例・キーワード (全網羅)**:
-    `テスト計画`, `テスト準備（テスト環境`, `テストデータなど）`, `ソフトウェア統合テスト報告書`, `トップダウンテスト`, `ボトムアップテスト`, `ドライバ`, `スタブ`, `テストベッド`, `統合テスト報告書`, `テスト結果の文書化`, `文書化基準`
+    [`テスト計画`](glossary/syllabus_tsuiho_ver4_0.md#テスト計画), [`テスト準備（テスト環境`](glossary/syllabus_tsuiho_ver4_0.md#テスト準備（テスト環境), [`テストデータなど）`](glossary/syllabus_tsuiho_ver4_0.md#テストデータなど）), [`ソフトウェア統合テスト報告書`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア統合テスト報告書), [`トップダウンテスト`](glossary/syllabus_tsuiho_ver4_0.md#トップダウンテスト), [`ボトムアップテスト`](glossary/syllabus_tsuiho_ver4_0.md#ボトムアップテスト), [`ドライバ`](glossary/syllabus_tsuiho_ver4_0.md#ドライバ), [`スタブ`](glossary/syllabus_tsuiho_ver4_0.md#スタブ), [`テストベッド`](glossary/syllabus_tsuiho_ver4_0.md#テストベッド), [`統合テスト報告書`](glossary/syllabus_tsuiho_ver4_0.md#統合テスト報告書), [`テスト結果の文書化`](glossary/syllabus_tsuiho_ver4_0.md#テスト結果の文書化), [`文書化基準`](glossary/syllabus_tsuiho_ver4_0.md#文書化基準)
 
 
 ##### （5）ソフトウェア検証テスト
@@ -1766,7 +1766,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ソフトウェア検証テストはソフトウェア要件定義で定義したソフトウェア要件に従って行
 い，ソフトウェアが要件どおりに実現されているかを検証することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `テストの種類（機能テスト`, `非機能要件テスト`, `性能テスト`, `負荷テスト`, `セキュリティテスト`, `回帰テスト（リグレッションテスト）など）`, `ファジング`, `ソフトウェア検証テスト報告書`
+    [`テストの種類（機能テスト`](glossary/syllabus_tsuiho_ver4_0.md#テストの種類（機能テスト), [`非機能要件テスト`](glossary/syllabus_tsuiho_ver4_0.md#非機能要件テスト), [`性能テスト`](glossary/syllabus_tsuiho_ver4_0.md#性能テスト), [`負荷テスト`](glossary/syllabus_tsuiho_ver4_0.md#負荷テスト), [`セキュリティテスト`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティテスト), [`回帰テスト（リグレッションテスト）など）`](glossary/syllabus_tsuiho_ver4_0.md#回帰テスト（リグレッションテスト）など）), [`ファジング`](glossary/syllabus_tsuiho_ver4_0.md#ファジング), [`ソフトウェア検証テスト報告書`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア検証テスト報告書)
 
 
 ##### （6）ソフトウェア統合及びソフトウェア検証テスト結果の評価
@@ -1782,14 +1782,14 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 
 ソフトウェア統合を評価する際の基準を理解する。
   - **用語例・キーワード (全網羅)**:
-    `双方向の追跡可能性（双方向のトレーサビリティ）`, `外部一貫性`, `内部一貫性`, `テスト網羅性`, `テスト標準及び方法の適切性`, `ソフトウェア検証テストの実現可能性`, `運用及び保守の実現可能性`
+    [`双方向の追跡可能性（双方向のトレーサビリティ）`](glossary/syllabus_tsuiho_ver4_0.md#双方向の追跡可能性（双方向のトレーサビリティ）), [`外部一貫性`](glossary/syllabus_tsuiho_ver4_0.md#外部一貫性), [`内部一貫性`](glossary/syllabus_tsuiho_ver4_0.md#内部一貫性), [`テスト網羅性`](glossary/syllabus_tsuiho_ver4_0.md#テスト網羅性), [`テスト標準及び方法の適切性`](glossary/syllabus_tsuiho_ver4_0.md#テスト標準及び方法の適切性), [`ソフトウェア検証テストの実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア検証テストの実現可能性), [`運用及び保守の実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#運用及び保守の実現可能性)
 
 
 ###### ③ ソフトウェア検証テストの評価
 
 ソフトウェア検証テストを評価する際の基準を理解する。
   - **用語例・キーワード (全網羅)**:
-    `期待した結果に対する適合性`, `システム統合及びテストの実現可能性`
+    [`期待した結果に対する適合性`](glossary/syllabus_tsuiho_ver4_0.md#期待した結果に対する適合性), [`システム統合及びテストの実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#システム統合及びテストの実現可能性)
 
 
 ##### （7）システム統合のタスク
@@ -1798,7 +1798,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 利用者用文書類の更新，システム統合の評価，システム統合の共同レビュー，システム検証
 テストの準備を実施することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `ハードウェア構成品目`, `ソフトウェア構成品目`, `手作業`
+    [`ハードウェア構成品目`](glossary/syllabus_tsuiho_ver4_0.md#ハードウェア構成品目), [`ソフトウェア構成品目`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア構成品目), [`手作業`](glossary/syllabus_tsuiho_ver4_0.md#手作業)
 
 
 ##### （8）システム検証テストのタスク
@@ -1807,7 +1807,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ストの共同レビューの実施，利用者用文書類の更新，監査の支援，納入可能なシステムの準
 備，運用及び保守に引き継ぐシステムの準備を実施することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `システム要件`
+    [`システム要件`](glossary/syllabus_tsuiho_ver4_0.md#システム要件)
 
 
 ##### （9）システム統合
@@ -1815,7 +1815,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 システム統合では，統合する順序に基づいてシステム統合計画を作成し，構築されたシス
 テムを統合することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `統合する順序`, `再帰戦略（回帰戦略）`
+    [`統合する順序`](glossary/syllabus_tsuiho_ver4_0.md#統合する順序), [`再帰戦略（回帰戦略）`](glossary/syllabus_tsuiho_ver4_0.md#再帰戦略（回帰戦略）)
 
 
 ##### （10）システム統合テスト
@@ -1825,7 +1825,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ステムが要件を満たしているかどうかを確認すること，システム統合テストの実施時期，実
 施手順，評価の基準を理解する。
   - **用語例・キーワード (全網羅)**:
-    `テスト計画`, `テスト準備（テスト環境`, `テストデータなど）`, `システム統合テスト報告書`, `テスト結果の文書化`, `文書化基準`
+    [`テスト計画`](glossary/syllabus_tsuiho_ver4_0.md#テスト計画), [`テスト準備（テスト環境`](glossary/syllabus_tsuiho_ver4_0.md#テスト準備（テスト環境), [`テストデータなど）`](glossary/syllabus_tsuiho_ver4_0.md#テストデータなど）), [`システム統合テスト報告書`](glossary/syllabus_tsuiho_ver4_0.md#システム統合テスト報告書), [`テスト結果の文書化`](glossary/syllabus_tsuiho_ver4_0.md#テスト結果の文書化), [`文書化基準`](glossary/syllabus_tsuiho_ver4_0.md#文書化基準)
 
 
 ##### （11）システム検証テスト
@@ -1833,7 +1833,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 システム検証テストはシステム要件定義で定義したシステム要件に従って行い，システム
 が要件どおりに実現されているかどうかを確認することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `テストの種類（機能テスト`, `非機能要件テスト`, `性能テスト`, `負荷テスト`, `セキュリティテスト`, `回帰テスト（リグレッションテスト）`, `探索的テストなど）`, `システム検証テスト報告書`
+    [`テストの種類（機能テスト`](glossary/syllabus_tsuiho_ver4_0.md#テストの種類（機能テスト), [`非機能要件テスト`](glossary/syllabus_tsuiho_ver4_0.md#非機能要件テスト), [`性能テスト`](glossary/syllabus_tsuiho_ver4_0.md#性能テスト), [`負荷テスト`](glossary/syllabus_tsuiho_ver4_0.md#負荷テスト), [`セキュリティテスト`](glossary/syllabus_tsuiho_ver4_0.md#セキュリティテスト), [`回帰テスト（リグレッションテスト）`](glossary/syllabus_tsuiho_ver4_0.md#回帰テスト（リグレッションテスト）), [`探索的テストなど）`](glossary/syllabus_tsuiho_ver4_0.md#探索的テストなど）), [`システム検証テスト報告書`](glossary/syllabus_tsuiho_ver4_0.md#システム検証テスト報告書)
 
 
 ##### （12）システム統合及びシステム検証テスト結果の評価
@@ -1848,14 +1848,14 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 
 システム統合を評価する際の基準を理解する。
   - **用語例・キーワード (全網羅)**:
-    `テスト網羅性`, `テスト方法及び作業標準の適切性`, `期待した結果への適合性`, `システム検証テストの実現可能性`, `運用及び保守の実現可能性`, `レビュー`
+    [`テスト網羅性`](glossary/syllabus_tsuiho_ver4_0.md#テスト網羅性), [`テスト方法及び作業標準の適切性`](glossary/syllabus_tsuiho_ver4_0.md#テスト方法及び作業標準の適切性), [`期待した結果への適合性`](glossary/syllabus_tsuiho_ver4_0.md#期待した結果への適合性), [`システム検証テストの実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#システム検証テストの実現可能性), [`運用及び保守の実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#運用及び保守の実現可能性), [`レビュー`](glossary/syllabus_tsuiho_ver4_0.md#レビュー)
 
 
 ###### ③ システム検証テストの評価
 
 システム検証テストを評価する際の基準を理解する。
   - **用語例・キーワード (全網羅)**:
-    `テスト方法及び作業標準の適切性`
+    [`テスト方法及び作業標準の適切性`](glossary/syllabus_tsuiho_ver4_0.md#テスト方法及び作業標準の適切性)
 
 
 #### 🔹 5. 導入・受入れ支援
@@ -1876,7 +1876,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 システム及び／又はソフトウェアの受入れ支援では，取得者の受入れレビューや受入れテ
 ストの支援，納入，取得者への教育訓練及び支援を実施することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `納品`
+    [`納品`](glossary/syllabus_tsuiho_ver4_0.md#納品)
 
 
 ##### （3）妥当性確認テストのタスク
@@ -1894,7 +1894,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 などの留意事項は何か，スケジュールや体制はどのようにするかなど，導入計画を作成，
 文書化することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `導入要件`, `移行要件（プロセス及びデータの移行`, `移行保守の取組方法及びスケジュール）`, `導入可否判断基準`, `インストール計画の作成`, `導入作業`, `リプレー ス`, `並行稼働対応`, `導入文書`, `一斉移行`, `段階移行`, `移行リハーサル`, `移行システム`, `カナリアリリース`, `ブルーグリーンデプロイメント`
+    [`導入要件`](glossary/syllabus_tsuiho_ver4_0.md#導入要件), [`移行要件（プロセス及びデータの移行`](glossary/syllabus_tsuiho_ver4_0.md#移行要件（プロセス及びデータの移行), [`移行保守の取組方法及びスケジュール）`](glossary/syllabus_tsuiho_ver4_0.md#移行保守の取組方法及びスケジュール）), [`導入可否判断基準`](glossary/syllabus_tsuiho_ver4_0.md#導入可否判断基準), [`インストール計画の作成`](glossary/syllabus_tsuiho_ver4_0.md#インストール計画の作成), [`導入作業`](glossary/syllabus_tsuiho_ver4_0.md#導入作業), [`リプレー ス`](glossary/syllabus_tsuiho_ver4_0.md#リプレー-ス), [`並行稼働対応`](glossary/syllabus_tsuiho_ver4_0.md#並行稼働対応), [`導入文書`](glossary/syllabus_tsuiho_ver4_0.md#導入文書), [`一斉移行`](glossary/syllabus_tsuiho_ver4_0.md#一斉移行), [`段階移行`](glossary/syllabus_tsuiho_ver4_0.md#段階移行), [`移行リハーサル`](glossary/syllabus_tsuiho_ver4_0.md#移行リハーサル), [`移行システム`](glossary/syllabus_tsuiho_ver4_0.md#移行システム), [`カナリアリリース`](glossary/syllabus_tsuiho_ver4_0.md#カナリアリリース), [`ブルーグリーンデプロイメント`](glossary/syllabus_tsuiho_ver4_0.md#ブルーグリーンデプロイメント)
 
 
 ###### ② システム及び／又はソフトウェアの導入の実施
@@ -1904,14 +1904,14 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 されたとおりに初期化などを行い，実行環境を整備すること，導入時の作業結果を文書化
 することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `導入手順`, `導入体制`, `利用部門`, `システム運用部門`, `運用サイト`, `仮想環境`, `通信用資源`, `ソフトウェア導入`
+    [`導入手順`](glossary/syllabus_tsuiho_ver4_0.md#導入手順), [`導入体制`](glossary/syllabus_tsuiho_ver4_0.md#導入体制), [`利用部門`](glossary/syllabus_tsuiho_ver4_0.md#利用部門), [`システム運用部門`](glossary/syllabus_tsuiho_ver4_0.md#システム運用部門), [`運用サイト`](glossary/syllabus_tsuiho_ver4_0.md#運用サイト), [`仮想環境`](glossary/syllabus_tsuiho_ver4_0.md#仮想環境), [`通信用資源`](glossary/syllabus_tsuiho_ver4_0.md#通信用資源), [`ソフトウェア導入`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア導入)
 
 
 ###### ③ 利用者支援
 
 システム及び／又はソフトウェアの導入に当たり，利用者を支援する作業を理解する。
   - **用語例・キーワード (全網羅)**:
-    `教育訓練資料`, `教育訓練システム（e-Learning`, `Web Based Training）`, `ロジスティクス支援パッケージ`
+    [`教育訓練資料`](glossary/syllabus_tsuiho_ver4_0.md#教育訓練資料), [`教育訓練システム（e-Learning`](glossary/syllabus_tsuiho_ver4_0.md#教育訓練システム（e-learning), [`Web Based Training）`](glossary/syllabus_tsuiho_ver4_0.md#web-based-training）), [`ロジスティクス支援パッケージ`](glossary/syllabus_tsuiho_ver4_0.md#ロジスティクス支援パッケージ)
 
 
 ##### （5）受入れ支援
@@ -1925,7 +1925,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ェアの妥当性確認テストの結果を考慮して，受入れの準備，受入れレビュー，テストを行
 い，結果を文書化することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `受入れ手順`, `受入れ基準`, `受入れテスト`, `検収`, `検収基準`
+    [`受入れ手順`](glossary/syllabus_tsuiho_ver4_0.md#受入れ手順), [`受入れ基準`](glossary/syllabus_tsuiho_ver4_0.md#受入れ基準), [`受入れテスト`](glossary/syllabus_tsuiho_ver4_0.md#受入れテスト), [`検収`](glossary/syllabus_tsuiho_ver4_0.md#検収), [`検収基準`](glossary/syllabus_tsuiho_ver4_0.md#検収基準)
 
 
 ###### ② システム及び／又はソフトウェアの納入と受入れ
@@ -1934,7 +1934,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ム及び／又はソフトウェアが完成していることを相互に確認して納入し，受け入れること
 を理解する。
   - **用語例・キーワード (全網羅)**:
-    `受入れ体制`, `利害関係者の合意`, `双方向の追跡可能性（双方向のトレーサビリティ）`
+    [`受入れ体制`](glossary/syllabus_tsuiho_ver4_0.md#受入れ体制), [`利害関係者の合意`](glossary/syllabus_tsuiho_ver4_0.md#利害関係者の合意), [`双方向の追跡可能性（双方向のトレーサビリティ）`](glossary/syllabus_tsuiho_ver4_0.md#双方向の追跡可能性（双方向のトレーサビリティ）)
 
 
 ###### ③ 教育訓練
@@ -1944,7 +1944,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 育訓練の計画，実施を行うことを理解する。また，教育訓練の目的，内容，準備，体制，
 結果の評価方法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `教育訓練計画`, `教育訓練の準備`, `教育訓練体制`, `教育訓練結果の評価方法`, `教育訓練システム（e-Learning`, `Web Based Training）`, `カークパトリックの教育効果の 4段階モデル`
+    [`教育訓練計画`](glossary/syllabus_tsuiho_ver4_0.md#教育訓練計画), [`教育訓練の準備`](glossary/syllabus_tsuiho_ver4_0.md#教育訓練の準備), [`教育訓練体制`](glossary/syllabus_tsuiho_ver4_0.md#教育訓練体制), [`教育訓練結果の評価方法`](glossary/syllabus_tsuiho_ver4_0.md#教育訓練結果の評価方法), [`教育訓練システム（e-Learning`](glossary/syllabus_tsuiho_ver4_0.md#教育訓練システム（e-learning), [`Web Based Training）`](glossary/syllabus_tsuiho_ver4_0.md#web-based-training）), [`カークパトリックの教育効果の 4段階モデル`](glossary/syllabus_tsuiho_ver4_0.md#カークパトリックの教育効果の-4段階モデル)
 
 
 ###### ④ 利用者用文書類（利用者マニュアル）
@@ -1954,7 +1954,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 （利用者マニュアル）はシステム設計時又はソフトウェア設計時に暫定版を作成し，開発
 の進行に従って適宜更新することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `運用規程`, `利用者用文書類（ウィザード`, `学習書（チュートリアル）`, `オンラインヘルプ）`, `組込文書類`, `分離形文書類`, `システム利用文書`, `ソフトウェア利用文書`, `文書類のテスト`
+    [`運用規程`](glossary/syllabus_tsuiho_ver4_0.md#運用規程), [`利用者用文書類（ウィザード`](glossary/syllabus_tsuiho_ver4_0.md#利用者用文書類（ウィザード), [`学習書（チュートリアル）`](glossary/syllabus_tsuiho_ver4_0.md#学習書（チュートリアル）), [`オンラインヘルプ）`](glossary/syllabus_tsuiho_ver4_0.md#オンラインヘルプ）), [`組込文書類`](glossary/syllabus_tsuiho_ver4_0.md#組込文書類), [`分離形文書類`](glossary/syllabus_tsuiho_ver4_0.md#分離形文書類), [`システム利用文書`](glossary/syllabus_tsuiho_ver4_0.md#システム利用文書), [`ソフトウェア利用文書`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア利用文書), [`文書類のテスト`](glossary/syllabus_tsuiho_ver4_0.md#文書類のテスト)
 
 
 ##### （6）妥当性確認テスト
@@ -1964,7 +1964,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 
 定義した環境において妥当性確認テストの手順を実施することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `妥当性確認される要件（要求事項）`, `関連する作成物`, `妥当性確認テストの目的`, `成功基準（期待される結果）`, `適用する妥当性確認テストの技法`, `必要とするイネーブリングシステム（施設・設備・機器）`, `各妥当性確認テストを実施するための環境条件`
+    [`妥当性確認される要件（要求事項）`](glossary/syllabus_tsuiho_ver4_0.md#妥当性確認される要件（要求事項）), [`関連する作成物`](glossary/syllabus_tsuiho_ver4_0.md#関連する作成物), [`妥当性確認テストの目的`](glossary/syllabus_tsuiho_ver4_0.md#妥当性確認テストの目的), [`成功基準（期待される結果）`](glossary/syllabus_tsuiho_ver4_0.md#成功基準（期待される結果）), [`適用する妥当性確認テストの技法`](glossary/syllabus_tsuiho_ver4_0.md#適用する妥当性確認テストの技法), [`必要とするイネーブリングシステム（施設・設備・機器）`](glossary/syllabus_tsuiho_ver4_0.md#必要とするイネーブリングシステム（施設設備機器）), [`各妥当性確認テストを実施するための環境条件`](glossary/syllabus_tsuiho_ver4_0.md#各妥当性確認テストを実施するための環境条件)
 
 
 ###### ② 妥当性確認テストの結果の管理
@@ -1973,14 +1973,14 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 追跡すること，及び妥当性確認されたシステム要素のトレーサビリティを維持することを
 理解する。
   - **用語例・キーワード (全網羅)**:
-    `不具合の根本原因`, `是正処置`, `欠陥修正`, `改善作業`, `学んだ教訓の記録`, `双方向の追跡可能性（双方向のトレーサビリティ）`
+    [`不具合の根本原因`](glossary/syllabus_tsuiho_ver4_0.md#不具合の根本原因), [`是正処置`](glossary/syllabus_tsuiho_ver4_0.md#是正処置), [`欠陥修正`](glossary/syllabus_tsuiho_ver4_0.md#欠陥修正), [`改善作業`](glossary/syllabus_tsuiho_ver4_0.md#改善作業), [`学んだ教訓の記録`](glossary/syllabus_tsuiho_ver4_0.md#学んだ教訓の記録), [`双方向の追跡可能性（双方向のトレーサビリティ）`](glossary/syllabus_tsuiho_ver4_0.md#双方向の追跡可能性（双方向のトレーサビリティ）)
 
 
 ###### ③ 妥当性確認テストの手法又は技法
 
 妥当性確認テストで用いる手法又は技法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `使用性テスト`, `ソフトウェアの試行利用（ベータテスト`, `運用操作テスト`, `利用者テスト`, `受入れテスト）`, `分析`, `相似性・類似性`, `自演による実証`, `シミュレ ーション`
+    [`使用性テスト`](glossary/syllabus_tsuiho_ver4_0.md#使用性テスト), [`ソフトウェアの試行利用（ベータテスト`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアの試行利用（ベータテスト), [`運用操作テスト`](glossary/syllabus_tsuiho_ver4_0.md#運用操作テスト), [`利用者テスト`](glossary/syllabus_tsuiho_ver4_0.md#利用者テスト), [`受入れテスト）`](glossary/syllabus_tsuiho_ver4_0.md#受入れテスト）), [`分析`](glossary/syllabus_tsuiho_ver4_0.md#分析), [`相似性・類似性`](glossary/syllabus_tsuiho_ver4_0.md#相似性類似性), [`自演による実証`](glossary/syllabus_tsuiho_ver4_0.md#自演による実証), [`シミュレ ーション`](glossary/syllabus_tsuiho_ver4_0.md#シミュレ-ーション)
 
 
 #### 🔹 6. 保守・廃棄
@@ -1997,7 +1997,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 機能拡張要求などへの対応として，既存システム及び／又は既存ソフトウェアの安全性を維
 持しつつ修正や変更を行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `保守手順`, `保守体制`, `保守の実現可能性`, `保守テスト`, `回帰テスト（リグレッションテスト）`, `リファクタリング`, `リバースエンジニアリング`
+    [`保守手順`](glossary/syllabus_tsuiho_ver4_0.md#保守手順), [`保守体制`](glossary/syllabus_tsuiho_ver4_0.md#保守体制), [`保守の実現可能性`](glossary/syllabus_tsuiho_ver4_0.md#保守の実現可能性), [`保守テスト`](glossary/syllabus_tsuiho_ver4_0.md#保守テスト), [`回帰テスト（リグレッションテスト）`](glossary/syllabus_tsuiho_ver4_0.md#回帰テスト（リグレッションテスト）), [`リファクタリング`](glossary/syllabus_tsuiho_ver4_0.md#リファクタリング), [`リバースエンジニアリング`](glossary/syllabus_tsuiho_ver4_0.md#リバースエンジニアリング)
 
 
 ##### （2）廃棄のタスク
@@ -2006,7 +2006,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 テム若しくはソフトウェアを最終の状態にし，かつ，廃棄しても運用に支障のない状態にし
 て，起動不能にしたり，解体したり，取り除いたりすることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `組織の運用の完整性（integrity）`
+    [`組織の運用の完整性（integrity）`](glossary/syllabus_tsuiho_ver4_0.md#組織の運用の完整性（integrity）)
 
 
 ##### （3）保守のタイプ及び形態
@@ -2014,7 +2014,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 保守をどのように実施するか，保守のタイプ及び形態，その際の留意事項，実施内容，方
 法の違いなどを理解する。
   - **用語例・キーワード (全網羅)**:
-    `保守契約`, `保守要件の定義`, `ハードウェア保守`, `日常点検`, `是正保守`, `改良保守`, `予防保守`, `適応保守`, `完全化保守`, `オンサイト保守`, `遠隔保守`, `ライフサイクルの評価`
+    [`保守契約`](glossary/syllabus_tsuiho_ver4_0.md#保守契約), [`保守要件の定義`](glossary/syllabus_tsuiho_ver4_0.md#保守要件の定義), [`ハードウェア保守`](glossary/syllabus_tsuiho_ver4_0.md#ハードウェア保守), [`日常点検`](glossary/syllabus_tsuiho_ver4_0.md#日常点検), [`是正保守`](glossary/syllabus_tsuiho_ver4_0.md#是正保守), [`改良保守`](glossary/syllabus_tsuiho_ver4_0.md#改良保守), [`予防保守`](glossary/syllabus_tsuiho_ver4_0.md#予防保守), [`適応保守`](glossary/syllabus_tsuiho_ver4_0.md#適応保守), [`完全化保守`](glossary/syllabus_tsuiho_ver4_0.md#完全化保守), [`オンサイト保守`](glossary/syllabus_tsuiho_ver4_0.md#オンサイト保守), [`遠隔保守`](glossary/syllabus_tsuiho_ver4_0.md#遠隔保守), [`ライフサイクルの評価`](glossary/syllabus_tsuiho_ver4_0.md#ライフサイクルの評価)
 
 
 ##### （4）保守の手順
@@ -2024,7 +2024,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 
 保守業務開始のための準備を行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `開発プロセスからの保守に必要な成果物の引継ぎ`, `計画及び手続の作成`, `問題管理手続の確立`, `修正作業の管理`, `保守のための文書作成`
+    [`開発プロセスからの保守に必要な成果物の引継ぎ`](glossary/syllabus_tsuiho_ver4_0.md#開発プロセスからの保守に必要な成果物の引継ぎ), [`計画及び手続の作成`](glossary/syllabus_tsuiho_ver4_0.md#計画及び手続の作成), [`問題管理手続の確立`](glossary/syllabus_tsuiho_ver4_0.md#問題管理手続の確立), [`修正作業の管理`](glossary/syllabus_tsuiho_ver4_0.md#修正作業の管理), [`保守のための文書作成`](glossary/syllabus_tsuiho_ver4_0.md#保守のための文書作成)
 
 
 ###### ② 問題把握及び修正の分析
@@ -2032,14 +2032,14 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 保守対象のシステム及び／又はソフトウェアの問題や改善要求を解決する過程を理解す
 る。
   - **用語例・キーワード (全網羅)**:
-    `問題報告又は修正依頼の分析`, `問題の再現又は検証`, `修正実施の選択肢の用意`
+    [`問題報告又は修正依頼の分析`](glossary/syllabus_tsuiho_ver4_0.md#問題報告又は修正依頼の分析), [`問題の再現又は検証`](glossary/syllabus_tsuiho_ver4_0.md#問題の再現又は検証), [`修正実施の選択肢の用意`](glossary/syllabus_tsuiho_ver4_0.md#修正実施の選択肢の用意)
 
 
 ###### ③ 修正の実施
 
 修正部分が決まった後，修正を実施する過程を理解する。
   - **用語例・キーワード (全網羅)**:
-    `修正するシステム及び／又はソフトウェアや関連文書の決定`, `機能追加`, `性能改良`, `問題の是正`
+    [`修正するシステム及び／又はソフトウェアや関連文書の決定`](glossary/syllabus_tsuiho_ver4_0.md#修正するシステム及び-又はソフトウェアや関連文書の決定), [`機能追加`](glossary/syllabus_tsuiho_ver4_0.md#機能追加), [`性能改良`](glossary/syllabus_tsuiho_ver4_0.md#性能改良), [`問題の是正`](glossary/syllabus_tsuiho_ver4_0.md#問題の是正)
 
 
 ###### ④ 保守レビュー及び／又は受入れ
@@ -2047,7 +2047,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 修正されたシステム及び／又はソフトウェアの動作確認や完了の承認を行うことを理解
 する。
   - **用語例・キーワード (全網羅)**:
-    `修正されたシステム及び／又はソフトウェアの完整性（integrity）`
+    [`修正されたシステム及び／又はソフトウェアの完整性（integrity）`](glossary/syllabus_tsuiho_ver4_0.md#修正されたシステム及び-又はソフトウェアの完整性（integrity）)
 
 
 ###### ⑤ 再発防止策の実施
@@ -2056,7 +2056,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 類似事故の発生の可能性を検討し，システム及び／又はソフトウェアの改善やマニュアル
 などの改訂を行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `システム信頼性のための解析技法（FTA`, `FMEA`, `STAMP/STPAほか）`, `双方向の追跡可能性（双方向のトレーサビリティ）`
+    [`システム信頼性のための解析技法（FTA`](glossary/syllabus_tsuiho_ver4_0.md#システム信頼性のための解析技法（fta), [`FMEA`](glossary/syllabus_tsuiho_ver4_0.md#fmea), [`STAMP/STPAほか）`](glossary/syllabus_tsuiho_ver4_0.md#stamp-stpaほか）), [`双方向の追跡可能性（双方向のトレーサビリティ）`](glossary/syllabus_tsuiho_ver4_0.md#双方向の追跡可能性（双方向のトレーサビリティ）)
 
 
 ###### ⑥ 移行
@@ -2064,7 +2064,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 システム移行及び／又はソフトウェア移行の手順，システム及び／又はソフトウェアの
 完全性の維持，業務への影響など移行の際の留意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `移行計画の文書化と検証`, `関係者全員への移行計画などの通知`, `新旧環境の並行運用と旧環境の停止`, `関係者全員への移行の通知`, `移行結果の検証`, `移行評価`, `旧環境関連データの保持と安全性確保`
+    [`移行計画の文書化と検証`](glossary/syllabus_tsuiho_ver4_0.md#移行計画の文書化と検証), [`関係者全員への移行計画などの通知`](glossary/syllabus_tsuiho_ver4_0.md#関係者全員への移行計画などの通知), [`新旧環境の並行運用と旧環境の停止`](glossary/syllabus_tsuiho_ver4_0.md#新旧環境の並行運用と旧環境の停止), [`関係者全員への移行の通知`](glossary/syllabus_tsuiho_ver4_0.md#関係者全員への移行の通知), [`移行結果の検証`](glossary/syllabus_tsuiho_ver4_0.md#移行結果の検証), [`移行評価`](glossary/syllabus_tsuiho_ver4_0.md#移行評価), [`旧環境関連データの保持と安全性確保`](glossary/syllabus_tsuiho_ver4_0.md#旧環境関連データの保持と安全性確保)
 
 
 ##### （5）廃棄
@@ -2072,7 +2072,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 システム及び／又はソフトウェアの導入や更新などに伴い，不要となったシステム及び
 ／又はソフトウェアの廃棄の手順を理解する。
   - **用語例・キーワード (全網羅)**:
-    `廃棄計画の立案`, `廃棄計画などの利用者への通知`, `新旧環境の並行運用と利用者の教育訓練`, `関係者全員への廃棄の通知`, `廃棄関連データの保持とアクセス可能性の確保`
+    [`廃棄計画の立案`](glossary/syllabus_tsuiho_ver4_0.md#廃棄計画の立案), [`廃棄計画などの利用者への通知`](glossary/syllabus_tsuiho_ver4_0.md#廃棄計画などの利用者への通知), [`新旧環境の並行運用と利用者の教育訓練`](glossary/syllabus_tsuiho_ver4_0.md#新旧環境の並行運用と利用者の教育訓練), [`関係者全員への廃棄の通知`](glossary/syllabus_tsuiho_ver4_0.md#関係者全員への廃棄の通知), [`廃棄関連データの保持とアクセス可能性の確保`](glossary/syllabus_tsuiho_ver4_0.md#廃棄関連データの保持とアクセス可能性の確保)
 
 
 ## 📌 大分類 4：開発技術
@@ -2097,7 +2097,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 ソフトウェア開発の効率化や品質向上のために用いられるソフトウェア開発モデルの考
 え方，必要性を理解し，ソフトウェア開発モデルの特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ウォーターフォールモデル`, `プロトタイピングモデル`, `アジャイル`, `DevOps`, `MLOps`, `ソフトウェアプロダクトライン`, `段階的モデル（Incremental Model）`, `進展的モデル（Evolutionary Model）`
+    [`ウォーターフォールモデル`](glossary/syllabus_tsuiho_ver4_0.md#ウォーターフォールモデル), [`プロトタイピングモデル`](glossary/syllabus_tsuiho_ver4_0.md#プロトタイピングモデル), [`アジャイル`](glossary/syllabus_tsuiho_ver4_0.md#アジャイル), [`DevOps`](glossary/syllabus_tsuiho_ver4_0.md#devops), [`MLOps`](glossary/syllabus_tsuiho_ver4_0.md#mlops), [`ソフトウェアプロダクトライン`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアプロダクトライン), [`段階的モデル（Incremental Model）`](glossary/syllabus_tsuiho_ver4_0.md#段階的モデル（incremental-model）), [`進展的モデル（Evolutionary Model）`](glossary/syllabus_tsuiho_ver4_0.md#進展的モデル（evolutionary-model）)
 
 
 ###### ② アジャイル
@@ -2107,13 +2107,13 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 （a）アジャイルの概要
 アジャイルの概要として，アジャイルソフトウェア開発手法の種類などを理解する。
   - **用語例・キーワード (全網羅)**:
-    `アジャイルソフトウェア開発宣言`, `アジャイルソフトウェアの 12の原則`, `XP（エクストリームプログラミング）`, `スクラム`, `リーンソフトウェア開発`, `ユーザー 機能駆動開発（FDD）`, `テスト駆動開発（TDD）`, `ペルソナ`, `インセプションデッキ`, `ユーザーストーリー`, `INVEST`, `プランニングポーカー`, `タイムボックス`, `バーンダウンチャート`, `ベロシティ`, `モブプログラミング`, `リファクタリング`, `ふりかえり（レトロスペクティブ）`, `KPT（Keep`, `Problem`, `Try）`, `継続的インテグレー ション（CI））`, `継続的デリバリー（CD）`, `エンタープライズアジャイル（SAFe`, `LeSS（Large-Scale Scrum）`, `Scrum of Scrums）`, `DA（Disciplined Agile） （b）XP（エクストリームプログラミング）の特徴 XP（エクストリームプログラミング）の特徴を理解する。`
+    [`アジャイルソフトウェア開発宣言`](glossary/syllabus_tsuiho_ver4_0.md#アジャイルソフトウェア開発宣言), [`アジャイルソフトウェアの 12の原則`](glossary/syllabus_tsuiho_ver4_0.md#アジャイルソフトウェアの-12の原則), [`XP（エクストリームプログラミング）`](glossary/syllabus_tsuiho_ver4_0.md#xp（エクストリームプログラミング）), [`スクラム`](glossary/syllabus_tsuiho_ver4_0.md#スクラム), [`リーンソフトウェア開発`](glossary/syllabus_tsuiho_ver4_0.md#リーンソフトウェア開発), [`ユーザー 機能駆動開発（FDD）`](glossary/syllabus_tsuiho_ver4_0.md#ユーザー-機能駆動開発（fdd）), [`テスト駆動開発（TDD）`](glossary/syllabus_tsuiho_ver4_0.md#テスト駆動開発（tdd）), [`ペルソナ`](glossary/syllabus_tsuiho_ver4_0.md#ペルソナ), [`インセプションデッキ`](glossary/syllabus_tsuiho_ver4_0.md#インセプションデッキ), [`ユーザーストーリー`](glossary/syllabus_tsuiho_ver4_0.md#ユーザーストーリー), [`INVEST`](glossary/syllabus_tsuiho_ver4_0.md#invest), [`プランニングポーカー`](glossary/syllabus_tsuiho_ver4_0.md#プランニングポーカー), [`タイムボックス`](glossary/syllabus_tsuiho_ver4_0.md#タイムボックス), [`バーンダウンチャート`](glossary/syllabus_tsuiho_ver4_0.md#バーンダウンチャート), [`ベロシティ`](glossary/syllabus_tsuiho_ver4_0.md#ベロシティ), [`モブプログラミング`](glossary/syllabus_tsuiho_ver4_0.md#モブプログラミング), [`リファクタリング`](glossary/syllabus_tsuiho_ver4_0.md#リファクタリング), [`ふりかえり（レトロスペクティブ）`](glossary/syllabus_tsuiho_ver4_0.md#ふりかえり（レトロスペクティブ）), [`KPT（Keep`](glossary/syllabus_tsuiho_ver4_0.md#kpt（keep), [`Problem`](glossary/syllabus_tsuiho_ver4_0.md#problem), [`Try）`](glossary/syllabus_tsuiho_ver4_0.md#try）), [`継続的インテグレー ション（CI））`](glossary/syllabus_tsuiho_ver4_0.md#継続的インテグレー-ション（ci））), [`継続的デリバリー（CD）`](glossary/syllabus_tsuiho_ver4_0.md#継続的デリバリー（cd）), [`エンタープライズアジャイル（SAFe`](glossary/syllabus_tsuiho_ver4_0.md#エンタープライズアジャイル（safe), [`LeSS（Large-Scale Scrum）`](glossary/syllabus_tsuiho_ver4_0.md#less（large-scale-scrum）), [`Scrum of Scrums）`](glossary/syllabus_tsuiho_ver4_0.md#scrum-of-scrums）), [`DA（Disciplined Agile） （b）XP（エクストリームプログラミング）の特徴 XP（エクストリームプログラミング）の特徴を理解する。`](glossary/syllabus_tsuiho_ver4_0.md#da（disciplined-agile）-（b）xp（エクストリームプログラミング）の特徴-xp（エクストリームプログラミング）の特徴を理解する)
 
   - **用語例・キーワード (全網羅)**:
-    `五つの価値（コミュニケーション`, `シンプル`, `フィードバック`, `勇気`, `尊重）`, `共同のプラクティス`, `開発のプラクティス（テスト駆動開発（TDD）`, `ペアプログラミング`, `リファクタリング`, `ソースコードの共同所有`, `継続的インテグレーション（CI）`, `YAGNI）`, `管理者のプラクティス`, `顧客のプラクティス`, `イテレーション （c）スクラムの特徴スクラムの特徴を理解する。`
+    [`五つの価値（コミュニケーション`](glossary/syllabus_tsuiho_ver4_0.md#五つの価値（コミュニケーション), [`シンプル`](glossary/syllabus_tsuiho_ver4_0.md#シンプル), [`フィードバック`](glossary/syllabus_tsuiho_ver4_0.md#フィードバック), [`勇気`](glossary/syllabus_tsuiho_ver4_0.md#勇気), [`尊重）`](glossary/syllabus_tsuiho_ver4_0.md#尊重）), [`共同のプラクティス`](glossary/syllabus_tsuiho_ver4_0.md#共同のプラクティス), [`開発のプラクティス（テスト駆動開発（TDD）`](glossary/syllabus_tsuiho_ver4_0.md#開発のプラクティス（テスト駆動開発（tdd）), [`ペアプログラミング`](glossary/syllabus_tsuiho_ver4_0.md#ペアプログラミング), [`リファクタリング`](glossary/syllabus_tsuiho_ver4_0.md#リファクタリング), [`ソースコードの共同所有`](glossary/syllabus_tsuiho_ver4_0.md#ソースコードの共同所有), [`継続的インテグレーション（CI）`](glossary/syllabus_tsuiho_ver4_0.md#継続的インテグレーション（ci）), [`YAGNI）`](glossary/syllabus_tsuiho_ver4_0.md#yagni）), [`管理者のプラクティス`](glossary/syllabus_tsuiho_ver4_0.md#管理者のプラクティス), [`顧客のプラクティス`](glossary/syllabus_tsuiho_ver4_0.md#顧客のプラクティス), [`イテレーション （c）スクラムの特徴スクラムの特徴を理解する。`](glossary/syllabus_tsuiho_ver4_0.md#イテレーション-（c）スクラムの特徴スクラムの特徴を理解する)
 
   - **用語例・キーワード (全網羅)**:
-    `スクラムチーム（プロダクトオーナー`, `開発者`, `スクラムマスター）`, `スプリント`, `スプリントプランニング`, `デイリースクラム`, `スプリントレビュー`, `スプリントレトロスペクティブ`, `プロダクトバックログ`, `スプリントバックログ`, `インクリメント`
+    [`スクラムチーム（プロダクトオーナー`](glossary/syllabus_tsuiho_ver4_0.md#スクラムチーム（プロダクトオーナー), [`開発者`](glossary/syllabus_tsuiho_ver4_0.md#開発者), [`スクラムマスター）`](glossary/syllabus_tsuiho_ver4_0.md#スクラムマスター）), [`スプリント`](glossary/syllabus_tsuiho_ver4_0.md#スプリント), [`スプリントプランニング`](glossary/syllabus_tsuiho_ver4_0.md#スプリントプランニング), [`デイリースクラム`](glossary/syllabus_tsuiho_ver4_0.md#デイリースクラム), [`スプリントレビュー`](glossary/syllabus_tsuiho_ver4_0.md#スプリントレビュー), [`スプリントレトロスペクティブ`](glossary/syllabus_tsuiho_ver4_0.md#スプリントレトロスペクティブ), [`プロダクトバックログ`](glossary/syllabus_tsuiho_ver4_0.md#プロダクトバックログ), [`スプリントバックログ`](glossary/syllabus_tsuiho_ver4_0.md#スプリントバックログ), [`インクリメント`](glossary/syllabus_tsuiho_ver4_0.md#インクリメント)
 
 
 ###### ③ DevOps
@@ -2121,7 +2121,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 開発チームと運用チームが連携し，迅速かつ柔軟にソフトウェア開発を行う DevOpsの特
 徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `CALMSフレームワーク（Culture（文化）`, `Automation（自動化）`, `Lean（リーン）`, `Measurement（測定）`, `Sharing（共有） ）`, `SRE（Site Reliability Engineering： サイト信頼性エンジニアリング）`, `継続的インテグレーション（CI）`, `継続的デリバリー（CD）`, `継続的デプロイ`, `テスト駆動開発（TDD）`, `カオスエンジニアリング`, `Four Keys（デプロイの頻度`, `変更のリードタイム`, `変更障害率`, `平均修復時間（MTTR） ）`, `オブザーバビリティ（可観測性）`, `OpenTelemetry`, `DevSecOps`
+    [`CALMSフレームワーク（Culture（文化）`](glossary/syllabus_tsuiho_ver4_0.md#calmsフレームワーク（culture（文化）), [`Automation（自動化）`](glossary/syllabus_tsuiho_ver4_0.md#automation（自動化）), [`Lean（リーン）`](glossary/syllabus_tsuiho_ver4_0.md#lean（リーン）), [`Measurement（測定）`](glossary/syllabus_tsuiho_ver4_0.md#measurement（測定）), [`Sharing（共有） ）`](glossary/syllabus_tsuiho_ver4_0.md#sharing（共有）-）), [`SRE（Site Reliability Engineering： サイト信頼性エンジニアリング）`](glossary/syllabus_tsuiho_ver4_0.md#sre（site-reliability-engineering-サイト信頼性エンジニアリング）), [`継続的インテグレーション（CI）`](glossary/syllabus_tsuiho_ver4_0.md#継続的インテグレーション（ci）), [`継続的デリバリー（CD）`](glossary/syllabus_tsuiho_ver4_0.md#継続的デリバリー（cd）), [`継続的デプロイ`](glossary/syllabus_tsuiho_ver4_0.md#継続的デプロイ), [`テスト駆動開発（TDD）`](glossary/syllabus_tsuiho_ver4_0.md#テスト駆動開発（tdd）), [`カオスエンジニアリング`](glossary/syllabus_tsuiho_ver4_0.md#カオスエンジニアリング), [`Four Keys（デプロイの頻度`](glossary/syllabus_tsuiho_ver4_0.md#four-keys（デプロイの頻度), [`変更のリードタイム`](glossary/syllabus_tsuiho_ver4_0.md#変更のリードタイム), [`変更障害率`](glossary/syllabus_tsuiho_ver4_0.md#変更障害率), [`平均修復時間（MTTR） ）`](glossary/syllabus_tsuiho_ver4_0.md#平均修復時間（mttr）-）), [`オブザーバビリティ（可観測性）`](glossary/syllabus_tsuiho_ver4_0.md#オブザーバビリティ（可観測性）), [`OpenTelemetry`](glossary/syllabus_tsuiho_ver4_0.md#opentelemetry), [`DevSecOps`](glossary/syllabus_tsuiho_ver4_0.md#devsecops)
 
 
 ###### ④ ローコード／ノーコード開発
@@ -2139,10 +2139,10 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 （a）部品の種類と特徴
 ソフトウェア部品の種類と特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `関数部品`, `オブジェクト部品（クラスライブラリ）`, `データ部品`, `プロセス部品`, `常駐部品と組込み部品`, `ブラックボックス部品`, `ホワイトボックス部品`, `パラメトリック部品`, `ノンパラメトリック部品`, `クローズドシステム部品`, `オープンシステム部品 （b）部品設計の基準部品の利用用途に応じた`, `設計基準の目的`, `内容を理解する。`
+    [`関数部品`](glossary/syllabus_tsuiho_ver4_0.md#関数部品), [`オブジェクト部品（クラスライブラリ）`](glossary/syllabus_tsuiho_ver4_0.md#オブジェクト部品（クラスライブラリ）), [`データ部品`](glossary/syllabus_tsuiho_ver4_0.md#データ部品), [`プロセス部品`](glossary/syllabus_tsuiho_ver4_0.md#プロセス部品), [`常駐部品と組込み部品`](glossary/syllabus_tsuiho_ver4_0.md#常駐部品と組込み部品), [`ブラックボックス部品`](glossary/syllabus_tsuiho_ver4_0.md#ブラックボックス部品), [`ホワイトボックス部品`](glossary/syllabus_tsuiho_ver4_0.md#ホワイトボックス部品), [`パラメトリック部品`](glossary/syllabus_tsuiho_ver4_0.md#パラメトリック部品), [`ノンパラメトリック部品`](glossary/syllabus_tsuiho_ver4_0.md#ノンパラメトリック部品), [`クローズドシステム部品`](glossary/syllabus_tsuiho_ver4_0.md#クローズドシステム部品), [`オープンシステム部品 （b）部品設計の基準部品の利用用途に応じた`](glossary/syllabus_tsuiho_ver4_0.md#オープンシステム部品-（b）部品設計の基準部品の利用用途に応じた), [`設計基準の目的`](glossary/syllabus_tsuiho_ver4_0.md#設計基準の目的), [`内容を理解する。`](glossary/syllabus_tsuiho_ver4_0.md#内容を理解する)
 
   - **用語例・キーワード (全網羅)**:
-    `モジュールの独立性`, `カスタマイズ`, `ライブラリ`, `命名規則`
+    [`モジュールの独立性`](glossary/syllabus_tsuiho_ver4_0.md#モジュールの独立性), [`カスタマイズ`](glossary/syllabus_tsuiho_ver4_0.md#カスタマイズ), [`ライブラリ`](glossary/syllabus_tsuiho_ver4_0.md#ライブラリ), [`命名規則`](glossary/syllabus_tsuiho_ver4_0.md#命名規則)
 
 
 ###### ⑥ リバースエンジニアリング
@@ -2153,7 +2153,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 性があること，利用許諾契約によっては，リバースエンジニアリングを禁止している場合
 もあることなどを理解する。
   - **用語例・キーワード (全網羅)**:
-    `互換性`, `コールグラフ`
+    [`互換性`](glossary/syllabus_tsuiho_ver4_0.md#互換性), [`コールグラフ`](glossary/syllabus_tsuiho_ver4_0.md#コールグラフ)
 
 
 ###### ⑦ マッシュアップ
@@ -2162,14 +2162,14 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 構築する手法であることを理解する。また，マッシュアップの考え方，生産性，品質面で
 の特徴，留意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `プレゼンテーションマッシュアップ`, `データマッシュアップ`, `ロジックマッシュアップ`
+    [`プレゼンテーションマッシュアップ`](glossary/syllabus_tsuiho_ver4_0.md#プレゼンテーションマッシュアップ), [`データマッシュアップ`](glossary/syllabus_tsuiho_ver4_0.md#データマッシュアップ), [`ロジックマッシュアップ`](glossary/syllabus_tsuiho_ver4_0.md#ロジックマッシュアップ)
 
 
 ###### ⑧ モバイルアプリケーションソフトウェア開発
 
 モバイルアプリケーションソフトウェア開発の手順，留意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `モバイル用 Webアプリケーションソフトウェア`, `ネイティブアプリケーションソフトウェア`, `ハイブリッドアプリケーションソフトウェア`, `PWA（Progressive Web Apps：プログレッシブウェブアプリ）`, `User-Agent`, `パーミッション要求`, `端末仕様（ディスプレイサイズほか）の多様性への対応`, `アプリケーションソフトウェア動作中の圏外時・着信時の対応`, `アプリケーションソフトウェア審査`, `アプリケーションソフトウェア配布`
+    [`モバイル用 Webアプリケーションソフトウェア`](glossary/syllabus_tsuiho_ver4_0.md#モバイル用-webアプリケーションソフトウェア), [`ネイティブアプリケーションソフトウェア`](glossary/syllabus_tsuiho_ver4_0.md#ネイティブアプリケーションソフトウェア), [`ハイブリッドアプリケーションソフトウェア`](glossary/syllabus_tsuiho_ver4_0.md#ハイブリッドアプリケーションソフトウェア), [`PWA（Progressive Web Apps：プログレッシブウェブアプリ）`](glossary/syllabus_tsuiho_ver4_0.md#pwa（progressive-web-appsプログレッシブウェブアプリ）), [`User-Agent`](glossary/syllabus_tsuiho_ver4_0.md#user-agent), [`パーミッション要求`](glossary/syllabus_tsuiho_ver4_0.md#パーミッション要求), [`端末仕様（ディスプレイサイズほか）の多様性への対応`](glossary/syllabus_tsuiho_ver4_0.md#端末仕様（ディスプレイサイズほか）の多様性への対応), [`アプリケーションソフトウェア動作中の圏外時・着信時の対応`](glossary/syllabus_tsuiho_ver4_0.md#アプリケーションソフトウェア動作中の圏外時着信時の対応), [`アプリケーションソフトウェア審査`](glossary/syllabus_tsuiho_ver4_0.md#アプリケーションソフトウェア審査), [`アプリケーションソフトウェア配布`](glossary/syllabus_tsuiho_ver4_0.md#アプリケーションソフトウェア配布)
 
 
 ##### （2）構造化手法
@@ -2178,7 +2178,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 守を容易にするために構造化手法が用いられること，構造化手法の考え方，特徴，手順，効
 果，留意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `階層構造化`, `段階的詳細化`, `構造化チャート`, `状態遷移図`, `HIPO（Hierarchy plus Input Process Output）`, `DFD`, `ソフトウェア構造`
+    [`階層構造化`](glossary/syllabus_tsuiho_ver4_0.md#階層構造化), [`段階的詳細化`](glossary/syllabus_tsuiho_ver4_0.md#段階的詳細化), [`構造化チャート`](glossary/syllabus_tsuiho_ver4_0.md#構造化チャート), [`状態遷移図`](glossary/syllabus_tsuiho_ver4_0.md#状態遷移図), [`HIPO（Hierarchy plus Input Process Output）`](glossary/syllabus_tsuiho_ver4_0.md#hipo（hierarchy-plus-input-process-output）), [`DFD`](glossary/syllabus_tsuiho_ver4_0.md#dfd), [`ソフトウェア構造`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア構造)
 
 
 ##### （3）形式手法
@@ -2188,7 +2188,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 点をおいていること，その仕様記述言語である VDM-SL（Vienna Development Method Specification Language）
 ，VDM++の考え方，特徴を理解する。
   - **用語例・キーワード (全網羅)**:
-    `モデル検査`, `VDMTools`, `Z言語`, `SPIN`
+    [`モデル検査`](glossary/syllabus_tsuiho_ver4_0.md#モデル検査), [`VDMTools`](glossary/syllabus_tsuiho_ver4_0.md#vdmtools), [`Z言語`](glossary/syllabus_tsuiho_ver4_0.md#z言語), [`SPIN`](glossary/syllabus_tsuiho_ver4_0.md#spin)
 
 
 ##### （4）開発プロセス
@@ -2199,7 +2199,7 @@ JIS X 25010で規定されているシステム及びソフトウェア製品の
 SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプロセス）の目的と
 全体像を理解する。
   - **用語例・キーワード (全網羅)**:
-    `JIS X 0160`, `JIS X 0170`, `プロセス`, `アクティビティ`, `タスク`, `合意プロセス`, `組織のプロジェクトイネーブリングプロセス`, `テクニカルマネジメントプロセス`, `テクニカルプロセス`, `プロセス修整（Tailoring）`, `完全適合`, `修整適合`, `SLCPJCF（共通フレーム）`
+    [`JIS X 0160`](glossary/syllabus_tsuiho_ver4_0.md#jis-x-0160), [`JIS X 0170`](glossary/syllabus_tsuiho_ver4_0.md#jis-x-0170), [`プロセス`](glossary/syllabus_tsuiho_ver4_0.md#プロセス), [`アクティビティ`](glossary/syllabus_tsuiho_ver4_0.md#アクティビティ), [`タスク`](glossary/syllabus_tsuiho_ver4_0.md#タスク), [`合意プロセス`](glossary/syllabus_tsuiho_ver4_0.md#合意プロセス), [`組織のプロジェクトイネーブリングプロセス`](glossary/syllabus_tsuiho_ver4_0.md#組織のプロジェクトイネーブリングプロセス), [`テクニカルマネジメントプロセス`](glossary/syllabus_tsuiho_ver4_0.md#テクニカルマネジメントプロセス), [`テクニカルプロセス`](glossary/syllabus_tsuiho_ver4_0.md#テクニカルプロセス), [`プロセス修整（Tailoring）`](glossary/syllabus_tsuiho_ver4_0.md#プロセス修整（tailoring）), [`完全適合`](glossary/syllabus_tsuiho_ver4_0.md#完全適合), [`修整適合`](glossary/syllabus_tsuiho_ver4_0.md#修整適合), [`SLCPJCF（共通フレーム）`](glossary/syllabus_tsuiho_ver4_0.md#slcpjcf（共通フレーム）)
 
 
 ###### ② プロセス成熟度
@@ -2209,7 +2209,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 の能力を 6段階で定義して進化の道筋を示した能力水準や進化レベルの内容，より高次の
 レベルに達するために必要な方策を理解する。
   - **用語例・キーワード (全網羅)**:
-    `JIS X 33001`, `JIS X 33020`, `組織の標準プロセス`, `プロセス改善`, `不完全なプロセス`, `実施されたプロセス`, `管理されたプロセス`, `確立されたプロセス`, `予測可能なプロセス`, `革新しているプロセス`, `CMMI`
+    [`JIS X 33001`](glossary/syllabus_tsuiho_ver4_0.md#jis-x-33001), [`JIS X 33020`](glossary/syllabus_tsuiho_ver4_0.md#jis-x-33020), [`組織の標準プロセス`](glossary/syllabus_tsuiho_ver4_0.md#組織の標準プロセス), [`プロセス改善`](glossary/syllabus_tsuiho_ver4_0.md#プロセス改善), [`不完全なプロセス`](glossary/syllabus_tsuiho_ver4_0.md#不完全なプロセス), [`実施されたプロセス`](glossary/syllabus_tsuiho_ver4_0.md#実施されたプロセス), [`管理されたプロセス`](glossary/syllabus_tsuiho_ver4_0.md#管理されたプロセス), [`確立されたプロセス`](glossary/syllabus_tsuiho_ver4_0.md#確立されたプロセス), [`予測可能なプロセス`](glossary/syllabus_tsuiho_ver4_0.md#予測可能なプロセス), [`革新しているプロセス`](glossary/syllabus_tsuiho_ver4_0.md#革新しているプロセス), [`CMMI`](glossary/syllabus_tsuiho_ver4_0.md#cmmi)
 
 
 #### 🔹 2. 知的財産適用管理
@@ -2226,7 +2226,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 開発するソフトウェアの著作権の帰属の考え方を理解し，プログラムを外注する場合の留
 意事項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `プログラムの著作者`, `職務著作`
+    [`プログラムの著作者`](glossary/syllabus_tsuiho_ver4_0.md#プログラムの著作者), [`職務著作`](glossary/syllabus_tsuiho_ver4_0.md#職務著作)
 
 
 ##### （2）特許管理
@@ -2235,7 +2235,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 発時に他者のもつ特許を利用する必要が生じた場合は，使用許諾を受ける必要があることを
 理解する。
   - **用語例・キーワード (全網羅)**:
-    `特許権`, `専用実施権`, `通常実施権`
+    [`特許権`](glossary/syllabus_tsuiho_ver4_0.md#特許権), [`専用実施権`](glossary/syllabus_tsuiho_ver4_0.md#専用実施権), [`通常実施権`](glossary/syllabus_tsuiho_ver4_0.md#通常実施権)
 
 
 ##### （3）ライセンス管理
@@ -2244,7 +2244,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 合はライセンスを受ける必要があること，獲得したライセンスについては使用実態や使用人
 数がライセンス契約で託された内容を超えないよう管理する必要があることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `ライセンサー`, `ライセンシー`
+    [`ライセンサー`](glossary/syllabus_tsuiho_ver4_0.md#ライセンサー), [`ライセンシー`](glossary/syllabus_tsuiho_ver4_0.md#ライセンシー)
 
 
 ##### （4）技術的保護
@@ -2252,7 +2252,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 ソフトウェアやコンテンツなどの知的財産を技術的に保護する手法の特徴，効果，留意事
 項を理解する。
   - **用語例・キーワード (全網羅)**:
-    `コピーガード`, `DRM`, `アクティベーション`, `CPRM`, `AACS`
+    [`コピーガード`](glossary/syllabus_tsuiho_ver4_0.md#コピーガード), [`DRM`](glossary/syllabus_tsuiho_ver4_0.md#drm), [`アクティベーション`](glossary/syllabus_tsuiho_ver4_0.md#アクティベーション), [`CPRM`](glossary/syllabus_tsuiho_ver4_0.md#cprm), [`AACS`](glossary/syllabus_tsuiho_ver4_0.md#aacs)
 
 
 #### 🔹 3. 開発環境管理
@@ -2266,7 +2266,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 効率的な開発のためには，開発用ハードウェア，ソフトウェア，ネットワーク，シミュレ
 ーターなどの開発ツールを開発要件に合わせて準備することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `構成品目`, `ソフトウェアライセンス`, `SCM（Source Code Management：ソースコ ード管理）`, `ステージング環境`
+    [`構成品目`](glossary/syllabus_tsuiho_ver4_0.md#構成品目), [`ソフトウェアライセンス`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアライセンス), [`SCM（Source Code Management：ソースコ ード管理）`](glossary/syllabus_tsuiho_ver4_0.md#scm（source-code-managementソースコ-ード管理）), [`ステージング環境`](glossary/syllabus_tsuiho_ver4_0.md#ステージング環境)
 
 
 ##### （2）管理対象
@@ -2277,7 +2277,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 効率的な開発のためには，コンピュータ資源，開発支援ツールなど適切な開発環境の準
 備が必要であること，また資源の稼働状況を適切に把握，管理することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `資源管理`, `運用管理`
+    [`資源管理`](glossary/syllabus_tsuiho_ver4_0.md#資源管理), [`運用管理`](glossary/syllabus_tsuiho_ver4_0.md#運用管理)
 
 
 ###### ② 設計データ管理
@@ -2287,7 +2287,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 ータは，誰がいつ何の目的で利用したのか，不適切な持出しや改ざんがないかなどを厳重
 に管理することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `更新履歴管理`, `アクセス権管理`, `検索`, `リポジトリ`
+    [`更新履歴管理`](glossary/syllabus_tsuiho_ver4_0.md#更新履歴管理), [`アクセス権管理`](glossary/syllabus_tsuiho_ver4_0.md#アクセス権管理), [`検索`](glossary/syllabus_tsuiho_ver4_0.md#検索), [`リポジトリ`](glossary/syllabus_tsuiho_ver4_0.md#リポジトリ)
 
 
 ###### ③ ツール管理
@@ -2298,7 +2298,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 のソフトウェアの信頼性に影響を及ぼすおそれがあるので，使用するツールやバージョン
 の統一などツールを管理することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `構成品目`, `バージョン管理`
+    [`構成品目`](glossary/syllabus_tsuiho_ver4_0.md#構成品目), [`バージョン管理`](glossary/syllabus_tsuiho_ver4_0.md#バージョン管理)
 
 
 ###### ④ ライセンス管理
@@ -2308,7 +2308,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 ル数と保有ライセンス数を照合確認するなど，適正に使用しているかどうかを確認するこ
 とを理解する。
   - **用語例・キーワード (全網羅)**:
-    `不正コピー`, `バージョン管理`, `棚卸`
+    [`不正コピー`](glossary/syllabus_tsuiho_ver4_0.md#不正コピー), [`バージョン管理`](glossary/syllabus_tsuiho_ver4_0.md#バージョン管理), [`棚卸`](glossary/syllabus_tsuiho_ver4_0.md#棚卸)
 
 
 #### 🔹 4. 構成管理・変更管理
@@ -2323,7 +2323,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 という構成識別体系を確立し，その構成識別体系の管理の方法を明らかにした上で管理を行
 うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `ソフトウェア構成管理`, `ソフトウェア構成品目`, `SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプロセス）`, `構成管理計画`, `ベースライン`, `SBOM（Software Bill of Materials）`
+    [`ソフトウェア構成管理`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア構成管理), [`ソフトウェア構成品目`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア構成品目), [`SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプロセス）`](glossary/syllabus_tsuiho_ver4_0.md#slcp（software-life-cycle-processソフトウェアライフサイクルプロセス）), [`構成管理計画`](glossary/syllabus_tsuiho_ver4_0.md#構成管理計画), [`ベースライン`](glossary/syllabus_tsuiho_ver4_0.md#ベースライン), [`SBOM（Software Bill of Materials）`](glossary/syllabus_tsuiho_ver4_0.md#sbom（software-bill-of-materials）)
 
 
 ##### （2）変更管理
@@ -2340,7 +2340,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 ソフトウェア構成品目の機能的な完全性と物理的な完全性を決定，保証することである
 こと，及びその必要性を理解する。
   - **用語例・キーワード (全網羅)**:
-    `一貫性`, `正確性`
+    [`一貫性`](glossary/syllabus_tsuiho_ver4_0.md#一貫性), [`正確性`](glossary/syllabus_tsuiho_ver4_0.md#正確性)
 
 
 ###### ③ リリース管理及び出荷
@@ -2349,7 +2349,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 の出荷などの手続を行うこと，ソフトウェアのコードや文書はソフトウェアの寿命のある
 間保守することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `バージョン管理`, `保管期間`
+    [`バージョン管理`](glossary/syllabus_tsuiho_ver4_0.md#バージョン管理), [`保管期間`](glossary/syllabus_tsuiho_ver4_0.md#保管期間)
 
 
 # 🌐 マネジメント系
@@ -2375,7 +2375,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 及び改善のための組織の活動及び資源を，指揮し，管理する，一連の能力及びプロセスであ
 ることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `サービス`, `サービスコンポーネント`, `サービス品質`, `サービスマネジメント`, `サ ービスライフサイクルの段階（計画立案`, `設計`, `移行`, `提供`, `改善）`
+    [`サービス`](glossary/syllabus_tsuiho_ver4_0.md#サービス), [`サービスコンポーネント`](glossary/syllabus_tsuiho_ver4_0.md#サービスコンポーネント), [`サービス品質`](glossary/syllabus_tsuiho_ver4_0.md#サービス品質), [`サービスマネジメント`](glossary/syllabus_tsuiho_ver4_0.md#サービスマネジメント), [`サ ービスライフサイクルの段階（計画立案`](glossary/syllabus_tsuiho_ver4_0.md#サ-ービスライフサイクルの段階（計画立案), [`設計`](glossary/syllabus_tsuiho_ver4_0.md#設計), [`移行`](glossary/syllabus_tsuiho_ver4_0.md#移行), [`提供`](glossary/syllabus_tsuiho_ver4_0.md#提供), [`改善）`](glossary/syllabus_tsuiho_ver4_0.md#改善）)
 
 
 ##### （2）サービスマネジメントシステムの確立，実施，維持及び継続的改善
@@ -2383,7 +2383,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 サービスマネジメントシステムを確立し，実施し，維持し，継続的に改善するための組織
 に対する要求事項について，JISで規定していることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `サービスマネジメントシステム`, `サービスの要求事項`, `顧客`, `サービス提供者`, `JIS Q 20000の規格群（ISO/IEC 20000シリーズ）`
+    [`サービスマネジメントシステム`](glossary/syllabus_tsuiho_ver4_0.md#サービスマネジメントシステム), [`サービスの要求事項`](glossary/syllabus_tsuiho_ver4_0.md#サービスの要求事項), [`顧客`](glossary/syllabus_tsuiho_ver4_0.md#顧客), [`サービス提供者`](glossary/syllabus_tsuiho_ver4_0.md#サービス提供者), [`JIS Q 20000の規格群（ISO/IEC 20000シリーズ）`](glossary/syllabus_tsuiho_ver4_0.md#jis-q-20000の規格群（iso-iec-20000シリーズ）)
 
 
 ##### （3）ITIL
@@ -2398,7 +2398,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 たパフォーマンスを特定した，組織と顧客との間の合意文書であることを理解する。また，
 代表的なサービスレベル目標を理解する。
   - **用語例・キーワード (全網羅)**:
-    `SLA`, `SLO`, `SLI`, `サービス可用性`, `信頼性`, `サービス時間`, `応答時間`, `サービス及びサービスマネジメントシステムのパフォーマンス`
+    [`SLA`](glossary/syllabus_tsuiho_ver4_0.md#sla), [`SLO`](glossary/syllabus_tsuiho_ver4_0.md#slo), [`SLI`](glossary/syllabus_tsuiho_ver4_0.md#sli), [`サービス可用性`](glossary/syllabus_tsuiho_ver4_0.md#サービス可用性), [`信頼性`](glossary/syllabus_tsuiho_ver4_0.md#信頼性), [`サービス時間`](glossary/syllabus_tsuiho_ver4_0.md#サービス時間), [`応答時間`](glossary/syllabus_tsuiho_ver4_0.md#応答時間), [`サービス及びサービスマネジメントシステムのパフォーマンス`](glossary/syllabus_tsuiho_ver4_0.md#サービス及びサービスマネジメントシステムのパフォーマンス)
 
 
 #### 🔹 2. サービスマネジメントシステムの計画及び運用
@@ -2413,7 +2413,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 サービスマネジメントシステム及びサービスの運用を支援するために必要な知識を決定し，
 維持することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `PDCA`, `JIS Q 9001`, `マネジメントシステム`, `資源`, `力量`, `認識`, `コミュニケーション`, `文書化した情報`, `知識`
+    [`PDCA`](glossary/syllabus_tsuiho_ver4_0.md#pdca), [`JIS Q 9001`](glossary/syllabus_tsuiho_ver4_0.md#jis-q-9001), [`マネジメントシステム`](glossary/syllabus_tsuiho_ver4_0.md#マネジメントシステム), [`資源`](glossary/syllabus_tsuiho_ver4_0.md#資源), [`力量`](glossary/syllabus_tsuiho_ver4_0.md#力量), [`認識`](glossary/syllabus_tsuiho_ver4_0.md#認識), [`コミュニケーション`](glossary/syllabus_tsuiho_ver4_0.md#コミュニケーション), [`文書化した情報`](glossary/syllabus_tsuiho_ver4_0.md#文書化した情報), [`知識`](glossary/syllabus_tsuiho_ver4_0.md#知識)
 
 
 ##### （2）サービスの計画
@@ -2421,7 +2421,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 サービスの要求事項を決定し，利用可能な資源を考慮して，変更要求及び新規サービス又
 はサービス変更の提案の優先順位付けを行う。
   - **用語例・キーワード (全網羅)**:
-    `サービスの要求事項`, `変更要求`, `サービスポートフォリオ`, `サービス・パイプライン`, `サービスの状態（計画中`, `開発中`, `稼働中`, `廃止など）`
+    [`サービスの要求事項`](glossary/syllabus_tsuiho_ver4_0.md#サービスの要求事項), [`変更要求`](glossary/syllabus_tsuiho_ver4_0.md#変更要求), [`サービスポートフォリオ`](glossary/syllabus_tsuiho_ver4_0.md#サービスポートフォリオ), [`サービス・パイプライン`](glossary/syllabus_tsuiho_ver4_0.md#サービスパイプライン), [`サービスの状態（計画中`](glossary/syllabus_tsuiho_ver4_0.md#サービスの状態（計画中), [`開発中`](glossary/syllabus_tsuiho_ver4_0.md#開発中), [`稼働中`](glossary/syllabus_tsuiho_ver4_0.md#稼働中), [`廃止など）`](glossary/syllabus_tsuiho_ver4_0.md#廃止など）)
 
 
 ##### （3）サービスカタログ管理
@@ -2431,7 +2431,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 を理解する。また，顧客，利用者及びその他の利害関係者に対して，サービスカタログの適
 切な部分へのアクセスを提供することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `サービスカタログ`
+    [`サービスカタログ`](glossary/syllabus_tsuiho_ver4_0.md#サービスカタログ)
 
 
 ##### （4）資産管理
@@ -2439,7 +2439,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 サービスマネジメントシステムの計画における要求事項及び義務を満たすため，サービス
 を提供するために使用されている資産を確実に管理することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `資産管理（ITアセットマネジメント（ITAM：IT asset management） ）`, `ソフトウェアアセットマネジメント（SAM）`, `ライセンスマネジメント`, `JIS X 0164シリー ズ`
+    [`資産管理（ITアセットマネジメント（ITAM：IT asset management） ）`](glossary/syllabus_tsuiho_ver4_0.md#資産管理（itアセットマネジメント（itamit-asset-management）-）), [`ソフトウェアアセットマネジメント（SAM）`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェアアセットマネジメント（sam）), [`ライセンスマネジメント`](glossary/syllabus_tsuiho_ver4_0.md#ライセンスマネジメント), [`JIS X 0164シリー ズ`](glossary/syllabus_tsuiho_ver4_0.md#jis-x-0164シリー-ズ)
 
 
 ##### （5）構成管理
@@ -2448,7 +2448,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 ことを理解する。また，定められた間隔で，構成情報の正確性を検証すること，必要に応じ
 て，構成情報を他のサービスマネジメント活動で利用可能とすることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `構成管理`, `構成品目（CI）`, `構成情報`, `文書化された構成情報（例：構成管理デ ータベース（CMDB））`, `版（バージョン）`, `構成ベースライン`, `構成識別`, `構成監査`
+    [`構成管理`](glossary/syllabus_tsuiho_ver4_0.md#構成管理), [`構成品目（CI）`](glossary/syllabus_tsuiho_ver4_0.md#構成品目（ci）), [`構成情報`](glossary/syllabus_tsuiho_ver4_0.md#構成情報), [`文書化された構成情報（例：構成管理デ ータベース（CMDB））`](glossary/syllabus_tsuiho_ver4_0.md#文書化された構成情報（例構成管理デ-ータベース（cmdb））), [`版（バージョン）`](glossary/syllabus_tsuiho_ver4_0.md#版（バージョン）), [`構成ベースライン`](glossary/syllabus_tsuiho_ver4_0.md#構成ベースライン), [`構成識別`](glossary/syllabus_tsuiho_ver4_0.md#構成識別), [`構成監査`](glossary/syllabus_tsuiho_ver4_0.md#構成監査)
 
 
 ##### （6）事業関係管理
@@ -2458,7 +2458,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 サービスの成果のレビューを行い，サービス満足度の測定，サービスに対する苦情の管理を
 行うことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `事業関係管理`, `顧客関係`, `顧客満足`, `サービス満足度`, `苦情`
+    [`事業関係管理`](glossary/syllabus_tsuiho_ver4_0.md#事業関係管理), [`顧客関係`](glossary/syllabus_tsuiho_ver4_0.md#顧客関係), [`顧客満足`](glossary/syllabus_tsuiho_ver4_0.md#顧客満足), [`サービス満足度`](glossary/syllabus_tsuiho_ver4_0.md#サービス満足度), [`苦情`](glossary/syllabus_tsuiho_ver4_0.md#苦情)
 
 
 ##### （7）サービスレベル管理
@@ -2467,7 +2467,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 て SLAを合意することを理解する。また，あらかじめ決められた間隔で，サービスレベル目
 標に照らしたパフォーマンス及び実績の周期的な変化を監視し，レビューし，報告する。
   - **用語例・キーワード (全網羅)**:
-    `サービスレベル管理`, `サービスレベル目標`, `サービスレベル指標`, `パフォーマンス`
+    [`サービスレベル管理`](glossary/syllabus_tsuiho_ver4_0.md#サービスレベル管理), [`サービスレベル目標`](glossary/syllabus_tsuiho_ver4_0.md#サービスレベル目標), [`サービスレベル指標`](glossary/syllabus_tsuiho_ver4_0.md#サービスレベル指標), [`パフォーマンス`](glossary/syllabus_tsuiho_ver4_0.md#パフォーマンス)
 
 
 ##### （8）供給者管理
@@ -2477,7 +2477,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 スレベル目標及び関係者間のインタフェースを定義するための合意文書を作成し，合意する
 こと，及びパフォーマンスを監視することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `供給者管理`, `外部供給者`, `内部供給者`, `供給者として行動する顧客`, `契約`, `アウトソーシングの利用`, `SaaS`, `PaaS`, `IaaSなどのクラウドサービスの利用`
+    [`供給者管理`](glossary/syllabus_tsuiho_ver4_0.md#供給者管理), [`外部供給者`](glossary/syllabus_tsuiho_ver4_0.md#外部供給者), [`内部供給者`](glossary/syllabus_tsuiho_ver4_0.md#内部供給者), [`供給者として行動する顧客`](glossary/syllabus_tsuiho_ver4_0.md#供給者として行動する顧客), [`契約`](glossary/syllabus_tsuiho_ver4_0.md#契約), [`アウトソーシングの利用`](glossary/syllabus_tsuiho_ver4_0.md#アウトソーシングの利用), [`SaaS`](glossary/syllabus_tsuiho_ver4_0.md#saas), [`PaaS`](glossary/syllabus_tsuiho_ver4_0.md#paas), [`IaaSなどのクラウドサービスの利用`](glossary/syllabus_tsuiho_ver4_0.md#iaasなどのクラウドサービスの利用)
 
 
 ##### （9）サービスの予算業務及び会計業務
@@ -2487,7 +2487,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 らかじめ定めた間隔で，予算に照らして実際の費用を監視・報告し，財務予測をレビューし，
 費用を管理することなどを理解する。
   - **用語例・キーワード (全網羅)**:
-    `サービスの予算業務及び会計業務`, `財務管理`, `予算業務`, `会計業務`, `課金`, `配賦`, `費用`, `直接費`, `間接費`, `減価償却`, `総所有費用（TCO）`
+    [`サービスの予算業務及び会計業務`](glossary/syllabus_tsuiho_ver4_0.md#サービスの予算業務及び会計業務), [`財務管理`](glossary/syllabus_tsuiho_ver4_0.md#財務管理), [`予算業務`](glossary/syllabus_tsuiho_ver4_0.md#予算業務), [`会計業務`](glossary/syllabus_tsuiho_ver4_0.md#会計業務), [`課金`](glossary/syllabus_tsuiho_ver4_0.md#課金), [`配賦`](glossary/syllabus_tsuiho_ver4_0.md#配賦), [`費用`](glossary/syllabus_tsuiho_ver4_0.md#費用), [`直接費`](glossary/syllabus_tsuiho_ver4_0.md#直接費), [`間接費`](glossary/syllabus_tsuiho_ver4_0.md#間接費), [`減価償却`](glossary/syllabus_tsuiho_ver4_0.md#減価償却), [`総所有費用（TCO）`](glossary/syllabus_tsuiho_ver4_0.md#総所有費用（tco）)
 
 
 ##### （10）需要管理
@@ -2495,7 +2495,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 あらかじめ定めた間隔で，サービスに対する現在の需要を決定し，将来の需要を予測する
 こと，及びサービスの需要及び消費を監視し報告することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `需要`, `需要管理`, `需要予測`
+    [`需要`](glossary/syllabus_tsuiho_ver4_0.md#需要), [`需要管理`](glossary/syllabus_tsuiho_ver4_0.md#需要管理), [`需要予測`](glossary/syllabus_tsuiho_ver4_0.md#需要予測)
 
 
 ##### （11）容量・能力管理
@@ -2505,7 +2505,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 容量・能力及びパフォーマンスデータを分析し，パフォーマンスを改善するための機会を特
 定することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `容量・能力（キャパシティ）`, `容量・能力計画`, `容量・能力管理`, `監視`, `しきい （閾）値`, `管理指標（CPU使用率`, `メモリ使用率`, `ディスク使用率`, `ネットワー ク使用率ほか）`
+    [`容量・能力（キャパシティ）`](glossary/syllabus_tsuiho_ver4_0.md#容量能力（キャパシティ）), [`容量・能力計画`](glossary/syllabus_tsuiho_ver4_0.md#容量能力計画), [`容量・能力管理`](glossary/syllabus_tsuiho_ver4_0.md#容量能力管理), [`監視`](glossary/syllabus_tsuiho_ver4_0.md#監視), [`しきい （閾）値`](glossary/syllabus_tsuiho_ver4_0.md#しきい-（閾）値), [`管理指標（CPU使用率`](glossary/syllabus_tsuiho_ver4_0.md#管理指標（cpu使用率), [`メモリ使用率`](glossary/syllabus_tsuiho_ver4_0.md#メモリ使用率), [`ディスク使用率`](glossary/syllabus_tsuiho_ver4_0.md#ディスク使用率), [`ネットワー ク使用率ほか）`](glossary/syllabus_tsuiho_ver4_0.md#ネットワー-ク使用率ほか）)
 
 
 ##### （12）変更管理
@@ -2516,7 +2516,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 カテゴリ及び管理の方法，及び顧客又はサービスに重大な影響を及ぼす可能性のある変
 更を判断する基準を定義することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `変更管理`, `変更管理方針`
+    [`変更管理`](glossary/syllabus_tsuiho_ver4_0.md#変更管理), [`変更管理方針`](glossary/syllabus_tsuiho_ver4_0.md#変更管理方針)
 
 ②
 変更管理の開始
@@ -2524,7 +2524,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 “サービスの設計及び移行”又は“変更管理の活動”のどちらで変更の管理を行うかを
 決定することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `変更要求（RFC）`
+    [`変更要求（RFC）`](glossary/syllabus_tsuiho_ver4_0.md#変更要求（rfc）)
 
 ③
 変更管理の活動
@@ -2535,7 +2535,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 - ・成功しなかった変更を戻す又は修正する活動を計画し，可能であれば試験する。
 - ・試験された変更は，リリース及び展開管理に送られ，稼働環境に展開する。
   - **用語例・キーワード (全網羅)**:
-    `優先度`, `変更のカテゴリー（標準変更`, `通常の変更`, `プロジェクト変更`, `緊急変更など）`, `ロールバック（切り戻し）`, `変更諮問委員会（CAB）`, `変更実施後のレビュー（PIR）`
+    [`優先度`](glossary/syllabus_tsuiho_ver4_0.md#優先度), [`変更のカテゴリー（標準変更`](glossary/syllabus_tsuiho_ver4_0.md#変更のカテゴリー（標準変更), [`通常の変更`](glossary/syllabus_tsuiho_ver4_0.md#通常の変更), [`プロジェクト変更`](glossary/syllabus_tsuiho_ver4_0.md#プロジェクト変更), [`緊急変更など）`](glossary/syllabus_tsuiho_ver4_0.md#緊急変更など）), [`ロールバック（切り戻し）`](glossary/syllabus_tsuiho_ver4_0.md#ロールバック（切り戻し）), [`変更諮問委員会（CAB）`](glossary/syllabus_tsuiho_ver4_0.md#変更諮問委員会（cab）), [`変更実施後のレビュー（PIR）`](glossary/syllabus_tsuiho_ver4_0.md#変更実施後のレビュー（pir）)
 
 
 ##### （13）サービスの設計及び移行
@@ -2545,7 +2545,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 サービス計画で決定した新規サービス又はサービス変更についてのサービスの要求事
 項を用いて，新規サービス又はサービス変更の計画を立案することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `サービスの設計及び移行`, `新規サービス又はサービス変更の計画`
+    [`サービスの設計及び移行`](glossary/syllabus_tsuiho_ver4_0.md#サービスの設計及び移行), [`新規サービス又はサービス変更の計画`](glossary/syllabus_tsuiho_ver4_0.md#新規サービス又はサービス変更の計画)
 
 ②
 設計
@@ -2553,7 +2553,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 とを理解する。また，SLA，サービスカタログ，契約書などの新設，更新を行うことを
 理解する。
   - **用語例・キーワード (全網羅)**:
-    `サービス受入れ基準`, `設計・開発`, `サービス設計書`, `非機能要件`
+    [`サービス受入れ基準`](glossary/syllabus_tsuiho_ver4_0.md#サービス受入れ基準), [`設計・開発`](glossary/syllabus_tsuiho_ver4_0.md#設計開発), [`サービス設計書`](glossary/syllabus_tsuiho_ver4_0.md#サービス設計書), [`非機能要件`](glossary/syllabus_tsuiho_ver4_0.md#非機能要件)
 
 ③
 構築及び移行
@@ -2561,7 +2561,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 証するために，試験することを理解する。リリース及び展開管理を使用して，新規サー
 ビス又はサービス変更を，稼働環境に展開することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `構築`, `継続的インテグレーション`, `移行`, `運用サービス基準`, `業務及びシステムの移行`, `移行計画`, `移行リハーサル`, `移行判断`, `移行の通知`, `移行評価`, `運用テスト`, `受入れテスト`, `運用引継ぎ`
+    [`構築`](glossary/syllabus_tsuiho_ver4_0.md#構築), [`継続的インテグレーション`](glossary/syllabus_tsuiho_ver4_0.md#継続的インテグレーション), [`移行`](glossary/syllabus_tsuiho_ver4_0.md#移行), [`運用サービス基準`](glossary/syllabus_tsuiho_ver4_0.md#運用サービス基準), [`業務及びシステムの移行`](glossary/syllabus_tsuiho_ver4_0.md#業務及びシステムの移行), [`移行計画`](glossary/syllabus_tsuiho_ver4_0.md#移行計画), [`移行リハーサル`](glossary/syllabus_tsuiho_ver4_0.md#移行リハーサル), [`移行判断`](glossary/syllabus_tsuiho_ver4_0.md#移行判断), [`移行の通知`](glossary/syllabus_tsuiho_ver4_0.md#移行の通知), [`移行評価`](glossary/syllabus_tsuiho_ver4_0.md#移行評価), [`運用テスト`](glossary/syllabus_tsuiho_ver4_0.md#運用テスト), [`受入れテスト`](glossary/syllabus_tsuiho_ver4_0.md#受入れテスト), [`運用引継ぎ`](glossary/syllabus_tsuiho_ver4_0.md#運用引継ぎ)
 
 
 ##### （14）リリース及び展開管理
@@ -2572,7 +2572,7 @@ SLCP（Software Life Cycle Process：ソフトウェアライフサイクルプ�
 は失敗に関する情報や将来のリリース期日についての情報を，適切な他のサービスマネジメ
 ント活動のために利用可能にすることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `リリース及び展開管理`, `リリース`, `緊急リリースを含むリリースの種類`, `展開`, `リリースの受入れ基準`, `受入れ試験環境`, `稼働環境`, `リリースの配付`, `継続的デリバリー`, `継続的デプロイ`
+    [`リリース及び展開管理`](glossary/syllabus_tsuiho_ver4_0.md#リリース及び展開管理), [`リリース`](glossary/syllabus_tsuiho_ver4_0.md#リリース), [`緊急リリースを含むリリースの種類`](glossary/syllabus_tsuiho_ver4_0.md#緊急リリースを含むリリースの種類), [`展開`](glossary/syllabus_tsuiho_ver4_0.md#展開), [`リリースの受入れ基準`](glossary/syllabus_tsuiho_ver4_0.md#リリースの受入れ基準), [`受入れ試験環境`](glossary/syllabus_tsuiho_ver4_0.md#受入れ試験環境), [`稼働環境`](glossary/syllabus_tsuiho_ver4_0.md#稼働環境), [`リリースの配付`](glossary/syllabus_tsuiho_ver4_0.md#リリースの配付), [`継続的デリバリー`](glossary/syllabus_tsuiho_ver4_0.md#継続的デリバリー), [`継続的デプロイ`](glossary/syllabus_tsuiho_ver4_0.md#継続的デプロイ)
 
 
 ##### （15）インシデント管理
@@ -2589,10 +2589,10 @@ d) 解決する。
 e) 終了する。
 ②
   - **用語例・キーワード (全網羅)**:
-    `インシデント管理`, `インシデント`, `記録`, `分類`, `影響`, `緊急度`, `優先順位`, `解決目標時間`, `エスカレーション（機能的エスカレーション`, `階層的エスカレーション）`, `解決`, `回避策`, `終了`, `インシデントモデル重大なインシデントの対応重大なインシデントを特定する基準を決定することを理解する。また`, `重大なインシデントは`, `文書化された手順に従って分類し`, `管理し`, `トップマネジメントに通知することを理解する。`
+    [`インシデント管理`](glossary/syllabus_tsuiho_ver4_0.md#インシデント管理), [`インシデント`](glossary/syllabus_tsuiho_ver4_0.md#インシデント), [`記録`](glossary/syllabus_tsuiho_ver4_0.md#記録), [`分類`](glossary/syllabus_tsuiho_ver4_0.md#分類), [`影響`](glossary/syllabus_tsuiho_ver4_0.md#影響), [`緊急度`](glossary/syllabus_tsuiho_ver4_0.md#緊急度), [`優先順位`](glossary/syllabus_tsuiho_ver4_0.md#優先順位), [`解決目標時間`](glossary/syllabus_tsuiho_ver4_0.md#解決目標時間), [`エスカレーション（機能的エスカレーション`](glossary/syllabus_tsuiho_ver4_0.md#エスカレーション（機能的エスカレーション), [`階層的エスカレーション）`](glossary/syllabus_tsuiho_ver4_0.md#階層的エスカレーション）), [`解決`](glossary/syllabus_tsuiho_ver4_0.md#解決), [`回避策`](glossary/syllabus_tsuiho_ver4_0.md#回避策), [`終了`](glossary/syllabus_tsuiho_ver4_0.md#終了), [`インシデントモデル重大なインシデントの対応重大なインシデントを特定する基準を決定することを理解する。また`](glossary/syllabus_tsuiho_ver4_0.md#インシデントモデル重大なインシデントの対応重大なインシデントを特定する基準を決定することを理解するまた), [`重大なインシデントは`](glossary/syllabus_tsuiho_ver4_0.md#重大なインシデントは), [`文書化された手順に従って分類し`](glossary/syllabus_tsuiho_ver4_0.md#文書化された手順に従って分類し), [`管理し`](glossary/syllabus_tsuiho_ver4_0.md#管理し), [`トップマネジメントに通知することを理解する。`](glossary/syllabus_tsuiho_ver4_0.md#トップマネジメントに通知することを理解する)
 
   - **用語例・キーワード (全網羅)**:
-    `重大なインシデント`
+    [`重大なインシデント`](glossary/syllabus_tsuiho_ver4_0.md#重大なインシデント)
 
 
 ##### （16）サービス要求管理
@@ -2605,7 +2605,7 @@ d) 終了する。
 また，サービス要求の実現に関する指示書を，サービス要求の実現に関与する要員が利用
 できるようにすることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `サービス要求管理`, `サービス要求`, `記録`, `分類`, `緊急度`, `優先順位`, `実現`, `終了`, `サービス要求の実現に関する指示書`
+    [`サービス要求管理`](glossary/syllabus_tsuiho_ver4_0.md#サービス要求管理), [`サービス要求`](glossary/syllabus_tsuiho_ver4_0.md#サービス要求), [`記録`](glossary/syllabus_tsuiho_ver4_0.md#記録), [`分類`](glossary/syllabus_tsuiho_ver4_0.md#分類), [`緊急度`](glossary/syllabus_tsuiho_ver4_0.md#緊急度), [`優先順位`](glossary/syllabus_tsuiho_ver4_0.md#優先順位), [`実現`](glossary/syllabus_tsuiho_ver4_0.md#実現), [`終了`](glossary/syllabus_tsuiho_ver4_0.md#終了), [`サービス要求の実現に関する指示書`](glossary/syllabus_tsuiho_ver4_0.md#サービス要求の実現に関する指示書)
 
 
 ##### （17）問題管理
@@ -2622,7 +2622,7 @@ e) 終了する。
 原因が特定されたが問題が恒久的に解決されていない場合，問題がサービスに及ぼす影響を
 低減又は除去するための処置を決定すること，及び既知の誤りを記録することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `問題管理`, `問題`, `傾向分析`, `根本原因`, `予防処置`, `記録`, `分類`, `優先順位付け`, `エスカレーション`, `解決`, `終了`, `既知の誤り`, `回避策`, `解決策`
+    [`問題管理`](glossary/syllabus_tsuiho_ver4_0.md#問題管理), [`問題`](glossary/syllabus_tsuiho_ver4_0.md#問題), [`傾向分析`](glossary/syllabus_tsuiho_ver4_0.md#傾向分析), [`根本原因`](glossary/syllabus_tsuiho_ver4_0.md#根本原因), [`予防処置`](glossary/syllabus_tsuiho_ver4_0.md#予防処置), [`記録`](glossary/syllabus_tsuiho_ver4_0.md#記録), [`分類`](glossary/syllabus_tsuiho_ver4_0.md#分類), [`優先順位付け`](glossary/syllabus_tsuiho_ver4_0.md#優先順位付け), [`エスカレーション`](glossary/syllabus_tsuiho_ver4_0.md#エスカレーション), [`解決`](glossary/syllabus_tsuiho_ver4_0.md#解決), [`終了`](glossary/syllabus_tsuiho_ver4_0.md#終了), [`既知の誤り`](glossary/syllabus_tsuiho_ver4_0.md#既知の誤り), [`回避策`](glossary/syllabus_tsuiho_ver4_0.md#回避策), [`解決策`](glossary/syllabus_tsuiho_ver4_0.md#解決策)
 
 
 ##### （18）サービス可用性管理
@@ -2631,7 +2631,7 @@ e) 終了する。
 目標を決定することを理解する。また，サービス可用性を監視し，結果を記録し，目標と比
 較すること，計画外のサービス可用性の喪失を調査し，必要な処置をとることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `サービス可用性管理`, `サービス可用性`, `信頼性`, `回復力`, `保守性`, `MTBF`, `MTTR`, `MTBSI`, `MTRS`
+    [`サービス可用性管理`](glossary/syllabus_tsuiho_ver4_0.md#サービス可用性管理), [`サービス可用性`](glossary/syllabus_tsuiho_ver4_0.md#サービス可用性), [`信頼性`](glossary/syllabus_tsuiho_ver4_0.md#信頼性), [`回復力`](glossary/syllabus_tsuiho_ver4_0.md#回復力), [`保守性`](glossary/syllabus_tsuiho_ver4_0.md#保守性), [`MTBF`](glossary/syllabus_tsuiho_ver4_0.md#mtbf), [`MTTR`](glossary/syllabus_tsuiho_ver4_0.md#mttr), [`MTBSI`](glossary/syllabus_tsuiho_ver4_0.md#mtbsi), [`MTRS`](glossary/syllabus_tsuiho_ver4_0.md#mtrs)
 
 
 ##### （19）サービス継続管理
@@ -2641,7 +2641,7 @@ e) 終了する。
 あらかじめ定めた間隔又はサービス環境に重大な変更があった場合，試験することを理解す
 る。
   - **用語例・キーワード (全網羅)**:
-    `事業継続計画（BCP）`, `サービス継続計画`, `復旧`, `RTO（目標復旧時間）`, `RPO（目標復旧時点）`, `RLO（目標復旧レベル）`, `コールドスタンバイ`, `ホットスタンバイ`, `ウォームスタンバイ`
+    [`事業継続計画（BCP）`](glossary/syllabus_tsuiho_ver4_0.md#事業継続計画（bcp）), [`サービス継続計画`](glossary/syllabus_tsuiho_ver4_0.md#サービス継続計画), [`復旧`](glossary/syllabus_tsuiho_ver4_0.md#復旧), [`RTO（目標復旧時間）`](glossary/syllabus_tsuiho_ver4_0.md#rto（目標復旧時間）), [`RPO（目標復旧時点）`](glossary/syllabus_tsuiho_ver4_0.md#rpo（目標復旧時点）), [`RLO（目標復旧レベル）`](glossary/syllabus_tsuiho_ver4_0.md#rlo（目標復旧レベル）), [`コールドスタンバイ`](glossary/syllabus_tsuiho_ver4_0.md#コールドスタンバイ), [`ホットスタンバイ`](glossary/syllabus_tsuiho_ver4_0.md#ホットスタンバイ), [`ウォームスタンバイ`](glossary/syllabus_tsuiho_ver4_0.md#ウォームスタンバイ)
 
 
 ##### （20）情報セキュリティ管理
@@ -2670,7 +2670,7 @@ e) 終了する。
 報告の要求事項及び目的を決定し，サービスマネジメントシステム及びサービスのパ
 フォーマンス並びに有効性に関する報告を作成することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `サービスの報告`, `パフォーマンス`, `有効性`, `傾向情報`
+    [`サービスの報告`](glossary/syllabus_tsuiho_ver4_0.md#サービスの報告), [`パフォーマンス`](glossary/syllabus_tsuiho_ver4_0.md#パフォーマンス), [`有効性`](glossary/syllabus_tsuiho_ver4_0.md#有効性), [`傾向情報`](glossary/syllabus_tsuiho_ver4_0.md#傾向情報)
 
 
 ##### （2）改善
@@ -2681,7 +2681,7 @@ e) 終了する。
 よって起こった結果に対処すること，不適合が再発しないようにするための処置の必要
 性を評価すること，必要な処置を実施することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `不適合`, `是正処置`
+    [`不適合`](glossary/syllabus_tsuiho_ver4_0.md#不適合), [`是正処置`](glossary/syllabus_tsuiho_ver4_0.md#是正処置)
 
 ②
 継続的改善
@@ -2689,7 +2689,7 @@ e) 終了する。
 改善すること，改善の機会に対して適用する評価基準を決定すること，承認された改善
 活動を管理することを理解する。
   - **用語例・キーワード (全網羅)**:
-    `継続的改善`, `プロセス能力水準（プロセス成熟度水準）`, `プロセスアセスメント`, `ギャップ分析`, `CSF（Critical Success Factors：重要成功要因）`, `KPI（Key Performance Indicator：重要業績評価指標）`, `KGI（Key Goal Indicator：重要目標達成指標）`
+    [`継続的改善`](glossary/syllabus_tsuiho_ver4_0.md#継続的改善), [`プロセス能力水準（プロセス成熟度水準）`](glossary/syllabus_tsuiho_ver4_0.md#プロセス能力水準（プロセス成熟度水準）), [`プロセスアセスメント`](glossary/syllabus_tsuiho_ver4_0.md#プロセスアセスメント), [`ギャップ分析`](glossary/syllabus_tsuiho_ver4_0.md#ギャップ分析), [`CSF（Critical Success Factors：重要成功要因）`](glossary/syllabus_tsuiho_ver4_0.md#csf（critical-success-factors重要成功要因）), [`KPI（Key Performance Indicator：重要業績評価指標）`](glossary/syllabus_tsuiho_ver4_0.md#kpi（key-performance-indicator重要業績評価指標）), [`KGI（Key Goal Indicator：重要目標達成指標）`](glossary/syllabus_tsuiho_ver4_0.md#kgi（key-goal-indicator重要目標達成指標）)
 
 
 #### 🔹 4. サービスの運用
@@ -2710,7 +2710,7 @@ e) 終了する。
 ニュアル，作成した成果物，及びシステムを運用する要員を，組織の目標と適合するように
 維持，運用する一連の活動であることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `システム運用管理`, `運用の資源管理（要員などの人的資源及びハードウェア`, `ソフトウェア`, `データ`, `ネットワークなどインフラストラクチャの技術的資源）`, `仮想環境の運用管理`, `ジョブの管理`, `データ管理`, `利用者の管理`, `コールドスタ ート`, `ウォームスタート`, `AIOps`
+    [`システム運用管理`](glossary/syllabus_tsuiho_ver4_0.md#システム運用管理), [`運用の資源管理（要員などの人的資源及びハードウェア`](glossary/syllabus_tsuiho_ver4_0.md#運用の資源管理（要員などの人的資源及びハードウェア), [`ソフトウェア`](glossary/syllabus_tsuiho_ver4_0.md#ソフトウェア), [`データ`](glossary/syllabus_tsuiho_ver4_0.md#データ), [`ネットワークなどインフラストラクチャの技術的資源）`](glossary/syllabus_tsuiho_ver4_0.md#ネットワークなどインフラストラクチャの技術的資源）), [`仮想環境の運用管理`](glossary/syllabus_tsuiho_ver4_0.md#仮想環境の運用管理), [`ジョブの管理`](glossary/syllabus_tsuiho_ver4_0.md#ジョブの管理), [`データ管理`](glossary/syllabus_tsuiho_ver4_0.md#データ管理), [`利用者の管理`](glossary/syllabus_tsuiho_ver4_0.md#利用者の管理), [`コールドスタ ート`](glossary/syllabus_tsuiho_ver4_0.md#コールドスタ-ート), [`ウォームスタート`](glossary/syllabus_tsuiho_ver4_0.md#ウォームスタート), [`AIOps`](glossary/syllabus_tsuiho_ver4_0.md#aiops)
 
 
 ##### （2）運用オペレーション
@@ -2720,7 +2720,7 @@ e) 終了する。
 ることを理解する。また，ジョブスケジューリング，アウトプット管理，バックアップとい
 った運用オペレーションの内容を理解する。
   - **用語例・キーワード (全網羅)**:
-    `運用オペレーション`, `スケジュール設計`, `ジョブスケジューリング`, `バックアップ`, `システムの監視と操作`, `アウトプットの管理`, `ジョブの復旧と再実行`, `運用支援ツール（監視ツール`, `診断ツール）`, `業務運用マニュアル`
+    [`運用オペレーション`](glossary/syllabus_tsuiho_ver4_0.md#運用オペレーション), [`スケジュール設計`](glossary/syllabus_tsuiho_ver4_0.md#スケジュール設計), [`ジョブスケジューリング`](glossary/syllabus_tsuiho_ver4_0.md#ジョブスケジューリング), [`バックアップ`](glossary/syllabus_tsuiho_ver4_0.md#バックアップ), [`システムの監視と操作`](glossary/syllabus_tsuiho_ver4_0.md#システムの監視と操作), [`アウトプットの管理`](glossary/syllabus_tsuiho_ver4_0.md#アウトプットの管理), [`ジョブの復旧と再実行`](glossary/syllabus_tsuiho_ver4_0.md#ジョブの復旧と再実行), [`運用支援ツール（監視ツール`](glossary/syllabus_tsuiho_ver4_0.md#運用支援ツール（監視ツール), [`診断ツール）`](glossary/syllabus_tsuiho_ver4_0.md#診断ツール）), [`業務運用マニュアル`](glossary/syllabus_tsuiho_ver4_0.md#業務運用マニュアル)
 
 
 ##### （3）サービスデスク
@@ -2729,7 +2729,7 @@ e) 終了する。
 適切な部署への引継ぎ，対応結果の記録，記録の管理などを行う一連の活動であることを
 理解する。
   - **用語例・キーワード (全網羅)**:
-    `サービスデスク`, `SPOC（Single Point Of Contact）`, `コールセンター`, `CTI （Computer Telephony Integration）`, `FAQ`, `応対マニュアル`, `知識ベース`, `一次サポート`, `二次サポート及び三次サポート`, `サービスデスク組織の構造（ローカルサービスデスク`, `バーチャルサービスデスク`, `中央サービスデスク`, `フォロ ー・ザ・サン）`, `AIの活用（チャットボットなど）`
+    [`サービスデスク`](glossary/syllabus_tsuiho_ver4_0.md#サービスデスク), [`SPOC（Single Point Of Contact）`](glossary/syllabus_tsuiho_ver4_0.md#spoc（single-point-of-contact）), [`コールセンター`](glossary/syllabus_tsuiho_ver4_0.md#コールセンター), [`CTI （Computer Telephony Integration）`](glossary/syllabus_tsuiho_ver4_0.md#cti-（computer-telephony-integration）), [`FAQ`](glossary/syllabus_tsuiho_ver4_0.md#faq), [`応対マニュアル`](glossary/syllabus_tsuiho_ver4_0.md#応対マニュアル), [`知識ベース`](glossary/syllabus_tsuiho_ver4_0.md#知識ベース), [`一次サポート`](glossary/syllabus_tsuiho_ver4_0.md#一次サポート), [`二次サポート及び三次サポート`](glossary/syllabus_tsuiho_ver4_0.md#二次サポート及び三次サポート), [`サービスデスク組織の構造（ローカルサービスデスク`](glossary/syllabus_tsuiho_ver4_0.md#サービスデスク組織の構造（ローカルサービスデスク), [`バーチャルサービスデスク`](glossary/syllabus_tsuiho_ver4_0.md#バーチャルサービスデスク), [`中央サービスデスク`](glossary/syllabus_tsuiho_ver4_0.md#中央サービスデスク), [`フォロ ー・ザ・サン）`](glossary/syllabus_tsuiho_ver4_0.md#フォロ-ーザサン）), [`AIの活用（チャットボットなど）`](glossary/syllabus_tsuiho_ver4_0.md#aiの活用（チャットボットなど）)
 
 
 #### 🔹 5. ファシリティマネジメント
@@ -2747,7 +2747,7 @@ e) 終了する。
 コンピュータシステムやネットワークの施設基盤の設計，構築の管理及び運営における
 ファシリティマネジメントの目的，考え方を理解する。
   - **用語例・キーワード (全網羅)**:
-    `ファシリティマネジメント`
+    [`ファシリティマネジメント`](glossary/syllabus_tsuiho_ver4_0.md#ファシリティマネジメント)
 
 
 ###### ② 施設管理・設備管理
@@ -2756,7 +2756,7 @@ e) 終了する。
 費用の削減，快適性，安全性などを確保することを理解する。また，電源や回線の冗長化，
 バックアップ環境の整備，電源，空調設備，建物などのアクセス管理などを理解する。
   - **用語例・キーワード (全網羅)**:
-    `施設管理`, `建物管理（免震装置`, `アレスタなどのサージ防護デバイス`, `防災防犯設備`, `安全管理関連知識ほか）`, `消火設備（泡消火設備`, `ハロゲン化物消火設備`, `不活性ガス消火設備など）`, `電気設備（UPS`, `自家発電設備ほか）`, `空調設備（空調機器`, `エアフロー`, `コールドアイル`, `ホットアイルほか）`, `通信設備（MDF`, `IDFほか）`, `データファシリティスタンダード（ティア（Tier）基準）`
+    [`施設管理`](glossary/syllabus_tsuiho_ver4_0.md#施設管理), [`建物管理（免震装置`](glossary/syllabus_tsuiho_ver4_0.md#建物管理（免震装置), [`アレスタなどのサージ防護デバイス`](glossary/syllabus_tsuiho_ver4_0.md#アレスタなどのサージ防護デバイス), [`防災防犯設備`](glossary/syllabus_tsuiho_ver4_0.md#防災防犯設備), [`安全管理関連知識ほか）`](glossary/syllabus_tsuiho_ver4_0.md#安全管理関連知識ほか）), [`消火設備（泡消火設備`](glossary/syllabus_tsuiho_ver4_0.md#消火設備（泡消火設備), [`ハロゲン化物消火設備`](glossary/syllabus_tsuiho_ver4_0.md#ハロゲン化物消火設備), [`不活性ガス消火設備など）`](glossary/syllabus_tsuiho_ver4_0.md#不活性ガス消火設備など）), [`電気設備（UPS`](glossary/syllabus_tsuiho_ver4_0.md#電気設備（ups), [`自家発電設備ほか）`](glossary/syllabus_tsuiho_ver4_0.md#自家発電設備ほか）), [`空調設備（空調機器`](glossary/syllabus_tsuiho_ver4_0.md#空調設備（空調機器), [`エアフロー`](glossary/syllabus_tsuiho_ver4_0.md#エアフロー), [`コールドアイル`](glossary/syllabus_tsuiho_ver4_0.md#コールドアイル), [`ホットアイルほか）`](glossary/syllabus_tsuiho_ver4_0.md#ホットアイルほか）), [`通信設備（MDF`](glossary/syllabus_tsuiho_ver4_0.md#通信設備（mdf), [`IDFほか）`](glossary/syllabus_tsuiho_ver4_0.md#idfほか）), [`データファシリティスタンダード（ティア（Tier）基準）`](glossary/syllabus_tsuiho_ver4_0.md#データファシリティスタンダード（ティア（tier）基準）)
 
 
 ###### ③ 施設・設備の維持保全
@@ -2765,7 +2765,7 @@ e) 終了する。
 ンテナンス費，修繕費などを含めたライフサイクル費用の削減を目指して，修繕計画を立
 案し，施設・設備の長寿命化を図るなど，施設・設備の維持保全の一連の活動を理解する。
   - **用語例・キーワード (全網羅)**:
-    `施設・設備の維持保全`
+    [`施設・設備の維持保全`](glossary/syllabus_tsuiho_ver4_0.md#施設設備の維持保全)
 
 
 ###### ④ 環境側面
@@ -2773,7 +2773,7 @@ e) 終了する。
 地球環境に配慮した IT製品やインフラストラクチャ，環境保護や資源の有効活用につな
 がる IT利用を理解する。
   - **用語例・キーワード (全網羅)**:
-    `環境側面`, `グリーン IT`, `データセンター総合エネルギー効率指標（GEC`, `PUE`, `ITEE`, `ITEUほか）`, `ZEB（net Zero Energy Building）`, `LEED（Leadership in Energy & Environmental Design）認証`, `GHGプロトコル`
+    [`環境側面`](glossary/syllabus_tsuiho_ver4_0.md#環境側面), [`グリーン IT`](glossary/syllabus_tsuiho_ver4_0.md#グリーン-it), [`データセンター総合エネルギー効率指標（GEC`](glossary/syllabus_tsuiho_ver4_0.md#データセンター総合エネルギー効率指標（gec), [`PUE`](glossary/syllabus_tsuiho_ver4_0.md#pue), [`ITEE`](glossary/syllabus_tsuiho_ver4_0.md#itee), [`ITEUほか）`](glossary/syllabus_tsuiho_ver4_0.md#iteuほか）), [`ZEB（net Zero Energy Building）`](glossary/syllabus_tsuiho_ver4_0.md#zeb（net-zero-energy-building）), [`LEED（Leadership in Energy & Environmental Design）認証`](glossary/syllabus_tsuiho_ver4_0.md#leed（leadership-in-energy--environmental-design）認証), [`GHGプロトコル`](glossary/syllabus_tsuiho_ver4_0.md#ghgプロトコル)
 
 
 ## 📌 大分類 6：サービスマネジメント
@@ -2797,7 +2797,7 @@ e) 終了する。
 
 情報システムに関係する監査の目的，種類を理解する。
   - **用語例・キーワード (全網羅)**:
-    `会計監査`, `業務監査`, `システム監査`, `情報セキュリティ監査`, `法定監査`, `任意監査`, `内部監査`, `外部監査`, `立入監査`, `保証を目的としたシステム監査`, `助言を目的としたシステム監査`
+    [`会計監査`](glossary/syllabus_tsuiho_ver4_0.md#会計監査), [`業務監査`](glossary/syllabus_tsuiho_ver4_0.md#業務監査), [`システム監査`](glossary/syllabus_tsuiho_ver4_0.md#システム監査), [`情報セキュリティ監査`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ監査), [`法定監査`](glossary/syllabus_tsuiho_ver4_0.md#法定監査), [`任意監査`](glossary/syllabus_tsuiho_ver4_0.md#任意監査), [`内部監査`](glossary/syllabus_tsuiho_ver4_0.md#内部監査), [`外部監査`](glossary/syllabus_tsuiho_ver4_0.md#外部監査), [`立入監査`](glossary/syllabus_tsuiho_ver4_0.md#立入監査), [`保証を目的としたシステム監査`](glossary/syllabus_tsuiho_ver4_0.md#保証を目的としたシステム監査), [`助言を目的としたシステム監査`](glossary/syllabus_tsuiho_ver4_0.md#助言を目的としたシステム監査)
 
 
 ##### （2）システム監査の目的と手順
@@ -2811,7 +2811,7 @@ e) 終了する。
 果的かつ効率的な遂行，さらにはそれらの変革を支援し，組織体の目標達成に寄与するこ
 と，及び利害関係者に対する説明責任を果たすことであることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `システム監査人の権限と責任等`, `監査人の倫理`, `誠実性`, `専門的能力の保持と向上`, `正当な注意と秘密の保持`, `システム監査に対するニーズの把握と品質の確保`, `監査の独立性と客観性の保持`, `情報システムの利活用に係る検証・評価`
+    [`システム監査人の権限と責任等`](glossary/syllabus_tsuiho_ver4_0.md#システム監査人の権限と責任等), [`監査人の倫理`](glossary/syllabus_tsuiho_ver4_0.md#監査人の倫理), [`誠実性`](glossary/syllabus_tsuiho_ver4_0.md#誠実性), [`専門的能力の保持と向上`](glossary/syllabus_tsuiho_ver4_0.md#専門的能力の保持と向上), [`正当な注意と秘密の保持`](glossary/syllabus_tsuiho_ver4_0.md#正当な注意と秘密の保持), [`システム監査に対するニーズの把握と品質の確保`](glossary/syllabus_tsuiho_ver4_0.md#システム監査に対するニーズの把握と品質の確保), [`監査の独立性と客観性の保持`](glossary/syllabus_tsuiho_ver4_0.md#監査の独立性と客観性の保持), [`情報システムの利活用に係る検証・評価`](glossary/syllabus_tsuiho_ver4_0.md#情報システムの利活用に係る検証評価)
 
 
 ###### ② システム監査の流れ
@@ -2819,7 +2819,7 @@ e) 終了する。
 システム監査は，監査計画の策定，監査の実施，監査報告とフォローアップという流れ
 で行われることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `リスクの評価に基づく監査計画の策定（リスクアプローチ）`, `監査証拠の入手と評価`, `監査調書の作成と保管`, `監査の結論の形成`, `監査報告書の作成と報告`, `改善提案のフォローアップ`
+    [`リスクの評価に基づく監査計画の策定（リスクアプローチ）`](glossary/syllabus_tsuiho_ver4_0.md#リスクの評価に基づく監査計画の策定（リスクアプローチ）), [`監査証拠の入手と評価`](glossary/syllabus_tsuiho_ver4_0.md#監査証拠の入手と評価), [`監査調書の作成と保管`](glossary/syllabus_tsuiho_ver4_0.md#監査調書の作成と保管), [`監査の結論の形成`](glossary/syllabus_tsuiho_ver4_0.md#監査の結論の形成), [`監査報告書の作成と報告`](glossary/syllabus_tsuiho_ver4_0.md#監査報告書の作成と報告), [`改善提案のフォローアップ`](glossary/syllabus_tsuiho_ver4_0.md#改善提案のフォローアップ)
 
 
 ##### （3）システム監査の対象業務
@@ -2830,7 +2830,7 @@ e) 終了する。
 ことから，各プロセスで評価する内容を理解する。また，システム監査を実施する目的及び
 対象範囲は，監査規程，契約書などの文書，監査計画によって明確に定めることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `企画プロセスの妥当性`, `開発・運用・保守プロセスの信頼性・効率性`, `リスク`, `コントロール`, `準拠性`, `適時性`, `情報セキュリティ`, `内部監査規程`, `システム監査委託契約書`
+    [`企画プロセスの妥当性`](glossary/syllabus_tsuiho_ver4_0.md#企画プロセスの妥当性), [`開発・運用・保守プロセスの信頼性・効率性`](glossary/syllabus_tsuiho_ver4_0.md#開発運用保守プロセスの信頼性効率性), [`リスク`](glossary/syllabus_tsuiho_ver4_0.md#リスク), [`コントロール`](glossary/syllabus_tsuiho_ver4_0.md#コントロール), [`準拠性`](glossary/syllabus_tsuiho_ver4_0.md#準拠性), [`適時性`](glossary/syllabus_tsuiho_ver4_0.md#適時性), [`情報セキュリティ`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ), [`内部監査規程`](glossary/syllabus_tsuiho_ver4_0.md#内部監査規程), [`システム監査委託契約書`](glossary/syllabus_tsuiho_ver4_0.md#システム監査委託契約書)
 
 
 ##### （4）システム監査計画の策定
@@ -2839,7 +2839,7 @@ e) 終了する。
 囲，監査の方法，実施時期，実施体制，実施スケジュールなどの監査計画を策定することを
 理解する。
   - **用語例・キーワード (全網羅)**:
-    `中長期計画`, `年度計画`, `個別監査計画`
+    [`中長期計画`](glossary/syllabus_tsuiho_ver4_0.md#中長期計画), [`年度計画`](glossary/syllabus_tsuiho_ver4_0.md#年度計画), [`個別監査計画`](glossary/syllabus_tsuiho_ver4_0.md#個別監査計画)
 
 
 ##### （5）システム監査の実施（予備調査，本調査，評価，結論）
@@ -2853,7 +2853,7 @@ e) 終了する。
 
 システム監査手続で利用される，代表的なシステム監査技法を理解する。
   - **用語例・キーワード (全網羅)**:
-    `チェックリスト法`, `ドキュメントレビュー法（文書及び記録の収集・閲覧）`, `インタビュー法（質問書・調査票）`, `ウォークスルー法`, `突合・照合法`, `現地調査法`, `統計的サンプリング`
+    [`チェックリスト法`](glossary/syllabus_tsuiho_ver4_0.md#チェックリスト法), [`ドキュメントレビュー法（文書及び記録の収集・閲覧）`](glossary/syllabus_tsuiho_ver4_0.md#ドキュメントレビュー法（文書及び記録の収集閲覧）), [`インタビュー法（質問書・調査票）`](glossary/syllabus_tsuiho_ver4_0.md#インタビュー法（質問書調査票）), [`ウォークスルー法`](glossary/syllabus_tsuiho_ver4_0.md#ウォークスルー法), [`突合・照合法`](glossary/syllabus_tsuiho_ver4_0.md#突合照合法), [`現地調査法`](glossary/syllabus_tsuiho_ver4_0.md#現地調査法), [`統計的サンプリング`](glossary/syllabus_tsuiho_ver4_0.md#統計的サンプリング)
 
 
 ###### ③ コンピュータ支援監査技法（CAAT）
@@ -2861,7 +2861,7 @@ e) 終了する。
 監査ソフトウェアなどを利用してシステム監査を実施する，コンピュータ支援監査技法
 を理解する。
   - **用語例・キーワード (全網羅)**:
-    `監査ソフトウェア`, `データサンプリング`, `データ分析`, `テストデータ法`, `監査モジュール法`, `ペネトレーションテスト法`
+    [`監査ソフトウェア`](glossary/syllabus_tsuiho_ver4_0.md#監査ソフトウェア), [`データサンプリング`](glossary/syllabus_tsuiho_ver4_0.md#データサンプリング), [`データ分析`](glossary/syllabus_tsuiho_ver4_0.md#データ分析), [`テストデータ法`](glossary/syllabus_tsuiho_ver4_0.md#テストデータ法), [`監査モジュール法`](glossary/syllabus_tsuiho_ver4_0.md#監査モジュール法), [`ペネトレーションテスト法`](glossary/syllabus_tsuiho_ver4_0.md#ペネトレーションテスト法)
 
 
 ###### ④ 監査証拠の入手と評価
@@ -2873,7 +2873,7 @@ e) 終了する。
 しいことを理解する。また，監査対応のためだけのドキュメント作成を開発現場に求める
 ような負荷をかけないよう考慮することが望ましいことを理解する。
   - **用語例・キーワード (全網羅)**:
-    `インシデント報告書`, `進捗管理資料`, `運用・保守の記録`, `アクセスログ`, `トランザクションログ`, `監査証跡`, `監査証拠`
+    [`インシデント報告書`](glossary/syllabus_tsuiho_ver4_0.md#インシデント報告書), [`進捗管理資料`](glossary/syllabus_tsuiho_ver4_0.md#進捗管理資料), [`運用・保守の記録`](glossary/syllabus_tsuiho_ver4_0.md#運用保守の記録), [`アクセスログ`](glossary/syllabus_tsuiho_ver4_0.md#アクセスログ), [`トランザクションログ`](glossary/syllabus_tsuiho_ver4_0.md#トランザクションログ), [`監査証跡`](glossary/syllabus_tsuiho_ver4_0.md#監査証跡), [`監査証拠`](glossary/syllabus_tsuiho_ver4_0.md#監査証拠)
 
 
 ###### ⑤ 監査調書の作成と保管
@@ -2887,7 +2887,7 @@ e) 終了する。
 システム監査は，公認会計士による監査，監査役などによる監査，内部監査人による監
 査などと関係があることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `法定監査`, `任意監査`, `金融商品取引法監査`, `会社法監査`, `経営監査`, `業務監査`, `会計監査`, `内部監査`, `外部監査`, `内部監査基準`, `専門職的実施の国際フレームワ ーク（IPPF）`
+    [`法定監査`](glossary/syllabus_tsuiho_ver4_0.md#法定監査), [`任意監査`](glossary/syllabus_tsuiho_ver4_0.md#任意監査), [`金融商品取引法監査`](glossary/syllabus_tsuiho_ver4_0.md#金融商品取引法監査), [`会社法監査`](glossary/syllabus_tsuiho_ver4_0.md#会社法監査), [`経営監査`](glossary/syllabus_tsuiho_ver4_0.md#経営監査), [`業務監査`](glossary/syllabus_tsuiho_ver4_0.md#業務監査), [`会計監査`](glossary/syllabus_tsuiho_ver4_0.md#会計監査), [`内部監査`](glossary/syllabus_tsuiho_ver4_0.md#内部監査), [`外部監査`](glossary/syllabus_tsuiho_ver4_0.md#外部監査), [`内部監査基準`](glossary/syllabus_tsuiho_ver4_0.md#内部監査基準), [`専門職的実施の国際フレームワ ーク（IPPF）`](glossary/syllabus_tsuiho_ver4_0.md#専門職的実施の国際フレームワ-ーク（ippf）)
 
 
 ##### （6）システム監査の報告とフォローアップ
@@ -2897,7 +2897,7 @@ e) 終了する。
 て，所要の措置が適切かつ適時に実施されているかどうかのフォローアップを行うことを理
 解する。
   - **用語例・キーワード (全網羅)**:
-    `システム監査報告書`, `指摘事項`, `保証を目的としたシステム監査`, `助言を目的としたシステム監査`, `改善提案`, `改善計画`, `フォローアップ`, `フォローアップ報告書`
+    [`システム監査報告書`](glossary/syllabus_tsuiho_ver4_0.md#システム監査報告書), [`指摘事項`](glossary/syllabus_tsuiho_ver4_0.md#指摘事項), [`保証を目的としたシステム監査`](glossary/syllabus_tsuiho_ver4_0.md#保証を目的としたシステム監査), [`助言を目的としたシステム監査`](glossary/syllabus_tsuiho_ver4_0.md#助言を目的としたシステム監査), [`改善提案`](glossary/syllabus_tsuiho_ver4_0.md#改善提案), [`改善計画`](glossary/syllabus_tsuiho_ver4_0.md#改善計画), [`フォローアップ`](glossary/syllabus_tsuiho_ver4_0.md#フォローアップ), [`フォローアップ報告書`](glossary/syllabus_tsuiho_ver4_0.md#フォローアップ報告書)
 
 
 ##### （7）システム監査の体制整備
@@ -2905,7 +2905,7 @@ e) 終了する。
 システム監査に対するニーズを満たしているかどうかを含め，一定の監査品質を確保する
 ための体制の整備・運用が必要であることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `システム監査人の権限と責任などの明確化`, `専門的能力の保持と向上`, `正当な注意と秘密の保持`, `システム監査に対するニーズの把握と品質の確保`, `監査の独立性と客観性の保持`
+    [`システム監査人の権限と責任などの明確化`](glossary/syllabus_tsuiho_ver4_0.md#システム監査人の権限と責任などの明確化), [`専門的能力の保持と向上`](glossary/syllabus_tsuiho_ver4_0.md#専門的能力の保持と向上), [`正当な注意と秘密の保持`](glossary/syllabus_tsuiho_ver4_0.md#正当な注意と秘密の保持), [`システム監査に対するニーズの把握と品質の確保`](glossary/syllabus_tsuiho_ver4_0.md#システム監査に対するニーズの把握と品質の確保), [`監査の独立性と客観性の保持`](glossary/syllabus_tsuiho_ver4_0.md#監査の独立性と客観性の保持)
 
 
 ##### （8）その他のシステム関連の監査
@@ -2915,21 +2915,21 @@ e) 終了する。
 
 情報セキュリティ監査の目的，役割を理解する。
   - **用語例・キーワード (全網羅)**:
-    `情報セキュリティ監査基準`, `情報セキュリティ管理基準`, `クラウド情報セキュリティ管理基準`
+    [`情報セキュリティ監査基準`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ監査基準), [`情報セキュリティ管理基準`](glossary/syllabus_tsuiho_ver4_0.md#情報セキュリティ管理基準), [`クラウド情報セキュリティ管理基準`](glossary/syllabus_tsuiho_ver4_0.md#クラウド情報セキュリティ管理基準)
 
 
 ###### ② 個人情報保護監査
 
 個人情報保護監査の目的，役割を理解する。
   - **用語例・キーワード (全網羅)**:
-    `個人情報の保護`, `情報漏えいリスク`
+    [`個人情報の保護`](glossary/syllabus_tsuiho_ver4_0.md#個人情報の保護), [`情報漏えいリスク`](glossary/syllabus_tsuiho_ver4_0.md#情報漏えいリスク)
 
 
 ###### ③ コンプライアンス監査
 
 コンプライアンス監査の目的，役割を理解する。
   - **用語例・キーワード (全網羅)**:
-    `行動指針`, `職務分掌`, `倫理`, `透明性`
+    [`行動指針`](glossary/syllabus_tsuiho_ver4_0.md#行動指針), [`職務分掌`](glossary/syllabus_tsuiho_ver4_0.md#職務分掌), [`倫理`](glossary/syllabus_tsuiho_ver4_0.md#倫理), [`透明性`](glossary/syllabus_tsuiho_ver4_0.md#透明性)
 
 
 ###### ④ マネジメントシステム監査
@@ -2937,7 +2937,7 @@ e) 終了する。
 品質，環境，サービス，情報セキュリティ，事業継続などの各種マネジメントシステム
 を対象とするマネジメントシステム監査の目的，役割を理解する。
   - **用語例・キーワード (全網羅)**:
-    `JIS Q 19011（マネジメントシステム監査のための指針）`
+    [`JIS Q 19011（マネジメントシステム監査のための指針）`](glossary/syllabus_tsuiho_ver4_0.md#jis-q-19011（マネジメントシステム監査のための指針）)
 
 
 ##### （9）情報システムに関係する監査関連法規
@@ -2950,7 +2950,7 @@ e) 終了する。
 な参照基準として，経済産業省が策定したシステム管理基準などを用いることができるこ
 とを理解する。
   - **用語例・キーワード (全網羅)**:
-    `監査人の倫理`, `システム監査上の判断尺度`, `監査の独立性と客観性の保持`, `正当な注意と秘密の保持`
+    [`監査人の倫理`](glossary/syllabus_tsuiho_ver4_0.md#監査人の倫理), [`システム監査上の判断尺度`](glossary/syllabus_tsuiho_ver4_0.md#システム監査上の判断尺度), [`監査の独立性と客観性の保持`](glossary/syllabus_tsuiho_ver4_0.md#監査の独立性と客観性の保持), [`正当な注意と秘密の保持`](glossary/syllabus_tsuiho_ver4_0.md#正当な注意と秘密の保持)
 
 
 ###### ② 情報セキュリティ関連法規
@@ -2958,7 +2958,7 @@ e) 終了する。
 情報セキュリティに関する法律，情報セキュリティ監査の対象組織，情報システムに及
 ぼす影響を理解する。
   - **用語例・キーワード (全網羅)**:
-    `刑法（電磁的記録不正作出及び供用`, `電子計算機損壊等業務妨害`, `電子計算機使用詐欺）`, `不正アクセス行為の禁止等に関する法律`, `電子計算機を使用して作成する国税関係帳簿書類の保存方法等の特例に関する法律`, `電子署名及び認証業務に関する法律`, `JIS Q 27001`, `ISMS適合性評価制度`
+    [`刑法（電磁的記録不正作出及び供用`](glossary/syllabus_tsuiho_ver4_0.md#刑法（電磁的記録不正作出及び供用), [`電子計算機損壊等業務妨害`](glossary/syllabus_tsuiho_ver4_0.md#電子計算機損壊等業務妨害), [`電子計算機使用詐欺）`](glossary/syllabus_tsuiho_ver4_0.md#電子計算機使用詐欺）), [`不正アクセス行為の禁止等に関する法律`](glossary/syllabus_tsuiho_ver4_0.md#不正アクセス行為の禁止等に関する法律), [`電子計算機を使用して作成する国税関係帳簿書類の保存方法等の特例に関する法律`](glossary/syllabus_tsuiho_ver4_0.md#電子計算機を使用して作成する国税関係帳簿書類の保存方法等の特例に関する法律), [`電子署名及び認証業務に関する法律`](glossary/syllabus_tsuiho_ver4_0.md#電子署名及び認証業務に関する法律), [`JIS Q 27001`](glossary/syllabus_tsuiho_ver4_0.md#jis-q-27001), [`ISMS適合性評価制度`](glossary/syllabus_tsuiho_ver4_0.md#isms適合性評価制度)
 
 
 ###### ③ 個人情報保護関連法規
@@ -2966,7 +2966,7 @@ e) 終了する。
 個人情報保護に関する法律やガイドライン，個人情報保護におけるシステム監査の役割
 を理解する。
   - **用語例・キーワード (全網羅)**:
-    `個人情報保護法`, `マイナンバー法（行政手続における特定の個人を識別するための番号の利用等に関する法律）`, `特定個人情報の適正な取扱いに関するガイドライン`, `JIS Q 15001`, `プライバシーマーク制度`
+    [`個人情報保護法`](glossary/syllabus_tsuiho_ver4_0.md#個人情報保護法), [`マイナンバー法（行政手続における特定の個人を識別するための番号の利用等に関する法律）`](glossary/syllabus_tsuiho_ver4_0.md#マイナンバー法（行政手続における特定の個人を識別するための番号の利用等に関する法律）), [`特定個人情報の適正な取扱いに関するガイドライン`](glossary/syllabus_tsuiho_ver4_0.md#特定個人情報の適正な取扱いに関するガイドライン), [`JIS Q 15001`](glossary/syllabus_tsuiho_ver4_0.md#jis-q-15001), [`プライバシーマーク制度`](glossary/syllabus_tsuiho_ver4_0.md#プライバシーマーク制度)
 
 
 ###### ④ 知的財産権関連法規
@@ -2974,7 +2974,7 @@ e) 終了する。
 知的財産権に関する法律，システム監査では権利侵害行為を指摘する必要性があること
 を理解する。
   - **用語例・キーワード (全網羅)**:
-    `著作権法`, `特許法`, `不正競争防止法`, `営業秘密管理指針`
+    [`著作権法`](glossary/syllabus_tsuiho_ver4_0.md#著作権法), [`特許法`](glossary/syllabus_tsuiho_ver4_0.md#特許法), [`不正競争防止法`](glossary/syllabus_tsuiho_ver4_0.md#不正競争防止法), [`営業秘密管理指針`](glossary/syllabus_tsuiho_ver4_0.md#営業秘密管理指針)
 
 
 ###### ⑤ 労働関連法規
@@ -2982,14 +2982,14 @@ e) 終了する。
 労働に関する法律，システム監査では法律に照らして労働環境における問題点を指摘す
 る必要があることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `労働基準法`, `労働者派遣法`, `男女雇用機会均等法`
+    [`労働基準法`](glossary/syllabus_tsuiho_ver4_0.md#労働基準法), [`労働者派遣法`](glossary/syllabus_tsuiho_ver4_0.md#労働者派遣法), [`男女雇用機会均等法`](glossary/syllabus_tsuiho_ver4_0.md#男女雇用機会均等法)
 
 
 ###### ⑥ 法定監査関連法規
 
 システム監査は法定監査との連携を図りながら実施する必要があることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `金融商品取引法`, `会社法`
+    [`金融商品取引法`](glossary/syllabus_tsuiho_ver4_0.md#金融商品取引法), [`会社法`](glossary/syllabus_tsuiho_ver4_0.md#会社法)
 
 
 #### 🔹 2. 内部統制
@@ -3005,7 +3005,7 @@ e) 終了する。
 制の確立が必要であることを理解する。また，ITが内部統制に果たす役割，内部統制の六つ
 の基本的要素を理解する。
   - **用語例・キーワード (全網羅)**:
-    `内部統制の限界`, `内部統制報告制度`, `財務報告に係る内部統制の評価及び監査の基準`, `内部統制の基本的要素（統制環境`, `リスクの評価と対応`, `統制活動`, `情報と伝達`, `モニタリング`, `ITへの対応）`, `ITへの対応（IT環境への対応`, `ITの利用`, `ITに係る全般統制`, `ITに係る業務処理統制）`, `システム管理基準追補版（財務報告に係る IT統制ガイダンス）`, `全社的な内部統制`, `業務プロセスの明確化`, `職務分掌`, `実施ルールの設定`, `チェック体制の確立`, `コンプライアンス`, `COSO （Committee of Sponsoring Organizations of the Treadway Commission）フレ ームワーク`, `ERM（全社的リスクマネジメント）`
+    [`内部統制の限界`](glossary/syllabus_tsuiho_ver4_0.md#内部統制の限界), [`内部統制報告制度`](glossary/syllabus_tsuiho_ver4_0.md#内部統制報告制度), [`財務報告に係る内部統制の評価及び監査の基準`](glossary/syllabus_tsuiho_ver4_0.md#財務報告に係る内部統制の評価及び監査の基準), [`内部統制の基本的要素（統制環境`](glossary/syllabus_tsuiho_ver4_0.md#内部統制の基本的要素（統制環境), [`リスクの評価と対応`](glossary/syllabus_tsuiho_ver4_0.md#リスクの評価と対応), [`統制活動`](glossary/syllabus_tsuiho_ver4_0.md#統制活動), [`情報と伝達`](glossary/syllabus_tsuiho_ver4_0.md#情報と伝達), [`モニタリング`](glossary/syllabus_tsuiho_ver4_0.md#モニタリング), [`ITへの対応）`](glossary/syllabus_tsuiho_ver4_0.md#itへの対応）), [`ITへの対応（IT環境への対応`](glossary/syllabus_tsuiho_ver4_0.md#itへの対応（it環境への対応), [`ITの利用`](glossary/syllabus_tsuiho_ver4_0.md#itの利用), [`ITに係る全般統制`](glossary/syllabus_tsuiho_ver4_0.md#itに係る全般統制), [`ITに係る業務処理統制）`](glossary/syllabus_tsuiho_ver4_0.md#itに係る業務処理統制）), [`システム管理基準追補版（財務報告に係る IT統制ガイダンス）`](glossary/syllabus_tsuiho_ver4_0.md#システム管理基準追補版（財務報告に係る-it統制ガイダンス）), [`全社的な内部統制`](glossary/syllabus_tsuiho_ver4_0.md#全社的な内部統制), [`業務プロセスの明確化`](glossary/syllabus_tsuiho_ver4_0.md#業務プロセスの明確化), [`職務分掌`](glossary/syllabus_tsuiho_ver4_0.md#職務分掌), [`実施ルールの設定`](glossary/syllabus_tsuiho_ver4_0.md#実施ルールの設定), [`チェック体制の確立`](glossary/syllabus_tsuiho_ver4_0.md#チェック体制の確立), [`コンプライアンス`](glossary/syllabus_tsuiho_ver4_0.md#コンプライアンス), [`COSO （Committee of Sponsoring Organizations of the Treadway Commission）フレ ームワーク`](glossary/syllabus_tsuiho_ver4_0.md#coso-（committee-of-sponsoring-organizations-of-the-treadway-commission）フレ-ームワーク), [`ERM（全社的リスクマネジメント）`](glossary/syllabus_tsuiho_ver4_0.md#erm（全社的リスクマネジメント）)
 
 
 ##### （2）ITガバナンス
@@ -3017,7 +3017,7 @@ ITガバナンスとは，組織体のガバナンスの構成要素で，取締
 スを実現するための取組を理解する。また，ITガバナンスの評価のために使用されるフレー
 ムワークを理解する。
   - **用語例・キーワード (全網羅)**:
-    `JIS Q 38500`, `CIO（Chief Information Officer：最高情報責任者）`, `CISO（Chief Information Security Officer：最高情報セキュリティ責任者）`, `IT統制`, `デー タガバナンス`, `コーポレートガバナンス`, `COBIT`, `PRM-IT（Process Reference Model for IT）`, `成熟度モデル`
+    [`JIS Q 38500`](glossary/syllabus_tsuiho_ver4_0.md#jis-q-38500), [`CIO（Chief Information Officer：最高情報責任者）`](glossary/syllabus_tsuiho_ver4_0.md#cio（chief-information-officer最高情報責任者）), [`CISO（Chief Information Security Officer：最高情報セキュリティ責任者）`](glossary/syllabus_tsuiho_ver4_0.md#ciso（chief-information-security-officer最高情報セキュリティ責任者）), [`IT統制`](glossary/syllabus_tsuiho_ver4_0.md#it統制), [`デー タガバナンス`](glossary/syllabus_tsuiho_ver4_0.md#デー-タガバナンス), [`コーポレートガバナンス`](glossary/syllabus_tsuiho_ver4_0.md#コーポレートガバナンス), [`COBIT`](glossary/syllabus_tsuiho_ver4_0.md#cobit), [`PRM-IT（Process Reference Model for IT）`](glossary/syllabus_tsuiho_ver4_0.md#prm-it（process-reference-model-for-it）), [`成熟度モデル`](glossary/syllabus_tsuiho_ver4_0.md#成熟度モデル)
 
 
 ##### （3）法令遵守状況の評価・改善
@@ -3027,6 +3027,6 @@ ITガバナンスとは，組織体のガバナンスの構成要素で，取締
 的に評価し，改善していく必要があること，内部統制を整備することが法令遵守の体制を確
 立する上で有効であることを理解する。
   - **用語例・キーワード (全網羅)**:
-    `会社 法`, `金融 商品 取引 法`, `コン プラ イア ンス 監査`, `CSA （ Control Self Assessment：統制自己評価） 情報処理安全確保支援士試験シラバス追補版（科目 A-2） Ver.4.0独立行政法人情報処理推進機構 〒113-8663東京都文京区本駒込 2-28-8文京グリーンコートセンターオフィス 15階 TEL：03-5978-7600（代表） ホームページ：https://www.ipa.go.jp/shiken/`
+    [`会社 法`](glossary/syllabus_tsuiho_ver4_0.md#会社-法), [`金融 商品 取引 法`](glossary/syllabus_tsuiho_ver4_0.md#金融-商品-取引-法), [`コン プラ イア ンス 監査`](glossary/syllabus_tsuiho_ver4_0.md#コン-プラ-イア-ンス-監査), [`CSA （ Control Self Assessment：統制自己評価） 情報処理安全確保支援士試験シラバス追補版（科目 A-2） Ver.4.0独立行政法人情報処理推進機構 〒113-8663東京都文京区本駒込 2-28-8文京グリーンコートセンターオフィス 15階 TEL：03-5978-7600（代表） ホームページ：https://www.ipa.go.jp/shiken/`](glossary/syllabus_tsuiho_ver4_0.md#csa-（-control-self-assessment統制自己評価）-情報処理安全確保支援士試験シラバス追補版（科目-a-2）-ver40独立行政法人情報処理推進機構-113-8663東京都文京区本駒込-2-28-8文京グリーンコートセンターオフィス-15階-tel03-5978-7600（代表）-ホームページhttps-wwwipagojp-shiken-)
 
 2023.12
