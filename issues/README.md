@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 042 | Bug | [CI パイプラインでの package-lock.json 未検出エラーおよび Node.js バージョンの修正](closed/042-fix-ci-package-lock-node-version.md) | 2026-08-05 | [042-fix-ci-package-lock-node-version.md](closed/042-fix-ci-package-lock-node-version.md) |
 | 041 | Docs | [README.md および開発ドキュメントの完全リニューアル (Phase 16)](closed/041-update-readme-documentation.md) | 2026-08-05 | [041-update-readme-documentation.md](closed/041-update-readme-documentation.md) |
 | 040 | Tooling | [トレーサビリティ自動検証スクリプトの追加 (Phase 15)](closed/040-verify-traceability-script.md) | 2026-08-05 | [040-verify-traceability-script.md](closed/040-verify-traceability-script.md) |
 | 039 | Refactor | [JS コードの厳格モジュール化と JSDoc 型定義強化 (Phase 14)](closed/039-refactor-js-modules-jsdoc.md) | 2026-08-05 | [039-refactor-js-modules-jsdoc.md](closed/039-refactor-js-modules-jsdoc.md) |
