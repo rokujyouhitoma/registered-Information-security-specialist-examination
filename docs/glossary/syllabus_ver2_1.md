@@ -1136,6 +1136,16 @@ author: "Information Security Specialist Agent"
 - **シラバス参照**: [3-5 ネットワーク及び機器のセキュリティ管理](../syllabus_detail.md)
 - **📖 個別詳細解説**: [TLS 1.3 の詳細ドキュメントを見る](terms/tls1_3.md)
 
+```mermaid
+sequenceDiagram
+    autonumber
+    Client->>Server: ClientHello (Supported Groups, Key Share)
+    Server->>Client: ServerHello (Key Share, CipherSuite)
+    Server->>Client: {EncryptedExtensions, Certificate, CertVerify, Finished}
+    Client->>Server: {Finished}
+    Note over Client,Server: 1-RTT Handshake Completed (Encrypted Traffic Starts)
+```
+
 #### <a id="ipsec"></a>IPsec
 - **概要**: ネットワーク層（IP層）でデータの暗号化と認証を行い、拠入間VPN（Site-to-Site）やリモートアクセスVPNを実現するセキュリティプロトコル群 (IP Security)。
 - **技術・運用ポイント**: 構成プロトコルとして、認証・改ざん検知を行う AH (Authentication Header) と、暗号化・認証を行う ESP (Encapsulating Security Payload) がある。動作モードにはトランスポートモード（パケットのデータ部のみ保護）とトンネルモード（IPヘッダごと保護して新しいIPヘッダを付加）が存在する。鍵交換・SA確立には IKE (IKEv2) を使用する。

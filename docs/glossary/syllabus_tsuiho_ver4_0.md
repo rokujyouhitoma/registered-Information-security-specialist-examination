@@ -1986,11 +1986,31 @@ author: "Information Security Specialist Agent"
 - **試験出題ポイント**: 午後試験では TLS 1.2 と 1.3 の相違点（静的RSA鍵交換廃止によるセッションジャック耐性向上、ハンドシェイク往復削減）、および証明書検証プロセス（ルート証明書・CRL/OCSP確認）が頻出。 [関連出題例: [SC過去問題・解答群一覧](../../references/README.md#3-一次資料資産ファイル一覧)]
 - **シラバス参照**: [（1）セキュアプロトコル](../syllabus_tsuiho_detail.md)
 
+```mermaid
+sequenceDiagram
+    autonumber
+    Client->>Server: ClientHello (Supported Groups, Key Share)
+    Server->>Client: ServerHello (Key Share, CipherSuite)
+    Server->>Client: {EncryptedExtensions, Certificate, CertVerify, Finished}
+    Client->>Server: {Finished}
+    Note over Client,Server: 1-RTT Handshake Completed (Encrypted Traffic Starts)
+```
+
 #### <a id="starttls"></a>STARTTLS
 - **概要**: トランスポート層（TCP）上で暗号化通信およびサーバー・クライアント認証を提供する標準セキュリティプロトコル。最新の TLS 1.3 ではハンドシェイクが 1-RTT（事前鍵共有時は 0-RTT）に短縮され、不安全な暗号スイート（RSA鍵交換、CBCモード、SHA-1）が廃止された。
 - **技術・運用ポイント**: 暗号鍵交換には前方秘匿性（PFS）を担保する ECDHE（楕円曲線ディフィー・ヘルマン）を強制使用。暗号化には AEAD（AES-GCM, ChaCha20-Poly1305）のみ採用。SNIを暗号化する ECH (Encrypted Client Hello) により接続先ドメインの傍受を防御する。
 - **試験出題ポイント**: 午後試験では TLS 1.2 と 1.3 の相違点（静的RSA鍵交換廃止によるセッションジャック耐性向上、ハンドシェイク往復削減）、および証明書検証プロセス（ルート証明書・CRL/OCSP確認）が頻出。 [関連出題例: [SC過去問題・解答群一覧](../../references/README.md#3-一次資料資産ファイル一覧)]
 - **シラバス参照**: [（1）セキュアプロトコル](../syllabus_tsuiho_detail.md)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    Client->>Server: ClientHello (Supported Groups, Key Share)
+    Server->>Client: ServerHello (Key Share, CipherSuite)
+    Server->>Client: {EncryptedExtensions, Certificate, CertVerify, Finished}
+    Client->>Server: {Finished}
+    Note over Client,Server: 1-RTT Handshake Completed (Encrypted Traffic Starts)
+```
 
 #### <a id="ssh"></a>SSH
 - **概要**: SSH に関する標準的な技術定義、セキュリティ概念、および運用上の位置付け。
@@ -2003,6 +2023,16 @@ author: "Information Security Specialist Agent"
 - **技術・運用ポイント**: 暗号鍵交換には前方秘匿性（PFS）を担保する ECDHE（楕円曲線ディフィー・ヘルマン）を強制使用。暗号化には AEAD（AES-GCM, ChaCha20-Poly1305）のみ採用。SNIを暗号化する ECH (Encrypted Client Hello) により接続先ドメインの傍受を防御する。
 - **試験出題ポイント**: 午後試験では TLS 1.2 と 1.3 の相違点（静的RSA鍵交換廃止によるセッションジャック耐性向上、ハンドシェイク往復削減）、および証明書検証プロセス（ルート証明書・CRL/OCSP確認）が頻出。 [関連出題例: [SC過去問題・解答群一覧](../../references/README.md#3-一次資料資産ファイル一覧)]
 - **シラバス参照**: [（1）セキュアプロトコル](../syllabus_tsuiho_detail.md)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    Client->>Server: ClientHello (Supported Groups, Key Share)
+    Server->>Client: ServerHello (Key Share, CipherSuite)
+    Server->>Client: {EncryptedExtensions, Certificate, CertVerify, Finished}
+    Client->>Server: {Finished}
+    Note over Client,Server: 1-RTT Handshake Completed (Encrypted Traffic Starts)
+```
 
 #### <a id="quic"></a>QUIC
 - **概要**: QUIC に関する標準的な技術定義、セキュリティ概念、および運用上の位置付け。
@@ -2039,6 +2069,16 @@ author: "Information Security Specialist Agent"
 - **技術・運用ポイント**: 暗号鍵交換には前方秘匿性（PFS）を担保する ECDHE（楕円曲線ディフィー・ヘルマン）を強制使用。暗号化には AEAD（AES-GCM, ChaCha20-Poly1305）のみ採用。SNIを暗号化する ECH (Encrypted Client Hello) により接続先ドメインの傍受を防御する。
 - **試験出題ポイント**: 午後試験では TLS 1.2 と 1.3 の相違点（静的RSA鍵交換廃止によるセッションジャック耐性向上、ハンドシェイク往復削減）、および証明書検証プロセス（ルート証明書・CRL/OCSP確認）が頻出。 [関連出題例: [SC過去問題・解答群一覧](../../references/README.md#3-一次資料資産ファイル一覧)]
 - **シラバス参照**: [（1）セキュアプロトコル](../syllabus_tsuiho_detail.md)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    Client->>Server: ClientHello (Supported Groups, Key Share)
+    Server->>Client: ServerHello (Key Share, CipherSuite)
+    Server->>Client: {EncryptedExtensions, Certificate, CertVerify, Finished}
+    Client->>Server: {Finished}
+    Note over Client,Server: 1-RTT Handshake Completed (Encrypted Traffic Starts)
+```
 
 #### <a id="スパム対策（ベイジアンフィルタリング）"></a>スパム対策（ベイジアンフィルタリング）
 - **概要**: スパム対策（ベイジアンフィルタリング） に関する標準的な技術定義、セキュリティ概念、および運用上の位置付け。
