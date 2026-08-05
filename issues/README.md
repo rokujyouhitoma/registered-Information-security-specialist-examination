@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 029 | Feature | [過去問データベースとの双方向ハイパーリンク網構築 (Phase 6)](closed/029-build-exam-db-hyperlink-network.md) | 2026-08-05 | [029-build-exam-db-hyperlink-network.md](closed/029-build-exam-db-hyperlink-network.md) |
 | 028 | Feature | [用語解説の個別具体化・ディープリファイン (Phase 5-3: ガバナンス・リスク・監査分野)](closed/028-deep-enrichment-gov-risk-audit.md) | 2026-08-05 | [028-deep-enrichment-gov-risk-audit.md](closed/028-deep-enrichment-gov-risk-audit.md) |
 | 027 | Feature | [用語解説の個別具体化・ディープリファイン (Phase 5-2: Web・App・クラウド・DB・DevSecOps分野)](closed/027-deep-enrichment-web-cloud-db.md) | 2026-08-05 | [027-deep-enrichment-web-cloud-db.md](closed/027-deep-enrichment-web-cloud-db.md) |
 | 026 | Feature | [用語解説の個別具体化・ディープリファイン (Phase 5-1: ネットワーク・通信・暗号分野)](closed/026-deep-enrichment-network-crypto.md) | 2026-08-05 | [026-deep-enrichment-network-crypto.md](closed/026-deep-enrichment-network-crypto.md) |
