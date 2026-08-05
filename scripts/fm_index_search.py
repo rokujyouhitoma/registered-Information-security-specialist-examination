@@ -18,11 +18,16 @@ GLOSSARY_FILES = [
 OUTPUT_INDEX_JSON = "site/search_index.json"
 
 def tokenize(text):
-    """文字N-gram (Bigram) および 単語トークナイザー"""
-    text_clean = re.sub(r'[^\w\s]', '', text.lower())
-    words = text_clean.split()
-    bigrams = [text_clean[i:i+2] for i in range(len(text_clean)-1) if not text_clean[i:i+2].isspace()]
-    return words + bigrams
+    """文字N-gram (Bigram) および 単語トークナイザー（日本語マルチバイト対応）"""
+    if not text:
+        return []
+    clean = re.sub(r'[!"#$%&\'()*+,\-./:;<=>?@\[\\\]^_`{|}~、。！？「」『』（）［］【】\s]+', ' ', text.lower()).strip()
+    if not clean:
+        return []
+    words = clean.split()
+    no_space = re.sub(r'\s+', '', clean)
+    bigrams = [no_space[i:i+2] for i in range(len(no_space)-1)]
+    return list(set(words + bigrams))
 
 class FMIndexVectorSearchEngine:
     def __init__(self):

@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 046 | Bug | [日本語検索クエリで検索結果が 0 件になるトークナイザーの正規表現・N-gramバグの修正](closed/046-fix-japanese-query-tokenizer.md) | 2026-08-05 | [046-fix-japanese-query-tokenizer.md](closed/046-fix-japanese-query-tokenizer.md) |
 | 045 | Bug | [docs/ 配下の Markdown ドキュメントが HTML 変換されず 404 になる問題の修正](closed/045-build-html-docs-for-github-pages.md) | 2026-08-05 | [045-build-html-docs-for-github-pages.md](closed/045-build-html-docs-for-github-pages.md) |
 | 044 | Feature | [トップページ (site/index.html) の総合学習ドキュメントインデックスポータル化](closed/044-redesign-top-index-portal.md) | 2026-08-05 | [044-redesign-top-index-portal.md](closed/044-redesign-top-index-portal.md) |
 | 043 | Bug | [site/index.html での JS モジュール読み込み 404 エラーおよび相関パス構造の修正](closed/043-fix-site-js-relative-path-404.md) | 2026-08-05 | [043-fix-site-js-relative-path-404.md](closed/043-fix-site-js-relative-path-404.md) |

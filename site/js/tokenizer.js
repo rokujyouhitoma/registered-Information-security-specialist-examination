@@ -10,16 +10,18 @@ class Tokenizer {
      */
     static tokenize(text) {
         if (!text) return [];
-        const clean = text.toLowerCase().replace(/[^\w\s]/g, '');
+        const clean = text.toLowerCase()
+            .replace(/[!"#$%&'()*+,\-./:;<=>?@\[\\\]^_`{|}~、。！？「」『』（）［］【】\s]+/g, ' ')
+            .trim();
+        if (!clean) return [];
+
         const words = clean.split(/\s+/).filter(w => w.length > 0);
+        const noSpace = clean.replace(/\s+/g, '');
         const bigrams = [];
-        for (let i = 0; i < clean.length - 1; i++) {
-            const bg = clean.substring(i, i + 2);
-            if (!/\s/.test(bg)) {
-                bigrams.push(bg);
-            }
+        for (let i = 0; i < noSpace.length - 1; i++) {
+            bigrams.push(noSpace.substring(i, i + 2));
         }
-        return words.concat(bigrams);
+        return Array.from(new Set([...words, ...bigrams]));
     }
 }
 

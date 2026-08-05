@@ -21,6 +21,10 @@ test('CustomSearchEngine Tokenizer Test', (t) => {
     const tokens = engine.tokenize('TLS 1.3 Protocol');
     assert.ok(tokens.includes('tls'), 'Token should contain lowercase tls');
     assert.ok(tokens.includes('protocol'), 'Token should contain lowercase protocol');
+
+    const jpTokens = engine.tokenize('セキュリティ');
+    assert.ok(jpTokens.includes('セキュリティ'), 'Token should contain full Japanese word');
+    assert.ok(jpTokens.includes('セキ'), 'Token should contain Bigram セキ');
 });
 
 test('CustomSearchEngine Search Execution Test', (t) => {
@@ -33,4 +37,7 @@ test('CustomSearchEngine Search Execution Test', (t) => {
     const results = engine.search('TLS', 5);
     assert.ok(results.length > 0, 'Search should return matching results for TLS');
     assert.ok(results[0].name.toLowerCase().includes('tls'), 'Top result should be related to TLS');
+
+    const jpResults = engine.search('セキュリティ', 5);
+    assert.ok(jpResults.length > 0, 'Search should return matching results for Japanese query セキュリティ');
 });
