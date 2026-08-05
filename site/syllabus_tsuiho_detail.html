@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>情報処理安全確保支援士試験シラバス追補版 (科目A-2) 詳細（公式大分類・中分類・小分類・細目番号完全準拠版） | 情報セキュリティスペシャリスト試験</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="manifest" href="./manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -2765,6 +2766,16 @@
 <footer>
     <p>情報セキュリティスペシャリスト試験 総合学習プラットフォーム · IPA シラバス Ver.2.1 ＆ 補足 Ver.4.0 準拠</p>
 </footer>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('🛡️ Service Worker Registered:', reg.scope))
+                .catch(err => console.log('Service Worker registration failed:', err));
+        });
+    }
+</script>
 
 </body>
 </html>

@@ -6,6 +6,7 @@
     <title>情報セキュリティスペシャリスト試験 総合学習ポータル</title>
     <meta name="description" content="IPA情報処理安全確保支援士試験 シラバス Ver.2.1・補足 Ver.4.0 全 2,101 用語の構造化解説・科目B解法ガイド・CLI対話型クイズ・フルスクラッチ全文検索を備えた総合学習プラットフォーム。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="manifest" href="manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -725,6 +726,13 @@
             }
         }
     });
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('🛡️ Service Worker Registered:', reg.scope))
+                .catch(err => console.log('Service Worker registration failed:', err));
+        });
+    }
 </script>
 </body>
 </html>

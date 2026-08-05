@@ -21,6 +21,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} | 情報セキュリティスペシャリスト試験</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="manifest" href="{rel_root}manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {{
@@ -272,6 +273,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <footer>
     <p>情報セキュリティスペシャリスト試験 総合学習プラットフォーム · IPA シラバス Ver.2.1 ＆ 補足 Ver.4.0 準拠</p>
 </footer>
+
+<script>
+    if ('serviceWorker' in navigator) {{
+        window.addEventListener('load', () => {{
+            navigator.serviceWorker.register('{rel_root}sw.js')
+                .then(reg => console.log('🛡️ Service Worker Registered:', reg.scope))
+                .catch(err => console.log('Service Worker registration failed:', err));
+        }});
+    }}
+</script>
 
 </body>
 </html>

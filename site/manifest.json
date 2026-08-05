@@ -1,0 +1,16 @@
+{
+  "name": "情報セキュリティスペシャリスト試験 総合学習ポータル",
+  "short_name": "SC学習ポータル",
+  "description": "IPA情報処理安全確保支援士試験 シラバス Ver.2.1・補足 Ver.4.0 全 2,101 用語の構造化解説・フルスクラッチ全文検索 PWA",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0a0e1a",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
