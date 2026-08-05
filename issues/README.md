@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 043 | Bug | [site/index.html での JS モジュール読み込み 404 エラーおよび相関パス構造の修正](closed/043-fix-site-js-relative-path-404.md) | 2026-08-05 | [043-fix-site-js-relative-path-404.md](closed/043-fix-site-js-relative-path-404.md) |
 | 042 | Bug | [CI パイプラインでの package-lock.json 未検出エラーおよび Node.js バージョンの修正](closed/042-fix-ci-package-lock-node-version.md) | 2026-08-05 | [042-fix-ci-package-lock-node-version.md](closed/042-fix-ci-package-lock-node-version.md) |
 | 041 | Docs | [README.md および開発ドキュメントの完全リニューアル (Phase 16)](closed/041-update-readme-documentation.md) | 2026-08-05 | [041-update-readme-documentation.md](closed/041-update-readme-documentation.md) |
 | 040 | Tooling | [トレーサビリティ自動検証スクリプトの追加 (Phase 15)](closed/040-verify-traceability-script.md) | 2026-08-05 | [040-verify-traceability-script.md](closed/040-verify-traceability-script.md) |

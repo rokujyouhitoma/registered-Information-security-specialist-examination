@@ -4,9 +4,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 // Node.js 環境で fm_index_engine.js を読み込むための評価環境
-const tokenizerScript = fs.readFileSync(path.resolve('src/js/modules/tokenizer.js'), 'utf-8');
-const vectorScorerScript = fs.readFileSync(path.resolve('src/js/modules/vector_scorer.js'), 'utf-8');
-const engineScript = fs.readFileSync(path.resolve('src/js/modules/fm_index_engine.js'), 'utf-8');
+const tokenizerScript = fs.readFileSync(path.resolve('site/js/tokenizer.js'), 'utf-8');
+const vectorScorerScript = fs.readFileSync(path.resolve('site/js/vector_scorer.js'), 'utf-8');
+const engineScript = fs.readFileSync(path.resolve('site/js/fm_index_engine.js'), 'utf-8');
 const searchIndexData = JSON.parse(fs.readFileSync(path.resolve('site/search_index.json'), 'utf-8'));
 
 global.window = {};
