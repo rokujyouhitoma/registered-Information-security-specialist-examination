@@ -242,6 +242,17 @@
             });
         }
 
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement !== searchInput) {
+                e.preventDefault();
+                searchInput.focus();
+            } else if (e.key === 'Escape' && document.activeElement === searchInput) {
+                searchInput.value = '';
+                triggerSearch('');
+                searchInput.blur();
+            }
+        });
+
         searchInput.addEventListener('input', (e) => {
             triggerSearch(e.target.value);
         });
