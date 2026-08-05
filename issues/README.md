@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 037 | Feature | [Closure Compiler の CI/CD 自動化パイプライン構築および compiled.html の導入](closed/037-setup-cicd-closure-compiler-compiled-html.md) | 2026-08-05 | [037-setup-cicd-closure-compiler-compiled-html.md](closed/037-setup-cicd-closure-compiler-compiled-html.md) |
 | 036 | Feature | [Closure Compiler の導入と JS コンパイル設定](closed/036-integrate-closure-compiler.md) | 2026-08-05 | [036-integrate-closure-compiler.md](closed/036-integrate-closure-compiler.md) |
 | 035 | Feature | [フルスクラッチ FM-index & ベクター全文検索エンジンの開発 (Phase 12)](closed/035-build-custom-fm-index-search-engine.md) | 2026-08-05 | [035-build-custom-fm-index-search-engine.md](closed/035-build-custom-fm-index-search-engine.md) |
 | 034 | Feature | [サイバー攻撃シナリオ・ログ分析ハンズオンケーススタディの作成 (Phase 11)](closed/034-create-attack-scenarios-analysis.md) | 2026-08-05 | [034-create-attack-scenarios-analysis.md](closed/034-create-attack-scenarios-analysis.md) |

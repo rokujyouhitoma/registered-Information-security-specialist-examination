@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>情報セキュリティスペシャリスト試験 フルスクラッチ高速検索ポータル</title>
+    <title>情報セキュリティスペシャリスト試験 フルスクラッチ高速検索ポータル (Compiled)</title>
     <style>
         :root {
             --bg-color: #0f172a;
@@ -131,8 +131,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>🛡️ 情報セキュリティスペシャリスト 全文検索ポータル</h1>
-            <p class="subtitle">フルスクラッチ自作 FM-index & ベクター全文検索エンジン (外部ライブラリ完全非依存)</p>
+            <h1>🛡️ 情報セキュリティスペシャリスト 全文検索ポータル (Release Compiled)</h1>
+            <p class="subtitle">Google Closure Compiler 最適化バージョン (`fm_index_engine.min.js` 適用)</p>
         </header>
 
         <div class="search-box">
@@ -144,7 +144,8 @@
         <div class="results" id="results"></div>
     </div>
 
-    <script src="fm_index_engine.js"></script>
+    <!-- Closure Compiler 成果物を読み込み -->
+    <script src="fm_index_engine.min.js"></script>
     <script>
         const engine = new CustomSearchEngine();
         const searchInput = document.getElementById('searchInput');
