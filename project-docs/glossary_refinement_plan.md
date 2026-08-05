@@ -28,7 +28,7 @@
 flowchart TD
     Draft["執筆原稿 (`docs/glossary/*.md`)"] --> Gate1["Stage 1: QA (品質保証) 査読<br/>・静的リンター・フォーマット・文字数・テンプレ排除判定"]
     Gate1 -- Pass --> Gate2["Stage 2: ドメイン専門エージェント (NW, DB, SA, SM, ST, ES) 査読<br/>・各分野（NW/DB/IoT/クラウド/運用等）の技術的妥当性チェック"]
-    Gate2 -- Pass --> Gate3["Stage 3: SC (支援士専門家) 査読<br/>・IPAシラバス完全適合・一次情報照合・午後記述出題ポイント監修"]
+    Gate2 -- Pass --> Gate3["Stage 3: SC (セキュリティスペシャリスト) 査読<br/>・IPAシラバス完全適合・一次情報照合・試験出題ポイント監修"]
     Gate3 -- Pass --> Gate4["Stage 4: AU & PM (監査&統制) 査読<br/>・リポジトリ規約適合(絶対パス禁止)・WBS進捗照合・最終Merge承認"]
     Gate4 -- Pass --> Merged["🎉 品質監査合格 (Merge & Issue Close)"]
 
@@ -49,7 +49,7 @@ flowchart TD
 | **`information-technology-service-manager` (SM)** | **ITSM & ログ運用** | SOC, SIEM, SOAR, 相関分析, EDR/EPP, NTP時刻同期, ITSM, ログ保管・改ざん防止等の運用・インシデント用語検証 | Stage 2 |
 | **`information-technology-strategist` (ST)** | **セキュリティ戦略 & BCP** | SCRM (サプライチェーンリスク), BCP/DR, 経営セキュリティ戦略, 重要インフラガイドライン等の戦略用語検証 | Stage 2 |
 | **`embedded-systems-specialist` (ES)** | **IoT & OT / 組込み** | IoT端末セキュリティ, TPM/HSM (ハードウェア耐タンパー性), OT/ICS (IEC 62443), セキュアブーツ等の物理・組込み用語検証 | Stage 2 |
-| **`information-security-specialist` (SC)** | **支援士・暗号・全体監修** | 全用語のIPA公式シラバス適合性、CRYPTREC/NIST一次情報検証、午前II・午後記述試験の採点キーワード・ひっかけポイント監修 | Stage 3 |
+| **`information-security-specialist` (SC)** | **セキュリティスペシャリスト** | 全用語のIPA公式シラバス適合性、CRYPTREC/NIST一次情報検証、午前II・午後記述試験の採点キーワード・ひっかけポイント監修 | Stage 3 |
 | **`systems-auditor` (AU)** | **システム監査 & 規約** | ISMS/ISO 27001, 法規・個人情報保護法, リポジトリ規約（相対パスルール・絶対パス排除）の遵守状態の監査 | Stage 4 |
 | **`project-manager` (PM)** | **PM & 最終品質ゲート** | ロードマップWBSとの進捗照合、全エージェントレビュー結果の最終判定 (DoD達成確認)、IssueクローズおよびMerge承認 | Stage 4 |
 
