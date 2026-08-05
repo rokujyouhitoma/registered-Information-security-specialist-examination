@@ -54,8 +54,8 @@ graph TD
 
 ### 1. リポジトリのクローン
 ```bash
-git clone https://github.com/rokujyouhitoma/registered-Information-security-specialist-examination.git
-cd registered-Information-security-specialist-examination
+git clone https://github.com/rokujyouhitoma/registered-information-security-specialist-examination.git
+cd registered-information-security-specialist-examination
 ```
 
 ### 2. 依存関係のインストール & JS ビルド

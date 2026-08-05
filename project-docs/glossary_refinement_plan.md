@@ -10,10 +10,10 @@
 
 | Phase | 対象ドメイン | 対象主要キーワード例 | ステータス | 担当Issue |
 | :---: | :--- | :--- | :---: | :---: |
-| **Phase 1** | 暗号・PKI・鍵管理・認証 | AES, RSA, AEAD, SHA-2/3, HMAC, PKI, PFS, RBAC, ABAC, PAM, SoD | **完了** | [#020](file:///workspace/registered-Information-security-specialist-examination/issues/closed/020-refine-glossary-explanations-crypto-auth.md) |
-| **Phase 2-1** | ネットワーク・通信セキュリティ | TLS 1.3, IPsec, DNSSEC, SPF/DKIM/DMARC, FW, WAF, IDS/IPS, WPA3 | **完了** | [#021](file:///workspace/registered-Information-security-specialist-examination/issues/closed/021-refine-glossary-network-security.md) |
-| **Phase 2-2** | Web・開発セキュリティ | XSS, SQLi, CSRF, OSコマンド注入, ディレクトリトラバーサル, SAST, DAST | **完了** | [#022](file:///workspace/registered-Information-security-specialist-examination/issues/closed/022-refine-glossary-web-dev-security.md) |
-| **Phase 2-3** | マルウェア・端末・SOC/インシデント対応 | EDR, EPP, SOAR, SIEM, サンドボックス, CSIRT, デジタルフォレンジック | **進行中** | [#023](file:///workspace/registered-Information-security-specialist-examination/issues/023-refine-glossary-malware-soc-incident.md) |
+| **Phase 1** | 暗号・PKI・鍵管理・認証 | AES, RSA, AEAD, SHA-2/3, HMAC, PKI, PFS, RBAC, ABAC, PAM, SoD | **完了** | [#020](file:///workspace/registered-information-security-specialist-examination/issues/closed/020-refine-glossary-explanations-crypto-auth.md) |
+| **Phase 2-1** | ネットワーク・通信セキュリティ | TLS 1.3, IPsec, DNSSEC, SPF/DKIM/DMARC, FW, WAF, IDS/IPS, WPA3 | **完了** | [#021](file:///workspace/registered-information-security-specialist-examination/issues/closed/021-refine-glossary-network-security.md) |
+| **Phase 2-2** | Web・開発セキュリティ | XSS, SQLi, CSRF, OSコマンド注入, ディレクトリトラバーサル, SAST, DAST | **完了** | [#022](file:///workspace/registered-information-security-specialist-examination/issues/closed/022-refine-glossary-web-dev-security.md) |
+| **Phase 2-3** | マルウェア・端末・SOC/インシデント対応 | EDR, EPP, SOAR, SIEM, サンドボックス, CSIRT, デジタルフォレンジック | **進行中** | [#023](file:///workspace/registered-information-security-specialist-examination/issues/023-refine-glossary-malware-soc-incident.md) |
 | **Phase 2-4** | クラウド・データ・ゼロトラスト | CSPM, DSPM, ZTA, SASE, SSE, CASB, SCIM, FIDO2 | **予定** | Issue #024 |
 | **Phase 3** | ガバナンス・法規・マネジメント | ISMS, BCMS, SCRM, 個人情報保護法, サイバーセキュリティ基本法 | **予定** | Issue #025 |
 | **Phase 4** | 追補版シラバス用語群 (Ver.4.0) | AI脅威, SBOM, PQC, LLMセキュリティ, 暗号試行, クラウドポスチャ | **予定** | Issue #026〜 |

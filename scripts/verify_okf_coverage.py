@@ -9,7 +9,7 @@ import os
 import sys
 from pathlib import Path
 
-WORKSPACE_ROOT = Path("/workspace/registered-Information-security-specialist-examination")
+WORKSPACE_ROOT = Path("/workspace/registered-information-security-specialist-examination")
 REFERENCES_DIR = WORKSPACE_ROOT / "references"
 OKF_DIR = REFERENCES_DIR / "okf"
 

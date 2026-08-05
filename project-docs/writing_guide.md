@@ -45,8 +45,8 @@ author: "Information Security Specialist Agent"
    - GitHub Pages, Git ローカルリポジトリ, IDE（VSCode等）等の異なる閲覧環境でもリンク切れが発生しないようにするためです。
    
    #### ❌ NG 例（使用禁止）
-   - `[シラバス](file:///workspace/registered-Information-security-specialist-examination/references/syllabus.pdf)` (ローカル絶対パス)
-   - `[シラバス](/workspace/registered-Information-security-specialist-examination/references/syllabus.pdf)` (ルート絶対パス)
+   - `[シラバス](file:///workspace/registered-information-security-specialist-examination/references/syllabus.pdf)` (ローカル絶対パス)
+   - `[シラバス](/workspace/registered-information-security-specialist-examination/references/syllabus.pdf)` (ルート絶対パス)
    - `<a href="file:///root/.gemini/...">` (環境固有パス)
 
    #### ⭕ OK 例（推奨）

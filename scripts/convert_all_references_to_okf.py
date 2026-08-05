@@ -17,7 +17,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pdfminer.high_level import extract_text as pdfminer_extract_text
 import fitz  # PyMuPDF
 
-WORKSPACE_ROOT = Path("/workspace/registered-Information-security-specialist-examination")
+WORKSPACE_ROOT = Path("/workspace/registered-information-security-specialist-examination")
 REFERENCES_DIR = WORKSPACE_ROOT / "references"
 OKF_DIR = REFERENCES_DIR / "okf"
 
