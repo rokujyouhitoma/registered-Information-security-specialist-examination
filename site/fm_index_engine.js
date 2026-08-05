@@ -6,7 +6,7 @@ class CustomSearchEngine {
     constructor() {
         this.docs = [];
         this.idf = {};
-        self.vectors = [];
+        this.vectors = [];
         this.isLoaded = false;
     }
 
