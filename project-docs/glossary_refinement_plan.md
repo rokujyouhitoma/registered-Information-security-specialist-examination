@@ -20,16 +20,16 @@
 
 ---
 
-## 🛡️ 2. マルチエージェント協調による多層化品質保証 (QA) 査読体制
+## 🛡️ 2. 全10大スペシャリストエージェント完全協調による多層化品質保証 (QA) 査読体制
 
-単なる機械的チェックに留まらず、本プロジェクトに参画する**5つの専門エージェント（QA, SC, SA, ST, AU, PM）がそれぞれの専門視点で相互レビュー・承認を行う多層化品質保証パイプライン**を導入します。
+単なる定型自動チェックに留まらず、本プロジェクトに参画する**全10種の専門エージェント**がそれぞれの専門領域（ネットワーク、DB、ITS M、IoT、戦略、クラウド、監査、品質等）に応じてレビュー・技術監修を行う**10大エージェント連携型・多層化品質保証パイプライン**を導入します。
 
 ```mermaid
 flowchart TD
-    Draft["執筆原稿 (`docs/glossary/*.md`)"] --> Gate1["Stage 1: QA (品質保証) 査読<br/>・プレースホルダー・フォーマット・表記検証"]
-    Gate1 -- Pass --> Gate2["Stage 2: SC (支援士専門家) 査読<br/>・IPAシラバス整合性・一次情報・試験出題ポイント検証"]
-    Gate2 -- Pass --> Gate3["Stage 3: SA & ST (アーキテクト&テスト) 査読<br/>・技術構成・クラウド/NW妥当性・検証手法チェック"]
-    Gate3 -- Pass --> Gate4["Stage 4: AU & PM (監査&統制) 査読<br/>・トレーサビリティ・ガバナンス・最終Merge承認"]
+    Draft["執筆原稿 (`docs/glossary/*.md`)"] --> Gate1["Stage 1: QA (品質保証) 査読<br/>・静的リンター・フォーマット・文字数・テンプレ排除判定"]
+    Gate1 -- Pass --> Gate2["Stage 2: ドメイン専門エージェント (NW, DB, SA, SM, ST, ES) 査読<br/>・各分野（NW/DB/IoT/クラウド/運用等）の技術的妥当性チェック"]
+    Gate2 -- Pass --> Gate3["Stage 3: SC (支援士専門家) 査読<br/>・IPAシラバス完全適合・一次情報照合・午後記述出題ポイント監修"]
+    Gate3 -- Pass --> Gate4["Stage 4: AU & PM (監査&統制) 査読<br/>・リポジトリ規約適合(絶対パス禁止)・WBS進捗照合・最終Merge承認"]
     Gate4 -- Pass --> Merged["🎉 品質監査合格 (Merge & Issue Close)"]
 
     Gate1 -- Fail --> Reject["🚨 修正指示 (要再執筆)"]
@@ -38,20 +38,27 @@ flowchart TD
     Gate4 -- Fail --> Reject
 ```
 
-### 👥 各専門エージェントの査読担当領域 (RACI)
+### 👥 全10大スペシャリストエージェントの専門領域と査読・監修分担
 
-| エージェント | 担当ロール | 介在する査読フェーズ & 具体的チェック内容 |
-| :--- | :--- | :--- |
-| **QA** (Software Quality Assurance) | **品質保証** | **Stage 1 (静的品質検証)**<br/>・定型句（プレースホルダー文言）の完全排除判定<br/>・必須4要素（概要/技術/出題/参照）の構造フォーマットチェック<br/>・文字数（120文字以上）およびタイポ・表記揺れの自動検出 |
-| **SC** (Information Security Specialist) | **支援士・セキュリティ監修** | **Stage 2 (学術・出題適性検証)**<br/>・IPA公式シラバス（Ver.2.1 / 追補版）の用語定義との100%整合性<br/>・午後記述式試験の採点基準に直結する核心キーワードの含有判定<br/>・CRYPTREC / NIST SP 800 等の一次情報参照の正当性確認 |
-| **SA** (Systems Architect)<br/>& **ST** (Software Tester) | **システム設計・テスト検証** | **Stage 3 (技術実装・検証実効性)**<br/>・クラウド、ネットワーク、IAM等のシステム構成論の妥当性評価（SA）<br/>・SAST/DAST/ファジング/ペネトレーションテスト等の検証手順の整合性確認（ST） |
-| **AU** (Systems Auditor)<br/>& **PM** (Project Manager) | **システム監査 & 全体統制** | **Stage 4 (ガバナンス & 最終承認)**<br/>・リポジトリ規約（絶対パス禁止、相対パス強制）の適合性監査（AU）<br/>・ロードマップWBSとの進捗照合、Issueクローズ判断およびMerge承認（PM） |
+| エージェントID | 専門領域 | 主な査読・監修対象用語カテゴリ & 査読観点 | 介在Stage |
+| :--- | :--- | :--- | :---: |
+| **`software-quality-assurance-specialist` (QA)** | **品質保証 & 脆弱性** | プレースホルダー文言の完全排除、必須4構造（概要/技術/出題/参照）のフォーマット検査、SAST/DAST/ファジング等開発テスト用語の技術レビュー | Stage 1 & Stage 2 |
+| **`network-specialist` (NW)** | **ネットワークセキュリティ** | IPsec, TLS 1.3, DNSSEC, SPF/DKIM/DMARC, FW, WAF, IDS/IPS, WPA3, SASE/SSE 等のプロトコル・通信機器用語の技術検証 | Stage 2 |
+| **`database-specialist` (DB)** | **DB & データセキュリティ** | SQLインジェクション、DB暗号化、DSPM、IndexedDB/LocalStorage、データライフサイクル管理等の技術検証 | Stage 2 |
+| **`systems-architect` (SA)** | **クラウド & IAM / 構成** | SAML/OAuth/OIDC, ゼロトラスト (NIST SP 800-207), CSPM, SCIM, コンテナ/Kubernetes 等のアーキテクチャ用語検証 | Stage 2 |
+| **`information-technology-service-manager` (SM)** | **ITSM & ログ運用** | SOC, SIEM, SOAR, 相関分析, EDR/EPP, NTP時刻同期, ITSM, ログ保管・改ざん防止等の運用・インシデント用語検証 | Stage 2 |
+| **`information-technology-strategist` (ST)** | **セキュリティ戦略 & BCP** | SCRM (サプライチェーンリスク), BCP/DR, 経営セキュリティ戦略, 重要インフラガイドライン等の戦略用語検証 | Stage 2 |
+| **`embedded-systems-specialist` (ES)** | **IoT & OT / 組込み** | IoT端末セキュリティ, TPM/HSM (ハードウェア耐タンパー性), OT/ICS (IEC 62443), セキュアブーツ等の物理・組込み用語検証 | Stage 2 |
+| **`information-security-specialist` (SC)** | **支援士・暗号・全体監修** | 全用語のIPA公式シラバス適合性、CRYPTREC/NIST一次情報検証、午前II・午後記述試験の採点キーワード・ひっかけポイント監修 | Stage 3 |
+| **`systems-auditor` (AU)** | **システム監査 & 規約** | ISMS/ISO 27001, 法規・個人情報保護法, リポジトリ規約（相対パスルール・絶対パス排除）の遵守状態の監査 | Stage 4 |
+| **`project-manager` (PM)** | **PM & 最終品質ゲート** | ロードマップWBSとの進捗照合、全エージェントレビュー結果の最終判定 (DoD達成確認)、IssueクローズおよびMerge承認 | Stage 4 |
 
 ---
 
 ## 📈 3. 品質指標 (KPI)
 
 - **定型プレースホルダー残存率**: **0.0%**（全2,100+項目中 0件）
-- **多層化エージェント査読通過率**: **100.0%**
+- **10大エージェント査読通過率**: **100.0%**
 - **4構造（概要/技術/出題/参照）適合率**: **100.0%**（改修対象項目）
+
 
