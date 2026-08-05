@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 032 | Feature | [科目B (長文記述式) 解法思考プロセスガイドの整備 (Phase 9)](closed/032-create-subject-b-reasoning-guide.md) | 2026-08-05 | [032-create-subject-b-reasoning-guide.md](closed/032-create-subject-b-reasoning-guide.md) |
 | 031 | Tooling | [監査スクリプト Ver.4.0 (具体解像度判定エンジン) の導入 (Phase 8)](closed/031-upgrade-audit-script-specificity.md) | 2026-08-05 | [031-upgrade-audit-script-specificity.md](closed/031-upgrade-audit-script-specificity.md) |
 | 030 | Feature | [重要プロトコル・認証フローのMermaid図解化 (Phase 7)](closed/030-add-mermaid-diagrams-key-protocols.md) | 2026-08-05 | [030-add-mermaid-diagrams-key-protocols.md](closed/030-add-mermaid-diagrams-key-protocols.md) |
 | 029 | Feature | [過去問データベースとの双方向ハイパーリンク網構築 (Phase 6)](closed/029-build-exam-db-hyperlink-network.md) | 2026-08-05 | [029-build-exam-db-hyperlink-network.md](closed/029-build-exam-db-hyperlink-network.md) |
