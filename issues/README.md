@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 049 | Performance | [検索インデックスデータ構造の最適化・軽量化](closed/049-perf-compress-search-index.md) | 2026-08-05 | [049-perf-compress-search-index.md](closed/049-perf-compress-search-index.md) |
 | 048 | Security | [XSS 防止 Safe DOM レンダリング・Strict CSP 設定および入力値サニタイズ](closed/048-sec-xss-safe-dom-csp.md) | 2026-08-05 | [048-sec-xss-safe-dom-csp.md](closed/048-sec-xss-safe-dom-csp.md) |
 | 047 | Refactor | [リポジトリ名の小文字表記 (registered-information-security-specialist-examination) への統一更新](closed/047-update-repo-name-lowercase.md) | 2026-08-05 | [047-update-repo-name-lowercase.md](closed/047-update-repo-name-lowercase.md) |
 | 046 | Bug | [日本語検索クエリで検索結果が 0 件になるトークナイザーの正規表現・N-gramバグの修正](closed/046-fix-japanese-query-tokenizer.md) | 2026-08-05 | [046-fix-japanese-query-tokenizer.md](closed/046-fix-japanese-query-tokenizer.md) |

@@ -141,6 +141,14 @@ class FMIndexVectorSearchEngine:
 
     def export_index_json(self):
         os.makedirs(os.path.dirname(OUTPUT_INDEX_JSON), exist_ok=True)
+        
+        # 浮動小数点精度丸め
+        idf_rounded = {k: round(v, 4) for k, v in self.idf.items()}
+        vectors_rounded = [
+            {k: round(v, 4) for k, v in vec.items()}
+            for vec in self.doc_vectors
+        ]
+
         export_data = {
             "docs": [{
                 "id": d["id"],
@@ -150,11 +158,11 @@ class FMIndexVectorSearchEngine:
                 "tech": d["tech"],
                 "exam": d["exam"]
             } for d in self.docs],
-            "idf": self.idf,
-            "vectors": self.doc_vectors
+            "idf": idf_rounded,
+            "vectors": vectors_rounded
         }
         with open(OUTPUT_INDEX_JSON, "w", encoding="utf-8") as f:
-            json.dump(export_data, f, ensure_ascii=False, indent=2)
+            json.dump(export_data, f, ensure_ascii=False, separators=(',', ':'))
         print(f"✅ フルスクラッチ検索インデックスを出力しました: {OUTPUT_INDEX_JSON}")
 
 def main():
