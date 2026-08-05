@@ -6,6 +6,8 @@ MIN_JS = site/fm_index_engine.min.js
 all: build
 
 build: $(MIN_JS)
+	@echo "🛠️ docs/ 配下の HTML ビルドを実行中..."
+	python3 scripts/build_html_docs.py
 
 $(MIN_JS): $(SRC_JS)
 	@echo "🛠️ Closure Compiler で $(SRC_JS) をコンパイル中..."

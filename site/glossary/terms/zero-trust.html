@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️ ゼロトラスト・アーキテクチャ (Zero Trust Architecture) | 情報セキュリティスペシャリスト試験</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-card: rgba(255,255,255,0.04);
+            --border: rgba(255,255,255,0.08);
+            --accent: #6366f1;
+            --accent-2: #8b5cf6;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --code-bg: rgba(0,0,0,0.4);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        /* ── HEADER ── */
+        header {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            background: rgba(10,14,26,0.85);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .header-icon {
+            width: 34px; height: 34px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem;
+        }
+        .header-title { font-weight: 700; font-size: 0.95rem; }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .nav-btn {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .nav-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent);
+            background: rgba(99,102,241,0.1);
+        }
+
+        /* ── MAIN CONTENT ── */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 5rem;
+        }
+
+        .doc-content h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(135deg, #e0e7ff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .doc-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #c7d2fe;
+        }
+
+        .doc-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: #e0e7ff;
+        }
+
+        .doc-content h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .doc-content p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .doc-content ul, .doc-content ol {
+            margin: 0.5rem 0 1.25rem 1.5rem;
+        }
+
+        .doc-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        .doc-content a {
+            color: #818cf8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .doc-content a:hover {
+            color: #a5b4fc;
+            text-decoration: underline;
+        }
+
+        .doc-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1.25rem;
+            margin: 1rem 0;
+            background: rgba(99,102,241,0.05);
+            border-radius: 0 8px 8px 0;
+            color: var(--text-secondary);
+        }
+
+        .doc-content code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.88em;
+            color: #f472b6;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .doc-content pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .doc-content pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            color: #e2e8f0;
+            font-size: 0.9em;
+        }
+
+        /* ── TABLE STYLES ── */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .doc-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .doc-content th {
+            background: rgba(255,255,255,0.06);
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            color: #e0e7ff;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .doc-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .doc-content tr:last-child td {
+            border-bottom: none;
+        }
+
+        .doc-content tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .doc-content hr {
+            border: none;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="../../index.html" class="header-brand">
+        <div class="header-icon">🛡️</div>
+        <div class="header-title">SC 試験 学習ポータル</div>
+    </a>
+    <div class="header-nav">
+        <a href="../../index.html" class="nav-btn">🏠 トップ</a>
+        <a href="../../search.html" class="nav-btn">🔍 全文検索</a>
+    </div>
+</header>
+
+<div class="container">
+    <article class="doc-content">
+<hr>
+<p>title: "ゼロトラスト・アーキテクチャ (Zero Trust Architecture)"</p>
+<p>last_updated: "2026-08-01"</p>
+<p>author: "Information Security Specialist Agent"</p>
+<hr>
+<h1 id="-ゼロトラスト・アーキテクチャ-zero-trust-architecture-">🛡️ ゼロトラスト・アーキテクチャ (Zero Trust Architecture)</h1>
+<h2 id="1-概要-overview-">1. 概要 (Overview)</h2>
+<p><strong>ゼロトラスト (Zero Trust)</strong> とは、「社内ネットワーク境界の内側であっても無条件に信頼せず、すべてのアクセス要求を明示的に検証・認可する」という新しいセキュリティ設計コンセプトである。</p>
+<p>従来の「境界型セキュリティ (Perimeter Security)」が「内側は安全、外側は危険」という前提に立っていたのに対し、ゼロトラストは「ネットワークは常に敵対的な環境であり、内部にも脅威が存在する」という前提（Assume Breach）に基づいている。</p>
+<p>一次情報参照: <a href="../../references/nist_sp800_207.pdf">NIST SP 800-207 Zero Trust Architecture (原本PDF)</a></p>
+<hr>
+<h2 id="2-nist-sp-800-207-の7大基本原則-7-basic-tenets-">2. NIST SP 800-207 の7大基本原則 (7 Basic Tenets)</h2>
+<p>NIST (米国標準技術研究所) が規定するゼロトラストの核となる 7 つの原則：</p>
+<ol>
+<li><strong>すべてのデータ源とコンピューティングサービスをリソースとみなす</strong></li>
+<li><strong>ネットワークの場所に関わらず、すべての通信を保護・暗号化する</strong></li>
+<li><strong>個々のリソースへのアクセスをセッションごとに動的に許可する (最小権限の原則)</strong></li>
+<li><strong>アクセス決定は動的ポリシー (ユーザーID、デバイス状態、利用場所、脅威インテリジェンス) に基づく</strong></li>
+<li><strong>保有するすべてのデバイスの健全性とセキュリティ状態を常時監視・測定する</strong></li>
+<li><strong>リソースアクセスはすべて事前認証・認可を経る</strong></li>
+<li><strong>資産、ネットワーク、通信に関する状態情報を収集し、継続的な改善に活用する</strong></li>
+</ol>
+<hr>
+<h2 id="3-コンポーネント構成図-architecture-diagram-">3. コンポーネント構成図 (Architecture Diagram)</h2>
+<pre><code>sequenceDiagram
+    autonumber
+    actor User as ユーザー / デバイス
+    participant PEP as Policy Enforcement Point (PEP)
+    participant PDP as Policy Decision Point (PDP)
+    participant Resource as 企業リソース / SaaS
+
+    User-&gt;&gt;PEP: リクエスト送信 (リソースアクセス要求)
+    PEP-&gt;&gt;PDP: 評価要求 (ユーザー属性・端末状態ログ送付)
+    Note over PDP: Policy Engine (PE) による判定&lt;br/&gt;Policy Administrator (PA) による制御
+    PDP--&gt;&gt;PEP: 評価結果 (許可 / 拒否 / 多要素認証要求)
+    alt 評価判定：許可
+        PEP-&gt;&gt;Resource: セッション確立・通信通過
+        Resource--&gt;&gt;User: レスポンス返却
+    else 評価判定：拒否
+        PEP--&gt;&gt;User: アクセス拒否 (403 Forbidden)
+    end</code></pre>
+<h3 id="主要構成要素">主要構成要素</h3>
+<ul>
+<li><strong>Policy Engine (PE / ポリシーエンジン)</strong>: アクセス可否の評価判定を行うロジックコア。</li>
+<li><strong>Policy Administrator (PA / ポリシー管理者)</strong>: PEの判定に基づき、PEPへの制御コマンド送信およびセッション鍵生成を行う。</li>
+<li><strong>Policy Decision Point (PDP)</strong>: PEとPAで構成される意思決定コンポーネント。</li>
+<li><strong>Policy Enforcement Point (PEP)</strong>: 通信経路に配置され、PDPの決定に基づいて実際にアクセスを許可・切断するゲートウェイ。</li>
+</ul>
+<hr>
+<h2 id="4-試験対策ポイント-exam-preparation-guidelines-">4. 試験対策ポイント (Exam Preparation Guidelines)</h2>
+<blockquote><p>[!IMPORTANT]</p></blockquote>
+<blockquote><p><strong>試験での主な出題パターンと選択肢の見極め方</strong>:</p></blockquote>
+<blockquote><p>- <strong>誤った選択肢</strong>: 「VPNを導入して社内LANへのアクセスを暗号化すればゼロトラストが達成される」「一度認証に成功した端末は以降評価をスキップする」</p></blockquote>
+<blockquote><p>- <strong>正解の選択肢</strong>: 「アクセス要求ごとにユーザー識別情報と端末の脆弱性・感染状態を含むコンテキストを動的に評価し、セッション単位で認可を行う」</p></blockquote>
+<blockquote><p>- <strong>科目B (午後記述) 出題傾向</strong>: クラウド移行に伴う境界型防御の限界と、PEP/PDP を用いた ID 階層アクセス制御の設計問題。</p></blockquote>
+<hr>
+<h2 id="5-関連キーワード・相互リンク">5. 関連キーワード・相互リンク</h2>
+<ul>
+<li><a href="../syllabus_tsuiho_ver4_0.html#sdp">SDP (Software-Defined Perimeter)</a></li>
+<li><a href="../syllabus_tsuiho_ver4_0.html#casb">CASB (Cloud Access Security Broker)</a></li>
+<li><a href="../syllabus_tsuiho_ver4_0.html#sse">SSE (Security Service Edge) / SASE</a></li>
+<li><a href="../syllabus_tsuiho_ver4_0.html#idaas">IAM / IDaaS</a></li>
+</ul>
+    </article>
+</div>
+
+<footer>
+    <p>情報セキュリティスペシャリスト試験 総合学習プラットフォーム · IPA シラバス Ver.2.1 ＆ 補足 Ver.4.0 準拠</p>
+</footer>
+
+</body>
+</html>

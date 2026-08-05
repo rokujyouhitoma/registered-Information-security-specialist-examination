@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイバー攻撃シナリオ・ログ解読ハンズオン ケーススタディ (Cyber Attack Scenarios &amp; Log Analysis) | 情報セキュリティスペシャリスト試験</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-card: rgba(255,255,255,0.04);
+            --border: rgba(255,255,255,0.08);
+            --accent: #6366f1;
+            --accent-2: #8b5cf6;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --code-bg: rgba(0,0,0,0.4);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        /* ── HEADER ── */
+        header {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            background: rgba(10,14,26,0.85);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .header-icon {
+            width: 34px; height: 34px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem;
+        }
+        .header-title { font-weight: 700; font-size: 0.95rem; }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .nav-btn {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .nav-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent);
+            background: rgba(99,102,241,0.1);
+        }
+
+        /* ── MAIN CONTENT ── */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 5rem;
+        }
+
+        .doc-content h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(135deg, #e0e7ff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .doc-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #c7d2fe;
+        }
+
+        .doc-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: #e0e7ff;
+        }
+
+        .doc-content h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .doc-content p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .doc-content ul, .doc-content ol {
+            margin: 0.5rem 0 1.25rem 1.5rem;
+        }
+
+        .doc-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        .doc-content a {
+            color: #818cf8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .doc-content a:hover {
+            color: #a5b4fc;
+            text-decoration: underline;
+        }
+
+        .doc-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1.25rem;
+            margin: 1rem 0;
+            background: rgba(99,102,241,0.05);
+            border-radius: 0 8px 8px 0;
+            color: var(--text-secondary);
+        }
+
+        .doc-content code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.88em;
+            color: #f472b6;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .doc-content pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .doc-content pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            color: #e2e8f0;
+            font-size: 0.9em;
+        }
+
+        /* ── TABLE STYLES ── */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .doc-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .doc-content th {
+            background: rgba(255,255,255,0.06);
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            color: #e0e7ff;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .doc-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .doc-content tr:last-child td {
+            border-bottom: none;
+        }
+
+        .doc-content tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .doc-content hr {
+            border: none;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="../index.html" class="header-brand">
+        <div class="header-icon">🛡️</div>
+        <div class="header-title">SC 試験 学習ポータル</div>
+    </a>
+    <div class="header-nav">
+        <a href="../index.html" class="nav-btn">🏠 トップ</a>
+        <a href="../search.html" class="nav-btn">🔍 全文検索</a>
+    </div>
+</header>
+
+<div class="container">
+    <article class="doc-content">
+<h1 id="サイバー攻撃シナリオ・ログ解読ハンズオン-ケーススタディ-cyber-attack-scenarios-log-analysis-">サイバー攻撃シナリオ・ログ解読ハンズオン ケーススタディ (Cyber Attack Scenarios & Log Analysis)</h1>
+<h2 id="1-概要-overview-">1. 概要 (Overview)</h2>
+<p>科目B試験（記述式）で最も頻繁に出題される<strong>「外部からの侵入 ➔ 内部ネットワーク横展開 ➔ 情報漏洩・ランサムウェア被害」</strong>の代表的サイバーキルチェーンシナリオについて、各フェーズで記録されるログデータ・イベントID・通信挙動の解読ノウハウを体系化したケーススタディである。</p>
+<hr>
+<h2 id="2-代表的攻撃シナリオとキルチェーン-scenario-01-vpn破られたケース-">2. 代表的攻撃シナリオとキルチェーン (Scenario 01: VPN破られたケース)</h2>
+<pre><code>sequenceDiagram
+    autonumber
+    actor Attacker as 攻撃者 (外部)
+    participant FW as 境界FW / VPN機器
+    participant C2 as 外部C2サーバー
+    participant DC as Active Directory Domain Controller
+    participant FS as 社内ファイルサーバー
+
+    Attacker-&gt;&gt;FW: 未パッチ脆弱性 (RCE) 攻撃パケット送信
+    FW-&gt;&gt;C2: 逆接続 (Reverse Shell / UDP 8443)
+    Attacker-&gt;&gt;DC: Pass-the-Hash による管理者権限奪取 (Event ID 4624 Type 3)
+    Attacker-&gt;&gt;FS: 機密データの圧縮・暗号化・DLP回避送信</code></pre>
+<h3 id="シナリオ詳細フロー">シナリオ詳細フロー</h3>
+<ol>
+<li><strong>初期侵入 (Initial Access)</strong>:</li>
+</ol>
+<ul>
+<li>境界に置かれた VPN 機器のファームウェア未パッチ脆弱性（RCE）を突かれ、リバースシェルにより C2 サーバー（IP: 203.0.113.50, Port 8443）へ暗号化コネクトバックが確立される。</li>
+</ul>
+<ol>
+<li><strong>横展開 (Lateral Movement)</strong>:</li>
+</ol>
+<ul>
+<li>侵入後、メモリダンプツール（Mimikatz相当）により <code>lsass.exe</code> から NTLM ハッシュを抽出し、Pass-the-Hash 攻撃によりドメインコントローラへ無断アクセス。</li>
+</ul>
+<ol>
+<li><strong>目的遂行 (Exfiltration & Impact)</strong>:</li>
+</ol>
+<ul>
+<li>社内ファイルサーバー内の機密データを暗号化アーカイブ化し、HTTPS/DNSトンネリング経由で外部へ送出後、端末をランサムウェアで暗号化（二重脅迫）。</li>
+</ul>
+<hr>
+<h2 id="3-重要イベントログ解読リファレンス-windows-event-log-reference-">3. 重要イベントログ解読リファレンス (Windows Event Log Reference)</h2>
+<div class="table-wrapper"><table><thead><tr><th>イベントID</th><th>ログ名称</th><th>解読時の重要ポイント・判定基準</th></tr></thead><tbody><tr><td><strong>4624</strong></td><td>アカウントログオン成功</td><td><strong>ログオンタイプ 3 (ネットワーク)</strong> または <strong>10 (リモートデスクトップ)</strong>。通常業務時間外かつ管理者アカウント（Administrator）でのログインを抽出。</td></tr><tr><td><strong>4672</strong></td><td>特権の割り当て</td><td>特別な権限（SeDebugPrivilege 等）が割り当てられた瞬間の記録。一般ユーザーからの権限昇格検知。</td></tr><tr><td><strong>4688</strong></td><td>新しいプロセスの作成</td><td>コマンドライン引数ログ（CommandLine）の記録。<code>powershell.exe -Enc</code> (Base64エンコード実行) や <code>cmd.exe /c whoami</code> のプロセス生成。</td></tr><tr><td><strong>4768</strong></td><td>Kerberos TGT 要求</td><td>認証チケット要求。短時間での大量要求は Kerberoasting 攻撃の兆候。</td></tr></tbody></table></div>
+<hr>
+<h2 id="4-インシデント初動対応-csirt-triage-protocol-">4. インシデント初動対応 (CSIRT Triage Protocol)</h2>
+<ol>
+<li><strong>隔離措置</strong>: 感染端末の物理LANケーブル抜去およびWi-Fi切断（C2通信の即時遮断）。</li>
+<li><strong>メモリダンプ取得</strong>: 電源を切る前に <code>RAM</code> データをダンプし、揮発性データ（プロセスメモリ上の暗号鍵・C2通信宛先）を物理保護（RFC 3227 揮発性順序の適用）。</li>
+<li><strong>フォレンジック保全</strong>: 書き込み防止装置（ライトブロッカ）を接続し、ストレージのビットストリームイメージを作成後、SHA-256 ハッシュ値を生成・記録する。</li>
+</ol>
+    </article>
+</div>
+
+<footer>
+    <p>情報セキュリティスペシャリスト試験 総合学習プラットフォーム · IPA シラバス Ver.2.1 ＆ 補足 Ver.4.0 準拠</p>
+</footer>
+
+</body>
+</html>

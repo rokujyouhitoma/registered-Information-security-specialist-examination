@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✉️ 送信ドメイン認証技術 (SPF / DKIM / DMARC) | 情報セキュリティスペシャリスト試験</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-card: rgba(255,255,255,0.04);
+            --border: rgba(255,255,255,0.08);
+            --accent: #6366f1;
+            --accent-2: #8b5cf6;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --code-bg: rgba(0,0,0,0.4);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        /* ── HEADER ── */
+        header {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            background: rgba(10,14,26,0.85);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .header-icon {
+            width: 34px; height: 34px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem;
+        }
+        .header-title { font-weight: 700; font-size: 0.95rem; }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .nav-btn {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .nav-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent);
+            background: rgba(99,102,241,0.1);
+        }
+
+        /* ── MAIN CONTENT ── */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 5rem;
+        }
+
+        .doc-content h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(135deg, #e0e7ff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .doc-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #c7d2fe;
+        }
+
+        .doc-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: #e0e7ff;
+        }
+
+        .doc-content h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .doc-content p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .doc-content ul, .doc-content ol {
+            margin: 0.5rem 0 1.25rem 1.5rem;
+        }
+
+        .doc-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        .doc-content a {
+            color: #818cf8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .doc-content a:hover {
+            color: #a5b4fc;
+            text-decoration: underline;
+        }
+
+        .doc-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1.25rem;
+            margin: 1rem 0;
+            background: rgba(99,102,241,0.05);
+            border-radius: 0 8px 8px 0;
+            color: var(--text-secondary);
+        }
+
+        .doc-content code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.88em;
+            color: #f472b6;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .doc-content pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .doc-content pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            color: #e2e8f0;
+            font-size: 0.9em;
+        }
+
+        /* ── TABLE STYLES ── */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .doc-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .doc-content th {
+            background: rgba(255,255,255,0.06);
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            color: #e0e7ff;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .doc-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .doc-content tr:last-child td {
+            border-bottom: none;
+        }
+
+        .doc-content tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .doc-content hr {
+            border: none;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="../../index.html" class="header-brand">
+        <div class="header-icon">🛡️</div>
+        <div class="header-title">SC 試験 学習ポータル</div>
+    </a>
+    <div class="header-nav">
+        <a href="../../index.html" class="nav-btn">🏠 トップ</a>
+        <a href="../../search.html" class="nav-btn">🔍 全文検索</a>
+    </div>
+</header>
+
+<div class="container">
+    <article class="doc-content">
+<hr>
+<p>title: "送信ドメイン認証技術 (SPF / DKIM / DMARC)"</p>
+<p>last_updated: "2026-08-01"</p>
+<p>author: "Information Security Specialist Agent"</p>
+<hr>
+<h1 id="-送信ドメイン認証技術-spf-dkim-dmarc-">✉️ 送信ドメイン認証技術 (SPF / DKIM / DMARC)</h1>
+<h2 id="1-概要-overview-">1. 概要 (Overview)</h2>
+<p>電子メールのプロトコルである SMTP には、送信者のメールアドレス (From) を検証する仕組みが元々存在せず、成りすましメール（フィッシング、ビジネスメール詐欺 BEM）の温床となっていた。</p>
+<p>これらを防止するため、DNSやデジタル署名を用いた <strong>送信ドメイン認証技術群 (SPF, DKIM, DMARC)</strong> が標準化され、主要メール事業者（Google, Yahoo!等）において送信者要件として義務付けられている。</p>
+<hr>
+<h2 id="2-3大認証技術の比較と役割分担">2. 3大認証技術の比較と役割分担</h2>
+<pre><code>graph TD
+    Email[&quot;受信電子メール (Envelope From / Header From)&quot;] --&gt; SPF[&quot;1. SPF (IP照合)&lt;br/&gt;送信元IPアドレスをDNSレコードと検証&quot;]
+    Email --&gt; DKIM[&quot;2. DKIM (署名検証)&lt;br/&gt;メールヘッダのデジタル署名を検証&quot;]
+    SPF --&gt; DMARC[&quot;3. DMARC (ポリシー制御 &amp; アライメント判定)&lt;br/&gt;SPF/DKIM結果とHeader Fromのアライメント判定&quot;]
+    DKIM --&gt; DMARC
+    DMARC --&gt; Policy{&quot;DMARC ポリシー制御&quot;}
+    Policy --&gt;|none| Pass[&quot;受信許可 (レポートのみ)&quot;]
+    Policy --&gt;|quarantine| Quarantine[&quot;迷惑メールフォルダへ隔離&quot;]
+    Policy --&gt;|reject| Reject[&quot;受取拒否 (配送ブロック)&quot;]</code></pre>
+<div class="table-wrapper"><table><thead><tr><th>技術名</th><th>検証対象</th><th>検証メカニズム</th><th>弱点・課題</th></tr></thead><tbody><tr><td><strong>SPF</strong> (Sender Policy Framework)</td><td>Mail From (Envelope From)</td><td>送信元サーバーの IP アドレスを DNS TXT レコードと照合</td><td>メール転送 (Forwarding) 時に IP アドレスが変わると認証失敗</td></tr><tr><td><strong>DKIM</strong> (DomainKeys Identified Mail)</td><td>秘密鍵による署名</td><td>送信元が電子署名を付与し、DNS 公開鍵で検証</td><td>Header From と署名ドメインの一致チェックを行わない</td></tr><tr><td><strong>DMARC</strong></td><td><strong>Header From</strong> (表示送信者)</td><td>SPF/DKIM の結果と Header From のドメインアライメント検証</td><td><strong>SPF と DKIM の導入が前提</strong></td></tr></tbody></table></div>
+<hr>
+<h2 id="3-dmarc-アライメントと宣言ポリシー">3. DMARC アライメントと宣言ポリシー</h2>
+<ul>
+<li><strong>ドメインアライメント (Domain Alignment)</strong>:</li>
+</ul>
+<p>  ユーザーのメール画面に表示される <code>Header From</code> のドメインと、<code>Envelope From (SPF)</code> または <code>DKIM 署名ドメイン</code> が一致しているかを検査。</p>
+<ul>
+<li><strong>DMARC ポリシーの種類</strong>:</li>
+<li><code>p=none</code>: 認証失敗時もそのまま配信（監視・レポート収集モード）</li>
+<li><code>p=quarantine</code>: 認証失敗メールを迷惑メールフォルダーへ隔離</li>
+<li><code>p=reject</code>: 認証失敗メールをサーバーで即座に拒否</li>
+</ul>
+<hr>
+<h2 id="4-試験対策ポイント-exam-preparation-guidelines-">4. 試験対策ポイント (Exam Preparation Guidelines)</h2>
+<blockquote><p>[!IMPORTANT]</p></blockquote>
+<blockquote><p><strong>午後問題・午前問題で狙われる引っ掛け知識</strong>:</p></blockquote>
+<blockquote><p>1. <strong>Envelope From と Header From の違い</strong>: 攻撃者は Envelope From に自身の正規ドメインを指定して SPF をパスさせつつ、Header From に偽装対象企業を指定する攻撃（SPFのバイパス）を行う。<strong>DMARC はこの Header From の偽装を見破るために不可欠</strong>。</p></blockquote>
+<blockquote><p>2. <strong>ARC (Authenticated Received Chain)</strong>: メーリングリストや自動転送により SPF/DKIM が破壊された場合でも、転送経路の認証履歴を保存・検証する拡張技術。</p></blockquote>
+<hr>
+<h2 id="5-関連キーワード・相互リンク">5. 関連キーワード・相互リンク</h2>
+<ul>
+<li><a href="../syllabus_ver2_1.html#spf">SPF (Sender Policy Framework)</a></li>
+<li><a href="../syllabus_ver2_1.html#dkim">DKIM (DomainKeys Identified Mail)</a></li>
+<li><a href="../syllabus_ver2_1.html#dmarc">DMARC</a></li>
+<li><a href="../syllabus_tsuiho_ver4_0.html#arc">ARC (Authenticated Received Chain)</a></li>
+</ul>
+    </article>
+</div>
+
+<footer>
+    <p>情報セキュリティスペシャリスト試験 総合学習プラットフォーム · IPA シラバス Ver.2.1 ＆ 補足 Ver.4.0 準拠</p>
+</footer>
+
+</body>
+</html>

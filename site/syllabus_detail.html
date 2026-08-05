@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情報処理安全確保支援士試験 シラバス詳細（IPA公式シラバス Ver.2.1 ＆ 科目A-2追補版 Ver.4.0 完全準拠版） | 情報セキュリティスペシャリスト試験</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-card: rgba(255,255,255,0.04);
+            --border: rgba(255,255,255,0.08);
+            --accent: #6366f1;
+            --accent-2: #8b5cf6;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --code-bg: rgba(0,0,0,0.4);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        /* ── HEADER ── */
+        header {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            background: rgba(10,14,26,0.85);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .header-icon {
+            width: 34px; height: 34px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem;
+        }
+        .header-title { font-weight: 700; font-size: 0.95rem; }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .nav-btn {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .nav-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent);
+            background: rgba(99,102,241,0.1);
+        }
+
+        /* ── MAIN CONTENT ── */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 5rem;
+        }
+
+        .doc-content h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(135deg, #e0e7ff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .doc-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #c7d2fe;
+        }
+
+        .doc-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: #e0e7ff;
+        }
+
+        .doc-content h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .doc-content p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .doc-content ul, .doc-content ol {
+            margin: 0.5rem 0 1.25rem 1.5rem;
+        }
+
+        .doc-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        .doc-content a {
+            color: #818cf8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .doc-content a:hover {
+            color: #a5b4fc;
+            text-decoration: underline;
+        }
+
+        .doc-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1.25rem;
+            margin: 1rem 0;
+            background: rgba(99,102,241,0.05);
+            border-radius: 0 8px 8px 0;
+            color: var(--text-secondary);
+        }
+
+        .doc-content code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.88em;
+            color: #f472b6;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .doc-content pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .doc-content pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            color: #e2e8f0;
+            font-size: 0.9em;
+        }
+
+        /* ── TABLE STYLES ── */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .doc-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .doc-content th {
+            background: rgba(255,255,255,0.06);
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            color: #e0e7ff;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .doc-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .doc-content tr:last-child td {
+            border-bottom: none;
+        }
+
+        .doc-content tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .doc-content hr {
+            border: none;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="./index.html" class="header-brand">
+        <div class="header-icon">🛡️</div>
+        <div class="header-title">SC 試験 学習ポータル</div>
+    </a>
+    <div class="header-nav">
+        <a href="./index.html" class="nav-btn">🏠 トップ</a>
+        <a href="./search.html" class="nav-btn">🔍 全文検索</a>
+    </div>
+</header>
+
+<div class="container">
+    <article class="doc-content">
+<h1 id="情報処理安全確保支援士試験-シラバス詳細-ipa公式シラバス-ver-2-1-科目a-2追補版-ver-4-0-完全準拠版-">情報処理安全確保支援士試験 シラバス詳細（IPA公式シラバス Ver.2.1 ＆ 科目A-2追補版 Ver.4.0 完全準拠版）</h1>
+<p>出典: <a href="https://www.ipa.go.jp/shiken/syllabus/index.html">IPA 情報処理安全確保支援士試験 シラバス Ver.2.1 および 科目A-2 追補版 Ver.4.0</a></p>
+<p>本ドキュメントは、IPA公式シラバスに定義されている情報処理安全確保支援士試験（レベル4）の<strong>大項目（大分類）</strong>、<strong>小項目（小分類）の番号・名称</strong>、<strong>概要（目標）</strong>、<strong>要求される知識（詳細）</strong>、<strong>要求される技能（詳細）</strong>、<strong>シラバス記載の全用語例</strong>、および<strong>科目A-2追補版（共通キャリア・スキルフレームワーク BOK体系の大分類・中分類・小分類）</strong>を、<strong>IPA公式の番号・構成・用語と1対1で完全一致</strong>させて網羅した公式完全準拠ドキュメントです。</p>
+<hr>
+<h2 id="-ipa公式シラバス-階層マップ">📑 IPA公式シラバス 階層マップ</h2>
+<pre><code>graph TD
+    A[&quot;情報処理安全確保支援士 シラバス (レベル4)&quot;] --&gt; B[&quot;1. 情報セキュリティマネジメントの推進又は支援に関すること (1-1 〜 1-7)&quot;]
+    A --&gt; C[&quot;2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること (2-1 〜 2-8)&quot;]
+    A --&gt; D[&quot;3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること (3-1 〜 3-11)&quot;]
+    A --&gt; E[&quot;4. 情報セキュリティインシデント管理の推進又は支援に関すること (4-1 〜 4-4)&quot;]
+    A --&gt; F[&quot;科目A-2 追補版 (共通キャリア・スキルフレームワーク BOK体系)&quot;]</code></pre>
+<hr>
+<h2 id="1-情報セキュリティマネジメントの推進又は支援に関すること">1. 情報セキュリティマネジメントの推進又は支援に関すること</h2>
+<h3 id="1-1-情報セキュリティ方針の策定">1-1 情報セキュリティ方針の策定</h3>
+<ul>
+<li><strong>大項目</strong>: 1. 情報セキュリティマネジメントの推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 1-1 情報セキュリティ方針の策定</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  経営者による情報セキュリティ方針の策定及び改定について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>情報セキュリティガバナンス及びITガバナンスに関する知識</li>
+<li>マネジメントシステム（ISMS，BCMSなど）に関する知識</li>
+<li>組織マネジメントに関する知識</li>
+<li>法令，規制，契約，情報セキュリティに関する動向などによって生じる要求事項に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>組織内外の利害関係者のニーズと期待，組織内の経営戦略，事業戦略によって生じる要求事項を踏まえて情報セキュリティ方針を具体化する能力</li>
+<li>法令，規制，契約，情報セキュリティに関する動向などによって生じる要求事項を踏まえて情報セキュリティ方針を具体化する能力</li>
+<li>経営者とコミュニケーションする能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#情報セキュリティガバナンス"><code>情報セキュリティガバナンス</code></a>, <a href="glossary/syllabus_ver2_1.html#itガバナンス"><code>ITガバナンス</code></a>, <a href="glossary/syllabus_ver2_1.html#isms(jis-q-27001-iso-iec-27001"><code>ISMS(JIS Q 27001 / ISO/IEC 27001)</code></a>), <a href="glossary/syllabus_ver2_1.html#bcms(jis-q-22301-iso-22301"><code>BCMS(JIS Q 22301 / ISO 22301)</code></a>), <a href="glossary/syllabus_ver2_1.html#情報セキュリティ方針"><code>情報セキュリティ方針</code></a>, <a href="glossary/syllabus_ver2_1.html#基本方針"><code>基本方針</code></a>, <a href="glossary/syllabus_ver2_1.html#対策基準"><code>対策基準</code></a>, <a href="glossary/syllabus_ver2_1.html#実施手順"><code>実施手順</code></a>, <a href="glossary/syllabus_ver2_1.html#組織マネジメント"><code>組織マネジメント</code></a>, <a href="glossary/syllabus_ver2_1.html#利害関係者(ステークホルダー"><code>利害関係者(ステークホルダー)要求事項</code></a>要求事項), <a href="glossary/syllabus_ver2_1.html#経営戦略"><code>経営戦略</code></a>, <a href="glossary/syllabus_ver2_1.html#事業戦略"><code>事業戦略</code></a>, <a href="glossary/syllabus_ver2_1.html#コンプライアンス"><code>コンプライアンス</code></a></p>
+<h3 id="1-2-情報セキュリティリスクアセスメント">1-2 情報セキュリティリスクアセスメント</h3>
+<ul>
+<li><strong>大項目</strong>: 1. 情報セキュリティマネジメントの推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 1-2 情報セキュリティリスクアセスメント</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  リスク基準の確立及び維持について，必要な指導・助言を行い，支援する。</p>
+<p>  リスク特定，リスク分析，リスク評価のプロセスの実施について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>情報の特性（機密性，完全性，可用性，真正性，責任追跡性，否認防止，信頼性など）に関する知識</li>
+<li>リスク，リスク基準，リスク源，脆弱性及び脅威に関する知識</li>
+<li>情報セキュリティリスクアセスメントのプロセス（特定，分析，評価）に関する知識</li>
+<li>脅威分析（STRIDE分析，アタックツリー分析（ATA）など）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>情報資産損失の大きさ（失われる資産の価値，原因究明及び復旧の費用，社会的説明の費用）を算定し，評価する能力</li>
+<li>リスク源，脆弱性及び脅威を，新たなITに関するものも含めて列挙する能力</li>
+<li>情報資産とリスクを関連付けて整理する能力</li>
+<li>リスクを優先順位付けする能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#機密性(confidentiality"><code>機密性(Confidentiality)</code></a>), <a href="glossary/syllabus_ver2_1.html#完全性(integrity"><code>完全性(Integrity)</code></a>), <a href="glossary/syllabus_ver2_1.html#可用性(availability"><code>可用性(Availability)</code></a>), <a href="glossary/syllabus_ver2_1.html#真正性(authenticity"><code>真正性(Authenticity)</code></a>), <a href="glossary/syllabus_ver2_1.html#責任追跡性(accountability"><code>責任追跡性(Accountability)</code></a>), <a href="glossary/syllabus_ver2_1.html#否認防止(non-repudiation"><code>否認防止(Non-repudiation)</code></a>), <a href="glossary/syllabus_ver2_1.html#信頼性(reliability"><code>信頼性(Reliability)</code></a>), <a href="glossary/syllabus_ver2_1.html#リスク基準"><code>リスク基準</code></a>, <a href="glossary/syllabus_ver2_1.html#リスク源"><code>リスク源</code></a>, <a href="glossary/syllabus_ver2_1.html#脆弱性(vulnerability"><code>脆弱性(Vulnerability)</code></a>), <a href="glossary/syllabus_ver2_1.html#脅威(threat"><code>脅威(Threat)</code></a>), <a href="glossary/syllabus_ver2_1.html#情報セキュリティリスクアセスメント"><code>情報セキュリティリスクアセスメント</code></a>, <a href="glossary/syllabus_ver2_1.html#リスク特定"><code>リスク特定</code></a>, <a href="glossary/syllabus_ver2_1.html#リスク分析"><code>リスク分析</code></a>, <a href="glossary/syllabus_ver2_1.html#リスク評価"><code>リスク評価</code></a>, <a href="glossary/syllabus_ver2_1.html#stride分析"><code>STRIDE分析</code></a>, <a href="glossary/syllabus_ver2_1.html#アタックツリー分析(ata"><code>アタックツリー分析(ATA)</code></a>), <a href="glossary/syllabus_ver2_1.html#リスクマトリクス"><code>リスクマトリクス</code></a>, <a href="glossary/syllabus_ver2_1.html#資産損失評価"><code>資産損失評価</code></a></p>
+<h3 id="1-3-情報セキュリティリスク対応">1-3 情報セキュリティリスク対応</h3>
+<ul>
+<li><strong>大項目</strong>: 1. 情報セキュリティマネジメントの推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 1-3 情報セキュリティリスク対応</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  情報セキュリティリスクアセスメントの結果に基づく適切な管理策の選定，情報セキュリティリスク対応計画の策定について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>リスク対応の選択肢（リスク低減，リスク共有，リスク回避，リスク保有など）に関する知識</li>
+<li>管理策の実施に要する費用の算定に関する知識</li>
+<li>サイバー保険に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>リスクごとに，リスク対応の選択肢を選定する能力</li>
+<li>リスク対応の実施に適切な管理策を選定する能力</li>
+<li>情報セキュリティリスク対応計画を作成し，残留リスクと併せて説明する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#リスク対応(risk-treatment"><code>リスク対応(Risk Treatment)</code></a>), <a href="glossary/syllabus_ver2_1.html#リスク低減(risk-reduction"><code>リスク低減(Risk Reduction)</code></a>), <a href="glossary/syllabus_ver2_1.html#リスク回避(risk-avoidance"><code>リスク回避(Risk Avoidance)</code></a>), <a href="glossary/syllabus_ver2_1.html#リスク共有(risk-sharing"><code>リスク共有(Risk Sharing)</code></a>), <a href="glossary/syllabus_ver2_1.html#リスク保有(risk-acceptance"><code>リスク保有(Risk Acceptance)</code></a>), <a href="glossary/syllabus_ver2_1.html#管理策(security-controls"><code>管理策(Security Controls)</code></a>), <a href="glossary/syllabus_ver2_1.html#残留リスク(residual-risk"><code>残留リスク(Residual Risk)</code></a>), <a href="glossary/syllabus_ver2_1.html#リスク対応計画"><code>リスク対応計画</code></a>, <a href="glossary/syllabus_ver2_1.html#サイバー保険"><code>サイバー保険</code></a>, <a href="glossary/syllabus_ver2_1.html#費用対効果分析"><code>費用対効果分析</code></a></p>
+<h3 id="1-4-情報セキュリティ諸規程の策定">1-4 情報セキュリティ諸規程の策定</h3>
+<ul>
+<li><strong>大項目</strong>: 1. 情報セキュリティマネジメントの推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 1-4 情報セキュリティ諸規程の策定</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  情報セキュリティに関連する諸規程の策定及び改定について，必要な指導・助言を行い，支援する。</p>
+<p>  事業継続に関する計画の策定及び改定について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>法令，規制，規格に関する知識</li>
+<li>ITの動向（クラウドコンピューティング，仮想化，モバイル，組込みシステム，Web技術，AI（生成AIを含む），ビッグデータ，IoTなど）及びその情報セキュリティへの影響に関する知識</li>
+<li>事業継続に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>業務プロセス，業務手順を踏まえた上で，情報セキュリティ諸規程で定めるべき事項を検討する能力</li>
+<li>検討した事項及びその必要性を説明する能力</li>
+<li>法令，規制，規格の変化やITの動向を踏まえて情報セキュリティ諸規程をレビューする能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#jis-q-27001(iso-iec-27001"><code>JIS Q 27001(ISO/IEC 27001)</code></a>), <a href="glossary/syllabus_ver2_1.html#jis-q-27002(iso-iec-27002"><code>JIS Q 27002(ISO/IEC 27002)</code></a>), <a href="glossary/syllabus_ver2_1.html#適用宣言書(soa"><code>適用宣言書(SoA)</code></a>), <a href="glossary/syllabus_ver2_1.html#情報セキュリティ諸規程"><code>情報セキュリティ諸規程</code></a>, <a href="glossary/syllabus_ver2_1.html#事業継続計画(bcp"><code>事業継続計画(BCP)</code></a>), <a href="glossary/syllabus_ver2_1.html#事業継続マネジメント(bcm"><code>事業継続マネジメント(BCM)</code></a>), <a href="glossary/syllabus_ver2_1.html#要塞化(ハードニング"><code>要塞化(ハードニング)</code></a>), <a href="glossary/syllabus_ver2_1.html#クラウドセキュリティ"><code>クラウドセキュリティ</code></a>, <a href="glossary/syllabus_ver2_1.html#ai-生成aiセキュリティ"><code>AI/生成AIセキュリティ</code></a>, <a href="glossary/syllabus_ver2_1.html#iotセキュリティ"><code>IoTセキュリティ</code></a>, <a href="glossary/syllabus_ver2_1.html#モバイルセキュリティ"><code>モバイルセキュリティ</code></a></p>
+<h3 id="1-5-情報セキュリティ監査">1-5 情報セキュリティ監査</h3>
+<ul>
+<li><strong>大項目</strong>: 1. 情報セキュリティマネジメントの推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 1-5 情報セキュリティ監査</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  情報セキュリティ監査及びシステム監査において，監査人を技術的な側面から支援する。</p>
+<p>  情報セキュリティ監査及びシステム監査の後の監査対象組織による改善計画策定及び改善活動について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>情報セキュリティ監査，システム監査，内部監査，業務監査に関する知識</li>
+<li>監査のプロセス，関連文書（監査計画書，監査調書，監査報告書など）に関する知識</li>
+<li>監査証拠（システム，ネットワークのログなど）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>組織が利用しているセキュリティ技術及び導入している情報セキュリティ対策が十分か，並びに適切に実施されているかを評価する能力</li>
+<li>事業，業務，情報システム上の制約を考慮した上で，実現可能な管理策を検討し，指導・助言する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#情報セキュリティ監査基準"><code>情報セキュリティ監査基準</code></a>, <a href="glossary/syllabus_ver2_1.html#情報セキュリティ管理基準"><code>情報セキュリティ管理基準</code></a>, <a href="glossary/syllabus_ver2_1.html#システム監査基準"><code>システム監査基準</code></a>, <a href="glossary/syllabus_ver2_1.html#保証型監査"><code>保証型監査</code></a>, <a href="glossary/syllabus_ver2_1.html#助言型監査"><code>助言型監査</code></a>, <a href="glossary/syllabus_ver2_1.html#内部監査"><code>内部監査</code></a>, <a href="glossary/syllabus_ver2_1.html#外部監査"><code>外部監査</code></a>, <a href="glossary/syllabus_ver2_1.html#監査計画書"><code>監査計画書</code></a>, <a href="glossary/syllabus_ver2_1.html#監査調書"><code>監査調書</code></a>, <a href="glossary/syllabus_ver2_1.html#監査報告書"><code>監査報告書</code></a>, <a href="glossary/syllabus_ver2_1.html#監査証拠"><code>監査証拠</code></a>, <a href="glossary/syllabus_ver2_1.html#ログ検証"><code>ログ検証</code></a>, <a href="glossary/syllabus_ver2_1.html#改善計画フォローアップ"><code>改善計画・フォローアップ</code></a></p>
+<h3 id="1-6-情報セキュリティに関する動向・事例の収集と分析">1-6 情報セキュリティに関する動向・事例の収集と分析</h3>
+<ul>
+<li><strong>大項目</strong>: 1. 情報セキュリティマネジメントの推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 1-6 情報セキュリティに関する動向・事例の収集と分析</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  情報セキュリティに関する事件・事故，傾向と背景，攻撃の手口，脅威，脆弱性及び対策，セキュリティ技術などの情報を収集する。</p>
+<p>  情報セキュリティに関する法令，規制，規格類の制定・改廃や社会通念の変化，コンプライアンス上の新たな課題などについて把握する。</p>
+<p>  収集した各情報について，組織内への影響，対応の緊急性，対応の費用・効果・必要性を評価し，報告する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>JIS，ISO，IEC，IEEE，NISTなどのセキュリティ関連の規格の動向に関する知識</li>
+<li>業界標準，ガイドラインの動向に関する知識</li>
+<li>サイバー・フィジカル・セキュリティ対策フレームワーク（CPSF）に関する知識</li>
+<li>攻撃の手口に関する知識</li>
+<li>攻撃の分析モデル（サイバーキルチェーン，ATT＆CKなど）に関する知識</li>
+<li>脅威インテリジェンス（OSINTなど）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>国内外の様々な情報源（公的機関，セキュリティ機関，ベンダからの発表，カンファレンス，論文など）から，必要な情報を，迅速にかつ継続的に収集する能力</li>
+<li>収集した情報の信頼性，正確さを検証する能力</li>
+<li>収集した情報を整理し，関係者に伝達する能力</li>
+<li>収集した情報に関して，組織内への影響などを評価する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#jis"><code>JIS</code></a>, <a href="glossary/syllabus_ver2_1.html#iso-iec"><code>ISO/IEC</code></a>, <a href="glossary/syllabus_ver2_1.html#ieee"><code>IEEE</code></a>, <a href="glossary/syllabus_ver2_1.html#nist(sp-800シリーズ"><code>NIST(SP 800シリーズ)</code></a>), <a href="glossary/syllabus_ver2_1.html#cpsf(サイバーフィジカルセキュリティフレームワーク"><code>CPSF(サイバー・フィジカル・セキュリティフレームワーク)</code></a>), <a href="glossary/syllabus_ver2_1.html#攻撃手口分析"><code>攻撃手口分析</code></a>, <a href="glossary/syllabus_ver2_1.html#サイバーキルチェーン(cyber-kill-chain"><code>サイバーキルチェーン(Cyber Kill Chain)</code></a>), <a href="glossary/syllabus_ver2_1.html#mitre-attck"><code>MITRE ATT&CK</code></a>, <a href="glossary/syllabus_ver2_1.html#脅威インテリジェンス(threat-intelligence"><code>脅威インテリジェンス(Threat Intelligence)</code></a>), <a href="glossary/syllabus_ver2_1.html#osint(open-source-intelligence"><code>OSINT(Open Source Intelligence)</code></a>), <a href="glossary/syllabus_ver2_1.html#情報収集信頼性評価"><code>情報収集・信頼性評価</code></a>, <a href="glossary/syllabus_ver2_1.html#コンプライアンス課題"><code>コンプライアンス課題</code></a></p>
+<h3 id="1-7-関係者とのコミュニケーション">1-7 関係者とのコミュニケーション</h3>
+<ul>
+<li><strong>大項目</strong>: 1. 情報セキュリティマネジメントの推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 1-7 関係者とのコミュニケーション</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  組織内の課題及び必要な対策といった情報セキュリティに関する情報を，経営層ほか組織内の各層に伝達し，コミュニケーションを促進する。</p>
+<p>  組織内の情報システムに影響を及ぼす情報を情報システム部門に伝達し，必要な検討，対応を支援する。</p>
+<p>  外部のセキュリティ機関，情報共有コミュニティ，セキュリティベンダー，警察，監督官庁，顧客などと情報交換を行う。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>セキュリティ機関（JPCERT/CC，警察，監督官庁，NISC，IPAなど）に関する知識</li>
+<li>サイバー情報共有イニシアティブ（J-CSIP），サイバーレスキュー隊（J-CRAT）に関する知識</li>
+<li>情報セキュリティ早期警戒パートナーシップに関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>情報セキュリティのコミュニティ，イベントに参加し，情報の入手及び提供を行う能力</li>
+<li>様々な立場の関係者とコミュニケーションする能力</li>
+<li>連絡窓口として，組織内外の情報連携を行う能力</li>
+<li>ISAC，他のCSIRTなどと情報共有する，及び共有された情報を活用する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#jpcert-cc"><code>JPCERT/CC</code></a>, <a href="glossary/syllabus_ver2_1.html#nisc(内閣サイバーセキュリティセンター"><code>NISC(内閣サイバーセキュリティセンター)</code></a>), <a href="glossary/syllabus_ver2_1.html#ipa(情報処理推進機構"><code>IPA(情報処理推進機構)</code></a>), <a href="glossary/syllabus_ver2_1.html#j-csip(サイバー情報共有イニシアティブ"><code>J-CSIP(サイバー情報共有イニシアティブ)</code></a>), <a href="glossary/syllabus_ver2_1.html#j-crat(サイバーレスキュー隊"><code>J-CRAT(サイバーレスキュー隊)</code></a>), <a href="glossary/syllabus_ver2_1.html#情報セキュリティ早期警戒パートナーシップ"><code>情報セキュリティ早期警戒パートナーシップ</code></a>, <a href="glossary/syllabus_ver2_1.html#isac(information-sharing-and-analysis-center"><code>ISAC(Information Sharing and Analysis Center)</code></a>), <a href="glossary/syllabus_ver2_1.html#csirt間情報共有"><code>CSIRT間情報共有</code></a>, <a href="glossary/syllabus_ver2_1.html#ステークホルダーコミュニケーション"><code>ステークホルダーコミュニケーション</code></a>, <a href="glossary/syllabus_ver2_1.html#エスカレーション"><code>エスカレーション</code></a></p>
+<hr>
+<h2 id="2-情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること">2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること</h2>
+<h3 id="2-1-企画・要件定義-セキュリティの観点-">2-1 企画・要件定義（セキュリティの観点）</h3>
+<ul>
+<li><strong>大項目</strong>: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 2-1 企画・要件定義（セキュリティの観点）</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  調達又は開発するシステムのニーズ及び制約並びに脅威分析の結果からのセキュリティ要件の定義について，必要な指導・助言を行い，支援する。</p>
+<p>  調達又は開発の仕様書のレビューについて，セキュリティの観点から必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>セキュリティ要件に関する知識</li>
+<li>セキュリティバイデザイン，プライバシーバイデザインに関する知識</li>
+<li>システム及びソフトウェア製品の品質要求及び評価（SQuaRE）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>調達又は開発するシステムのニーズ及び制約からセキュリティ要件を定義する能力</li>
+<li>脅威分析 Result からセキュリティ要件を定義する能力</li>
+<li>仕様書をレビューする能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#セキュリティバイデザイン(security-by-design"><code>セキュリティバイデザイン(Security by Design)</code></a>), <a href="glossary/syllabus_ver2_1.html#プライバシーバイデザイン(privacy-by-design"><code>プライバシーバイデザイン(Privacy by Design)</code></a>), <a href="glossary/syllabus_ver2_1.html#セキュリティ要件定義"><code>セキュリティ要件定義</code></a>, <a href="glossary/syllabus_ver2_1.html#機能要件-非機能要件"><code>機能要件 / 非機能要件</code></a>, <a href="glossary/syllabus_ver2_1.html#square(iso-iec-25000シリーズ"><code>SQuaRE(ISO/IEC 25000シリーズ)</code></a>), <a href="glossary/syllabus_ver2_1.html#脅威分析モデリング"><code>脅威分析・モデリング</code></a>, <a href="glossary/syllabus_ver2_1.html#要件定義書レビュー"><code>要件定義書レビュー</code></a></p>
+<h3 id="2-2-製品・サービスのセキュアな導入">2-2 製品・サービスのセキュアな導入</h3>
+<ul>
+<li><strong>大項目</strong>: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 2-2 製品・サービスのセキュアな導入</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  システム全体又はその一部を構成する製品・サービスの調達について，セキュリティの観点から必要な指導・助言を行い，支援する。</p>
+<p>  調達した製品・サービスへのセキュアな設定の実施について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>製品・サービスの種類と特徴に関する知識</li>
+<li>ネットワーク機器，サーバの設定に関する知識</li>
+<li>要塞化（ハードニング）に関する知識</li>
+<li>セキュリティの投資対効果の評価に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>製品・サービスの仕様書とセキュリティ要件とを照らして，製品・サービスを選定する能力</li>
+<li>セキュリティの投資対効果を最適化する能力</li>
+<li>設定作業手順書をレビューする能力</li>
+<li>調達した製品・サービスにセキュアな設定を行う能力</li>
+<li>各製品・サービスを組み合わせたシステム全体のセキュリティバランス，運用の実現性を検証する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#要塞化(ハードニング-hardening"><code>要塞化(ハードニング / Hardening)</code></a>), <a href="glossary/syllabus_ver2_1.html#セキュリティ投資対効果(rosi"><code>セキュリティ投資対効果(ROSI)</code></a>), <a href="glossary/syllabus_ver2_1.html#製品サービス選定基準"><code>製品・サービス選定基準</code></a>, <a href="glossary/syllabus_ver2_1.html#ネットワーク機器セキュリティ設定"><code>ネットワーク機器セキュリティ設定</code></a>, <a href="glossary/syllabus_ver2_1.html#サーバー要塞化"><code>サーバー要塞化</code></a>, <a href="glossary/syllabus_ver2_1.html#設定手順書レビュー"><code>設定手順書レビュー</code></a>, <a href="glossary/syllabus_ver2_1.html#セキュリティバランス検証"><code>セキュリティバランス検証</code></a></p>
+<h3 id="2-3-アーキテクチャの設計-セキュリティの観点-">2-3 アーキテクチャの設計（セキュリティの観点）</h3>
+<ul>
+<li><strong>大項目</strong>: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 2-3 アーキテクチャの設計（セキュリティの観点）</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  システム及びネットワークのアーキテクチャの設計，インタフェース，利用する各技術の評価について，セキュリティの観点から必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>システム開発技術，アーキテクチャの設計に関する知識</li>
+<li>データベース，ネットワークに関する知識</li>
+<li>信頼性設計（フェールセーフ，フェールソフトなど）に関する知識</li>
+<li>仮想化，コンテナ技術に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>アーキテクチャの設計書をレビューする能力</li>
+<li>システム及びネットワークのアーキテクチャ，インタフェース，利用する各技術がセキュアであるかどうかを評価する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#フェールセーフ"><code>フェールセーフ</code></a>, <a href="glossary/syllabus_ver2_1.html#フェールソフト"><code>フェールソフト</code></a>, <a href="glossary/syllabus_ver2_1.html#最小権限の原則"><code>最小権限の原則</code></a>, <a href="glossary/syllabus_ver2_1.html#境界防御"><code>境界防御</code></a>, <a href="glossary/syllabus_ver2_1.html#多層防御(defense-in-depth"><code>多層防御(Defense in Depth)</code></a>), <a href="glossary/syllabus_ver2_1.html#仮想化コンテナセキュリティ"><code>仮想化・コンテナセキュリティ</code></a>, <a href="glossary/syllabus_ver2_1.html#ネットワークセグメンテーション"><code>ネットワークセグメンテーション</code></a>, <a href="glossary/syllabus_ver2_1.html#アーキテクチャ設計書レビュー"><code>アーキテクチャ設計書レビュー</code></a></p>
+<h3 id="2-4-セキュリティ機能の設計">2-4 セキュリティ機能の設計</h3>
+<ul>
+<li><strong>大項目</strong>: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 2-4 セキュリティ機能の設計</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  セキュリティ要件及びアーキテクチャに基づき，セキュリティ機能の設計について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>セキュリティ機能（認証，アクセス制御，暗号，ログ出力等）に関する知識</li>
+<li>開発環境，フレームワークのセキュリティ機能に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>セキュリティ機能の設計書，テスト計画書をレビューする能力</li>
+<li>要件を満たすセキュリティ機能を設計する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#認証(authentication"><code>認証(Authentication)</code></a>), <a href="glossary/syllabus_ver2_1.html#アクセス制御(access-control"><code>アクセス制御(Access Control)</code></a>), <a href="glossary/syllabus_ver2_1.html#暗号機能(encryption"><code>暗号機能(Encryption)</code></a>), <a href="glossary/syllabus_ver2_1.html#ログ出力機能(logging"><code>ログ出力機能(Logging)</code></a>), <a href="glossary/syllabus_ver2_1.html#セキュリティフレームワーク"><code>セキュリティフレームワーク</code></a>, <a href="glossary/syllabus_ver2_1.html#セキュリティ機能設計書レビュー"><code>セキュリティ機能設計書レビュー</code></a>, <a href="glossary/syllabus_ver2_1.html#テスト計画書レビュー"><code>テスト計画書レビュー</code></a></p>
+<h3 id="2-5-セキュアプログラミング">2-5 セキュアプログラミング</h3>
+<ul>
+<li><strong>大項目</strong>: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 2-5 セキュアプログラミング</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  ソフトウェア実装でのコーディング標準，セキュアプログラミングなどについて，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>セキュアプログラミングの原則，実践規範に関する知識</li>
+<li>OS 及びコンパイラでの攻撃防止技術に関する知識</li>
+<li>統合開発環境に関する知識</li>
+<li>プログラム言語，データベース言語，マークアップ言語に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>ソフトウェア実装について，セキュアプログラミングの原則，実践規範と照らしてレビューする能力</li>
+<li>コーディング標準に沿ったセキュアプログラミングを実践する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#xss(cross-site-scripting"><code>XSS(Cross-Site Scripting)</code></a>), <a href="glossary/syllabus_ver2_1.html#sqlインジェクション"><code>SQLインジェクション</code></a>, <a href="glossary/syllabus_ver2_1.html#csrf(cross-site-request-forgery"><code>CSRF(Cross-Site Request Forgery)</code></a>), <a href="glossary/syllabus_ver2_1.html#osコマンドインジェクション"><code>OSコマンドインジェクション</code></a>, <a href="glossary/syllabus_ver2_1.html#ディレクトリトラバーサル"><code>ディレクトリトラバーサル</code></a>, <a href="glossary/syllabus_ver2_1.html#バッファオーバーフロー"><code>バッファオーバーフロー</code></a>, <a href="glossary/syllabus_ver2_1.html#cookie属性(secure"><code>Cookie属性(Secure)</code></a>), <a href="glossary/syllabus_ver2_1.html#セッション固定攻撃対策"><code>セッション固定攻撃対策</code></a>, <a href="glossary/syllabus_ver2_1.html#入力バリデーション"><code>入力バリデーション</code></a>, <a href="glossary/syllabus_ver2_1.html#出力エスケープ"><code>出力エスケープ</code></a></p>
+<h3 id="2-6-セキュリティテスト">2-6 セキュリティテスト</h3>
+<ul>
+<li><strong>大項目</strong>: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 2-6 セキュリティテスト</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  実装したセキュリティ機能のテスト，並びにソフトウェア及びシステムのテストについて，セキュリティの観点から必要な指導・助言を行い，支援する。</p>
+<p>  運用フェーズのソフトウェア及びシステムを対象に行う脆弱性診断について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>ソフトウェア及びシステムの，セキュリティの観点でのテスト（ソースコード静的検査，プログラム動的検査，ファジングなど）の実施方法に関する知識</li>
+<li>脆弱性診断，ペネトレーションテストの実施方法に関する知識</li>
+<li>脆弱性検査ツール（Webアプリケーションソフトウェア検査用，ネットワーク検査用など）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>テスト対象に応じて，必要なテストの種類及びその実施方法を計画する能力</li>
+<li>実施するテストの種類に適したツールを選択する能力</li>
+<li>手動テストとツールによる自動テストを組み合わせ，効果的かつ効率的なテストを計画する能力</li>
+<li>テストで検出したエラーを識別し，修正，解消する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#ソースコード静的検査(sast"><code>ソースコード静的検査(SAST)</code></a>), <a href="glossary/syllabus_ver2_1.html#プログラム動的検査(dast"><code>プログラム動的検査(DAST)</code></a>), <a href="glossary/syllabus_ver2_1.html#ファジング(fuzzing"><code>ファジング(Fuzzing)</code></a>), <a href="glossary/syllabus_ver2_1.html#脆弱性診断"><code>脆弱性診断</code></a>, <a href="glossary/syllabus_ver2_1.html#ペネトレーションテスト"><code>ペネトレーションテスト</code></a>, <a href="glossary/syllabus_ver2_1.html#脆弱性検査ツール"><code>脆弱性検査ツール</code></a>, <a href="glossary/syllabus_ver2_1.html#エラー識別修正"><code>エラー識別・修正</code></a></p>
+<h3 id="2-7-運用・保守-セキュリティの観点-">2-7 運用・保守（セキュリティの観点）</h3>
+<ul>
+<li><strong>大項目</strong>: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 2-7 運用・保守（セキュリティの観点）</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  システムの運用・保守について，セキュリティの観点から必要な指導・助言を行い，支援する。</p>
+<p>  運用・保守の関連文書のレビュー，システム運用担当者に対する教育・訓練の実施について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>サービスマネジメント，ITSMS，SLAに関する知識</li>
+<li>サービスデスクに関する知識</li>
+<li>システム及びネットワークの監視手順，情報セキュリティインシデントが発生した場合の対応手順に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>運用・保守の関連文書（作業計画書，作業手順書，利用者向けのマニュアルなど）を，セキュリティの観点からレビューする能力</li>
+<li>運用担当者の能力水準の目標に合わせて教育・訓練を計画する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#サービスマネジメント"><code>サービスマネジメント</code></a>, <a href="glossary/syllabus_ver2_1.html#itsms(jis-q-20000"><code>ITSMS(JIS Q 20000)</code></a>), <a href="glossary/syllabus_ver2_1.html#sla(service-level-agreement"><code>SLA(Service Level Agreement)</code></a>), <a href="glossary/syllabus_ver2_1.html#変更管理"><code>変更管理</code></a>, <a href="glossary/syllabus_ver2_1.html#障害管理"><code>障害管理</code></a>, <a href="glossary/syllabus_ver2_1.html#リリース管理"><code>リリース管理</code></a>, <a href="glossary/syllabus_ver2_1.html#特権id管理"><code>特権ID管理</code></a>, <a href="glossary/syllabus_ver2_1.html#ログ監視改ざん防止"><code>ログ監視・改ざん防止</code></a></p>
+<h3 id="2-8-開発環境のセキュリティ">2-8 開発環境のセキュリティ</h3>
+<ul>
+<li><strong>大項目</strong>: 2. 情報システムの企画・設計・開発・運用でのセキュリティ確保の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 2-8 開発環境のセキュリティ</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  開発環境のセキュリティを確保するために必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>ソフトウェア開発管理技術（開発プロセス，バージョン管理，構成管理，CI/CDなど）に関する知識</li>
+<li>開発環境（開発用端末，リポジトリ，テスト環境，クラウド開発基盤など）のセキュリティ対策に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>開発対象のソフトウェアの仕様書，ソースコード，開発環境の構成を把握し，リスクを分析する能力</li>
+<li>開発環境のセキュリティ対策（アクセス制御，漏洩防止，検証環境隔離）を設計・評価する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#開発プロセスセキュリティ"><code>開発プロセスセキュリティ</code></a>, <a href="glossary/syllabus_ver2_1.html#バージョン管理(git等"><code>バージョン管理(Git等)</code></a>), <a href="glossary/syllabus_ver2_1.html#構成管理"><code>構成管理</code></a>, <a href="glossary/syllabus_ver2_1.html#ci-cdパイプラインセキュリティ"><code>CI/CDパイプラインセキュリティ</code></a>, <a href="glossary/syllabus_ver2_1.html#リポジトリ保護"><code>リポジトリ保護</code></a>, <a href="glossary/syllabus_ver2_1.html#テスト環境隔離"><code>テスト環境隔離</code></a>, <a href="glossary/syllabus_ver2_1.html#ソースコード漏洩防止"><code>ソースコード漏洩防止</code></a></p>
+<hr>
+<h2 id="3-情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること">3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</h2>
+<h3 id="3-1-暗号利用及び鍵管理">3-1 暗号利用及び鍵管理</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-1 暗号利用及び鍵管理</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  暗号の利用，鍵管理の設計及び暗号関連諸規程の策定及び改定について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>暗号アルゴリズム，暗号利用モードに関する知識</li>
+<li>公開鍵基盤（PKI）に関する知識</li>
+<li>デジタル署名に関する知識</li>
+<li>セキュアプロトコル，認証プロトコルに関する知識</li>
+<li>暗号を利用する場合のリスクに関する知識</li>
+<li>暗号解読方法に関する知識</li>
+<li>暗号の安全性などの評価（CRYPTREC暗号リスト）に関する知識</li>
+<li>ハードウェアセキュリティモジュール（HSM），TPMに関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>暗号を利用すべき情報・機能を特定する能力</li>
+<li>適切な暗号技術を選択する能力</li>
+<li>鍵管理の仕組みを設計する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#共通鍵暗号(aes"><code>共通鍵暗号(AES)</code></a>), <a href="glossary/syllabus_ver2_1.html#公開鍵暗号(rsa"><code>公開鍵暗号(RSA)</code></a>), <a href="glossary/syllabus_ver2_1.html#ハイブリッド暗号"><code>ハイブリッド暗号</code></a>, <a href="glossary/syllabus_ver2_1.html#暗号利用モード(ecb"><code>暗号利用モード(ECB)</code></a>), <a href="glossary/syllabus_ver2_1.html#認証付き暗号(aead"><code>認証付き暗号(AEAD)</code></a>), <a href="glossary/syllabus_ver2_1.html#ハッシュ関数(sha-2-3"><code>ハッシュ関数(SHA-2/3)</code></a>), <a href="glossary/syllabus_ver2_1.html#hmac"><code>HMAC</code></a>, <a href="glossary/syllabus_ver2_1.html#デジタル署名"><code>デジタル署名</code></a>, <a href="glossary/syllabus_ver2_1.html#pki(公開鍵基盤"><code>PKI(公開鍵基盤)</code></a>), <a href="glossary/syllabus_ver2_1.html#鍵管理"><code>鍵管理</code></a>, <a href="glossary/syllabus_ver2_1.html#cryptrec暗号リスト"><code>CRYPTREC暗号リスト</code></a>, <a href="glossary/syllabus_ver2_1.html#hsm-tpm"><code>HSM / TPM</code></a>, <a href="glossary/syllabus_ver2_1.html#pfs(perfect-forward-secrecy"><code>PFS(Perfect Forward Secrecy)</code></a>)</p>
+<h3 id="3-2-マルウェア対策">3-2 マルウェア対策</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-2 マルウェア対策</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  情報及び情報システムをマルウェアから保護するためのマルウェア対策ソフト及びその他のセキュリティソリューションの導入，運用（マルウェア定義ファイルの更新を含む），並びにマルウェア感染を防止するための諸規程の策定及び改定について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>マルウェアの種類と特徴（ボット，ランサムウェア，ファイルレスマルウェアなど）に関する知識</li>
+<li>マルウェア感染の経路・方法（標的型攻撃など）に関する知識</li>
+<li>既知及び未知のマルウェアを検知，隔離又は無害化する技術</li>
+<li><strong>要求される技能</strong>:</li>
+<li>マルウェア感染のリスクを分析する能力</li>
+<li>情報システム，ネットワーク構成及びその利用方法に応じたマルウェア対策を設計する能力</li>
+<li>マルウェア対策ソフトを効果的に適用し，マルウェアからの保護の有効性を高める能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#epp(endpoint-protection-platform"><code>EPP(Endpoint Protection Platform)</code></a>), <a href="glossary/syllabus_ver2_1.html#edr(endpoint-detection-and-response"><code>EDR(Endpoint Detection and Response)</code></a>), <a href="glossary/syllabus_ver2_1.html#サンドボックス"><code>サンドボックス</code></a>, <a href="glossary/syllabus_ver2_1.html#静的解析-動的解析"><code>静的解析 / 動的解析</code></a>, <a href="glossary/syllabus_ver2_1.html#ランサムウェア"><code>ランサムウェア</code></a>, <a href="glossary/syllabus_ver2_1.html#rat(remote-access-trojan"><code>RAT(Remote Access Trojan)</code></a>), <a href="glossary/syllabus_ver2_1.html#ボットネット"><code>ボットネット</code></a>, <a href="glossary/syllabus_ver2_1.html#ioc(indicator-of-compromise"><code>IOC(Indicator of Compromise)</code></a>), <a href="glossary/syllabus_ver2_1.html#ファイルレスマルウェア"><code>ファイルレスマルウェア</code></a>, <a href="glossary/syllabus_ver2_1.html#マルウェア無害化"><code>マルウェア無害化</code></a></p>
+<h3 id="3-3-バックアップ及び復旧">3-3 バックアップ及び復旧</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-3 バックアップ及び復旧</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  データのバックアップ及び復旧の計画の策定，検証について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>データのバックアップの方式及び頻度に関する知識</li>
+<li>リモートバックアップ，世代管理，バックアップデータの保護・暗号化に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>データのバックアップの範囲，頻度，保管場所，復旧手順を設計する能力</li>
+<li>バックアップデータの復旧テスト，整合性検証を計画・評価する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#フルバックアップ"><code>フルバックアップ</code></a>, <a href="glossary/syllabus_ver2_1.html#差分バックアップ"><code>差分バックアップ</code></a>, <a href="glossary/syllabus_ver2_1.html#増分バックアップ"><code>増分バックアップ</code></a>, <a href="glossary/syllabus_ver2_1.html#世代管理"><code>世代管理</code></a>, <a href="glossary/syllabus_ver2_1.html#リモートバックアップ"><code>リモートバックアップ</code></a>, <a href="glossary/syllabus_ver2_1.html#バックアップデータ暗号化"><code>バックアップデータ暗号化</code></a>, <a href="glossary/syllabus_ver2_1.html#3-2-1ルール"><code>3-2-1ルール</code></a>, <a href="glossary/syllabus_ver2_1.html#イミュータブルバックアップ"><code>イミュータブルバックアップ</code></a>, <a href="glossary/syllabus_ver2_1.html#rto-rpo"><code>RTO / RPO</code></a></p>
+<h3 id="3-4-セキュリティ監視並びにログの取得及び分析">3-4 セキュリティ監視並びにログの取得及び分析</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-4 セキュリティ監視並びにログの取得及び分析</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  情報セキュリティインシデントの検知と調査を可能にするためのログの取得，保管，定期的なレビューについて，必要な指導・助言を行い，支援する。</p>
+<p>  ログに時刻を正確に記録するための機器の時刻同期について，必要な指導・助言を行い，支援する。</p>
+<p>  ネットワーク機器，IPS/IDS，Web サーバ，プロキシサーバ，DNS，DHCP のログなどの多種多様なログの効果的な保管，監視及び分析について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>セキュリティ監視（制御システム，IoT機器の監視を含む），SOCに関する知識</li>
+<li>ログ（OSのログ，ネットワーク機器のログ，サービスのログなど）に関する知識</li>
+<li>ログの取得，保管に関する知識</li>
+<li>ログの分析方法（相関分析など）に関する知識</li>
+<li>脅威インテリジェンスの共有のための標準（STIX/TAXIIなど）に関する知識</li>
+<li>SIEMに関する知識</li>
+<li>時刻同期プロトコル（NTP）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>セキュリティ監視方法を設計する能力</li>
+<li>取得すべきログを設計する能力</li>
+<li>ログの分析方法を設計する能力</li>
+<li>ログの保護について設計する能力</li>
+<li>セキュリティ監視及びログ分析における脅威インテリジェンスの利用を設計する能力</li>
+<li>ログのモニタリング及びレビューにおいて情報セキュリティインシデントの疑いがある事象を検知した場合の対応を設計する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#soc(security-operations-center"><code>SOC(Security Operations Center)</code></a>), <a href="glossary/syllabus_ver2_1.html#siem(security-information-and-event-management"><code>SIEM(Security Information and Event Management)</code></a>), <a href="glossary/syllabus_ver2_1.html#soar"><code>SOAR</code></a>, <a href="glossary/syllabus_ver2_1.html#相関分析"><code>相関分析</code></a>, <a href="glossary/syllabus_ver2_1.html#ntp(時刻同期"><code>NTP(時刻同期)</code></a>), <a href="glossary/syllabus_ver2_1.html#stix-taxii"><code>STIX / TAXII</code></a>, <a href="glossary/syllabus_ver2_1.html#ログ保管保護"><code>ログ保管・保護</code></a></p>
+<h3 id="3-5-ネットワーク及び機器のセキュリティ管理">3-5 ネットワーク及び機器のセキュリティ管理</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-5 ネットワーク及び機器のセキュリティ管理</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  ネットワーク及び通信（電子メールの送受信など）におけるセキュリティの確保について，必要な指導・助言を行い，支援する。</p>
+<p>  ネットワークの管理手順及び利用手順並びに通信データの保護方法のレビューについて，必要な指導・助言を行い，支援する。</p>
+<p>  利用者エンドポイント機器利用及びリモートワークにおけるセキュリティ対策について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>ネットワーク通信プロトコル（DNS，ICMP，ARP，DHCP，HTTP，SMTPなど）に関する知識</li>
+<li>Webアクセスのセキュリティに関する知識</li>
+<li>電子メールのセキュリティに関する知識</li>
+<li>DNSのセキュリティに関する知識</li>
+<li>無線LANのセキュリティに関する知識</li>
+<li>ネットワークセキュリティ技術（ファイアウォール，IPS/IDS，WAFなど）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>ネットワークの物理的又は論理的な分割を設計する能力</li>
+<li>利用するネットワークサービスのセキュリティ（認証，暗号化，ネットワーク接続管理など），サービスレベルなどの妥当性を確認する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#tls-13"><code>TLS 1.3</code></a>, <a href="glossary/syllabus_ver2_1.html#ipsec"><code>IPsec</code></a>, <a href="glossary/syllabus_ver2_1.html#dnssec"><code>DNSSEC</code></a>, <a href="glossary/syllabus_ver2_1.html#spf-dkim-dmarc"><code>SPF / DKIM / DMARC</code></a>, <a href="glossary/syllabus_ver2_1.html#ファイアウォール"><code>ファイアウォール</code></a>, <a href="glossary/syllabus_ver2_1.html#waf"><code>WAF</code></a>, <a href="glossary/syllabus_ver2_1.html#ids-ips"><code>IDS / IPS</code></a>, <a href="glossary/syllabus_ver2_1.html#プロキシ"><code>プロキシ</code></a>, <a href="glossary/syllabus_ver2_1.html#無線lanセキュリティ(wpa3等"><code>無線LANセキュリティ(WPA3等)</code></a>)</p>
+<h3 id="3-6-脆弱性への対応">3-6 脆弱性への対応</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-6 脆弱性への対応</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  情報システム及びコンポーネントの構成管理を踏まえた，脆弱性への対応について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>脆弱性情報の入手（脆弱性診断結果，外部機関からの情報発信，ベンダからの情報など）に関する知識</li>
+<li>脆弱性の評価手法（CVSSなど）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>効果的な構成管理，脆弱性情報収集を設計する能力</li>
+<li>脆弱性の影響を評価し，セキュリティパッチの適用，回避策の実施などの対応策を検討・助言する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#cve"><code>CVE</code></a>, <a href="glossary/syllabus_ver2_1.html#jvn"><code>JVN</code></a>, <a href="glossary/syllabus_ver2_1.html#cvss(v2-v3-v4"><code>CVSS(v2/v3/v4)</code></a>), <a href="glossary/syllabus_ver2_1.html#脆弱性スキャナ"><code>脆弱性スキャナ</code></a>, <a href="glossary/syllabus_ver2_1.html#構成管理(cmdb"><code>構成管理(CMDB)</code></a>), <a href="glossary/syllabus_ver2_1.html#セキュリティパッチ管理"><code>セキュリティパッチ管理</code></a>, <a href="glossary/syllabus_ver2_1.html#ワークアラウンド(回避策"><code>ワークアラウンド(回避策)</code></a>)</p>
+<h3 id="3-7-物理的セキュリティ管理">3-7 物理的セキュリティ管理</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-7 物理的セキュリティ管理</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  物理的及び環境的脅威への対策について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>物理的及び環境的脅威（故障，サポートユーティリティの不具合，破壊，盗難，物理的不正アクセス，電力供給の妨害，通信妨害，電磁波放射，自然災害，火災，水，塵埃，振動など）に関する知識</li>
+<li>入退管理に関する知識</li>
+<li>装置，情報又はソフトウェアの持込み・持出しの管理及び物理的保護に関する知識</li>
+<li>物理的な侵入に対する警報，監視装置（監視カメラなど）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>物理的セキュリティ境界を定義し，オフィス，部屋及び施設に対する物理的セキュリティを設計する能力</li>
+<li>記憶媒体の廃棄・再利用，無人状態にある機器の保護，紙の書類の管理，複合機の利用などの情報セキュリティを設計する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#物理的セキュリティ境界"><code>物理的セキュリティ境界</code></a>, <a href="glossary/syllabus_ver2_1.html#入退管理システム"><code>入退管理システム</code></a>, <a href="glossary/syllabus_ver2_1.html#監視カメラ(cctv"><code>監視カメラ(CCTV)</code></a>), <a href="glossary/syllabus_ver2_1.html#ups(無停電電源装置"><code>UPS(無停電電源装置)</code></a>), <a href="glossary/syllabus_ver2_1.html#記憶媒体破棄消去"><code>記憶媒体破棄・消去</code></a>, <a href="glossary/syllabus_ver2_1.html#クリアデスククリアスクリーン"><code>クリアデスク・クリアスクリーン</code></a></p>
+<h3 id="3-8-アカウント管理及びアクセス管理">3-8 アカウント管理及びアクセス管理</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-8 アカウント管理及びアクセス管理</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  情報及び情報システム並びにネットワークサービスのアクセス制御方針のレビューについて，必要な指導・助言を行い，支援する。</p>
+<p>  アカウント管理，認証情報の割当て及び管理並びにアクセス管理に関するプロセスの確立，特権的アクセス権の割当て及び利用の制限と管理について，必要な指導・助言を行い，支援する。</p>
+<p>  アカウント及びアクセス権のレビューについて，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>アクセス制御の種類と特徴（ロールベースアクセス制御など）に関する知識</li>
+<li>need-to-know，need-to-use，最小権限の原則に関する知識</li>
+<li>認証情報の割当て及び管理に関する知識</li>
+<li>アカウント及びアクセス権のレビューが必要になるタイミング（利用者の異動，業務担当者の変更，雇用又は契約の終了など）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>アクセス制御方針，アカウント及びアクセス権をレビューする能力</li>
+<li>責任追跡性を確保するための，特権的アクセスのログの記録，保護及びレビューの手順を設計する能力</li>
+<li>情報システムの重要性に応じた認証情報の割当て及び管理を設計する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#rbac(ロールベースアクセス制御"><code>RBAC(ロールベースアクセス制御)</code></a>), <a href="glossary/syllabus_ver2_1.html#abac(属性ベースアクセス制御"><code>ABAC(属性ベースアクセス制御)</code></a>), <a href="glossary/syllabus_ver2_1.html#id統合管理"><code>ID統合管理</code></a>, <a href="glossary/syllabus_ver2_1.html#特権アクセス管理(pam"><code>特権アクセス管理(PAM)</code></a>), <a href="glossary/syllabus_ver2_1.html#職務分掌(sod"><code>職務分掌(SoD)</code></a>), <a href="glossary/syllabus_ver2_1.html#最小権限の原則"><code>最小権限の原則</code></a>, <a href="glossary/syllabus_ver2_1.html#アカウントライフサイクル管理"><code>アカウントライフサイクル管理</code></a></p>
+<h3 id="3-9-人的管理">3-9 人的管理</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-9 人的管理</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  従業員の雇用前，雇用期間中，雇用の終了・変更における人的セキュリティ対策について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>内部不正及びそのメカニズムに関する知識</li>
+<li>誓約書，秘密保持契約（NDA），ソーシャルエンジニアリング対策，退職時のID削除プロセスに関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>内部不正防止を設計する能力</li>
+<li>組織，職務の変更，退職における情報管理プロセスを設計・評価する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#組織における内部不正防止ガイドライン"><code>組織における内部不正防止ガイドライン</code></a>, <a href="glossary/syllabus_ver2_1.html#内部脅威(insider-threat"><code>内部脅威(Insider Threat)</code></a>), <a href="glossary/syllabus_ver2_1.html#秘密保持契約(nda"><code>秘密保持契約(NDA)</code></a>), <a href="glossary/syllabus_ver2_1.html#職務分掌(sod"><code>職務分掌(SoD)</code></a>), <a href="glossary/syllabus_ver2_1.html#不正のトライアングル(機会"><code>不正のトライアングル(機会)</code></a>), <a href="glossary/syllabus_ver2_1.html#退職時アカウント無効化"><code>退職時アカウント無効化</code></a></p>
+<h3 id="3-10-サプライチェーンの情報セキュリティの推進">3-10 サプライチェーンの情報セキュリティの推進</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-10 サプライチェーンの情報セキュリティの推進</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  セキュリティ関連の要求事項の追加，及びビジネスパートナー・委託先での要求事項への対応状況の評価について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>委託での情報セキュリティリスクに関する知識</li>
+<li>製品・サービスのサプライチェーンのリスクに関する知識</li>
+<li>取引関連法規，企業間の契約に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>要求事項を設計する能力</li>
+<li>ビジネスパートナー・委託先での要求事項への対応状況を評価する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#サプライチェーンリスクマネジメント(scrm"><code>サプライチェーンリスクマネジメント(SCRM)</code></a>), <a href="glossary/syllabus_ver2_1.html#サードパーティリスクマネジメント(tprm"><code>サードパーティリスクマネジメント(TPRM)</code></a>), <a href="glossary/syllabus_ver2_1.html#委託先セキュリティ審査"><code>委託先セキュリティ審査</code></a>, <a href="glossary/syllabus_ver2_1.html#再委託管理"><code>再委託管理</code></a>, <a href="glossary/syllabus_ver2_1.html#sla-nda"><code>SLA / NDA</code></a>, <a href="glossary/syllabus_ver2_1.html#委託先現地監査"><code>委託先現地監査</code></a></p>
+<h3 id="3-11-コンプライアンス管理">3-11 コンプライアンス管理</h3>
+<ul>
+<li><strong>大項目</strong>: 3. 情報及び情報システムの利用におけるセキュリティ対策の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 3-11 コンプライアンス管理</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  情報セキュリティ及び個人情報保護に関連する法令，規制並びに契約上の義務を考慮した組織内の情報セキュリティ諸規程の策定及び改定について，必要な指導・助言を行い，支援する。</p>
+<p>  また，法令，規制，契約に関する従業員向け意識向上プログラムの利用について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>法令（刑法，不正アクセス禁止法，個人情報保護法，マイナンバー法，不正競争防止法など）及び公的なガイドラインに関する知識</li>
+<li>契約，倫理，公益通報者保護制度に関する知識</li>
+<li>意識向上プログラムに関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>法令，規制などを考慮して，情報セキュリティ諸規程を策定し，改定する能力</li>
+<li>契約上の義務を確実に遂行する方法を設計する能力</li>
+<li>コンプライアンス管理の重要性を関係者に伝達する手段を設計する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#サイバーセキュリティ基本法"><code>サイバーセキュリティ基本法</code></a>, <a href="glossary/syllabus_ver2_1.html#不正アクセス禁止法"><code>不正アクセス禁止法</code></a>, <a href="glossary/syllabus_ver2_1.html#個人情報保護法(pマーク-appi"><code>個人情報保護法(Pマーク/APPI)</code></a>), <a href="glossary/syllabus_ver2_1.html#プロバイダ責任制限法"><code>プロバイダ責任制限法</code></a>, <a href="glossary/syllabus_ver2_1.html#特定電子メール法"><code>特定電子メール法</code></a>, <a href="glossary/syllabus_ver2_1.html#著作権法"><code>著作権法</code></a>, <a href="glossary/syllabus_ver2_1.html#電子署名法"><code>電子署名法</code></a>, <a href="glossary/syllabus_ver2_1.html#不正競争防止法"><code>不正競争防止法</code></a>, <a href="glossary/syllabus_ver2_1.html#刑法"><code>刑法</code></a></p>
+<hr>
+<h2 id="4-情報セキュリティインシデント管理の推進又は支援に関すること">4. 情報セキュリティインシデント管理の推進又は支援に関すること</h2>
+<h3 id="4-1-情報セキュリティインシデントの管理体制の構築">4-1 情報セキュリティインシデントの管理体制の構築</h3>
+<ul>
+<li><strong>大項目</strong>: 4. 情報セキュリティインシデント管理の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 4-1 情報セキュリティインシデントの管理体制の構築</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  組織内 CSIRT の構築について，必要な指導・助言を行い，支援する。</p>
+<p>  情報セキュリティインシデントの管理に関する規程の策定及び改定について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>CSIRTの構築（体制の構築，規程の整備，メンバの訓練など）に関する知識</li>
+<li>CSIRT活動の設備（執務スペース，通信設備，データの管理・廃棄のための設備，インシデントトラッキングシステムなど）に関する知識</li>
+<li>PSIRTに関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>情報セキュリティインシデントの管理に関する規程を検討する能力</li>
+<li>情報セキュリティ事象を情報セキュリティインシデントとするかの判断基準，及び対応の優先順位の判断基準を設計する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#csirt(computer-security-incident-response-team"><code>CSIRT(Computer Security Incident Response Team)</code></a>), <a href="glossary/syllabus_ver2_1.html#soc(security-operations-center"><code>SOC(Security Operations Center)</code></a>), <a href="glossary/syllabus_ver2_1.html#psirt"><code>PSIRT</code></a>, <a href="glossary/syllabus_ver2_1.html#インシデントハンドリング規程"><code>インシデントハンドリング規程</code></a>, <a href="glossary/syllabus_ver2_1.html#エスカレーションフロー"><code>エスカレーションフロー</code></a>, <a href="glossary/syllabus_ver2_1.html#jpcert-cc"><code>JPCERT/CC</code></a>, <a href="glossary/syllabus_ver2_1.html#nisc"><code>NISC</code></a>, <a href="glossary/syllabus_ver2_1.html#first"><code>FIRST</code></a></p>
+<h3 id="4-2-情報セキュリティインシデントの初動対応">4-2 情報セキュリティインシデントの初動対応</h3>
+<ul>
+<li><strong>大項目</strong>: 4. 情報セキュリティインシデント管理の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 4-2 情報セキュリティインシデントの初動対応</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  情報セキュリティ事象の検知時又は連絡受領時における初動対応について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>情報セキュリティ事象及び情報セキュリティインシデントの分類と判定に関する知識</li>
+<li>トリアージ，連絡体制，報告基準に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>初動対応を設計する能力</li>
+<li>情報セキュリティ事象の影響度，緊急度を迅速に判定し，指示・助言する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#トリアージ(triage"><code>トリアージ(Triage)</code></a>), <a href="glossary/syllabus_ver2_1.html#初動対応(initial-response"><code>初動対応(Initial Response)</code></a>), <a href="glossary/syllabus_ver2_1.html#被害拡散防止ネットワーク隔離"><code>被害拡散防止・ネットワーク隔離</code></a>, <a href="glossary/syllabus_ver2_1.html#緊急連絡網エスカレーション"><code>緊急連絡網・エスカレーション</code></a>, <a href="glossary/syllabus_ver2_1.html#影響度緊急度判定"><code>影響度・緊急度判定</code></a></p>
+<h3 id="4-3-情報セキュリティインシデントへの対応">4-3 情報セキュリティインシデントへの対応</h3>
+<ul>
+<li><strong>大項目</strong>: 4. 情報セキュリティインシデント管理の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 4-3 情報セキュリティインシデントへの対応</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  被害・損失の評価，情報セキュリティインシデントの根本原因の特定，復旧・回復策の実施，再発防止，対応改善などについて，必要な指導・助言を行い，支援する。</p>
+<p>  顧客，監督官庁及び関係者への報告，報道機関への公表及び一般に向けた情報公開について，必要な指導・助言を行い，支援する。</p>
+<p>  マルウェア検知時のマルウェア解析について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>システム，ネットワーク，ソフトウェアの調査方法に関する知識</li>
+<li>監督官庁などへの報告，報道機関などへの公表に関する知識</li>
+<li>再発防止に関する知識</li>
+<li>マルウェア解析の手順，マルウェアが解析を回避する仕組み，マルウェア検体の安全な取扱いに関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>外部の組織と連携して対応する能力</li>
+<li>インシデント対応を評価し，対応手順を改善する能力</li>
+<li>再発防止及び対応改善のための教訓を教育・訓練に反映する能力</li>
+<li>マルウェア解析を支援する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#根本原因分析(rca"><code>根本原因分析(RCA)</code></a>), <a href="glossary/syllabus_ver2_1.html#再発防止策"><code>再発防止策</code></a>, <a href="glossary/syllabus_ver2_1.html#被害損失評価"><code>被害・損失評価</code></a>, <a href="glossary/syllabus_ver2_1.html#事後レビュー(lessons-learned"><code>事後レビュー(Lessons Learned)</code></a>), <a href="glossary/syllabus_ver2_1.html#インシデント報告書対外公表"><code>インシデント報告書・対外公表</code></a>, <a href="glossary/syllabus_ver2_1.html#マルウェア解析(動的-静的"><code>マルウェア解析(動的/静的)</code></a>)</p>
+<h3 id="4-4-証拠の収集及び分析">4-4 証拠の収集及び分析</h3>
+<ul>
+<li><strong>大項目</strong>: 4. 情報セキュリティインシデント管理の推進又は支援に関すること</li>
+<li><strong>小項目</strong>: 4-4 証拠の収集及び分析</li>
+<li><strong>概要（目標）</strong>:</li>
+</ul>
+<p>  証拠保全の手順及びツールについて，必要な指導・助言を行い，支援する。</p>
+<p>  専門性を必要とする状況における，デジタルフォレンジックスの専門家，法的措置の専門家などへの依頼について，必要な指導・助言を行い，支援する。</p>
+<ul>
+<li><strong>要求される知識</strong>:</li>
+<li>証拠保全すべき対象に関する知識</li>
+<li>証拠保全の手順及びツールに関する知識</li>
+<li>Chain of Custody（証拠保全の一貫性）に関する知識</li>
+<li>法的措置（弁護士又は警察への相談など）に関する知識</li>
+<li><strong>要求される技能</strong>:</li>
+<li>証拠保全の対象（デスクトップPC，ノートPC，サーバ，記憶媒体），電源の状態などに応じた証拠保全方法を設計する能力</li>
+<li>証拠を分析する能力</li>
+<li><strong>用語例・キーワード (全網羅)</strong>:</li>
+</ul>
+<p>  <a href="glossary/syllabus_ver2_1.html#デジタルフォレンジック"><code>デジタルフォレンジック</code></a>, <a href="glossary/syllabus_ver2_1.html#証拠保全(chain-of-custody"><code>証拠保全(Chain of Custody)</code></a>), <a href="glossary/syllabus_ver2_1.html#揮発性順序(order-of-volatility"><code>揮発性順序(Order of Volatility)</code></a>), <a href="glossary/syllabus_ver2_1.html#ライトブロッカ"><code>ライトブロッカ</code></a>, <a href="glossary/syllabus_ver2_1.html#ディスクイメージング"><code>ディスクイメージング</code></a>, <a href="glossary/syllabus_ver2_1.html#メモリフォレンジック"><code>メモリフォレンジック</code></a>, <a href="glossary/syllabus_ver2_1.html#タイムスタンプ分析"><code>タイムスタンプ分析</code></a></p>
+<hr>
+<h2 id="-科目a-2-追補版-共通キャリア・スキルフレームワーク-bok体系-">📘 科目A-2 追補版 (共通キャリア・スキルフレームワーク BOK体系)</h2>
+<p>科目A-2（旧午前II）における知識の細目を体系的に整理した公式追補版（Ver.4.0）に基づく大分類・中分類・小分類および技術要素です。</p>
+<h3 id="テクノロジ系-大分類-3-技術要素-中分類-11-セキュリティ-重点分野-技術レベル-4-">テクノロジ系 > 大分類 3：技術要素 > 中分類 11：セキュリティ（重点分野 技術レベル 4）</h3>
+<ul>
+<li><strong>1. 情報セキュリティ</strong>: 情報セキュリティの目的と考え方，重要性，脅威，脆弱性，不正のメカニズム，攻撃者の種類・動機，攻撃手法，情報セキュリティに関する技術（暗号技術，認証技術，利用者認証，生体認証技術，公開鍵基盤）</li>
+<li><strong>2. 情報セキュリティ管理</strong>: 情報セキュリティ管理，リスク分析と評価，情報セキュリティ継続，情報セキュリティ諸規程，ISMS，インシデント管理，情報セキュリティ組織・機関，情報セキュリティに関する基準</li>
+<li><strong>3. セキュリティ技術評価</strong>: セキュリティ評価基準，ISO/IEC 15408 / 18045，制御システムのセキュリティ評価，脆弱性評価，セキュリティ情報共有技術</li>
+<li><strong>4. 情報セキュリティ対策</strong>: 人的セキュリティ対策，技術的セキュリティ対策，物理的セキュリティ対策</li>
+<li><strong>5. セキュリティ実装技術</strong>: セキュアプログラミング，Webアプリケーションのセキュリティ設計・実装，ネットワークセキュリティ実装</li>
+</ul>
+<h3 id="テクノロジ系-大分類-3-技術要素-中分類-10-ネットワーク-重点分野-技術レベル-4-">テクノロジ系 > 大分類 3：技術要素 > 中分類 10：ネットワーク（重点分野 技術レベル 4）</h3>
+<ul>
+<li><strong>1. ネットワーク方式</strong>: LAN，WAN，パケット交換，回線交換，無線LAN，SDN/NFV</li>
+<li><strong>2. データ通信と制御</strong>: 誤り制御，フロー制御，アクセス制御，通信速度・帯域</li>
+<li><strong>3. 通信プロトコル</strong>: TCP/IP，IP(v4/v6)，UDP，HTTP/HTTPS，DNS，DHCP，NTP，TLS</li>
+<li><strong>4. ネットワーク管理</strong>: SNMP，Ping，Traceroute，ネットワーク監視・障害切り分け</li>
+<li><strong>5. ネットワーク応用</strong>: VoIP，CDN，クラウドネットワーク，VPN</li>
+</ul>
+<h3 id="テクノロジ系-大分類-3-技術要素-中分類-9-データベース-技術レベル-3-">テクノロジ系 > 大分類 3：技術要素 > 中分類 9：データベース（技術レベル 3）</h3>
+<ul>
+<li><strong>1. データベース方式</strong>: リレーショナルDB，NoSQL，オブジェクト指向DB</li>
+<li><strong>2. データベース設計</strong>: ER図，正規化，インデックス設計，主キー・外部キー</li>
+<li><strong>3. データ操作</strong>: SQL文，DDL，DML，ストアドプロシージャ</li>
+<li><strong>4. トランザクション処理</strong>: ACID特性，排他制御，デッドロック，2相コミット</li>
+<li><strong>5. データベース応用</strong>: データウェアハウス，データマイニング，バックアップ・リカバリ</li>
+</ul>
+<h3 id="テクノロジ系-大分類-4-開発技術-中分類-12-システム開発技術-技術レベル-3-">テクノロジ系 > 大分類 4：開発技術 > 中分類 12：システム開発技術（技術レベル 3）</h3>
+<ul>
+<li><strong>1. システム要件定義・ソフトウェア要件定義</strong>: セキュリティ要件，機能・非機能要件</li>
+<li><strong>2. 設計</strong>: 構造化設計，オブジェクト指向設計，UI/UX設計，セキュリティ設計</li>
+<li><strong>3. 実装・構築</strong>: セキュアコーディング，リファクタリング，ビルド自動化</li>
+<li><strong>4. 統合・テスト</strong>: 単体テスト，結合テスト，システムテスト，セキュリティテスト</li>
+<li><strong>5. 導入・受入れ支援</strong>: 移行計画，受入テスト，教育・訓練</li>
+<li><strong>6. 保守・廃棄</strong>: 変更管理，障害対応，データ消去・媒体破棄</li>
+</ul>
+<h3 id="テクノロジ系-大分類-4-開発技術-中分類-13-ソフトウェア開発管理技術-技術レベル-3-">テクノロジ系 > 大分類 4：開発技術 > 中分類 13：ソフトウェア開発管理技術（技術レベル 3）</h3>
+<ul>
+<li><strong>1. 開発プロセス・手法</strong>: ウォーターフォール，アジャイル/スクラム，DevOps</li>
+<li><strong>2. 知的財産適用管理</strong>: オープンソースライセンス (GPL/MIT/Apache)，著作権</li>
+<li><strong>3. 開発環境管理</strong>: CI/CDパイプライン，リポジトリ管理，コンテナ環境</li>
+<li><strong>4. 構成管理・変更管理</strong>: バージョン管理，SBOM管理，変更審査</li>
+</ul>
+<h3 id="マネジメント系-大分類-6-サービスマネジメント-中分類-15-サービスマネジメント-技術レベル-3-">マネジメント系 > 大分類 6：サービスマネジメント > 中分類 15：サービスマネジメント（技術レベル 3）</h3>
+<ul>
+<li><strong>1. サービスマネジメント</strong>: ITIL，JIS Q 20000，サービスライフサイクル</li>
+<li><strong>2. サービスマネジメントシステムの計画及び運用</strong>: SLA，インシデント管理，問題管理</li>
+<li><strong>3. パフォーマンス評価及び改善</strong>: KPI，PDCA，継続的改善</li>
+<li><strong>4. サービスの運用</strong>: サービスデスク，運用自動化</li>
+<li><strong>5. ファシリティマネジメント</strong>: データセンター，電源設備，空調，耐震設備</li>
+</ul>
+<h3 id="マネジメント系-大分類-6-サービスマネジメント-中分類-16-システム監査-技術レベル-3-">マネジメント系 > 大分類 6：サービスマネジメント > 中分類 16：システム監査（技術レベル 3）</h3>
+<ul>
+<li><strong>1. システム監査</strong>: システム監査基準，監査計画，監査手続，監査報告</li>
+<li><strong>2. 内部統制</strong>: IT内部統制，職務分掌，ガバナンス</li>
+</ul>
+    </article>
+</div>
+
+<footer>
+    <p>情報セキュリティスペシャリスト試験 総合学習プラットフォーム · IPA シラバス Ver.2.1 ＆ 補足 Ver.4.0 準拠</p>
+</footer>
+
+</body>
+</html>

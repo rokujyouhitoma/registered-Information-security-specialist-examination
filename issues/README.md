@@ -8,7 +8,7 @@
 
 | ID | 種別 | タイトル | 担当 / ステータス | 課題ファイル |
 |---|---|---|---|---|
-| 044 | Feature | トップページ (site/index.html) の総合学習ドキュメントインデックスポータル化 | Open (In Progress) | [044-redesign-top-index-portal.md](044-redesign-top-index-portal.md) |
+| - | - | 現在アクティブな Issue はありません | - | - |
 
 ---
 
@@ -16,6 +16,8 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 045 | Bug | [docs/ 配下の Markdown ドキュメントが HTML 変換されず 404 になる問題の修正](closed/045-build-html-docs-for-github-pages.md) | 2026-08-05 | [045-build-html-docs-for-github-pages.md](closed/045-build-html-docs-for-github-pages.md) |
+| 044 | Feature | [トップページ (site/index.html) の総合学習ドキュメントインデックスポータル化](closed/044-redesign-top-index-portal.md) | 2026-08-05 | [044-redesign-top-index-portal.md](closed/044-redesign-top-index-portal.md) |
 | 043 | Bug | [site/index.html での JS モジュール読み込み 404 エラーおよび相関パス構造の修正](closed/043-fix-site-js-relative-path-404.md) | 2026-08-05 | [043-fix-site-js-relative-path-404.md](closed/043-fix-site-js-relative-path-404.md) |
 | 042 | Bug | [CI パイプラインでの package-lock.json 未検出エラーおよび Node.js バージョンの修正](closed/042-fix-ci-package-lock-node-version.md) | 2026-08-05 | [042-fix-ci-package-lock-node-version.md](closed/042-fix-ci-package-lock-node-version.md) |
 | 041 | Docs | [README.md および開発ドキュメントの完全リニューアル (Phase 16)](closed/041-update-readme-documentation.md) | 2026-08-05 | [041-update-readme-documentation.md](closed/041-update-readme-documentation.md) |
