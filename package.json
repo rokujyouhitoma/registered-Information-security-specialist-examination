@@ -1,0 +1,16 @@
+{
+  "name": "registered-information-security-specialist-examination",
+  "version": "1.0.0",
+  "description": "情報セキュリティスペシャリスト試験 総合対策学習リポジトリおよびフルスクラッチ検索ポータル",
+  "main": "site/fm_index_engine.js",
+  "scripts": {
+    "build:js": "npx -y google-closure-compiler --js site/fm_index_engine.js --js_output_file site/fm_index_engine.min.js --compilation_level SIMPLE_OPTIMIZATIONS --language_in ECMASCRIPT_2020 --language_out ECMASCRIPT_2020",
+    "build": "npm run build:js",
+    "test:audit": "python3 scripts/audit_glossary_quality.py",
+    "test:quiz": "python3 scripts/quiz_runner.py --test",
+    "test:search": "python3 scripts/fm_index_search.py --query 'TLS'"
+  },
+  "devDependencies": {
+    "google-closure-compiler": "^20240317.0.0"
+  }
+}
