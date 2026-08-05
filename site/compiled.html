@@ -156,9 +156,30 @@
             const success = await engine.loadIndex();
             if (success) {
                 stats.textContent = `全 ${engine.docs.length} 件の用語データを読み込みました。キーワードを入力してください。`;
+                
+                const urlParams = new URLSearchParams(window.location.search);
+                const initialQuery = urlParams.get('q');
+                if (initialQuery) {
+                    searchInput.value = initialQuery;
+                    triggerSearch(initialQuery);
+                }
             } else {
                 stats.textContent = '❌ インデックスの読み込みに失敗しました。';
             }
+        }
+
+        function triggerSearch(query) {
+            const startTime = performance.now();
+            const res = engine.search(query, 15);
+            const endTime = performance.now();
+
+            if (query.trim()) {
+                stats.textContent = `ヒット件数: ${res.length} 件 (計算時間: ${(endTime - startTime).toFixed(2)} ms)`;
+            } else {
+                stats.textContent = `全 ${engine.docs.length} 件の用語データを読み込みました。`;
+            }
+
+            renderResults(res, query);
         }
 
         function renderResults(items, query) {
@@ -190,18 +211,7 @@
         }
 
         searchInput.addEventListener('input', (e) => {
-            const query = e.target.value;
-            const startTime = performance.now();
-            const res = engine.search(query, 15);
-            const endTime = performance.now();
-
-            if (query.trim()) {
-                stats.textContent = `ヒット件数: ${res.length} 件 (計算時間: ${(endTime - startTime).toFixed(2)} ms)`;
-            } else {
-                stats.textContent = `全 ${engine.docs.length} 件の用語データを読み込みました。`;
-            }
-
-            renderResults(res, query);
+            triggerSearch(e.target.value);
         });
 
         init();

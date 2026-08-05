@@ -21,7 +21,8 @@ class CustomSearchEngine {
      */
     async loadIndex(jsonPath = "search_index.json") {
         try {
-            const res = await fetch(jsonPath);
+            const cacheBustPath = jsonPath + (jsonPath.includes('?') ? '&' : '?') + 'v=' + Date.now();
+            const res = await fetch(cacheBustPath, { cache: 'no-cache' });
             const data = await res.json();
             this.docs = data.docs;
             this.idf = data.idf;
