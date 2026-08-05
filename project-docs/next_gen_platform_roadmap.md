@@ -42,6 +42,12 @@ graph TD
 | **Issue 033** | Feature | Phase 10 | CLI対話型 理解度自己診断クイズツールの構築 | `scripts/quiz_runner.py` |
 | **Issue 034** | Feature | Phase 11 | サイバー攻撃シナリオ・ログ分析ハンズオンケーススタディの作成 | `docs/scenarios/attack_scenarios_analysis.md` |
 | **Issue 035** | Feature | Phase 12 | フルスクラッチ FM-index & ベクター全文検索エンジンの開発 | `scripts/fm_index_search.py`<br>`site/fm_index_engine.js`<br>`site/index.html` |
+| **Issue 036** | Feature | Build | Closure Compiler の導入と JS コンパイル設定 | `package.json`<br>`Makefile`<br>`site/fm_index_engine.min.js` |
+| **Issue 037** | Feature | CI/CD | Closure Compiler の CI/CD 自動化および compiled.html の導入 | `.github/workflows/ci.yml`<br>`site/compiled.html` |
+| **Issue 038** | Feature | Phase 13 | JavaScript ユニットテスト自動化 | `tests/unit/search_engine.test.js` |
+| **Issue 039** | Refactor | Phase 14 | JS コードの厳格モジュール化と JSDoc 型定義強化 | `src/js/modules/` |
+| **Issue 040** | Tooling | Phase 15 | トレーサビリティ自動検証スクリプトの追加 | `scripts/verify_traceability.js` |
+| **Issue 041** | Docs | Phase 16 | README.md および開発ドキュメントの完全リニューアル | `README.md` |
 
 ---
 
