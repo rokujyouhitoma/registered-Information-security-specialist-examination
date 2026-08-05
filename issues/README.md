@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 027 | Feature | [用語解説の個別具体化・ディープリファイン (Phase 5-2: Web・App・クラウド・DB・DevSecOps分野)](closed/027-deep-enrichment-web-cloud-db.md) | 2026-08-05 | [027-deep-enrichment-web-cloud-db.md](closed/027-deep-enrichment-web-cloud-db.md) |
 | 026 | Feature | [用語解説の個別具体化・ディープリファイン (Phase 5-1: ネットワーク・通信・暗号分野)](closed/026-deep-enrichment-network-crypto.md) | 2026-08-05 | [026-deep-enrichment-network-crypto.md](closed/026-deep-enrichment-network-crypto.md) |
 | 025 | Feature | [用語集の機械的プレースホルダー完全解消 (Phase 4: シラバス追補版 Ver.4.0 追補用語群)](closed/025-refine-glossary-tsuiho-ver4-0.md) | 2026-08-05 | [025-refine-glossary-tsuiho-ver4-0.md](closed/025-refine-glossary-tsuiho-ver4-0.md) |
 | 024 | Feature | [用語集の機械的プレースホルダー完全解消（Phase 2-4 & Phase 3: ガバナンス・リスク管理・クラウド・監査分野）](closed/024-refine-glossary-governance-cloud-risk.md) | 2026-08-05 | [024-refine-glossary-governance-cloud-risk.md](closed/024-refine-glossary-governance-cloud-risk.md) |
