@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全文検索 | 情報セキュリティスペシャリスト試験 学習ポータル</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--accent-color);
+        }
+
+        .stats {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .results {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.15s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .score-badge {
+            font-size: 0.8rem;
+            background-color: #0369a1;
+            color: #e0f2fe;
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+
+        .section-label {
+            font-weight: bold;
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
+
+        .section-content {
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            line-height: 1.5;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ 情報セキュリティスペシャリスト 全文検索ポータル (Release Compiled)</h1>
+            <p class="subtitle">Google Closure Compiler 最適化バージョン (`fm_index_engine.min.js` 適用)</p>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="検索キーワードを入力 (例: TLS, SQLi, ゼロトラスト, ISMS)..." autofocus>
+        </div>
+
+        <div class="stats" id="stats">ロード中...</div>
+
+        <div class="results" id="results"></div>
+    </div>
+
+    <!-- Closure Compiler 成果物を読み込み -->
+    <script src="fm_index_engine.min.js"></script>
+    <script>
+        const engine = new CustomSearchEngine();
+        const searchInput = document.getElementById('searchInput');
+        const stats = document.getElementById('stats');
+        const results = document.getElementById('results');
+
+        async function init() {
+            const success = await engine.loadIndex();
+            if (success) {
+                stats.textContent = `全 ${engine.docs.length} 件の用語データを読み込みました。キーワードを入力してください。`;
+            } else {
+                stats.textContent = '❌ インデックスの読み込みに失敗しました。';
+            }
+        }
+
+        function renderResults(items, query) {
+            results.innerHTML = '';
+            if (items.length === 0) {
+                if (query.trim()) {
+                    results.innerHTML = '<div style="text-align:center; color:#94a3b8; padding:30px;">該当する用語が見つかりませんでした。</div>';
+                }
+                return;
+            }
+
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div class="card-title">${item.name}</div>
+                        <div class="score-badge">Match: ${item.score}</div>
+                    </div>
+                    <div class="section-label">📌 概要</div>
+                    <div class="section-content">${item.summary}</div>
+                    <div class="section-label">⚙️ 技術・運用ポイント</div>
+                    <div class="section-content">${item.tech}</div>
+                    <div class="section-label">🎯 試験出題ポイント</div>
+                    <div class="section-content">${item.exam}</div>
+                `;
+                results.appendChild(card);
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value;
+            const startTime = performance.now();
+            const res = engine.search(query, 15);
+            const endTime = performance.now();
+
+            if (query.trim()) {
+                stats.textContent = `ヒット件数: ${res.length} 件 (計算時間: ${(endTime - startTime).toFixed(2)} ms)`;
+            } else {
+                stats.textContent = `全 ${engine.docs.length} 件の用語データを読み込みました。`;
+            }
+
+            renderResults(res, query);
+        });
+
+        init();
+    </script>
+</body>
+</html>

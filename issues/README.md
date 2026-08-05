@@ -8,7 +8,7 @@
 
 | ID | 種別 | タイトル | 担当 / ステータス | 課題ファイル |
 |---|---|---|---|---|
-| - | - | 現在アクティブな Issue はありません | - | - |
+| 044 | Feature | トップページ (site/index.html) の総合学習ドキュメントインデックスポータル化 | Open (In Progress) | [044-redesign-top-index-portal.md](044-redesign-top-index-portal.md) |
 
 ---
 
