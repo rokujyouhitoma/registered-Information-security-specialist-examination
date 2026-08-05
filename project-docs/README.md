@@ -11,6 +11,7 @@
 
 - **[agent_roles.md](agent_roles.md)**: マルチエージェント役割分担ガイド (RACIマトリックス)
 - **[docs_architecture_and_layout_design.md](docs_architecture_and_layout_design.md)**: `docs/` ディレクトリ構成・レイアウト設計方針書 (階層構造、ナビゲーション、標準レイアウト、UI/UX規約)
+- **[glossary_refinement_plan.md](glossary_refinement_plan.md)**: 用語集継続的品質改修ロードマップ & 人間代行多層化自動QA監査計画書
 - **[management_improvement_plan.md](management_improvement_plan.md)**: プロジェクト管理・運用改善提案書 (PM視点による10の改善・定義項目)
 - **[roadmap_wbs.md](roadmap_wbs.md)**: コンテンツ制作ロードマップ & WBS (全61小項目)
 - **[requirements/REQ-01-user_requirements.md](requirements/REQ-01-user_requirements.md)**: ユーザー要求定義書 (ターゲットユーザー、ユースケース、要求定義)

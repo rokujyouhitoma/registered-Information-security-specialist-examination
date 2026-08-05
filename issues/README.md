@@ -14,6 +14,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 023 | Feature | [用語集の機械的プレースホルダー解消と用語解説の本格高品質化（Phase 2-3: マルウェア・端末・SOC/運用・インシデント対応分野）](closed/023-refine-glossary-malware-soc-incident.md) | 2026-08-05 | [023-refine-glossary-malware-soc-incident.md](closed/023-refine-glossary-malware-soc-incident.md) |
 | 022 | Feature | [用語集の機械的プレースホルダー解消と用語解説の本格高品質化（Phase 2-2: Web・アプリケーション・開発セキュリティ分野）](closed/022-refine-glossary-web-dev-security.md) | 2026-08-05 | [022-refine-glossary-web-dev-security.md](closed/022-refine-glossary-web-dev-security.md) |
 | 021 | Feature | [用語集の機械的プレースホルダー解消と用語解説の本格高品質化（Phase 2-1: ネットワーク・通信セキュリティ分野）](closed/021-refine-glossary-network-security.md) | 2026-08-05 | [021-refine-glossary-network-security.md](closed/021-refine-glossary-network-security.md) |
 | 020 | Feature | [用語集の機械的プレースホルダー解消と用語解説の本格高品質化（Phase 1: 暗号・PKI・認証分野）](closed/020-refine-glossary-explanations-crypto-auth.md) | 2026-08-05 | [020-refine-glossary-explanations-crypto-auth.md](closed/020-refine-glossary-explanations-crypto-auth.md) |
