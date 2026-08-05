@@ -31,6 +31,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Run Glossary Traceability Verification
+        run: npm run test:traceability
+
       - name: Run Glossary Quality Audit v4.0
         run: npm run test:audit
 
