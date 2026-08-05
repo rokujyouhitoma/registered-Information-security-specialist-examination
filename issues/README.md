@@ -14,6 +14,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 021 | Feature | [用語集の機械的プレースホルダー解消と用語解説の本格高品質化（Phase 2-1: ネットワーク・通信セキュリティ分野）](closed/021-refine-glossary-network-security.md) | 2026-08-05 | [021-refine-glossary-network-security.md](closed/021-refine-glossary-network-security.md) |
 | 020 | Feature | [用語集の機械的プレースホルダー解消と用語解説の本格高品質化（Phase 1: 暗号・PKI・認証分野）](closed/020-refine-glossary-explanations-crypto-auth.md) | 2026-08-05 | [020-refine-glossary-explanations-crypto-auth.md](closed/020-refine-glossary-explanations-crypto-auth.md) |
 | 019 | Feature | [用語辞書 (docs/glossary/*) における全専門用語の解説内容の拡充と重要用語 (ST/SA等) のページ分割体系化](closed/019-expand-glossary-detailed-explanations.md) | 2026-08-01 | [019-expand-glossary-detailed-explanations.md](closed/019-expand-glossary-detailed-explanations.md) |
 | 018 | Feature | [シラバス全用語例の用語辞書 (docs/glossary.md) 完全登録・相互ハイパーリンク化と分割運用](closed/018-comprehensive-glossary-terms-linking-split.md) | 2026-08-01 | [018-comprehensive-glossary-terms-linking-split.md](closed/018-comprehensive-glossary-terms-linking-split.md) |
