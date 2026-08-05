@@ -5,7 +5,7 @@
   "main": "site/fm_index_engine.js",
   "type": "module",
   "scripts": {
-    "build:js": "npx -y google-closure-compiler --js site/fm_index_engine.js --js_output_file site/fm_index_engine.min.js --compilation_level SIMPLE_OPTIMIZATIONS --language_in ECMASCRIPT_2020 --language_out ECMASCRIPT_2020",
+    "build:js": "npx -y google-closure-compiler --js src/js/modules/tokenizer.js --js src/js/modules/vector_scorer.js --js src/js/modules/fm_index_engine.js --js_output_file site/fm_index_engine.min.js --compilation_level SIMPLE_OPTIMIZATIONS --language_in ECMASCRIPT_2020 --language_out ECMASCRIPT_2020",
     "build": "npm run build:js",
     "test:unit": "node --test tests/unit/search_engine.test.js",
     "test:audit": "python3 scripts/audit_glossary_quality.py",

@@ -1,6 +1,4 @@
-# 情報セキュリティスペシャリスト試験 検索エンジン Closure Compiler Makefile
-
-SRC_JS = site/fm_index_engine.js
+SRC_JS = src/js/modules/tokenizer.js src/js/modules/vector_scorer.js src/js/modules/fm_index_engine.js
 MIN_JS = site/fm_index_engine.min.js
 
 .PHONY: all build clean

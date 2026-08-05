@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 039 | Refactor | [JS コードの厳格モジュール化と JSDoc 型定義強化 (Phase 14)](closed/039-refactor-js-modules-jsdoc.md) | 2026-08-05 | [039-refactor-js-modules-jsdoc.md](closed/039-refactor-js-modules-jsdoc.md) |
 | 038 | Feature | [JavaScript ユニットテスト自動化 (Phase 13)](closed/038-js-unit-testing.md) | 2026-08-05 | [038-js-unit-testing.md](closed/038-js-unit-testing.md) |
 | 037 | Feature | [Closure Compiler の CI/CD 自動化パイプライン構築および compiled.html の導入](closed/037-setup-cicd-closure-compiler-compiled-html.md) | 2026-08-05 | [037-setup-cicd-closure-compiler-compiled-html.md](closed/037-setup-cicd-closure-compiler-compiled-html.md) |
 | 036 | Feature | [Closure Compiler の導入と JS コンパイル設定](closed/036-integrate-closure-compiler.md) | 2026-08-05 | [036-integrate-closure-compiler.md](closed/036-integrate-closure-compiler.md) |
