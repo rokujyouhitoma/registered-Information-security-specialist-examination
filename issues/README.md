@@ -16,7 +16,10 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 059 | Feature | [科目B記述式 インタラクティブ解法＆自動採点演習 UI モーダルの実装](closed/059-interactive-subject-b-quiz-ui.md) | 2026-08-06 | [059-interactive-subject-b-quiz-ui.md](closed/059-interactive-subject-b-quiz-ui.md) |
+| 058 | Feature | [検索エンジンコア (CustomSearchEngine) の Web Worker 化による UI メインスレッド完全非同期化](closed/058-search-engine-web-worker.md) | 2026-08-06 | [058-search-engine-web-worker.md](closed/058-search-engine-web-worker.md) |
 | 057 | Feature | [ITSS スキルレベル対応 学習到達度セルフチェック＆教育ガイドの作成](closed/057-create-itss-self-assessment-guide.md) | 2026-08-06 | [057-create-itss-self-assessment-guide.md](closed/057-create-itss-self-assessment-guide.md) |
+
 | 056 | Feature | [科目B対応 ハンズオン・インシデント解析実践演習シナリオ集の作成](closed/056-create-subject-b-incident-analysis-scenarios.md) | 2026-08-06 | [056-create-subject-b-incident-analysis-scenarios.md](closed/056-create-subject-b-incident-analysis-scenarios.md) |
 | 055 | Feature | [エデュケーション（ITSS教育スペシャリスト / EDU）エージェントの作成および品質検証](closed/055-create-education-specialist-agent.md) | 2026-08-06 | [055-create-education-specialist-agent.md](closed/055-create-education-specialist-agent.md) |
 | 054 | Performance | [転置インデックス (Inverted Index) 構造の導入とトークナイザ最適化](closed/054-implement-inverted-index-and-tokenizer-opt.md) | 2026-08-06 | [054-implement-inverted-index-and-tokenizer-opt.md](closed/054-implement-inverted-index-and-tokenizer-opt.md) |

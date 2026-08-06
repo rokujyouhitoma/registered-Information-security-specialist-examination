@@ -695,11 +695,27 @@
 <script src="js/vector_scorer.js"></script>
 <script src="js/fm_index_engine.js"></script>
 <script>
-    // ── インデックスページ上のヘッダーライブ検索（最低限のインライン補助） ──
+    // ── インデックスページ上のヘッダーライブ検索（Web Worker 完全非同期対応） ──
     const searchInput = document.getElementById('headerSearch');
     let engine = null;
+    let searchWorker = null;
 
-    // 検索エンジン初期化を遅延実行（インデックスJSONの読み込み）
+    // Web Worker 非同期初期化 (SA 提案 Priority 1)
+    if (window.Worker && window.location.protocol !== 'file:') {
+        try {
+            searchWorker = new Worker('js/search_worker.js');
+            searchWorker.postMessage({ action: 'INIT', dataPath: 'search_index.json' });
+            searchWorker.onmessage = function(e) {
+                if (e.data.status === 'READY') {
+                    console.log('⚡ Search Worker Ready! Total docs:', e.data.totalDocs);
+                }
+            };
+        } catch (err) {
+            console.log('Web Worker init fallback to main thread');
+        }
+    }
+
+    // フォールバック同期初期化
     fetch('search_index.json')
         .then(r => r.json())
         .then(data => {
@@ -726,6 +742,7 @@
             }
         }
     });
+
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('sw.js')
@@ -734,5 +751,6 @@
         });
     }
 </script>
+
 </body>
 </html>
