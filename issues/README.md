@@ -16,7 +16,9 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 052 | Feature | [ITスペシャリスト（情報検索 / IR）エージェントの作成および品質検証](closed/052-create-it-specialist-ir-agent.md) | 2026-08-06 | [052-create-it-specialist-ir-agent.md](closed/052-create-it-specialist-ir-agent.md) |
 | 051 | Feature | [PWA (Progressive Web App) 対応・Service Worker による全オフライン学習環境の構築](closed/051-st-pwa-service-worker.md) | 2026-08-05 | [051-st-pwa-service-worker.md](closed/051-st-pwa-service-worker.md) |
+
 | 050 | Feature | [検索ポータルおよびトップページへのキーボードショートカット機能の導入](closed/050-ux-keyboard-shortcuts.md) | 2026-08-05 | [050-ux-keyboard-shortcuts.md](closed/050-ux-keyboard-shortcuts.md) |
 | 049 | Performance | [検索インデックスデータ構造の最適化・軽量化](closed/049-perf-compress-search-index.md) | 2026-08-05 | [049-perf-compress-search-index.md](closed/049-perf-compress-search-index.md) |
 | 048 | Security | [XSS 防止 Safe DOM レンダリング・Strict CSP 設定および入力値サニタイズ](closed/048-sec-xss-safe-dom-csp.md) | 2026-08-05 | [048-sec-xss-safe-dom-csp.md](closed/048-sec-xss-safe-dom-csp.md) |
