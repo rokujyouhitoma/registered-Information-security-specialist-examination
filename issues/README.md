@@ -16,7 +16,9 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 055 | Feature | [エデュケーション（ITSS教育スペシャリスト / EDU）エージェントの作成および品質検証](closed/055-create-education-specialist-agent.md) | 2026-08-06 | [055-create-education-specialist-agent.md](closed/055-create-education-specialist-agent.md) |
 | 054 | Performance | [転置インデックス (Inverted Index) 構造の導入とトークナイザ最適化](closed/054-implement-inverted-index-and-tokenizer-opt.md) | 2026-08-06 | [054-implement-inverted-index-and-tokenizer-opt.md](closed/054-implement-inverted-index-and-tokenizer-opt.md) |
+
 | 053 | Feature | [BM25 スコアリングアルゴリズムの導入およびプロトタイプ汚染防御](closed/053-implement-bm25-scoring-and-sec-hardening.md) | 2026-08-06 | [053-implement-bm25-scoring-and-sec-hardening.md](closed/053-implement-bm25-scoring-and-sec-hardening.md) |
 | 052 | Feature | [ITスペシャリスト（情報検索 / IR）エージェントの作成および品質検証](closed/052-create-it-specialist-ir-agent.md) | 2026-08-06 | [052-create-it-specialist-ir-agent.md](closed/052-create-it-specialist-ir-agent.md) |
 | 051 | Feature | [PWA (Progressive Web App) 対応・Service Worker による全オフライン学習環境の構築](closed/051-st-pwa-service-worker.md) | 2026-08-05 | [051-st-pwa-service-worker.md](closed/051-st-pwa-service-worker.md) |
