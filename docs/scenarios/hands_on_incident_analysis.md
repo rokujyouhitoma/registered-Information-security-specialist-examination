@@ -106,5 +106,6 @@ LLM システム側で機密情報の漏洩を防ぐために導入すべき、�
 
 ## 🔗 関連演習・資料
 - [シラバス追補版 Ver.4.0 詳細 (`docs/syllabus_tsuiho_detail.md`)](../syllabus_tsuiho_detail.md)
-- [ITSS エデュケーションガイド (`docs/itss_education.md`)](../itss_education.md)
+- [ITSS 到達度セルフチェックガイド (`docs/itss_self_assessment_guide.md`)](../itss_self_assessment_guide.md)
 - [総合用語辞書 (`docs/glossary.md`)](../glossary.md)
+

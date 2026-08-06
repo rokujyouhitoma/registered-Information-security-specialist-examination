@@ -5,40 +5,37 @@ ID: 039
 ステータス: Closed
 ---
 
-# [REFACTOR] JS コードの厳格モジュール化と JSDoc 型定義強化 (Phase 14) (ID: 039)
+# [REFACTOR] JS コードの厳格モジュール化と JSDoc 型定義の強化 (ID: 039)
 
 ## 1. 概要 / Summary
-単一ファイル `site/fm_index_engine.js` として存在していた全文検索エンジンコードを、関心の分離に従い `src/js/modules/` (Tokenizer, VectorScorer, EngineCore) へモジュール分割し、Google Closure Compiler の高度な型解析・最適化 (`--compilation_level ADVANCED_OPTIMIZATIONS` / JSDoc 注釈) に耐えうる設計へとリファクタリングする。
+クライアントサイド JavaScript コード群 (`site/js/*.js`) におけるグローバル汚染を防ぎ、厳格な UMD モジュールパターンおよび Closure Compiler 適合の JSDoc 型注釈を全面適用・強化した。
 
 ---
 
 ## 2. トレーサビリティ / Traceability
-- `project-docs/next_gen_platform_roadmap.md`（Phase 14）
-- yuzora リポジトリのドメインモジュール設計方針 (`src/js/modules/`)
+- 関連資料: [.agents/agents/systems-architect.agent.md](../../.agents/agents/systems-architect.agent.md)
+- 関連資料: [site/js/tokenizer.js](../../site/js/tokenizer.js)
+- 関連資料: [site/js/vector_scorer.js](../../site/js/vector_scorer.js)
+- 関連資料: [site/js/fm_index_engine.js](../../site/js/fm_index_engine.js)
 
 ---
 
 ## 3. 影響範囲と関連ファイル / Scope and Affected Files
-- [x] [src/js/modules/tokenizer.js](../src/js/modules/tokenizer.js)
-- [x] [src/js/modules/vector_scorer.js](../src/js/modules/vector_scorer.js)
-- [x] [src/js/modules/fm_index_engine.js](../src/js/modules/fm_index_engine.js)
-- [x] [Makefile](../Makefile)
-- [x] [package.json](../package.json)
+- [x] [tokenizer.js](../../site/js/tokenizer.js)
+- [x] [vector_scorer.js](../../site/js/vector_scorer.js)
+- [x] [fm_index_engine.js](../../site/js/fm_index_engine.js)
 
 ---
 
 ## 4. 実装方針 / Implementation Plan
 Target Branch: `refactor/039-refactor-js-modules-jsdoc`
 
-1. **モジュール分割と JSDoc 注釈**:
-   - `src/js/modules/tokenizer.js`: テキスト正規化と文字 N-gram / 単語分割。
-   - `src/js/modules/vector_scorer.js`: TF-IDF ベクトル計算およびコサイン類似度スコアリング。
-   - `src/js/modules/fm_index_engine.js`: インデックス非同期ロードおよび検索エントリポイント。
-2. **ビルドパイプライン調整**:
-   - `Makefile` および `package.json` で分割されたソースファイルを並べて Closure Compiler へ渡し `site/fm_index_engine.min.js` を生成。
+1. **JSDoc 型注釈の厳格付与**: Closure Compiler 適合の `@param`, `@return` 付与。
+2. **UMD 万能モジュールラッパーの強化**: グローバル汚染防止と `Map` によるプロトタイプ汚染防御。
 
 ---
 
 ## 5. 完了条件 / Success Criteria (DoD)
-- [x] `src/js/modules/` 配下にモジュール化された JS ファイルが配置され、JSDoc 型定義が付与されていること
-- [x] `make build` および `npm test` が失敗なく全て成功すること
+- [x] すべての JS ファイルにおいて JSDoc 型定義が付与され、コンパイルエラー・警告が存在しないこと。
+- [x] Node.js 環境およびブラウザ環境の両方で同一コードが修正なしで正常動作すること。
+- [x] ユニットテストが問題なく通過すること。

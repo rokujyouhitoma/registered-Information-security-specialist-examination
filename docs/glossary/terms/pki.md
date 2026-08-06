@@ -11,7 +11,8 @@ author: "Information Security Specialist Agent"
 
 X.509 規格に基づき、サーバー証明書、クライアント証明書、S/MIME、コード署名等、現代のセキュリティ通信の信頼のチェーン (Chain of Trust) を支えている。
 
-一次情報参照: [CRYPTREC 電子政府推奨暗号リスト (原本PDF)](../../references/cryptrec_ciphers_list.pdf)
+関連資料: [CRYPTREC 推奨暗号リスト原本](../../../references/cryptrec_ciphers_list.pdf)
+
 
 ---
 

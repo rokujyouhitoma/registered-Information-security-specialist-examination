@@ -64,7 +64,8 @@
 | 情報処理安全確保支援士試験 2024_haru 共通/専門 解答例 | [2024r06a_sc_pm_ans.md](past_exams/2024_haru/2024r06a_sc_pm_ans.md) | [原本PDF](../past_exams/2024_haru/2024r06a_sc_pm_ans.pdf) | `8.4 KB` |
 | 情報処理安全確保支援士試験 2024_haru 全区分共通 採点講評 | [2024r06a_sc_pm_cmnt.md](past_exams/2024_haru/2024r06a_sc_pm_cmnt.md) | [原本PDF](../past_exams/2024_haru/2024r06a_sc_pm_cmnt.pdf) | `5.7 KB` |
 | 情報処理安全確保支援士試験 2024_haru 共通/専門 問題冊子 | [2024r06a_sc_pm_qs.md](past_exams/2024_haru/2024r06a_sc_pm_qs.md) | [原本PDF](../past_exams/2024_haru/2024r06a_sc_pm_qs.pdf) | `0.7 KB` |
-| 令和6年度 春期 情報処理安全確保支援士試験 午前II | [am2.md](past_exams/2024_haru/am2.md) | [原本PDF](../past_exams/2024_haru/am2.pdf) | `1.1 KB` |
+| 令和6年度 春期 情報処理安全確保支援士試験 午前II | [am2.md](past_exams/2024_haru/am2.md) | [原本PDF](../past_exams/2024_haru/2024r06a_sc_am2_qs.pdf) | `1.1 KB` |
+
 
 
 ### 📅 2024_aki

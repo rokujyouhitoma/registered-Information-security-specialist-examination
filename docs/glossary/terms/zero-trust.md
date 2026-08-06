@@ -11,7 +11,7 @@ author: "Information Security Specialist Agent"
 
 従来の「境界型セキュリティ (Perimeter Security)」が「内側は安全、外側は危険」という前提に立っていたのに対し、ゼロトラストは「ネットワークは常に敵対的な環境であり、内部にも脅威が存在する」という前提（Assume Breach）に基づいている。
 
-一次情報参照: [NIST SP 800-207 Zero Trust Architecture (原本PDF)](../../references/nist_sp800_207.pdf)
+関連資料: [NIST SP 800-207 原本](../../../references/nist_sp800_207.pdf)
 
 ---
 

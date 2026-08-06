@@ -75,5 +75,6 @@
 
 ## 🔗 関連演習・ドキュメント
 - [科目B対応 ハンズオン・インシデント解析演習 (`docs/scenarios/hands_on_incident_analysis.md`)](scenarios/hands_on_incident_analysis.md)
-- [ITSS エデュケーションガイド (`docs/itss_education.md`)](itss_education.md)
 - [シラバス詳細 (`docs/syllabus_detail.md`)](syllabus_detail.md)
+- [用語辞書ポータル (`docs/glossary.md`)](glossary.md)
+

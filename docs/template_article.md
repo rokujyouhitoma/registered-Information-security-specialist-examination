@@ -48,4 +48,4 @@ sequenceDiagram
 ---
 
 ## 4. 過去問題演習
-- [2025年春期 午後問題 問1](../../references/okf/past_exams/2025_haru/2025r07a_sc_pm_qs.md)
+- **[2025年春期 午後/科目B](../references/okf/past_exams/2025_haru/2025r07a_sc_pm_qs.md)**

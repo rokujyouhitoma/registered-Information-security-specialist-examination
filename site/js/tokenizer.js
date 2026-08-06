@@ -35,25 +35,28 @@ class Tokenizer {
             }
         }
 
-        // プロトタイプ汚染を防ぐ Object.create(null) マップでユニーク化
-        const uniqueTokens = Object.create(null);
+        // プロトタイプ汚染を防ぐ Map オブジェクトによる安全なユニーク化
+        const tokenMap = new Map();
         words.forEach(w => {
             if (Tokenizer.isSafeKey(w)) {
-                uniqueTokens[w] = true;
+                tokenMap.set(w, true);
             }
         });
         bigrams.forEach(b => {
             if (Tokenizer.isSafeKey(b)) {
-                uniqueTokens[b] = true;
+                tokenMap.set(b, true);
             }
         });
 
-        return Object.keys(uniqueTokens);
+        return Array.from(tokenMap.keys());
     }
 }
 
 if (typeof globalThis !== 'undefined') {
     globalThis.Tokenizer = Tokenizer;
+}
+if (typeof window !== 'undefined') {
+    window.Tokenizer = Tokenizer;
 }
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Tokenizer;
