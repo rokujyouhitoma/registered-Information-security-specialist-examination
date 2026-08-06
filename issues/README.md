@@ -16,7 +16,9 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 060 | Feature | [シノニム辞書拡張 (A) × 概念ベクトルセマンティック検索 (B) ハイブリッド検索エンジンの開発](closed/060-implement-hybrid-synonym-semantic-search.md) | 2026-08-06 | [060-implement-hybrid-synonym-semantic-search.md](closed/060-implement-hybrid-synonym-semantic-search.md) |
 | 059 | Feature | [科目B記述式 インタラクティブ解法＆自動採点演習 UI モーダルの実装](closed/059-interactive-subject-b-quiz-ui.md) | 2026-08-06 | [059-interactive-subject-b-quiz-ui.md](closed/059-interactive-subject-b-quiz-ui.md) |
+
 | 058 | Feature | [検索エンジンコア (CustomSearchEngine) の Web Worker 化による UI メインスレッド完全非同期化](closed/058-search-engine-web-worker.md) | 2026-08-06 | [058-search-engine-web-worker.md](closed/058-search-engine-web-worker.md) |
 | 057 | Feature | [ITSS スキルレベル対応 学習到達度セルフチェック＆教育ガイドの作成](closed/057-create-itss-self-assessment-guide.md) | 2026-08-06 | [057-create-itss-self-assessment-guide.md](closed/057-create-itss-self-assessment-guide.md) |
 

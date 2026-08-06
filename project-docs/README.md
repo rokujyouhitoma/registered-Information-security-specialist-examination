@@ -9,6 +9,8 @@
 
 ## 📄 ドキュメント一覧
 
+- **[system_high_level_design.md](system_high_level_design.md)**: システム基本設計書 (High-Level Design: HLD) - 全体アーキテクチャ、Web Worker非同期パイプライン、ハイブリッド検索構成、PWAキャッシュ、ITSSマルチエージェント体系。
+- **[system_low_level_design.md](system_low_level_design.md)**: システム詳細設計書 (Low-Level Design: LLD) - クラス仕様、同義語拡張、密概念スコアリング、BM25計算式、Workerメッセージ通信プロトコル。
 - **[agent_roles.md](agent_roles.md)**: マルチエージェント役割分担ガイド (RACIマトリックス)
 - **[docs_architecture_and_layout_design.md](docs_architecture_and_layout_design.md)**: `docs/` ディレクトリ構成・レイアウト設計方針書 (階層構造、ナビゲーション、標準レイアウト、UI/UX規約)
 - **[glossary_refinement_plan.md](glossary_refinement_plan.md)**: 用語集継続的品質改修ロードマップ & 人間代行多層化自動QA監査計画書

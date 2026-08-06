@@ -1,6 +1,6 @@
 /**
  * @fileoverview 全文検索エンジンコアモジュール (Custom Search Engine Core)
- * SA/IR 連携による BM25 スコアリング、転置インデックス (Inverted Index) およびプロトタイプ汚染防御
+ * SA/IR 連携による BM25 スコアリング、シノニムクエリ拡張(A)、密概念セマンティック検索(B)、転置インデックス (Inverted Index) およびプロトタイプ汚染防御
  */
 
 class CustomSearchEngine {
@@ -108,7 +108,7 @@ class CustomSearchEngine {
     }
 
     /**
-     * 転置インデックスを活用した高速 BM25 全文検索を実行
+     * 転置インデックス・シノニム拡張(A)・密概念セマンティック(B)のハイブリッド全文検索を実行
      * @param {string} query 検索クエリ
      * @param {number=} topK 取得上位件数
      * @return {!Array<!Object>} スコアリング結果配列
@@ -116,23 +116,31 @@ class CustomSearchEngine {
     search(query, topK = 10) {
         if (!this.isLoaded || !query || typeof query !== 'string' || !query.trim()) return [];
 
-        const qTokens = this.tokenize(query);
-        if (qTokens.length === 0) return [];
+        const rawTokens = this.tokenize(query);
+        if (rawTokens.length === 0) return [];
+
+        // アプローチ A: シノニムクエリ拡張
+        const expandedTokens = (typeof SynonymExpander !== 'undefined')
+            ? SynonymExpander.expandTokens(rawTokens)
+            : rawTokens;
 
         if (!this.invertedIndex || Object.keys(this.invertedIndex).length === 0) {
             this._buildInvertedIndex();
         }
 
         const candidateDocIds = Object.create(null);
-        qTokens.forEach(t => {
+        expandedTokens.forEach(t => {
             if (CustomSearchEngine.isSafeKey(t) && Object.prototype.hasOwnProperty.call(this.invertedIndex, t)) {
                 const docIds = this.invertedIndex[t] || [];
                 docIds.forEach(id => { candidateDocIds[id] = true; });
             }
         });
 
-        const targetIds = Object.keys(candidateDocIds).map(Number);
-        if (targetIds.length === 0) return [];
+        // 候補ドキュメントが転置インデックスで0件の場合、全文書を対象（フォールバック）
+        let targetIds = Object.keys(candidateDocIds).map(Number);
+        if (targetIds.length === 0 && this.docs) {
+            targetIds = this.docs.map((_, i) => i);
+        }
 
         const k1 = 1.2;
         const b = 0.75;
@@ -150,9 +158,9 @@ class CustomSearchEngine {
             const docLen = Object.keys(dVec).length || 1;
             let bm25Score = 0.0;
 
-            qTokens.forEach(t => {
-                if (CustomSearchEngine.isSafeKey(t) && Object.prototype.hasOwnProperty.call(this.idf, t) && Object.prototype.hasOwnProperty.call(dVec, t)) {
-                    const idfVal = this.idf[t] || 1.0;
+            expandedTokens.forEach(t => {
+                if (CustomSearchEngine.isSafeKey(t) && Object.prototype.hasOwnProperty.call(dVec, t)) {
+                    const idfVal = (this.idf && Object.prototype.hasOwnProperty.call(this.idf, t)) ? (this.idf[t] || 1.0) : 1.0;
                     const tf = dVec[t] || 0.0;
                     const numerator = tf * (k1 + 1);
                     const denominator = tf + k1 * (1 - b + b * (docLen / avgdl));
@@ -162,13 +170,20 @@ class CustomSearchEngine {
 
             // コサイン類似度の補助計算
             const qVecNorm = Object.create(null);
-            qTokens.forEach(t => {
+            expandedTokens.forEach(t => {
                 if (CustomSearchEngine.isSafeKey(t)) {
-                    qVecNorm[t] = 1.0 / Math.sqrt(qTokens.length);
+                    qVecNorm[t] = 1.0 / Math.sqrt(expandedTokens.length);
                 }
             });
             const cosineSim = VectorScorer.calculateCosineSimilarity(qVecNorm, dVec);
-            let finalScore = bm25Score + (cosineSim * 0.5);
+
+            // アプローチ B: 密概念セマンティック類似度計算
+            const docFullText = (doc.name || '') + ' ' + (doc.summary || '') + ' ' + (doc.content || '');
+            const semanticScore = (typeof SemanticScorer !== 'undefined')
+                ? SemanticScorer.calculateSemanticScore(rawTokens, docFullText)
+                : 0.0;
+
+            let finalScore = bm25Score + (cosineSim * 0.5) + semanticScore;
 
             // フィールド一致・単語完全一致の優先ブースト (Exact Match Priority)
             const docNameLower = (doc.name || '').toLowerCase();
