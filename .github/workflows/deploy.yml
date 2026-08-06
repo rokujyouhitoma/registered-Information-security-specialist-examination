@@ -1,13 +1,10 @@
-name: Deploy Documentation to GitHub Pages
+name: Deploy MkDocs Documentation to GitHub Pages
 
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
-env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
 permissions:
   contents: read
@@ -16,7 +13,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -28,28 +25,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'npm'
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install Node dependencies
+      - name: Install dependencies
         run: |
-          npm ci || npm install
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material
 
-      - name: Build HTML Docs and JavaScript Assets
+      - name: Build MkDocs Site
         run: |
-          python3 scripts/build_html_docs.py
-          npm run build:js || make build || true
+          mkdocs build
 
-      - name: Setup GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
