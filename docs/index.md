@@ -7,7 +7,10 @@
 - **[syllabus_tsuiho_detail.md](syllabus_tsuiho_detail.md)**: 科目A-2 追補版 Ver.4.0 詳細
 - **[glossary.md](glossary.md)**: 情報処理安全確保支援士試験 総合用語辞書 (Glossary)
 - **[exam_overview.md](exam_overview.md)**: 試験制度・出題形式・配点・学習戦略
+- **[hands_on_incident_analysis.md](scenarios/hands_on_incident_analysis.md)**: 科目B対応 ハンズオン・インシデント解析実践演習シナリオ集
+- **[itss_self_assessment_guide.md](itss_self_assessment_guide.md)**: ITSS スキルレベル対応 学習到達度セルフチェック＆教育ガイド
 - **[template_article.md](template_article.md)**: 記事執筆用標準テンプレート
+
 
 ---
 
