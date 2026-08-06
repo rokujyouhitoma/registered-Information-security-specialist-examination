@@ -34,24 +34,19 @@ jobs:
           node-version: '22'
           cache: 'npm'
 
-      - name: Install Node dependencies and Build JS
-        run: |
-          npm ci || npm install
-          make build || true
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install Python dependencies
+      - name: Install Node dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material
+          npm ci || npm install
 
-      - name: Build MkDocs Documentation Site
+      - name: Build HTML Docs and JavaScript Assets
         run: |
-          mkdocs build
+          python3 scripts/build_html_docs.py
+          npm run build:js || make build || true
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
@@ -64,5 +59,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          timeout: 600000
