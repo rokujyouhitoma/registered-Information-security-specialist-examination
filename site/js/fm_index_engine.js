@@ -1,5 +1,6 @@
 /**
  * @fileoverview 全文検索エンジンコアモジュール (Custom Search Engine Core)
+ * SA/IR 連携による BM25 スコアリング、転置インデックス (Inverted Index) およびプロトタイプ汚染防御
  */
 
 class CustomSearchEngine {
@@ -7,15 +8,28 @@ class CustomSearchEngine {
         /** @type {!Array<!Object>} */
         this.docs = [];
         /** @type {!Object<string, number>} */
-        this.idf = {};
+        this.idf = Object.create(null);
         /** @type {!Array<!Object<string, number>>} */
         this.vectors = [];
+        /** @type {!Object<string, !Array<number>>} */
+        this.invertedIndex = Object.create(null);
+        /** @type {number} */
+        this.avgdl = 50.0;
         /** @type {boolean} */
         this.isLoaded = false;
     }
 
     /**
-     * インデックス JSON データをロードする
+     * プロトタイプ汚染防御用のキー安全性検証
+     * @param {string} key
+     * @return {boolean}
+     */
+    static isSafeKey(key) {
+        return Boolean(key) && key !== '__proto__' && key !== 'prototype' && key !== 'constructor';
+    }
+
+    /**
+     * インデックス JSON データをロードし、転置インデックスを動的構築する
      * @param {string=} jsonPath JSONファイルへのパス
      * @return {!Promise<boolean>} ロード成功判定
      */
@@ -24,15 +38,64 @@ class CustomSearchEngine {
             const cacheBustPath = jsonPath + (jsonPath.includes('?') ? '&' : '?') + 'v=' + Date.now();
             const res = await fetch(cacheBustPath, { cache: 'no-cache' });
             const data = await res.json();
-            this.docs = data.docs;
-            this.idf = data.idf;
-            this.vectors = data.vectors;
+            this.docs = data.docs || [];
+            
+            // 安全な IDF ディクショナリの構築
+            this.idf = Object.create(null);
+            if (data.idf) {
+                Object.keys(data.idf).forEach(k => {
+                    if (CustomSearchEngine.isSafeKey(k)) {
+                        this.idf[k] = data.idf[k];
+                    }
+                });
+            }
+            this.vectors = data.vectors || [];
+            this.avgdl = data.avgdl || this._calculateAvgdl();
+
+            // 転置インデックス (Inverted Index) の自動構築
+            this._buildInvertedIndex();
+
             this.isLoaded = true;
             return true;
         } catch (e) {
             console.error("❌ インデックスロード失敗:", e);
             return false;
         }
+    }
+
+    /**
+     * ベクトルデータから転置インデックス (Inverted Index) を動的構築
+     * @private
+     */
+    _buildInvertedIndex() {
+        this.invertedIndex = Object.create(null);
+        if (!this.vectors) return;
+
+        this.vectors.forEach((v, docIdx) => {
+            if (!v) return;
+            Object.keys(v).forEach(token => {
+                if (CustomSearchEngine.isSafeKey(token)) {
+                    if (!Object.prototype.hasOwnProperty.call(this.invertedIndex, token)) {
+                        this.invertedIndex[token] = [];
+                    }
+                    this.invertedIndex[token].push(docIdx);
+                }
+            });
+        });
+    }
+
+    /**
+     * ドキュメントの平均長さを計算
+     * @private
+     * @return {number}
+     */
+    _calculateAvgdl() {
+        if (!this.vectors || this.vectors.length === 0) return 50.0;
+        let totalLen = 0;
+        this.vectors.forEach(v => {
+            totalLen += Object.keys(v).length;
+        });
+        return (totalLen / this.vectors.length) || 50.0;
     }
 
     /**
@@ -45,57 +108,85 @@ class CustomSearchEngine {
     }
 
     /**
-     * 全文検索を実行する
+     * 転置インデックスを活用した高速 BM25 全文検索を実行
      * @param {string} query 検索クエリ
      * @param {number=} topK 取得上位件数
      * @return {!Array<!Object>} スコアリング結果配列
      */
     search(query, topK = 10) {
-        if (!this.isLoaded || !query.trim()) return [];
+        if (!this.isLoaded || !query || typeof query !== 'string' || !query.trim()) return [];
 
         const qTokens = this.tokenize(query);
         if (qTokens.length === 0) return [];
 
-        const qTf = {};
-        qTokens.forEach(t => {
-            qTf[t] = (qTf[t] || 0) + 1;
-        });
+        if (!this.invertedIndex || Object.keys(this.invertedIndex).length === 0) {
+            this._buildInvertedIndex();
+        }
 
-        const qVec = {};
-        let normSq = 0.0;
-        Object.keys(qTf).forEach(t => {
-            if (Object.prototype.hasOwnProperty.call(this.idf, t)) {
-                const idfVal = this.idf[t] || 1.0;
-                const tfidf = (qTf[t] / qTokens.length) * idfVal;
-                qVec[t] = tfidf;
-                normSq += tfidf * tfidf;
+        const candidateDocIds = Object.create(null);
+        qTokens.forEach(t => {
+            if (CustomSearchEngine.isSafeKey(t) && Object.prototype.hasOwnProperty.call(this.invertedIndex, t)) {
+                const docIds = this.invertedIndex[t] || [];
+                docIds.forEach(id => { candidateDocIds[id] = true; });
             }
         });
 
-        const qNorm = normSq > 0 ? Math.sqrt(normSq) : 1.0;
-        const qVecNorm = {};
-        Object.keys(qVec).forEach(t => {
-            qVecNorm[t] = qVec[t] / qNorm;
-        });
+        const targetIds = Object.keys(candidateDocIds).map(Number);
+        if (targetIds.length === 0) return [];
+
+        const k1 = 1.2;
+        const b = 0.75;
+        const avgdl = this.avgdl > 0 ? this.avgdl : 50.0;
 
         const scores = [];
-        const queryLower = query.toLowerCase();
+        const queryLower = query.toLowerCase().trim();
+        const queryWords = queryLower.split(/[\s()/_\-\u3000]+/).filter(w => w.length > 0);
 
-        this.docs.forEach((doc, idx) => {
+        targetIds.forEach(idx => {
+            const doc = this.docs[idx];
+            if (!doc) return;
+
             const dVec = this.vectors[idx] || {};
-            let score = VectorScorer.calculateCosineSimilarity(qVecNorm, dVec);
+            const docLen = Object.keys(dVec).length || 1;
+            let bm25Score = 0.0;
 
-            const docNameLower = doc.name.toLowerCase();
-            const docSummaryLower = doc.summary.toLowerCase();
+            qTokens.forEach(t => {
+                if (CustomSearchEngine.isSafeKey(t) && Object.prototype.hasOwnProperty.call(this.idf, t) && Object.prototype.hasOwnProperty.call(dVec, t)) {
+                    const idfVal = this.idf[t] || 1.0;
+                    const tf = dVec[t] || 0.0;
+                    const numerator = tf * (k1 + 1);
+                    const denominator = tf + k1 * (1 - b + b * (docLen / avgdl));
+                    bm25Score += idfVal * (numerator / denominator);
+                }
+            });
 
-            if (docNameLower.includes(queryLower)) {
-                score += 2.0;
+            // コサイン類似度の補助計算
+            const qVecNorm = Object.create(null);
+            qTokens.forEach(t => {
+                if (CustomSearchEngine.isSafeKey(t)) {
+                    qVecNorm[t] = 1.0 / Math.sqrt(qTokens.length);
+                }
+            });
+            const cosineSim = VectorScorer.calculateCosineSimilarity(qVecNorm, dVec);
+            let finalScore = bm25Score + (cosineSim * 0.5);
+
+            // フィールド一致・単語完全一致の優先ブースト (Exact Match Priority)
+            const docNameLower = (doc.name || '').toLowerCase();
+            const docNameWords = docNameLower.split(/[\s()/_\-\u3000\s,./:;!?+=\"'\[\]{}|\\`~^#&]+/).filter(w => w.length > 0);
+            const docSummaryLower = (doc.summary || '').toLowerCase();
+
+            if (docNameLower === queryLower || docNameWords.includes(queryLower)) {
+                finalScore += 10.0;
+            } else if (queryWords.some(qw => docNameWords.includes(qw))) {
+                finalScore += 5.0;
+            } else if (docNameLower.includes(queryLower)) {
+                finalScore += 2.0;
             } else if (docSummaryLower.includes(queryLower)) {
-                score += 0.5;
+                finalScore += 0.8;
             }
 
-            if (score > 0.05) {
-                scores.push({ doc, score });
+            if (finalScore > 0.01) {
+                scores.push({ doc, score: finalScore });
             }
         });
 

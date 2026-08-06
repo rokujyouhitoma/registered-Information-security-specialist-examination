@@ -27,7 +27,27 @@ test('CustomSearchEngine Tokenizer Test', (t) => {
     assert.ok(jpTokens.includes('セキ'), 'Token should contain Bigram セキ');
 });
 
-test('CustomSearchEngine Search Execution Test', (t) => {
+test('CustomSearchEngine Prototype Pollution Protection Test', (t) => {
+    const engine = new CustomSearchEngine();
+    const tokens = engine.tokenize('__proto__ constructor toString');
+    assert.ok(Array.isArray(tokens), 'Tokens should be an array');
+    assert.doesNotThrow(() => {
+        engine.search('__proto__');
+    }, 'Search with __proto__ query should not throw');
+});
+
+test('CustomSearchEngine Inverted Index Construction Test', (t) => {
+    const engine = new CustomSearchEngine();
+    engine.docs = searchIndexData.docs;
+    engine.idf = searchIndexData.idf;
+    engine.vectors = searchIndexData.vectors;
+    engine._buildInvertedIndex();
+
+    assert.ok(engine.invertedIndex['tls'], 'Inverted index should contain entry for tls');
+    assert.ok(Array.isArray(engine.invertedIndex['tls']), 'Inverted index entry should be an array of doc IDs');
+});
+
+test('CustomSearchEngine BM25 Search Execution Test', (t) => {
     const engine = new CustomSearchEngine();
     engine.docs = searchIndexData.docs;
     engine.idf = searchIndexData.idf;
