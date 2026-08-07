@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 080 | Feature | [外部 JSON データ駆動による科目 B 長文記述思考プロセス演習ツールの開発と Web UI/UX 設問分解ナビゲーターの導入](closed/080-data-driven-subject-b-reasoning-drills.md) | 2026-08-07 | [080-data-driven-subject-b-reasoning-drills.md](closed/080-data-driven-subject-b-reasoning-drills.md) |
 | 079 | Refactor | [agent-hearing-proposal スキルへの多段階エージェント再レビュー＆polish-issue 品質磨き上げサイクルの組込み](closed/079-enhance-agent-hearing-proposal-quality-review-loop.md) | 2026-08-07 | [079-enhance-agent-hearing-proposal-quality-review-loop.md](closed/079-enhance-agent-hearing-proposal-quality-review-loop.md) |
 | 078 | Feature | [外部 JSON データ駆動によるサイバー攻撃・解析シナリオ演習機能の開発と Web UI/UX タイムライン解析画面の導入](closed/078-data-driven-attack-scenarios-timeline-ui.md) | 2026-08-07 | [078-data-driven-attack-scenarios-timeline-ui.md](closed/078-data-driven-attack-scenarios-timeline-ui.md) |
 | 077 | Refactor | [学習ドキュメント (docs/exam_cheatsheet.md) からのエージェントメタ表記の除去](closed/077-remove-agent-meta-references-from-docs.md) | 2026-08-07 | [077-remove-agent-meta-references-from-docs.md](closed/077-remove-agent-meta-references-from-docs.md) |
