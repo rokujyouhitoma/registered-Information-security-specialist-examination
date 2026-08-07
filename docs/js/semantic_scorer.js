@@ -1,0 +1,135 @@
+/**
+ * @fileoverview セマンティック概念スコアラー (Semantic Concept Scorer Module)
+ * IR 提案 (アプローチ B) による密概念ベクトル類似度計算
+ * データ駆動設計原則 (Data-Driven Design) に準拠
+ */
+
+class SemanticScorer {
+    /**
+     * @private
+     * @type {Array<string>|null}
+     */
+    static _categories = null;
+
+    /**
+     * @private
+     * @type {Object<string, Array<string>>|null}
+     */
+    static _keywordsMap = null;
+
+    /**
+     * 外部から概念設定データ (カテゴリ一覧およびキーワードマップ) をロード・設定する
+     * @param {{categories: Array<string>, keywords: Object<string, Array<string>>}} config
+     */
+    static setConceptConfig(config) {
+        if (config && typeof config === 'object') {
+            if (Array.isArray(config.categories)) {
+                SemanticScorer._categories = config.categories;
+            }
+            if (config.keywords && typeof config.keywords === 'object') {
+                SemanticScorer._keywordsMap = config.keywords;
+            }
+        }
+    }
+
+    /**
+     * キーのプロトタイプ汚染安全性を判定する
+     * @param {string} key
+     * @return {boolean}
+     */
+    static isSafeKey(key) {
+        return Boolean(key) && key !== '__proto__' && key !== 'prototype' && key !== 'constructor';
+    }
+
+    /**
+     * 設定済みの主要セキュリティ概念カテゴリマッピングを取得
+     * @return {Array<string>}
+     */
+    static getConceptCategories() {
+        return SemanticScorer._categories || [];
+    }
+
+    /**
+     * 設定済みのキーワードマップを取得
+     * @return {Object<string, Array<string>>}
+     */
+    static getKeywordsMap() {
+        return SemanticScorer._keywordsMap || {};
+    }
+
+    /**
+     * トークン群から概念ベクトルを動的生成する
+     * @param {!Array<string>} tokens
+     * @return {!Object<string, number>}
+     */
+    static extractConceptVector(tokens) {
+        const vec = Object.create(null);
+        const categories = SemanticScorer.getConceptCategories();
+        const keywordsMap = SemanticScorer.getKeywordsMap();
+
+        categories.forEach(cat => {
+            if (SemanticScorer.isSafeKey(cat)) {
+                vec[cat] = 0.0;
+            }
+        });
+
+        if (!tokens || !Array.isArray(tokens)) return vec;
+
+        tokens.forEach(t => {
+            if (SemanticScorer.isSafeKey(t)) {
+                const lower = t.toLowerCase();
+                categories.forEach(cat => {
+                    if (SemanticScorer.isSafeKey(cat) && Object.prototype.hasOwnProperty.call(keywordsMap, cat) && Array.isArray(keywordsMap[cat])) {
+                        if (keywordsMap[cat].some(k => lower.includes(k))) {
+                            vec[cat] = (vec[cat] || 0.0) + 1.0;
+                        }
+                    }
+                });
+            }
+        });
+
+        // ノルム正規化
+        let norm = 0.0;
+        Object.keys(vec).forEach(k => {
+            if (SemanticScorer.isSafeKey(k)) {
+                norm += (vec[k] || 0.0) * (vec[k] || 0.0);
+            }
+        });
+        norm = Math.sqrt(norm);
+
+        if (norm > 0) {
+            Object.keys(vec).forEach(k => {
+                if (SemanticScorer.isSafeKey(k)) {
+                    vec[k] = (vec[k] || 0.0) / norm;
+                }
+            });
+        }
+
+        return vec;
+    }
+
+    /**
+     * クエリ概念ベクトルとドキュメントテキストのセマンティックボーナススコアを計算する
+     * @param {!Array<string>} queryTokens
+     * @param {string} docText
+     * @return {number}
+     */
+    static calculateSemanticScore(queryTokens, docText) {
+        if (!queryTokens || !docText) return 0.0;
+        const qVec = SemanticScorer.extractConceptVector(queryTokens);
+        const dVec = SemanticScorer.extractConceptVector([docText]);
+
+        let score = 0.0;
+        Object.keys(qVec).forEach(k => {
+            if (SemanticScorer.isSafeKey(k) && Object.prototype.hasOwnProperty.call(dVec, k)) {
+                score += (qVec[k] || 0.0) * (dVec[k] || 0.0);
+            }
+        });
+
+        return score * 2.5; // セマンティックブースト係数
+    }
+}
+
+if (typeof globalThis !== 'undefined') globalThis.SemanticScorer = SemanticScorer;
+if (typeof window !== 'undefined') window.SemanticScorer = SemanticScorer;
+if (typeof module !== 'undefined' && module.exports) module.exports = SemanticScorer;

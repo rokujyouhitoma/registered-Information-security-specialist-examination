@@ -48,15 +48,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             line-height: 1.7;
         }}
 
-        /* ── HEADER ── */
-        header {{
-            padding: 1rem 2rem;
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(12px);
-            background: rgba(10,14,26,0.85);
+        /* ── LAYOUT ── */
+        .layout-header {{
             position: sticky;
             top: 0;
             z-index: 100;
+            background: rgba(10, 14, 26, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.75rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -68,93 +68,86 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             gap: 0.75rem;
             text-decoration: none;
             color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.1rem;
         }}
-        .header-icon {{
-            width: 34px; height: 34px;
+        .header-brand-icon {{
+            width: 32px;
+            height: 32px;
             background: linear-gradient(135deg, var(--accent), var(--accent-2));
             border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
             font-size: 1rem;
+            color: #fff;
         }}
-        .header-title {{ font-weight: 700; font-size: 0.95rem; }}
 
         .header-nav {{
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
         }}
         .nav-btn {{
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.85rem;
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-            transition: all 0.2s;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
         }}
-        .nav-btn:hover {{
-            color: var(--text-primary);
-            border-color: var(--accent);
-            background: rgba(99,102,241,0.1);
-        }}
+        .nav-btn:hover {{ color: var(--text-primary); }}
 
-        /* ── MAIN CONTENT ── */
         .container {{
-            max-width: 960px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 2.5rem 1.5rem 5rem;
         }}
 
+        /* ── TYPOGRAPHY ── */
         .doc-content h1 {{
             font-size: 2.2rem;
             font-weight: 800;
+            letter-spacing: -0.02em;
             margin-bottom: 1.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid var(--border);
-            background: linear-gradient(135deg, #e0e7ff, #a5b4fc);
+            background: linear-gradient(135deg, #fff 30%, var(--text-secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
+            line-height: 1.3;
         }}
 
         .doc-content h2 {{
             font-size: 1.5rem;
             font-weight: 700;
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.4rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            color: #c7d2fe;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            color: #e2e8f0;
         }}
 
         .doc-content h3 {{
             font-size: 1.2rem;
             font-weight: 600;
-            margin: 1.5rem 0 0.75rem;
-            color: #e0e7ff;
-        }}
-
-        .doc-content h4 {{
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin: 1.25rem 0 0.5rem;
-            color: var(--text-primary);
+            margin: 1.75rem 0 0.75rem;
+            color: #cbd5e1;
         }}
 
         .doc-content p {{
-            margin-bottom: 1rem;
-            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
         }}
 
         .doc-content ul, .doc-content ol {{
-            margin: 0.5rem 0 1.25rem 1.5rem;
+            margin: 1rem 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
         }}
-
         .doc-content li {{
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
         }}
 
         .doc-content a {{
-            color: #818cf8;
+            color: var(--accent);
             text-decoration: none;
             transition: color 0.2s;
         }}
@@ -217,13 +210,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             background: rgba(255,255,255,0.06);
             padding: 0.75rem 1rem;
             font-weight: 600;
-            color: #e0e7ff;
+            color: var(--text-primary);
             border-bottom: 1px solid var(--border);
         }}
 
         .doc-content td {{
             padding: 0.75rem 1rem;
             border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: var(--text-secondary);
         }}
 
         .doc-content tr:last-child td {{
@@ -234,99 +228,157 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             background: rgba(255,255,255,0.02);
         }}
 
-        .doc-content hr {{
-            border: none;
-            height: 1px;
-            background: var(--border);
-            margin: 2rem 0;
-        }}
-
         /* ── FOOTER ── */
-        footer {{
+        .layout-footer {{
             border-top: 1px solid var(--border);
             padding: 2rem;
             text-align: center;
-            font-size: 0.8rem;
             color: var(--text-muted);
-            margin-top: 4rem;
+            font-size: 0.85rem;
+            margin-top: auto;
         }}
-        footer a {{ color: var(--accent); text-decoration: none; }}
     </style>
 </head>
 <body>
 
-<header>
-    <a href="{rel_root}index.html" class="header-brand">
-        <div class="header-icon">🛡️</div>
-        <div class="header-title">SC 試験 学習ポータル</div>
-    </a>
-    <div class="header-nav">
-        <a href="{rel_root}index.html" class="nav-btn">🏠 トップ</a>
-        <a href="{rel_root}search.html" class="nav-btn">🔍 全文検索</a>
-    </div>
-</header>
+    <header class="layout-header">
+        <a href="{rel_root}index.html" class="header-brand">
+            <div class="header-brand-icon">SC</div>
+            <span>情報処理安全確保支援士試験 総合学習</span>
+        </a>
+        <nav class="header-nav">
+            <a href="{rel_root}index.html" class="nav-btn">🏠 トップ</a>
+            <a href="{rel_root}search.html" class="nav-btn">🔍 全文検索</a>
+            <a href="{rel_root}quiz.html" class="nav-btn">🧠 クイズ演習</a>
+            <a href="{rel_root}syllabus.html" class="nav-btn">📖 シラバス</a>
+            <a href="{rel_root}glossary.html" class="nav-btn">📚 用語辞書</a>
+        </nav>
+    </header>
 
-<div class="container">
-    <article class="doc-content">
-{content}
-    </article>
-</div>
+    <main class="container">
+        <article class="doc-content">
+            {content}
+        </article>
+    </main>
 
-<footer>
-    <p>情報セキュリティスペシャリスト試験 総合学習プラットフォーム · IPA シラバス Ver.2.1 ＆ 補足 Ver.4.0 準拠</p>
-</footer>
+    <footer class="layout-footer">
+        Registered Information Security Specialist Examination Knowledge Portal &copy; 2026
+    </footer>
 
-<script>
-    if ('serviceWorker' in navigator) {{
-        window.addEventListener('load', () => {{
-            navigator.serviceWorker.register('{rel_root}sw.js')
-                .then(reg => console.log('🛡️ Service Worker Registered:', reg.scope))
-                .catch(err => console.log('Service Worker registration failed:', err));
-        }});
-    }}
-</script>
-
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {{
+            window.addEventListener('load', () => {{
+                navigator.serviceWorker.register('{rel_root}sw.js')
+                    .then(reg => console.log('SW Registered:', reg.scope))
+                    .catch(err => console.error('SW Registration Failed:', err));
+            }});
+        }}
+    </script>
 </body>
 </html>
 """
 
-
 def parse_inline(text):
-    """インライン要素 (太字, 斜体, コード, リンク) の変換"""
-    # エスケープ前のHTMLアンカー処理
-    # 画像
-    text = re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', r'<img src="\2" alt="\1" style="max-width:100%;">', text)
-
-    # リンク: .md パスを .html パスに自動変換
-    def link_repl(match):
-        label = match.group(1)
-        url = match.group(2)
-        # .md 拡張子リンクを .html へ置換
+    """インライン要素（リンク, 太字, コード, 画像）のパース"""
+    # エスケープ防止のため個別タグ化前に処理
+    # 画像 ! [alt] (url)
+    text = re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', r'<img src="\2" alt="\1" style="max-width:100%; border-radius:8px; margin:1rem 0;">', text)
+    # リンク [text](url)
+    def link_repl(m):
+        link_text = m.group(1)
+        url = m.group(2)
         if url.endswith('.md'):
             url = url[:-3] + '.html'
-        elif '.md#' in url:
-            url = url.replace('.md#', '.html#')
-        return f'<a href="{url}">{label}</a>'
-
+        return f'<a href="{url}">{link_text}</a>'
     text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', link_repl, text)
-
-    # HTMLアンカータグ (<a id="..."></a>) の安全化と維持
-    text = re.sub(r'<a id="([^"]+)">(.*?)</a>', r'<span id="\1">\2</span>', text)
-
-    # インラインコード `code`
-    text = re.sub(r'`([^`]+)`', r'<code>\1</code>', text)
-
     # 太字 **text**
     text = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', text)
-
-    # 斜体 *text*
-    text = re.sub(r'\*([^*]+)\*', r'<em>\1</em>', text)
-
+    # インラインコード `code`
+    text = re.sub(r'`([^`]+)`', r'<code>\1</code>', text)
     return text
 
 
+def render_table(table_lines):
+    """Markdown 表形式データを HTML <table> に変換"""
+    if not table_lines or len(table_lines) < 2:
+        return ""
+
+    headers_raw = table_lines[0].strip('|').split('|')
+    header_cells = [h.strip() for h in headers_raw]
+
+    # セパレータ行 (2行目) はスキップ
+    body_rows_raw = table_lines[2:]
+    body_rows = []
+    for line in body_rows_raw:
+        cells_raw = line.strip('|').split('|')
+        cells = [c.strip() for c in cells_raw]
+        body_rows.append(cells)
+
+    out = ['<div class="table-wrapper"><table><thead><tr>']
+    for hc in header_cells:
+        out.append(f'<th>{parse_inline(hc)}</th>')
+    out.append('</tr></thead><tbody>')
+
+    for r in body_rows:
+        out.append('<tr>')
+        for cell in r:
+            out.append(f'<td>{parse_inline(cell)}</td>')
+        out.append('</tr>')
+
+    out.append('</tbody></table></div>')
+    return ''.join(out)
+
+
+def copy_static_assets():
+    """src/ 配下の JS モジュールおよび静的アセット (sw.js, manifest.json) を site/ に同期コピー"""
+    os.makedirs(SITE_DIR, exist_ok=True)
+
+    # 1. src/assets -> site/
+    assets_dir = os.path.join(SRC_DIR, "assets")
+    if os.path.exists(assets_dir):
+        for item in os.listdir(assets_dir):
+            s_path = os.path.join(assets_dir, item)
+            d_path = os.path.join(SITE_DIR, item)
+            if os.path.isfile(s_path):
+                shutil.copy2(s_path, d_path)
+                print(f"  📦 [アセットコピー] {item} -> site/{item}")
+
+    # 2. src/js -> site/js 及び docs/js
+    js_src_dir = os.path.join(SRC_DIR, "js")
+    js_dest_dir = os.path.join(SITE_DIR, "js")
+    docs_js_dir = os.path.join(DOCS_DIR, "js")
+    if os.path.exists(js_src_dir):
+        os.makedirs(js_dest_dir, exist_ok=True)
+        os.makedirs(docs_js_dir, exist_ok=True)
+        for item in os.listdir(js_src_dir):
+            s_path = os.path.join(js_src_dir, item)
+            d_path = os.path.join(js_dest_dir, item)
+            docs_d_path = os.path.join(docs_js_dir, item)
+            if os.path.isfile(s_path):
+                shutil.copy2(s_path, d_path)
+                shutil.copy2(s_path, docs_d_path)
+                print(f"  📦 [JSコピー] js/{item} -> site/js/{item} & docs/js/{item}")
+
+    # 3. src/data -> site/data 及び docs/data
+    data_src_dir = os.path.join(SRC_DIR, "data")
+    data_dest_dir = os.path.join(SITE_DIR, "data")
+    docs_data_dir = os.path.join(DOCS_DIR, "data")
+    if os.path.exists(data_src_dir):
+        os.makedirs(data_dest_dir, exist_ok=True)
+        os.makedirs(docs_data_dir, exist_ok=True)
+        for item in os.listdir(data_src_dir):
+            s_path = os.path.join(data_src_dir, item)
+            d_path = os.path.join(data_dest_dir, item)
+            docs_d_path = os.path.join(docs_data_dir, item)
+            if os.path.isfile(s_path):
+                shutil.copy2(s_path, d_path)
+                shutil.copy2(s_path, docs_d_path)
+                print(f"  📦 [データコピー] data/{item} -> site/data/{item} & docs/data/{item}")
+
+
 def markdown_to_html(md_text):
-    """フルスクラッチ簡易Markdown -> HTML変換コンバーター"""
+    """簡易 Markdown パーサー"""
     lines = md_text.split('\n')
     html_out = []
 
@@ -469,85 +521,6 @@ def markdown_to_html(md_text):
     return '\n'.join(html_out)
 
 
-def render_table(table_lines):
-    """テーブル行配列 -> <table> HTML"""
-    if not table_lines:
-        return ''
-
-    rows = []
-    for line in table_lines:
-        cells = [c.strip() for c in line.strip('|').split('|')]
-        rows.append(cells)
-
-    if len(rows) < 2:
-        return ''
-
-    header_cells = rows[0]
-    # セパレータ行 (--- | ---) をスキップ
-    body_rows = [r for r in rows[1:] if not all(re.match(r'^:?-+:?$', c) for c in r)]
-
-    out = ['<div class="table-wrapper"><table><thead><tr>']
-    for hc in header_cells:
-        out.append(f'<th>{parse_inline(hc)}</th>')
-    out.append('</tr></thead><tbody>')
-
-    for r in body_rows:
-        out.append('<tr>')
-        for cell in r:
-            out.append(f'<td>{parse_inline(cell)}</td>')
-        out.append('</tr>')
-
-    out.append('</tbody></table></div>')
-    return ''.join(out)
-
-
-def copy_static_assets():
-    """src/ 配下の JS モジュールおよび静的アセット (sw.js, manifest.json) を site/ に同期コピー"""
-    os.makedirs(SITE_DIR, exist_ok=True)
-
-    # 1. src/assets -> site/
-    assets_dir = os.path.join(SRC_DIR, "assets")
-    if os.path.exists(assets_dir):
-        for item in os.listdir(assets_dir):
-            s_path = os.path.join(assets_dir, item)
-            d_path = os.path.join(SITE_DIR, item)
-            if os.path.isfile(s_path):
-                shutil.copy2(s_path, d_path)
-                print(f"  📦 [アセットコピー] {item} -> site/{item}")
-
-    # 2. src/js -> site/js 及び site/search/js (ルーティング互換用)
-    js_src_dir = os.path.join(SRC_DIR, "js")
-    js_dest_dir = os.path.join(SITE_DIR, "js")
-    search_js_dest_dir = os.path.join(SITE_DIR, "search", "js")
-    if os.path.exists(js_src_dir):
-        os.makedirs(js_dest_dir, exist_ok=True)
-        os.makedirs(search_js_dest_dir, exist_ok=True)
-        for item in os.listdir(js_src_dir):
-            s_path = os.path.join(js_src_dir, item)
-            d_path = os.path.join(js_dest_dir, item)
-            search_d_path = os.path.join(search_js_dest_dir, item)
-            if os.path.isfile(s_path):
-                shutil.copy2(s_path, d_path)
-                shutil.copy2(s_path, search_d_path)
-                print(f"  📦 [JSコピー] js/{item} -> site/js/{item} & site/search/js/{item}")
-
-    # 3. src/data -> site/data 及び site/search/data
-    data_src_dir = os.path.join(SRC_DIR, "data")
-    data_dest_dir = os.path.join(SITE_DIR, "data")
-    search_data_dest_dir = os.path.join(SITE_DIR, "search", "data")
-    if os.path.exists(data_src_dir):
-        os.makedirs(data_dest_dir, exist_ok=True)
-        os.makedirs(search_data_dest_dir, exist_ok=True)
-        for item in os.listdir(data_src_dir):
-            s_path = os.path.join(data_src_dir, item)
-            d_path = os.path.join(data_dest_dir, item)
-            search_d_path = os.path.join(search_data_dest_dir, item)
-            if os.path.isfile(s_path):
-                shutil.copy2(s_path, d_path)
-                shutil.copy2(s_path, search_d_path)
-                print(f"  📦 [データコピー] data/{item} -> site/data/{item} & site/search/data/{item}")
-
-
 def build_docs():
     """docs/ 配下のすべての md ファイルを site/ に HTML としてビルド"""
     count = 0
@@ -607,9 +580,10 @@ def build_docs():
             count += 1
             print(f"  ✅ [生成] site/{html_rel_path}")
 
-            # 💡 特別対応: search.md の場合、GitHub Pages の /search/ ディレクトリルーティング対応のため site/search/index.html も同時生成
-            if rel_path == 'search.md':
-                dir_dest_path = os.path.join(SITE_DIR, 'search', 'index.html')
+            # 💡 特別対応: ルートレベルの単体 md ファイル (search.md, quiz.md 等) は GitHub Pages の /<name>/ ディレクトリ型ルーティング対応のため site/<name>/index.html も同時生成
+            if rel_path.count(os.sep) == 0 and rel_path.endswith('.md') and rel_path != 'index.md':
+                page_name = os.path.splitext(rel_path)[0]
+                dir_dest_path = os.path.join(SITE_DIR, page_name, 'index.html')
                 os.makedirs(os.path.dirname(dir_dest_path), exist_ok=True)
                 dir_rel_root = '../'
                 dir_rendered_body = re.sub(r"fetch\(['\"](?:\.\.\/)*data\/([^'\"]+)['\"]\)", rf"fetch('{dir_rel_root}data/\1')", markdown_to_html(md_text))
@@ -626,7 +600,17 @@ def build_docs():
                 )
                 with open(dir_dest_path, 'w', encoding='utf-8') as dir_f:
                     dir_f.write(dir_full_html)
-                print("  ✅ [生成] site/search/index.html (GitHub Pages ディレクトリ型ルーティング対応)")
+                
+                # quiz や search 等のディレクトリ直下にも data/ および js/ をミラーコピー
+                page_dir = os.path.join(SITE_DIR, page_name)
+                js_src_dir = os.path.join(SRC_DIR, "js")
+                data_src_dir = os.path.join(SRC_DIR, "data")
+                if os.path.exists(js_src_dir):
+                    shutil.copytree(js_src_dir, os.path.join(page_dir, "js"), dirs_exist_ok=True)
+                if os.path.exists(data_src_dir):
+                    shutil.copytree(data_src_dir, os.path.join(page_dir, "data"), dirs_exist_ok=True)
+
+                print(f"  ✅ [生成] site/{page_name}/index.html (GitHub Pages ディレクトリ型ルーティング・データミラー対応)")
 
     # search_index.json が存在する場合は site/search/search_index.json にもミラー複製
     index_src = os.path.join(SITE_DIR, 'search_index.json')

@@ -1,0 +1,13 @@
+{
+  "title": "TLS 1.3 vs TLS 1.2 技術仕様比較ガイド",
+  "handshakeSteps": {
+    "tls12": ["1. ClientHello (暗号スイート・乱数)", "2. ServerHello + Certificate + ServerKeyExchange", "3. ClientKeyExchange + ChangeCipherSpec + Finished", "4. Server ChangeCipherSpec + Finished (計 2-RTT)"],
+    "tls13": ["1. ClientHello + KeyShare (鍵交換パラメータ同時送信)", "2. ServerHello + EncryptedExtensions + Certificate + Finished", "3. Client Finished (計 1-RTT / 0-RTT)"]
+  },
+  "deprecatedFeatures": [
+    "RSA 鍵交換 (前方向秘匿性が無いため廃止)",
+    "CBC モード暗号 (Lucky Thirteen 等のパディングオラクル攻撃脆弱性のため廃止)",
+    "SHA-1 署名アルゴリズム (衝突耐性の欠如のため廃止)",
+    "静的 Diffie-Hellman 鍵交換"
+  ]
+}

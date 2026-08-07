@@ -56,10 +56,25 @@ IPA 情報処理安全確保支援士試験 (SC) のシラバス重要概念・�
 let questionsData = [];
 let currentIdx = 0;
 
+async function fetchWithFallback(pathList) {
+    for (let i = 0; i < pathList.length; i++) {
+        try {
+            const res = await fetch(pathList[i]);
+            if (res.ok) return res;
+        } catch (e) {}
+    }
+    throw new Error('All path attempts failed for ' + pathList[0]);
+}
+
 async function loadQuizData() {
     try {
-        const res = await fetch('./data/quiz_questions.json');
-        if (!res.ok) throw new Error('quiz_questions.json のロードに失敗しました');
+        const res = await fetchWithFallback([
+            'data/quiz_questions.json',
+            './data/quiz_questions.json',
+            '../data/quiz_questions.json',
+            '/registered-information-security-specialist-examination/data/quiz_questions.json',
+            '/registered-information-security-specialist-examination/quiz/data/quiz_questions.json'
+        ]);
         questionsData = await res.json();
         renderQuestion();
     } catch (err) {
