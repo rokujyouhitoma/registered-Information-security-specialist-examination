@@ -1,16 +1,12 @@
 # 🔍 全文検索
 
-<div class="google-search-container" style="max-width: 800px; margin: 1.5rem 0 3rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+<div class="google-search-container" style="max-width: 800px; margin: 1.5rem 0 3rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
     
     <!-- Google Style Search Input Box -->
     <div style="position: relative; margin-bottom: 1.25rem;">
         <div style="position: absolute; left: 1.1rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: #94a3b8; pointer-events: none;">🔍</div>
-        <input type="text" id="portal-search-input" placeholder="検索ワードを入力 (例: TLS 1.3, ゼロトラスト, OAuth 2.0, DMARC, PKI)..." autofocus
-            style="width: 100%; padding: 0.9rem 2.8rem 0.9rem 2.8rem; font-size: 1.05rem; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 24px; color: #ffffff; outline: none; transition: all 0.2s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"
-            onfocus="this.style.borderColor='#818cf8'; this.style.boxShadow='0 4px 16px rgba(99, 102, 241, 0.25)';"
-            onblur="this.style.borderColor='rgba(255, 255, 255, 0.15)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.2)';"
-        />
-        <button id="clear-search-btn" style="position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: #94a3b8; font-size: 1.1rem; cursor: pointer; display: none;" onclick="document.getElementById('portal-search-input').value=''; document.getElementById('portal-search-input').focus(); performPortalSearch();">✕</button>
+        <input type="text" id="portal-search-input" placeholder="検索ワードを入力 (例: TLS 1.3, ゼロトラスト, OAuth 2.0, DMARC, PKI)..." autofocus />
+        <button id="clear-search-btn" onclick="clearSearchInput()">✕</button>
     </div>
 
     <!-- Suggested Quick Chips -->
@@ -55,6 +51,34 @@
 </div>
 
 <style>
+#portal-search-input {
+    width: 100%;
+    padding: 0.9rem 2.8rem 0.9rem 2.8rem;
+    font-size: 1.05rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+#portal-search-input:focus {
+    border-color: #818cf8;
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.25);
+}
+#clear-search-btn {
+    position: absolute;
+    right: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: none;
+}
 .g-chip {
     background: rgba(255, 255, 255, 0.05);
     color: #94a3b8;
@@ -155,6 +179,15 @@
 let searchEngine = null;
 let activeFilter = 'all';
 
+function clearSearchInput() {
+    const input = document.getElementById('portal-search-input');
+    if (input) {
+        input.value = '';
+        input.focus();
+        performPortalSearch();
+    }
+}
+
 async function fetchWithFallback(pathList) {
     for (let i = 0; i < pathList.length; i++) {
         try {
@@ -170,7 +203,6 @@ async function fetchWithFallback(pathList) {
 async function ensureCustomSearchEngineLoaded() {
     if (typeof CustomSearchEngine !== 'undefined') return;
 
-    // もし /search/ ディレクトリルーティング等で個別 JS 読み込みが 404 の場合、自動で別パスからタグを動的注入してロードを完了させる
     const loc = window.location.pathname;
     let base = './';
     if (loc.endsWith('/search/') || loc.indexOf('/search/') !== -1) {
@@ -197,7 +229,6 @@ async function ensureCustomSearchEngineLoaded() {
     }
 
     if (typeof CustomSearchEngine === 'undefined') {
-        // 最終フォールバック: コンパイル済み単一 Bundle
         await new Promise((resolve) => {
             const el = document.createElement('script');
             el.src = base + 'fm_index_engine.min.js';
@@ -220,7 +251,6 @@ async function initSearchEngine() {
 
         searchEngine = new CustomSearchEngine();
         
-        // パスフォールバック試行 (site/search.html, site/search/index.html, GitHub Pages)
         const indexRes = await fetchWithFallback(['search_index.json', './search_index.json', '../search_index.json', '/registered-information-security-specialist-examination/search_index.json']);
         const indexData = await indexRes.json();
         searchEngine.docs = indexData.docs || [];
@@ -281,7 +311,6 @@ function performPortalSearch() {
 
     let results = query ? searchEngine.search(query, 100) : searchEngine.docs;
 
-    // Apply Filter
     if (activeFilter !== 'all') {
         results = results.filter(doc => {
             const url = doc.url || (doc.id ? doc.id + '.html' : '');
