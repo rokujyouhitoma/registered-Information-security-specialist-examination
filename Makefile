@@ -24,16 +24,17 @@ build: $(MIN_JS)
 	python3 scripts/build_html_docs.py
 
 $(MIN_JS): $(SRC_JS)
-	@echo "🛠️ Closure Compiler (最高厳格設定: ADVANCED_OPTIMIZATIONS & VERBOSE) で全 JS モジュールをコンパイル中..."
+	@echo "🛠️ Closure Compiler (極限厳格設定: ADVANCED_OPTIMIZATIONS & VERBOSE & Warning as Error) で全 JS モジュールをコンパイル中..."
 	npx -y google-closure-compiler \
 		$(foreach js,$(SRC_JS),--js $(js)) \
 		--js_output_file $(MIN_JS) \
 		--compilation_level ADVANCED_OPTIMIZATIONS \
 		--warning_level VERBOSE \
+		--jscomp_error checkTypes \
 		--language_in ECMASCRIPT_NEXT \
 		--language_out ECMASCRIPT_2020 \
 		--strict_mode_input true
-	@echo "✅ 全 JS モジュールの最高厳格コンパイル完了: $(MIN_JS)"
+	@echo "✅ 全 JS モジュールの極限厳格コンパイル完了: $(MIN_JS)"
 
 clean:
 	@echo "🧹 コンパイル成果物を削除中..."

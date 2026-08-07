@@ -5,8 +5,8 @@
 class FrontCodingCompressor {
     /**
      * ソート済み文字列配列を Front Coding 圧縮する
-     * @param {string[]} strings - ソート済みの文字列配列
-     * @returns {{ compressed: Array<{prefixLen: number, suffix: string}>, originalSize: number, compressedSize: number, ratio: number }}
+     * @param {!Array<string>} strings - ソート済みの文字列配列
+     * @return {{compressed: !Array<{prefixLen: number, suffix: string}>, originalSize: number, compressedSize: number, ratio: number}}
      */
     static compress(strings) {
         if (!Array.isArray(strings) || strings.length === 0) {
@@ -49,11 +49,13 @@ class FrontCodingCompressor {
 
     /**
      * Front Coding 圧縮データを元の文字列配列に展開 (復元) する
-     * @param {Array<{prefixLen: number, suffix: string}>} compressed 
-     * @returns {string[]} 復元された文字列配列
+     * @param {!Array<{prefixLen: number, suffix: string}>} compressed 
+     * @return {!Array<string>} 復元された文字列配列
      */
     static decompress(compressed) {
-        if (!Array.isArray(compressed) || compressed.length === 0) return [];
+        if (!Array.isArray(compressed) || compressed.length === 0) {
+            return [];
+        }
 
         const decompressed = [];
         let prev = "";
@@ -80,5 +82,5 @@ if (typeof window !== 'undefined') {
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { FrontCodingCompressor };
+    module.exports = FrontCodingCompressor;
 }

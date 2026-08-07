@@ -7,7 +7,7 @@
 class SynonymExpander {
     /**
      * 外部シノニム辞書データをロード・設定する
-     * @param {Object<string, Array<string>>} map
+     * @param {Object<string, !Array<string>>} map
      */
     static setSynonymMap(map) {
         if (map && typeof map === 'object') {
@@ -17,7 +17,7 @@ class SynonymExpander {
 
     /**
      * 現在設定されているシノニムマップを取得する
-     * @return {Object<string, Array<string>>}
+     * @return {!Object<string, !Array<string>>}
      */
     static getSynonymMap() {
         return SynonymExpander._synonymMap || {};
@@ -25,8 +25,8 @@ class SynonymExpander {
 
     /**
      * トークン配列を受け取り、シノニムマップに基づいて拡張トークン配列を返す
-     * @param {Array<string>} tokens
-     * @return {Array<string>}
+     * @param {!Array<string>} tokens
+     * @return {!Array<string>}
      */
     static expandTokens(tokens) {
         if (!Array.isArray(tokens) || tokens.length === 0) {
@@ -36,11 +36,13 @@ class SynonymExpander {
         const map = SynonymExpander.getSynonymMap();
         const expandedSet = new Set(tokens);
 
-        for (const token of tokens) {
-            const lowerToken = token.toLowerCase();
-            if (map[lowerToken] && Array.isArray(map[lowerToken])) {
-                for (const syn of map[lowerToken]) {
-                    expandedSet.add(syn);
+        for (let i = 0; i < tokens.length; i++) {
+            const token = tokens[i];
+            const lowerToken = String(token || '').toLowerCase();
+            const synonyms = map[lowerToken];
+            if (Array.isArray(synonyms)) {
+                for (let j = 0; j < synonyms.length; j++) {
+                    expandedSet.add(synonyms[j]);
                 }
             }
         }
@@ -49,6 +51,10 @@ class SynonymExpander {
     }
 }
 
+/**
+ * @private
+ * @type {Object<string, !Array<string>>|null}
+ */
 SynonymExpander._synonymMap = null;
 
 if (typeof globalThis !== 'undefined') globalThis.SynonymExpander = SynonymExpander;

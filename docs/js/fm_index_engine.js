@@ -94,8 +94,12 @@ class CustomSearchEngine {
         if (Array.isArray(this.vectors)) {
             this.vectors.forEach((v, docIdx) => this._indexVectorTokens(docIdx, v));
         } else if (typeof this.vectors === 'object') {
-            Object.keys(this.vectors).forEach(docIdxKey => {
-                this._indexVectorTokens(parseInt(docIdxKey, 10), this.vectors[docIdxKey]);
+            const vecMap = /** @type {!Object<string, !Object<string, number>>} */ (this.vectors);
+            Object.keys(vecMap).forEach(docIdxKey => {
+                const docIdx = parseInt(docIdxKey, 10);
+                if (!isNaN(docIdx)) {
+                    this._indexVectorTokens(docIdx, vecMap[docIdxKey]);
+                }
             });
         }
     }

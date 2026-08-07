@@ -7,7 +7,7 @@
 class SemanticScorer {
     /**
      * 外部から概念設定データ (カテゴリ一覧およびキーワードマップ) をロード・設定する
-     * @param {{categories: Array<string>, keywords: Object<string, Array<string>>}} config
+     * @param {{categories: (Array<string>|null), keywords: (Object<string, Array<string>>|null)}} config
      */
     static setConceptConfig(config) {
         if (config && typeof config === 'object') {
@@ -33,7 +33,7 @@ class SemanticScorer {
 
     /**
      * 設定済みの主要セキュリティ概念カテゴリマッピングを取得
-     * @return {Array<string>}
+     * @return {!Array<string>}
      */
     static getConceptCategories() {
         return SemanticScorer._categories || [];
@@ -41,7 +41,7 @@ class SemanticScorer {
 
     /**
      * 設定済みのキーワードマップを取得
-     * @return {Object<string, Array<string>>}
+     * @return {!Object<string, !Array<string>>}
      */
     static getKeywordsMap() {
         return SemanticScorer._keywordsMap || {};
@@ -68,15 +68,16 @@ class SemanticScorer {
      * 単一トークンに対するカテゴリ出現度加算ヘルパー
      * @param {string} token
      * @param {!Array<string>} categories
-     * @param {!Object<string, Array<string>>} keywordsMap
+     * @param {!Object<string, !Array<string>>} keywordsMap
      * @param {!Object<string, number>} vec
      */
     static _accumulateTokenCategories(token, categories, keywordsMap, vec) {
         if (!SemanticScorer.isSafeKey(token)) return;
         const lower = token.toLowerCase();
         categories.forEach(cat => {
-            if (SemanticScorer.isSafeKey(cat) && Object.prototype.hasOwnProperty.call(keywordsMap, cat) && Array.isArray(keywordsMap[cat])) {
-                if (keywordsMap[cat].some(k => lower.includes(k))) {
+            if (SemanticScorer.isSafeKey(cat) && Object.prototype.hasOwnProperty.call(keywordsMap, cat)) {
+                const kwList = keywordsMap[cat];
+                if (Array.isArray(kwList) && kwList.some(k => lower.includes(k))) {
                     vec[cat] = (vec[cat] || 0.0) + 1.0;
                 }
             }
@@ -147,10 +148,20 @@ class SemanticScorer {
     }
 }
 
+/**
+ * @private
+ * @type {Array<string>|null}
+ */
+SemanticScorer._categories = null;
+
+/**
+ * @private
+ * @type {Object<string, !Array<string>>|null}
+ */
+SemanticScorer._keywordsMap = null;
+
 if (typeof globalThis !== 'undefined') globalThis.SemanticScorer = SemanticScorer;
 if (typeof window !== 'undefined') window.SemanticScorer = SemanticScorer;
-SemanticScorer._categories = null;
-SemanticScorer._keywordsMap = null;
 
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = SemanticScorer;
