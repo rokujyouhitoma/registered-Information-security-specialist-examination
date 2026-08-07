@@ -72,7 +72,8 @@ const requiredDirs = [
 const requiredDataFiles = [
     'quiz_questions.json',
     'synonyms.json',
-    'concept_config.json'
+    'concept_config.json',
+    'stopwords.json'
 ];
 
 const requiredJsFiles = [

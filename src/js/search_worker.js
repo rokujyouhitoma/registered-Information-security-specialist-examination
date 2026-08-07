@@ -15,9 +15,10 @@ self.onmessage = async function(e) {
         try {
             // 外部 JSON データの動的ロード (データ駆動設計)
             try {
-                const [synRes, conceptRes] = await Promise.all([
+                const [synRes, conceptRes, stopRes] = await Promise.all([
                     fetch('data/synonyms.json').catch(() => null),
-                    fetch('data/concept_config.json').catch(() => null)
+                    fetch('data/concept_config.json').catch(() => null),
+                    fetch('data/stopwords.json').catch(() => null)
                 ]);
                 if (synRes && synRes.ok && self.SynonymExpander) {
                     const synData = await synRes.json();
@@ -26,6 +27,10 @@ self.onmessage = async function(e) {
                 if (conceptRes && conceptRes.ok && self.SemanticScorer) {
                     const conceptData = await conceptRes.json();
                     self.SemanticScorer.setConceptConfig(conceptData);
+                }
+                if (stopRes && stopRes.ok && self.Tokenizer) {
+                    const stopData = await stopRes.json();
+                    self.Tokenizer.setStopWords(stopData);
                 }
             } catch (ignoreErr) {}
 

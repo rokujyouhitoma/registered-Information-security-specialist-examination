@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 093 | Feature | [外部 JSON データ駆動によるストップワード除去機構の導入と全文検索エンジンの検索適合率向上](closed/093-data-driven-stopwords-filtering-engine.md) | 2026-08-07 | [093-data-driven-stopwords-filtering-engine.md](closed/093-data-driven-stopwords-filtering-engine.md) |
 | 092 | Bug | [全 docs/ ドキュメントの検索インデックス化統合と Web 全文検索機能の完全化 (「ゼロトラスト」等での検索ヒットおよびカテゴリフィルタ正常化)](closed/092-fix-fulltext-search-index-coverage.md) | 2026-08-07 | [092-fix-fulltext-search-index-coverage.md](closed/092-fix-fulltext-search-index-coverage.md) |
 | 091 | Bug | [PWA Service Worker における 404 アセットプリキャッシュ失敗 (TypeError: Failed to execute 'addAll' on 'Cache') の修正と堅牢化](closed/091-fix-pwa-sw-precache-addall-error.md) | 2026-08-07 | [091-fix-pwa-sw-precache-addall-error.md](closed/091-fix-pwa-sw-precache-addall-error.md) |
 | 090 | Quality | [障害再発防止のための統合 QA 自動検証テストフレームワークの構築](closed/090-qa-preventative-testing-framework.md) | 2026-08-07 | [090-qa-preventative-testing-framework.md](closed/090-qa-preventative-testing-framework.md) |

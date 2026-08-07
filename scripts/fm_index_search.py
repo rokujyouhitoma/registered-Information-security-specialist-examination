@@ -13,16 +13,25 @@ import math
 DOCS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "docs"))
 OUTPUT_INDEX_JSON = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "site", "search_index.json"))
 
+STOPWORDS_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src", "data", "stopwords.json"))
+_STOP_WORDS = set()
+if os.path.exists(STOPWORDS_FILE):
+    try:
+        with open(STOPWORDS_FILE, "r", encoding="utf-8") as f:
+            _STOP_WORDS = set(w.lower() for w in json.load(f))
+    except Exception:
+        pass
+
 def tokenize(text):
-    """文字N-gram (Bigram) および 単語トークナイザー（日本語マルチバイト対応）"""
+    """文字N-gram (Bigram) および 単語トークナイザー（日本語マルチバイト対応・ストップワード除外）"""
     if not text:
         return []
     clean = re.sub(r'[!"#$%&\'()*+,\-./:;<=>?@\[\\\]^_`{|}~、。！？「」『』（）［］【】\s]+', ' ', text.lower()).strip()
     if not clean:
         return []
-    words = clean.split()
+    words = [w for w in clean.split() if w not in _STOP_WORDS]
     no_space = re.sub(r'\s+', '', clean)
-    bigrams = [no_space[i:i+2] for i in range(len(no_space)-1)]
+    bigrams = [no_space[i:i+2] for i in range(len(no_space)-1) if no_space[i:i+2] not in _STOP_WORDS]
     return list(set(words + bigrams))
 
 class FMIndexVectorSearchEngine:

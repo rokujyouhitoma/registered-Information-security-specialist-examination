@@ -5,6 +5,26 @@
 
 class Tokenizer {
     /**
+     * ストップワード一覧を設定する
+     * @param {Array<string>} list
+     */
+    static setStopWords(list) {
+        if (Array.isArray(list)) {
+            Tokenizer._stopWords = new Set(list.map(w => String(w).toLowerCase()));
+        }
+    }
+
+    /**
+     * 単語がストップワードか判定する
+     * @param {string} word
+     * @return {boolean}
+     */
+    static isStopWord(word) {
+        if (!word || !Tokenizer._stopWords) return false;
+        return Tokenizer._stopWords.has(String(word).toLowerCase());
+    }
+
+    /**
      * キーのプロトタイプ汚染安全性を判定する
      * @param {string} key
      * @return {boolean}
@@ -14,7 +34,7 @@ class Tokenizer {
     }
 
     /**
-     * テキストを正規化し、単語および文字Bigramへ分割する
+     * テキストを正規化し、単語および文字Bigramへ分割する（ストップワード除外対応）
      * @param {string} text 入力テキスト
      * @return {!Array<string>} トークン配列
      */
@@ -25,12 +45,12 @@ class Tokenizer {
             .trim();
         if (!clean) return [];
 
-        const words = clean.split(/\s+/).filter(w => w.length > 0 && Tokenizer.isSafeKey(w));
+        const words = clean.split(/\s+/).filter(w => w.length > 0 && Tokenizer.isSafeKey(w) && !Tokenizer.isStopWord(w));
         const noSpace = clean.replace(/\s+/g, '');
         const bigrams = [];
         for (let i = 0; i < noSpace.length - 1; i++) {
             const bg = noSpace.substring(i, i + 2);
-            if (Tokenizer.isSafeKey(bg)) {
+            if (Tokenizer.isSafeKey(bg) && !Tokenizer.isStopWord(bg)) {
                 bigrams.push(bg);
             }
         }
@@ -38,12 +58,12 @@ class Tokenizer {
         // プロトタイプ汚染を防ぐ Map オブジェクトによる安全なユニーク化
         const tokenMap = new Map();
         words.forEach(w => {
-            if (Tokenizer.isSafeKey(w)) {
+            if (Tokenizer.isSafeKey(w) && !Tokenizer.isStopWord(w)) {
                 tokenMap.set(w, true);
             }
         });
         bigrams.forEach(b => {
-            if (Tokenizer.isSafeKey(b)) {
+            if (Tokenizer.isSafeKey(b) && !Tokenizer.isStopWord(b)) {
                 tokenMap.set(b, true);
             }
         });
@@ -51,6 +71,9 @@ class Tokenizer {
         return Array.from(tokenMap.keys());
     }
 }
+
+/** @type {Set<string>} */
+Tokenizer._stopWords = new Set();
 
 if (typeof globalThis !== 'undefined') {
     globalThis.Tokenizer = Tokenizer;

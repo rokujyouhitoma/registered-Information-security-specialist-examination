@@ -6,6 +6,7 @@ const PRECACHE_ASSETS = [
   './search_index.json',
   './data/synonyms.json',
   './data/concept_config.json',
+  './data/stopwords.json',
   './fm_index_engine.min.js',
   './js/tokenizer.js',
   './js/synonym_expander.js',
