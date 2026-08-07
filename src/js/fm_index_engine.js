@@ -71,17 +71,33 @@ class CustomSearchEngine {
         this.invertedIndex = Object.create(null);
         if (!this.vectors) return;
 
-        this.vectors.forEach((v, docIdx) => {
-            if (!v) return;
-            Object.keys(v).forEach(token => {
-                if (CustomSearchEngine.isSafeKey(token)) {
-                    if (!Object.prototype.hasOwnProperty.call(this.invertedIndex, token)) {
-                        this.invertedIndex[token] = [];
+        if (Array.isArray(this.vectors)) {
+            this.vectors.forEach((v, docIdx) => {
+                if (!v) return;
+                Object.keys(v).forEach(token => {
+                    if (CustomSearchEngine.isSafeKey(token)) {
+                        if (!Object.prototype.hasOwnProperty.call(this.invertedIndex, token)) {
+                            this.invertedIndex[token] = [];
+                        }
+                        this.invertedIndex[token].push(docIdx);
                     }
-                    this.invertedIndex[token].push(docIdx);
-                }
+                });
             });
-        });
+        } else if (typeof this.vectors === 'object') {
+            Object.keys(this.vectors).forEach(docIdxKey => {
+                const v = this.vectors[docIdxKey];
+                const docIdx = parseInt(docIdxKey, 10);
+                if (!v) return;
+                Object.keys(v).forEach(token => {
+                    if (CustomSearchEngine.isSafeKey(token)) {
+                        if (!Object.prototype.hasOwnProperty.call(this.invertedIndex, token)) {
+                            this.invertedIndex[token] = [];
+                        }
+                        this.invertedIndex[token].push(docIdx);
+                    }
+                });
+            });
+        }
     }
 
     /**

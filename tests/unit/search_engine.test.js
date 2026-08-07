@@ -84,3 +84,15 @@ test('Tokenizer & SearchEngine - Prototype Pollution Guard Test', (t) => {
     const maliciousTokens = engine.tokenize('__proto__ constructor prototype toString');
     assert.ok(!Object.prototype.hasOwnProperty.call(Object.prototype, 'polluted'), 'Prototype must not be polluted by malicious tokens');
 });
+
+test('CustomSearchEngine - Support Object Type Vectors Test', (t) => {
+    const engine = new CustomSearchEngine();
+    engine.docs = [{ id: 'doc1', name: 'TLS 1.3', summary: 'Transport Layer Security' }];
+    engine.idf = { tls: 1.5 };
+    engine.vectors = { "0": { tls: 1.5 } }; // Object type vectors
+    engine.isLoaded = true;
+
+    const results = engine.search('TLS', 5);
+    assert.strictEqual(results.length, 1);
+    assert.strictEqual(results[0].id, 'doc1');
+});
