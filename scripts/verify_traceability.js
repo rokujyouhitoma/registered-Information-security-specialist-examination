@@ -1,21 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import Tokenizer from '../src/js/tokenizer.js';
 
 /**
  * トレーサビリティ自動検証スクリプト (Glossary & Syllabus Traceability Verifier)
  */
 function verifyTraceability() {
     console.log('=== トレーサビリティ全数自動検証スクリプトを開始します ===\n');
-
-    // Tokenizer ストップワード単体テスト
-    Tokenizer.setStopWords(['について', '概要', 'the', 'is']);
-    const testTokens = Tokenizer.tokenize('ゼロトラスト について 概要 the is');
-    if (testTokens.includes('について') || testTokens.includes('概要') || testTokens.includes('the') || testTokens.includes('is')) {
-        console.error('❌ Tokenizer ストップワード除外テスト失敗:', testTokens);
-        process.exit(1);
-    }
-    console.log('  ✅ [Tokenizer StopWords PASS] ストップワードの正常フィルタリングを検証しました。\n');
 
     const files = [
         'docs/glossary/syllabus_ver2_1.md',

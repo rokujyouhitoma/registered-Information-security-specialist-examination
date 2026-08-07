@@ -59,6 +59,19 @@ test('Tokenizer - English and Japanese Normalization Test', (t) => {
     assert.ok(jpTokens.includes('情報セキュリティ安全確保支援士'), 'Token should contain full Japanese phrase');
 });
 
+test('Tokenizer - Stop Words Filtering Test', (t) => {
+    const Tokenizer = global.window.Tokenizer;
+    const stopwordsData = JSON.parse(fs.readFileSync(path.resolve('src/data/stopwords.json'), 'utf-8'));
+    Tokenizer.setStopWords(stopwordsData);
+
+    const tokens = Tokenizer.tokenize('ゼロトラスト について 概要 the is');
+    assert.ok(!tokens.includes('について'), 'Stop word について must be filtered out');
+    assert.ok(!tokens.includes('概要'), 'Stop word 概要 must be filtered out');
+    assert.ok(!tokens.includes('the'), 'Stop word the must be filtered out');
+    assert.ok(!tokens.includes('is'), 'Stop word is must be filtered out');
+    assert.ok(tokens.includes('ゼロトラスト'), 'Non-stop word ゼロトラスト must be preserved');
+});
+
 test('SynonymExpander - Brand to Technology Concept Expansion Test (Yamaha -> Router/IPsec)', (t) => {
     const expanded = SynonymExpander.expandTokens(['ヤマハ']);
     assert.ok(expanded.includes('ルーター'), 'Yamaha query must expand to ルーター');
