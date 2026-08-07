@@ -152,7 +152,20 @@ class CustomSearchEngine {
             }
         });
 
-        // 候補ドキュメントが転置インデックスで0件の場合、全文書を対象（フォールバック）
+        // クエリ文字列のタイトル・概要直接ヒットを候補に確実追加 (漏れゼロ保証)
+        const queryLower = query.toLowerCase().trim();
+        const queryWords = queryLower.split(/[\s()/_\-\u3000]+/).filter(w => w.length > 0);
+        if (this.docs) {
+            this.docs.forEach((doc, idx) => {
+                const nameLower = (doc.name || '').toLowerCase();
+                const summaryLower = (doc.summary || '').toLowerCase();
+                if (nameLower.includes(queryLower) || summaryLower.includes(queryLower)) {
+                    candidateDocIds[idx] = true;
+                }
+            });
+        }
+
+        // 候補ドキュメントが0件の場合、全文書を対象（フォールバック）
         let targetIds = Object.keys(candidateDocIds).map(Number);
         if (targetIds.length === 0 && this.docs) {
             targetIds = this.docs.map((_, i) => i);
@@ -163,8 +176,6 @@ class CustomSearchEngine {
         const avgdl = this.avgdl > 0 ? this.avgdl : 50.0;
 
         const scores = [];
-        const queryLower = query.toLowerCase().trim();
-        const queryWords = queryLower.split(/[\s()/_\-\u3000]+/).filter(w => w.length > 0);
 
         targetIds.forEach(idx => {
             const doc = this.docs[idx];
@@ -194,7 +205,7 @@ class CustomSearchEngine {
             const cosineSim = VectorScorer.calculateCosineSimilarity(qVecNorm, dVec);
 
             // アプローチ B: 密概念セマンティック類似度計算
-            const docFullText = (doc.name || '') + ' ' + (doc.summary || '') + ' ' + (doc.content || '');
+            const docFullText = (doc.name || '') + ' ' + (doc.summary || '') + ' ' + (doc.content || '') + ' ' + (doc.tech || '') + ' ' + (doc.exam || '');
             const semanticScore = (typeof SemanticScorer !== 'undefined')
                 ? SemanticScorer.calculateSemanticScore(rawTokens, docFullText)
                 : 0.0;
@@ -206,14 +217,16 @@ class CustomSearchEngine {
             const docNameWords = docNameLower.split(/[\s()/_\-\u3000\s,./:;!?+=\"'\[\]{}|\\`~^#&]+/).filter(w => w.length > 0);
             const docSummaryLower = (doc.summary || '').toLowerCase();
 
-            if (docNameLower === queryLower || docNameWords.includes(queryLower)) {
-                finalScore += 10.0;
-            } else if (queryWords.some(qw => docNameWords.includes(qw))) {
-                finalScore += 5.0;
+            if (docNameLower === queryLower) {
+                finalScore += 100.0;
             } else if (docNameLower.includes(queryLower)) {
-                finalScore += 2.0;
+                finalScore += 50.0;
             } else if (docSummaryLower.includes(queryLower)) {
-                finalScore += 0.8;
+                finalScore += 20.0;
+            } else if (queryWords.some(qw => docNameWords.includes(qw))) {
+                finalScore += 10.0;
+            } else if (docFullText.toLowerCase().includes(queryLower)) {
+                finalScore += 5.0;
             }
 
             if (finalScore > 0.01) {

@@ -256,6 +256,9 @@ async function initSearchEngine() {
         searchEngine.docs = indexData.docs || [];
         searchEngine.idf = indexData.idf || {};
         searchEngine.vectors = indexData.vectors || {};
+        if (typeof searchEngine._buildInvertedIndex === 'function') {
+            searchEngine._buildInvertedIndex();
+        }
         searchEngine.isLoaded = true;
         
         try {

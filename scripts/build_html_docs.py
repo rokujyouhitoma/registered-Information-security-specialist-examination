@@ -8,6 +8,7 @@ site/ 配下に出力するビルドスクリプト。
 """
 
 import os
+import sys
 import re
 import html
 import shutil
@@ -526,6 +527,14 @@ def build_docs():
     count = 0
     print("🛠️ src/ 配下の静的アセット・JSモジュールを site/ に同期中...")
     copy_static_assets()
+
+    print("\n🛠️ 全 docs/ ドキュメントを網羅する検索インデックス (search_index.json) をビルド中...")
+    try:
+        sys.path.insert(0, os.path.dirname(__file__))
+        import fm_index_search
+        fm_index_search.build_search_index()
+    except Exception as e:
+        print(f"⚠️ [警告] 検索インデックスの構築中にエラーが発生しました: {e}")
 
     print("\n🛠️ docs/ 配下の Markdown ドキュメントを HTML に変換中...")
 

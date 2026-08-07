@@ -10,12 +10,8 @@ import os
 import json
 import math
 
-GLOSSARY_FILES = [
-    "docs/glossary/syllabus_ver2_1.md",
-    "docs/glossary/syllabus_tsuiho_ver4_0.md"
-]
-
-OUTPUT_INDEX_JSON = "site/search_index.json"
+DOCS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "docs"))
+OUTPUT_INDEX_JSON = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "site", "search_index.json"))
 
 def tokenize(text):
     """文字N-gram (Bigram) および 単語トークナイザー（日本語マルチバイト対応）"""
@@ -37,27 +33,70 @@ class FMIndexVectorSearchEngine:
         self.idf = {}
 
     def load_documents(self):
+        self.docs = []
         doc_id = 0
-        for filepath in GLOSSARY_FILES:
-            if not os.path.exists(filepath):
-                continue
-            with open(filepath, "r", encoding="utf-8") as f:
-                content = f.read()
-            
-            blocks = re.findall(
-                r'#### <a id="([^"]+)"></a>([^\n]+)\n- \*\*概要\*\*: ([^\n]+)\n- \*\*技術・運用ポイント\*\*: ([^\n]+)\n- \*\*試験出題ポイント\*\*: ([^\n]+)',
-                content
-            )
-            for anchor, name, summary, tech, exam in blocks:
-                full_text = f"{name} {summary} {tech} {exam}"
+
+        for root, dirs, files in os.walk(DOCS_DIR):
+            for f in files:
+                if not f.endswith('.md'):
+                    continue
+
+                filepath = os.path.join(root, f)
+                rel_path = os.path.relpath(filepath, DOCS_DIR)
+
+                # HTML 相対パスの算出 (build_html_docs.py のルールと一致)
+                if rel_path == 'index.md':
+                    html_rel_path = 'docs_index.html'
+                else:
+                    html_rel_path = os.path.splitext(rel_path)[0] + '.html'
+                
+                # パス区切り文字の正規化 (POSIX スタイル)
+                html_rel_path = html_rel_path.replace(os.sep, '/')
+
+                with open(filepath, "r", encoding="utf-8") as file_obj:
+                    content = file_obj.read()
+
+                # A. 大容量シラバス・用語集ファイルは内部の `#### <a id="..."></a>` ブロック単位で分割・精緻抽出
+                if rel_path in ['glossary/syllabus_ver2_1.md', 'glossary/syllabus_tsuiho_ver4_0.md']:
+                    blocks = re.findall(
+                        r'#### <a id="([^"]+)"></a>([^\n]+)\n- \*\*概要\*\*: ([^\n]+)\n- \*\*技術・運用ポイント\*\*: ([^\n]+)\n- \*\*試験出題ポイント\*\*: ([^\n]+)',
+                        content
+                    )
+                    for anchor, name, summary, tech, exam in blocks:
+                        full_text = f"{name} {summary} {tech} {exam}"
+                        self.docs.append({
+                            "id": doc_id,
+                            "anchor": anchor,
+                            "name": name.strip(),
+                            "summary": summary.strip(),
+                            "tech": tech.strip(),
+                            "exam": exam.strip(),
+                            "url": f"{html_rel_path}#{anchor}",
+                            "full_text": full_text
+                        })
+                        doc_id += 1
+                    continue
+
+                # B. その他の全 Markdown ドキュメント (単体用語、演習問題、ガイドライン、シナリオ等)
+                # タイトル抽出 (最初の H1 見出し、無ければファイル名)
+                h1_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
+                title = h1_match.group(1).strip() if h1_match else os.path.splitext(f)[0]
+
+                # 概要抽出 (最初の本文パラグラフ)
+                body_clean = re.sub(r'#+\s+[^\n]+', '', content)
+                body_clean = re.sub(r'<[^>]+>', '', body_clean)
+                body_clean = re.sub(r'[\r\n]+', ' ', body_clean).strip()
+                summary = body_clean[:180] + '...' if len(body_clean) > 180 else body_clean
+
                 self.docs.append({
                     "id": doc_id,
-                    "anchor": anchor,
-                    "name": name.strip(),
-                    "summary": summary.strip(),
-                    "tech": tech.strip(),
-                    "exam": exam.strip(),
-                    "full_text": full_text
+                    "anchor": os.path.splitext(f)[0],
+                    "name": title,
+                    "summary": summary,
+                    "tech": "",
+                    "exam": "",
+                    "url": html_rel_path,
+                    "full_text": f"{title} {body_clean}"
                 })
                 doc_id += 1
 
@@ -84,12 +123,11 @@ class FMIndexVectorSearchEngine:
             vector = {}
             norm_sq = 0.0
             for t, count in tf.items():
-                tfidf = (count / len(tokens)) * self.idf.get(t, 0)
+                tfidf = (count / (len(tokens) or 1)) * self.idf.get(t, 0)
                 vector[t] = tfidf
                 norm_sq += tfidf * tfidf
             
             norm = math.sqrt(norm_sq) if norm_sq > 0 else 1.0
-            # 正規化ベクトル
             vector_norm = {t: val / norm for t, val in vector.items()}
             self.doc_vectors.append(vector_norm)
 
@@ -98,7 +136,6 @@ class FMIndexVectorSearchEngine:
         if not q_tokens:
             return []
 
-        # クエリ TF-IDF
         q_tf = {}
         for t in q_tokens:
             q_tf[t] = q_tf.get(t, 0) + 1
@@ -113,22 +150,25 @@ class FMIndexVectorSearchEngine:
         q_norm = math.sqrt(norm_sq) if norm_sq > 0 else 1.0
         q_vec_norm = {t: val / q_norm for t, val in q_vec.items()}
 
-        # コサイン類似度スコアリング
         scores = []
+        q_lower = query.lower()
         for d_id, d_vec in enumerate(self.doc_vectors):
             score = 0.0
-            # 内積計算
             for t, val in q_vec_norm.items():
                 if t in d_vec:
                     score += val * d_vec[t]
             
-            # クエリ文字列の完全一致ボーナス（FM-index風の正確性強化）
-            if query.lower() in self.docs[d_id]["name"].lower():
-                score += 2.0
-            elif query.lower() in self.docs[d_id]["full_text"].lower():
-                score += 0.5
+            doc_name = self.docs[d_id]["name"].lower()
+            doc_full = self.docs[d_id]["full_text"].lower()
+
+            if q_lower == doc_name:
+                score += 10.0
+            elif q_lower in doc_name:
+                score += 5.0
+            elif q_lower in doc_full:
+                score += 1.5
                 
-            if score > 0.05:
+            if score > 0.01:
                 scores.append((d_id, score))
 
         scores.sort(key=lambda x: x[1], reverse=True)
@@ -139,10 +179,10 @@ class FMIndexVectorSearchEngine:
             results.append(doc)
         return results
 
-    def export_index_json(self):
-        os.makedirs(os.path.dirname(OUTPUT_INDEX_JSON), exist_ok=True)
+    def export_index_json(self, output_path=None):
+        out_file = output_path or OUTPUT_INDEX_JSON
+        os.makedirs(os.path.dirname(out_file), exist_ok=True)
         
-        # 浮動小数点精度丸め
         idf_rounded = {k: round(v, 4) for k, v in self.idf.items()}
         vectors_rounded = [
             {k: round(v, 4) for k, v in vec.items()}
@@ -156,20 +196,28 @@ class FMIndexVectorSearchEngine:
                 "name": d["name"],
                 "summary": d["summary"],
                 "tech": d["tech"],
-                "exam": d["exam"]
+                "exam": d["exam"],
+                "url": d["url"]
             } for d in self.docs],
             "idf": idf_rounded,
             "vectors": vectors_rounded
         }
-        with open(OUTPUT_INDEX_JSON, "w", encoding="utf-8") as f:
+        with open(out_file, "w", encoding="utf-8") as f:
             json.dump(export_data, f, ensure_ascii=False, separators=(',', ':'))
-        print(f"✅ フルスクラッチ検索インデックスを出力しました: {OUTPUT_INDEX_JSON}")
+        print(f"✅ 全 docs/ ドキュメント網羅型検索インデックスを出力しました ({len(self.docs)} 件): {out_file}")
 
-def main():
+
+def build_search_index(output_path=None):
+    """ビルドスクリプト連動用のインデックス自動構築エントリーポイント"""
     engine = FMIndexVectorSearchEngine()
     engine.load_documents()
     engine.build_index()
-    engine.export_index_json()
+    engine.export_index_json(output_path)
+    return engine
+
+
+def main():
+    engine = build_search_index()
 
     if "--query" in sys.argv:
         q_idx = sys.argv.index("--query") + 1
@@ -179,7 +227,7 @@ def main():
             results = engine.search(query, top_k=5)
             print(f"📊 該当件数: {len(results)} 件")
             for r in results:
-                print(f"  ・[{r['score']}] {r['name']} (ID: {r['anchor']})")
+                print(f"  ・[{r['score']}] {r['name']} (URL: {r['url']})")
                 print(f"    概要: {r['summary'][:60]}...")
 
 if __name__ == "__main__":

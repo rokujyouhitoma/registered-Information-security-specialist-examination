@@ -142,11 +142,38 @@ if (fs.existsSync(swPath)) {
     }
 }
 
+// 4. 全文検索インデックス主要キーワード実在・ヒット精度アサーション
+console.log('\n🔍 [全文検索インデックスアサーション] 主要キーワード(ゼロトラスト, PKI, TLS 1.3等)の検索ヒット精度を検証中...');
+const searchIndexPath = path.join(SITE_DIR, 'search_index.json');
+if (fs.existsSync(searchIndexPath)) {
+    const searchIndexContent = JSON.parse(fs.readFileSync(searchIndexPath, 'utf-8'));
+    const docs = searchIndexContent.docs || [];
+    
+    // 主要キーワードの検査
+    const testKeywords = ['ゼロトラスト', 'PKI', 'TLS 1.3', 'OAuth', 'DMARC'];
+    for (const kw of testKeywords) {
+        const hits = docs.filter(d => {
+            const name = (d.name || '').toLowerCase();
+            const summary = (d.summary || '').toLowerCase();
+            const url = (d.url || '').toLowerCase();
+            const kwLower = kw.toLowerCase();
+            return name.includes(kwLower) || summary.includes(kwLower) || url.includes(kwLower);
+        });
+
+        if (hits.length === 0) {
+            console.error(`❌ [検索精度エラー] キーワード '${kw}' に一致するドキュメントが search_index.json 内に 0 件です。`);
+            assetMissingErrors++;
+        } else {
+            console.log(`  ・[ヒット合格] 『${kw}』 -> ${hits.length} 件検出 (例: ${hits[0].name} [URL: ${hits[0].url}])`);
+        }
+    }
+}
+
 if (assetMissingErrors > 0) {
-    console.error(`\n❌ [QAアセット検証失敗] 計 ${assetMissingErrors} 件のアセット配置欠落を検出しました。`);
+    console.error(`\n❌ [QAアセット検証失敗] 計 ${assetMissingErrors} 件の配置・検索アサーションエラーを検出しました。`);
     process.exit(1);
 } else {
-    console.log('  ✅ [合格] 全機能ディレクトリおよび sw.js プリキャッシュにおいて必須アセットが 100% 配備されています。');
+    console.log('  ✅ [合格] 全機能ディレクトリ、sw.js プリキャッシュ、および全文検索インデックス精度が 100% 配備・検証されています。');
 }
 
 console.log('\n🎉 [QA検証完了] すべての再発防止品質アサーションに 100% 合格しました！');
