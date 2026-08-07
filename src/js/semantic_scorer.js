@@ -6,18 +6,6 @@
 
 class SemanticScorer {
     /**
-     * @private
-     * @type {Array<string>|null}
-     */
-    static _categories = null;
-
-    /**
-     * @private
-     * @type {Object<string, Array<string>>|null}
-     */
-    static _keywordsMap = null;
-
-    /**
      * 外部から概念設定データ (カテゴリ一覧およびキーワードマップ) をロード・設定する
      * @param {{categories: Array<string>, keywords: Object<string, Array<string>>}} config
      */
@@ -161,4 +149,9 @@ class SemanticScorer {
 
 if (typeof globalThis !== 'undefined') globalThis.SemanticScorer = SemanticScorer;
 if (typeof window !== 'undefined') window.SemanticScorer = SemanticScorer;
-if (typeof module !== 'undefined' && module.exports) module.exports = SemanticScorer;
+SemanticScorer._categories = null;
+SemanticScorer._keywordsMap = null;
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = SemanticScorer;
+}
