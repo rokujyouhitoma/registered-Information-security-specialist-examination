@@ -96,3 +96,19 @@ test('CustomSearchEngine - Support Object Type Vectors Test', (t) => {
     assert.strictEqual(results.length, 1);
     assert.strictEqual(results[0].id, 'doc1');
 });
+
+test('CustomSearchEngine - QA Robust Boundary Values Test (null, undefined, invalid vectors)', (t) => {
+    const engine = new CustomSearchEngine();
+    engine.docs = [{ id: 'doc1', name: 'ZTA', summary: 'Zero Trust' }];
+    engine.idf = { zta: 1.0 };
+    engine.isLoaded = true;
+
+    // Test with null, undefined, string, number
+    [null, undefined, "invalid_string", 12345, []].forEach(invalidVectors => {
+        engine.vectors = invalidVectors;
+        assert.doesNotThrow(() => {
+            const res = engine.search('ZTA', 5);
+            assert.ok(Array.isArray(res), 'Search should return array even with invalid vectors');
+        }, `Engine should not throw error when vectors is ${invalidVectors}`);
+    });
+});

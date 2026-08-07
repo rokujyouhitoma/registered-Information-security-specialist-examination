@@ -1,0 +1,130 @@
+#!/usr/bin/env node
+/**
+ * scripts/verify_build_integrity.js
+ * 
+ * QA 全自動再発防止検証スクリプト (ES Module 準拠)
+ * 1. site/ 配下の全 HTML ファイルで、HTML タグ属性 (style=, onfocus= 等) の <p> タグ生露出を検知・検証
+ * 2. site/ 及び各機能サブディレクトリ (quiz/, search/ 等) における静的アセット (data/*.json, js/*.js) の 100% 配備検証
+ */
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const SITE_DIR = path.resolve(__dirname, '..', 'site');
+
+console.log('=== 🛡️ QA 全自動ビルド完全性・アセット配備アサーションを開始します ===\n');
+
+if (!fs.existsSync(SITE_DIR)) {
+    console.error('❌ エラー: site/ ディレクトリが存在しません。先に npm run build を実行してください。');
+    process.exit(1);
+}
+
+let totalHtmlFiles = 0;
+let rawAttributeErrors = 0;
+
+// 1. 全 HTML ファイルの構文健全性走査
+function scanDirectoryForHtml(dir) {
+    const items = fs.readdirSync(dir);
+    for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+
+        if (stat.isDirectory()) {
+            scanDirectoryForHtml(fullPath);
+        } else if (item.endsWith('.html')) {
+            totalHtmlFiles++;
+            const content = fs.readFileSync(fullPath, 'utf-8');
+
+            // <p> タグの中に style= や onfocus= などのタグ属性が生露出していないか正規表現で検査
+            const rawAttrMatches = content.match(/<p>[^<]*(style=|onfocus=|onblur=|onclick=|class=|placeholder=)[^<]*<\/p>/gi);
+            if (rawAttrMatches) {
+                rawAttributeErrors++;
+                console.error(`❌ [HTML構文汚損検知] ${path.relative(SITE_DIR, fullPath)}:`);
+                rawAttrMatches.forEach(m => console.error(`   - 浮き出た壊れたタグ断片: ${m}`));
+            }
+        }
+    }
+}
+
+scanDirectoryForHtml(SITE_DIR);
+
+console.log(`📊 走査対象 HTML ドキュメント数: ${totalHtmlFiles} 件`);
+if (rawAttributeErrors > 0) {
+    console.error(`\n❌ [QA検証失敗] 計 ${rawAttributeErrors} 件の HTML ファイルで Markdown パース破損・生属性露出を検知しました。`);
+    process.exit(1);
+} else {
+    console.log('  ✅ [合格] 全 HTML ファイルにおいてタグ属性の生露出・構文破損は 0 件です。');
+}
+
+// 2. 静的アセット配備網羅アサーション (404 根絶チェック)
+console.log('\n🔍 [アセット存在証明チェック] ディレクトリ別データ・JS配信状態をチェック中...');
+
+const requiredDirs = [
+    { dir: '', name: 'ルート (site/)' },
+    { dir: 'quiz', name: '演習クイズ (site/quiz/)' },
+    { dir: 'search', name: '総合検索 (site/search/)' }
+];
+
+const requiredDataFiles = [
+    'quiz_questions.json',
+    'synonyms.json',
+    'concept_config.json'
+];
+
+const requiredJsFiles = [
+    'tokenizer.js',
+    'vector_scorer.js',
+    'fm_index_engine.js'
+];
+
+let assetMissingErrors = 0;
+
+for (const reqDir of requiredDirs) {
+    const baseDirPath = path.join(SITE_DIR, reqDir.dir);
+    if (!fs.existsSync(baseDirPath)) {
+        console.error(`❌ [アセット欠落] ディレクトリが見つかりません: ${reqDir.name}`);
+        assetMissingErrors++;
+        continue;
+    }
+
+    // data/ ファイルチェック
+    for (const f of requiredDataFiles) {
+        const filePath = path.join(baseDirPath, 'data', f);
+        if (!fs.existsSync(filePath)) {
+            console.error(`❌ [データ404リスク] ${reqDir.name} 内に data/${f} が存在しません。`);
+            assetMissingErrors++;
+        }
+    }
+
+    // js/ ファイルチェック
+    for (const f of requiredJsFiles) {
+        const filePath = path.join(baseDirPath, 'js', f);
+        if (!fs.existsSync(filePath)) {
+            console.error(`❌ [JS 404リスク] ${reqDir.name} 内に js/${f} が存在しません。`);
+            assetMissingErrors++;
+        }
+    }
+}
+
+// search_index.json ルート & search ディレクトリ複製チェック
+if (!fs.existsSync(path.join(SITE_DIR, 'search_index.json'))) {
+    console.error('❌ [検索インデックス404] site/search_index.json が存在しません。');
+    assetMissingErrors++;
+}
+if (!fs.existsSync(path.join(SITE_DIR, 'search', 'search_index.json'))) {
+    console.error('❌ [検索インデックス404] site/search/search_index.json が存在しません。');
+    assetMissingErrors++;
+}
+
+if (assetMissingErrors > 0) {
+    console.error(`\n❌ [QAアセット検証失敗] 計 ${assetMissingErrors} 件のアセット配置欠落を検出しました。`);
+    process.exit(1);
+} else {
+    console.log('  ✅ [合格] 全機能ディレクトリにおいて必須 JSON データ / JS モジュール / 検索インデックスが 100% 配備されています。');
+}
+
+console.log('\n🎉 [QA検証完了] すべての再発防止品質アサーションに 100% 合格しました！');

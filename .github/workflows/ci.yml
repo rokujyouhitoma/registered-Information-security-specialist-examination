@@ -42,3 +42,6 @@ jobs:
 
       - name: Run Custom Search Engine Index Test
         run: npm run test:search
+
+      - name: Run QA Build & Asset Integrity Verification
+        run: npm run test:build-integrity

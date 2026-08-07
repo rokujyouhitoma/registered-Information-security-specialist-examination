@@ -170,7 +170,7 @@ class CustomSearchEngine {
             const doc = this.docs[idx];
             if (!doc) return;
 
-            const dVec = this.vectors[idx] || {};
+            const dVec = (this.vectors && typeof this.vectors === 'object') ? (this.vectors[idx] || {}) : {};
             const docLen = Object.keys(dVec).length || 1;
             let bm25Score = 0.0;
 

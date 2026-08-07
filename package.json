@@ -13,7 +13,8 @@
     "test:audit": "python3 scripts/audit_glossary_quality.py",
     "test:quiz": "python3 scripts/quiz_runner.py --test",
     "test:search": "python3 scripts/fm_index_search.py --query 'TLS'",
-    "test": "npm run test:unit && npm run test:traceability && npm run test:audit && npm run test:quiz && npm run test:search"
+    "test:build-integrity": "node scripts/verify_build_integrity.js",
+    "test": "npm run test:unit && npm run test:traceability && npm run test:audit && npm run test:quiz && npm run test:search && npm run test:build-integrity"
   },
   "devDependencies": {
     "google-closure-compiler": "^20240317.0.0"
