@@ -29,6 +29,7 @@ project-docs/
 | **`MNG-01`** | [マスター文書管理台帳・規約](processes/MNG-01-document_ledger.md) | リポジトリ内全ドキュメントの位置づけ・分類・管理責任の定義 | 管理者 / 監査人 |
 | **`MNG-02`** | [ワークフローガイド](processes/MNG-02-workflow_guide.md) | Gitブランチ、Conventional Commits、Issueクローズルール | 全エージェント |
 | **`MNG-03`** | [ドキュメント執筆ガイド](processes/MNG-03-writing_guide.md) | Markdownスタイル規約、図解表現、キーワード強調ルール | 執筆担当者 |
+| **`MNG-08`** | [アーキテクチャ意思決定プロセス](processes/MNG-08-adr_process.md) | ADR起票基準、テンプレート、ライフサイクル、運用手順 | SA / 全エージェント |
 | **`PROC-01`** | [シラバス改定更新プロセス](processes/PROC-01-syllabus_update_process.md) | IPAシラバス改定に伴うドキュメント追従・更新手順 | 執筆者 / PM |
 | **`PROC-02`** | [マルチエージェント役割規定](processes/PROC-02-agent_roles.md) | 11大スペシャリストの専門領域、RACIマトリクス、承認フロー | 全エージェント |
 | **`PROC-03`** | [マネジメント改善計画書](processes/PROC-03-management_improvement_plan.md) | 管理体制、品質ゲート、開発テスト維持方針 | 管理者 / PM |
