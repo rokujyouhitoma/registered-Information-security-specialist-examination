@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSS スキルレベル対応 学習到達度セルフチェック＆教育ガイド | 情報セキュリティスペシャリスト試験</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="manifest" href="./manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-card: rgba(255,255,255,0.04);
+            --border: rgba(255,255,255,0.08);
+            --accent: #6366f1;
+            --accent-2: #8b5cf6;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --code-bg: rgba(0,0,0,0.4);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        /* ── HEADER ── */
+        header {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            background: rgba(10,14,26,0.85);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .header-icon {
+            width: 34px; height: 34px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem;
+        }
+        .header-title { font-weight: 700; font-size: 0.95rem; }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .nav-btn {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .nav-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent);
+            background: rgba(99,102,241,0.1);
+        }
+
+        /* ── MAIN CONTENT ── */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 5rem;
+        }
+
+        .doc-content h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(135deg, #e0e7ff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .doc-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #c7d2fe;
+        }
+
+        .doc-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: #e0e7ff;
+        }
+
+        .doc-content h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .doc-content p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .doc-content ul, .doc-content ol {
+            margin: 0.5rem 0 1.25rem 1.5rem;
+        }
+
+        .doc-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        .doc-content a {
+            color: #818cf8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .doc-content a:hover {
+            color: #a5b4fc;
+            text-decoration: underline;
+        }
+
+        .doc-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1.25rem;
+            margin: 1rem 0;
+            background: rgba(99,102,241,0.05);
+            border-radius: 0 8px 8px 0;
+            color: var(--text-secondary);
+        }
+
+        .doc-content code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.88em;
+            color: #f472b6;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .doc-content pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .doc-content pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            color: #e2e8f0;
+            font-size: 0.9em;
+        }
+
+        /* ── TABLE STYLES ── */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .doc-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .doc-content th {
+            background: rgba(255,255,255,0.06);
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            color: #e0e7ff;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .doc-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .doc-content tr:last-child td {
+            border-bottom: none;
+        }
+
+        .doc-content tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .doc-content hr {
+            border: none;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="./index.html" class="header-brand">
+        <div class="header-icon">🛡️</div>
+        <div class="header-title">SC 試験 学習ポータル</div>
+    </a>
+    <div class="header-nav">
+        <a href="./index.html" class="nav-btn">🏠 トップ</a>
+        <a href="./search.html" class="nav-btn">🔍 全文検索</a>
+    </div>
+</header>
+
+<div class="container">
+    <article class="doc-content">
+<h1 id="itss-スキルレベル対応-学習到達度セルフチェック-教育ガイド">ITSS スキルレベル対応 学習到達度セルフチェック＆教育ガイド</h1>
+<p>本ドキュメントは、IPA「ITスキル標準 (ITSS V3 2011)」および情報処理安全確保支援士（SC）シラバスに基づき、エデュケーションスペシャリスト（EDU）とセキュリティスペシャリスト（SC）が共同作成した<strong>学習到達度セルフチェック＆スキルアップ指導ガイド</strong>です。</p>
+<hr>
+<h2 id="-第1章-分野別-itss-レベル到達度セルフチェックマトリックス">🎯 第1章: 分野別 ITSS レベル到達度セルフチェックマトリックス</h2>
+<p>以下の各分野のチェック項目に対し、自身の達成状況を確認することで、現在の ITSS レベル (Level 1〜4) をセルフ診断できます。</p>
+<h3 id="1-1-暗号・認証・pki-分野">1.1 暗号・認証・PKI 分野</h3>
+<div class="table-wrapper"><table><thead><tr><th>レベル</th><th>チェック項目</th><th>チェック</th></tr></thead><tbody><tr><td><strong>Level 1</strong></td><td>共通鍵暗号（AES等）と公開鍵暗号（RSA/ECC等）の基本的な役割の違いを説明できる。</td><td>[ ]</td></tr><tr><td><strong>Level 2</strong></td><td>デジタル署名、ハッシュ関数（SHA-256）、および PKI（電子証明書/CA）の仕組みを理解している。</td><td>[ ]</td></tr><tr><td><strong>Level 3</strong></td><td>TLS 1.3 / IPsec のハンドシェイク手順、暗号スイート選定、および多要素認証 (MFA) フローを設計できる。</td><td>[ ]</td></tr><tr><td><strong>Level 4</strong></td><td>CRYPTREC 推奨暗号リストの選定基準に基づき、耐量子計算機暗号 (PQC) への移行計画や暗号プロトコルの脆弱性評価を単独で主導できる。</td><td>[ ]</td></tr></tbody></table></div>
+<hr>
+<h3 id="1-2-web・アプリケーションセキュリティ分野">1.2 Web・アプリケーションセキュリティ分野</h3>
+<div class="table-wrapper"><table><thead><tr><th>レベル</th><th>チェック項目</th><th>チェック</th></tr></thead><tbody><tr><td><strong>Level 1</strong></td><td>SQL インジェクション、XSS、CSRF の概要とリスクを理解している。</td><td>[ ]</td></tr><tr><td><strong>Level 2</strong></td><td>入力値のサニタイズ（エスケープ処理）、プレースホルダ利用、Cookie の <code>SameSite</code>/<code>HttpOnly</code> 属性の設定理由を説明できる。</td><td>[ ]</td></tr><tr><td><strong>Level 3</strong></td><td>Content Security Policy (CSP)、CORS バウンダリ、OAuth 2.0 / OpenID Connect の認可・認証制御を正しく実装・評価できる。</td><td>[ ]</td></tr><tr><td><strong>Level 4</strong></td><td>複雑な Web アプリケーション全体のセキュリティバイデザイン、プロンプトインジェクション対策、SAST/DAST スキャン結果のトリアージを主導できる。</td><td>[ ]</td></tr></tbody></table></div>
+<hr>
+<h3 id="1-3-ネットワーク・通信境界セキュリティ分野">1.3 ネットワーク・通信境界セキュリティ分野</h3>
+<div class="table-wrapper"><table><thead><tr><th>レベル</th><th>チェック項目</th><th>チェック</th></tr></thead><tbody><tr><td><strong>Level 1</strong></td><td>ファイアウォール (FW) や IP アドレス・ポート番号によるパケットフィルタの基本を理解している。</td><td>[ ]</td></tr><tr><td><strong>Level 2</strong></td><td>IDS/IPS、WAF、VLAN 分離、およびプロキシサーバーの役割を説明できる。</td><td>[ ]</td></tr><tr><td><strong>Level 3</strong></td><td>DMZ 構成、セグメンテーション、SWG、および DNS 偽装 (Cache Poisoning) 対策を設計・構築できる。</td><td>[ ]</td></tr><tr><td><strong>Level 4</strong></td><td>NIST SP 800-207 準拠のゼロトラスト・アーキテクチャ (ZTA / SDP / EDR 連携) や通信境界の完全ローカル動作・厳格 CSP ポリシーを策定できる。</td><td>[ ]</td></tr></tbody></table></div>
+<hr>
+<h3 id="1-4-ガバナンス・リスク管理・監査分野">1.4 ガバナンス・リスク管理・監査分野</h3>
+<div class="table-wrapper"><table><thead><tr><th>レベル</th><th>チェック項目</th><th>チェック</th></tr></thead><tbody><tr><td><strong>Level 1</strong></td><td>ISMS (JIS Q 27001) の PDCA サイクルと情報セキュリティ方針の目的を理解している。</td><td>[ ]</td></tr><tr><td><strong>Level 2</strong></td><td>リスク対応の 4 区分（低減・回避・共有・保有）および BCP/RTO/RPO の基本概念を説明できる。</td><td>[ ]</td></tr><tr><td><strong>Level 3</strong></td><td>情報セキュリティリスクアセスメント（特定・分析・評価）、適用宣言書 (SoA) の選定理由作成、監査証拠の手配ができる。</td><td>[ ]</td></tr><tr><td><strong>Level 4</strong></td><td>組織全体のリスク管理体系策定、保証型/助言型セキュリティ監査の主導、および CSIRT / SOC インシデントエスカレーション基準を統括できる。</td><td>[ ]</td></tr></tbody></table></div>
+<hr>
+<h2 id="-第2章-セルフ診断結果に基づくステップアップ・ロードマップ">🗺️ 第2章: セルフ診断結果に基づくステップアップ・ロードマップ</h2>
+<h3 id="診断結果-a-チェック項目が-level-1-2-中心の場合">診断結果 A: チェック項目が Level 1〜2 中心の場合</h3>
+<ul>
+<li><strong>おすすめ学習ステップ</strong>:</li>
+<li><code>docs/syllabus_detail.md</code> でシラバス用語の基礎概念を理解。</li>
+<li><code>docs/glossary.md</code> で専門用語・略語の定義を固める。</li>
+<li><strong>推奨エージェント</strong>: <strong>EDU エージェント</strong> (<a href="../.agents/agents/education-specialist.agent.html"><code>education-specialist.agent.md</code></a>) で基礎学習の個別指導を受ける。</li>
+</ul>
+<h3 id="診断結果-b-チェック項目が-level-3-中心の場合">診断結果 B: チェック項目が Level 3 中心の場合</h3>
+<ul>
+<li><strong>おすすめ学習ステップ</strong>:</li>
+<li><code>docs/scenarios/hands_on_incident_analysis.md</code> で実戦インシデント解析の長文問題演習。</li>
+<li><code>docs/syllabus_tsuiho_detail.md</code> で追補版 Ver.4.0 (クラウド、AIセキュリティ等) の最新知識を修得。</li>
+<li><strong>推奨エージェント</strong>: <strong>SC エージェント</strong> (<a href="../.agents/agents/information-security-specialist.agent.html"><code>information-security-specialist.agent.md</code></a>) で科目B記述式の思考プロセス指導を受ける。</li>
+</ul>
+<h3 id="診断結果-c-チェック項目が-level-4-中心の場合">診断結果 C: チェック項目が Level 4 中心の場合</h3>
+<ul>
+<li><strong>おすすめ学習ステップ</strong>:</li>
+<li>リポジトリのソースコード (<code>site/js/fm_index_engine.js</code> 等) に対するセキュリティスキャンやパフォーマンスリファクタリングの実戦演習。</li>
+<li><strong>推奨エージェント</strong>: <strong>SA エージェント</strong> (<a href="../.agents/agents/systems-architect.agent.html"><code>systems-architect.agent.md</code></a>) や <strong>IR エージェント</strong> (<a href="../.agents/agents/it-specialist-information-retrieval.agent.html"><code>it-specialist-information-retrieval.agent.md</code></a>) と技術ディスカッションを行う。</li>
+</ul>
+<hr>
+<h2 id="-関連演習・ドキュメント">🔗 関連演習・ドキュメント</h2>
+<ul>
+<li><a href="scenarios/hands_on_incident_analysis.html">科目B対応 ハンズオン・インシデント解析演習 (<code>docs/scenarios/hands_on_incident_analysis.md</code>)</a></li>
+<li><a href="syllabus_detail.html">シラバス詳細 (<code>docs/syllabus_detail.md</code>)</a></li>
+<li><a href="glossary.html">用語辞書ポータル (<code>docs/glossary.md</code>)</a></li>
+</ul>
+    </article>
+</div>
+
+<footer>
+    <p>情報セキュリティスペシャリスト試験 総合学習プラットフォーム · IPA シラバス Ver.2.1 ＆ 補足 Ver.4.0 準拠</p>
+</footer>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('🛡️ Service Worker Registered:', reg.scope))
+                .catch(err => console.log('Service Worker registration failed:', err));
+        });
+    }
+</script>
+
+</body>
+</html>

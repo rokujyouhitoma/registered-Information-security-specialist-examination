@@ -88,7 +88,8 @@ python3 -m http.server 8000 --directory site
 
 ## 🧪 テスト & 品質検証 (Testing & Quality Audits)
 
-本リポジトリでは CI/CD パイプライン上で全自動テストを実行しています。
+本リポジトリでは CI/CD パイプライン (GitHub Actions) 上で全自動ビルドおよびテストを実行しています。
+`docs/` 配下のドキュメント更新時は、CI/CD パイプラインによって Closure Compiler の JS コンパイルおよび HTML ドキュメント変換が自動実行され、最新の `/site` がデプロイされるため手動ビルドの反映漏れや乖離が発生しません。
 
 ```bash
 # テストスイート全体を一括実行
