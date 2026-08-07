@@ -77,6 +77,7 @@ const requiredDataFiles = [
 ];
 
 const requiredJsFiles = [
+    'security_validator.js',
     'tokenizer.js',
     'vector_scorer.js',
     'fm_index_engine.js'

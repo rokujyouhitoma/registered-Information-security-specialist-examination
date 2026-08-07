@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 095 | Refactor | [JavaScript 検索エンジンモジュールの SA アーキテクチャ再設計 (高凝集・低結合・SecurityValidator 集約)](closed/095-refactor-js-architecture-cohesion-coupling.md) | 2026-08-07 | [095-refactor-js-architecture-cohesion-coupling.md](closed/095-refactor-js-architecture-cohesion-coupling.md) |
 | 094 | Bug | [検索結果画面 (docs/search.md) からのリンク遷移時の 404 Not Found エラーの修正](closed/094-fix-search-result-link-404.md) | 2026-08-07 | [094-fix-search-result-link-404.md](closed/094-fix-search-result-link-404.md) |
 | 093 | Feature | [外部 JSON データ駆動によるストップワード除去機構の導入と全文検索エンジンの検索適合率向上](closed/093-data-driven-stopwords-filtering-engine.md) | 2026-08-07 | [093-data-driven-stopwords-filtering-engine.md](closed/093-data-driven-stopwords-filtering-engine.md) |
 | 092 | Bug | [全 docs/ ドキュメントの検索インデックス化統合と Web 全文検索機能の完全化 (「ゼロトラスト」等での検索ヒットおよびカテゴリフィルタ正常化)](closed/092-fix-fulltext-search-index-coverage.md) | 2026-08-07 | [092-fix-fulltext-search-index-coverage.md](closed/092-fix-fulltext-search-index-coverage.md) |

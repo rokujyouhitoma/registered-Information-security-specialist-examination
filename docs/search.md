@@ -168,6 +168,7 @@
 </style>
 
 <!-- 標準 Script 読み込み -->
+<script src="js/security_validator.js"></script>
 <script src="js/tokenizer.js"></script>
 <script src="js/vector_scorer.js"></script>
 <script src="js/synonym_expander.js"></script>
@@ -210,6 +211,7 @@ async function ensureCustomSearchEngineLoaded() {
     }
 
     const scripts = [
+        'js/security_validator.js',
         'js/tokenizer.js',
         'js/vector_scorer.js',
         'js/synonym_expander.js',

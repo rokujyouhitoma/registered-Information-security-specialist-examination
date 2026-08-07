@@ -3,8 +3,8 @@
  * SA 提案 (Priority 1) および IR ハイブリッド検索 (Issue 060) 対応
  */
 
-// Worker スコープでのスクリプト非同期ロード (シノニム拡張 A & 密概念 B)
-importScripts('tokenizer.js', 'vector_scorer.js', 'synonym_expander.js', 'semantic_scorer.js', 'fm_index_engine.js');
+// Worker スコープでのスクリプト非同期ロード (セキュリティ A & シノニム B & 密概念 C)
+importScripts('security_validator.js', 'tokenizer.js', 'vector_scorer.js', 'synonym_expander.js', 'semantic_scorer.js', 'fm_index_engine.js');
 
 let searchEngineInstance = null;
 

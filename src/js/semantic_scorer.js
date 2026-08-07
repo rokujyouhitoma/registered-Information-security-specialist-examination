@@ -33,12 +33,14 @@ class SemanticScorer {
     }
 
     /**
-     * キーのプロトタイプ汚染安全性を判定する
+     * キーのプロトタイプ汚染安全性を判定する (SecurityValidator へのプロキシ)
      * @param {string} key
      * @return {boolean}
      */
     static isSafeKey(key) {
-        return Boolean(key) && key !== '__proto__' && key !== 'prototype' && key !== 'constructor';
+        return (typeof SecurityValidator !== 'undefined')
+            ? SecurityValidator.isSafeKey(key)
+            : Boolean(key) && key !== '__proto__' && key !== 'prototype' && key !== 'constructor';
     }
 
     /**

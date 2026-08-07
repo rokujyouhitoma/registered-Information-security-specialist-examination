@@ -5,12 +5,14 @@
 
 class VectorScorer {
     /**
-     * プロトタイプ汚染防御用のキー安全性検証
+     * プロトタイプ汚染防御用のキー安全性検証 (SecurityValidator へのプロキシ)
      * @param {string} key
      * @return {boolean}
      */
     static isSafeKey(key) {
-        return Boolean(key) && key !== '__proto__' && key !== 'prototype' && key !== 'constructor';
+        return (typeof SecurityValidator !== 'undefined')
+            ? SecurityValidator.isSafeKey(key)
+            : Boolean(key) && key !== '__proto__' && key !== 'prototype' && key !== 'constructor';
     }
 
     /**

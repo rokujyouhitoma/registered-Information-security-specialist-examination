@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 // Node.js 環境でブラウザ用 JS モジュールを読み込む評価環境
+const validatorScript = fs.readFileSync(path.resolve('src/js/security_validator.js'), 'utf-8');
 const tokenizerScript = fs.readFileSync(path.resolve('src/js/tokenizer.js'), 'utf-8');
 const vectorScorerScript = fs.readFileSync(path.resolve('src/js/vector_scorer.js'), 'utf-8');
 const synonymScript = fs.readFileSync(path.resolve('src/js/synonym_expander.js'), 'utf-8');
@@ -15,6 +16,7 @@ const synonymsData = JSON.parse(fs.readFileSync(path.resolve('src/data/synonyms.
 const conceptData = JSON.parse(fs.readFileSync(path.resolve('src/data/concept_config.json'), 'utf-8'));
 
 global.window = {};
+eval(validatorScript);
 eval(tokenizerScript);
 eval(vectorScorerScript);
 eval(synonymScript);
@@ -22,6 +24,7 @@ eval(semanticScript);
 eval(engineScript);
 eval(compressionScript);
 
+const SecurityValidator = global.window.SecurityValidator;
 const CustomSearchEngine = global.window.CustomSearchEngine;
 const SynonymExpander = global.window.SynonymExpander;
 const SemanticScorer = global.window.SemanticScorer;
@@ -29,6 +32,17 @@ const FrontCodingCompressor = global.window.FrontCodingCompressor;
 
 SynonymExpander.setSynonymMap(synonymsData);
 SemanticScorer.setConceptConfig(conceptData);
+
+test('SecurityValidator - Prototype Pollution Guard Unit Test', (t) => {
+    assert.strictEqual(SecurityValidator.isSafeKey('__proto__'), false);
+    assert.strictEqual(SecurityValidator.isSafeKey('prototype'), false);
+    assert.strictEqual(SecurityValidator.isSafeKey('constructor'), false);
+    assert.strictEqual(SecurityValidator.isSafeKey('validKey'), true);
+
+    const safeObj = { safe: 'value' };
+    assert.strictEqual(SecurityValidator.hasSafeProperty(safeObj, 'safe'), true);
+    assert.strictEqual(SecurityValidator.hasSafeProperty(safeObj, '__proto__'), false);
+});
 
 test('FrontCodingCompressor - String Data Compression & Decompression Test (IR & SA)', (t) => {
     const terms = [

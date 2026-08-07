@@ -8,6 +8,7 @@ const PRECACHE_ASSETS = [
   './data/concept_config.json',
   './data/stopwords.json',
   './fm_index_engine.min.js',
+  './js/security_validator.js',
   './js/tokenizer.js',
   './js/synonym_expander.js',
   './js/semantic_scorer.js',
