@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 085 | Feature | [外部 JSON データ駆動による PKI 証明書失効検証 (CRL/OCSP/Stapling) 演習ツールの開発と Web UI/UX 導入](closed/085-data-driven-pki-revocation-tool.md) | 2026-08-07 | [085-data-driven-pki-revocation-tool.md](closed/085-data-driven-pki-revocation-tool.md) |
 | 084 | Feature | [外部 JSON データ駆動による TLS 1.3 vs 1.2 ハンドシェイク比較演習ツールの開発と Web UI/UX 導入](closed/084-data-driven-tls13-comparison-tool.md) | 2026-08-07 | [084-data-driven-tls13-comparison-tool.md](closed/084-data-driven-tls13-comparison-tool.md) |
 | 083 | Feature | [外部 JSON データ駆動による ISMS 2022年改訂 93管理策＆SoA インタラクティブ診断ツールの開発と Web UI/UX 導入](closed/083-data-driven-isms-2022-controls-tool.md) | 2026-08-07 | [083-data-driven-isms-2022-controls-tool.md](closed/083-data-driven-isms-2022-controls-tool.md) |
 | 082 | Feature | [外部 JSON データ駆動によるゼロトラスト・アーキテクチャ対話型学習ツールの開発と Web UI/UX 境界型 vs ゼロトラスト比較診断機能の実装](closed/082-data-driven-zero-trust-architecture-tool.md) | 2026-08-07 | [082-data-driven-zero-trust-architecture-tool.md](closed/082-data-driven-zero-trust-architecture-tool.md) |
