@@ -1,62 +1,50 @@
 ---
 title: "OAuth 2.0 & OpenID Connect (OIDC)"
-last_updated: "2026-08-01"
-author: "Information Security Specialist Agent"
+last_updated: "2026-08-07"
+author: "Systems Architect Agent & Information Security Specialist Agent"
 ---
 
-# 🌐 OAuth 2.0 & OpenID Connect (OIDC)
+# 🔑 OAuth 2.0 & OpenID Connect (OIDC) セキュリティ
 
 ## 1. 概要 (Overview)
-**OAuth 2.0 (RFC 6749)** は、サードパーティアプリケーションに対して、ユーザーの資格情報（パスワード）を渡すことなくリソースへのアクセス権限を付与するための **認可 (Authorization) プロトコル** である。
-
-**OpenID Connect (OIDC)** は、OAuth 2.0 のフレームワークの上に構築された **認証 (Authentication) 拡張プロトコル** であり、IDトークン (JWT) を用いて「ユーザーが誰であるか」の身元証明を実現する。
+**OAuth 2.0 (RFC 6749)** はサードパーティアプリケーションへサードパーティのリソースアクセス権限を安全に委任する「認可プロトコル」であり、**OpenID Connect (OIDC)** は OAuth 2.0 の上に ID トークン (JWT) の概念を追加した「認証プロトコル」である。
 
 ---
 
-## 2. 認可コードグラント + PKCE フロー (Sequence)
+## 🎯 2. データ駆動 PKCE / state / nonce セキュリティ機構学習コンポーネント
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor User as ユーザー (Resource Owner)
-    participant Client as クライアントアプリ (RP)
-    participant AuthServer as 認可サーバー (IdP)
+<div id="oauth-app" style="max-width: 850px; margin: 2rem 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+    <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+        <div id="oauth-container">データをロード中...</div>
+    </div>
+</div>
 
-    Client->>Client: Code Verifier と Code Challenge (S256) を生成
-    Client->>AuthServer: 認可リクエスト (Code Challenge 送信)
-    AuthServer->>User: ログイン & 同意画面表示
-    User-->>AuthServer: 認証成功 & 同意
-    AuthServer-->>Client: 認可コード (Authorization Code) 発行
-    Client->>AuthServer: トークンリクエスト (認可コード + Code Verifier 送信)
-    Note over AuthServer: Code Verifier から Code Challenge を再計算・照合 (PKCE検証)
-    AuthServer-->>Client: アクセストークン + IDトークン (JWT) 発行
-```
-
----
-
-## 3. トークンの役割比較 (Access Token vs ID Token)
-
-| 比較項目 | アクセストークン (Access Token) | ID トークン (ID Token) |
-|---|---|---|
-| **使用目的** | **認可 (Authorization)**: APIリソースへのアクセス許可 | **認証 (Authentication)**: ユーザーの身元確認証明 |
-| **フォーマット** | オペーク (不透明文字列) または JWT | **必ず JWT (JSON Web Token)** |
-| **主な検証者** | リソースサーバー (Resource Server) | クライアントアプリケーション (Relying Party) |
-| **主な含まれる値** | scope, exp, client_id | **sub (ユーザーID)**, iss, aud, exp, iat |
-
----
-
-## 4. 試験対策ポイント (Exam Preparation Guidelines)
-
-> [!IMPORTANT]
-> **支援士試験におけるセキュリティ脆弱性と対策**:
-> 1. **認可コード横取り攻撃と PKCE (Proof Key for Code Exchange)**: ネイティブアプリ等で認可コードが第三者アプリに横取りされる脆弱性を防ぐため、`code_verifier` と `code_challenge` による動的検証を行う PKCE (RFC 7636) の導入が必須。
-> 2. **オープンリダイレクト脆弱性**: 認可サーバーで事前登録された `redirect_uri` と完全一致検証を行わない場合、攻撃者の悪意あるサイトへ認可コードが漏洩する。
-> 3. **CSRF (Cross-Site Request Forgery) 対策**: 認可リクエストにランダムな `state` パラメータを付与し、コールバック時に検証する。
+<script>
+async function loadOAuthData() {
+    try {
+        const res = await fetch('../../../data/oauth_oidc_drills.json');
+        if (!res.ok) throw new Error('oauth_oidc_drills.json ロード失敗');
+        const data = await res.json();
+        
+        document.getElementById('oauth-container').innerHTML = `
+            <h4 style="color: #f8fafc; margin-top: 0; margin-bottom: 1.25rem;">🛡️ ${data.title}</h4>
+            ${data.securityMechanisms.map(m => `
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 1.25rem; margin-bottom: 1rem;">
+                    <div style="font-size: 1rem; color: #818cf8; font-weight: 700; margin-bottom: 0.4rem;">${m.feature}</div>
+                    <div style="font-size: 0.88rem; color: #6ee7b7; font-weight: 600; margin-bottom: 0.4rem;">🎯 防御目的: ${m.purpose}</div>
+                    <div style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;">${m.mechanism}</div>
+                </div>
+            `).join('')}
+        `;
+    } catch (e) {
+        console.error(e);
+    }
+}
+document.addEventListener('DOMContentLoaded', loadOAuthData);
+</script>
 
 ---
 
-## 5. 関連キーワード・相互リンク
-- [OAuth 2.0](../syllabus_ver2_1.md#oauth)
-- [PKCE (Proof Key for Code Exchange)](../syllabus_ver2_1.md#pkce)
-- [SAML 2.0](../syllabus_ver2_1.md#saml)
-- [JWT (JSON Web Token)](../syllabus_tsuiho_ver4_0.md#jwt)
+## 3. 試験対策重要ポイント
+- **PKCE (code_verifier / code_challenge)**: モバイルアプリ・SPA で必須となる認可コード奪取防御策。
+- **state vs nonce**: state は CSRF 防止、nonce は ID トークンのリプレイ防止。
