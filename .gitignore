@@ -11,4 +11,5 @@ scratch/
 *.tmp
 *.log
 *.pdftotext.txt
-
+# Build Artifacts
+site/

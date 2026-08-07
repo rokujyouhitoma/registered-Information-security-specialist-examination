@@ -2,10 +2,10 @@
   "name": "registered-information-security-specialist-examination",
   "version": "1.0.0",
   "description": "情報セキュリティスペシャリスト試験 総合対策学習リポジトリおよびフルスクラッチ検索ポータル",
-  "main": "site/fm_index_engine.js",
+  "main": "src/js/fm_index_engine.js",
   "type": "module",
   "scripts": {
-    "build:js": "npx -y google-closure-compiler --js site/js/tokenizer.js --js site/js/vector_scorer.js --js site/js/fm_index_engine.js --js_output_file site/fm_index_engine.min.js --compilation_level SIMPLE_OPTIMIZATIONS --language_in ECMASCRIPT_2020 --language_out ECMASCRIPT_2020",
+    "build:js": "npx -y google-closure-compiler --js src/js/tokenizer.js --js src/js/vector_scorer.js --js src/js/fm_index_engine.js --js_output_file site/fm_index_engine.min.js --compilation_level SIMPLE_OPTIMIZATIONS --language_in ECMASCRIPT_2020 --language_out ECMASCRIPT_2020",
     "build:docs": "python3 scripts/build_html_docs.py",
     "build": "npm run build:js && npm run build:docs",
     "test:unit": "node --test tests/unit/search_engine.test.js",

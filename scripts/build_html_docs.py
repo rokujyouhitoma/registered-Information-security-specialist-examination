@@ -10,9 +10,11 @@ site/ 配下に出力するビルドスクリプト。
 import os
 import re
 import html
+import shutil
 
 DOCS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "docs"))
 SITE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "site"))
+SRC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
 
 HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="ja">
@@ -481,10 +483,40 @@ def render_table(table_lines):
     return ''.join(out)
 
 
+def copy_static_assets():
+    """src/ 配下の JS モジュールおよび静的アセット (sw.js, manifest.json) を site/ に同期コピー"""
+    os.makedirs(SITE_DIR, exist_ok=True)
+
+    # 1. src/assets -> site/
+    assets_dir = os.path.join(SRC_DIR, "assets")
+    if os.path.exists(assets_dir):
+        for item in os.listdir(assets_dir):
+            s_path = os.path.join(assets_dir, item)
+            d_path = os.path.join(SITE_DIR, item)
+            if os.path.isfile(s_path):
+                shutil.copy2(s_path, d_path)
+                print(f"  📦 [アセットコピー] {item} -> site/{item}")
+
+    # 2. src/js -> site/js
+    js_src_dir = os.path.join(SRC_DIR, "js")
+    js_dest_dir = os.path.join(SITE_DIR, "js")
+    if os.path.exists(js_src_dir):
+        os.makedirs(js_dest_dir, exist_ok=True)
+        for item in os.listdir(js_src_dir):
+            s_path = os.path.join(js_src_dir, item)
+            d_path = os.path.join(js_dest_dir, item)
+            if os.path.isfile(s_path):
+                shutil.copy2(s_path, d_path)
+                print(f"  📦 [JSコピー] js/{item} -> site/js/{item}")
+
+
 def build_docs():
     """docs/ 配下のすべての md ファイルを site/ に HTML としてビルド"""
     count = 0
-    print("🛠️ docs/ 配下の Markdown ドキュメントを HTML に変換中...")
+    print("🛠️ src/ 配下の静的アセット・JSモジュールを site/ に同期中...")
+    copy_static_assets()
+
+    print("\n🛠️ docs/ 配下の Markdown ドキュメントを HTML に変換中...")
 
     for root, dirs, files in os.walk(DOCS_DIR):
         for f in files:

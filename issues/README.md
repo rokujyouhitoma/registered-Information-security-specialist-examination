@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 062 | Refactor | [site/ 配下のソースコード (JS/sw.js/manifest.json) の src/ への集約とビルド処理の整備](closed/062-move-site-sources-to-src.md) | 2026-08-07 | [062-move-site-sources-to-src.md](closed/062-move-site-sources-to-src.md) |
 | 061 | Feature | [CI/CD による /site ディレクトリの動的ビルドおよび自動デプロイ化](closed/061-automate-site-build-cicd.md) | 2026-08-07 | [061-automate-site-build-cicd.md](closed/061-automate-site-build-cicd.md) |
 | 060 | Feature | [シノニム辞書拡張 (A) × 概念ベクトルセマンティック検索 (B) ハイブリッド検索エンジンの開発](closed/060-implement-hybrid-synonym-semantic-search.md) | 2026-08-06 | [060-implement-hybrid-synonym-semantic-search.md](closed/060-implement-hybrid-synonym-semantic-search.md) |
 | 059 | Feature | [科目B記述式 インタラクティブ解法＆自動採点演習 UI モーダルの実装](closed/059-interactive-subject-b-quiz-ui.md) | 2026-08-06 | [059-interactive-subject-b-quiz-ui.md](closed/059-interactive-subject-b-quiz-ui.md) |

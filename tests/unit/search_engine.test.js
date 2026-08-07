@@ -4,11 +4,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 // Node.js 環境でブラウザ用 JS モジュールを読み込む評価環境
-const tokenizerScript = fs.readFileSync(path.resolve('site/js/tokenizer.js'), 'utf-8');
-const vectorScorerScript = fs.readFileSync(path.resolve('site/js/vector_scorer.js'), 'utf-8');
-const synonymScript = fs.readFileSync(path.resolve('site/js/synonym_expander.js'), 'utf-8');
-const semanticScript = fs.readFileSync(path.resolve('site/js/semantic_scorer.js'), 'utf-8');
-const engineScript = fs.readFileSync(path.resolve('site/js/fm_index_engine.js'), 'utf-8');
+const tokenizerScript = fs.readFileSync(path.resolve('src/js/tokenizer.js'), 'utf-8');
+const vectorScorerScript = fs.readFileSync(path.resolve('src/js/vector_scorer.js'), 'utf-8');
+const synonymScript = fs.readFileSync(path.resolve('src/js/synonym_expander.js'), 'utf-8');
+const semanticScript = fs.readFileSync(path.resolve('src/js/semantic_scorer.js'), 'utf-8');
+const engineScript = fs.readFileSync(path.resolve('src/js/fm_index_engine.js'), 'utf-8');
 const searchIndexData = JSON.parse(fs.readFileSync(path.resolve('site/search_index.json'), 'utf-8'));
 
 global.window = {};

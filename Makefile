@@ -1,4 +1,4 @@
-SRC_JS = site/js/tokenizer.js site/js/vector_scorer.js site/js/fm_index_engine.js
+SRC_JS = src/js/tokenizer.js src/js/vector_scorer.js src/js/fm_index_engine.js
 MIN_JS = site/fm_index_engine.min.js
 
 .PHONY: all build clean
