@@ -599,6 +599,27 @@ def build_docs():
             count += 1
             print(f"  ✅ [生成] site/{html_rel_path}")
 
+            # 💡 特別対応: search.md の場合、GitHub Pages の /search/ ディレクトリルーティング対応のため site/search/index.html も同時生成
+            if rel_path == 'search.md':
+                dir_dest_path = os.path.join(SITE_DIR, 'search', 'index.html')
+                os.makedirs(os.path.dirname(dir_dest_path), exist_ok=True)
+                dir_rel_root = '../'
+                dir_rendered_body = re.sub(r"fetch\(['\"](?:\.\.\/)*data\/([^'\"]+)['\"]\)", rf"fetch('{dir_rel_root}data/\1')", markdown_to_html(md_text))
+                dir_rendered_body = dir_rendered_body.replace('src="js/', f'src="{dir_rel_root}js/')
+                dir_rendered_body = dir_rendered_body.replace("fetch('data/", f"fetch('{dir_rel_root}data/")
+                dir_rendered_body = dir_rendered_body.replace('fetch("data/', f'fetch("{dir_rel_root}data/')
+                dir_rendered_body = dir_rendered_body.replace("fetch('search_index.json'", f"fetch('{dir_rel_root}search_index.json'")
+                dir_rendered_body = dir_rendered_body.replace('fetch("search_index.json"', f'fetch("{dir_rel_root}search_index.json"')
+
+                dir_full_html = HTML_TEMPLATE.format(
+                    title=html.escape(doc_title),
+                    content=dir_rendered_body,
+                    rel_root=dir_rel_root
+                )
+                with open(dir_dest_path, 'w', encoding='utf-8') as dir_f:
+                    dir_f.write(dir_full_html)
+                print("  ✅ [生成] site/search/index.html (GitHub Pages ディレクトリ型ルーティング対応)")
+
     print(f"\n🎉 計 {count} 件のドキュメントを site/ 配下に正常出力しました！")
 
 

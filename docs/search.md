@@ -143,6 +143,7 @@
 }
 </style>
 
+<!-- 標準 Script 読み込み -->
 <script src="js/tokenizer.js"></script>
 <script src="js/vector_scorer.js"></script>
 <script src="js/synonym_expander.js"></script>
@@ -160,16 +161,59 @@ async function fetchWithFallback(pathList) {
             const res = await fetch(pathList[i]);
             if (res.ok) return res;
         } catch (e) {
-            // try next path
+            // try next
         }
     }
     throw new Error('All path attempts failed for ' + pathList[0]);
+}
+
+async function ensureCustomSearchEngineLoaded() {
+    if (typeof CustomSearchEngine !== 'undefined') return;
+
+    // もし /search/ ディレクトリルーティング等で個別 JS 読み込みが 404 の場合、自動で別パスからタグを動的注入してロードを完了させる
+    const loc = window.location.pathname;
+    let base = './';
+    if (loc.endsWith('/search/') || loc.indexOf('/search/') !== -1) {
+        base = '../';
+    }
+
+    const scripts = [
+        'js/tokenizer.js',
+        'js/vector_scorer.js',
+        'js/synonym_expander.js',
+        'js/semantic_scorer.js',
+        'js/string_compression.js',
+        'js/fm_index_engine.js'
+    ];
+
+    for (const s of scripts) {
+        await new Promise((resolve) => {
+            const el = document.createElement('script');
+            el.src = base + s;
+            el.onload = resolve;
+            el.onerror = resolve;
+            document.head.appendChild(el);
+        });
+    }
+
+    if (typeof CustomSearchEngine === 'undefined') {
+        // 最終フォールバック: コンパイル済み単一 Bundle
+        await new Promise((resolve) => {
+            const el = document.createElement('script');
+            el.src = base + 'fm_index_engine.min.js';
+            el.onload = resolve;
+            el.onerror = resolve;
+            document.head.appendChild(el);
+        });
+    }
 }
 
 async function initSearchEngine() {
     const statusText = document.getElementById('status-text');
 
     try {
+        await ensureCustomSearchEngineLoaded();
+
         if (typeof CustomSearchEngine === 'undefined') {
             throw new Error('CustomSearchEngine is not defined. Please check script load order.');
         }
@@ -177,7 +221,7 @@ async function initSearchEngine() {
         searchEngine = new CustomSearchEngine();
         
         // パスフォールバック試行 (site/search.html, site/search/index.html, GitHub Pages)
-        const indexRes = await fetchWithFallback(['search_index.json', './search_index.json', '../search_index.json']);
+        const indexRes = await fetchWithFallback(['search_index.json', './search_index.json', '../search_index.json', '/registered-information-security-specialist-examination/search_index.json']);
         const indexData = await indexRes.json();
         searchEngine.docs = indexData.docs || [];
         searchEngine.idf = indexData.idf || {};
@@ -185,7 +229,7 @@ async function initSearchEngine() {
         searchEngine.isLoaded = true;
         
         try {
-            const synonymsRes = await fetchWithFallback(['data/synonyms.json', './data/synonyms.json', '../data/synonyms.json']);
+            const synonymsRes = await fetchWithFallback(['data/synonyms.json', './data/synonyms.json', '../data/synonyms.json', '/registered-information-security-specialist-examination/data/synonyms.json']);
             const synonyms = await synonymsRes.json();
             if (window.SynonymExpander) SynonymExpander.setSynonymMap(synonyms);
         } catch (e) {
@@ -193,7 +237,7 @@ async function initSearchEngine() {
         }
 
         try {
-            const conceptRes = await fetchWithFallback(['data/concept_config.json', './data/concept_config.json', '../data/concept_config.json']);
+            const conceptRes = await fetchWithFallback(['data/concept_config.json', './data/concept_config.json', '../data/concept_config.json', '/registered-information-security-specialist-examination/data/concept_config.json']);
             const conceptConfig = await conceptRes.json();
             if (window.SemanticScorer) SemanticScorer.setConceptConfig(conceptConfig);
         } catch (e) {
