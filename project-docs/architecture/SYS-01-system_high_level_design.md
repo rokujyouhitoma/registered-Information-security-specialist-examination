@@ -71,6 +71,6 @@ graph TD
 ---
 
 ## 4. 関連ドキュメント
-- [システム詳細設計書 (LLD: Low-Level Design)](system_low_level_design.md)
-- [レイアウト・設計ガイドライン](docs_architecture_and_layout_design.md)
-- [ITSS 到達度セルフチェックガイド](../docs/itss_self_assessment_guide.md)
+- [システム詳細設計書 (LLD: Low-Level Design)](SYS-02-system_low_level_design.md)
+- [UI/UX & レイアウト設計書](ARCH-01-docs_architecture_and_layout_design.md)
+- [ITSS 到達度セルフチェックガイド](../../docs/itss_self_assessment_guide.md)

@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 067 | Refactor | [project-docs/ の体系的再編・MNG-01 準拠ドキュメント台帳整備・UIUX 改善および AU 最終監査](closed/067-reorganize-project-docs-ledger-ux-audit.md) | 2026-08-07 | [067-reorganize-project-docs-ledger-ux-audit.md](closed/067-reorganize-project-docs-ledger-ux-audit.md) |
 | 066 | Feature | [UI/UX デザイナーエージェント (ui-ux-designer.agent.md) の作成および ST/PM 3段階厳格レビュー](closed/066-create-ui-ux-designer-agent.md) | 2026-08-07 | [066-create-ui-ux-designer-agent.md](closed/066-create-ui-ux-designer-agent.md) |
 | 065 | Feature | [Google 検索を参考にした検索専用ページ (docs/search.md) の UI/UX シンプル化](closed/065-simplify-search-ui-ux.md) | 2026-08-07 | [065-simplify-search-ui-ux.md](closed/065-simplify-search-ui-ux.md) |
 | 064 | Refactor | [JS 内ハードコードデータの分離・外部 JSON 化によるデータ駆動アーキテクチャへのリファクタリング](closed/064-refactor-data-driven-architecture.md) | 2026-08-07 | [064-refactor-data-driven-architecture.md](closed/064-refactor-data-driven-architecture.md) |

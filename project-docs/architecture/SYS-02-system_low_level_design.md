@@ -123,3 +123,10 @@ $$\text{Score}_{\text{final}} = \text{Score}_{\text{BM25\_Synonym}} + 0.5 \cdot 
 ### 5.2 メリットと保守性
 - **ロジック非依存のデータ更新**: シノニム語彙の追加や概念カテゴリのキーワード調整の際、JS コードを改変することなく JSON の更新のみで即座に精度向上・調整が可能。
 - **多言語・複数ランタイム間でのデータ共有**: 同一の JSON データファイルを JavaScript (ブラウザ / Web Worker / Node.js) と Python (ビルド・検証スクリプト) で一元的に共有可能。
+
+---
+
+## 6. 関連ドキュメント
+- [システム基本設計書 (HLD)](SYS-01-system_high_level_design.md)
+- [UI/UX & レイアウト設計書](ARCH-01-docs_architecture_and_layout_design.md)
+- [マスター文書管理台帳・規約](../processes/MNG-01-document_ledger.md)
