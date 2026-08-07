@@ -20,6 +20,9 @@ You MUST follow this structured, issue-driven development lifecycle for all modi
 3. **Implementation**:
    - Create a feature branch following the branch naming convention (`feat/<issue-id>-<desc>`, `docs/<issue-id>-<desc>`, `refactor/<issue-id>-<desc>`).
    - Follow the detailed plan outlined in the polished issue.
+   - **Mandatory Closure Compiler Build for JS Modifications**:
+     - Whenever any JavaScript file under `src/js/` (or subdirectories) is created, modified, or refactored, you MUST run Closure Compiler (`make build` or `npm run build:js`) with the strictest optimization options (`ADVANCED_OPTIMIZATIONS`).
+     - The updated compiled artifact (`site/fm_index_engine.min.js`) MUST be included in the same commit and pull request.
    - Run tests, check path validity, and verify document integrity.
 
 4. **Issue Closing & Git Workflow (`git-workflow`)**:

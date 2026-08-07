@@ -63,6 +63,15 @@ if (rawAttributeErrors > 0) {
 // 2. 静的アセット配備網羅アサーション (404 根絶チェック)
 console.log('\n🔍 [アセット存在証明チェック] ディレクトリ別データ・JS配信状態をチェック中...');
 
+// Closure Compiler コンパイル成果物の存在検証
+const minifiedJsPath = path.join(SITE_DIR, 'fm_index_engine.min.js');
+if (!fs.existsSync(minifiedJsPath) || fs.statSync(minifiedJsPath).size === 0) {
+    console.error('❌ [Closure Compiler アサーション失敗] site/fm_index_engine.min.js が存在しないか空です。');
+    process.exit(1);
+} else {
+    console.log('  ✅ [Closure Compiler 合格] site/fm_index_engine.min.js が正常に配備されています。');
+}
+
 const requiredDirs = [
     { dir: '', name: 'ルート (site/)' },
     { dir: 'quiz', name: '演習クイズ (site/quiz/)' },
