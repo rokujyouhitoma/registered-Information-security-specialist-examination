@@ -15,6 +15,7 @@ description: 全 13 大スペシャリストエージェントからの専門的
 | **全体管理 (Overall Management)** | **PM** (`project-manager`) | プロジェクト全体の推進・WBS管理・DoD達成評価・マージ承認統括 |
 | **企画・提案選定 (Planning & Proposal)** | **ST** (`information-technology-strategist`) | 全エージェントヒアリング分析・戦略・企画観点での最重要課題選定・企画構想 |
 | **設計・実装 (Design & Implementation)** | **SA** (`systems-architect`) + **SA指名スペシャリスト** | SA が課題に応じて指名した専門分野エージェント（SC, NW, DB, EP, SM, IR, EDU, UIUX 等）による詳細設計・コーディング・アーキテクチャ構築 |
+| **検索基盤・データ構造設計** | **IR** + **SA** | **IR** (情報検索) は **SA** と共同し、検索エンジンの**文字列データ圧縮技術（Front Coding, 変長符号化）**および**簡潔データ構造による圧縮全文索引（FM-Index / BWT / Wavelet Tree）**の設計・最適化を検討・評価する。 |
 | **品質管理 & 監査 (QA & Audit)** | **QA** + **AU** | QA による全自動テスト検証・回帰テスト、AU によるシステム適合度最終監査および【適合(PASS)】判定 |
 
 ---
@@ -36,7 +37,7 @@ description: 全 13 大スペシャリストエージェントからの専門的
 | **PM** | `project-manager` | プロジェクト管理・WBS・DoD評価・総合品質承認 |
 | **SM** | `information-technology-service-manager` | ITSM・ログ解析・SIEM/SOAR インシデント運用 |
 | **EP** | `embedded-systems-specialist` | IoT & OT / 組込みハードウェアセキュリティ |
-| **IR** | `it-specialist-information-retrieval` | 情報検索エンジン・全文インデックス・データ構造 |
+| **IR** | `it-specialist-information-retrieval` | 情報検索エンジン・全文インデックス・文字列データ圧縮 (Front Coding)・圧縮全文索引 (FM-Index / BWT) 【SAと共同検討】 |
 | **EDU** | `education-specialist` | 教育指導・ITSSセルフチェック・学習教材設計 |
 | **UIUX** | `ui-ux-designer` | UI/UXデザイン・アクセシビリティ (WCAG 2.1) |
 
@@ -45,14 +46,14 @@ description: 全 13 大スペシャリストエージェントからの専門的
 ### Step 2: 単一最重要課題の企画・選定 & [Review Gate 1: 企画レビュー]
 - **企画担当 (ST)** 主導のもと、ユーザー価値・シラバス適合性・技術的インパクトから最優先改善項目を **1 つ** 選定。
 - **[Review Gate 1]**: **PM / ST / SA / AU** が企画構想を再レビューし、正当性を推敲・承認する。
-- **設計・実装担当 (SA) による各スペシャリストの指名**: 課題内容に応じて、**SA** が実装を担当する専門スペシャリスト（例: UIUX, NW, DB, SC 等）を明示的に指名・アサインする。
+- **設計・実装担当 (SA) による各スペシャリストの指名**: 課題内容に応じて、**SA** が実装を担当する専門スペシャリスト（例: UIUX, NW, DB, SC, IR 等）を明示的に指名・アサインする。※検索・インデックス領域では IR を必ず指名し、文字列データ圧縮および圧縮全文索引を共同検討する。
 
 ---
 
 ### Step 3: Issue起票 & `polish-issue` による多段階設計推敲 & [Review Gate 2: 設計レビュー]
 1. **Issue起票 (`create-issue`)**: `issues/<ID>-<title>.md` を作成し `issues/README.md` にアクティブ登録する。
 2. **`polish-issue` スキルの適用**: `polish-issue` スキルを実行し、要件定義・変更影響範囲・DoD・テスト手順を徹底洗練（Polish）する。
-3. **[Review Gate 2]**: **SA および SA 指名スペシャリスト** が設計・DoD・タスク分解を再レビュー（3回以上の反復推敲）し、完成度を高める。
+3. **[Review Gate 2]**: **SA および SA 指名スペシャリスト (IR等)** が設計・DoD・タスク分解を再レビュー（3回以上の反復推敲）し、完成度を高める。
 
 ---
 
@@ -79,12 +80,13 @@ description: 全 13 大スペシャリストエージェントからの専門的
 - **全体管理**: PM (`project-manager`)
 - **企画・提案選定**: ST (`information-technology-strategist`)
 - **設計・実装**: SA (`systems-architect`) + 指名スペシャリスト ([指名エージェント名])
+- **検索基盤・データ圧縮**: IR (`it-specialist-information-retrieval`) & SA (文字列圧縮・FM-Index共同検討)
 - **品質管理・監査**: QA (`software-quality-assurance-specialist`) & AU (`systems-auditor`)
 
 ## 2. エージェントヒアリング結果一覧
 - **ST**: ...
 - **SA**: ...
-- **SC**: ...
+- **IR**: (文字列データ圧縮 / 圧縮全文索引の検討結果)
 - ... (全 13 エージェント)
 
 ## 3. 企画担当 (ST) 提案：最重要改善項目 (Review Gate 1 通過)

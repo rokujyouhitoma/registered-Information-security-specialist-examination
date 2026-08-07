@@ -14,8 +14,9 @@ Document ID: `PROC-02-agent_roles`
 flowchart LR
     A["① 全体管理 (PM)"] --> B["② 企画・提案選定 (ST)"]
     B --> C["③ 設計・実装 (SA & 指名スペシャリスト)"]
-    C --> D["④ 品質管理 & 監査 (QA & AU)"]
-    D -->|承認| E["⑤ マージ統合 (PM)"]
+    C --> D["④ 検索・データ構造検討 (IR & SA)"]
+    D --> E["⑤ 品質管理 & 監査 (QA & AU)"]
+    E -->|承認| F["⑥ マージ統合 (PM)"]
 ```
 
 | フェーズ | 主担当エージェント | 役割と責務 |
@@ -23,6 +24,7 @@ flowchart LR
 | **全体管理** | **PM** (`project-manager`) | プロジェクト全体の推進・WBS管理・DoD評価・最終マージ承認 |
 | **企画・提案選定** | **ST** (`information-technology-strategist`) | 全エージェントヒアリング分析・戦略・企画観点での最重要課題選定・企画構想 |
 | **設計・実装** | **SA** (`systems-architect`) + **SA指名スペシャリスト** | SA および課題に応じて SA から指名された専門エージェント（SC, NW, DB, EP, SM, IR, EDU, UIUX 等）による詳細設計・コーディング・基盤構築 |
+| **検索・データ構造検討** | **IR** (`it-specialist-information-retrieval`) + **SA** | **IR** は **SA** と協調し、検索エンジンの**文字列データ圧縮技術（Front Coding, 変長符号化）**および**簡潔データ構造を用いた圧縮全文索引（FM-Index / BWT / Wavelet Tree）**の設計・最適化を検討・推進する。 |
 | **品質管理 & 監査** | **QA** + **AU** | QA による全自動テスト（ビルド・ユニット・トレース・監査テスト）の検証、AU によるシステム適合度最終監査および【適合(PASS)】判定 |
 
 ---
@@ -41,7 +43,7 @@ flowchart LR
 | `project-manager` (PM) | プロジェクト管理 & 全体統括 | 全体管理統括、WBS・進捗管理、DoD評価判定、Issue起票・管理、総合品質ゲート承認 |
 | `information-technology-service-manager` (SM) | ITSM & ログ運用・自動化 | ITSM、変更・障害管理、ログ解析/SIEM、SOAR/IRプレイブック、SLA管理 |
 | `embedded-systems-specialist` (EP) | IoT & OT / 組込みセキュリティ | IoT端末セキュリティ、組込みOS・ハードウェアセキュリティ、OT/ICS (IEC 62443) |
-| `it-specialist-information-retrieval` (IR) | 情報検索・インデックス・アルゴリズム | FM-Index, BM25スコアリング, Web Worker高速検索, 外部JSON辞書統合 |
+| `it-specialist-information-retrieval` (IR) | 情報検索・インデックス・アルゴリズム | 【SAと共同検討】文字列データ圧縮（Front Coding, 変長符号化）, FM-Index / BWT 圧縮全文索引, BM25, Web Worker |
 | `education-specialist` (EDU) | 教材設計・ITSS教育指導 | ITSSセルフアセスメントガイド, 対話型クイズ設計, シラバス難易度調整 |
 | `ui-ux-designer` (UIUX) | UI/UX デザイン & Web アクセシビリティ | ユーザー中心設計 (UCD)、情報アーキテクチャ (IA)、デザインシステム、アクセシビリティ (WCAG 2.1) |
 
@@ -67,7 +69,7 @@ flowchart LR
 | **6. 開発セキュリティ・脆弱性** | セキュアプログラミング、SBOM | `software-quality-assurance-specialist` | `software-quality-assurance-specialist` | `systems-architect` | `project-manager` |
 | **7. インシデント対応・運用・BCP** | CSIRT/SOC、フォレンジック、SIEM | `information-security-specialist` | `information-technology-service-manager` | `information-technology-strategist` | `systems-auditor` |
 | **8. ガイドライン・法規・環境** | 関連法規、個人情報、物理 | `systems-auditor` | `systems-auditor` | `information-technology-strategist` | 全エージェント |
-| **9. 情報検索 & ポータルアルゴリズム** | BM25, FM-Index, Web Worker | `it-specialist-information-retrieval` | `it-specialist-information-retrieval` | `systems-architect` | `ui-ux-designer` |
+| **9. 情報検索 & 圧縮全文索引** | 文字列圧縮, FM-Index, BWT, BM25 | `it-specialist-information-retrieval` | `it-specialist-information-retrieval` | `systems-architect` | `ui-ux-designer` |
 | **10. ITSS セルフチェック & 教育指導** | ITSS Level 1〜4, 4択問題演習 | `education-specialist` | `education-specialist` | `information-technology-strategist` | `project-manager` |
 | **11. UI/UX & アクセシビリティ** | UCD、デザインシステム、WCAG 2.1 | `ui-ux-designer` | `ui-ux-designer` | `systems-architect` | `software-quality-assurance-specialist` |
 
@@ -77,8 +79,8 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    A["SA / 指名スペシャリストによる初稿・コード作成 (R)"] --> B["QA による全自動検証 (npm run build && npm test)"]
-    B -->|OK| C["SA および関与エージェントによる設計・コード再レビュー"]
+    A["SA / IR / 指名スペシャリストによる初稿・コード・データ構造作成 (R)"] --> B["QA による全自動検証 (npm run build && npm test)"]
+    B -->|OK| C["SA, IR および関与エージェントによる設計・データ構造再レビュー"]
     B -->|NG| A
     C -->|修正要求| A
     C -->|承認| D["AU による DoD判定 & 最終監査適合判定 (A)"]

@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 089 | Refactor | [agent-hearing-proposal スキルおよび PROC-02 における IR エージェントと SA の文字列データ圧縮・圧縮全文索引 (FM-Index) 共同検討規定の追加](closed/089-ir-sa-string-compression-fm-index-collaboration.md) | 2026-08-07 | [089-ir-sa-string-compression-fm-index-collaboration.md](closed/089-ir-sa-string-compression-fm-index-collaboration.md) |
 | 088 | Feature | [外部 JSON データ駆動による CASB / CSPM クラウドセキュリティ設定アセスメントツールの開発と Web UI/UX 導入](closed/088-data-driven-casb-cspm-assessment-tool.md) | 2026-08-07 | [088-data-driven-casb-cspm-assessment-tool.md](closed/088-data-driven-casb-cspm-assessment-tool.md) |
 | 087 | Feature | [外部 JSON データ駆動による EDR / XDR インシデントプロセス解析演習ツールの開発と Web UI/UX 導入](closed/087-data-driven-edr-xdr-analysis-tool.md) | 2026-08-07 | [087-data-driven-edr-xdr-analysis-tool.md](closed/087-data-driven-edr-xdr-analysis-tool.md) |
 | 086 | Feature | [外部 JSON データ駆動による OAuth 2.0 / OIDC 認可フロー＆PKCE 脆弱性解析演習ツールの開発と Web UI/UX 導入](closed/086-data-driven-oauth-oidc-pkce-tool.md) | 2026-08-07 | [086-data-driven-oauth-oidc-pkce-tool.md](closed/086-data-driven-oauth-oidc-pkce-tool.md) |
