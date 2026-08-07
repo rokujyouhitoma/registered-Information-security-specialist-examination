@@ -149,6 +149,12 @@
 <script src="js/semantic_scorer.js"></script>
 <script src="js/string_compression.js"></script>
 <script src="js/fm_index_engine.js"></script>
+<!-- Fallback Bundle for GitHub Pages / Nested Routes -->
+<script>
+if (typeof CustomSearchEngine === 'undefined') {
+    document.write('<script src="fm_index_engine.min.js"><\/script>');
+}
+</script>
 
 <script>
 let searchEngine = null;

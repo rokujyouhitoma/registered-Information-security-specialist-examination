@@ -561,6 +561,14 @@ def build_docs():
             # HTMLコンテンツに変換
             rendered_body = markdown_to_html(md_text)
 
+            # 相対パスの修正 (js/ や data/ への参照を rel_root 基準に統一)
+            rendered_body = re.sub(r"fetch\(['\"](?:\.\.\/)*data\/([^'\"]+)['\"]\)", rf"fetch('{rel_root}data/\1')", rendered_body)
+            rendered_body = rendered_body.replace('src="js/', f'src="{rel_root}js/')
+            rendered_body = rendered_body.replace("fetch('data/", f"fetch('{rel_root}data/")
+            rendered_body = rendered_body.replace('fetch("data/', f'fetch("{rel_root}data/')
+            rendered_body = rendered_body.replace("fetch('search_index.json'", f"fetch('{rel_root}search_index.json'")
+            rendered_body = rendered_body.replace('fetch("search_index.json"', f'fetch("{rel_root}search_index.json"')
+
             full_html = HTML_TEMPLATE.format(
                 title=html.escape(doc_title),
                 content=rendered_body,
