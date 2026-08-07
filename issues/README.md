@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 087 | Feature | [外部 JSON データ駆動による EDR / XDR インシデントプロセス解析演習ツールの開発と Web UI/UX 導入](closed/087-data-driven-edr-xdr-analysis-tool.md) | 2026-08-07 | [087-data-driven-edr-xdr-analysis-tool.md](closed/087-data-driven-edr-xdr-analysis-tool.md) |
 | 086 | Feature | [外部 JSON データ駆動による OAuth 2.0 / OIDC 認可フロー＆PKCE 脆弱性解析演習ツールの開発と Web UI/UX 導入](closed/086-data-driven-oauth-oidc-pkce-tool.md) | 2026-08-07 | [086-data-driven-oauth-oidc-pkce-tool.md](closed/086-data-driven-oauth-oidc-pkce-tool.md) |
 | 085 | Feature | [外部 JSON データ駆動による PKI 証明書失効検証 (CRL/OCSP/Stapling) 演習ツールの開発と Web UI/UX 導入](closed/085-data-driven-pki-revocation-tool.md) | 2026-08-07 | [085-data-driven-pki-revocation-tool.md](closed/085-data-driven-pki-revocation-tool.md) |
 | 084 | Feature | [外部 JSON データ駆動による TLS 1.3 vs 1.2 ハンドシェイク比較演習ツールの開発と Web UI/UX 導入](closed/084-data-driven-tls13-comparison-tool.md) | 2026-08-07 | [084-data-driven-tls13-comparison-tool.md](closed/084-data-driven-tls13-comparison-tool.md) |
