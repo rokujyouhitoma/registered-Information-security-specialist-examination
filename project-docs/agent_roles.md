@@ -18,6 +18,7 @@
 | `information-technology-strategist` | セキュリティ戦略 & BCP | 経営セキュリティ戦略、サプライチェーンリスク (SCRM)、BCP/DR、重要インフラガイドライン |
 | `information-technology-service-manager` | ITSM & ログ運用・自動化 | ITSM、変更・障害管理、ログ解析/SIEM、SOAR/IRプレイブック、SLA管理 |
 | `embedded-systems-specialist` | IoT & OT / 組込みセキュリティ | IoT端末セキュリティ、組込みOS・ハードウェアセキュリティ、OT/ICS (IEC 62443) |
+| `ui-ux-designer` | UI/UX デザイン & Web アクセシビリティ | ユーザー中心設計 (UCD)、情報アーキテクチャ (IA)、デザインシステム、アクセシビリティ (WCAG 2.1) |
 
 ---
 
@@ -41,6 +42,7 @@
 | **6. 開発セキュリティ・脆弱性** | セキュアプログラミング、SBOM | `software-quality-assurance-specialist` | `software-quality-assurance-specialist` | `systems-architect` | `project-manager` |
 | **7. インシデント対応・運用・BCP** | CSIRT/SOC、フォレンジック、SIEM | `information-security-specialist` | `information-technology-service-manager` | `information-technology-strategist` | `systems-auditor` |
 | **8. ガイドライン・法規・環境** | 関連法規、個人情報、物理 | `systems-auditor` | `systems-auditor` | `information-technology-strategist` | 全エージェント |
+| **9. UI/UX & アクセシビリティ** | UCD、デザインシステム、WCAG 2.1 | `ui-ux-designer` | `ui-ux-designer` | `systems-architect` | `software-quality-assurance-specialist` |
 
 ---
 

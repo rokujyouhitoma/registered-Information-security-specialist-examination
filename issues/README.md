@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 066 | Feature | [UI/UX デザイナーエージェント (ui-ux-designer.agent.md) の作成および ST/PM 3段階厳格レビュー](closed/066-create-ui-ux-designer-agent.md) | 2026-08-07 | [066-create-ui-ux-designer-agent.md](closed/066-create-ui-ux-designer-agent.md) |
 | 065 | Feature | [Google 検索を参考にした検索専用ページ (docs/search.md) の UI/UX シンプル化](closed/065-simplify-search-ui-ux.md) | 2026-08-07 | [065-simplify-search-ui-ux.md](closed/065-simplify-search-ui-ux.md) |
 | 064 | Refactor | [JS 内ハードコードデータの分離・外部 JSON 化によるデータ駆動アーキテクチャへのリファクタリング](closed/064-refactor-data-driven-architecture.md) | 2026-08-07 | [064-refactor-data-driven-architecture.md](closed/064-refactor-data-driven-architecture.md) |
 | 063 | Feature | [md-tabs__list メニュー導線に対応した検索専用ページの開発](closed/063-create-dedicated-search-page-tab-nav.md) | 2026-08-07 | [063-create-dedicated-search-page-tab-nav.md](closed/063-create-dedicated-search-page-tab-nav.md) |
