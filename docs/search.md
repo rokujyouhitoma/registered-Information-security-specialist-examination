@@ -351,7 +351,34 @@ function renderResults(query, results) {
         const title = doc.name || doc.title || '無題ドキュメント';
         const summary = doc.summary || '詳細解説ドキュメント';
         const rawUrl = doc.url || (doc.id ? doc.id + '.html' : '#');
-        const url = rawUrl.endsWith('.html') ? rawUrl : rawUrl + '.html';
+        
+        // URL 分割処理 (ベースパスとアンカーハッシュ # の完全分離)
+        let baseUrl = rawUrl;
+        let anchorHash = '';
+        if (rawUrl.includes('#')) {
+            const parts = rawUrl.split('#');
+            baseUrl = parts[0];
+            anchorHash = '#' + parts.slice(1).join('#');
+        }
+
+        if (baseUrl && !baseUrl.endsWith('.html') && !baseUrl.endsWith('/')) {
+            baseUrl += '.html';
+        }
+
+        if (baseUrl.startsWith('./')) {
+            baseUrl = baseUrl.substring(2);
+        }
+
+        // 現在の閲覧ページパスに応じた相対階層プレフィックスの解決
+        const loc = window.location.pathname;
+        let prefix = './';
+        if (loc.endsWith('/search/') || loc.indexOf('/search/') !== -1) {
+            if (!baseUrl.startsWith('http://') && !baseUrl.startsWith('https://') && !baseUrl.startsWith('/')) {
+                prefix = '../';
+            }
+        }
+
+        const url = prefix + baseUrl + anchorHash;
         
         let pathBreadcrumb = '総合情報';
         if (url.includes('glossary')) pathBreadcrumb = '用語辞書 › ' + title;

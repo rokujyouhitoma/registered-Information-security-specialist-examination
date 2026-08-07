@@ -168,6 +168,26 @@ if (fs.existsSync(searchIndexPath)) {
             console.log(`  ・[ヒット合格] 『${kw}』 -> ${hits.length} 件検出 (例: ${hits[0].name} [URL: ${hits[0].url}])`);
         }
     }
+
+    // 検索インデックス内 URL の完全性・実在性・アンカー構文正常性アサーション
+    let checkedUrlCount = 0;
+    for (const doc of docs) {
+        const rawUrl = doc.url || '';
+        if (rawUrl.includes('.html#') && rawUrl.endsWith('.html')) {
+            console.error(`❌ [検索リンク404構文エラー] 不正な二重拡張子リンクを検知: ${rawUrl}`);
+            assetMissingErrors++;
+        }
+        
+        let baseUrl = rawUrl.split('#')[0];
+        if (baseUrl.startsWith('./')) baseUrl = baseUrl.substring(2);
+        const targetHtmlPath = path.join(SITE_DIR, baseUrl);
+        if (!fs.existsSync(targetHtmlPath)) {
+            console.error(`❌ [検索リンク実在404エラー] 検索インデックスの参照先 HTML が存在しません: ${rawUrl} -> ${targetHtmlPath}`);
+            assetMissingErrors++;
+        }
+        checkedUrlCount++;
+    }
+    console.log(`  ✅ [検索リンク404アサーション合格] 計 ${checkedUrlCount} 件の検索対象 URL がすべて実在し、構文に問題がないことを検証しました。`);
 }
 
 if (assetMissingErrors > 0) {
