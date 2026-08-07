@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 100 | Bug | [シーケンス図における参加者ノード幅の動的自動補正と長文字列はみ出し不具合の解消](closed/100-dynamic-node-width-sequence-diagram.md) | 2026-08-07 | [100-dynamic-node-width-sequence-diagram.md](closed/100-dynamic-node-width-sequence-diagram.md) |
 | 099 | Refactor | [シーケンス図トランスパイラパッケージ化とクラス別ファイル分割による高凝集・疎結合アーキテクチャの実現](closed/099-package-split-sequence-diagram-classes.md) | 2026-08-07 | [099-package-split-sequence-diagram-classes.md](closed/099-package-split-sequence-diagram-classes.md) |
 | 098 | Feature | [外部依存ゼロの自作シーケンス図 (Sequence Diagram) Lexer/Parser/AST/Renderer ライブラリの構築と HTML ビルド統合](closed/098-implement-no-dependency-sequence-diagram-renderer.md) | 2026-08-07 | [098-implement-no-dependency-sequence-diagram-renderer.md](closed/098-implement-no-dependency-sequence-diagram-renderer.md) |
 | 097 | Feature | [MNG-08 アーキテクチャ意思決定プロセス (ADR Process Definition) の定義と設計ガイドライン導入](closed/097-adopt-mng08-adr-process-definition.md) | 2026-08-07 | [097-adopt-mng08-adr-process-definition.md](closed/097-adopt-mng08-adr-process-definition.md) |

@@ -3,13 +3,7 @@
 scripts/sequence_diagram_parser.py
 
 外部依存ゼロの自作シーケンス図 (Sequence Diagram) Lexer/Parser/AST/Renderer ライブラリ (ADR-02 準拠)
-Mermaid 互換 DSL 形式のシーケンス図テキストを解析し、レスポンシブな標準 SVG XML を生成する。
-
-アーキテクチャ:
-  1. SequenceLexer   : DSL ソース文字列のトークン化
-  2. SequenceParser  : 文法解析および AST ノードツリー構築
-  3. SequenceAST     : 参加者・設定・メッセージステップのデータ構造モデル
-  4. SequenceRenderer: SVG XML グラフィックス自動算出＆生成
+動的自動ノード幅算出エンジン搭載
 """
 
 import html
@@ -36,7 +30,7 @@ class SequenceLexer:
 
         for line_idx, raw_line in enumerate(lines, 1):
             line = raw_line.strip()
-            if not line or line.startswith('%%'):  # 空行またはコメント
+            if not line or line.startswith('%%'):
                 continue
 
             if line == 'sequenceDiagram':
@@ -46,7 +40,6 @@ class SequenceLexer:
                 tokens.append(Token('KEYWORD_AUTONUMBER', 'autonumber', line_idx))
                 continue
 
-            # actor / participant 宣言のパース
             decl_match = re.match(r'^(actor|participant)\s+([a-zA-Z0-9_$]+)(?:\s+as\s+(.+))?$', line)
             if decl_match:
                 kind, p_id, alias = decl_match.groups()
@@ -58,7 +51,6 @@ class SequenceLexer:
                 tokens.append(Token('NEWLINE', '\n', line_idx))
                 continue
 
-            # メッセージ矢印ステートメントのパース (例: Attacker->>FW: 未パッチ脆弱性...)
             msg_match = re.match(r'^([a-zA-Z0-9_$]+)\s*(->>|-->>|->|-->|-x|--x)\s*([a-zA-Z0-9_$]+)\s*:\s*(.+)$', line)
             if msg_match:
                 from_id, arrow, to_id, msg_text = msg_match.groups()
@@ -174,20 +166,45 @@ class SequenceParser:
 class SequenceRenderer:
     """AST からレスポンシブ SVG XML をレイアウト計算・レンダリングする"""
 
-    # レイアウト定数
-    COL_WIDTH = 200
+    MIN_COL_WIDTH = 200
+    MIN_ACTOR_WIDTH = 140
     ROW_HEIGHT = 70
     PADDING_X = 60
     HEADER_Y = 60
-    ACTOR_WIDTH = 150
     ACTOR_HEIGHT = 42
 
     @staticmethod
-    def _get_participant_x_map(participants):
+    def _calculate_text_width(text):
+        """文字長からのテキスト幅計算"""
+        width = 0.0
+        for char in str(text or ''):
+            code = ord(char)
+            width += 7.8 if code <= 0x7F else 13.5
+        return width
+
+    @staticmethod
+    def _get_layout_specs(participants):
+        """全参加者の最大ノード幅および動的列幅の計算"""
+        max_box_w = SequenceRenderer.MIN_ACTOR_WIDTH
+        width_map = {}
+
+        for p in participants:
+            icon_str = "👤 " if p.type == 'actor' else ""
+            text_w = SequenceRenderer._calculate_text_width(icon_str + p.label)
+            box_w = max(SequenceRenderer.MIN_ACTOR_WIDTH, int(text_w + 36))
+            width_map[p.id] = box_w
+            if box_w > max_box_w:
+                max_box_w = box_w
+
+        col_width = max(SequenceRenderer.MIN_COL_WIDTH, max_box_w + 40)
+        return width_map, col_width
+
+    @staticmethod
+    def _get_participant_x_map(participants, col_width):
         """アクターごとの X 座標マップを算出"""
         x_map = {}
         for i, p in enumerate(participants):
-            x_map[p.id] = SequenceRenderer.PADDING_X + (i * SequenceRenderer.COL_WIDTH) + (SequenceRenderer.COL_WIDTH // 2)
+            x_map[p.id] = SequenceRenderer.PADDING_X + (i * col_width) + (col_width // 2)
         return x_map
 
     @staticmethod
@@ -211,11 +228,10 @@ class SequenceRenderer:
         </defs>'''
 
     @staticmethod
-    def _render_participant_box(p, x, y):
+    def _render_participant_box(p, x, y, box_w):
         """参加者ノードボックスの描画"""
-        w = SequenceRenderer.ACTOR_WIDTH
         h = SequenceRenderer.ACTOR_HEIGHT
-        box_x = x - w // 2
+        box_x = x - box_w // 2
         box_y = y - h // 2
         grad = "url(#seq-actor-grad)" if p.type == 'actor' else "url(#seq-node-grad)"
         stroke = "#818cf8" if p.type == 'actor' else "#3b82f6"
@@ -223,7 +239,7 @@ class SequenceRenderer:
         escaped_label = html.escape(icon_str + p.label)
 
         return f'''<g class="seq-participant-node">
-            <rect x="{box_x}" y="{box_y}" width="{w}" height="{h}" rx="8" ry="8" fill="{grad}" stroke="{stroke}" stroke-width="1.5" />
+            <rect x="{box_x}" y="{box_y}" width="{box_w}" height="{h}" rx="8" ry="8" fill="{grad}" stroke="{stroke}" stroke-width="1.5" />
             <text x="{x}" y="{y + 5}" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#f8fafc" text-anchor="middle">{escaped_label}</text>
         </g>'''
 
@@ -235,18 +251,13 @@ class SequenceRenderer:
         marker = 'url(#seq-arrow-dashed)' if is_dashed else 'url(#seq-arrow-solid)'
         stroke_color = "#a5b4fc" if is_dashed else "#6366f1"
 
-        # バッジおよびステップテキスト
         step_prefix = f"({msg.step}) " if autonumber else ""
         escaped_text = html.escape(step_prefix + msg.text)
         mid_x = (x1 + x2) // 2
-
-        # 矢印線の終端微調整
         line_x2 = x2 - 8 if x2 > x1 else x2 + 8
 
         svg_parts = []
-        # テキストラベル
         svg_parts.append(f'<text x="{mid_x}" y="{y - 10}" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1" text-anchor="middle">{escaped_text}</text>')
-        # 矢印直線
         svg_parts.append(f'<line x1="{x1}" y1="{y}" x2="{line_x2}" y2="{y}" stroke="{stroke_color}" stroke-width="2" {dash_attr} marker-end="{marker}" />')
         return '\n'.join(svg_parts)
 
@@ -259,31 +270,35 @@ class SequenceRenderer:
         num_participants = len(ast.participants)
         num_messages = len(ast.messages)
 
-        total_width = SequenceRenderer.PADDING_X * 2 + num_participants * SequenceRenderer.COL_WIDTH
+        width_map, col_width = SequenceRenderer._get_layout_specs(ast.participants)
+
+        total_width = SequenceRenderer.PADDING_X * 2 + num_participants * col_width
         total_height = SequenceRenderer.HEADER_Y * 2 + (num_messages + 1) * SequenceRenderer.ROW_HEIGHT
 
-        x_map = SequenceRenderer._get_participant_x_map(ast.participants)
+        x_map = SequenceRenderer._get_participant_x_map(ast.participants, col_width)
         svg_elements = [SequenceRenderer._render_svg_defs()]
 
-        # 1. ライフライン（縦線）の描画
         top_y = SequenceRenderer.HEADER_Y
         bottom_y = total_height - SequenceRenderer.HEADER_Y
+
+        # 1. ライフライン縦線
         for p in ast.participants:
             x = x_map[p.id]
             svg_elements.append(f'<line x1="{x}" y1="{top_y}" x2="{x}" y2="{bottom_y}" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,4" />')
 
-        # 2. メッセージステップの描画
+        # 2. メッセージステップ
         for idx, msg in enumerate(ast.messages):
             x1 = x_map.get(msg.from_id, SequenceRenderer.PADDING_X)
             x2 = x_map.get(msg.to_id, SequenceRenderer.PADDING_X)
             y = top_y + (idx + 1) * SequenceRenderer.ROW_HEIGHT
             svg_elements.append(SequenceRenderer._render_message_step(msg, ast.autonumber, x1, x2, y))
 
-        # 3. 上部および下部アクターノードボックスの描画
+        # 3. 上下ノードボックス
         for p in ast.participants:
             x = x_map[p.id]
-            svg_elements.append(SequenceRenderer._render_participant_box(p, x, top_y))
-            svg_elements.append(SequenceRenderer._render_participant_box(p, x, bottom_y))
+            box_w = width_map.get(p.id, SequenceRenderer.MIN_ACTOR_WIDTH)
+            svg_elements.append(SequenceRenderer._render_participant_box(p, x, top_y, box_w))
+            svg_elements.append(SequenceRenderer._render_participant_box(p, x, bottom_y, box_w))
 
         inner_svg = '\n'.join(svg_elements)
         return f'''<div class="sequence-diagram-wrapper" style="overflow-x: auto; margin: 1.5rem 0; text-align: center;">

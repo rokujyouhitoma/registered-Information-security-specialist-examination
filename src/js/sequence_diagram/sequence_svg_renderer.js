@@ -1,17 +1,17 @@
 /**
  * @fileoverview シーケンス図 SVG 計算・描画モジュール (SequenceSVGCalculatedRenderer)
  * パッケージ: src/js/sequence_diagram/sequence_svg_renderer.js
- * ADR-02 準拠 (サイクロマティック複雑度 V(G) <= 10)
+ * 動的自動ノード幅算出 & ADR-02 準拠 (サイクロマティック複雑度 V(G) <= 10)
  */
 
 export class SequenceSVGCalculatedRenderer {
     static get constants() {
         return {
-            COL_WIDTH: 200,
+            MIN_COL_WIDTH: 200,
+            MIN_ACTOR_WIDTH: 140,
             ROW_HEIGHT: 70,
             PADDING_X: 60,
             HEADER_Y: 60,
-            ACTOR_WIDTH: 150,
             ACTOR_HEIGHT: 42
         };
     }
@@ -24,11 +24,37 @@ export class SequenceSVGCalculatedRenderer {
             .replace(/"/g, '&quot;');
     }
 
-    static getXMap(participants) {
+    static calculateTextWidth(text) {
+        let width = 0;
+        const str = String(text || '');
+        for (let i = 0; i < str.length; i++) {
+            const code = str.charCodeAt(i);
+            width += (code >= 0x00 && code <= 0x7f) ? 7.8 : 13.5;
+        }
+        return width;
+    }
+
+    static getLayoutSpecs(participants) {
+        let maxBoxW = SequenceSVGCalculatedRenderer.constants.MIN_ACTOR_WIDTH;
+        const widthMap = Object.create(null);
+
+        participants.forEach(p => {
+            const iconStr = p.type === 'actor' ? '👤 ' : '';
+            const textW = SequenceSVGCalculatedRenderer.calculateTextWidth(iconStr + p.label);
+            const boxW = Math.max(SequenceSVGCalculatedRenderer.constants.MIN_ACTOR_WIDTH, Math.ceil(textW + 36));
+            widthMap[p.id] = boxW;
+            if (boxW > maxBoxW) maxBoxW = boxW;
+        });
+
+        const colWidth = Math.max(SequenceSVGCalculatedRenderer.constants.MIN_COL_WIDTH, maxBoxW + 40);
+        return { widthMap, colWidth };
+    }
+
+    static getXMap(participants, colWidth) {
         const xMap = Object.create(null);
-        const C = SequenceSVGCalculatedRenderer.constants;
+        const PADDING_X = SequenceSVGCalculatedRenderer.constants.PADDING_X;
         participants.forEach((p, i) => {
-            xMap[p.id] = C.PADDING_X + (i * C.COL_WIDTH) + (C.COL_WIDTH / 2);
+            xMap[p.id] = PADDING_X + (i * colWidth) + (colWidth / 2);
         });
         return xMap;
     }
@@ -52,9 +78,9 @@ export class SequenceSVGCalculatedRenderer {
         </defs>`;
     }
 
-    static renderParticipantBox(p, x, y) {
+    static renderParticipantBox(p, x, y, boxW) {
         const C = SequenceSVGCalculatedRenderer.constants;
-        const boxX = x - C.ACTOR_WIDTH / 2;
+        const boxX = x - boxW / 2;
         const boxY = y - C.ACTOR_HEIGHT / 2;
         const isActor = p.type === 'actor';
         const grad = isActor ? 'url(#seq-actor-grad-js)' : 'url(#seq-node-grad-js)';
@@ -63,7 +89,7 @@ export class SequenceSVGCalculatedRenderer {
         const label = SequenceSVGCalculatedRenderer.escapeHtml(iconStr + p.label);
 
         return `<g class="seq-participant-node">
-            <rect x="${boxX}" y="${boxY}" width="${C.ACTOR_WIDTH}" height="${C.ACTOR_HEIGHT}" rx="8" ry="8" fill="${grad}" stroke="${stroke}" stroke-width="1.5" />
+            <rect x="${boxX}" y="${boxY}" width="${boxW}" height="${C.ACTOR_HEIGHT}" rx="8" ry="8" fill="${grad}" stroke="${stroke}" stroke-width="1.5" />
             <text x="${x}" y="${y + 5}" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#f8fafc" text-anchor="middle">${label}</text>
         </g>`;
     }
@@ -90,9 +116,12 @@ export class SequenceSVGCalculatedRenderer {
         const C = SequenceSVGCalculatedRenderer.constants;
         const nPart = ast.participants.length;
         const nMsg = ast.messages.length;
-        const totalWidth = C.PADDING_X * 2 + nPart * C.COL_WIDTH;
+
+        const { widthMap, colWidth } = SequenceSVGCalculatedRenderer.getLayoutSpecs(ast.participants);
+
+        const totalWidth = C.PADDING_X * 2 + nPart * colWidth;
         const totalHeight = C.HEADER_Y * 2 + (nMsg + 1) * C.ROW_HEIGHT;
-        const xMap = SequenceSVGCalculatedRenderer.getXMap(ast.participants);
+        const xMap = SequenceSVGCalculatedRenderer.getXMap(ast.participants, colWidth);
         const elements = [SequenceSVGCalculatedRenderer.renderDefs()];
 
         const topY = C.HEADER_Y;
@@ -115,8 +144,9 @@ export class SequenceSVGCalculatedRenderer {
         // 3. 上下ノードボックス
         ast.participants.forEach(p => {
             const x = xMap[p.id];
-            elements.push(SequenceSVGCalculatedRenderer.renderParticipantBox(p, x, topY));
-            elements.push(SequenceSVGCalculatedRenderer.renderParticipantBox(p, x, bottomY));
+            const boxW = widthMap[p.id] || C.MIN_ACTOR_WIDTH;
+            elements.push(SequenceSVGCalculatedRenderer.renderParticipantBox(p, x, topY, boxW));
+            elements.push(SequenceSVGCalculatedRenderer.renderParticipantBox(p, x, bottomY, boxW));
         });
 
         const innerSvg = elements.join('\n');
