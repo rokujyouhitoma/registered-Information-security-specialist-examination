@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 074 | Feature | [試験直前対策ガイド (docs/exam_overview.md) のリニューアル：全13専門領域の科目B直前キーフレーズ集とUIUX最適化](closed/074-refine-exam-overview-keyphrases-and-uiux.md) | 2026-08-07 | [074-refine-exam-overview-keyphrases-and-uiux.md](closed/074-refine-exam-overview-keyphrases-and-uiux.md) |
 | 073 | Refactor | [agent-hearing-proposal スキルおよび PROC-02 における全 13 スペシャリストエージェントの漏れなき網羅と定義改訂](closed/073-include-all-13-agents-in-hearing-skill-and-roles.md) | 2026-08-07 | [073-include-all-13-agents-in-hearing-skill-and-roles.md](closed/073-include-all-13-agents-in-hearing-skill-and-roles.md) |
 | 072 | Feature | [外部 JSON データ駆動による ITSS 到達度セルフ診断ツールの開発と Web UI/UX インタラクティブ診断機能の実装](closed/072-data-driven-itss-self-assessment-tool.md) | 2026-08-07 | [072-data-driven-itss-self-assessment-tool.md](closed/072-data-driven-itss-self-assessment-tool.md) |
 | 071 | Feature | [mkdocs.yml ナビゲーション構造の完全最適化およびデータ駆動型演習クイズ機能の開発](closed/071-optimize-mkdocs-nav-and-data-driven-quiz.md) | 2026-08-07 | [071-optimize-mkdocs-nav-and-data-driven-quiz.md](closed/071-optimize-mkdocs-nav-and-data-driven-quiz.md) |
