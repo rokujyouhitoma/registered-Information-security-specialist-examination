@@ -8,8 +8,7 @@
 
 | ID | 種別 | タイトル | 担当 / ステータス | 課題ファイル |
 |---|---|---|---|---|
-| 098 | Feature | [外部依存ゼロの自作シーケンス図 (Sequence Diagram) パーサー＆SVG レンダラーライブラリの構築と HTML ビルド統合](098-implement-no-dependency-sequence-diagram-renderer.md) | ST & SA / In Progress | [098-implement-no-dependency-sequence-diagram-renderer.md](098-implement-no-dependency-sequence-diagram-renderer.md) |
-
+| - | - | 現在アクティブな Issue はありません | - | - |
 
 ---
 
@@ -17,6 +16,8 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 099 | Refactor | [シーケンス図トランスパイラパッケージ化とクラス別ファイル分割による高凝集・疎結合アーキテクチャの実現](closed/099-package-split-sequence-diagram-classes.md) | 2026-08-07 | [099-package-split-sequence-diagram-classes.md](closed/099-package-split-sequence-diagram-classes.md) |
+| 098 | Feature | [外部依存ゼロの自作シーケンス図 (Sequence Diagram) Lexer/Parser/AST/Renderer ライブラリの構築と HTML ビルド統合](closed/098-implement-no-dependency-sequence-diagram-renderer.md) | 2026-08-07 | [098-implement-no-dependency-sequence-diagram-renderer.md](closed/098-implement-no-dependency-sequence-diagram-renderer.md) |
 | 097 | Feature | [MNG-08 アーキテクチャ意思決定プロセス (ADR Process Definition) の定義と設計ガイドライン導入](closed/097-adopt-mng08-adr-process-definition.md) | 2026-08-07 | [097-adopt-mng08-adr-process-definition.md](closed/097-adopt-mng08-adr-process-definition.md) |
 | 096 | Feature | [ADR-02 循環的複雑度 (Cyclomatic Complexity) 閾値規定の設計導入と自動検証ツールの構築](closed/096-adopt-adr02-cyclomatic-complexity-threshold.md) | 2026-08-07 | [096-adopt-adr02-cyclomatic-complexity-threshold.md](closed/096-adopt-adr02-cyclomatic-complexity-threshold.md) |
 | 095 | Refactor | [JavaScript 検索エンジンモジュールの SA アーキテクチャ再設計 (高凝集・低結合・SecurityValidator 集約)](closed/095-refactor-js-architecture-cohesion-coupling.md) | 2026-08-07 | [095-refactor-js-architecture-cohesion-coupling.md](closed/095-refactor-js-architecture-cohesion-coupling.md) |

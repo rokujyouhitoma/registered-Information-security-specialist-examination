@@ -1,15 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import path from 'node:path';
-
-// Node.js 環境でブラウザ用 JS モジュールを評価
-const sequenceRendererScript = fs.readFileSync(path.resolve('src/js/sequence_renderer.js'), 'utf-8');
-
-global.window = {};
-eval(sequenceRendererScript);
-
-const SequenceDiagramRenderer = global.window.SequenceDiagramRenderer;
+import SequenceDiagramRenderer from '../../src/js/sequence_renderer.js';
 
 test('SequenceDiagramRenderer - Lexer Tokenization Test', (t) => {
     const sampleDsl = `sequenceDiagram

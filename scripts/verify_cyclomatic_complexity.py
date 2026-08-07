@@ -10,6 +10,7 @@ scripts/verify_cyclomatic_complexity.py
 import os
 import re
 import sys
+import glob
 
 MAX_COMPLEXITY_THRESHOLD = 10
 SRC_JS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src", "js"))
@@ -104,9 +105,10 @@ def main():
     total_functions = 0
     complexity_errors = 0
 
-    js_files = [os.path.join(SRC_JS_DIR, f) for f in os.listdir(SRC_JS_DIR) if f.endswith('.js')]
+    target_files = sorted(glob.glob(os.path.join(SRC_JS_DIR, "**/*.js"), recursive=True))
 
-    for filepath in js_files:
+    for filepath in target_files:
+        rel_path = os.path.relpath(filepath, SRC_JS_DIR)
         funcs = extract_functions(filepath)
         total_functions += len(funcs)
         
@@ -117,13 +119,13 @@ def main():
             if comp > MAX_COMPLEXITY_THRESHOLD:
                 if fn['name'] in ALLOWED_EXCEPTIONS:
                     status_symbol = "⚠️ [例外承認済]"
-                    print(f"  {status_symbol} {fn['name']} (L{fn['line']}) - V(G) = {comp} <= 例外枠上限 {ALLOWED_EXCEPTIONS[fn['name']]}")
+                    print(f"  {status_symbol} {rel_path} :: {fn['name']} (L{fn['line']}) - V(G) = {comp} <= 例外枠上限 {ALLOWED_EXCEPTIONS[fn['name']]}")
                 else:
                     status_symbol = "❌ [閾値超過]"
                     complexity_errors += 1
-                    print(f"  {status_symbol} {fn['name']} (L{fn['line']}) - V(G) = {comp} > 閾値 {MAX_COMPLEXITY_THRESHOLD}")
+                    print(f"  {status_symbol} {rel_path} :: {fn['name']} (L{fn['line']}) - V(G) = {comp} > 閾値 {MAX_COMPLEXITY_THRESHOLD}")
             else:
-                print(f"  {status_symbol} {fn['name']} (L{fn['line']}) - V(G) = {comp}")
+                print(f"  {status_symbol} {rel_path} :: {fn['name']} (L{fn['line']}) - V(G) = {comp}")
 
     print("\n--------------------------------------------------")
     print(f"📊 検証対象関数総数: {total_functions} 件")
