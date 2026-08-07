@@ -1,4 +1,4 @@
-name: Deploy MkDocs Documentation to GitHub Pages
+name: Deploy Documentation to GitHub Pages
 
 on:
   push:
@@ -42,13 +42,13 @@ jobs:
           pip install mkdocs mkdocs-material
           npm install
 
-      - name: Build Custom HTML Docs & JS Search Engine
-        run: |
-          npm run build
-
-      - name: Build MkDocs Site
+      - name: Build MkDocs Base Site
         run: |
           mkdocs build
+
+      - name: Build Custom HTML Docs, JS Engine & Mirror Data Assets
+        run: |
+          npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
