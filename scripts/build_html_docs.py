@@ -515,29 +515,37 @@ def copy_static_assets():
                 shutil.copy2(s_path, d_path)
                 print(f"  📦 [アセットコピー] {item} -> site/{item}")
 
-    # 2. src/js -> site/js
+    # 2. src/js -> site/js 及び site/search/js (ルーティング互換用)
     js_src_dir = os.path.join(SRC_DIR, "js")
     js_dest_dir = os.path.join(SITE_DIR, "js")
+    search_js_dest_dir = os.path.join(SITE_DIR, "search", "js")
     if os.path.exists(js_src_dir):
         os.makedirs(js_dest_dir, exist_ok=True)
+        os.makedirs(search_js_dest_dir, exist_ok=True)
         for item in os.listdir(js_src_dir):
             s_path = os.path.join(js_src_dir, item)
             d_path = os.path.join(js_dest_dir, item)
+            search_d_path = os.path.join(search_js_dest_dir, item)
             if os.path.isfile(s_path):
                 shutil.copy2(s_path, d_path)
-                print(f"  📦 [JSコピー] js/{item} -> site/js/{item}")
+                shutil.copy2(s_path, search_d_path)
+                print(f"  📦 [JSコピー] js/{item} -> site/js/{item} & site/search/js/{item}")
 
-    # 3. src/data -> site/data
+    # 3. src/data -> site/data 及び site/search/data
     data_src_dir = os.path.join(SRC_DIR, "data")
     data_dest_dir = os.path.join(SITE_DIR, "data")
+    search_data_dest_dir = os.path.join(SITE_DIR, "search", "data")
     if os.path.exists(data_src_dir):
         os.makedirs(data_dest_dir, exist_ok=True)
+        os.makedirs(search_data_dest_dir, exist_ok=True)
         for item in os.listdir(data_src_dir):
             s_path = os.path.join(data_src_dir, item)
             d_path = os.path.join(data_dest_dir, item)
+            search_d_path = os.path.join(search_data_dest_dir, item)
             if os.path.isfile(s_path):
                 shutil.copy2(s_path, d_path)
-                print(f"  📦 [データコピー] data/{item} -> site/data/{item}")
+                shutil.copy2(s_path, search_d_path)
+                print(f"  📦 [データコピー] data/{item} -> site/data/{item} & site/search/data/{item}")
 
 
 def build_docs():
@@ -619,6 +627,14 @@ def build_docs():
                 with open(dir_dest_path, 'w', encoding='utf-8') as dir_f:
                     dir_f.write(dir_full_html)
                 print("  ✅ [生成] site/search/index.html (GitHub Pages ディレクトリ型ルーティング対応)")
+
+    # search_index.json が存在する場合は site/search/search_index.json にもミラー複製
+    index_src = os.path.join(SITE_DIR, 'search_index.json')
+    index_dest = os.path.join(SITE_DIR, 'search', 'search_index.json')
+    if os.path.exists(index_src):
+        os.makedirs(os.path.dirname(index_dest), exist_ok=True)
+        shutil.copy2(index_src, index_dest)
+        print("  📦 [インデックスコピー] site/search_index.json -> site/search/search_index.json")
 
     print(f"\n🎉 計 {count} 件のドキュメントを site/ 配下に正常出力しました！")
 
