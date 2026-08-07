@@ -1,6 +1,6 @@
 ---
 name: agent-hearing-proposal
-description: 全エージェントからの専門的聞き取り・現状分析を行い、最も優先度の高い改善項目を1つに絞り込み、関与エージェントの役割分担を定義した上でIssue化・開発推進するプロシージャスキル。
+description: 全 13 大スペシャリストエージェントからの専門的聞き取り・現状分析を行い、最も優先度の高い改善項目を1つに絞り込み、関与エージェントの役割分担を定義した上でIssue化・開発推進するプロシージャスキル。
 ---
 # agent-hearing-proposal
 
@@ -10,8 +10,25 @@ description: 全エージェントからの専門的聞き取り・現状分析�
 
 ## 📋 実行手順 (Instructions)
 
-### 1. 全エージェントへの聞き取り & 課題抽出 (Hearing & Needs Gathering)
-- 11大専門エージェント（SC, NW, DB, ST, AU, QA, PM, STR, SM, EP, UIUX）に対し、それぞれの専門領域における現状の課題、ボトルネック、コンテンツ/機能の改善ニーズを聞き取る。
+### 1. 全 13 エージェントへの聞き取り & 課題抽出 (Hearing & Needs Gathering)
+- 13 大専門エージェントに対し、それぞれの専門領域における現状の課題、ボトルネック、コンテンツ/機能の改善ニーズを漏れなく聞き取る。
+
+| ID | エージェント名称 | 専門領域 |
+|:---:|---|---|
+| **SC** | `information-security-specialist` | 全体セキュリティ・暗号・認証・セキュア設計 |
+| **NW** | `network-specialist` | ネットワークセキュリティ・境界防御・通信プロトコル |
+| **DB** | `database-specialist` | データベース & データセキュリティ・DSPM |
+| **ST** | `systems-architect` | クラウド・IAM・ゼロトラスト・システムアーキテクチャ |
+| **AU** | `systems-auditor` | 監査・ガバナンス・コンプライアンス |
+| **QA** | `software-quality-assurance-specialist` | 脆弱性診断・セキュアプログラミング・自動テスト |
+| **PM** | `project-manager` | プロジェクト管理・WBS・DoD評価・総合品質承認 |
+| **STR** | `information-technology-strategist` | セキュリティ戦略・経営IT・BCP/DR |
+| **SM** | `information-technology-service-manager` | ITSM・ログ解析・SIEM/SOAR インシデント運用 |
+| **EP** | `embedded-systems-specialist` | IoT & OT / 組込みハードウェアセキュリティ |
+| **IR** | `it-specialist-information-retrieval` | 情報検索エンジン・全文インデックス・データ構造 |
+| **EDU** | `education-specialist` | 教育指導・ITSSセルフチェック・学習教材設計 |
+| **UIUX** | `ui-ux-designer` | UI/UXデザイン・アクセシビリティ (WCAG 2.1) |
+
 - 各エージェントから提出された意見・改善要望をマトリクス形式で集約整理する。
 
 ### 2. 単一最重要改善項目の絞り込み・提案 (Consolidated Single Proposal)
@@ -38,7 +55,7 @@ description: 全エージェントからの専門的聞き取り・現状分析�
 ヒアリングおよび改善提案の出力時には以下の標準フォーマットを使用する。
 
 ```markdown
-# 👂 全エージェント聞き取り調査 & 最重要改善提案
+# 👂 全 13 エージェント聞き取り調査 & 最重要改善提案
 
 ## 1. エージェントヒアリング結果一覧
 - **SC**: ...
@@ -51,6 +68,8 @@ description: 全エージェントからの専門的聞き取り・現状分析�
 - **STR**: ...
 - **SM**: ...
 - **EP**: ...
+- **IR**: ...
+- **EDU**: ...
 - **UIUX**: ...
 
 ## 2. PM 提案：最重要改善項目 (Single Priority Proposal)
