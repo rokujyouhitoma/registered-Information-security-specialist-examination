@@ -120,11 +120,33 @@ if (!fs.existsSync(path.join(SITE_DIR, 'search', 'search_index.json'))) {
     assetMissingErrors++;
 }
 
+// 3. Service Worker プリキャッシュアセットの 100% 配備検証
+console.log('\n⚡ [PWA SW プリキャッシュ検証] sw.js で指定された全アセットの実在状態をチェック中...');
+const swPath = path.join(__dirname, '..', 'src', 'assets', 'sw.js');
+if (fs.existsSync(swPath)) {
+    const swContent = fs.readFileSync(swPath, 'utf-8');
+    const match = swContent.match(/const PRECACHE_ASSETS = \[\s*([\s\S]*?)\s*\];/);
+    if (match) {
+        const rawList = match[1];
+        const assets = rawList.split(',').map(s => s.trim().replace(/^['"]|['"]$/g, '')).filter(Boolean);
+        for (const asset of assets) {
+            let targetPath = path.join(SITE_DIR, asset);
+            if (asset === './' || asset === '.') {
+                targetPath = SITE_DIR;
+            }
+            if (!fs.existsSync(targetPath)) {
+                console.error(`❌ [SW プリキャッシュ404] sw.js 内のプリキャッシュ対象 '${asset}' が site/ 配下に存在しません。`);
+                assetMissingErrors++;
+            }
+        }
+    }
+}
+
 if (assetMissingErrors > 0) {
     console.error(`\n❌ [QAアセット検証失敗] 計 ${assetMissingErrors} 件のアセット配置欠落を検出しました。`);
     process.exit(1);
 } else {
-    console.log('  ✅ [合格] 全機能ディレクトリにおいて必須 JSON データ / JS モジュール / 検索インデックスが 100% 配備されています。');
+    console.log('  ✅ [合格] 全機能ディレクトリおよび sw.js プリキャッシュにおいて必須アセットが 100% 配備されています。');
 }
 
 console.log('\n🎉 [QA検証完了] すべての再発防止品質アサーションに 100% 合格しました！');

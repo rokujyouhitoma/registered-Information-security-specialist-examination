@@ -1,9 +1,8 @@
 const CACHE_NAME = 'sc-exam-cache-v2';
 const PRECACHE_ASSETS = [
   './',
-  './index.html',
+  './docs_index.html',
   './search.html',
-  './compiled.html',
   './search_index.json',
   './data/synonyms.json',
   './data/concept_config.json',
@@ -16,11 +15,17 @@ const PRECACHE_ASSETS = [
   './js/search_worker.js'
 ];
 
-// インストール時にコア静的ファイルをキャッシュ
+// インストール時にコア静的ファイルをキャッシュ (個別フェッチ例外抑止で堅牢化)
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(PRECACHE_ASSETS);
+      return Promise.all(
+        PRECACHE_ASSETS.map((asset) =>
+          cache.add(asset).catch((err) => {
+            console.warn(`[SW] Failed to precache asset: ${asset}`, err);
+          })
+        )
+      );
     }).then(() => self.skipWaiting())
   );
 });
