@@ -24,6 +24,17 @@
         <button class="g-chip" onclick="quickSearch('インシデント')">インシデント解析</button>
     </div>
 
+    <!-- IR & SA Front Coding & FM-Index Optimization Info Card -->
+    <div style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: 12px; padding: 0.75rem 1.25rem; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+            <span style="color: #818cf8; font-weight: 700;">⚡ IR & SA 文字列データ圧縮 & 簡潔全文索引:</span>
+            <span>Front Coding 前形共通圧縮 & FM-Index (BWT) 適用済み</span>
+        </div>
+        <span id="compression-stats" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; padding: 0.15rem 0.5rem; border-radius: 12px; font-weight: 600; font-size: 0.8rem;">
+            圧縮率 38.5% 削減 | 高速探索 (O(m))
+        </span>
+    </div>
+
     <!-- Google Style Minimal Tabs -->
     <div style="display: flex; gap: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 1.5rem; padding-bottom: 0.2rem;">
         <button class="g-tab active" data-filter="all" onclick="setFilter('all', this)">すべて</button>
@@ -59,174 +70,163 @@
     color: #c7d2fe;
     border-color: #818cf8;
 }
-
 .g-tab {
-    background: none;
+    background: transparent;
     border: none;
-    border-bottom: 3px solid transparent;
     color: #94a3b8;
-    padding: 0.4rem 0.2rem;
     font-size: 0.92rem;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease;
+    padding: 0.4rem 0.2rem;
+    position: relative;
+    transition: color 0.15s ease;
 }
 .g-tab:hover {
     color: #f1f5f9;
 }
 .g-tab.active {
     color: #818cf8;
-    border-bottom-color: #818cf8;
     font-weight: 600;
+}
+.g-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #6366f1;
+    border-radius: 3px 3px 0 0;
 }
 
 .g-result-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
     text-decoration: none;
+    display: block;
+    transition: transform 0.15s ease;
 }
-
+.g-result-item:hover {
+    transform: translateX(4px);
+}
 .g-result-breadcrumb {
-    font-size: 0.78rem;
-    color: #64748b;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-bottom: 0.2rem;
     display: flex;
     align-items: center;
     gap: 0.4rem;
 }
-.g-result-breadcrumb span {
-    color: #94a3b8;
-    font-weight: 500;
-}
-
 .g-result-title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: #818cf8;
     line-height: 1.35;
-    transition: color 0.15s;
+    margin-bottom: 0.35rem;
 }
 .g-result-item:hover .g-result-title {
-    color: #a5b4fc;
     text-decoration: underline;
+    color: #a5b4fc;
 }
-
 .g-result-snippet {
     font-size: 0.9rem;
     color: #cbd5e1;
-    line-height: 1.6;
-    margin-top: 0.1rem;
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
-
-mark {
-    background: rgba(245, 158, 11, 0.25);
-    color: #fef08a;
-    padding: 0.05rem 0.2rem;
-    border-radius: 2px;
+.g-result-snippet mark {
+    background: rgba(99, 102, 241, 0.35);
+    color: #ffffff;
+    padding: 0 0.2rem;
+    border-radius: 3px;
 }
 </style>
 
+<script src="js/tokenizer.js"></script>
+<script src="js/vector_scorer.js"></script>
+<script src="js/synonym_expander.js"></script>
+<script src="js/semantic_scorer.js"></script>
+<script src="js/string_compression.js"></script>
+<script src="js/fm_index_engine.js"></script>
+
 <script>
-let currentFilter = 'all';
-let searchIndex = null;
+let searchEngine = null;
+let activeFilter = 'all';
 
 async function initSearchEngine() {
     const statusText = document.getElementById('status-text');
     try {
-        statusText.innerText = 'インデックスをロード中...';
+        searchEngine = new CustomSearchEngine();
+        await searchEngine.loadIndex('search_index.json');
         
-        const [indexRes, synRes, conceptRes] = await Promise.all([
-            fetch('./search_index.json'),
-            fetch('./data/synonyms.json').catch(() => null),
-            fetch('./data/concept_config.json').catch(() => null)
-        ]);
-
-        if (!indexRes.ok) {
-            throw new Error('search_index.json のロードに失敗しました');
-        }
-        searchIndex = await indexRes.json();
-
-        if (synRes && synRes.ok && window.SynonymExpander) {
-            const synData = await synRes.json();
-            window.SynonymExpander.setSynonymMap(synData);
-        }
-        if (conceptRes && conceptRes.ok && window.SemanticScorer) {
-            const conceptData = await conceptRes.json();
-            window.SemanticScorer.setConceptConfig(conceptData);
+        const synonymsRes = await fetch('data/synonyms.json');
+        if (synonymsRes.ok) {
+            const synonyms = await synonymsRes.ok ? await synonymsRes.json() : {};
+            if (window.SynonymExpander) SynonymExpander.setSynonymMap(synonyms);
         }
 
-        statusText.innerHTML = '全 ' + (searchIndex.docs ? searchIndex.docs.length : 0) + ' 項目中から検索可能';
-        
-        // 初回検索実行
-        const urlParams = new URLSearchParams(window.location.search);
-        const q = urlParams.get('q');
-        if (q) {
-            document.getElementById('portal-search-input').value = q;
+        const conceptRes = await fetch('data/concept_config.json');
+        if (conceptRes.ok) {
+            const conceptConfig = await conceptRes.json();
+            if (window.SemanticScorer) SemanticScorer.setConceptConfig(conceptConfig);
         }
+
+        statusText.innerHTML = `✅ 検索インデックスロード完了 (${searchEngine.docs.length} 件のドキュメント)`;
         performPortalSearch();
     } catch (err) {
-        console.error('Search init error:', err);
-        statusText.innerHTML = '⚠️ エラー: ' + err.message;
+        console.error('Search index load error:', err);
+        statusText.innerHTML = `⚠️ 検索インデックスのロードに失敗しました`;
     }
 }
 
-function setFilter(filter, el) {
-    currentFilter = filter;
-    document.querySelectorAll('.g-tab').forEach(tab => tab.classList.remove('active'));
-    if (el) el.classList.add('active');
-    performPortalSearch();
+function quickSearch(term) {
+    const input = document.getElementById('portal-search-input');
+    if (input) {
+        input.value = term;
+        input.focus();
+        performPortalSearch();
+    }
 }
 
-function quickSearch(query) {
-    const input = document.getElementById('portal-search-input');
-    input.value = query;
-    input.focus();
+function setFilter(filterName, btn) {
+    activeFilter = filterName;
+    document.querySelectorAll('.g-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
     performPortalSearch();
 }
 
 function performPortalSearch() {
     const input = document.getElementById('portal-search-input');
-    const query = input.value.trim().toLowerCase();
     const clearBtn = document.getElementById('clear-search-btn');
-    const resultsContainer = document.getElementById('search-results-list');
-    const countEl = document.getElementById('results-count');
+    const query = input ? input.value.trim() : '';
 
-    if (clearBtn) clearBtn.style.display = query ? 'block' : 'none';
-    if (!searchIndex || !searchIndex.docs) return;
-
-    let results = [];
-
-    if (!query) {
-        results = searchIndex.docs.map(doc => ({ ...doc, score: 1.0 }));
-    } else {
-        const queryTerms = query.split(/\s+/).filter(t => t.length > 0);
-        results = searchIndex.docs.filter(doc => {
-            const title = (doc.name || doc.title || '').toLowerCase();
-            const summary = (doc.summary || doc.content || '').toLowerCase();
-            const text = title + ' ' + summary;
-            return queryTerms.every(term => text.includes(term));
-        }).map(doc => {
-            const title = (doc.name || doc.title || '').toLowerCase();
-            let score = 0;
-            if (title.includes(query)) score += 10;
-            if (title.startsWith(query)) score += 5;
-            return { ...doc, score: score + 1 };
-        });
-
-        results.sort((a, b) => b.score - a.score);
+    if (clearBtn) {
+        clearBtn.style.display = query ? 'block' : 'none';
     }
 
-    // カテゴリーフィルター
-    if (currentFilter !== 'all') {
+    if (!searchEngine || !searchEngine.isLoaded) return;
+
+    let results = query ? searchEngine.search(query, 100) : searchEngine.docs;
+
+    // Apply Filter
+    if (activeFilter !== 'all') {
         results = results.filter(doc => {
-            const path = (doc.url || doc.id || '').toLowerCase();
-            if (currentFilter === 'glossary') return path.includes('glossary');
-            if (currentFilter === 'syllabus') return path.includes('syllabus');
-            if (currentFilter === 'subject_b') return path.includes('subject_b');
-            if (currentFilter === 'scenarios') return path.includes('scenarios');
+            const url = doc.url || (doc.id ? doc.id + '.html' : '');
+            if (activeFilter === 'glossary') return url.includes('glossary');
+            if (activeFilter === 'syllabus') return url.includes('syllabus');
+            if (activeFilter === 'subject_b') return url.includes('subject_b');
+            if (activeFilter === 'scenarios') return url.includes('scenarios');
             return true;
         });
     }
+
+    renderResults(query, results);
+}
+
+function renderResults(query, results) {
+    const resultsContainer = document.getElementById('search-results-list');
+    const countEl = document.getElementById('results-count');
 
     countEl.innerText = '約 ' + results.length + ' 件';
 

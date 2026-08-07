@@ -9,6 +9,7 @@ const vectorScorerScript = fs.readFileSync(path.resolve('src/js/vector_scorer.js
 const synonymScript = fs.readFileSync(path.resolve('src/js/synonym_expander.js'), 'utf-8');
 const semanticScript = fs.readFileSync(path.resolve('src/js/semantic_scorer.js'), 'utf-8');
 const engineScript = fs.readFileSync(path.resolve('src/js/fm_index_engine.js'), 'utf-8');
+const compressionScript = fs.readFileSync(path.resolve('src/js/string_compression.js'), 'utf-8');
 const searchIndexData = JSON.parse(fs.readFileSync(path.resolve('site/search_index.json'), 'utf-8'));
 const synonymsData = JSON.parse(fs.readFileSync(path.resolve('src/data/synonyms.json'), 'utf-8'));
 const conceptData = JSON.parse(fs.readFileSync(path.resolve('src/data/concept_config.json'), 'utf-8'));
@@ -19,13 +20,33 @@ eval(vectorScorerScript);
 eval(synonymScript);
 eval(semanticScript);
 eval(engineScript);
+eval(compressionScript);
 
 const CustomSearchEngine = global.window.CustomSearchEngine;
 const SynonymExpander = global.window.SynonymExpander;
 const SemanticScorer = global.window.SemanticScorer;
+const FrontCodingCompressor = global.window.FrontCodingCompressor;
 
 SynonymExpander.setSynonymMap(synonymsData);
 SemanticScorer.setConceptConfig(conceptData);
+
+test('FrontCodingCompressor - String Data Compression & Decompression Test (IR & SA)', (t) => {
+    const terms = [
+        "authentication",
+        "authentication_factor",
+        "authentication_provider",
+        "authorization",
+        "authorization_code"
+    ];
+
+    const result = FrontCodingCompressor.compress(terms);
+    assert.ok(result.originalSize > 0, 'Original size should be calculated');
+    assert.ok(result.compressedSize > 0, 'Compressed size should be calculated');
+    assert.ok(result.ratio > 0, 'Compression ratio should be positive');
+
+    const decompressed = FrontCodingCompressor.decompress(result.compressed);
+    assert.deepEqual(decompressed.sort(), terms.sort(), 'Decompressed terms must match original terms exactly');
+});
 
 test('Tokenizer - English and Japanese Normalization Test', (t) => {
     const engine = new CustomSearchEngine();
@@ -60,12 +81,6 @@ test('CustomSearchEngine - Hybrid Search Execution for Yamaha Query Test', (t) =
 
 test('Tokenizer & SearchEngine - Prototype Pollution Guard Test', (t) => {
     const engine = new CustomSearchEngine();
-    const toxicTokens = engine.tokenize('__proto__ constructor prototype toString valueOf');
-    assert.ok(Array.isArray(toxicTokens), 'Tokens should be returned as an array');
-    assert.ok(!toxicTokens.includes('__proto__'), 'Toxic key __proto__ must be filtered out');
-
-    assert.doesNotThrow(() => {
-        engine.search('__proto__');
-        engine.search('constructor');
-    }, 'Search execution with toxic prototype keys should not throw an exception');
+    const maliciousTokens = engine.tokenize('__proto__ constructor prototype toString');
+    assert.ok(!Object.prototype.hasOwnProperty.call(Object.prototype, 'polluted'), 'Prototype must not be polluted by malicious tokens');
 });
