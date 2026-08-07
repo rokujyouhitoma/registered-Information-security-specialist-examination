@@ -338,6 +338,7 @@ def markdown_to_html(md_text):
 
     in_list = False
     list_type = 'ul'
+    in_raw_block = False
 
     for line in lines:
         # ── コードブロックの処理 ──
@@ -437,6 +438,23 @@ def markdown_to_html(md_text):
         if in_list:
             html_out.append(f'</{list_type}>')
             in_list = False
+
+        # ── HTML タグ行 (script, style, div など) または Scriptブロック内部はそのまま出力 ──
+        stripped_line = line.strip()
+        if stripped_line.startswith('<script') or stripped_line.startswith('<style'):
+            in_raw_block = True
+            html_out.append(line)
+            continue
+        if stripped_line.startswith('</script>') or stripped_line.startswith('</style>'):
+            in_raw_block = False
+            html_out.append(line)
+            continue
+        if in_raw_block:
+            html_out.append(line)
+            continue
+        if stripped_line.startswith('<') and not re.match(r'^<https?://', stripped_line):
+            html_out.append(line)
+            continue
 
         # ── 通常のパラグラフ ──
         p_text = parse_inline(line)

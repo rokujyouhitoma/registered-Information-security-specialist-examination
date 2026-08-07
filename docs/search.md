@@ -143,74 +143,61 @@
 }
 </style>
 
-<!-- 🌐 Dynamic Universal Path Resolver & Script Loader (GitHub Pages / Directory Router Compatible) -->
-<script>
-(function() {
-    // URL パスからリポジトリルートベースパスを動的検出
-    var loc = window.location.pathname;
-    var basePath = './';
-    
-    if (loc.indexOf('/registered-information-security-specialist-examination/') !== -1) {
-        var parts = loc.split('/registered-information-security-specialist-examination/');
-        basePath = parts[0] + '/registered-information-security-specialist-examination/';
-    } else if (loc.endsWith('/search/') || loc.indexOf('/search/') !== -1) {
-        basePath = '../';
-    }
-    
-    window.__APP_BASE_PATH__ = basePath;
-
-    var scripts = [
-        'js/tokenizer.js',
-        'js/vector_scorer.js',
-        'js/synonym_expander.js',
-        'js/semantic_scorer.js',
-        'js/string_compression.js',
-        'js/fm_index_engine.js'
-    ];
-
-    for (var i = 0; i < scripts.length; i++) {
-        document.write('<script src="' + basePath + scripts[i] + '"><\/script>');
-    }
-    
-    // Fallback Bundle
-    document.write('<script>if(typeof CustomSearchEngine==="undefined"){document.write("<script src=\\""+basePath+"fm_index_engine.min.js\\"><\\/script>");}<\/script>');
-})();
-</script>
+<script src="js/tokenizer.js"></script>
+<script src="js/vector_scorer.js"></script>
+<script src="js/synonym_expander.js"></script>
+<script src="js/semantic_scorer.js"></script>
+<script src="js/string_compression.js"></script>
+<script src="js/fm_index_engine.js"></script>
 
 <script>
 let searchEngine = null;
 let activeFilter = 'all';
 
+async function fetchWithFallback(pathList) {
+    for (let i = 0; i < pathList.length; i++) {
+        try {
+            const res = await fetch(pathList[i]);
+            if (res.ok) return res;
+        } catch (e) {
+            // try next path
+        }
+    }
+    throw new Error('All path attempts failed for ' + pathList[0]);
+}
+
 async function initSearchEngine() {
     const statusText = document.getElementById('status-text');
-    const basePath = window.__APP_BASE_PATH__ || './';
 
     try {
         if (typeof CustomSearchEngine === 'undefined') {
-            throw new Error('CustomSearchEngine is not defined after scripts load');
+            throw new Error('CustomSearchEngine is not defined. Please check script load order.');
         }
 
         searchEngine = new CustomSearchEngine();
-        await searchEngine.loadIndex(basePath + 'search_index.json');
+        
+        // パスフォールバック試行 (site/search.html, site/search/index.html, GitHub Pages)
+        const indexRes = await fetchWithFallback(['search_index.json', './search_index.json', '../search_index.json']);
+        const indexData = await indexRes.json();
+        searchEngine.docs = indexData.docs || [];
+        searchEngine.idf = indexData.idf || {};
+        searchEngine.vectors = indexData.vectors || {};
+        searchEngine.isLoaded = true;
         
         try {
-            const synonymsRes = await fetch(basePath + 'data/synonyms.json');
-            if (synonymsRes.ok) {
-                const synonyms = await synonymsRes.json();
-                if (window.SynonymExpander) SynonymExpander.setSynonymMap(synonyms);
-            }
+            const synonymsRes = await fetchWithFallback(['data/synonyms.json', './data/synonyms.json', '../data/synonyms.json']);
+            const synonyms = await synonymsRes.json();
+            if (window.SynonymExpander) SynonymExpander.setSynonymMap(synonyms);
         } catch (e) {
-            console.warn('Synonyms load fallback warning:', e);
+            console.warn('Synonyms load warning:', e);
         }
 
         try {
-            const conceptRes = await fetch(basePath + 'data/concept_config.json');
-            if (conceptRes.ok) {
-                const conceptConfig = await conceptRes.json();
-                if (window.SemanticScorer) SemanticScorer.setConceptConfig(conceptConfig);
-            }
+            const conceptRes = await fetchWithFallback(['data/concept_config.json', './data/concept_config.json', '../data/concept_config.json']);
+            const conceptConfig = await conceptRes.json();
+            if (window.SemanticScorer) SemanticScorer.setConceptConfig(conceptConfig);
         } catch (e) {
-            console.warn('Concept config load fallback warning:', e);
+            console.warn('Concept config load warning:', e);
         }
 
         statusText.innerHTML = `✅ 検索インデックスロード完了 (${searchEngine.docs.length} 件のドキュメント)`;
