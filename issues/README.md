@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 079 | Refactor | [agent-hearing-proposal スキルへの多段階エージェント再レビュー＆polish-issue 品質磨き上げサイクルの組込み](closed/079-enhance-agent-hearing-proposal-quality-review-loop.md) | 2026-08-07 | [079-enhance-agent-hearing-proposal-quality-review-loop.md](closed/079-enhance-agent-hearing-proposal-quality-review-loop.md) |
 | 078 | Feature | [外部 JSON データ駆動によるサイバー攻撃・解析シナリオ演習機能の開発と Web UI/UX タイムライン解析画面の導入](closed/078-data-driven-attack-scenarios-timeline-ui.md) | 2026-08-07 | [078-data-driven-attack-scenarios-timeline-ui.md](closed/078-data-driven-attack-scenarios-timeline-ui.md) |
 | 077 | Refactor | [学習ドキュメント (docs/exam_cheatsheet.md) からのエージェントメタ表記の除去](closed/077-remove-agent-meta-references-from-docs.md) | 2026-08-07 | [077-remove-agent-meta-references-from-docs.md](closed/077-remove-agent-meta-references-from-docs.md) |
 | 076 | Refactor | [exam_overview.md の純粋IPA公式化および exam_cheatsheet.md への科目Bキーフレーズ集独立分離](closed/076-extract-cheatsheet-to-separate-file.md) | 2026-08-07 | [076-extract-cheatsheet-to-separate-file.md](closed/076-extract-cheatsheet-to-separate-file.md) |
