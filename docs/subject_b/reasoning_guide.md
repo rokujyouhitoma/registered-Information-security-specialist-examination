@@ -56,3 +56,34 @@ graph LR
 - [ ] 問題文中のキーワード（システム名、サーバー名、プロトコル名）を正確に使用しているか？
 - [ ] 抽象的な言葉（例: 「セキュリティを高めるため」）を具体化（例: 「セッションハイジャックを防止するため」）できているか？
 - [ ] 文字数が指定範囲の 80%〜100% に収まっているか？
+
+---
+
+## 5. セキュアプログラミング比較視覚化 (Vulnerable vs Safe Code Snippets)
+
+科目 B 記述試験で頻出する Web / Web API セキュアプログラミング設問の対比解析です。
+
+### 5.1 SQL インジェクション (SQLi) 防御
+- ❌ **脆弱な実装 (Vulnerable)**: 文字列結合による動的 SQL 生成
+  ```javascript
+  // 脆弱: ユーザー入力が直接 SQL 文字列に結合される
+  const query = "SELECT * FROM users WHERE username = '" + req.body.username + "' AND password = '" + req.body.password + "'";
+  ```
+- ✅ **セキュアな実装 (Safe)**: プレースホルダによるバインド機構 (Parameterized Query)
+  ```javascript
+  // セキュア: プレースホルダによりリテラル値としてデータ分離処理
+  const query = "SELECT * FROM users WHERE username = ? AND password = ?";
+  db.execute(query, [req.body.username, req.body.password]);
+  ```
+
+### 5.2 XSS (クロスサイトスクリプティング) 防御
+- ❌ **脆弱な実装 (Vulnerable)**: `innerHTML` への直接挿入
+  ```javascript
+  // 脆弱: ユーザー入力の HTML タグ/スクリプトがそのまま実行される
+  document.getElementById("output").innerHTML = userInput;
+  ```
+- ✅ **セキュアな実装 (Safe)**: Safe DOM (`textContent`) またはエスケープ処理
+  ```javascript
+  // セキュア: エスケープ不要でプレーンテキストとしてレンダリング
+  document.getElementById("output").textContent = userInput;
+  ```

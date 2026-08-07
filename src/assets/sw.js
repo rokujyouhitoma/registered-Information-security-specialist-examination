@@ -1,14 +1,19 @@
-const CACHE_NAME = 'sc-exam-cache-v1';
+const CACHE_NAME = 'sc-exam-cache-v2';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
   './search.html',
   './compiled.html',
   './search_index.json',
+  './data/synonyms.json',
+  './data/concept_config.json',
   './fm_index_engine.min.js',
   './js/tokenizer.js',
+  './js/synonym_expander.js',
+  './js/semantic_scorer.js',
   './js/vector_scorer.js',
-  './js/fm_index_engine.js'
+  './js/fm_index_engine.js',
+  './js/search_worker.js'
 ];
 
 // インストール時にコア静的ファイルをキャッシュ
