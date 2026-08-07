@@ -1,0 +1,53 @@
+[
+  {
+    "id": "scenario-01",
+    "title": "標的型攻撃メールによる C2 通信と内部ネットワーク横展開シナリオ",
+    "severity": "High",
+    "category": "ネットワーク & マルウェア",
+    "steps": [
+      {
+        "stepNumber": 1,
+        "phase": "初期侵入 (Initial Access)",
+        "action": "業務連絡を装った標的型メールに悪意あるマクロ付き Excel ファイルが添付され、従業員が開披・実行した。",
+        "detection": "プロキシログおよび EDR による未認証外部 IP への異常な HTTP/HTTPS 通信の検知。",
+        "countermeasure": "送信ドメイン認証(SPF/DKIM/DMARC)のポリシー厳格化、添付ファイル無害化サニタイズ処理。"
+      },
+      {
+        "stepNumber": 2,
+        "phase": "C2 確立 (Command and Control)",
+        "action": "マルウェアが暗号化通信を用いて攻撃者の外部 C2 サーバーとの接続を確立し、追加モジュールをダウンロードした。",
+        "detection": "DNS ログにおける不審なドメインへの大量クエリ(DNS Tunneling)検知。",
+        "countermeasure": "DNSBL(ブラックリスト)によるブロック、プロキシによるカテゴリフィルタリングと SSL/TLS 復号検査。"
+      },
+      {
+        "stepNumber": 3,
+        "phase": "内部横展開 (Lateral Movement)",
+        "action": "感染端末から Active Directory や同セグメント内サーバーへ Pass-the-Hash 攻撃で不正アクセスを試みた。",
+        "detection": "ドメインコントローラーログにおける短時間での複数端末への管理者権限認証要求検知。",
+        "countermeasure": "ネットワークのマイクロセグメンテーション分離、PAM(特権ID管理)および多要素認証(MFA)の強制。"
+      }
+    ]
+  },
+  {
+    "id": "scenario-02",
+    "title": "Web アプリケーションの Blind SQLi 攻撃による会員 DB 全データ奪取シナリオ",
+    "severity": "Critical",
+    "category": "Webセキュリティ & DB",
+    "steps": [
+      {
+        "stepNumber": 1,
+        "phase": "偵察・パラメータ探索 (Reconnaissance)",
+        "action": "攻撃者がログイン画面および検索フォームの入力パラメータにシングルクォートを挿入し、レスポンス時間の差異を観測した。",
+        "detection": "WAF ログにおける SQL 制御文字を含む特殊リクエストの連続検出。",
+        "countermeasure": "入力値のエスケープおよび WAF のシグネチャベースによる一時ブロック。"
+      },
+      {
+        "stepNumber": 2,
+        "phase": "データ抽出 (Exfiltration)",
+        "action": "Time-based Blind SQLi 手法を用いて、1文字ずつデータベースのスキーマ構造および個人情報テーブルを復元・抽出した。",
+        "detection": "DB アクセスログにおける単一ソース IP からの定常的かつ高頻度な SELECT クエリ実行。",
+        "countermeasure": "プレースホルダを用いたバインド機構 (Parameterized Query) への改修による根本対策。"
+      }
+    ]
+  }
+]
