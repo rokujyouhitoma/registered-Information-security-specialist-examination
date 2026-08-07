@@ -66,5 +66,6 @@ nav:
       - サイバー攻撃・解析シナリオ: scenarios/attack_scenarios_analysis.md
       - ハンズオン インシデント解析: scenarios/hands_on_incident_analysis.md
   - 📖 試験対策ガイド:
-      - 試験概要: exam_overview.md
+      - IPA 公式試験概要: exam_overview.md
+      - ⚡ 試験直前対策 虎の巻 (キーフレーズ): exam_cheatsheet.md
       - ITSS 到達度セルフチェック: itss_self_assessment_guide.md
