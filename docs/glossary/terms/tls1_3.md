@@ -1,60 +1,61 @@
 ---
-title: "TLS 1.3 (Transport Layer Security 1.3)"
-last_updated: "2026-08-01"
-author: "Information Security Specialist Agent"
+title: "TLS 1.3 トランスポート層セキュリティ"
+last_updated: "2026-08-07"
+author: "Network Specialist Agent & Systems Architect Agent"
 ---
 
-# 🔒 TLS 1.3 (Transport Layer Security 1.3)
+# 🔒 TLS 1.3 トランスポート層セキュリティ
 
 ## 1. 概要 (Overview)
-**TLS 1.3 (RFC 8446)** は、トランスポート層で通信相手の認証、データの暗号化（秘匿性）、および改ざん検知（完全性）を提供する暗号プロトコルの最新仕様である。
-
-従来の TLS 1.2 と比較して、ハンドシェイクのラウンドトリップタイム (RTT) を短縮（2-RTT ➔ 1-RTT / 0-RTT）し、古い脆弱な暗号方式を全廃することで、パフォーマンスと安全性の双方を飛躍的に向上させた。
+**TLS 1.3 (RFC 8446)** は、インターネット通信の暗号化プロトコル TLS の最新バージョンであり、接続遅延の削減 (1-RTT / 0-RTT) と静的 RSA や CBC モード等の脆弱な暗号方式の完全廃止（前方秘匿性の標準化）を実現した。
 
 ---
 
-## 2. TLS 1.2 と TLS 1.3 の主要変更点・比較
+## 🎯 2. データ駆動 TLS 1.3 vs 1.2 ハンドシェイク比較ナビゲーター
 
-| 項目 | TLS 1.2 | TLS 1.3 |
-|---|---|---|
-| **ハンドシェイク遅延** | 2-RTT | **1-RTT** (再接続時は **0-RTT** / Early Data) |
-| **暗号スイート仕様** | 鍵交換・認証・暗号・ハッシュが複合定義 | 鍵交換と対称暗号・ハッシュが独立分離 |
-| **鍵交換アルゴリズム** | RSA, DH, ECDH, DHE, ECDHE | **ECDHE, DHE のみ** (完全前方秘匿性 PFS 強制) |
-| **対称暗号方式** | CBCモード, RC4, 3DES, AEAD | **AEAD のみ** (AES-GCM, AES-CCM, ChaCha20-Poly1305) |
-| **ハンドシェイク暗号化** | 証明書や各種応答が平文送信 | **ClientHello 以降の全メッセージを暗号化** |
+<div id="tls-app" style="max-width: 850px; margin: 2rem 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+    <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+        <div id="tls-container">データをロード中...</div>
+    </div>
+</div>
+
+<script>
+async function loadTLSData() {
+    try {
+        const res = await fetch('../../../data/tls_comparison.json');
+        if (!res.ok) throw new Error('tls_comparison.json ロード失敗');
+        const data = await res.json();
+        
+        document.getElementById('tls-container').innerHTML = `
+            <h4 style="color: #f8fafc; margin-top: 0;">⚡ ハンドシェイク往復回数 (RTT) 比較</h4>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                <div style="flex: 1; min-width: 250px; background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 1rem; border-radius: 0 8px 8px 0;">
+                    <strong style="color: #fca5a5;">🔴 TLS 1.2 (2-RTT ハンドシェイク)</strong>
+                    <ul style="margin-top: 0.5rem; padding-left: 1.2rem; color: #cbd5e1; font-size: 0.88rem;">
+                        ${data.handshakeSteps.tls12.map(s => `<li style="margin-bottom:0.3rem;">${s}</li>`).join('')}
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 250px; background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; padding: 1rem; border-radius: 0 8px 8px 0;">
+                    <strong style="color: #6ee7b7;">🟢 TLS 1.3 (1-RTT / 0-RTT ハンドシェイク)</strong>
+                    <ul style="margin-top: 0.5rem; padding-left: 1.2rem; color: #cbd5e1; font-size: 0.88rem;">
+                        ${data.handshakeSteps.tls13.map(s => `<li style="margin-bottom:0.3rem;">${s}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+            
+            <h4 style="color: #f8fafc; margin-bottom: 0.5rem;">⛔ TLS 1.3 で完全に廃止された脆弱な機能</h4>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                ${data.deprecatedFeatures.map(f => `<span style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 0.3rem 0.7rem; font-size: 0.82rem;">${f}</span>`).join('')}
+            </div>
+        `;
+    } catch (e) {
+        console.error(e);
+    }
+}
+document.addEventListener('DOMContentLoaded', loadTLSData);
+</script>
 
 ---
 
-## 3. ハンドシェイクシーケンス (1-RTT Handshake)
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Client as クライアント (Browser)
-    participant Server as サーバー (Web Server)
-
-    Client->>Server: ClientHello (サポート暗号スイート + 鍵共有パラメータ ECDHE Share)
-    Note over Server: 共通鍵 (Handshake Secret) の計算
-    Server-->>Client: ServerHello + EncryptedExtensions + Certificate + Finished
-    Note over Client: サーバー証明書の検証 + 共通鍵の計算
-    Client->>Server: Finished (通信開始準備完了)
-    Note over Client,Server: 1-RTT で鍵交換完了。以降 App Data (HTTP/2, HTTP/3) を AEAD 暗号化通信
-```
-
----
-
-## 4. 試験対策ポイント (Exam Preparation Guidelines)
-
-> [!IMPORTANT]
-> **支援士試験における急所・キーワード**:
-> 1. **前方秘匿性 (PFS: Perfect Forward Secrecy)**: RSA 鍵交換（サーバーの秘密鍵でプレマスターシークレットを暗号化する方式）が非推奨化され、毎セッションごとに使い捨ての鍵対を生成する ECDHE 方式のみが採用された。
-> 2. **0-RTT (Early Data) 攻撃リスク**: 再接続時の高速化機能である 0-RTT データは、リプレイ攻撃 (Replay Attack) に弱いため、冪等性のないリクエスト (POST等) での利用制限が必須。
-> 3. **AEAD (認証付き暗号) の必須化**: 過去の Padding Oracle 攻撃の温床であった CBC モードが排除され、暗号化と完全性検証を一体処理する GCM/CCM のみが許可される。
-
----
-
-## 5. 関連キーワード・相互リンク
-- [AEAD (認証付き暗号)](../syllabus_ver2_1.md#aead)
-- [AES-GCM](../syllabus_ver2_1.md#gcm)
-- [ECDSA / ECDHE](../syllabus_ver2_1.md#ecdsa)
-- [PFS (Perfect Forward Secrecy)](../syllabus_tsuiho_ver4_0.md#pfs)
+## 3. 試験対策重要ポイント
+- **PFS (Perfect Forward Secrecy / 前方秘匿性)**: 過去の暗号通信がサーバーの秘密鍵漏洩によって一括解読されることを防ぐ。ECDHE (楕円曲線ディフィ・ヘルマン) 鍵交換が標準化。
