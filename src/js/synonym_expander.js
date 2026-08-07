@@ -53,7 +53,7 @@ class SynonymExpander {
 
 /**
  * @private
- * @type {Object<string, !Array<string>>|null}
+ * @type {?Object<string, !Array<string>>}
  */
 SynonymExpander._synonymMap = null;
 

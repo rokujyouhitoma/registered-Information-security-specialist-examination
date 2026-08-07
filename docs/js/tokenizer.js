@@ -6,7 +6,7 @@
 class Tokenizer {
     /**
      * ストップワード一覧を設定する
-     * @param {Array<string>} list
+     * @param {!Array<string>} list
      */
     static setStopWords(list) {
         if (Array.isArray(list)) {
@@ -74,7 +74,7 @@ class Tokenizer {
     }
 }
 
-/** @type {Set<string>} */
+/** @type {!Set<string>} */
 Tokenizer._stopWords = new Set();
 
 if (typeof globalThis !== 'undefined') {

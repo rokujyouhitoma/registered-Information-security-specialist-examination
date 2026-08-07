@@ -7,7 +7,7 @@
 class SemanticScorer {
     /**
      * 外部から概念設定データ (カテゴリ一覧およびキーワードマップ) をロード・設定する
-     * @param {{categories: (Array<string>|null), keywords: (Object<string, Array<string>>|null)}} config
+     * @param {{categories: (?Array<string>|undefined), keywords: (?Object<string, !Array<string>>|undefined)}} config
      */
     static setConceptConfig(config) {
         if (config && typeof config === 'object') {
@@ -150,13 +150,13 @@ class SemanticScorer {
 
 /**
  * @private
- * @type {Array<string>|null}
+ * @type {?Array<string>}
  */
 SemanticScorer._categories = null;
 
 /**
  * @private
- * @type {Object<string, !Array<string>>|null}
+ * @type {?Object<string, !Array<string>>}
  */
 SemanticScorer._keywordsMap = null;
 
