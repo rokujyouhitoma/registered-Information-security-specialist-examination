@@ -8,7 +8,8 @@
 
 | ID | 種別 | タイトル | 担当 / ステータス | 課題ファイル |
 |---|---|---|---|---|
-| - | - | 現在アクティブな Issue はありません | - | - |
+| 098 | Feature | [外部依存ゼロの自作シーケンス図 (Sequence Diagram) パーサー＆SVG レンダラーライブラリの構築と HTML ビルド統合](098-implement-no-dependency-sequence-diagram-renderer.md) | ST & SA / In Progress | [098-implement-no-dependency-sequence-diagram-renderer.md](098-implement-no-dependency-sequence-diagram-renderer.md) |
+
 
 ---
 

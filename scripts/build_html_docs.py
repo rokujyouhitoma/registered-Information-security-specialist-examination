@@ -378,13 +378,16 @@ def copy_static_assets():
                 print(f"  📦 [データコピー] data/{item} -> site/data/{item} & docs/data/{item}")
 
 
+from sequence_diagram_parser import parse_and_render_sequence_diagram
+
 def markdown_to_html(md_text):
-    """簡易 Markdown パーサー"""
+    """簡易 Markdown パーサー (自作 Sequence Diagram SVG レンダラー統合)"""
     lines = md_text.split('\n')
     html_out = []
 
     in_code_block = False
     code_block_lines = []
+    code_block_lang = ""
 
     in_table = False
     table_lines = []
@@ -397,15 +400,23 @@ def markdown_to_html(md_text):
         # ── コードブロックの処理 ──
         if line.strip().startswith('```'):
             if in_code_block:
-                code_content = html.escape('\n'.join(code_block_lines))
-                html_out.append(f'<pre><code>{code_content}</code></pre>')
+                code_raw = '\n'.join(code_block_lines)
+                if code_block_lang == 'mermaid' or 'sequenceDiagram' in code_raw:
+                    # 自作 Lexer -> Parser -> AST -> Renderer による Native SVG 描画
+                    svg_html = parse_and_render_sequence_diagram(code_raw)
+                    html_out.append(svg_html)
+                else:
+                    code_content = html.escape(code_raw)
+                    html_out.append(f'<pre><code>{code_content}</code></pre>')
                 code_block_lines = []
+                code_block_lang = ""
                 in_code_block = False
             else:
                 if in_list:
                     html_out.append(f'</{list_type}>')
                     in_list = False
                 in_code_block = True
+                code_block_lang = line.strip()[3:].strip().lower()
             continue
 
         if in_code_block:
