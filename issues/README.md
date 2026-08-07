@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 063 | Feature | [md-tabs__list メニュー導線に対応した検索専用ページの開発](closed/063-create-dedicated-search-page-tab-nav.md) | 2026-08-07 | [063-create-dedicated-search-page-tab-nav.md](closed/063-create-dedicated-search-page-tab-nav.md) |
 | 062 | Refactor | [site/ 配下のソースコード (JS/sw.js/manifest.json) の src/ への集約とビルド処理の整備](closed/062-move-site-sources-to-src.md) | 2026-08-07 | [062-move-site-sources-to-src.md](closed/062-move-site-sources-to-src.md) |
 | 061 | Feature | [CI/CD による /site ディレクトリの動的ビルドおよび自動デプロイ化](closed/061-automate-site-build-cicd.md) | 2026-08-07 | [061-automate-site-build-cicd.md](closed/061-automate-site-build-cicd.md) |
 | 060 | Feature | [シノニム辞書拡張 (A) × 概念ベクトルセマンティック検索 (B) ハイブリッド検索エンジンの開発](closed/060-implement-hybrid-synonym-semantic-search.md) | 2026-08-06 | [060-implement-hybrid-synonym-semantic-search.md](closed/060-implement-hybrid-synonym-semantic-search.md) |

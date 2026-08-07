@@ -45,6 +45,7 @@ markdown_extensions:
 
 nav:
   - ホーム: index.md
+  - 🔍 総合検索: search.md
   - シラバス体系:
       - シラバス概要: syllabus.md
       - 公式シラバス Ver.2.1 詳細: syllabus_detail.md
