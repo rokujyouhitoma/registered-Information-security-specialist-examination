@@ -61,24 +61,14 @@ classDiagram
 
 ---
 
-### 2.2 `SynonymExpander` (`site/js/synonym_expander.js`)
-- **メソッド**: `expandTokens(tokens: Array<string>): Array<string>`
-- **同義語マッピング定義 (一部抜粋)**:
-
-```javascript
-{
-    'ヤマハ': ['ヤマハ', 'yamaha', 'ルーター', 'rtx', 'vpn', 'ipsec', '拠点間接続', '境界防御'],
-    'シスコ': ['シスコ', 'cisco', 'catalyst', 'スイッチ', 'ルーター', '802.1x', 'ios'],
-    'パロアルト': ['パロアルト', 'paloalto', '次世代fw', 'ngfw', 'pan-os', 'app-id'],
-    'フォーティネット': ['フォーティネット', 'fortinet', 'fortigate', 'utm', 'waf'],
-    'aws': ['aws', 'クラウド', 's3', 'iam', '責任共有モデル', 'vpc'],
-    'mfa': ['mfa', '多要素認証', 'totp', 'fido2', 'バイオメトリクス']
-}
-```
+### 2.2 `SynonymExpander` ([src/js/synonym_expander.js](../src/js/synonym_expander.js))
+- **外部データソース**: [src/data/synonyms.json](../src/data/synonyms.json)
+- **メソッド**: `setSynonymMap(map)`, `expandTokens(tokens: Array<string>): Array<string>`
 
 ---
 
-### 2.3 `SemanticScorer` (`site/js/semantic_scorer.js`)
+### 2.3 `SemanticScorer` ([src/js/semantic_scorer.js](../src/js/semantic_scorer.js))
+- **外部データソース**: [src/data/concept_config.json](../src/data/concept_config.json)
 - **概念カテゴリ**: `['network', 'crypto', 'web_sec', 'cloud', 'governance', 'incident']`
 - **計算式**:
   $$\text{Score}_{\text{semantic}} = 2.5 \times \sum_{k \in \text{Categories}} \hat{v}_{\text{query}}[k] \cdot \hat{v}_{\text{doc}}[k]$$
@@ -115,3 +105,21 @@ $$\text{Score}_{\text{final}} = \text{Score}_{\text{BM25\_Synonym}} + 0.5 \cdot 
 ## 4. 関連ドキュメント
 - [システム基本設計書 (HLD: High-Level Design)](system_high_level_design.md)
 - [レイアウト・設計ガイドライン](docs_architecture_and_layout_design.md)
+
+---
+
+## 5. データ駆動設計原則 (Data-Driven Architecture Principle)
+
+本システムの検索・評価ロジックにおいては、プログラムコード (JavaScript / Python) とドメインデータ (辞書、概念分類、キーワードマッピング) を完全に分離する**データ駆動設計原則 (Data-Driven Design)** を厳格に適用しています。
+
+### 5.1 設計ルール
+1. **処理系とデータの分離・非結合化**:
+   - シノニム辞書 ([src/data/synonyms.json](../src/data/synonyms.json)) や概念カテゴリ・キーワード定義 ([src/data/concept_config.json](../src/data/concept_config.json)) 等のドメインデータは、JavaScript 内にハードコードせず、独立した外部 JSON データファイルとして分離管理する。
+2. **動的ロードとデータ注入**:
+   - `SynonymExpander` および `SemanticScorer` などのモジュールは、`setSynonymMap(data)` や `setConceptConfig(config)` メソッドを通じて外部から動的にデータを注入して実行する。
+3. **ビルド時のアセット自動同期**:
+   - `src/data/` 配下のデータソースは、ビルドパイプライン (`scripts/build_html_docs.py`) によって `site/data/` 配下へ自動的に同期・デプロイされる。
+
+### 5.2 メリットと保守性
+- **ロジック非依存のデータ更新**: シノニム語彙の追加や概念カテゴリのキーワード調整の際、JS コードを改変することなく JSON の更新のみで即座に精度向上・調整が可能。
+- **多言語・複数ランタイム間でのデータ共有**: 同一の JSON データファイルを JavaScript (ブラウザ / Web Worker / Node.js) と Python (ビルド・検証スクリプト) で一元的に共有可能。

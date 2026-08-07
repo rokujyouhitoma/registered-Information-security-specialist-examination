@@ -509,6 +509,18 @@ def copy_static_assets():
                 shutil.copy2(s_path, d_path)
                 print(f"  📦 [JSコピー] js/{item} -> site/js/{item}")
 
+    # 3. src/data -> site/data
+    data_src_dir = os.path.join(SRC_DIR, "data")
+    data_dest_dir = os.path.join(SITE_DIR, "data")
+    if os.path.exists(data_src_dir):
+        os.makedirs(data_dest_dir, exist_ok=True)
+        for item in os.listdir(data_src_dir):
+            s_path = os.path.join(data_src_dir, item)
+            d_path = os.path.join(data_dest_dir, item)
+            if os.path.isfile(s_path):
+                shutil.copy2(s_path, d_path)
+                print(f"  📦 [データコピー] data/{item} -> site/data/{item}")
+
 
 def build_docs():
     """docs/ 配下のすべての md ファイルを site/ に HTML としてビルド"""

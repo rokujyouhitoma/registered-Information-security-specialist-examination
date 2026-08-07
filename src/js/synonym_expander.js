@@ -1,25 +1,32 @@
 /**
  * @fileoverview シノニム辞書・クエリ拡張モジュール (Synonym Query Expansion Module)
  * IR 提案 (アプローチ A) によるベンダー名・略語から技術概念への展開
+ * データ駆動設計原則 (Data-Driven Design) に準拠
  */
 
 class SynonymExpander {
+    /**
+     * @private
+     * @type {Object<string, Array<string>>|null}
+     */
+    static _synonymMap = null;
+
+    /**
+     * 外部シノニム辞書データをロード・設定する
+     * @param {Object<string, Array<string>>} map
+     */
+    static setSynonymMap(map) {
+        if (map && typeof map === 'object') {
+            SynonymExpander._synonymMap = map;
+        }
+    }
+
+    /**
+     * 現在設定されているシノニムマップを取得する
+     * @return {Object<string, Array<string>>}
+     */
     static getSynonymMap() {
-        return {
-            'ヤマハ': ['ヤマハ', 'yamaha', 'ルーター', 'rtx', 'vpn', 'ipsec', '拠点間接続', '境界防御'],
-            'yamaha': ['ヤマハ', 'yamaha', 'ルーター', 'rtx', 'vpn', 'ipsec', '拠点間接続', '境界防御'],
-            'シスコ': ['シスコ', 'cisco', 'catalyst', 'スイッチ', 'ルーター', '802.1x', 'ios'],
-            'cisco': ['シスコ', 'cisco', 'catalyst', 'スイッチ', 'ルーター', '802.1x', 'ios'],
-            'パロアルト': ['パロアルト', 'paloalto', '次世代fw', 'ngfw', 'pan-os', 'app-id'],
-            'paloalto': ['パロアルト', 'paloalto', '次世代fw', 'ngfw', 'pan-os', 'app-id'],
-            'フォーティネット': ['フォーティネット', 'fortinet', 'fortigate', 'utm', 'waf'],
-            'fortinet': ['フォーティネット', 'fortinet', 'fortigate', 'utm', 'waf'],
-            'aws': ['aws', 'クラウド', 's3', 'iam', '責任共有モデル', 'vpc'],
-            'mfa': ['mfa', '多要素認証', 'totp', 'fido2', 'バイオメトリクス'],
-            'pki': ['pki', '公開鍵基盤', '電子証明書', 'ca', '認証局', 'x.509'],
-            'xss': ['xss', 'クロスサイトスクリプティング', 'csp', 'エスケープ', 'サニタイズ'],
-            'sqli': ['sqli', 'sqlインジェクション', 'プレースホルダ', 'バインド機構']
-        };
+        return SynonymExpander._synonymMap || {};
     }
 
     /**
@@ -34,7 +41,7 @@ class SynonymExpander {
 
         tokens.forEach(t => {
             const lower = t.toLowerCase();
-            if (map[lower]) {
+            if (map[lower] && Array.isArray(map[lower])) {
                 map[lower].forEach(syn => expandedSet.add(syn));
             }
         });

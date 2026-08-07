@@ -155,12 +155,27 @@ let customEngine = null;
 async function initSearchEngine() {
     const statusText = document.getElementById('status-text');
     try {
-        statusText.innerText = '検索インデックスをロード中...';
-        const response = await fetch('./search_index.json');
-        if (!response.ok) {
+        statusText.innerText = '検索インデックスおよびドメイン辞書をロード中...';
+        
+        const [indexRes, synRes, conceptRes] = await Promise.all([
+            fetch('./search_index.json'),
+            fetch('./data/synonyms.json').catch(() => null),
+            fetch('./data/concept_config.json').catch(() => null)
+        ]);
+
+        if (!indexRes.ok) {
             throw new Error('search_index.json のロードに失敗しました');
         }
-        searchIndex = await response.json();
+        searchIndex = await indexRes.json();
+
+        if (synRes && synRes.ok && window.SynonymExpander) {
+            const synData = await synRes.json();
+            window.SynonymExpander.setSynonymMap(synData);
+        }
+        if (conceptRes && conceptRes.ok && window.SemanticScorer) {
+            const conceptData = await conceptRes.json();
+            window.SemanticScorer.setConceptConfig(conceptData);
+        }
 
         statusText.innerHTML = '✅ インデックスロード完了 (全 ' + (searchIndex.docs ? searchIndex.docs.length : 0) + ' 項目)';
         

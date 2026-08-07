@@ -1,9 +1,37 @@
 /**
  * @fileoverview セマンティック概念スコアラー (Semantic Concept Scorer Module)
  * IR 提案 (アプローチ B) による密概念ベクトル類似度計算
+ * データ駆動設計原則 (Data-Driven Design) に準拠
  */
 
 class SemanticScorer {
+    /**
+     * @private
+     * @type {Array<string>|null}
+     */
+    static _categories = null;
+
+    /**
+     * @private
+     * @type {Object<string, Array<string>>|null}
+     */
+    static _keywordsMap = null;
+
+    /**
+     * 外部から概念設定データ (カテゴリ一覧およびキーワードマップ) をロード・設定する
+     * @param {{categories: Array<string>, keywords: Object<string, Array<string>>}} config
+     */
+    static setConceptConfig(config) {
+        if (config && typeof config === 'object') {
+            if (Array.isArray(config.categories)) {
+                SemanticScorer._categories = config.categories;
+            }
+            if (config.keywords && typeof config.keywords === 'object') {
+                SemanticScorer._keywordsMap = config.keywords;
+            }
+        }
+    }
+
     /**
      * キーのプロトタイプ汚染安全性を判定する
      * @param {string} key
@@ -14,10 +42,19 @@ class SemanticScorer {
     }
 
     /**
-     * 主要セキュリティ概念カテゴリマッピング
+     * 設定済みの主要セキュリティ概念カテゴリマッピングを取得
+     * @return {Array<string>}
      */
     static getConceptCategories() {
-        return ['network', 'crypto', 'web_sec', 'cloud', 'governance', 'incident'];
+        return SemanticScorer._categories || [];
+    }
+
+    /**
+     * 設定済みのキーワードマップを取得
+     * @return {Object<string, Array<string>>}
+     */
+    static getKeywordsMap() {
+        return SemanticScorer._keywordsMap || {};
     }
 
     /**
@@ -27,27 +64,27 @@ class SemanticScorer {
      */
     static extractConceptVector(tokens) {
         const vec = Object.create(null);
-        vec.network = 0.0;
-        vec.crypto = 0.0;
-        vec.web_sec = 0.0;
-        vec.cloud = 0.0;
-        vec.governance = 0.0;
-        vec.incident = 0.0;
+        const categories = SemanticScorer.getConceptCategories();
+        const keywordsMap = SemanticScorer.getKeywordsMap();
+
+        categories.forEach(cat => {
+            if (SemanticScorer.isSafeKey(cat)) {
+                vec[cat] = 0.0;
+            }
+        });
 
         if (!tokens || !Array.isArray(tokens)) return vec;
-
-        const networkKeywords = ['ルーター', 'vpn', 'ipsec', 'ヤマハ', 'rtx', 'スイッチ', 'ファイアウォール', '通信', 'nw', 'ネットワーク'];
-        const cryptoKeywords = ['暗号', 'tls', 'pki', '証明書', '鍵', 'rsa', 'aes', 'ハッシュ'];
-        const webKeywords = ['xss', 'sqli', 'csrf', 'web', 'http', 'サニタイズ', 'cookie', 'csp'];
-        const cloudKeywords = ['aws', 'クラウド', 's3', 'iam', 'saas', 'paas', 'iaas'];
 
         tokens.forEach(t => {
             if (SemanticScorer.isSafeKey(t)) {
                 const lower = t.toLowerCase();
-                if (networkKeywords.some(k => lower.includes(k))) vec.network += 1.0;
-                if (cryptoKeywords.some(k => lower.includes(k))) vec.crypto += 1.0;
-                if (webKeywords.some(k => lower.includes(k))) vec.web_sec += 1.0;
-                if (cloudKeywords.some(k => lower.includes(k))) vec.cloud += 1.0;
+                categories.forEach(cat => {
+                    if (SemanticScorer.isSafeKey(cat) && Object.prototype.hasOwnProperty.call(keywordsMap, cat) && Array.isArray(keywordsMap[cat])) {
+                        if (keywordsMap[cat].some(k => lower.includes(k))) {
+                            vec[cat] = (vec[cat] || 0.0) + 1.0;
+                        }
+                    }
+                });
             }
         });
 

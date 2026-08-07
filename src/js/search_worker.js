@@ -13,6 +13,22 @@ self.onmessage = async function(e) {
 
     if (action === 'INIT') {
         try {
+            // 外部 JSON データの動的ロード (データ駆動設計)
+            try {
+                const [synRes, conceptRes] = await Promise.all([
+                    fetch('data/synonyms.json').catch(() => null),
+                    fetch('data/concept_config.json').catch(() => null)
+                ]);
+                if (synRes && synRes.ok && self.SynonymExpander) {
+                    const synData = await synRes.json();
+                    self.SynonymExpander.setSynonymMap(synData);
+                }
+                if (conceptRes && conceptRes.ok && self.SemanticScorer) {
+                    const conceptData = await conceptRes.json();
+                    self.SemanticScorer.setConceptConfig(conceptData);
+                }
+            } catch (ignoreErr) {}
+
             searchEngineInstance = new self.CustomSearchEngine();
             const response = await fetch(dataPath || 'search_index.json');
             const data = await response.json();

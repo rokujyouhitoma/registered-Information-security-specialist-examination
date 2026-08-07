@@ -10,6 +10,8 @@ const synonymScript = fs.readFileSync(path.resolve('src/js/synonym_expander.js')
 const semanticScript = fs.readFileSync(path.resolve('src/js/semantic_scorer.js'), 'utf-8');
 const engineScript = fs.readFileSync(path.resolve('src/js/fm_index_engine.js'), 'utf-8');
 const searchIndexData = JSON.parse(fs.readFileSync(path.resolve('site/search_index.json'), 'utf-8'));
+const synonymsData = JSON.parse(fs.readFileSync(path.resolve('src/data/synonyms.json'), 'utf-8'));
+const conceptData = JSON.parse(fs.readFileSync(path.resolve('src/data/concept_config.json'), 'utf-8'));
 
 global.window = {};
 eval(tokenizerScript);
@@ -20,6 +22,10 @@ eval(engineScript);
 
 const CustomSearchEngine = global.window.CustomSearchEngine;
 const SynonymExpander = global.window.SynonymExpander;
+const SemanticScorer = global.window.SemanticScorer;
+
+SynonymExpander.setSynonymMap(synonymsData);
+SemanticScorer.setConceptConfig(conceptData);
 
 test('Tokenizer - English and Japanese Normalization Test', (t) => {
     const engine = new CustomSearchEngine();
