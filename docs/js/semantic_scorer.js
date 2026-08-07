@@ -60,45 +60,54 @@ class SemanticScorer {
     }
 
     /**
-     * トークン群から概念ベクトルを動的生成する
-     * @param {!Array<string>} tokens
+     * @private
+     * 概念ベクトルの初期化ヘルパー
+     * @param {!Array<string>} categories
      * @return {!Object<string, number>}
      */
-    static extractConceptVector(tokens) {
+    static _initConceptVector(categories) {
         const vec = Object.create(null);
-        const categories = SemanticScorer.getConceptCategories();
-        const keywordsMap = SemanticScorer.getKeywordsMap();
-
         categories.forEach(cat => {
             if (SemanticScorer.isSafeKey(cat)) {
                 vec[cat] = 0.0;
             }
         });
+        return vec;
+    }
 
-        if (!tokens || !Array.isArray(tokens)) return vec;
-
-        tokens.forEach(t => {
-            if (SemanticScorer.isSafeKey(t)) {
-                const lower = t.toLowerCase();
-                categories.forEach(cat => {
-                    if (SemanticScorer.isSafeKey(cat) && Object.prototype.hasOwnProperty.call(keywordsMap, cat) && Array.isArray(keywordsMap[cat])) {
-                        if (keywordsMap[cat].some(k => lower.includes(k))) {
-                            vec[cat] = (vec[cat] || 0.0) + 1.0;
-                        }
-                    }
-                });
+    /**
+     * @private
+     * 単一トークンに対するカテゴリ出現度加算ヘルパー
+     * @param {string} token
+     * @param {!Array<string>} categories
+     * @param {!Object<string, Array<string>>} keywordsMap
+     * @param {!Object<string, number>} vec
+     */
+    static _accumulateTokenCategories(token, categories, keywordsMap, vec) {
+        if (!SemanticScorer.isSafeKey(token)) return;
+        const lower = token.toLowerCase();
+        categories.forEach(cat => {
+            if (SemanticScorer.isSafeKey(cat) && Object.prototype.hasOwnProperty.call(keywordsMap, cat) && Array.isArray(keywordsMap[cat])) {
+                if (keywordsMap[cat].some(k => lower.includes(k))) {
+                    vec[cat] = (vec[cat] || 0.0) + 1.0;
+                }
             }
         });
+    }
 
-        // ノルム正規化
-        let norm = 0.0;
+    /**
+     * @private
+     * ベクトルの L2 ノルム正規化ヘルパー
+     * @param {!Object<string, number>} vec
+     */
+    static _normalizeConceptVector(vec) {
+        let normSq = 0.0;
         Object.keys(vec).forEach(k => {
             if (SemanticScorer.isSafeKey(k)) {
-                norm += (vec[k] || 0.0) * (vec[k] || 0.0);
+                normSq += (vec[k] || 0.0) * (vec[k] || 0.0);
             }
         });
-        norm = Math.sqrt(norm);
-
+        const norm = Math.sqrt(normSq);
         if (norm > 0) {
             Object.keys(vec).forEach(k => {
                 if (SemanticScorer.isSafeKey(k)) {
@@ -106,7 +115,25 @@ class SemanticScorer {
                 }
             });
         }
+    }
 
+    /**
+     * トークン群から概念ベクトルを動的生成する
+     * @param {!Array<string>} tokens
+     * @return {!Object<string, number>}
+     */
+    static extractConceptVector(tokens) {
+        const categories = SemanticScorer.getConceptCategories();
+        const keywordsMap = SemanticScorer.getKeywordsMap();
+        const vec = SemanticScorer._initConceptVector(categories);
+
+        if (!tokens || !Array.isArray(tokens)) return vec;
+
+        tokens.forEach(t => {
+            SemanticScorer._accumulateTokenCategories(t, categories, keywordsMap, vec);
+        });
+
+        SemanticScorer._normalizeConceptVector(vec);
         return vec;
     }
 

@@ -9,12 +9,13 @@
     "build:docs": "python3 scripts/build_html_docs.py && python3 scripts/fm_index_search.py --query 'TLS'",
     "build": "npm run build:js && npm run build:docs",
     "test:unit": "node --test tests/unit/search_engine.test.js",
+    "test:complexity": "python3 scripts/verify_cyclomatic_complexity.py",
     "test:traceability": "node scripts/verify_traceability.js",
     "test:audit": "python3 scripts/audit_glossary_quality.py",
     "test:quiz": "python3 scripts/quiz_runner.py --test",
     "test:search": "python3 scripts/fm_index_search.py --query 'TLS'",
     "test:build-integrity": "node scripts/verify_build_integrity.js",
-    "test": "npm run test:unit && npm run test:traceability && npm run test:audit && npm run test:quiz && npm run test:search && npm run test:build-integrity"
+    "test": "npm run test:unit && npm run test:complexity && npm run test:traceability && npm run test:audit && npm run test:quiz && npm run test:search && npm run test:build-integrity"
   },
   "devDependencies": {
     "google-closure-compiler": "^20240317.0.0"

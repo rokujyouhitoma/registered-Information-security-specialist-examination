@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 096 | Feature | [ADR-02 循環的複雑度 (Cyclomatic Complexity) 閾値規定の設計導入と自動検証ツールの構築](closed/096-adopt-adr02-cyclomatic-complexity-threshold.md) | 2026-08-07 | [096-adopt-adr02-cyclomatic-complexity-threshold.md](closed/096-adopt-adr02-cyclomatic-complexity-threshold.md) |
 | 095 | Refactor | [JavaScript 検索エンジンモジュールの SA アーキテクチャ再設計 (高凝集・低結合・SecurityValidator 集約)](closed/095-refactor-js-architecture-cohesion-coupling.md) | 2026-08-07 | [095-refactor-js-architecture-cohesion-coupling.md](closed/095-refactor-js-architecture-cohesion-coupling.md) |
 | 094 | Bug | [検索結果画面 (docs/search.md) からのリンク遷移時の 404 Not Found エラーの修正](closed/094-fix-search-result-link-404.md) | 2026-08-07 | [094-fix-search-result-link-404.md](closed/094-fix-search-result-link-404.md) |
 | 093 | Feature | [外部 JSON データ駆動によるストップワード除去機構の導入と全文検索エンジンの検索適合率向上](closed/093-data-driven-stopwords-filtering-engine.md) | 2026-08-07 | [093-data-driven-stopwords-filtering-engine.md](closed/093-data-driven-stopwords-filtering-engine.md) |
