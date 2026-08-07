@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 071 | Feature | [mkdocs.yml ナビゲーション構造の完全最適化およびデータ駆動型演習クイズ機能の開発](closed/071-optimize-mkdocs-nav-and-data-driven-quiz.md) | 2026-08-07 | [071-optimize-mkdocs-nav-and-data-driven-quiz.md](closed/071-optimize-mkdocs-nav-and-data-driven-quiz.md) |
 | 069 | Feature | [Web 学習ポータルの PWA・UI/UX（TOC・レスポンシブ）刷新と科目 B ビジュアル解法ガイドの拡充](closed/069-pwa-uiux-portal-enhancement-subject-b.md) | 2026-08-07 | [069-pwa-uiux-portal-enhancement-subject-b.md](closed/069-pwa-uiux-portal-enhancement-subject-b.md) |
 | 068 | Feature | [用語集 Phase 2 全ドメイン一括精緻化および全自動マルチエージェント QA 品質監査システムの構築](closed/068-glossary-phase2-refinement-and-qa-automation.md) | 2026-08-07 | [068-glossary-phase2-refinement-and-qa-automation.md](closed/068-glossary-phase2-refinement-and-qa-automation.md) |
 | 067 | Refactor | [project-docs/ の体系的再編・MNG-01 準拠ドキュメント台帳整備・UIUX 改善および AU 最終監査](closed/067-reorganize-project-docs-ledger-ux-audit.md) | 2026-08-07 | [067-reorganize-project-docs-ledger-ux-audit.md](closed/067-reorganize-project-docs-ledger-ux-audit.md) |

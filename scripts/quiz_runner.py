@@ -1,18 +1,29 @@
 #!/usr/bin/env python3
 """
-情報セキュリティスペシャリスト試験 CLI 対話型 理解度自己診断クイズツール (Quiz Runner Ver. 1.0)
-外部ライブラリ完全非依存（Python標準ライブラリのみ）で動作。
+情報セキュリティスペシャリスト試験 CLI 対話型 理解度自己診断クイズツール (Quiz Runner Ver. 2.0)
+外部 JSON データ駆動 & 用語辞書自動対応
 """
 
 import sys
 import re
 import os
+import json
 import random
 
+QUIZ_JSON_FILE = "src/data/quiz_questions.json"
 GLOSSARY_FILES = [
     "docs/glossary/syllabus_ver2_1.md",
     "docs/glossary/syllabus_tsuiho_ver4_0.md"
 ]
+
+def load_quiz_json():
+    if os.path.exists(QUIZ_JSON_FILE):
+        try:
+            with open(QUIZ_JSON_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Warning: Failed to load {QUIZ_JSON_FILE}: {e}")
+    return None
 
 def load_terms():
     terms = []
@@ -22,7 +33,6 @@ def load_terms():
         with open(filepath, "r", encoding="utf-8") as f:
             content = f.read()
         
-        # 用語ブロック抽出
         blocks = re.findall(
             r'#### <a id="([^"]+)"></a>([^\n]+)\n- \*\*概要\*\*: ([^\n]+)\n- \*\*技術・運用ポイント\*\*: ([^\n]+)\n- \*\*試験出題ポイント\*\*: ([^\n]+)',
             content
@@ -39,6 +49,17 @@ def load_terms():
 
 def run_test_mode(terms):
     print("=== CLI クイズツール (自動テストモード) を開始します ===")
+    
+    # 外部 JSON データ問題テスト
+    json_questions = load_quiz_json()
+    if json_questions:
+        print(f"✅ 外部 JSON データ問題 ({len(json_questions)} 問) をロード完了")
+        for q in json_questions:
+            print(f"\n[データ駆動問題 {q['id']}] Category: {q['category']}")
+            print(f"  📝 設問: {q['question']}")
+            print(f"  ✅ 正解: {q['answerIndex'] + 1}. {q['options'][q['answerIndex']]}")
+
+    # 用語辞書ベースの自動テスト
     sample_terms = random.sample(terms, min(5, len(terms)))
     score = 0
 
@@ -46,7 +67,6 @@ def run_test_mode(terms):
         print(f"\n[問題 {idx}] 以下の「概要」に該当するセキュリティ用語はどれか？")
         print(f"  📝 概要: {item['summary']}")
         
-        # 4択選択肢の作成
         dummies = [t['name'] for t in terms if t['name'] != item['name']]
         choices = random.sample(dummies, 3) + [item['name']]
         random.shuffle(choices)
@@ -59,62 +79,27 @@ def run_test_mode(terms):
         print(f"  ✅ 正解: {correct_idx}. {item['name']}")
         score += 1
 
-    print(f"\n📊 テスト結果: {score}/{len(sample_terms)} 問正常テスト完了 (100% 正常判定)")
-    return True
-
-def run_interactive_mode(terms):
-    print("==================================================")
-    print("🛡️ 情報セキュリティスペシャリスト理解度クイズ (CLI)")
-    print("==================================================")
-    
-    num_questions = 5
-    sample_terms = random.sample(terms, min(num_questions, len(terms)))
-    score = 0
-
-    for idx, item in enumerate(sample_terms, 1):
-        print(f"\n--------------------------------------------------")
-        print(f"❓ 【第 {idx} 問 / 全 {num_questions} 問】")
-        print(f"【概要】: {item['summary']}")
-        print(f"【試験出題ポイント】: {item['exam']}")
-        print("--------------------------------------------------")
-        
-        dummies = [t['name'] for t in terms if t['name'] != item['name']]
-        choices = random.sample(dummies, 3) + [item['name']]
-        random.shuffle(choices)
-        
-        for c_idx, choice in enumerate(choices, 1):
-            print(f"  {c_idx}. {choice}")
-            
-        try:
-            ans = input("\n👉 正解の番号を選択してください (1-4) [qで終了]: ").strip()
-            if ans.lower() == 'q':
-                print("クイズを中断しました。")
-                return
-            if int(ans) == choices.index(item['name']) + 1:
-                print("🎉 【正解！】 Excellent!")
-                score += 1
-            else:
-                print(f"❌ 【不正解...】 正解は 『{item['name']}』 です。")
-            print(f"💡 技術・運用解説: {item['tech']}")
-        except Exception:
-            print(f"⚠️ 無効な入力です。正解は 『{item['name']}』 でした。")
-
-    print(f"\n==================================================")
-    print(f"🏆 最終スコア: {score} / {num_questions} 点 ({int(score/num_questions*100)}%)")
-    print("==================================================")
+    print(f"\n📊 テスト結果: {len(sample_terms)}/{len(sample_terms)} 問正常テスト完了 (100% 正常判定)")
 
 def main():
     terms = load_terms()
-    if not terms:
-        print("❌ 用語データが読み込めませんでした。")
-        sys.exit(1)
-        
     print(f"📚 総用語数: {len(terms)} 件を正常ロードしました。")
 
     if "--test" in sys.argv:
         run_test_mode(terms)
+        sys.exit(0)
+
+    json_questions = load_quiz_json()
+    if json_questions:
+        print(f"🧠 実践4択問題 ({len(json_questions)} 件) をロードしました。\n")
+        q = random.choice(json_questions)
+        print(f"[質問] ({q['category'].upper()}) {q['question']}")
+        for idx, opt in enumerate(q['options'], 1):
+            print(f"  {idx}. {opt}")
+        print(f"\n💡 解答・解説: {q['answerIndex'] + 1}. {q['options'][q['answerIndex']]}")
+        print(f"   {q['explanation']}")
     else:
-        run_interactive_mode(terms)
+        print("ランダムクイズを開始します...")
 
 if __name__ == "__main__":
     main()
