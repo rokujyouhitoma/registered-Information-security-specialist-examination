@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 107 | Fix | [issues/closed/ 配下における絶対パスリンク (file:///) の完全相対パス化クレンジングと check_relative_paths.py 判定合格化](closed/107-fix-absolute-path-link-violations.md) | 2026-08-08 | [107-fix-absolute-path-link-violations.md](closed/107-fix-absolute-path-link-violations.md) |
 | 106 | Feature | [Web Worker 検索コア (search_worker.js) への FrontCodingCompressor 組み込みと圧縮統計メッセージング機能の拡張](closed/106-integrate-string-compression-in-search-worker.md) | 2026-08-08 | [106-integrate-string-compression-in-search-worker.md](closed/106-integrate-string-compression-in-search-worker.md) |
 | 105 | Feature | [FrontCodingCompressor の CustomSearchEngine への高度統合と検索インデックス語彙辞書前形差分圧縮機能の実装](closed/105-integrate-front-coding-compression-in-search-index.md) | 2026-08-08 | [105-integrate-front-coding-compression-in-search-index.md](closed/105-integrate-front-coding-compression-in-search-index.md) |
 | 104 | Build | [Closure Compiler における全判定ルールのエラー化 (--jscomp_error=*) と超極限型チェックフラグの導入](closed/104-ultra-strict-closure-compiler-flags.md) | 2026-08-07 | [104-ultra-strict-closure-compiler-flags.md](closed/104-ultra-strict-closure-compiler-flags.md) |
