@@ -3,8 +3,8 @@
  * SA 提案 (Priority 1) および IR ハイブリッド検索 (Issue 060) 対応
  */
 
-// Worker スコープでのスクリプト非同期ロード (セキュリティ A & シノニム B & 密概念 C)
-importScripts('security_validator.js', 'tokenizer.js', 'vector_scorer.js', 'synonym_expander.js', 'semantic_scorer.js', 'fm_index_engine.js');
+// Worker スコープでのスクリプト非同期ロード (セキュリティ A & シノニム B & 密概念 C & 文字列前形差分圧縮 D)
+importScripts('security_validator.js', 'tokenizer.js', 'vector_scorer.js', 'synonym_expander.js', 'semantic_scorer.js', 'string_compression.js', 'fm_index_engine.js');
 
 let searchEngineInstance = null;
 
@@ -55,9 +55,14 @@ async function _handleInitAction(dataPath) {
         searchEngineInstance.idf = data.idf || {};
         searchEngineInstance.vectors = data.vectors || {};
         searchEngineInstance._buildInvertedIndex();
+        const compressStats = searchEngineInstance.compressTerms();
         searchEngineInstance.isLoaded = true;
 
-        self.postMessage({ status: 'READY', totalDocs: searchEngineInstance.docs.length });
+        self.postMessage({
+            status: 'READY',
+            totalDocs: searchEngineInstance.docs.length,
+            compressStats: compressStats
+        });
     } catch (err) {
         self.postMessage({ status: 'ERROR', error: err.message });
     }

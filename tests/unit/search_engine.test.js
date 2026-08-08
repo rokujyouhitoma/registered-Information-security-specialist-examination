@@ -160,3 +160,10 @@ test('CustomSearchEngine - QA Robust Boundary Values Test (null, undefined, inva
     });
 });
 
+test('Search Worker - Script Import & Message Contract Assertion Test', (t) => {
+    const workerScript = fs.readFileSync(path.resolve('src/js/search_worker.js'), 'utf-8');
+    assert.ok(workerScript.includes("importScripts('security_validator.js', 'tokenizer.js', 'vector_scorer.js', 'synonym_expander.js', 'semantic_scorer.js', 'string_compression.js', 'fm_index_engine.js');"), 'Worker must import string_compression.js before fm_index_engine.js');
+    assert.ok(workerScript.includes('compressStats: compressStats'), 'Worker READY payload must include compressStats');
+});
+
+
