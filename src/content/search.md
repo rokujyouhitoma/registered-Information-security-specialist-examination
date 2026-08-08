@@ -161,18 +161,9 @@
 }
 </style>
 
-<!-- 標準 Script 読み込み -->
-<script src="js/security_validator.js"></script>
-<script src="js/tokenizer.js"></script>
-<script src="js/vector_scorer.js"></script>
-<script src="js/synonym_expander.js"></script>
-<script src="js/semantic_scorer.js"></script>
-<script src="js/string_compression.js"></script>
-<script src="js/fm_index_engine.js"></script>
-
 <script>
-let searchEngine = null;
-let activeFilter = 'all';
+var searchEngine = window.searchEngine || null;
+var activeFilter = 'all';
 
 function clearSearchInput() {
     const input = document.getElementById('portal-search-input');
@@ -235,7 +226,7 @@ async function ensureCustomSearchEngineLoaded() {
     }
 }
 
-let devModeActive = localStorage.getItem('dev_debug_mode') === null ? true : localStorage.getItem('dev_debug_mode') === 'true';
+var devModeActive = localStorage.getItem('dev_debug_mode') === null ? true : localStorage.getItem('dev_debug_mode') === 'true';
 
 function updateDevModeUI() {
     const btn = document.getElementById('dev-mode-toggle');

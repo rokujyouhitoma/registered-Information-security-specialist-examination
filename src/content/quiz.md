@@ -84,11 +84,11 @@ IPA 情報処理安全確保支援士試験 (SC) のシラバス重要概念・�
 </style>
 
 <script>
-let rawQuestions = [];
-let activeQuestions = [];
-let currentIdx = 0;
-let currentShuffledOptions = [];
-let shuffledCorrectIndex = 0;
+var rawQuestions = window.rawQuestions || [];
+var activeQuestions = window.activeQuestions || [];
+var currentIdx = 0;
+var currentShuffledOptions = [];
+var shuffledCorrectIndex = 0;
 
 function shuffleArray(array) {
     const arr = array.slice();

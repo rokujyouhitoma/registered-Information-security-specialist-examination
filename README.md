@@ -109,8 +109,8 @@ npm run test:search       # 検索エンジンテスト
 
 ```
 .
-├── docs/                      # プロジェクト管理・設計開発資材 (要求定義, 仕様書, アーキテクチャ, 脅威モデル, ADR)
-├── issues/                    # Issue 駆動開発トラック・完了ログ (closed/)
+├── docs/                      # プロジェクト管理・設計開発資材 (要求定義, 仕様書, アーキテクチャ, 脅威モデル, ADR, issues)
+│   └── issues/                # Issue 駆動開発トラック・完了ログ (closed/)
 ├── references/                # IPA公式シラバス・NISTリファレンス資料
 ├── scripts/                   # 各種ツール (監査, インデックス生成, クイズ, トレース)
 ├── site/                      # フルスクラッチ Web 検索ポータル (index.html, content, js, data)

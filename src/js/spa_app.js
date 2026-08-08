@@ -227,15 +227,41 @@ class SPAApp {
      */
     executeEmbeddedScripts(container) {
         const scripts = container.querySelectorAll("script");
+        const loadedScripts = Array.from(document.querySelectorAll("script")).map(sc => {
+            const src = sc.getAttribute("src") || "";
+            return src.split("/").pop();
+        }).filter(Boolean);
+
         scripts.forEach(s => {
-            const newScript = document.createElement("script");
-            if (s.src) {
-                newScript.src = s.src;
+            const srcAttr = s.getAttribute("src");
+            if (srcAttr) {
+                const filename = srcAttr.split("/").pop();
+                if (filename && loadedScripts.includes(filename)) {
+                    return;
+                }
+                const newScript = document.createElement("script");
+                newScript.src = srcAttr;
+                if (document.body) {
+                    document.body.appendChild(newScript);
+                }
             } else {
-                newScript.textContent = s.textContent;
-            }
-            if (document.body) {
-                document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                let code = s.textContent.trim();
+                if (!code) return;
+
+                // Replace top-level let and const declarations with var
+                // to prevent SyntaxError: Identifier 'xxx' has already been declared
+                // when re-evaluating inline scripts during SPA route changes.
+                code = code.replace(/^(\s*)(let|const)\s+([a-zA-Z0-9_$]+)/gm, "$1var $3");
+
+                try {
+                    const newScript = document.createElement("script");
+                    newScript.textContent = code;
+                    if (document.body) {
+                        document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                    }
+                } catch (err) {
+                    console.warn("SPAApp: Inline script execution warning:", err);
+                }
             }
         });
     }

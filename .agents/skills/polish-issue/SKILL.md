@@ -27,7 +27,7 @@ This skill guides the agent in refining a raw issue into a concrete, action-read
 
 5. **Update Issue Status & Ledger**:
    - Update the `ステータス` field in the metadata block at the top of the issue file to `Open (In Progress)`.
-   - Open [issues/README.md](README.md) (Issue台帳).
+   - Open [docs/issues/README.md](README.md) (Issue台帳).
    - Update the status of the polished issue from `New` or `Analyzing` to `In Progress` to indicate it is ready for development.
 
 6. **Self-Review**:
