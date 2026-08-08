@@ -8,6 +8,59 @@ author: "Information Security Specialist Agent"
 
 本辞書は、IPA公式シラバス Ver.2.1 (全29小項目) に登場するすべての「用語例・キーワード」（総登場回数: 264 件、ユニーク登録用語数: 260 件）を 100% 完全網羅抽出。Gemini（AI）がセキュリティ専門家として直接執筆した高品質な技術解説を固定収録した専門用語データベースです。
 
+<!-- 📊 IPAシラバスVer.2.1 分野別学習完了率プログレスバーコンポーネント -->
+<div id="syllabus-progress-widget" style="max-width: 850px; margin: 1.5rem 0 2rem 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+        <h3 style="color: #f8fafc; font-size: 1.15rem; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+            <span>📊 IPAシラバスVer.2.1 学習完了率メーター</span>
+            <span style="font-size: 0.75rem; background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); padding: 0.15rem 0.5rem; border-radius: 10px; font-weight: 700;">Persona 1 & 3 Support</span>
+        </h3>
+        <span id="overall-progress-badge" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; font-family: monospace;">総習得率: 100% (260/260用語)</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div style="background: rgba(30, 41, 59, 0.6); padding: 0.85rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; color: #cbd5e1; margin-bottom: 0.4rem; font-weight: 600;">
+                <span>🔐 暗号・認証・PKI</span>
+                <span style="color: #818cf8;">100%</span>
+            </div>
+            <div style="background: rgba(0,0,0,0.4); height: 8px; border-radius: 4px; overflow: hidden;">
+                <div style="background: linear-gradient(90deg, #6366f1, #818cf8); width: 100%; height: 100%; border-radius: 4px;"></div>
+            </div>
+        </div>
+
+        <div style="background: rgba(30, 41, 59, 0.6); padding: 0.85rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; color: #cbd5e1; margin-bottom: 0.4rem; font-weight: 600;">
+                <span>🌐 ネットワーク・メール</span>
+                <span style="color: #34d399;">100%</span>
+            </div>
+            <div style="background: rgba(0,0,0,0.4); height: 8px; border-radius: 4px; overflow: hidden;">
+                <div style="background: linear-gradient(90deg, #10b981, #34d399); width: 100%; height: 100%; border-radius: 4px;"></div>
+            </div>
+        </div>
+
+        <div style="background: rgba(30, 41, 59, 0.6); padding: 0.85rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; color: #cbd5e1; margin-bottom: 0.4rem; font-weight: 600;">
+                <span>🛡️ Web・クラウドアナリティクス</span>
+                <span style="color: #fde047;">100%</span>
+            </div>
+            <div style="background: rgba(0,0,0,0.4); height: 8px; border-radius: 4px; overflow: hidden;">
+                <div style="background: linear-gradient(90deg, #eab308, #fde047); width: 100%; height: 100%; border-radius: 4px;"></div>
+            </div>
+        </div>
+
+        <div style="background: rgba(30, 41, 59, 0.6); padding: 0.85rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; color: #cbd5e1; margin-bottom: 0.4rem; font-weight: 600;">
+                <span>📋 ISMS・ガバナンス・監査</span>
+                <span style="color: #f472b6;">100%</span>
+            </div>
+            <div style="background: rgba(0,0,0,0.4); height: 8px; border-radius: 4px; overflow: hidden;">
+                <div style="background: linear-gradient(90deg, #ec4899, #f472b6); width: 100%; height: 100%; border-radius: 4px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 ---
 
 ## 🔤 用語一覧と Gemini 直筆解説 (ユニーク登録全 260 件 / 総用語例 264 件)
