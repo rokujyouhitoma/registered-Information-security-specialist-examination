@@ -272,6 +272,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <script src="{rel_root}js/frameworks/publisher.js"></script>
     <script src="{rel_root}js/frameworks/router.js"></script>
     <script src="{rel_root}js/frameworks/scene.js"></script>
+    <!-- Search Engine Dependencies (must load before fm_index_engine.js) -->
+    <script src="{rel_root}js/security_validator.js"></script>
+    <script src="{rel_root}js/tokenizer.js"></script>
+    <script src="{rel_root}js/vector_scorer.js"></script>
+    <script src="{rel_root}js/synonym_expander.js"></script>
+    <script src="{rel_root}js/semantic_scorer.js"></script>
+    <script src="{rel_root}js/string_compression.js"></script>
     <script src="{rel_root}js/fm_index_engine.js"></script>
     <script src="{rel_root}js/spa_app.js"></script>
 

@@ -187,7 +187,15 @@ async function fetchWithFallback(pathList) {
 }
 
 async function ensureCustomSearchEngineLoaded() {
-    if (typeof CustomSearchEngine !== 'undefined') return;
+    // 依存スクリプトは index.html テンプレートでグローバルにロード済みのはず。
+    // ただし、スタンドアロンアクセスや古いキャッシュのフォールバックとして
+    // CustomSearchEngine と Tokenizer の両方が定義済みか確認し、
+    // 未定義なら動的ロードを試みる。
+    const allDepsLoaded = (
+        typeof CustomSearchEngine !== 'undefined' &&
+        typeof Tokenizer !== 'undefined'
+    );
+    if (allDepsLoaded) return;
 
     const loc = window.location.pathname;
     let base = './';
