@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 117 | Feature | [全文検索 UI デバッグモードにおける Yuzora 仕様準拠キーバインド (d/D/Ctrl+Shift+D/Escape) の実装](closed/117-add-yuzora-style-keybindings-for-search-dev-debug-mode.md) | 2026-08-08 | [117-add-yuzora-style-keybindings-for-search-dev-debug-mode.md](closed/117-add-yuzora-style-keybindings-for-search-dev-debug-mode.md) |
 | 116 | Feature | [全文検索 UI からの技術指標バナーの非表示化と開発者向けデバッグモード（検索スコアオーバーレイ）の追加](closed/116-hide-technical-compression-card-and-add-dev-debug-score-overlay.md) | 2026-08-08 | [116-hide-technical-compression-card-and-add-dev-debug-score-overlay.md](closed/116-hide-technical-compression-card-and-add-dev-debug-score-overlay.md) |
 | 115 | Feature | [全 37 ページにおける「⚡ 虎の巻 (exam_cheatsheet.html)」を含む一貫したヘッダーナビゲーションの適用アサーションとモバイルレスポンシブ幅の最適化](closed/115-verify-cheatsheet-link-and-header-consistency.md) | 2026-08-08 | [115-verify-cheatsheet-link-and-header-consistency.md](closed/115-verify-cheatsheet-link-and-header-consistency.md) |
 | 114 | Feature | [全 Web ページにおけるグローバルナビゲーションヘッダーの完全統一とトップポータル (site/index.html) の生成適正化](closed/114-unify-global-navigation-header-across-all-pages.md) | 2026-08-08 | [114-unify-global-navigation-header-across-all-pages.md](closed/114-unify-global-navigation-header-across-all-pages.md) |

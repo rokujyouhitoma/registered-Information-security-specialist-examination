@@ -250,7 +250,7 @@ function updateDevModeUI() {
     const btn = document.getElementById('dev-mode-toggle');
     const techCard = document.getElementById('dev-tech-card');
     if (btn) {
-        btn.innerText = devModeActive ? '🛠️ Dev Mode: ON' : '🛠️ Dev Mode: OFF';
+        btn.innerText = devModeActive ? '🛠️ Dev Mode: ON [d]' : '🛠️ Dev Mode: OFF [d]';
         btn.style.color = devModeActive ? '#818cf8' : '#64748b';
         btn.style.borderColor = devModeActive ? '#6366f1' : 'rgba(255,255,255,0.1)';
         btn.style.background = devModeActive ? 'rgba(99, 102, 241, 0.15)' : 'rgba(255,255,255,0.05)';
@@ -444,12 +444,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === '/' && document.activeElement !== input) {
+        const isInputFocused = document.activeElement === input || (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA'));
+
+        // Yuzora 準拠キーバインド: 'd' / 'D' (テキスト入力時を除く) または Ctrl+Shift+D で Dev Mode トグル
+        if ((e.key === 'd' || e.key === 'D') && !isInputFocused && !e.ctrlKey && !e.metaKey && !e.altKey) {
+            e.preventDefault();
+            toggleDevMode();
+        } else if ((e.key === 'd' || e.key === 'D') && (e.ctrlKey || e.metaKey) && e.shiftKey) {
+            e.preventDefault();
+            toggleDevMode();
+        } else if (e.key === 'Escape') {
+            if (devModeActive) {
+                devModeActive = false;
+                localStorage.setItem('dev_debug_mode', false);
+                updateDevModeUI();
+                performPortalSearch();
+            } else if (isInputFocused && input) {
+                input.value = '';
+                performPortalSearch();
+            }
+        } else if (e.key === '/' && !isInputFocused) {
             e.preventDefault();
             if (input) input.focus();
-        } else if (e.key === 'Escape' && document.activeElement === input) {
-            input.value = '';
-            performPortalSearch();
         }
     });
 });
