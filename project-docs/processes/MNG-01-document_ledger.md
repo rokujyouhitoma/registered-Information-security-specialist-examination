@@ -31,6 +31,7 @@ Document ID: `MNG-01-document_ledger`
 | 文書ID | 文書名 | 相対パス | 役割・概要 | 管理責任 (A) | 対象読者 | 改定トリガー |
 |---|---|---|---|---|---|---|
 | **[REQ-01]** | **ユーザー要求定義書** | [project-docs/requirements/REQ-01-user_requirements.md](../requirements/REQ-01-user_requirements.md) | 本リポジトリのビジョン、ターゲットユーザー、ユースケース、学習コンテンツの各種要求を定義する。 | PM | 全員、開発者、AI Agent | 目的や提供方針の変更時 |
+| **[REQ-02]** | **ユーザー提供価値・ペルソナ・シナリオ詳細定義書** | [project-docs/requirements/REQ-02-user_personas_and_scenarios.md](../requirements/REQ-02-user_personas_and_scenarios.md) | ユーザー提供価値の最大化原則、4大ペルソナ像、4実践的ユースケースシナリオを定義する。 | PM / ST | 全員、開発者、UIUX | ターゲットペルソナ・UX変更時 |
 | **[MNG-01]** | **文書管理台帳・規約** | [project-docs/processes/MNG-01-document_ledger.md](MNG-01-document_ledger.md) | 全ドキュメントの位置づけ、トレーサビリティ、分類、管理責任を定義する。 | PM | 管理者、AI Agent | 構造・カテゴリ変更時 |
 | **[MNG-02]** | **ワークフローガイド** | [project-docs/processes/MNG-02-workflow_guide.md](MNG-02-workflow_guide.md) | Gitブランチ、Conventional Commits、Issueライフサイクル、クローズルールを規定する。 | PM | 全エージェント、開発者 | 開発ルールの変更時 |
 | **[MNG-03]** | **ドキュメント執筆ガイド** | [project-docs/processes/MNG-03-writing_guide.md](MNG-03-writing_guide.md) | Markdownフォーマット、図解、午後記述キーワード強調等の執筆ルールを規定する。 | PM | コンテンツ執筆者 | 執筆スタイルの更新時 |

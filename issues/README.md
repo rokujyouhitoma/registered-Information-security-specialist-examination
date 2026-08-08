@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 109 | Feature | [ユーザー提供価値の最大化を前提としたユーザーペルソナ・ユースケースシナリオ詳細定義書の策定](closed/109-define-user-personas-and-scenarios.md) | 2026-08-08 | [109-define-user-personas-and-scenarios.md](closed/109-define-user-personas-and-scenarios.md) |
 | 108 | Feature | [package.json への test:relative-paths コマンド追加統合と npm test 実行時の相対パスガバナンス自動アサーション常時化](closed/108-add-relative-paths-test-to-package-json.md) | 2026-08-08 | [108-add-relative-paths-test-to-package-json.md](closed/108-add-relative-paths-test-to-package-json.md) |
 | 107 | Fix | [issues/closed/ 配下における絶対パスリンク (file:///) の完全相対パス化クレンジングと check_relative_paths.py 判定合格化](closed/107-fix-absolute-path-link-violations.md) | 2026-08-08 | [107-fix-absolute-path-link-violations.md](closed/107-fix-absolute-path-link-violations.md) |
 | 106 | Feature | [Web Worker 検索コア (search_worker.js) への FrontCodingCompressor 組み込みと圧縮統計メッセージング機能の拡張](closed/106-integrate-string-compression-in-search-worker.md) | 2026-08-08 | [106-integrate-string-compression-in-search-worker.md](closed/106-integrate-string-compression-in-search-worker.md) |

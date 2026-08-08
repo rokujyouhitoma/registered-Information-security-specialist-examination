@@ -22,6 +22,7 @@ project-docs/
 | ID | ドキュメント名 | 概要 | 主な対象者 |
 | :---: | :--- | :--- | :--- |
 | **`REQ-01`** | [ユーザー要求定義書](requirements/REQ-01-user_requirements.md) | 本リポジトリのビジョン、ターゲットユーザー、提供機能の要求定義 | 全員 / 開発者 |
+| **`REQ-02`** | [ユーザー提供価値・ペルソナ・シナリオ詳細定義書](requirements/REQ-02-user_personas_and_scenarios.md) | ユーザー価値最大化原則、4大ペルソナ像、実践的ユースケースシナリオ | 全員 / 開発者 / デザイナー |
 
 ### ⚙️ 2. 管理規程 & 運用プロセス (Management & Processes - `MNG` / `PROC`)
 | ID | ドキュメント名 | 概要 | 主な対象者 |
