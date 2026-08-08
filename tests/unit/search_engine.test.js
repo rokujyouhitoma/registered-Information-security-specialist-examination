@@ -124,6 +124,26 @@ test('CustomSearchEngine - Support Object Type Vectors Test', (t) => {
     assert.strictEqual(results[0].id, 'doc1');
 });
 
+test('CustomSearchEngine - FrontCodingCompressor Integration Test (compressTerms & getDecompressedTerms)', (t) => {
+    const engine = new CustomSearchEngine();
+    engine.docs = [{ id: 'doc1', name: 'Authentication', summary: 'OAuth 2.0 and OIDC' }];
+    engine.idf = { authentication: 1.5, authorization: 1.2, oauth: 2.0 };
+    engine.vectors = [{ authentication: 1.5, authorization: 1.2, oauth: 2.0 }];
+    engine.isLoaded = true;
+
+    // Trigger inverted index build and FrontCoding compression
+    engine._buildInvertedIndex();
+
+    assert.ok(engine.compressedTerms.length > 0, 'compressedTerms should be populated after building index');
+    const compRes = engine.compressTerms();
+    assert.strictEqual(compRes.compressedCount, engine.compressedTerms.length);
+
+    const decompressed = engine.getDecompressedTerms();
+    assert.ok(decompressed.includes('authentication'), 'Decompressed terms must contain authentication');
+    assert.ok(decompressed.includes('authorization'), 'Decompressed terms must contain authorization');
+    assert.ok(decompressed.includes('oauth'), 'Decompressed terms must contain oauth');
+});
+
 test('CustomSearchEngine - QA Robust Boundary Values Test (null, undefined, invalid vectors)', (t) => {
     const engine = new CustomSearchEngine();
     engine.docs = [{ id: 'doc1', name: 'ZTA', summary: 'Zero Trust' }];
@@ -139,3 +159,4 @@ test('CustomSearchEngine - QA Robust Boundary Values Test (null, undefined, inva
         }, `Engine should not throw error when vectors is ${invalidVectors}`);
     });
 });
+

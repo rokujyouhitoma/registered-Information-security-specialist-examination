@@ -13,6 +13,8 @@ class CustomSearchEngine {
         this.vectors = [];
         /** @type {!Object<string, !Array<number>>} */
         this.invertedIndex = Object.create(null);
+        /** @type {!Array<{prefixLen: number, suffix: string}>} */
+        this.compressedTerms = [];
         /** @type {number} */
         this.avgdl = 50.0;
         /** @type {boolean} */
@@ -84,7 +86,7 @@ class CustomSearchEngine {
     }
 
     /**
-     * 転置インデックスを構築
+     * 転置インデックスを構築し、語彙辞書の前形差分圧縮を自動実行する
      * @private
      */
     _buildInvertedIndex() {
@@ -102,6 +104,39 @@ class CustomSearchEngine {
                 }
             });
         }
+        this.compressTerms();
+    }
+
+    /**
+     * 転置インデックスの語彙辞書(トークン一覧)を FrontCodingCompressor で前形差分圧縮する
+     * @return {{compressedCount: number, originalSize: number, compressedSize: number, ratio: number}}
+     */
+    compressTerms() {
+        const terms = Object.keys(this.invertedIndex).filter(k => CustomSearchEngine.isSafeKey(k));
+        if (typeof FrontCodingCompressor !== 'undefined' && terms.length > 0) {
+            const res = FrontCodingCompressor.compress(terms);
+            this.compressedTerms = res.compressed;
+            return {
+                compressedCount: this.compressedTerms.length,
+                originalSize: res.originalSize,
+                compressedSize: res.compressedSize,
+                ratio: res.ratio
+            };
+        }
+        this.compressedTerms = [];
+        return { compressedCount: 0, originalSize: 0, compressedSize: 0, ratio: 0 };
+    }
+
+    /**
+     * 前形差分圧縮された語彙辞書を展開(復元)する
+     * @return {!Array<string>}
+     */
+    getDecompressedTerms() {
+        if (typeof FrontCodingCompressor !== 'undefined' && this.compressedTerms.length > 0) {
+            const rawTerms = FrontCodingCompressor.decompress(this.compressedTerms);
+            return rawTerms.filter(k => CustomSearchEngine.isSafeKey(k));
+        }
+        return Object.keys(this.invertedIndex).filter(k => CustomSearchEngine.isSafeKey(k));
     }
 
     /**
