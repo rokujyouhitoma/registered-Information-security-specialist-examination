@@ -251,6 +251,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <a href="{rel_root}index.html" class="nav-btn">🏠 トップ</a>
             <a href="{rel_root}search.html" class="nav-btn">🔍 全文検索</a>
             <a href="{rel_root}quiz.html" class="nav-btn">🧠 クイズ演習</a>
+            <a href="{rel_root}exam_cheatsheet.html" class="nav-btn">⚡ 虎の巻</a>
             <a href="{rel_root}syllabus.html" class="nav-btn">📖 シラバス</a>
             <a href="{rel_root}glossary.html" class="nav-btn">📚 用語辞書</a>
         </nav>
@@ -557,9 +558,9 @@ def build_docs():
             md_path = os.path.join(root, f)
             rel_path = os.path.relpath(md_path, DOCS_DIR)
 
-            # docs/index.md は site/index.html (トップポータル) と重複しないよう docs_index.html にマッピング
+            # docs/index.md は site/index.html (トップポータル) および docs_index.html 両方に書き出し
             if rel_path == 'index.md':
-                html_rel_path = 'docs_index.html'
+                html_rel_path = 'index.html'
             else:
                 html_rel_path = os.path.splitext(rel_path)[0] + '.html'
             dest_html_path = os.path.join(SITE_DIR, html_rel_path)
@@ -596,6 +597,12 @@ def build_docs():
 
             with open(dest_html_path, 'w', encoding='utf-8') as out_f:
                 out_f.write(full_html)
+
+            # index.md の場合は互換用 docs_index.html にも同時書き出し
+            if rel_path == 'index.md':
+                docs_idx_dest = os.path.join(SITE_DIR, 'docs_index.html')
+                with open(docs_idx_dest, 'w', encoding='utf-8') as out_f2:
+                    out_f2.write(full_html)
 
             count += 1
             print(f"  ✅ [生成] site/{html_rel_path}")
