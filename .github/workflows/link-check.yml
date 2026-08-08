@@ -19,6 +19,6 @@ jobs:
       - name: Lychee Broken Link Checker
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --verbose --no-progress './docs/**/*.md' './project-docs/**/*.md' './issues/**/*.md'
+          args: --verbose --no-progress './src/content/**/*.md' './docs/**/*.md' './issues/**/*.md'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
