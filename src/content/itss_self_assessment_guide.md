@@ -137,7 +137,11 @@ function calculateITSSLevel() {
     document.getElementById('itss-result-level').innerText = levelTextMap[maxAchievedLevel];
 }
 
-document.addEventListener('DOMContentLoaded', initITSSDiagnosis);
+// SPA 対応: DOMContentLoaded は SPA 動的注入後には再発火しない。
+// readyState が 'loading' でなければ即時実行する。
+(document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', initITSSDiagnosis)
+    : (initITSSDiagnosis)());
 </script>
 
 ---

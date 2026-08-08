@@ -210,5 +210,9 @@ function nextQuestion() {
     renderQuestion();
 }
 
-document.addEventListener('DOMContentLoaded', loadQuizData);
+// SPA 対応: DOMContentLoaded は SPA 動的注入後には再発火しない。
+// readyState が 'loading' でなければ即時実行する。
+(document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', loadQuizData)
+    : (loadQuizData)());
 </script>

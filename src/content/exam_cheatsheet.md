@@ -78,7 +78,11 @@ function updateBookmarkFilterVisibility() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', updateBookmarkStyles);
+// SPA 対応: DOMContentLoaded は SPA 動的注入後には再発火しない。
+// readyState が 'loading' でなければ即時実行する。
+(document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', updateBookmarkStyles)
+    : (updateBookmarkStyles)());
 </script>
 
 ### 1.1 🔐 暗号・認証・アクセス制御

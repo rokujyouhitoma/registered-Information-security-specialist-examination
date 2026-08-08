@@ -164,7 +164,11 @@ function checkPhishingAnswer(userChoice) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => selectEmailSample(1));
+// SPA 対応: DOMContentLoaded は SPA 動的注入後には再発火しない。
+// readyState が 'loading' でなければ即時実行する。
+(document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', () => selectEmailSample(1))
+    : (() => selectEmailSample(1))());
 </script>
   - *採点基準*: 「Webシェル（または悪意あるスクリプト）」のアップロードと「任意コマンド実行」が含まれていること。
 - **設問 1-3 模範解答**: **プレースホルダによるSQL呼び出しの徹底と、アップロードファイルの拡張子制限・実行権限剥奪。**（40字）

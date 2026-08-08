@@ -429,39 +429,51 @@ function renderResults(query, results) {
     }).join('');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    updateDevModeUI();
-    initSearchEngine();
+// SPA 対応初期化: DOMContentLoaded は SPA 動的注入後には再発火しないため、
+// document.readyState が既に 'complete' / 'interactive' の場合は即時実行する。
+(function () {
+    function startSearchPage() {
+        updateDevModeUI();
+        initSearchEngine();
 
-    const input = document.getElementById('portal-search-input');
-    if (input) {
-        input.addEventListener('input', performPortalSearch);
+        const input = document.getElementById('portal-search-input');
+        if (input) {
+            input.addEventListener('input', performPortalSearch);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const isInputFocused = document.activeElement === input || (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA'));
+
+            // Yuzora 準拠キーバインド: 'd' / 'D' (テキスト入力時を除く) または Ctrl+Shift+D で Dev Mode トグル
+            if ((e.key === 'd' || e.key === 'D') && !isInputFocused && !e.ctrlKey && !e.metaKey && !e.altKey) {
+                e.preventDefault();
+                toggleDevMode();
+            } else if ((e.key === 'd' || e.key === 'D') && (e.ctrlKey || e.metaKey) && e.shiftKey) {
+                e.preventDefault();
+                toggleDevMode();
+            } else if (e.key === 'Escape') {
+                if (devModeActive) {
+                    devModeActive = false;
+                    localStorage.setItem('dev_debug_mode', false);
+                    updateDevModeUI();
+                    performPortalSearch();
+                } else if (isInputFocused && input) {
+                    input.value = '';
+                    performPortalSearch();
+                }
+            } else if (e.key === '/' && !isInputFocused) {
+                e.preventDefault();
+                if (input) input.focus();
+            }
+        });
     }
 
-    document.addEventListener('keydown', (e) => {
-        const isInputFocused = document.activeElement === input || (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA'));
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', startSearchPage);
+    } else {
+        // SPA 遷移後など DOM がすでに構築済みの場合は即時実行
+        startSearchPage();
+    }
+}());
 
-        // Yuzora 準拠キーバインド: 'd' / 'D' (テキスト入力時を除く) または Ctrl+Shift+D で Dev Mode トグル
-        if ((e.key === 'd' || e.key === 'D') && !isInputFocused && !e.ctrlKey && !e.metaKey && !e.altKey) {
-            e.preventDefault();
-            toggleDevMode();
-        } else if ((e.key === 'd' || e.key === 'D') && (e.ctrlKey || e.metaKey) && e.shiftKey) {
-            e.preventDefault();
-            toggleDevMode();
-        } else if (e.key === 'Escape') {
-            if (devModeActive) {
-                devModeActive = false;
-                localStorage.setItem('dev_debug_mode', false);
-                updateDevModeUI();
-                performPortalSearch();
-            } else if (isInputFocused && input) {
-                input.value = '';
-                performPortalSearch();
-            }
-        } else if (e.key === '/' && !isInputFocused) {
-            e.preventDefault();
-            if (input) input.focus();
-        }
-    });
-});
 </script>
