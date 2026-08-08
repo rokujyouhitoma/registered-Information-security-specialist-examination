@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 120 | Feature | [.agents カスタムスキル群 (quiz-generator, audit-persona-coverage) および一次情報リファレンス設定の実装](closed/120-add-quiz-generator-persona-audit-skills-and-reference-knowledge.md) | 2026-08-08 | [120-add-quiz-generator-persona-audit-skills-and-reference-knowledge.md](closed/120-add-quiz-generator-persona-audit-skills-and-reference-knowledge.md) |
 | 119 | Feature | [【突然変異型】AIサイバー攻撃インシデント逆引きアタックマップ (Interactive Attack Blast Radius Visualizer) の実装](closed/119-interactive-cyber-attack-blast-radius-visualizer.md) | 2026-08-08 | [119-interactive-cyber-attack-blast-radius-visualizer.md](closed/119-interactive-cyber-attack-blast-radius-visualizer.md) |
 | 118 | Feature | [全文検索 UI からの冗長圧縮バナーの完全削除、Dev Mode デフォルト ON 化、および開発者デバッグ情報（ID・適合スコア・一致種別）の高度可視化](closed/118-remove-compression-banner-default-dev-mode-on-and-enrich-dev-debug-badges.md) | 2026-08-08 | [118-remove-compression-banner-default-dev-mode-on-and-enrich-dev-debug-badges.md](closed/118-remove-compression-banner-default-dev-mode-on-and-enrich-dev-debug-badges.md) |
 | 117 | Feature | [全文検索 UI デバッグモードにおける Yuzora 仕様準拠キーバインド (d/D/Ctrl+Shift+D/Escape) の実装](closed/117-add-yuzora-style-keybindings-for-search-dev-debug-mode.md) | 2026-08-08 | [117-add-yuzora-style-keybindings-for-search-dev-debug-mode.md](closed/117-add-yuzora-style-keybindings-for-search-dev-debug-mode.md) |
