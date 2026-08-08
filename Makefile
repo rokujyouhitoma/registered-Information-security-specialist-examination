@@ -32,7 +32,7 @@ build: $(MIN_JS)
 
 $(MIN_JS): $(SRC_JS)
 	@echo "🛠️ Closure Compiler (超極限厳格設定: ADVANCED_OPTIMIZATIONS & VERBOSE & 全正規型/変数判定ルール Error化) で全 JS モジュールをコンパイル中..."
-	npx -y google-closure-compiler \
+	./node_modules/.bin/google-closure-compiler \
 		$(foreach js,$(SRC_JS),--js $(js)) \
 		--js_output_file $(MIN_JS) \
 		--compilation_level ADVANCED_OPTIMIZATIONS \

@@ -254,7 +254,6 @@ function toggleDevMode() {
 }
 
 async function initSearchEngine() {
-    const statusText = document.getElementById('status-text');
     updateDevModeUI();
 
     try {
@@ -264,39 +263,47 @@ async function initSearchEngine() {
             throw new Error('CustomSearchEngine is not defined. Please check script load order.');
         }
 
-        searchEngine = new CustomSearchEngine();
-        
-        const indexRes = await fetchWithFallback(['search_index.json', './search_index.json', '../search_index.json', '/registered-information-security-specialist-examination/search_index.json']);
-        const indexData = await indexRes.json();
-        searchEngine.docs = indexData.docs || [];
-        searchEngine.idf = indexData.idf || {};
-        searchEngine.vectors = indexData.vectors || {};
-        if (typeof searchEngine._buildInvertedIndex === 'function') {
-            searchEngine._buildInvertedIndex();
-        }
-        searchEngine.isLoaded = true;
-        
-        try {
-            const synonymsRes = await fetchWithFallback(['data/synonyms.json', './data/synonyms.json', '../data/synonyms.json', '/registered-information-security-specialist-examination/data/synonyms.json']);
-            const synonyms = await synonymsRes.json();
-            if (window.SynonymExpander) SynonymExpander.setSynonymMap(synonyms);
-        } catch (e) {
-            console.warn('Synonyms load warning:', e);
+        if (!searchEngine || !searchEngine.isLoaded) {
+            searchEngine = new CustomSearchEngine();
+            
+            const indexRes = await fetchWithFallback(['search_index.json', './search_index.json', '../search_index.json', '/registered-information-security-specialist-examination/search_index.json']);
+            const indexData = await indexRes.json();
+            searchEngine.docs = indexData.docs || [];
+            searchEngine.idf = indexData.idf || {};
+            searchEngine.vectors = indexData.vectors || {};
+            if (typeof searchEngine._buildInvertedIndex === 'function') {
+                searchEngine._buildInvertedIndex();
+            }
+            searchEngine.isLoaded = true;
+            
+            try {
+                const synonymsRes = await fetchWithFallback(['data/synonyms.json', './data/synonyms.json', '../data/synonyms.json', '/registered-information-security-specialist-examination/data/synonyms.json']);
+                const synonyms = await synonymsRes.json();
+                if (window.SynonymExpander) SynonymExpander.setSynonymMap(synonyms);
+            } catch (e) {
+                console.warn('Synonyms load warning:', e);
+            }
+
+            try {
+                const conceptRes = await fetchWithFallback(['data/concept_config.json', './data/concept_config.json', '../data/concept_config.json', '/registered-information-security-specialist-examination/data/concept_config.json']);
+                const conceptConfig = await conceptRes.json();
+                if (window.SemanticScorer) SemanticScorer.setConceptConfig(conceptConfig);
+            } catch (e) {
+                console.warn('Concept config load warning:', e);
+            }
         }
 
-        try {
-            const conceptRes = await fetchWithFallback(['data/concept_config.json', './data/concept_config.json', '../data/concept_config.json', '/registered-information-security-specialist-examination/data/concept_config.json']);
-            const conceptConfig = await conceptRes.json();
-            if (window.SemanticScorer) SemanticScorer.setConceptConfig(conceptConfig);
-        } catch (e) {
-            console.warn('Concept config load warning:', e);
+        const statusText = document.getElementById('status-text');
+        if (statusText) {
+            statusText.innerHTML = `✅ 検索インデックスロード完了 (${searchEngine.docs.length} 件のドキュメント)`;
         }
-
-        statusText.innerHTML = `✅ 検索インデックスロード完了 (${searchEngine.docs.length} 件のドキュメント)`;
         performPortalSearch();
     } catch (err) {
         console.error('Search index load error:', err);
-        statusText.innerHTML = `⚠️ 検索インデックスのロードに失敗しました (${err.message})`;
+        const statusText = document.getElementById('status-text');
+        if (statusText) {
+            statusText.innerHTML = `⚠️ 検索インデックスのロードに失敗しました (${err.message})`;
+        }
     }
 }
 
@@ -312,7 +319,7 @@ function quickSearch(term) {
 function setFilter(filterName, btn) {
     activeFilter = filterName;
     document.querySelectorAll('.g-tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
+    if (btn) btn.classList.add('active');
     performPortalSearch();
 }
 
@@ -346,6 +353,8 @@ function performPortalSearch() {
 function renderResults(query, results) {
     const resultsContainer = document.getElementById('search-results-list');
     const countEl = document.getElementById('results-count');
+
+    if (!resultsContainer || !countEl) return;
 
     countEl.innerText = '約 ' + results.length + ' 件';
 

@@ -14,6 +14,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 136 | Bug | [全文検索・Webクイズ画面における DOM 存在判定ガード強化と Makefile 内 Closure Compiler ローカルパス最適化](closed/136-dom-guard-and-closure-compiler-path-optimization.md) | 2026-08-08 | [136-dom-guard-and-closure-compiler-path-optimization.md](closed/136-dom-guard-and-closure-compiler-path-optimization.md) |
 | 135 | Refactor | [ディレクトリ構造再定義: 学習コンテンツの src/content 移行および docs/ へのプロジェクト管理資料集約](closed/135-restructure-learning-content-to-src-content-and-project-docs-to-docs.md) | 2026-08-08 | [135-restructure-learning-content-to-src-content-and-project-docs-to-docs.md](closed/135-restructure-learning-content-to-src-content-and-project-docs-to-docs.md) |
 | 134 | Feature | [Full SPA モード移行: クライアントサイドハッシュルーティング・無縫子ナビゲーション完全統合](closed/134-spa-migration-phase2-full-spa-client-routing-integration.md) | 2026-08-08 | [134-spa-migration-phase2-full-spa-client-routing-integration.md](closed/134-spa-migration-phase2-full-spa-client-routing-integration.md) |
 | 133 | Feature | [IR・RAG 強化 Phase 6: RAGAS / ARES 基準による検索精度定量評価パイプラインと過去問グラウンドトゥルースデータセットの構築](closed/133-ir-rag-phase6-ragas-ares-evaluation-pipeline.md) | 2026-08-08 | [133-ir-rag-phase6-ragas-ares-evaluation-pipeline.md](closed/133-ir-rag-phase6-ragas-ares-evaluation-pipeline.md) |

@@ -125,7 +125,8 @@ async function loadQuizData() {
         renderQuestion();
     } catch (err) {
         console.error('Quiz load error:', err);
-        document.getElementById('quiz-question-text').innerText = 'クイズデータの取得に失敗しました: ' + err.message;
+        const qText = document.getElementById('quiz-question-text');
+        if (qText) qText.innerText = 'クイズデータの取得に失敗しました: ' + err.message;
     }
 }
 
@@ -143,18 +144,26 @@ function filterByPersona(personaKey, btnEl) {
 }
 
 function renderQuestion() {
+    const qText = document.getElementById('quiz-question-text');
+    if (!qText) return;
+
     if (activeQuestions.length === 0) {
-        document.getElementById('quiz-question-text').innerText = '該当するペルソナの問題はありません。';
-        document.getElementById('quiz-options-list').innerHTML = '';
-        document.getElementById('quiz-feedback-box').style.display = 'none';
-        document.getElementById('next-question-btn').style.display = 'none';
+        qText.innerText = '該当するペルソナの問題はありません。';
+        const optList = document.getElementById('quiz-options-list');
+        if (optList) optList.innerHTML = '';
+        const fbBox = document.getElementById('quiz-feedback-box');
+        if (fbBox) fbBox.style.display = 'none';
+        const nextBtn = document.getElementById('next-question-btn');
+        if (nextBtn) nextBtn.style.display = 'none';
         return;
     }
     const q = activeQuestions[currentIdx];
 
-    document.getElementById('quiz-category-badge').innerText = q.category.toUpperCase() + (q.persona ? ` [${q.persona.toUpperCase()}]` : '');
-    document.getElementById('quiz-progress').innerText = `Question ${currentIdx + 1} / ${activeQuestions.length}`;
-    document.getElementById('quiz-question-text').innerText = q.question;
+    const catBadge = document.getElementById('quiz-category-badge');
+    if (catBadge) catBadge.innerText = q.category.toUpperCase() + (q.persona ? ` [${q.persona.toUpperCase()}]` : '');
+    const progText = document.getElementById('quiz-progress');
+    if (progText) progText.innerText = `Question ${currentIdx + 1} / ${activeQuestions.length}`;
+    qText.innerText = q.question;
 
     // 選択肢の Fisher-Yates 動的ランダムシャッフル
     const optionObjects = q.options.map((optText, origIdx) => ({
@@ -165,12 +174,16 @@ function renderQuestion() {
     shuffledCorrectIndex = currentShuffledOptions.findIndex(o => o.isCorrect);
 
     const optList = document.getElementById('quiz-options-list');
-    optList.innerHTML = currentShuffledOptions.map((optObj, idx) => `
-        <button class="quiz-opt-btn" onclick="checkAnswer(${idx}, this)">${idx + 1}. ${optObj.text}</button>
-    `).join('');
+    if (optList) {
+        optList.innerHTML = currentShuffledOptions.map((optObj, idx) => `
+            <button class="quiz-opt-btn" onclick="checkAnswer(${idx}, this)">${idx + 1}. ${optObj.text}</button>
+        `).join('');
+    }
 
-    document.getElementById('quiz-feedback-box').style.display = 'none';
-    document.getElementById('next-question-btn').style.display = 'none';
+    const fbBox = document.getElementById('quiz-feedback-box');
+    if (fbBox) fbBox.style.display = 'none';
+    const nextBtn = document.getElementById('next-question-btn');
+    if (nextBtn) nextBtn.style.display = 'none';
 }
 
 function checkAnswer(selectedIdx, btnEl) {
