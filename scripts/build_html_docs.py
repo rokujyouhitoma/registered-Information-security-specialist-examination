@@ -13,7 +13,7 @@ import re
 import html
 import shutil
 
-DOCS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "docs"))
+DOCS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src", "content"))
 SITE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "site"))
 SRC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
 
@@ -258,7 +258,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </header>
 
     <main class="container">
-        <article class="doc-content">
+        <article class="doc-content" id="spa-view-container">
             {content}
         </article>
     </main>
@@ -266,6 +266,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <footer class="layout-footer">
         Registered Information Security Specialist Examination Knowledge Portal &copy; 2026
     </footer>
+
+    <!-- SPA Core Framework & App Module -->
+    <script src="{rel_root}js/frameworks/event.js"></script>
+    <script src="{rel_root}js/frameworks/publisher.js"></script>
+    <script src="{rel_root}js/frameworks/router.js"></script>
+    <script src="{rel_root}js/frameworks/scene.js"></script>
+    <script src="{rel_root}js/fm_index_engine.js"></script>
+    <script src="{rel_root}js/spa_app.js"></script>
 
     <!-- Service Worker Registration -->
     <script>
@@ -346,37 +354,19 @@ def copy_static_assets():
                 shutil.copy2(s_path, d_path)
                 print(f"  📦 [アセットコピー] {item} -> site/{item}")
 
-    # 2. src/js -> site/js 及び docs/js
+    # 2. src/js -> site/js
     js_src_dir = os.path.join(SRC_DIR, "js")
     js_dest_dir = os.path.join(SITE_DIR, "js")
-    docs_js_dir = os.path.join(DOCS_DIR, "js")
     if os.path.exists(js_src_dir):
-        os.makedirs(js_dest_dir, exist_ok=True)
-        os.makedirs(docs_js_dir, exist_ok=True)
-        for item in os.listdir(js_src_dir):
-            s_path = os.path.join(js_src_dir, item)
-            d_path = os.path.join(js_dest_dir, item)
-            docs_d_path = os.path.join(docs_js_dir, item)
-            if os.path.isfile(s_path):
-                shutil.copy2(s_path, d_path)
-                shutil.copy2(s_path, docs_d_path)
-                print(f"  📦 [JSコピー] js/{item} -> site/js/{item} & docs/js/{item}")
+        shutil.copytree(js_src_dir, js_dest_dir, dirs_exist_ok=True)
+        print(f"  📦 [JSツリーコピー] js/ -> site/js/")
 
-    # 3. src/data -> site/data 及び docs/data
+    # 3. src/data -> site/data
     data_src_dir = os.path.join(SRC_DIR, "data")
     data_dest_dir = os.path.join(SITE_DIR, "data")
-    docs_data_dir = os.path.join(DOCS_DIR, "data")
     if os.path.exists(data_src_dir):
-        os.makedirs(data_dest_dir, exist_ok=True)
-        os.makedirs(docs_data_dir, exist_ok=True)
-        for item in os.listdir(data_src_dir):
-            s_path = os.path.join(data_src_dir, item)
-            d_path = os.path.join(data_dest_dir, item)
-            docs_d_path = os.path.join(docs_data_dir, item)
-            if os.path.isfile(s_path):
-                shutil.copy2(s_path, d_path)
-                shutil.copy2(s_path, docs_d_path)
-                print(f"  📦 [データコピー] data/{item} -> site/data/{item} & docs/data/{item}")
+        shutil.copytree(data_src_dir, data_dest_dir, dirs_exist_ok=True)
+        print(f"  📦 [データツリーコピー] data/ -> site/data/")
 
 
 from sequence_diagram_parser import parse_and_render_sequence_diagram

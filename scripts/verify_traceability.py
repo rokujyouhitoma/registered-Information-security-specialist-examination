@@ -9,7 +9,7 @@ import re
 import sys
 
 WORKSPACE_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-TARGET_DIRS = ['docs', 'issues', 'references', 'site']
+TARGET_DIRS = ['src/content', 'docs', 'issues', 'references', 'site']
 
 def verify_markdown_files():
     errors = []

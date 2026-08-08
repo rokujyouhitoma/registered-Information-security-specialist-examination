@@ -1,0 +1,36 @@
+[
+  {
+    "id": "drill-01",
+    "title": "OAuth 2.0 アクセストークン漏洩と認可バイパス解法ケース",
+    "domain": "認証・クラウド (ST / SC)",
+    "problemPassage": "A 社の Web アプリは OAuth 2.0 に基づき外部 IdP と連携している。ログ解析の結果、攻撃者がリダイレクト URI の検証不備を突き、認可コードおよびアクセストークンを奪取して一般ユーザーになりすまして個人情報にアクセスしていたことが判明した。",
+    "questions": [
+      {
+        "qIndex": 1,
+        "question": "本インシデントにおいて、攻撃者がトークンを奪取できた根本的理由を 40 字以内で述べよ。",
+        "frameworkStep": "原因分析 (Cause Identification)",
+        "extractKeywords": ["リダイレクト URI", "検証不備", "外部送信"],
+        "sampleAnswer": "リダイレクト URI の完全一致検証が行われず、外部攻撃者サイトへ転送されたため。",
+        "charCount": 39,
+        "explanation": "OAuth 2.0 では、認可レスポンスの転送先である redirect_uri が登録値と完全一致するか厳格に検証しないとオープンリダイレクト脆弱性が発生します。"
+      }
+    ]
+  },
+  {
+    "id": "drill-02",
+    "title": "送信ドメイン認証(SPF/DKIM/DMARC)不備による成りすましメール解法ケース",
+    "domain": "ネットワーク・メール (NW / IR)",
+    "problemPassage": "B 社の顧客に対して B 社差出人を騙るフィッシングメールが大量送信された。調査したところ、B 社の DNS に SPF レコードが登録されていたが、ポリシーが none に設定されていたため受信用メールサーバーでブロック処理が行われていなかった。",
+    "questions": [
+      {
+        "qIndex": 1,
+        "question": "DMARC ポリシーにおいて、成りすましメールを受信側で拒否させるための設定変更内容を 35 字以内で述べよ。",
+        "frameworkStep": "対策策定 (Countermeasure Design)",
+        "extractKeywords": ["DMARC ポリシー", "reject", "拒否"],
+        "sampleAnswer": "DMARC ポリシーの p タグの値を none から reject に変更する。",
+        "charCount": 35,
+        "explanation": "DMARC ポリシーを `p=reject` に変更することで、SPF または DKIM 認証に失敗したメールを受信サーバー側で配送拒否させることができます。"
+      }
+    ]
+  }
+]

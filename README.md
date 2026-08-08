@@ -109,17 +109,15 @@ npm run test:search       # 検索エンジンテスト
 
 ```
 .
-├── .github/workflows/         # GitHub Actions (CI & GitHub Pages デプロイ)
-├── docs/                      # 学習用ドキュメント
-│   ├── glossary/              # シラバス全2,101用語の解説辞書 (ver2_1 / tsuiho_ver4_0)
-│   ├── subject_b/             # 科目B 思考プロセス・解法ガイド
-│   └── scenarios/             # サイバー攻撃シナリオ・ログ解読ケーススタディ
+├── docs/                      # プロジェクト管理・設計開発資材 (要求定義, 仕様書, アーキテクチャ, 脅威モデル, ADR)
 ├── issues/                    # Issue 駆動開発トラック・完了ログ (closed/)
-├── project-docs/              # ロードマップ・品質基準・PM設計文書
 ├── references/                # IPA公式シラバス・NISTリファレンス資料
 ├── scripts/                   # 各種ツール (監査, インデックス生成, クイズ, トレース)
-├── site/                      # フルスクラッチ Web 検索ポータル (index.html, compiled.html)
-├── src/js/modules/            # JSモジュール群 (tokenizer, vector_scorer, engine)
+├── site/                      # フルスクラッチ Web 検索ポータル (index.html, content, js, data)
+├── src/                       # ソースコード & 配信コンテンツ
+│   ├── content/               # 学習ドキュメント・用語辞書・シナリオ (index, glossary, scenarios, subject_b)
+│   ├── js/                    # JSモジュール群 (tokenizer, vector_scorer, spa_app)
+│   └── data/                  # 構造化データ (content_store.json, synonyms.json)
 ├── tests/unit/                # Node.js ユニットテストコード
 ├── Makefile                   # Closure Compiler ビルドコマンド
 ├── package.json               # Node.js 設定・テスト定義

@@ -10,7 +10,7 @@ import os
 import json
 import math
 
-DOCS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "docs"))
+DOCS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src", "content"))
 OUTPUT_INDEX_JSON = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "site", "search_index.json"))
 
 STOPWORDS_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src", "data", "stopwords.json"))

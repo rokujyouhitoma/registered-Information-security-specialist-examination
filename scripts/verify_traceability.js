@@ -8,8 +8,8 @@ function verifyTraceability() {
     console.log('=== トレーサビリティ全数自動検証スクリプトを開始します ===\n');
 
     const files = [
-        'docs/glossary/syllabus_ver2_1.md',
-        'docs/glossary/syllabus_tsuiho_ver4_0.md'
+        'src/content/glossary/syllabus_ver2_1.md',
+        'src/content/glossary/syllabus_tsuiho_ver4_0.md'
     ];
 
     let totalTerms = 0;

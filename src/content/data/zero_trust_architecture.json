@@ -1,0 +1,49 @@
+{
+  "title": "NIST SP 800-207 ゼロトラスト・アーキテクチャ (ZTA) リファレンス",
+  "principles": [
+    {
+      "id": 1,
+      "title": "すべてのデータソースと計算サービスはリソースとみなす",
+      "detail": "社内ネットワーク内のサーバー・クラウド上のSaaS・モバイル端末・IoT機器を区別なく保護対象リソースと定義する。"
+    },
+    {
+      "id": 2,
+      "title": "ネットワーク位置に関わらず、すべての通信を保護する",
+      "detail": "社内LAN経由のアクセスであっても外部アクセスと同等に暗号化 (TLS 1.3 / IPsec) を適用する。"
+    },
+    {
+      "id": 3,
+      "title": "個別のセッションごとにアクセスを許可する",
+      "detail": "一度の認証・認可で永久アクセス権を与えず、セッション単位およびトランザクション単位で動的判定する。"
+    },
+    {
+      "id": 4,
+      "title": "動的ポリシーに基づきアクセスを割り当てる",
+      "detail": "ユーザーの役職、端末の健全性 (EDR状態)、アクセス日時・IPアドレスなどの文脈要素から動的判定する。"
+    }
+  ],
+  "components": [
+    {
+      "code": "PEP",
+      "name": "Policy Enforcement Point (ポリシー施行ポイント)",
+      "role": "主体とリソース間の接続を確立・監視・切断するゲートウェイ（SWG, ZTNAコネクタ）。"
+    },
+    {
+      "code": "PDP",
+      "name": "Policy Decision Point (ポリシー決定ポイント)",
+      "role": "アクセス要求の許可・拒否を最終判定するエンジン (Policy Engine & Policy Administrator)。"
+    }
+  ],
+  "comparison": [
+    {
+      "aspect": "信頼モデル",
+      "perimeter": "境界の内側は無条件に安全と信頼 (Implicit Trust)",
+      "zeroTrust": "いかなるネットワーク位置も信頼せず常に検証 (Never Trust, Always Verify)"
+    },
+    {
+      "aspect": "認証認可のタイミング",
+      "perimeter": "ネットワーク接続時の単一ログイン (VPN等)",
+      "zeroTrust": "すべてのリソースアクセス毎の継続的動的認証・認可"
+    }
+  ]
+}

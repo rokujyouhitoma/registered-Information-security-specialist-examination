@@ -1,6 +1,6 @@
 /**
  * SPA Application Entry Point
- * Integrates Router, SceneDirector, Publisher, and SecurityValidator
+ * Integrates Router, SceneDirector, Publisher, SecurityValidator, and Seamless Link Interception
  */
 "use strict";
 
@@ -29,6 +29,19 @@ class SPAApp {
          * @type {?Object}
          */
         this.contentStore = null;
+
+        /**
+         * @private
+         * @type {!Map<string, !Object>}
+         */
+        this.docMap = new Map();
+
+        /**
+         * Relative root path prefix
+         * @public
+         * @type {string}
+         */
+        this.relRoot = "./";
     }
 
     /**
@@ -36,97 +49,230 @@ class SPAApp {
      * @return {!Promise<void>}
      */
     async init() {
+        // Detect relative root depth from script tag
+        const scripts = document.querySelectorAll("script[src*='spa_app.js']");
+        if (scripts.length > 0) {
+            const src = scripts[0].getAttribute("src") || "";
+            if (src.includes("js/spa_app.js")) {
+                this.relRoot = src.split("js/spa_app.js")[0] || "./";
+            }
+        }
+
         try {
-            const resp = await fetch("data/content_store.json");
-            const data = await resp.json();
-            this.contentStore = /** @type {!Object} */ (data);
+            const resp = await fetch(this.relRoot + "data/content_store.json");
+            if (resp.ok) {
+                const data = /** @type {?Object} */ (await resp.json());
+                this.contentStore = data;
+                if (data && Array.isArray(data['documents'])) {
+                    /** @type {!Array<!Object>} */ (data['documents']).forEach(doc => {
+                        this.docMap.set(String(doc['id']), doc);
+                        if (doc['rel_path']) {
+                            const cleanPath = String(doc['rel_path']).replace(/\.md$/, ".html");
+                            this.docMap.set(cleanPath, doc);
+                            this.docMap.set("./" + cleanPath, doc);
+                        }
+                    });
+                }
+            }
         } catch (e) {
-            console.warn("Failed to load content_store.json:", e);
+            console.warn("SPAApp: Failed to load content_store.json:", e);
         }
 
         this.setupRoutes();
+        this.setupLinkInterception();
         this.router.listen();
     }
 
     /**
-     * Setup Hash routes
+     * Global Link Click Interceptor for Seamless SPA Navigation
+     */
+    setupLinkInterception() {
+        document.body.addEventListener("click", (e) => {
+            const target = /** @type {?HTMLElement} */ (e.target);
+            if (!target) return;
+            const anchor = target.closest("a");
+            if (!anchor) return;
+
+            const href = anchor.getAttribute("href");
+            if (!href || href.startsWith("http://") || href.startsWith("https://") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+                return; // External or non-http links
+            }
+
+            let cleanUrl = href;
+            let hashPart = "";
+            if (cleanUrl.includes("#")) {
+                const parts = cleanUrl.split("#");
+                cleanUrl = parts[0];
+                hashPart = parts[1];
+            }
+
+            if (!cleanUrl && hashPart) {
+                // Anchor navigation on same page
+                return;
+            }
+
+            if (cleanUrl.endsWith(".html") || cleanUrl === "" || cleanUrl === "./" || cleanUrl === "index.html") {
+                e.preventDefault();
+
+                let routeName = cleanUrl.replace(/^\.\//, "").replace(/\.html$/, "");
+                if (routeName === "" || routeName === "index") routeName = "welcome";
+
+                const navHash = "#/" + routeName + (hashPart ? `?anchor=${hashPart}` : "");
+                window.location.hash = navHash;
+                this.loadPageContent(routeName, cleanUrl, hashPart);
+            }
+        });
+    }
+
+    /**
+     * Setup Client-side Hash routes
      */
     setupRoutes() {
-        this.router.register("", () => this.renderHome());
-        this.router.register("welcome", () => this.renderHome());
-        this.router.register("search", (params) => this.renderSearch(params));
-        this.router.register("quiz", () => this.renderQuiz());
-        this.router.register("glossary", () => this.renderGlossary());
-        this.router.register("cheatsheet", () => this.renderCheatsheet());
+        this.router.register("", () => this.loadPageContent("welcome", "index.html"));
+        this.router.register("welcome", () => this.loadPageContent("welcome", "index.html"));
+        this.router.register("index", () => this.loadPageContent("welcome", "index.html"));
+        this.router.register("search", (params) => this.loadPageContent("search", "search.html", params ? params.anchor : ""));
+        this.router.register("quiz", () => this.loadPageContent("quiz", "quiz.html"));
+        this.router.register("glossary", () => this.loadPageContent("glossary", "glossary.html"));
+        this.router.register("cheatsheet", () => this.loadPageContent("cheatsheet", "exam_cheatsheet.html"));
+        this.router.register("syllabus", () => this.loadPageContent("syllabus", "syllabus.html"));
     }
 
     /**
-     * Render Home View
+     * Resolve target fetch URL
+     * @private
+     * @param {string} rawUrl
+     * @return {string}
      */
-    renderHome() {
-        const view = document.getElementById("spa-view-container");
-        if (view) {
-            view.innerHTML = `<div style="max-width: 800px; margin: 2rem 0; padding: 1.5rem; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 16px;">
-                <h2 style="color: #818cf8; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                    <span>🏠 情報処理安全確保支援士 SPA ポータル</span>
-                    <span style="font-size: 0.75rem; background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); padding: 0.15rem 0.5rem; border-radius: 10px;">Phase 1 Ready</span>
-                </h2>
-                <p style="color: #94a3b8; font-size: 0.9rem;">再ロードなしの高速無縫子（シームレス）ナビゲーションが起動しました。全 27+ ドキュメントのデータ駆動表示に対応しています。</p>
-            </div>`;
+    _resolveFetchUrl(rawUrl) {
+        let targetUrl = rawUrl || "index.html";
+        if (targetUrl === "welcome" || targetUrl === "") targetUrl = "index.html";
+        if (!targetUrl.endsWith(".html")) {
+            targetUrl += ".html";
+        }
+        return this.relRoot + targetUrl.replace(/^\.\//, "");
+    }
+
+    /**
+     * Render fetched HTML text or fallback
+     * @private
+     * @param {string} text
+     * @param {string} routeName
+     * @param {!HTMLElement} container
+     */
+    _renderFetchedHtml(text, routeName, container) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, "text/html");
+        const newArticle = /** @type {?HTMLElement} */ (doc.querySelector(".doc-content"));
+        if (newArticle) {
+            container.innerHTML = newArticle.innerHTML;
+            this.executeEmbeddedScripts(container);
+        } else {
+            this.renderFallbackFromStore(routeName, container);
         }
     }
 
     /**
-     * Render Search View
-     * @param {?Object} params
+     * Handle anchor scrolling after render
+     * @private
+     * @param {string=} anchorId
      */
-    renderSearch(params) {
-        const view = document.getElementById("spa-view-container");
-        if (view) {
-            view.innerHTML = `<div style="max-width: 800px; margin: 2rem 0; padding: 1.5rem; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(52, 211, 153, 0.4); border-radius: 16px;">
-                <h2 style="color: #34d399;">🔍 全文検索 (SPA Mode)</h2>
-                <p style="color: #94a3b8; font-size: 0.9rem;">高速ハイブリッド検索エンジンと連携したリアルタイムビューです。</p>
-            </div>`;
+    _handleAnchorScroll(anchorId) {
+        if (anchorId) {
+            const el = document.getElementById(anchorId);
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+                return;
+            }
+        }
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /**
+     * Dynamic Page Content Loading & Render Pipeline
+     * @param {string} routeName
+     * @param {string} rawUrl
+     * @param {string=} anchorId
+     */
+    async loadPageContent(routeName, rawUrl, anchorId) {
+        const rawContainer = document.getElementById("spa-view-container");
+        if (!rawContainer) return;
+        const container = /** @type {!HTMLElement} */ (rawContainer);
+
+        container.style.opacity = "0.4";
+        container.style.transition = "opacity 0.15s ease-in-out";
+
+        try {
+            const fetchUrl = this._resolveFetchUrl(rawUrl);
+            const resp = await fetch(fetchUrl);
+            if (resp.ok) {
+                const text = await resp.text();
+                this._renderFetchedHtml(text, routeName, container);
+            } else {
+                this.renderFallbackFromStore(routeName, container);
+            }
+        } catch (e) {
+            console.warn("SPAApp: Failed to fetch page content, rendering store fallback:", e);
+            this.renderFallbackFromStore(routeName, container);
+        }
+
+        container.style.opacity = "1.0";
+        this._handleAnchorScroll(anchorId);
+        this.updateNavHighlight(routeName);
+    }
+
+    /**
+     * Re-execute embedded scripts inside dynamically inserted HTML
+     * @param {!HTMLElement} container
+     */
+    executeEmbeddedScripts(container) {
+        const scripts = container.querySelectorAll("script");
+        scripts.forEach(s => {
+            const newScript = document.createElement("script");
+            if (s.src) {
+                newScript.src = s.src;
+            } else {
+                newScript.textContent = s.textContent;
+            }
+            if (document.body) {
+                document.body.appendChild(newScript).parentNode.removeChild(newScript);
+            }
+        });
+    }
+
+    /**
+     * Fallback rendering using content_store.json
+     * @param {string} routeName
+     * @param {!HTMLElement} container
+     */
+    renderFallbackFromStore(routeName, container) {
+        const doc = this.docMap.get(routeName);
+        if (doc) {
+            const docId = String(doc['id'] || '');
+            const docTitle = String(doc['title'] || '');
+            const docSnippet = String(doc['snippet'] || '');
+            const docBody = String(doc['body_md'] || '');
+            container.innerHTML = `<h1 id="${docId}">${docTitle}</h1><p style="color:#94a3b8;">${docSnippet}</p><pre style="white-space:pre-wrap; background:rgba(0,0,0,0.3); padding:1rem; border-radius:8px;"><code>${docBody}</code></pre>`;
+        } else {
+            container.innerHTML = `<div style="padding:2rem; text-align:center;"><h2>404 - ページが見つかりません</h2><p style="color:#94a3b8;">指定されたドキュメント/ビューは存在しないか、読み込みに失敗しました。</p></div>`;
         }
     }
 
     /**
-     * Render Quiz View
+     * Update top navigation bar button highlights
+     * @param {string} routeName
      */
-    renderQuiz() {
-        const view = document.getElementById("spa-view-container");
-        if (view) {
-            view.innerHTML = `<div style="max-width: 800px; margin: 2rem 0; padding: 1.5rem; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(253, 224, 71, 0.4); border-radius: 16px;">
-                <h2 style="color: #fde047;">📚 演習クイズ (SPA Mode)</h2>
-                <p style="color: #94a3b8; font-size: 0.9rem;">データ駆動型 4 択演習クイズです。</p>
-            </div>`;
-        }
-    }
-
-    /**
-     * Render Glossary View
-     */
-    renderGlossary() {
-        const view = document.getElementById("spa-view-container");
-        if (view) {
-            view.innerHTML = `<div style="max-width: 800px; margin: 2rem 0; padding: 1.5rem; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(244, 114, 182, 0.4); border-radius: 16px;">
-                <h2 style="color: #f472b6;">🔤 用語辞書 (SPA Mode)</h2>
-                <p style="color: #94a3b8; font-size: 0.9rem;">IPA シラバス Ver.2.1 必須用語解説データベースです。</p>
-            </div>`;
-        }
-    }
-
-    /**
-     * Render Cheatsheet View
-     */
-    renderCheatsheet() {
-        const view = document.getElementById("spa-view-container");
-        if (view) {
-            view.innerHTML = `<div style="max-width: 800px; margin: 2rem 0; padding: 1.5rem; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(165, 180, 252, 0.4); border-radius: 16px;">
-                <h2 style="color: #a5b4fc;">⚡ 虎の巻 (SPA Mode)</h2>
-                <p style="color: #94a3b8; font-size: 0.9rem;">科目 B 30〜50 字記述キーフレーズ集です。</p>
-            </div>`;
-        }
+    updateNavHighlight(routeName) {
+        document.querySelectorAll(".nav-btn").forEach(btn => {
+            const href = btn.getAttribute("href") || "";
+            if (href.includes(routeName) || (routeName === "welcome" && href.includes("index"))) {
+                /** @type {!HTMLElement} */ (btn).style.color = "#818cf8";
+                /** @type {!HTMLElement} */ (btn).style.fontWeight = "700";
+            } else {
+                /** @type {!HTMLElement} */ (btn).style.color = "var(--text-secondary)";
+                /** @type {!HTMLElement} */ (btn).style.fontWeight = "500";
+            }
+        });
     }
 }
 

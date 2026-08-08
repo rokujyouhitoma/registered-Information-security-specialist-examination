@@ -15,7 +15,7 @@ import html
 from pathlib import Path
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DOCS_DIR = os.path.join(BASE_DIR, "docs")
+DOCS_DIR = os.path.join(BASE_DIR, "src", "content")
 SRC_DATA_DIR = os.path.join(BASE_DIR, "src", "data")
 SITE_DATA_DIR = os.path.join(BASE_DIR, "site", "data")
 

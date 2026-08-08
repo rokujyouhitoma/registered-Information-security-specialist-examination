@@ -21,7 +21,7 @@ ABSOLUTE_LINK_PATTERNS = [
     (re.compile(r'src=["\']\s*(?:file:///|/workspace/|/root/)'), 'HTML src 属性内の絶対パス')
 ]
 
-SCAN_DIRS = ["docs", "project-docs", "issues", "references", ".agents"]
+SCAN_DIRS = ["src/content", "docs", "issues", "references", ".agents"]
 
 def strip_inline_code(line: str) -> str:
     # インラインコード `...` を除去して実効リンクのみを判定対象とする

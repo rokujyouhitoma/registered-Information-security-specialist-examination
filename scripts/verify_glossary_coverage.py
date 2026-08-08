@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
-DOCS_DIR = WORKSPACE_ROOT / "docs"
+DOCS_DIR = WORKSPACE_ROOT / "src" / "content"
 
 SYLLABUS_DETAIL = DOCS_DIR / "syllabus_detail.md"
 TSUIHO_DETAIL = DOCS_DIR / "syllabus_tsuiho_detail.md"

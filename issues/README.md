@@ -14,6 +14,8 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 135 | Refactor | [ディレクトリ構造再定義: 学習コンテンツの src/content 移行および docs/ へのプロジェクト管理資料集約](closed/135-restructure-learning-content-to-src-content-and-project-docs-to-docs.md) | 2026-08-08 | [135-restructure-learning-content-to-src-content-and-project-docs-to-docs.md](closed/135-restructure-learning-content-to-src-content-and-project-docs-to-docs.md) |
+| 134 | Feature | [Full SPA モード移行: クライアントサイドハッシュルーティング・無縫子ナビゲーション完全統合](closed/134-spa-migration-phase2-full-spa-client-routing-integration.md) | 2026-08-08 | [134-spa-migration-phase2-full-spa-client-routing-integration.md](closed/134-spa-migration-phase2-full-spa-client-routing-integration.md) |
 | 133 | Feature | [IR・RAG 強化 Phase 6: RAGAS / ARES 基準による検索精度定量評価パイプラインと過去問グラウンドトゥルースデータセットの構築](closed/133-ir-rag-phase6-ragas-ares-evaluation-pipeline.md) | 2026-08-08 | [133-ir-rag-phase6-ragas-ares-evaluation-pipeline.md](closed/133-ir-rag-phase6-ragas-ares-evaluation-pipeline.md) |
 | 132 | Feature | [IR・RAG 強化 Phase 5: セキュリティドメイン特化型 Fast-Vector / Matryoshka Representation Learning (MRL) ファインチューニング](closed/132-ir-rag-phase5-domain-adaptation-mrl.md) | 2026-08-08 | [132-ir-rag-phase5-domain-adaptation-mrl.md](closed/132-ir-rag-phase5-domain-adaptation-mrl.md) |
 | 131 | Feature | [IR・RAG 強化 Phase 4: Parent-Document Retrieval（階層的 Chunking）および Markdown/Layout-Aware 解析構造化インデックス化](closed/131-ir-rag-phase4-parent-document-hierarchical-chunking.md) | 2026-08-08 | [131-ir-rag-phase4-parent-document-hierarchical-chunking.md](closed/131-ir-rag-phase4-parent-document-hierarchical-chunking.md) |

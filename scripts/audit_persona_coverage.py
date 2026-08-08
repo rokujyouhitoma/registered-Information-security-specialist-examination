@@ -14,14 +14,14 @@ import sys
 import glob
 
 def audit_persona_coverage():
-    docs = glob.glob("docs/**/*.md", recursive=True) + ["docs/*.md"]
+    docs = glob.glob("src/content/**/*.md", recursive=True)
     if not docs:
-        print("❌ [Audit Fail] docs/ 配下に Markdown ファイルが見つかりません。")
+        print("❌ [Audit Fail] src/content/ 配下に Markdown ファイルが見つかりません。")
         sys.exit(1)
 
     print(f"🔍 [Persona Audit] 対象ドキュメント数: {len(set(docs))} 件")
 
-    req02_path = "project-docs/requirements/REQ-02-user_personas_and_scenarios.md"
+    req02_path = "docs/requirements/REQ-02-user_personas_and_scenarios.md"
     try:
         with open(req02_path, "r", encoding="utf-8") as f:
             req_content = f.read()

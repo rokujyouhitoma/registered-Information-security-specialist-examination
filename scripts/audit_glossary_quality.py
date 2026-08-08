@@ -13,8 +13,8 @@ import re
 import os
 
 AUDIT_FILES = [
-    "docs/glossary/syllabus_ver2_1.md",
-    "docs/glossary/syllabus_tsuiho_ver4_0.md"
+    "src/content/glossary/syllabus_ver2_1.md",
+    "src/content/glossary/syllabus_tsuiho_ver4_0.md"
 ]
 
 FORBIDDEN_PHRASES = [

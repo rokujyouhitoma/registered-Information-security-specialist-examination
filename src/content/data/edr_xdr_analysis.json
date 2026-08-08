@@ -1,0 +1,20 @@
+{
+  "title": "EDR / XDR インシデントプロセスツリー＆レスポンス解析ガイド",
+  "detectionPhases": [
+    {
+      "phase": "1. 初期侵入・プロセス生成 (Execution)",
+      "indicator": "WINWORD.EXE -> powershell.exe -Enc (難読化コマンド実行)",
+      "edrAction": "プロセスツリー親子の異常関係検知、コマンドライン引数のデコード解析。"
+    },
+    {
+      "phase": "2. 横展開・資格情報奪取 (Lateral Movement)",
+      "indicator": "lsass.exe メモリダンプ要求 (Mimikatz 挙動) & LSASS アクセスログ生成",
+      "edrAction": "LSASS プロセスへのメモリ領域アクセス遮断、該当端末のネットワーク論理隔離。"
+    },
+    {
+      "phase": "3. 自動レスポンス (SOAR Playbook)",
+      "indicator": "C2 サーバー (悪性IP) への連続通信検知",
+      "edrAction": "SOAR 連携による FW / プロキシへの自動ブロックルール追加および CISO 通知。"
+    }
+  ]
+}
