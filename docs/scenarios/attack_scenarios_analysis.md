@@ -21,6 +21,39 @@
 
             <div id="timeline-steps-container" style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem;"></div>
         </div>
+
+        <!-- 💥 AIサイバー攻撃インシデント逆引きアタックマップ (Interactive Blast Radius Visualizer) -->
+        <div id="blast-radius-app" style="margin-top: 2.5rem; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 16px; padding: 1.75rem; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h4 style="color: #f8fafc; font-size: 1.1rem; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>💥 AIサイバー攻撃 逆引きアタックマップ</span>
+                    <span style="font-size: 0.75rem; background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4); padding: 0.15rem 0.6rem; border-radius: 12px; font-weight: 700;">Blast Radius Simulator</span>
+                </h4>
+                <div id="step-selector-btns" style="display: flex; gap: 0.4rem;"></div>
+            </div>
+
+            <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 1.25rem; line-height: 1.5;">
+                攻撃フェーズごとにネットワーク影響範囲（Blast Radius）の伝播状況をリアルタイム視視化できます。「CSIRT初動隔離シミュレート」を実行すると、被害抑止アクションと科目B記述式の模範解答が出力されます。
+            </p>
+
+            <!-- Topology Nodes Visualizer Map -->
+            <div id="topology-nodes-container" style="display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: center; background: rgba(30, 41, 59, 0.6); padding: 1.25rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 1rem;"></div>
+
+            <!-- Containment Action & Model Answer Overlay -->
+            <div id="containment-action-box" style="display: none; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 1.25rem; margin-top: 1rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.4rem;">
+                    <span style="color: #34d399; font-weight: 700; font-size: 0.92rem;">🛡️ CSIRT 初動隔離成功 & 科目B記述式模範解答</span>
+                    <span id="char-count-badge" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; padding: 0.15rem 0.5rem; border-radius: 10px; font-size: 0.78rem; font-weight: 700; font-family: monospace;">[48字 / 45-50字制限適合]</span>
+                </div>
+                <div id="model-answer-text" style="color: #e2e8f0; font-size: 0.92rem; line-height: 1.6; font-weight: 600; background: rgba(0,0,0,0.3); padding: 0.75rem 1rem; border-radius: 8px; border-left: 4px solid #10b981;"></div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
+                <button id="simulate-containment-btn" onclick="simulateContainment()" style="background: linear-gradient(135deg, #10b981, #059669); color: #ffffff; border: none; border-radius: 10px; padding: 0.6rem 1.25rem; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 10px rgba(16,185,129,0.3);">
+                    ⚡ CSIRT 初動隔離シミュレートを実行
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -68,11 +101,49 @@
     font-size: 0.88rem;
     margin-top: 0.5rem;
 }
+.topo-node {
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.topo-node.normal {
+    background: rgba(30, 41, 59, 0.8);
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.topo-node.compromised {
+    background: rgba(239, 68, 68, 0.25);
+    color: #fca5a5;
+    border: 1px solid #ef4444;
+    animation: pulseComp 1.5s infinite ease-in-out;
+}
+.topo-node.blast {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fde047;
+    border: 1px solid #f59e0b;
+}
+.topo-node.isolated {
+    background: rgba(16, 185, 129, 0.25);
+    color: #6ee7b7;
+    border: 1px solid #10b981;
+}
+@keyframes pulseComp {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(239,68,68,0.4); }
+    50% { transform: scale(1.03); box-shadow: 0 0 20px rgba(239,68,68,0.8); }
+}
 </style>
 
 <script>
 let attackData = [];
 let currentScenarioIdx = 0;
+let currentStepIdx = 0;
+let isContainmentActive = false;
 
 async function loadAttackScenarios() {
     try {
@@ -97,7 +168,20 @@ function renderScenarioTabs() {
 
 function selectScenario(idx) {
     currentScenarioIdx = idx;
+    currentStepIdx = 0;
+    isContainmentActive = false;
     renderScenarioTabs();
+    renderCurrentScenario();
+}
+
+function selectStep(stepIdx) {
+    currentStepIdx = stepIdx;
+    isContainmentActive = false;
+    renderCurrentScenario();
+}
+
+function simulateContainment() {
+    isContainmentActive = true;
     renderCurrentScenario();
 }
 
@@ -108,6 +192,7 @@ function renderCurrentScenario() {
     document.getElementById('scenario-title').innerText = sc.title;
     document.getElementById('scenario-badge').innerText = sc.severity;
 
+    // Render Steps Timeline
     const stepsContainer = document.getElementById('timeline-steps-container');
     stepsContainer.innerHTML = sc.steps.map(s => `
         <div class="timeline-step-card">
@@ -121,6 +206,61 @@ function renderCurrentScenario() {
             </div>
         </div>
     `).join('');
+
+    // Render Step Selector Buttons for Topology Visualizer
+    const stepBtnsContainer = document.getElementById('step-selector-btns');
+    if (stepBtnsContainer) {
+        stepBtnsContainer.innerHTML = sc.steps.map((s, idx) => `
+            <button onclick="selectStep(${idx})" style="background: ${idx === currentStepIdx ? '#6366f1' : 'rgba(255,255,255,0.05)'}; color: ${idx === currentStepIdx ? '#fff' : '#94a3b8'}; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 0.2rem 0.6rem; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
+                Step ${s.stepNumber}
+            </button>
+        `).join('');
+    }
+
+    // Render Topology Nodes Blast Radius Map
+    const currentStep = sc.steps[currentStepIdx] || sc.steps[0];
+    const compIds = currentStep.compromisedNodeIds || [];
+    const blastIds = currentStep.blastRadiusNodeIds || [];
+    const containment = sc.containmentAction || {};
+    const isolatedIds = isContainmentActive ? (containment.isolatedNodeIds || []) : [];
+
+    const nodesContainer = document.getElementById('topology-nodes-container');
+    if (nodesContainer && sc.nodes) {
+        nodesContainer.innerHTML = sc.nodes.map(node => {
+            let statusClass = 'normal';
+            let statusIcon = '🖥️';
+
+            if (isContainmentActive && isolatedIds.includes(node.id)) {
+                statusClass = 'isolated';
+                statusIcon = '🛡️';
+            } else if (compIds.includes(node.id)) {
+                statusClass = 'compromised';
+                statusIcon = '🔴';
+            } else if (blastIds.includes(node.id)) {
+                statusClass = 'blast';
+                statusIcon = '⚠️';
+            }
+
+            return `
+                <div class="topo-node ${statusClass}">
+                    <span>${statusIcon}</span>
+                    <span>${node.label}</span>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // Render Containment Action Overlay
+    const containmentBox = document.getElementById('containment-action-box');
+    if (containmentBox) {
+        if (isContainmentActive && containment.modelAnswer) {
+            containmentBox.style.display = 'block';
+            document.getElementById('model-answer-text').innerText = containment.modelAnswer;
+            document.getElementById('char-count-badge').innerText = `[${containment.charCount}字 / 45-50字制限適合]`;
+        } else {
+            containmentBox.style.display = 'none';
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', loadAttackScenarios);
