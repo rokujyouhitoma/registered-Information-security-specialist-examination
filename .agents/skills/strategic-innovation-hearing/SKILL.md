@@ -1,8 +1,8 @@
 ---
-name: agent-hearing-proposal
+name: strategic-innovation-hearing
 description: 全 13 大スペシャリストエージェントからの専門的聞き取り・現状分析を行い、最優先改善項目を選定。時折「突拍子もない革新的企画 (突然変異的アプローチ)」を戦略的に導入し局所最適を回避しつつ、SM/SA による変更管理 (Change Management) および 4 大品質ゲート (Quality Gates: verify-quality-gates スキル一括検証、Closure Compiler ゼロエラー/警告、絶対パス完全排斥) を通して開発・マージを推進する標準プロシージャスキル。
 ---
-# agent-hearing-proposal
+# strategic-innovation-hearing
 
 本スキルは、**全体管理（PM）** の統括のもと、**企画（ST）**、**設計・実装（SA および SA 指名スペシャリスト）**、**変更管理（SM）**、**品質管理・監査（QA / AU）** の明確な責任体制を敷き、全 13 専門エージェントからのヒアリングから **`polish-issue` スキル適用**、**突然変異的革新アイデアの発案**、**変更影響アセスメント（Change Impact Assessment）**、および **4 大品質ゲート（Quality Gates / `verify-quality-gates` スキル適用）** を経て品質と可用性を極限まで高めて開発・マージを行う標準プロシージャです。
 
