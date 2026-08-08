@@ -5,6 +5,15 @@ IPA 情報処理安全確保支援士試験 (SC) のシラバス重要概念・�
 ---
 
 <div class="quiz-portal-container" style="max-width: 800px; margin: 2rem 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+    <!-- REQ-02 ペルソナ別出題フィルタータブ -->
+    <div class="persona-filter-tabs" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+        <button class="persona-tab-btn active" onclick="filterByPersona('all', this)">全問題</button>
+        <button class="persona-tab-btn" onclick="filterByPersona('persona1', this)">🎯 P1: 受験者 (記述対策)</button>
+        <button class="persona-tab-btn" onclick="filterByPersona('persona2', this)">📜 P2: 有資格者 (追補版Ver.4.0)</button>
+        <button class="persona-tab-btn" onclick="filterByPersona('persona3', this)">💻 P3: Web開発 (セキュア設計)</button>
+        <button class="persona-tab-btn" onclick="filterByPersona('persona4', this)">🛡️ P4: CSIRT (インシデント)</button>
+    </div>
+
     <div id="quiz-card" style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.25);">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.75rem;">
             <span id="quiz-category-badge" style="background: rgba(99, 102, 241, 0.2); color: #818cf8; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.82rem; font-weight: 600;">読み込み中...</span>
@@ -24,6 +33,28 @@ IPA 情報処理安全確保支援士試験 (SC) のシラバス重要概念・�
 </div>
 
 <style>
+.persona-tab-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.persona-tab-btn:hover {
+    background: rgba(99, 102, 241, 0.15);
+    color: #cbd5e1;
+    border-color: #818cf8;
+}
+.persona-tab-btn.active {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(79, 70, 229, 0.3));
+    color: #818cf8;
+    border-color: #6366f1;
+}
+
 .quiz-opt-btn {
     background: rgba(255, 255, 255, 0.05);
     color: #cbd5e1;
@@ -53,7 +84,8 @@ IPA 情報処理安全確保支援士試験 (SC) のシラバス重要概念・�
 </style>
 
 <script>
-let questionsData = [];
+let rawQuestions = [];
+let activeQuestions = [];
 let currentIdx = 0;
 
 async function fetchWithFallback(pathList) {
@@ -75,7 +107,8 @@ async function loadQuizData() {
             '/registered-information-security-specialist-examination/data/quiz_questions.json',
             '/registered-information-security-specialist-examination/quiz/data/quiz_questions.json'
         ]);
-        questionsData = await res.json();
+        rawQuestions = await res.json();
+        activeQuestions = rawQuestions.slice();
         renderQuestion();
     } catch (err) {
         console.error('Quiz load error:', err);
@@ -83,12 +116,31 @@ async function loadQuizData() {
     }
 }
 
-function renderQuestion() {
-    if (questionsData.length === 0) return;
-    const q = questionsData[currentIdx];
+function filterByPersona(personaKey, btnEl) {
+    document.querySelectorAll('.persona-tab-btn').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
 
-    document.getElementById('quiz-category-badge').innerText = q.category.toUpperCase();
-    document.getElementById('quiz-progress').innerText = `Question ${currentIdx + 1} / ${questionsData.length}`;
+    if (personaKey === 'all') {
+        activeQuestions = rawQuestions.slice();
+    } else {
+        activeQuestions = rawQuestions.filter(q => q.persona === personaKey);
+    }
+    currentIdx = 0;
+    renderQuestion();
+}
+
+function renderQuestion() {
+    if (activeQuestions.length === 0) {
+        document.getElementById('quiz-question-text').innerText = '該当するペルソナの問題はありません。';
+        document.getElementById('quiz-options-list').innerHTML = '';
+        document.getElementById('quiz-feedback-box').style.display = 'none';
+        document.getElementById('next-question-btn').style.display = 'none';
+        return;
+    }
+    const q = activeQuestions[currentIdx];
+
+    document.getElementById('quiz-category-badge').innerText = q.category.toUpperCase() + (q.persona ? ` [${q.persona.toUpperCase()}]` : '');
+    document.getElementById('quiz-progress').innerText = `Question ${currentIdx + 1} / ${activeQuestions.length}`;
     document.getElementById('quiz-question-text').innerText = q.question;
 
     const optList = document.getElementById('quiz-options-list');
@@ -101,7 +153,7 @@ function renderQuestion() {
 }
 
 function checkAnswer(selectedIdx, btnEl) {
-    const q = questionsData[currentIdx];
+    const q = activeQuestions[currentIdx];
     const allBtns = document.querySelectorAll('.quiz-opt-btn');
     allBtns.forEach(btn => btn.disabled = true);
 
@@ -123,13 +175,13 @@ function checkAnswer(selectedIdx, btnEl) {
         feedbackBox.innerHTML = `<strong>❌ 不正解...</strong><br>正解: ${q.answerIndex + 1}. ${q.options[q.answerIndex]}<br>${q.explanation}`;
     }
 
-    if (currentIdx < questionsData.length - 1) {
+    if (currentIdx < activeQuestions.length - 1) {
         document.getElementById('next-question-btn').style.display = 'block';
     }
 }
 
 function nextQuestion() {
-    currentIdx = (currentIdx + 1) % questionsData.length;
+    currentIdx = (currentIdx + 1) % activeQuestions.length;
     renderQuestion();
 }
 

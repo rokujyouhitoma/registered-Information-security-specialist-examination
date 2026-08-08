@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 111 | Feature | [REQ-02 ユーザーペルソナ別出題フィルタータブ (Persona Filter Tabs) の Web クイズ UI への動的実装](closed/111-add-persona-filter-tabs-to-web-quiz-ui.md) | 2026-08-08 | [111-add-persona-filter-tabs-to-web-quiz-ui.md](closed/111-add-persona-filter-tabs-to-web-quiz-ui.md) |
 | 110 | Feature | [REQ-02 連動型 ユーザーペルソナ別出題モード (Persona-based Learning Drill) の quiz_runner.py および クイズデータ拡張](closed/110-implement-persona-based-quiz-drills.md) | 2026-08-08 | [110-implement-persona-based-quiz-drills.md](closed/110-implement-persona-based-quiz-drills.md) |
 | 109 | Feature | [ユーザー提供価値の最大化を前提としたユーザーペルソナ・ユースケースシナリオ詳細定義書の策定](closed/109-define-user-personas-and-scenarios.md) | 2026-08-08 | [109-define-user-personas-and-scenarios.md](closed/109-define-user-personas-and-scenarios.md) |
 | 108 | Feature | [package.json への test:relative-paths コマンド追加統合と npm test 実行時の相対パスガバナンス自動アサーション常時化](closed/108-add-relative-paths-test-to-package-json.md) | 2026-08-08 | [108-add-relative-paths-test-to-package-json.md](closed/108-add-relative-paths-test-to-package-json.md) |
