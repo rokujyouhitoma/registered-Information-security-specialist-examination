@@ -87,6 +87,19 @@ IPA 情報処理安全確保支援士試験 (SC) のシラバス重要概念・�
 let rawQuestions = [];
 let activeQuestions = [];
 let currentIdx = 0;
+let currentShuffledOptions = [];
+let shuffledCorrectIndex = 0;
+
+function shuffleArray(array) {
+    const arr = array.slice();
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;
+}
 
 async function fetchWithFallback(pathList) {
     for (let i = 0; i < pathList.length; i++) {
@@ -143,9 +156,17 @@ function renderQuestion() {
     document.getElementById('quiz-progress').innerText = `Question ${currentIdx + 1} / ${activeQuestions.length}`;
     document.getElementById('quiz-question-text').innerText = q.question;
 
+    // 選択肢の Fisher-Yates 動的ランダムシャッフル
+    const optionObjects = q.options.map((optText, origIdx) => ({
+        text: optText,
+        isCorrect: origIdx === q.answerIndex
+    }));
+    currentShuffledOptions = shuffleArray(optionObjects);
+    shuffledCorrectIndex = currentShuffledOptions.findIndex(o => o.isCorrect);
+
     const optList = document.getElementById('quiz-options-list');
-    optList.innerHTML = q.options.map((opt, idx) => `
-        <button class="quiz-opt-btn" onclick="checkAnswer(${idx}, this)">${idx + 1}. ${opt}</button>
+    optList.innerHTML = currentShuffledOptions.map((optObj, idx) => `
+        <button class="quiz-opt-btn" onclick="checkAnswer(${idx}, this)">${idx + 1}. ${optObj.text}</button>
     `).join('');
 
     document.getElementById('quiz-feedback-box').style.display = 'none';
@@ -160,7 +181,9 @@ function checkAnswer(selectedIdx, btnEl) {
     const feedbackBox = document.getElementById('quiz-feedback-box');
     feedbackBox.style.display = 'block';
 
-    if (selectedIdx === q.answerIndex) {
+    const correctOptText = q.options[q.answerIndex];
+
+    if (selectedIdx === shuffledCorrectIndex) {
         btnEl.classList.add('correct');
         feedbackBox.style.background = 'rgba(16, 185, 129, 0.15)';
         feedbackBox.style.border = '1px solid #10b981';
@@ -168,11 +191,13 @@ function checkAnswer(selectedIdx, btnEl) {
         feedbackBox.innerHTML = `<strong>🎉 正解です！</strong><br>${q.explanation}`;
     } else {
         btnEl.classList.add('wrong');
-        allBtns[q.answerIndex].classList.add('correct');
+        if (allBtns[shuffledCorrectIndex]) {
+            allBtns[shuffledCorrectIndex].classList.add('correct');
+        }
         feedbackBox.style.background = 'rgba(239, 68, 68, 0.15)';
         feedbackBox.style.border = '1px solid #ef4444';
         feedbackBox.style.color = '#fca5a5';
-        feedbackBox.innerHTML = `<strong>❌ 不正解...</strong><br>正解: ${q.answerIndex + 1}. ${q.options[q.answerIndex]}<br>${q.explanation}`;
+        feedbackBox.innerHTML = `<strong>❌ 不正解...</strong><br>正解: ${shuffledCorrectIndex + 1}. ${correctOptText}<br>${q.explanation}`;
     }
 
     if (currentIdx < activeQuestions.length - 1) {
