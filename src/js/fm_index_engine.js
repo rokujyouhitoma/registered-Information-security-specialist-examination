@@ -321,7 +321,115 @@ class CustomSearchEngine {
     }
 
     /**
-     * 転置インデックス・シノニム拡張(A)・密概念セマンティック(B)のハイブリッド全文検索を実行
+     * @private
+     * 単一ドキュメントの BM25 / Dense スコア計算ヘルパー
+     * @param {!Object} doc
+     * @param {number} idx
+     * @param {!Array<string>} expandedTokens
+     * @param {!Array<string>} rawTokens
+     * @param {string} queryLower
+     * @param {!Array<string>} queryWords
+     * @param {number} avgdl
+     * @param {!Object<string, number>} qVecNorm
+     * @return {{doc: !Object, idx: number, bm25Total: number, denseTotal: number, cosineSim: number, semanticScore: number}}
+     */
+    _computeDocCandidateScore(doc, idx, expandedTokens, rawTokens, queryLower, queryWords, avgdl, qVecNorm) {
+        const dVec = (this.vectors && typeof this.vectors === 'object') ? (this.vectors[idx] || {}) : {};
+        const bm25Score = this._calculateDocBm25Score(expandedTokens, dVec, avgdl);
+        const cosineSim = VectorScorer.calculateCosineSimilarity(qVecNorm, dVec);
+        const docFullText = (doc.name || '') + ' ' + (doc.summary || '') + ' ' + (doc.content || '') + ' ' + (doc.tech || '') + ' ' + (doc.exam || '');
+        const semanticScore = (typeof SemanticScorer !== 'undefined')
+            ? SemanticScorer.calculateSemanticScore(rawTokens, docFullText)
+            : 0.0;
+        const boost = this._calculateExactMatchBoost(doc, queryLower, queryWords, docFullText);
+
+        return {
+            doc,
+            idx,
+            bm25Total: bm25Score + boost,
+            denseTotal: cosineSim + semanticScore,
+            cosineSim,
+            semanticScore
+        };
+    }
+
+    /**
+     * @private
+     * 候補ドキュメントに対する BM25 および Dense スコア収集ヘルパー
+     * @param {!Array<number>} targetIds
+     * @param {!Array<string>} expandedTokens
+     * @param {!Array<string>} rawTokens
+     * @param {string} queryLower
+     * @param {!Array<string>} queryWords
+     * @param {number} avgdl
+     * @param {!Object<string, number>} qVecNorm
+     * @return {!Array<{doc: !Object, idx: number, bm25Total: number, denseTotal: number, cosineSim: number, semanticScore: number}>}
+     */
+    _scoreCandidateDocs(targetIds, expandedTokens, rawTokens, queryLower, queryWords, avgdl, qVecNorm) {
+        const docScoredList = [];
+        targetIds.forEach(idx => {
+            const doc = this.docs ? this.docs[idx] : null;
+            if (!doc) return;
+            const scored = this._computeDocCandidateScore(doc, idx, expandedTokens, rawTokens, queryLower, queryWords, avgdl, qVecNorm);
+            docScoredList.push(scored);
+        });
+        return docScoredList;
+    }
+
+    /**
+     * @private
+     * BM25 および Dense の順位マッピング生成ヘルパー
+     * @param {!Array<{doc: !Object, idx: number, bm25Total: number, denseTotal: number, cosineSim: number, semanticScore: number}>} docScoredList
+     * @return {{bm25RankMap: !Object<number, number>, denseRankMap: !Object<number, number>}}
+     */
+    _buildRankMaps(docScoredList) {
+        const bm25Ranked = [...docScoredList].sort((a, b) => b.bm25Total - a.bm25Total);
+        const denseRanked = [...docScoredList].sort((a, b) => b.denseTotal - a.denseTotal);
+
+        /** @type {!Object<number, number>} */
+        const bm25RankMap = Object.create(null);
+        bm25Ranked.forEach((item, r) => { bm25RankMap[item.idx] = r + 1; });
+
+        /** @type {!Object<number, number>} */
+        const denseRankMap = Object.create(null);
+        denseRanked.forEach((item, r) => { denseRankMap[item.idx] = r + 1; });
+
+        return { bm25RankMap, denseRankMap };
+    }
+
+    /**
+     * @private
+     * RRF スコア統合および最終結果整列ヘルパー
+     * @param {!Array<{doc: !Object, idx: number, bm25Total: number, denseTotal: number, cosineSim: number, semanticScore: number}>} docScoredList
+     * @param {{bm25RankMap: !Object<number, number>, denseRankMap: !Object<number, number>}} rankMaps
+     * @param {number} topK
+     * @return {!Array<!Object>}
+     */
+    _computeFinalScoredResults(docScoredList, rankMaps, topK) {
+        const scores = [];
+        docScoredList.forEach(item => {
+            const rankBM25 = rankMaps.bm25RankMap[item.idx] || 0;
+            const rankDense = rankMaps.denseRankMap[item.idx] || 0;
+            const rrfScore = (typeof VectorScorer !== 'undefined' && typeof VectorScorer.calculateRRFScore === 'function')
+                ? VectorScorer.calculateRRFScore(rankBM25, rankDense, 60)
+                : 0.0;
+
+            const finalScore = (rrfScore * 100.0) + item.bm25Total + (item.cosineSim * 0.5) + item.semanticScore;
+            if (finalScore > 0.01) {
+                scores.push({ doc: item.doc, score: finalScore });
+            }
+        });
+
+        scores.sort((a, b) => b.score - a.score);
+        return scores.slice(0, topK).map(item => ({
+            ...item.doc,
+            parent_id: item.doc.parent_id || item.doc.id || '',
+            score: item.score.toFixed(4)
+        }));
+    }
+
+    /**
+     * 転置インデックス・シノニム拡張(A)・密概念セマンティック(B)・RRF統合ハイブリッド全文検索を実行
      * @param {string} query 検索クエリ
      * @param {number=} topK 取得上位件数
      * @return {!Array<!Object>} スコアリング結果配列
@@ -341,22 +449,30 @@ class CustomSearchEngine {
         const queryLower = query.toLowerCase().trim();
         const queryWords = queryLower.split(/[\s()/_\-\u3000]+/).filter(w => w.length > 0);
         const avgdl = this.avgdl > 0 ? this.avgdl : 50.0;
+        const qVecNorm = this._buildQueryVector(expandedTokens);
 
-        const scores = [];
-        targetIds.forEach(idx => {
-            const doc = this.docs ? this.docs[idx] : null;
-            if (!doc) return;
-            const finalScore = this._scoreSingleDoc(doc, idx, expandedTokens, rawTokens, queryLower, queryWords, avgdl);
-            if (finalScore > 0.01) {
-                scores.push({ doc, score: finalScore });
+        const docScoredList = this._scoreCandidateDocs(targetIds, expandedTokens, rawTokens, queryLower, queryWords, avgdl, qVecNorm);
+        const rankMaps = this._buildRankMaps(docScoredList);
+
+        return this._computeFinalScoredResults(docScoredList, rankMaps, topK);
+    }
+
+    /**
+     * Parent-Document Retrieval (階層的 Chunking) 対応:
+     * 子チャンク ID またはドキュメント ID から親ドキュメントおよびその文脈 (parent_context) を全復元する
+     * @param {string} targetId
+     * @return {?Object} 親ドキュメントオブジェクト
+     */
+    getParentDocument(targetId) {
+        if (!targetId || typeof targetId !== 'string' || !this.docs) return null;
+        const parentId = targetId.includes('#') ? targetId.split('#')[0] : targetId;
+        for (let i = 0; i < this.docs.length; i++) {
+            const doc = this.docs[i];
+            if (doc && (doc.id === parentId || doc.id === targetId || doc.url === parentId)) {
+                return doc;
             }
-        });
-
-        scores.sort((a, b) => b.score - a.score);
-        return scores.slice(0, topK).map(item => ({
-            ...item.doc,
-            score: item.score.toFixed(4)
-        }));
+        }
+        return null;
     }
 }
 

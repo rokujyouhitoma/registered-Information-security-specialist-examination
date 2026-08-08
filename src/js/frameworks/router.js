@@ -5,7 +5,6 @@
 
 /**
  * Router manages the hash-based client-side routing
- * @implements {RouterInterface}
  */
 class Router {
     /**
@@ -38,9 +37,7 @@ class Router {
      * Supports path patterns and parses query query strings (?param=val).
      * @param {string} pattern
      * @param {!Function} callback
-     * @override
      */
-    // @ts-expect-error
     register(pattern, callback) {
         // Convert the pattern into a RegExp matching starting hash path.
         // Optional leading '/' is allowed.
@@ -53,9 +50,7 @@ class Router {
      * Resolve path and invoke callback.
      * @param {string} hash
      * @return {boolean} True if matched and executed.
-     * @override
      */
-    // @ts-expect-error
     resolve(hash) {
         if (this.currentHash !== null && hash === this.currentHash) {
             return false;
@@ -111,9 +106,7 @@ class Router {
 
     /**
      * Start listening to hashchange events.
-     * @override
      */
-    // @ts-expect-error
     listen() {
         window.addEventListener("hashchange", () => {
             this.resolve(window.location.hash);
@@ -130,9 +123,7 @@ class Router {
     /**
      * Force navigate to a hash path.
      * @param {string} hash
-     * @override
      */
-    // @ts-expect-error
     navigate(hash) {
         window.location.hash = hash;
         this.resolve(hash);

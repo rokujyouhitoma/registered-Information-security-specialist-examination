@@ -24,6 +24,41 @@ class SynonymExpander {
     }
 
     /**
+     * プロトタイプ汚染防御用のキー安全性検証 (SecurityValidator へのプロキシ)
+     * @param {string} key
+     * @return {boolean}
+     */
+    static isSafeKey(key) {
+        return (typeof SecurityValidator !== 'undefined')
+            ? SecurityValidator.isSafeKey(key)
+            : Boolean(key) && key !== '__proto__' && key !== 'prototype' && key !== 'constructor';
+    }
+
+    /**
+     * @private
+     * 単一トークンに対するシノニム追加ヘルパー
+     * @param {string} token
+     * @param {!Object<string, !Array<string>>} map
+     * @param {!Set<string>} expandedSet
+     */
+    static _addTokenSynonyms(token, map, expandedSet) {
+        if (!SynonymExpander.isSafeKey(token)) return;
+        expandedSet.add(token);
+
+        const lowerToken = String(token || '').toLowerCase();
+        if (SynonymExpander.isSafeKey(lowerToken) && Object.prototype.hasOwnProperty.call(map, lowerToken)) {
+            const synonyms = map[lowerToken];
+            if (Array.isArray(synonyms)) {
+                for (let j = 0; j < synonyms.length; j++) {
+                    if (SynonymExpander.isSafeKey(synonyms[j])) {
+                        expandedSet.add(synonyms[j]);
+                    }
+                }
+            }
+        }
+    }
+
+    /**
      * トークン配列を受け取り、シノニムマップに基づいて拡張トークン配列を返す
      * @param {!Array<string>} tokens
      * @return {!Array<string>}
@@ -34,17 +69,10 @@ class SynonymExpander {
         }
 
         const map = SynonymExpander.getSynonymMap();
-        const expandedSet = new Set(tokens);
+        const expandedSet = new Set();
 
         for (let i = 0; i < tokens.length; i++) {
-            const token = tokens[i];
-            const lowerToken = String(token || '').toLowerCase();
-            const synonyms = map[lowerToken];
-            if (Array.isArray(synonyms)) {
-                for (let j = 0; j < synonyms.length; j++) {
-                    expandedSet.add(synonyms[j]);
-                }
-            }
+            SynonymExpander._addTokenSynonyms(tokens[i], map, expandedSet);
         }
 
         return Array.from(expandedSet);

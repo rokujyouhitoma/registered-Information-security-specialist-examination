@@ -5,23 +5,22 @@
 
 /**
  * Publisher class.
- * @implements {PublisherInterface}
  */
 class Publisher {
     /**
-     * @param {!YuzoraEventTargetInterface} eventTarget The underlying event target.
+     * @param {!AppEventTarget} eventTarget The underlying event target.
      */
     constructor(eventTarget) {
         /**
          * @private
-         * @type {!YuzoraEventTargetInterface}
+         * @type {!AppEventTarget}
          */
         this.eventTarget_ = eventTarget;
 
         /**
          * Map subscriber callbacks to event listener wrappers.
          * @private
-         * @type {!Map<string, !Map<function(*): void, function(!YuzoraEventInterface): void>>}
+         * @type {!Map<string, !Map<function(*): void, function(!AppEvent): void>>}
          */
         this.wrappers_ = new Map();
     }
@@ -30,9 +29,7 @@ class Publisher {
      * Subscribe to a topic.
      * @param {string} topic The topic to subscribe to.
      * @param {function(*): void} callback The callback function when the topic is published.
-     * @override
      */
-    // @ts-expect-error
     subscribe(topic, callback) {
         let topicMap = this.wrappers_.get(topic);
         if (!topicMap) {
@@ -45,7 +42,7 @@ class Publisher {
             return;
         }
 
-        /** @type {function(!YuzoraEventInterface): void} */
+        /** @type {function(!AppEvent): void} */
         const wrapper = (event) => {
             callback(event.detail);
         };
@@ -57,9 +54,7 @@ class Publisher {
      * Unsubscribe from a topic.
      * @param {string} topic The topic to unsubscribe from.
      * @param {function(*): void} callback The callback function.
-     * @override
      */
-    // @ts-expect-error
     unsubscribe(topic, callback) {
         const topicMap = this.wrappers_.get(topic);
         if (!topicMap) return;
@@ -78,21 +73,17 @@ class Publisher {
      * Publish data to all subscribers of a topic.
      * @param {string} topic The topic to publish.
      * @param {*=} data The data payload.
-     * @override
      */
-    // @ts-expect-error
     publish(topic, data) {
         // AppEvent is loaded globally before Publisher
-        this.eventTarget_.dispatchEvent(/** @type {!YuzoraEventInterface} */ (new AppEvent(topic, data)));
+        this.eventTarget_.dispatchEvent(new AppEvent(topic, data));
     }
 
     /**
      * Publish data to all subscribers of a topic asynchronously on the next macro task.
      * @param {string} topic The topic to publish.
      * @param {*=} data The data payload.
-     * @override
      */
-    // @ts-expect-error
     publishAsync(topic, data) {
         setTimeout(() => {
             this.publish(topic, data);

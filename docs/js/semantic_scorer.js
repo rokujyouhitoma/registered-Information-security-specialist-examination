@@ -146,6 +146,125 @@ class SemanticScorer {
 
         return score * 2.5; // セマンティックブースト係数
     }
+
+    /**
+     * @private
+     * トークンペア間の類似度計算ヘルパー (ColBERT Late Interaction 用)
+     * @param {string} qLower
+     * @param {string} dLower
+     * @param {!Object<string, !Array<string>>} keywordsMap
+     * @return {number}
+     */
+    static _calculateTokenPairSim(qLower, dLower, keywordsMap) {
+        if (qLower === dLower) return 1.0;
+        if (qLower.includes(dLower) || dLower.includes(qLower)) return 0.8;
+
+        let sim = 0.0;
+        const keys = Object.keys(keywordsMap);
+        for (let i = 0; i < keys.length; i++) {
+            const cat = keys[i];
+            if (SemanticScorer.isSafeKey(cat)) {
+                const list = keywordsMap[cat];
+                if (Array.isArray(list) && list.includes(qLower) && list.includes(dLower)) {
+                    sim = Math.max(sim, 0.6);
+                }
+            }
+        }
+        return sim;
+    }
+
+    /**
+     * ColBERT (Contextualized Late Interaction over BERT) アルゴリズムに基づく
+     * クエリートークン vs ドキュメントトークンの MaxSim (最大トークン類似度和) スコアを計算する
+     * @param {!Array<string>} queryTokens
+     * @param {!Array<string>} docTokens
+     * @return {number}
+     */
+    static calculateColBERTScore(queryTokens, docTokens) {
+        if (!Array.isArray(queryTokens) || queryTokens.length === 0 || !Array.isArray(docTokens) || docTokens.length === 0) {
+            return 0.0;
+        }
+
+        const keywordsMap = SemanticScorer.getKeywordsMap();
+        let totalMaxSim = 0.0;
+
+        for (let i = 0; i < queryTokens.length; i++) {
+            const q = queryTokens[i];
+            if (!SemanticScorer.isSafeKey(q)) continue;
+            const qLower = q.toLowerCase();
+            let maxSim = 0.0;
+
+            for (let j = 0; j < docTokens.length; j++) {
+                const d = docTokens[j];
+                if (!SemanticScorer.isSafeKey(d)) continue;
+                const dLower = d.toLowerCase();
+                const sim = SemanticScorer._calculateTokenPairSim(qLower, dLower, keywordsMap);
+                if (sim > maxSim) {
+                    maxSim = sim;
+                }
+            }
+
+            totalMaxSim += maxSim;
+        }
+
+        return totalMaxSim;
+    }
+
+    /**
+     * @private
+     * 長文シナリオの特定の問い(例: 設問3, 設問2)に対するブースト算出ヘルパー
+     * @param {string} queryLower
+     * @param {string} textLower
+     * @return {number}
+     */
+    static _calculateQuestionMatchBoost(queryLower, textLower) {
+        if (queryLower.includes('設問') || queryLower.includes('問')) {
+            if (textLower.includes(queryLower)) {
+                return 3.0;
+            }
+        }
+        return 0.0;
+    }
+
+    /**
+     * @private
+     * 単一候補ドキュメントに対する ColBERT スコア計算ヘルパー
+     * @param {string} queryLower
+     * @param {!Array<string>} queryTokens
+     * @param {!Object} item
+     * @return {{doc: !Object, score: number}}
+     */
+    static _scoreRerankCandidate(queryLower, queryTokens, item) {
+        const doc = item.doc || item;
+        const text = (doc.name || '') + ' ' + (doc.summary || '') + ' ' + (doc.content || '') + ' ' + (doc.tech || '') + ' ' + (doc.exam || '');
+        const docTokens = (typeof Tokenizer !== 'undefined') ? Tokenizer.tokenize(text) : text.split(/\s+/);
+        const colbertScore = SemanticScorer.calculateColBERTScore(queryTokens, docTokens);
+        const questionMatchBoost = SemanticScorer._calculateQuestionMatchBoost(queryLower, text.toLowerCase());
+
+        const baseScore = typeof item.score === 'number' ? item.score : 0.0;
+        const finalScore = baseScore + colbertScore * 1.5 + questionMatchBoost;
+        return { doc, score: finalScore };
+    }
+
+    /**
+     * 第 2 段階 Cross-Encoder / ColBERT Late Interaction Re-ranking 処理パイプライン
+     * 候補 50 件から最適合ドキュメント上位 topK 件を精密再ランク付けする
+     * @param {string} query
+     * @param {!Array<!Object>} candidates
+     * @param {number} topK
+     * @return {!Array<!Object>}
+     */
+    static rerank(query, candidates, topK) {
+        if (!Array.isArray(candidates) || candidates.length === 0) return [];
+        const k = topK || 10;
+        const queryLower = (query || '').toLowerCase();
+        const queryTokens = (typeof Tokenizer !== 'undefined') ? Tokenizer.tokenize(queryLower) : queryLower.split(/\s+/);
+
+        const scored = candidates.map(item => SemanticScorer._scoreRerankCandidate(queryLower, queryTokens, item));
+        scored.sort((a, b) => b.score - a.score);
+
+        return scored.slice(0, k).map(s => s.doc);
+    }
 }
 
 /**

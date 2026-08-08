@@ -83,11 +83,31 @@ function _handleSearchAction(query, topK) {
     self.postMessage({ status: 'RESULTS', query, results });
 }
 
+/**
+ * @private
+ * Worker Re-ranking 実行アクション処理 (ColBERT Late Interaction)
+ * @param {string} query
+ * @param {Array<Object>} candidates
+ * @param {number} topK
+ */
+function _handleRerankAction(query, candidates, topK) {
+    if (typeof self.SemanticScorer === 'undefined' || !self.SemanticScorer.rerank) {
+        self.postMessage({ status: 'ERROR', error: 'SemanticScorer rerank is not available' });
+        return;
+    }
+    const startTime = Date.now();
+    const results = self.SemanticScorer.rerank(query || '', candidates || [], topK || 10);
+    const duration = Date.now() - startTime;
+    self.postMessage({ status: 'RERANK_RESULTS', query, results, duration });
+}
+
 self.onmessage = async function(e) {
-    const { action, query, topK, dataPath } = e.data;
+    const { action, query, topK, dataPath, candidates } = e.data;
     if (action === 'INIT') {
         await _handleInitAction(dataPath);
     } else if (action === 'SEARCH') {
         _handleSearchAction(query, topK);
+    } else if (action === 'RERANK') {
+        _handleRerankAction(query, candidates, topK);
     }
 };

@@ -5,24 +5,19 @@
 
 /**
  * Base Scene Class
- * @implements {SceneInterface}
  */
 class Scene {
     /**
      * Enter the scene.
      * @param {*=} data Optional context data passed to the scene.
-     * @override
      */
-    // @ts-expect-error
     enter(data) {
         throw new Error("enter() must be implemented");
     }
 
     /**
      * Exit the scene.
-     * @override
      */
-    // @ts-expect-error
     exit() {
         throw new Error("exit() must be implemented");
     }
@@ -30,14 +25,13 @@ class Scene {
 
 /**
  * SceneDirector manages the transitions between scenes
- * @implements {SceneDirectorInterface}
  */
 class SceneDirector {
     constructor() {
         /**
          * Registered Scenes
          * @private
-         * @type {!Object<string, !SceneInterface>}
+         * @type {!Object<string, !Scene>}
          */
         this.scenes = {};
 
@@ -59,10 +53,8 @@ class SceneDirector {
     /**
      * Register a scene.
      * @param {string} sceneName
-     * @param {!SceneInterface} sceneInstance
-     * @override
+     * @param {!Scene} sceneInstance
      */
-    // @ts-expect-error
     register(sceneName, sceneInstance) {
         this.scenes[sceneName] = sceneInstance;
     }
@@ -71,9 +63,7 @@ class SceneDirector {
      * Transition to the specified scene.
      * @param {string} sceneName Name of the target scene.
      * @param {*=} data Data payload to pass to the scene enter lifecycle.
-     * @override
      */
-    // @ts-expect-error
     transitionTo(sceneName, data) {
         if (this.isTransitioning) {
             return;

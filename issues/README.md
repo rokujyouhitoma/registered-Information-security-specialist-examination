@@ -6,9 +6,7 @@
 
 ## 1. アクティブ Issue 一覧
 
-| ID | 種別 | タイトル | 担当 / ステータス | 課題ファイル |
-|---|---|---|---|---|
-| - | - | 現在アクティブな Issue はありません | - | - |
+*（現在アクティブな Issue はありません。全 Issue 完了済み）*
 
 ---
 
@@ -16,6 +14,13 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 133 | Feature | [IR・RAG 強化 Phase 6: RAGAS / ARES 基準による検索精度定量評価パイプラインと過去問グラウンドトゥルースデータセットの構築](closed/133-ir-rag-phase6-ragas-ares-evaluation-pipeline.md) | 2026-08-08 | [133-ir-rag-phase6-ragas-ares-evaluation-pipeline.md](closed/133-ir-rag-phase6-ragas-ares-evaluation-pipeline.md) |
+| 132 | Feature | [IR・RAG 強化 Phase 5: セキュリティドメイン特化型 Fast-Vector / Matryoshka Representation Learning (MRL) ファインチューニング](closed/132-ir-rag-phase5-domain-adaptation-mrl.md) | 2026-08-08 | [132-ir-rag-phase5-domain-adaptation-mrl.md](closed/132-ir-rag-phase5-domain-adaptation-mrl.md) |
+| 131 | Feature | [IR・RAG 強化 Phase 4: Parent-Document Retrieval（階層的 Chunking）および Markdown/Layout-Aware 解析構造化インデックス化](closed/131-ir-rag-phase4-parent-document-hierarchical-chunking.md) | 2026-08-08 | [131-ir-rag-phase4-parent-document-hierarchical-chunking.md](closed/131-ir-rag-phase4-parent-document-hierarchical-chunking.md) |
+| 130 | Feature | [IR・RAG 強化 Phase 3: Cross-Encoder / ColBERT (bge-reranker) による候補 Re-ranking 処理パイプラインの実装](closed/130-ir-rag-phase3-cross-encoder-colbert-reranking.md) | 2026-08-08 | [130-ir-rag-phase3-cross-encoder-colbert-reranking.md](closed/130-ir-rag-phase3-cross-encoder-colbert-reranking.md) |
+| 129 | Feature | [IR・RAG 強化 Phase 2: SPLADE モデルに基づくセキュリティドメイン同義語・関連語自動拡張エンジンの導入](closed/129-ir-rag-phase2-splade-synonym-expansion.md) | 2026-08-08 | [129-ir-rag-phase2-splade-synonym-expansion.md](closed/129-ir-rag-phase2-splade-synonym-expansion.md) |
+| 128 | Feature | [IR・RAG 強化 Phase 1: BM25 + Dense ベクトルハイブリッド検索と Reciprocal Rank Fusion (RRF) スコア統合エンジンの構築](closed/128-ir-rag-phase1-bm25-dense-hybrid-search-rrf.md) | 2026-08-08 | [128-ir-rag-phase1-bm25-dense-hybrid-search-rrf.md](closed/128-ir-rag-phase1-bm25-dense-hybrid-search-rrf.md) |
+| 127 | Feature | [SPA 移行 Phase 1: コンテンツ JSON 抽出スクリプト作成 ＆ 単一 SPA アプリケーションシェルの構築](closed/127-spa-migration-phase1-content-json-extractor-and-app-shell.md) | 2026-08-08 | [127-spa-migration-phase1-content-json-extractor-and-app-shell.md](closed/127-spa-migration-phase1-content-json-extractor-and-app-shell.md) |
 | 126 | Feature | [yuzora リポジトリからの JavaScript フレームワークモジュール群の一括取り込み](closed/126-import-yuzora-frameworks-modules.md) | 2026-08-08 | [126-import-yuzora-frameworks-modules.md](closed/126-import-yuzora-frameworks-modules.md) |
 | 125 | Feature | [突然変異型攻撃演習「ソーシャルエンジニアリング＆フィッシングメール疑似判定トレーナー」の実装](closed/125-phishing-mail-header-analyzer-trainer.md) | 2026-08-08 | [125-phishing-mail-header-analyzer-trainer.md](closed/125-phishing-mail-header-analyzer-trainer.md) |
 | 124 | Feature | [検索UI (search.html) への「キーワード検索ヒット箇所スニペットハイライト機能」の強化](closed/124-enhance-search-ui-with-snippet-keyword-highlighting.md) | 2026-08-08 | [124-enhance-search-ui-with-snippet-keyword-highlighting.md](closed/124-enhance-search-ui-with-snippet-keyword-highlighting.md) |

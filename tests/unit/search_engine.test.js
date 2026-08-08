@@ -166,4 +166,87 @@ test('Search Worker - Script Import & Message Contract Assertion Test', (t) => {
     assert.ok(workerScript.includes('compressStats: compressStats'), 'Worker READY payload must include compressStats');
 });
 
+test('VectorScorer - Reciprocal Rank Fusion (RRF) Calculation Unit Test', (t) => {
+    const VectorScorer = global.window.VectorScorer;
+    const rrfBothFirst = VectorScorer.calculateRRFScore(1, 1, 60);
+    assert.strictEqual(rrfBothFirst.toFixed(6), (2.0 / 61.0).toFixed(6));
+
+    const rrfMixed = VectorScorer.calculateRRFScore(1, 5, 60);
+    assert.strictEqual(rrfMixed.toFixed(6), (1.0 / 61.0 + 1.0 / 65.0).toFixed(6));
+
+    const rrfNone = VectorScorer.calculateRRFScore(0, 0, 60);
+    assert.strictEqual(rrfNone, 0.0);
+});
+
+test('CustomSearchEngine - Hybrid BM25 + Dense RRF Search Test', (t) => {
+    const engine = new CustomSearchEngine();
+    engine.docs = searchIndexData.docs;
+    engine.idf = searchIndexData.idf;
+    engine.vectors = searchIndexData.vectors;
+    engine.isLoaded = true;
+
+    const resultsExact = engine.search('TLS 1.3', 5);
+    assert.ok(resultsExact.length > 0, 'RRF search must return results for exact query TLS 1.3');
+
+    const resultsConcept = engine.search('ゼロトラスト', 5);
+    assert.ok(resultsConcept.length > 0, 'RRF search must return results for concept query ゼロトラスト');
+});
+
+test('SynonymExpander - Domain Term Expansion Test (登録セキスペ -> RISS / ゼロトラスト -> PDP/PEP)', (t) => {
+    const expandedRISS = SynonymExpander.expandTokens(['登録セキスペ']);
+    assert.ok(expandedRISS.includes('riss'), '登録セキスペ must expand to riss');
+    assert.ok(expandedRISS.includes('情報処理安全確保支援士'), '登録セキスペ must expand to 情報処理安全確保支援士');
+
+    const expandedZT = SynonymExpander.expandTokens(['ゼロトラスト']);
+    assert.ok(expandedZT.includes('pdp'), 'ゼロトラスト must expand to pdp');
+    assert.ok(expandedZT.includes('pep'), 'ゼロトラスト must expand to pep');
+});
+
+test('SemanticScorer - ColBERT MaxSim Calculation Test', (t) => {
+    const colbertScore = SemanticScorer.calculateColBERTScore(['tls', '1.3'], ['tls', '1.3', '暗号化', 'プロトコル']);
+    assert.ok(colbertScore >= 2.0, 'Exact token matches must yield MaxSim score >= 2.0');
+});
+
+test('SemanticScorer - Candidate Re-ranking Pipeline Test (< 100ms & Question Pinpoint Boost)', (t) => {
+    const candidates = [
+        { doc: { name: '一般的なTLS解説', content: 'TLS 1.3の概要と仕組み' }, score: 5.0 },
+        { doc: { name: '午後問題 設問3 回答解説', content: '午後問題 設問3 におけるプロキシ復号化の対策' }, score: 4.5 }
+    ];
+
+    const startTime = Date.now();
+    const reranked = SemanticScorer.rerank('午後問題 設問3', candidates, 2);
+    const duration = Date.now() - startTime;
+
+    assert.ok(duration < 100, `Re-ranking 50 candidates must finish in < 100ms (took ${duration}ms)`);
+    assert.strictEqual(reranked[0].name, '午後問題 設問3 回答解説', 'Re-ranker must promote exact question scenario pinpoint match to rank 1');
+});
+
+test('CustomSearchEngine - Parent-Document Retrieval & Context Restoration Test', (t) => {
+    const engine = new CustomSearchEngine();
+    engine.docs = [
+        { id: 'scenarios-hands_on_incident', name: 'インシデント演習', summary: '概要', chunks: [{ chunk_id: 'scenarios-hands_on_incident#chunk-1', parent_id: 'scenarios-hands_on_incident', title: '設問1', content: 'ログ解析' }] }
+    ];
+
+    const parentDoc = engine.getParentDocument('scenarios-hands_on_incident#chunk-1');
+    assert.ok(parentDoc !== null, 'getParentDocument must resolve child chunk ID to parent document');
+    assert.strictEqual(parentDoc.id, 'scenarios-hands_on_incident', 'Resolved parent document ID must match parent ID');
+});
+
+test('VectorScorer - Matryoshka Representation Learning (MRL) Vector Truncation & Similarity Test', (t) => {
+    const VectorScorer = global.window.VectorScorer;
+    const qVec = { tls: 0.6, crypto: 0.8, pki: 0.5, mfa: 0.3 };
+    const dVec = { tls: 0.6, crypto: 0.8, firewall: 0.4, vpn: 0.2 };
+
+    const slicedQ = VectorScorer.truncateMRLVector(qVec, 2);
+    assert.strictEqual(Object.keys(slicedQ).length, 2, 'MRL vector truncation must restrict keys to target dimension 2');
+
+    const simMRL = VectorScorer.calculateMRLCosineSimilarity(qVec, dVec, 2);
+    assert.ok(simMRL > 0.0, 'MRL cosine similarity must be calculated correctly on truncated dimensions');
+});
+
+
+
+
+
+
 

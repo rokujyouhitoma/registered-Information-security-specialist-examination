@@ -4,6 +4,15 @@
 "use strict";
 
 /**
+ * @typedef {{
+ *   type: string,
+ *   detail: *,
+ *   target: ?Object
+ * }}
+ */
+let YuzoraEventInterface;
+
+/**
  * AppEvent class.
  */
 class AppEvent {
@@ -32,13 +41,12 @@ class AppEvent {
 
 /**
  * AppEventTarget class.
- * @implements {YuzoraEventTargetInterface}
  */
 class AppEventTarget {
     constructor() {
         /**
          * @private
-         * @type {!Object<string, !Array<function(!YuzoraEventInterface): void>>}
+         * @type {!Object<string, !Array<function(!AppEvent): void>>}
          */
         this.listeners_ = {};
     }
@@ -46,10 +54,8 @@ class AppEventTarget {
     /**
      * Add an event listener callback function.
      * @param {string} type The event type.
-     * @param {function(!YuzoraEventInterface): void} listener The event listener function.
-     * @override
+     * @param {function(!AppEvent): void} listener The event listener function.
      */
-    // @ts-expect-error
     addEventListener(type, listener) {
         if (!this.listeners_[type]) {
             this.listeners_[type] = [];
@@ -60,10 +66,8 @@ class AppEventTarget {
     /**
      * Remove a registered event listener callback function.
      * @param {string} type The event type.
-     * @param {function(!YuzoraEventInterface): void} listener The event listener function.
-     * @override
+     * @param {function(!AppEvent): void} listener The event listener function.
      */
-    // @ts-expect-error
     removeEventListener(type, listener) {
         if (!this.listeners_[type]) {
             return;
@@ -73,10 +77,8 @@ class AppEventTarget {
 
     /**
      * Dispatch an event to all registered listeners.
-     * @param {!YuzoraEventInterface} event The event instance to dispatch.
-     * @override
+     * @param {!AppEvent} event The event instance to dispatch.
      */
-    // @ts-expect-error
     dispatchEvent(event) {
         const type = event.type;
         if (window['__DEBUG_EVENT__']) {
@@ -103,9 +105,7 @@ class AppEventTarget {
      * Creates a scoped event target wrapper.
      * @param {string} scopePrefix The scope prefix.
      * @return {!ScopedEventTarget}
-     * @override
      */
-    // @ts-expect-error
     scoped(scopePrefix) {
         return new ScopedEventTarget(this, scopePrefix);
     }
@@ -113,7 +113,6 @@ class AppEventTarget {
 
 /**
  * ScopedEventTarget class.
- * @implements {YuzoraEventTargetInterface}
  */
 class ScopedEventTarget {
     /**
@@ -136,10 +135,8 @@ class ScopedEventTarget {
     /**
      * Add a scoped event listener.
      * @param {string} type The event type.
-     * @param {function(!YuzoraEventInterface): void} listener The event listener function.
-     * @override
+     * @param {function(!AppEvent): void} listener The event listener function.
      */
-    // @ts-expect-error
     addEventListener(type, listener) {
         const fullType = type.startsWith(this.scopePrefix_ + ':') ? type : `${this.scopePrefix_}:${type}`;
         this.parent_.addEventListener(fullType, listener);
@@ -148,10 +145,8 @@ class ScopedEventTarget {
     /**
      * Remove a registered event listener callback function.
      * @param {string} type The event type.
-     * @param {function(!YuzoraEventInterface): void} listener The event listener function.
-     * @override
+     * @param {function(!AppEvent): void} listener The event listener function.
      */
-    // @ts-expect-error
     removeEventListener(type, listener) {
         const fullType = type.startsWith(this.scopePrefix_ + ':') ? type : `${this.scopePrefix_}:${type}`;
         this.parent_.removeEventListener(fullType, listener);
@@ -159,10 +154,8 @@ class ScopedEventTarget {
 
     /**
      * Dispatch an event to all registered listeners.
-     * @param {!YuzoraEventInterface} event The event instance to dispatch.
-     * @override
+     * @param {!AppEvent} event The event instance to dispatch.
      */
-    // @ts-expect-error
     dispatchEvent(event) {
         if (!event.type.startsWith(this.scopePrefix_ + ':')) {
             event.type = `${this.scopePrefix_}:${event.type}`;
@@ -174,9 +167,7 @@ class ScopedEventTarget {
      * Creates a nested scoped event target wrapper.
      * @param {string} scopePrefix The scope prefix.
      * @return {!ScopedEventTarget}
-     * @override
      */
-    // @ts-expect-error
     scoped(scopePrefix) {
         return new ScopedEventTarget(this.parent_, `${this.scopePrefix_}:${scopePrefix}`);
     }

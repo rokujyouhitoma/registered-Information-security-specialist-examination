@@ -11,7 +11,13 @@ SRC_JS = \
 	src/js/sequence_diagram/sequence_svg_renderer.js \
 	src/js/sequence_diagram/index.js \
 	src/js/sequence_renderer.js \
-	src/js/fm_index_engine.js
+	src/js/fm_index_engine.js \
+	src/js/frameworks/dom-utils.js \
+	src/js/frameworks/event.js \
+	src/js/frameworks/publisher.js \
+	src/js/frameworks/router.js \
+	src/js/frameworks/scene.js \
+	src/js/spa_app.js
 
 MIN_JS = site/fm_index_engine.min.js
 
@@ -21,6 +27,7 @@ all: build
 
 build: $(MIN_JS)
 	@echo "🛠️ docs/ 配下の HTML ビルドを実行中..."
+	python3 scripts/build_content_json.py
 	python3 scripts/build_html_docs.py
 
 $(MIN_JS): $(SRC_JS)
