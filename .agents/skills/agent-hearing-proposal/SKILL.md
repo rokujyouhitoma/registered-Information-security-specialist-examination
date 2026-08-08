@@ -1,10 +1,22 @@
 ---
 name: agent-hearing-proposal
-description: 全 13 大スペシャリストエージェントからの専門的聞き取り・現状分析を行い、最優先改善項目を選定。SM/SA による変更管理 (Change Management) および4大品質ゲート (Quality Gates: verify-quality-gates スキル一括検証、Closure Compiler ゼロエラー/警告、絶対パス完全排斥) を経て開発・マージを推進する標準プロシージャスキル。
+description: 全 13 大スペシャリストエージェントからの専門的聞き取り・現状分析を行い、最優先改善項目を選定。時折「突拍子もない革新的企画 (突然変異的アプローチ)」を戦略的に導入し局所最適を回避しつつ、SM/SA による変更管理 (Change Management) および 4 大品質ゲート (Quality Gates: verify-quality-gates スキル一括検証、Closure Compiler ゼロエラー/警告、絶対パス完全排斥) を通して開発・マージを推進する標準プロシージャスキル。
 ---
 # agent-hearing-proposal
 
-本スキルは、**全体管理（PM）** の統括のもと、**企画（ST）**、**設計・実装（SA および SA 指名スペシャリスト）**、**変更管理（SM）**、**品質管理・監査（QA / AU）** の明確な責任体制を敷き、全 13 専門エージェントからのヒアリングから **`polish-issue` スキル適用**、**変更影響アセスメント（Change Impact Assessment）**、および **4 大品質ゲート（Quality Gates / `verify-quality-gates` スキル適用）** を経て品質と可用性を極限まで高めて開発・マージを行う標準プロシージャです。
+本スキルは、**全体管理（PM）** の統括のもと、**企画（ST）**、**設計・実装（SA および SA 指名スペシャリスト）**、**変更管理（SM）**、**品質管理・監査（QA / AU）** の明確な責任体制を敷き、全 13 専門エージェントからのヒアリングから **`polish-issue` スキル適用**、**突然変異的革新アイデアの発案**、**変更影響アセスメント（Change Impact Assessment）**、および **4 大品質ゲート（Quality Gates / `verify-quality-gates` スキル適用）** を経て品質と可用性を極限まで高めて開発・マージを行う標準プロシージャです。
+
+---
+
+## 🧬 突然変異的企画 (Mutation-driven Wildcard Proposal) 理念
+
+通常の開発サイクルでは漸進的（インクリメンタル）な改善に偏りがちとなり、システムが局所最適（Local Maxima）に陥る危険性があります。
+本プロシージャでは、進化生物学およびイノベーション理論における **「突然変異 (Mutation)」** の概念を取り入れ、以下の方針を義務付けます：
+
+1. **突拍子もないアイデアの積極的発案**:
+   - 毎回のヒアリング・企画検討において、定常改善に加えて **「一見突拍子もない非連続的・革新的な提案（突然変異的ワイルドカード案）」** を試みとして積極的に含める。
+2. **破天荒なアイデアと厳格な品質管理の両立**:
+   - どれほど突拍子もない「突然変異的企画」であっても、**5 大変更影響アセスメント (Quality Gate 1)** および **`verify-quality-gates` (Quality Gate 3)** の全自動テスト・絶対パス排除・Closure Compiler コンパイル警告/エラー 0 件をクリアすることで、劇的なイノベーションと堅牢なシステム安全性を両立させる。
 
 ---
 
@@ -12,6 +24,8 @@ description: 全 13 大スペシャリストエージェントからの専門的
 
 ```
 [Quality Gate 1] 企画・変更影響レビュー (ST / SM / SA / AU)
+       ├── 突然変異的ワイルドカード企画の評価・選択
+       └── 5大変更影響アセスメント (サービス運用、構造、セキュリティ、テスト、UI/UX)
        ↓
 [Quality Gate 2] 多段階設計・JSDoc 型定義・相対パス設計レビュー (SA / スペシャリスト)
        ↓
@@ -28,8 +42,8 @@ description: 全 13 大スペシャリストエージェントからの専門的
 | フェーズ | 主担当エージェント | 役割と主な責務 |
 |---|---|---|
 | **全体管理 (Overall Management)** | **PM** (`project-manager`) | プロジェクト全体の推進・WBS管理・DoD達成評価・マージ承認統括 |
-| **企画・提案選定 (Planning & Proposal)** | **ST** (`information-technology-strategist`) | 全エージェントヒアリング分析・戦略・企画観点での最重要課題選定 |
-| **変更管理 (Change Management)** | **SM** (`information-technology-service-manager`) + **SA** | **[Quality Gate 1] 新規施策導入時の 5 大観点（サービス運用・データ構造・セキュリティ・品質テスト・UI/UX）の変更影響アセスメント** の実施・リスク評価 |
+| **企画・提案選定 (Planning & Proposal)** | **ST** (`information-technology-strategist`) | 全エージェントヒアリング分析・最重要課題選定、および**局所最適を回避する「突然変異的アイデア」の発案** |
+| **変更管理 (Change Management)** | **SM** (`information-technology-service-manager`) + **SA** | **[Quality Gate 1] 新規施策・突然変異的提案に対する 5 大観点（サービス運用・データ構造・セキュリティ・品質テスト・UI/UX）の変更影響アセスメント** の実施・リスク評価 |
 | **設計・実装 (Design & Implementation)** | **SA** (`systems-architect`) + **SA指名スペシャリスト** | **[Quality Gate 2] SA 指名スペシャリスト（IR, SC, NW 等）による詳細設計・Closure Compiler JSDoc 型アノテーション定義・相対パス記法設計** |
 | **検索基盤・データ構造設計** | **IR** + **SA** | **IR** (情報検索) は **SA** と共同し、**文字列データ圧縮技術（Front Coding）**および**圧縮全文索引（FM-Index / BWT / Wavelet Tree）**の設計・最適化を評価する。 |
 | **品質検証スキル実行** | **QA** + **AU** | **[Quality Gate 3] `verify-quality-gates` スキルを呼び出し、Closure Compiler 0 エラー/警告、絶対パス 0 件、複雑度 <= 10、全テスト 100% PASS を一括自動アサートする。** |
@@ -40,11 +54,11 @@ description: 全 13 大スペシャリストエージェントからの専門的
 ## 📋 実行手順 (Instructions)
 
 ### Step 1: 全 13 エージェントへの聞き取り & 課題抽出 (Hearing)
-- **全体管理 (PM)** 統括のもと、全 13 大専門エージェントから専門視点での現状課題・改善ニーズを漏れなく聞き取る。
+- **全体管理 (PM)** 統括のもと、全 13 大専門エージェントから専門視点での現状課題・改善ニーズおよび**非連続的な革新アイデア**を漏れなく聞き取る。
 
 | ID | エージェント名称 | 専門領域 |
 |:---:|---|---|
-| **ST** | `information-technology-strategist` | 企画・セキュリティ戦略・経営IT・BCP/DR |
+| **ST** | `information-technology-strategist` | 企画・セキュリティ戦略・経営IT・BCP/DR・突然変異的企画 |
 | **SA** | `systems-architect` | システムアーキテクチャ・クラウド・IAM・ゼロトラスト |
 | **SC** | `information-security-specialist` | 全体セキュリティ・暗号・認証・セキュア設計 |
 | **NW** | `network-specialist` | ネットワークセキュリティ・境界防御・通信プロトコル |
@@ -61,7 +75,7 @@ description: 全 13 大スペシャリストエージェントからの専門的
 ---
 
 ### Step 2: 単一最重要課題の選定 & [Quality Gate 1: 企画・変更影響レビュー]
-1. **最優先項目の選定**: **企画担当 (ST)** 主導のもと、ユーザー価値・シラバス適合性・技術的インパクトから最優先改善項目を **1 つ** 選定。
+1. **最優先項目の選定**: **企画担当 (ST)** 主導のもと、ユーザー価値・シラバス適合性・技術的インパクト、および**時折織り込む突然変異的挑戦性**から改善項目を **1 つ** 選定。
 2. **変更管理 (SM) & SA による 5 大変更影響アセスメント**:
    - **① サービス運用・可用性影響**: 既存サービスの動作、表示速度、エラー時のフォールバック処理への影響。
    - **② アーキテクチャ・データ構造影響**: モジュール間結合度、共有 JSON スキーマ、Closure Compiler 型アノテーションへの影響。
@@ -107,20 +121,20 @@ description: 全 13 大スペシャリストエージェントからの専門的
 
 ## 1. フェーズ別エージェント責任体制 & Quality Gates
 - **全体管理**: PM (`project-manager`)
-- **企画・提案選定 [Quality Gate 1]**: ST (`information-technology-strategist`) & SM (5大影響アセスメント)
+- **企画・提案選定 [Quality Gate 1]**: ST (`information-technology-strategist`) & SM (突然変異的アプローチ & 5大影響アセスメント)
 - **設計・実装 [Quality Gate 2]**: SA (`systems-architect`) + 指名スペシャリスト ([指名エージェント名])
 - **品質管理・検証 [Quality Gate 3]**: QA & AU (`verify-quality-gates` スキル実行)
 - **最終監査・承認 [Quality Gate 4]**: AU (`systems-auditor`) & PM
 
 ## 2. エージェントヒアリング結果一覧
-- **ST**: ...
+- **ST**: ... (突然変異的・非連続な革新アイデア含む)
 - **SA**: ...
 - **SM**: (変更管理・サービス運用観点での影響・考慮事項)
 - **IR**: (文字列データ圧縮 / 圧縮全文索引の検討結果)
 - ... (全 13 エージェント)
 
 ## 3. 企画担当 (ST) 提案：最重要改善項目 (Quality Gate 1 通過)
-### 提案タイトル: [改善項目名]
+### 提案タイトル: [改善項目名] (通常改善 / 突然変異革新案)
 - **概要**: ...
 - **SA 指名設計・実装スペシャリスト**: [指名エージェント名]
 
