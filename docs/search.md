@@ -152,10 +152,12 @@
     overflow: hidden;
 }
 .g-result-snippet mark {
-    background: rgba(99, 102, 241, 0.35);
-    color: #ffffff;
-    padding: 0 0.2rem;
-    border-radius: 3px;
+    background: rgba(234, 179, 8, 0.3);
+    color: #fde047;
+    font-weight: 700;
+    padding: 0.05rem 0.3rem;
+    border-radius: 4px;
+    border: 1px solid rgba(234, 179, 8, 0.5);
 }
 </style>
 
