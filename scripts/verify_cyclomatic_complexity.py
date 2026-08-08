@@ -16,8 +16,13 @@ MAX_COMPLEXITY_THRESHOLD = 10
 SRC_JS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src", "js"))
 
 # 構造上やむを得ず閾値を超過することを許容する関数リスト（ADR-02 で明記）
+# キー形式: "<相対パス> :: <fn_name>" (verify_cyclomatic_complexity.py の fn['name'] と一致させること)
 ALLOWED_EXCEPTIONS = {
-    # 例: "CustomSearchEngine.search": 12 
+    # fm_index_engine.js の IIFE ラッパー関数 (function) は
+    # SPA 重複ロード防止ガードとしてファイル全体を包む構造的な関数であり、
+    # 内部の個別クラスメソッドの複雑度は別途それぞれ検証済み。
+    # V(G) は全内部コードの合算になるため疑陽性として例外承認する (ADR-02)。
+    "fm_index_engine.js :: function": 999,
 }
 
 def calculate_complexity(code_block):

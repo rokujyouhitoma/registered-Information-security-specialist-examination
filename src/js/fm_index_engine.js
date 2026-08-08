@@ -3,6 +3,12 @@
  * SA/IR 連携による BM25 スコアリング、シノニムクエリ拡張(A)、密概念セマンティック検索(B)、転置インデックス (Inverted Index) およびプロトタイプ汚染防御
  */
 
+(function (globalScope) {
+// Already loaded guard: SPA route changes can cause the script tag to be
+// re-appended to the DOM. Class declarations cannot be redeclared, so we
+// exit early if CustomSearchEngine is already registered on the global scope.
+if (globalScope.CustomSearchEngine) { return; }
+
 class CustomSearchEngine {
     constructor() {
         /** @type {!Array<!Object>} */
@@ -476,9 +482,10 @@ class CustomSearchEngine {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.CustomSearchEngine = CustomSearchEngine;
-}
+globalScope.CustomSearchEngine = CustomSearchEngine;
+
+}(typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : this));
+
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = CustomSearchEngine;
+    module.exports = (typeof window !== 'undefined' ? window : globalThis).CustomSearchEngine;
 }
