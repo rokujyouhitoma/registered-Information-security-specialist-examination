@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 125 | Feature | [突然変異型攻撃演習「ソーシャルエンジニアリング＆フィッシングメール疑似判定トレーナー」の実装](closed/125-phishing-mail-header-analyzer-trainer.md) | 2026-08-08 | [125-phishing-mail-header-analyzer-trainer.md](closed/125-phishing-mail-header-analyzer-trainer.md) |
 | 124 | Feature | [検索UI (search.html) への「キーワード検索ヒット箇所スニペットハイライト機能」の強化](closed/124-enhance-search-ui-with-snippet-keyword-highlighting.md) | 2026-08-08 | [124-enhance-search-ui-with-snippet-keyword-highlighting.md](closed/124-enhance-search-ui-with-snippet-keyword-highlighting.md) |
 | 123 | Feature | [虎の巻 (exam_cheatsheet.html) への「直前総復習ワンタップブックマーク機能」の実装](closed/123-add-one-tap-bookmark-feature-to-exam-cheatsheet.md) | 2026-08-08 | [123-add-one-tap-bookmark-feature-to-exam-cheatsheet.md](closed/123-add-one-tap-bookmark-feature-to-exam-cheatsheet.md) |
 | 122 | Feature | [IPAシラバスVer.2.1 必須学習用語の分野別学習完了率プログレスバー機能の実装](closed/122-add-syllabus-learning-progress-bar-feature.md) | 2026-08-08 | [122-add-syllabus-learning-progress-bar-feature.md](closed/122-add-syllabus-learning-progress-bar-feature.md) |
