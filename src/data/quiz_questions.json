@@ -2,6 +2,7 @@
   {
     "id": 1,
     "category": "crypto",
+    "persona": "persona2",
     "question": "トランスポート層で暗号化通信を提供し、ハンドシェイクの往復回数(RTT)を削減した TLS 1.3 で廃止されたプロトコル機能・暗号方式として適切なものはどれか？",
     "options": [
       "AES-GCM",
@@ -15,6 +16,7 @@
   {
     "id": 2,
     "category": "web_sec",
+    "persona": "persona3",
     "question": "SQL インジェクション (SQLi) 攻撃を根本的に防御するための最も効果的なセキュリティ対策はどれか？",
     "options": [
       "SQL 入力文字のシングルクォートをダブルクォートに置換する",
@@ -28,6 +30,7 @@
   {
     "id": 3,
     "category": "network",
+    "persona": "persona1",
     "question": "送信ドメイン認証技術のうち、電子署名を用いてメール送信元ドメインの妥当性とヘッダー改ざんの有無を検証する仕組みはどれか？",
     "options": [
       "SPF (Sender Policy Framework)",
@@ -41,6 +44,7 @@
   {
     "id": 4,
     "category": "cloud",
+    "persona": "persona2",
     "question": "NIST SP 800-207 で定義される「ゼロトラスト・アーキテクチャ (ZTA)」の基本原則として適切なものはどれか？",
     "options": [
       "社内 LAN 領域からのアクセスは無条件に安全とみなす",
@@ -54,6 +58,7 @@
   {
     "id": 5,
     "category": "incident",
+    "persona": "persona4",
     "question": "インシデントハンドリングにおいて、マルウェア感染端末を特定した際の初期対応として最も優先すべきアクションはどれか？",
     "options": [
       "端末の電源を即座に切る",
