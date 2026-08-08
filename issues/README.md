@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 123 | Feature | [虎の巻 (exam_cheatsheet.html) への「直前総復習ワンタップブックマーク機能」の実装](closed/123-add-one-tap-bookmark-feature-to-exam-cheatsheet.md) | 2026-08-08 | [123-add-one-tap-bookmark-feature-to-exam-cheatsheet.md](closed/123-add-one-tap-bookmark-feature-to-exam-cheatsheet.md) |
 | 122 | Feature | [IPAシラバスVer.2.1 必須学習用語の分野別学習完了率プログレスバー機能の実装](closed/122-add-syllabus-learning-progress-bar-feature.md) | 2026-08-08 | [122-add-syllabus-learning-progress-bar-feature.md](closed/122-add-syllabus-learning-progress-bar-feature.md) |
 | 121 | Refactor | [agent-hearing-proposal スキルの strategic-innovation-hearing への名称変更・リファクタリング](closed/121-rename-agent-hearing-proposal-skill-to-strategic-innovation-hearing.md) | 2026-08-08 | [121-rename-agent-hearing-proposal-skill-to-strategic-innovation-hearing.md](closed/121-rename-agent-hearing-proposal-skill-to-strategic-innovation-hearing.md) |
 | 120 | Feature | [.agents カスタムスキル群 (quiz-generator, audit-persona-coverage) および一次情報リファレンス設定の実装](closed/120-add-quiz-generator-persona-audit-skills-and-reference-knowledge.md) | 2026-08-08 | [120-add-quiz-generator-persona-audit-skills-and-reference-knowledge.md](closed/120-add-quiz-generator-persona-audit-skills-and-reference-knowledge.md) |
