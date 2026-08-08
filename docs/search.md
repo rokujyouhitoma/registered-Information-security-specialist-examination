@@ -20,10 +20,10 @@
         <button class="g-chip" onclick="quickSearch('インシデント')">インシデント解析</button>
     </div>
 
-    <!-- IR & SA Front Coding & FM-Index Optimization Info Card -->
-    <div style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: 12px; padding: 0.75rem 1.25rem; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+    <!-- IR & SA Front Coding & FM-Index Optimization Info Card (Dev Inspector Panel) -->
+    <div id="dev-tech-card" style="display: none; background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: 12px; padding: 0.75rem 1.25rem; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1.5rem; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
         <div>
-            <span style="color: #818cf8; font-weight: 700;">⚡ IR & SA 文字列データ圧縮 & 簡潔全文索引:</span>
+            <span style="color: #818cf8; font-weight: 700;">⚡ IR & SA 文字列データ圧縮 & 簡潔全文索引 (Dev Mode):</span>
             <span>Front Coding 前形共通圧縮 & FM-Index (BWT) 適用済み</span>
         </div>
         <span id="compression-stats" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; padding: 0.15rem 0.5rem; border-radius: 12px; font-weight: 600; font-size: 0.8rem;">
@@ -41,9 +41,12 @@
     </div>
 
     <!-- Status & Count -->
-    <div id="search-status-bar" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem;">
+    <div id="search-status-bar" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.5rem;">
         <div id="status-text">インデックス準備中...</div>
-        <div id="results-count"></div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div id="results-count"></div>
+            <button id="dev-mode-toggle" onclick="toggleDevMode()" style="background: rgba(255,255,255,0.05); color: #64748b; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 0.2rem 0.6rem; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;">🛠️ Dev Mode: OFF</button>
+        </div>
     </div>
 
     <!-- Results List (Google Search Result Style) -->
@@ -241,8 +244,32 @@ async function ensureCustomSearchEngineLoaded() {
     }
 }
 
+let devModeActive = localStorage.getItem('dev_debug_mode') === 'true';
+
+function updateDevModeUI() {
+    const btn = document.getElementById('dev-mode-toggle');
+    const techCard = document.getElementById('dev-tech-card');
+    if (btn) {
+        btn.innerText = devModeActive ? '🛠️ Dev Mode: ON' : '🛠️ Dev Mode: OFF';
+        btn.style.color = devModeActive ? '#818cf8' : '#64748b';
+        btn.style.borderColor = devModeActive ? '#6366f1' : 'rgba(255,255,255,0.1)';
+        btn.style.background = devModeActive ? 'rgba(99, 102, 241, 0.15)' : 'rgba(255,255,255,0.05)';
+    }
+    if (techCard) {
+        techCard.style.display = devModeActive ? 'flex' : 'none';
+    }
+}
+
+function toggleDevMode() {
+    devModeActive = !devModeActive;
+    localStorage.setItem('dev_debug_mode', devModeActive);
+    updateDevModeUI();
+    performPortalSearch();
+}
+
 async function initSearchEngine() {
     const statusText = document.getElementById('status-text');
+    updateDevModeUI();
 
     try {
         await ensureCustomSearchEngineLoaded();
@@ -394,9 +421,12 @@ function renderResults(query, results) {
             highlightedSummary = summary.replace(regex, '<mark>$1</mark>');
         }
 
+        const scoreVal = typeof doc.score === 'number' ? doc.score : (doc._score || 0);
+        const scoreBadgeHtml = devModeActive ? `<span style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); padding: 0.12rem 0.5rem; border-radius: 10px; font-size: 0.75rem; font-weight: 700; font-family: monospace; margin-left: 0.6rem;">[Score: ${scoreVal.toFixed(2)}]</span>` : '';
+
         return `
             <a href="${url}" class="g-result-item">
-                <div class="g-result-breadcrumb">📄 <span>${pathBreadcrumb}</span></div>
+                <div class="g-result-breadcrumb">📄 <span>${pathBreadcrumb}</span>${scoreBadgeHtml}</div>
                 <div class="g-result-title">${title}</div>
                 <div class="g-result-snippet">${highlightedSummary}</div>
             </a>
@@ -405,6 +435,7 @@ function renderResults(query, results) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    updateDevModeUI();
     initSearchEngine();
 
     const input = document.getElementById('portal-search-input');
