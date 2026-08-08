@@ -20,17 +20,6 @@
         <button class="g-chip" onclick="quickSearch('インシデント')">インシデント解析</button>
     </div>
 
-    <!-- IR & SA Front Coding & FM-Index Optimization Info Card (Dev Inspector Panel) -->
-    <div id="dev-tech-card" style="display: none; background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: 12px; padding: 0.75rem 1.25rem; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1.5rem; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-        <div>
-            <span style="color: #818cf8; font-weight: 700;">⚡ IR & SA 文字列データ圧縮 & 簡潔全文索引 (Dev Mode):</span>
-            <span>Front Coding 前形共通圧縮 & FM-Index (BWT) 適用済み</span>
-        </div>
-        <span id="compression-stats" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; padding: 0.15rem 0.5rem; border-radius: 12px; font-weight: 600; font-size: 0.8rem;">
-            圧縮率 38.5% 削減 | 高速探索 (O(m))
-        </span>
-    </div>
-
     <!-- Google Style Minimal Tabs -->
     <div style="display: flex; gap: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 1.5rem; padding-bottom: 0.2rem;">
         <button class="g-tab active" data-filter="all" onclick="setFilter('all', this)">すべて</button>
@@ -244,19 +233,15 @@ async function ensureCustomSearchEngineLoaded() {
     }
 }
 
-let devModeActive = localStorage.getItem('dev_debug_mode') === 'true';
+let devModeActive = localStorage.getItem('dev_debug_mode') === null ? true : localStorage.getItem('dev_debug_mode') === 'true';
 
 function updateDevModeUI() {
     const btn = document.getElementById('dev-mode-toggle');
-    const techCard = document.getElementById('dev-tech-card');
     if (btn) {
         btn.innerText = devModeActive ? '🛠️ Dev Mode: ON [d]' : '🛠️ Dev Mode: OFF [d]';
         btn.style.color = devModeActive ? '#818cf8' : '#64748b';
         btn.style.borderColor = devModeActive ? '#6366f1' : 'rgba(255,255,255,0.1)';
         btn.style.background = devModeActive ? 'rgba(99, 102, 241, 0.15)' : 'rgba(255,255,255,0.05)';
-    }
-    if (techCard) {
-        techCard.style.display = devModeActive ? 'flex' : 'none';
     }
 }
 
@@ -421,14 +406,31 @@ function renderResults(query, results) {
             highlightedSummary = summary.replace(regex, '<mark>$1</mark>');
         }
 
-        const scoreVal = typeof doc.score === 'number' ? doc.score : (doc._score || 0);
-        const scoreBadgeHtml = devModeActive ? `<span style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); padding: 0.12rem 0.5rem; border-radius: 10px; font-size: 0.75rem; font-weight: 700; font-family: monospace; margin-left: 0.6rem;">[Score: ${scoreVal.toFixed(2)}]</span>` : '';
+        let matchTypeBadge = '🧠 概念・同義語近似';
+        const docNameLower = title.toLowerCase();
+        const qLower = query ? query.toLowerCase().trim() : '';
+        if (qLower) {
+            if (docNameLower === qLower) matchTypeBadge = '🎯 タイトル完全一致';
+            else if (docNameLower.includes(qLower)) matchTypeBadge = '🔤 タイトル部分一致';
+            else if (summary.toLowerCase().includes(qLower)) matchTypeBadge = '📄 概要文一致';
+        }
+        const scoreVal = typeof doc.score === 'number' ? doc.score : (parseFloat(doc.score) || 0);
+        const docId = doc.id || doc.url || title;
+
+        const devBadgesHtml = devModeActive ? `
+            <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.35rem; margin-bottom: 0.15rem;">
+                <span style="background: rgba(148, 163, 184, 0.12); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.3); padding: 0.08rem 0.45rem; border-radius: 8px; font-size: 0.72rem; font-family: monospace;">🔑 ID: ${docId}</span>
+                <span style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); padding: 0.08rem 0.45rem; border-radius: 8px; font-size: 0.72rem; font-weight: 700; font-family: monospace;">⚡ Score: ${scoreVal.toFixed(2)}</span>
+                <span style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.08rem 0.45rem; border-radius: 8px; font-size: 0.72rem;">${matchTypeBadge}</span>
+            </div>
+        ` : '';
 
         return `
             <a href="${url}" class="g-result-item">
-                <div class="g-result-breadcrumb">📄 <span>${pathBreadcrumb}</span>${scoreBadgeHtml}</div>
+                <div class="g-result-breadcrumb">📄 <span>${pathBreadcrumb}</span></div>
                 <div class="g-result-title">${title}</div>
                 <div class="g-result-snippet">${highlightedSummary}</div>
+                ${devBadgesHtml}
             </a>
         `;
     }).join('');
