@@ -16,6 +16,7 @@
 
 | ID | 種別 | タイトル | 完了日 | 完了コミット / PR |
 |---|---|---|---|---|
+| 115 | Feature | [全 37 ページにおける「⚡ 虎の巻 (exam_cheatsheet.html)」を含む一貫したヘッダーナビゲーションの適用アサーションとモバイルレスポンシブ幅の最適化](closed/115-verify-cheatsheet-link-and-header-consistency.md) | 2026-08-08 | [115-verify-cheatsheet-link-and-header-consistency.md](closed/115-verify-cheatsheet-link-and-header-consistency.md) |
 | 114 | Feature | [全 Web ページにおけるグローバルナビゲーションヘッダーの完全統一とトップポータル (site/index.html) の生成適正化](closed/114-unify-global-navigation-header-across-all-pages.md) | 2026-08-08 | [114-unify-global-navigation-header-across-all-pages.md](closed/114-unify-global-navigation-header-across-all-pages.md) |
 | 113 | Bug | [実践演習クイズ (Web Quiz Portal) 選択肢順序のランダム化 (Fisher-Yates Shuffle) 実装](closed/113-shuffle-web-quiz-options-randomly.md) | 2026-08-08 | [113-shuffle-web-quiz-options-randomly.md](closed/113-shuffle-web-quiz-options-randomly.md) |
 | 112 | Feature | [REQ-02 Persona 1・2 連動 科目B午後記述模範解答の文字数制限適合 (30〜50字) 表記精緻化と試験直前対策虎の巻の採点品質向上](closed/112-add-character-count-badges-and-copy-buttons.md) | 2026-08-08 | [112-add-character-count-badges-and-copy-buttons.md](closed/112-add-character-count-badges-and-copy-buttons.md) |

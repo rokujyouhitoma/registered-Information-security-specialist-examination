@@ -46,6 +46,12 @@ function scanDirectoryForHtml(dir) {
                 console.error(`❌ [HTML構文汚損検知] ${path.relative(SITE_DIR, fullPath)}:`);
                 rawAttrMatches.forEach(m => console.error(`   - 浮き出た壊れたタグ断片: ${m}`));
             }
+
+            // ヘッダーナビゲーションの「⚡ 虎の巻」リンク存在アサーション
+            if (!content.includes('exam_cheatsheet.html') || !content.includes('⚡ 虎の巻')) {
+                rawAttributeErrors++;
+                console.error(`❌ [ヘッダー一貫性違反検知] ${path.relative(SITE_DIR, fullPath)}: ヘッダーに「⚡ 虎の巻」へのナビゲーションリンクが存在しません。`);
+            }
         }
     }
 }
